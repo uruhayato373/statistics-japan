@@ -1,0 +1,170 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass", // Regex for Component Factory to use, default to "createReactClass"
+      "pragma": "React", // Pragma to use, default to "React"
+      "fragment": "Fragment", // Fragment to use (may be a property of <pragma>), default to "Fragment"
+      "version": "detect", // React version. "detect" automatically picks the version you have installed.
+      // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+      // It will default to "latest" and warn if missing, and to "detect" in the future
+      "flowVersion": "0.53" // Flow version
+    },
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "impliedStrict": true,
+      "jsx": true
+    },
+    "ecmaVersion": 12
+  },
+  "plugins": [
+    "prettier",
+    "react",
+    "react-hooks",
+    "import",
+    "unused-imports",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "unused-imports/no-unused-imports": "error",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "react/display-name": "off",
+    "react/jsx-filename-extension": "off",
+    "no-param-reassign": "off",
+    "react/prop-types": 1,
+    "react/require-default-props": "off",
+    "react/no-array-index-key": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/forbid-prop-types": "off",
+    "import/no-cycle": "off",
+    "no-console": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "prefer-destructuring": "off",
+    "no-shadow": "off",
+    "import/no-named-as-default": "off",
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/no-autofocus": "off",
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ],
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "pathGroups": [
+          {
+            "pattern": "{react,react-dom/**,react-router-dom}",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "{next,next/**}",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "{@mui,@mui/**}",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "{components,components/**}",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "{jotai,src/atoms,src/atoms/**}",
+            "group": "parent",
+            "position": "before"
+          },
+          {
+            "pattern": "{src/hooks,src/hooks/**}",
+            "group": "parent",
+            "position": "before"
+          },
+          {
+            "pattern": "{src/views,src/views/**}",
+            "group": "sibling",
+            "position": "before"
+          },
+          {
+            "pattern": "{src/sections,src/sections/**}",
+            "group": "sibling",
+            "position": "before"
+          },
+          {
+            "pattern": "{cards,cards/**}",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "{src/utils,src/utils/**}",
+            "group": "internal",
+            "position": "after"
+          }
+        ]
+      }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@mui/*/*/*", "!@mui/material/test-utils/*"]
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "ignoreRestSiblings": false
+      }
+    ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "bracketSpacing": true,
+        "printWidth": 80,
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "tabWidth": 2,
+        "useTabs": false,
+        "endOfLine": "auto",
+        "semi": false
+      }
+    ]
+  }
+}

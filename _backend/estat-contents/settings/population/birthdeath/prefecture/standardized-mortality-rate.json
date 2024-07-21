@@ -1,0 +1,17 @@
+{
+  "cardTitle": "標準化死亡率",
+  "cardId": "standardized-mortality-rate",
+  "cardType": "dashboard",
+  "categories": [
+    {
+      "categoryCode": "A4301",
+      "categoryName": "標準化死亡率",
+      "categoryUnit": "パーミル",
+      "digit": 2,
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A4301"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "documentTitle": "県民所得（１人当たり）",
+  "documentId": "prefectural-income-per-population",
+  "categories": [
+    {
+      "categoryCode": "Ç122101",
+      "categoryName": "総数",
+      "divisor": 10,
+      "categoryUnit": "万円/人",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C122101"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "documentTitle": "交通事故発生件数",
+  "documentId": "traffic-accident",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      "categoryUnit": "件",
+      "estatParams": {
+        "statsDataId": "0000010111",
+        "cdCat01": "K3101"
+      }
+    },
+    {
+      "categoryCode": "K3102",
+      "categoryName": "総数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010111",
+        "cdCat01": "K3102"
+      }
+    },
+    {
+      "categoryCode": "K3103",
+      "categoryName": "死者数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010111",
+        "cdCat01": "K3103"
+      }
+    },
+    {
+      "categoryCode": "K3104",
+      "categoryName": "負傷者数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010111",
+        "cdCat01": "K3104"
+      }
+    }
+  ]
+}

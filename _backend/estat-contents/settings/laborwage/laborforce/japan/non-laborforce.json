@@ -1,0 +1,33 @@
+{
+  "documentTitle": "非労働力人口",
+  "documentId": "non-laborforce",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010106",
+        "cdCat01": "F1108"
+      }
+    },
+    {
+      "categoryCode": "man",
+      "categoryName": "男性",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010106",
+        "cdCat01": "F110801"
+      }
+    },
+    {
+      "categoryCode": "woman",
+      "categoryName": "女性",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010106",
+        "cdCat01": "F110802"
+      }
+    }
+  ]
+}

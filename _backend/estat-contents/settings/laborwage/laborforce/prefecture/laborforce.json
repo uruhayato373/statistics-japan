@@ -1,0 +1,33 @@
+{
+  "documentTitle": "労働力人口",
+  "documentId": "laborforce",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010106",
+        "cdCat01": "F1101"
+      }
+    },
+    {
+      "categoryCode": "man",
+      "categoryName": "男性",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010106",
+        "cdCat01": "F110101"
+      }
+    },
+    {
+      "categoryCode": "woman",
+      "categoryName": "女性",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010106",
+        "cdCat01": "F110102"
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "documentTitle": "県内総生産",
+  "documentId": "gross-production",
+  "categories": [
+    {
+      "categoryCode": "C1125",
+      "categoryName": "第１次産業",
+      //　単位を億円に変更
+      "divisor": 100,
+      "categoryUnit": "億円",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C1125"
+      }
+    },
+    {
+      "categoryCode": "C1126",
+      "categoryName": "第２次産業",
+      //　単位を億円に変更
+      "divisor": 100,
+      "categoryUnit": "億円",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C1126"
+      }
+    },
+    {
+      "categoryCode": "C1127",
+      "categoryName": "第３次産業",
+      //　単位を億円に変更
+      "divisor": 100,
+      "categoryUnit": "億円",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C1127"
+      }
+    }
+  ],
+  "annotation": ["平成27年基準"],
+  "links": [
+    {
+      "name": "労働政策研究・研修機構",
+      "url": "www.jil.go.jp/kokunai/statistics/yougo/d03.html"
+    }
+  ]
+}

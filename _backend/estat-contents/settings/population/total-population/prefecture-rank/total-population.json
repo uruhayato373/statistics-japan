@@ -1,0 +1,37 @@
+{
+  "documentTitle": "総人口",
+  "documentId": "total-population",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1101"
+      }
+    },
+    {
+      /*
+       ** 人口密度 = 総人口 / 総面積
+       */
+      "categoryCode": "total",
+      "categoryName": "人口密度",
+      "categoryUnit": "人/ha",
+      "digit": 1,
+      "processingType": "ratio", // 割合を計算
+      "estatParams": [
+        {
+          // 総人口
+          "statsDataId": "0000010101",
+          "cdCat01": "A1101"
+        },
+        {
+          // 総面積
+          "statsDataId": "0000010102",
+          "cdCat01": "B1101"
+        }
+      ]
+    }
+  ]
+}

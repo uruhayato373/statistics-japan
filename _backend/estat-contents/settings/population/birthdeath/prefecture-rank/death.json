@@ -1,0 +1,33 @@
+{
+  "cardTitle": "死亡数",
+  "cardId": "death",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A4200"
+      }
+    },
+    {
+      "categoryCode": "man",
+      "categoryName": "男",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A420001"
+      }
+    },
+    {
+      "categoryCode": "woman",
+      "categoryName": "女",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A420002"
+      }
+    }
+  ]
+}

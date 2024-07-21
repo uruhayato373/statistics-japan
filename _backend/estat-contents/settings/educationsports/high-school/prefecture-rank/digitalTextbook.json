@@ -1,0 +1,15 @@
+{
+  "cardTitle": "デジタル教科書の整備率",
+  "cardId": "digital-textbook-maintenance-rate",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      "categoryUnit": "%",
+      "estatParams": {
+        "statsDataId": "0000010105",
+        "cdCat01": "E9423"
+      }
+    }
+  ]
+}

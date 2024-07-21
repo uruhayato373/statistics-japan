@@ -1,0 +1,15 @@
+{
+  "cardTitle": "年平均気温",
+  "cardId": "average-temperature",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "年平均気温",
+      "categoryUnit": "℃",
+      "estatParams": {
+        "statsDataId": "0000010102",
+        "cdCat01": "B4101"
+      }
+    }
+  ]
+}

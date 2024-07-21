@@ -1,0 +1,33 @@
+{
+  "cardTitle": "自殺者数",
+  "cardId": "suicide",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010109",
+        "cdCat01": "I9108"
+      }
+    },
+    {
+      "categoryCode": "man",
+      "categoryName": "男性",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010109",
+        "cdCat01": "I910801"
+      }
+    },
+    {
+      "categoryCode": "woman",
+      "categoryName": "女性",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010109",
+        "cdCat01": "I910802"
+      }
+    }
+  ]
+}

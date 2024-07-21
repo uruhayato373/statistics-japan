@@ -1,0 +1,7670 @@
+[
+  {
+    "areaCode": "13100",
+    "areaName": "東京都 特別区部"
+  },
+  {
+    "areaCode": "14100",
+    "areaName": "神奈川県 横浜市"
+  },
+  {
+    "areaCode": "27100",
+    "areaName": "大阪府 大阪市"
+  },
+  {
+    "areaCode": "23100",
+    "areaName": "愛知県 名古屋市"
+  },
+  {
+    "areaCode": "01100",
+    "areaName": "北海道 札幌市"
+  },
+  {
+    "areaCode": "40130",
+    "areaName": "福岡県 福岡市"
+  },
+  {
+    "areaCode": "14130",
+    "areaName": "神奈川県 川崎市"
+  },
+  {
+    "areaCode": "28100",
+    "areaName": "兵庫県 神戸市"
+  },
+  {
+    "areaCode": "26100",
+    "areaName": "京都府 京都市"
+  },
+  {
+    "areaCode": "11100",
+    "areaName": "埼玉県 さいたま市"
+  },
+  {
+    "areaCode": "34100",
+    "areaName": "広島県 広島市"
+  },
+  {
+    "areaCode": "04100",
+    "areaName": "宮城県 仙台市"
+  },
+  {
+    "areaCode": "12100",
+    "areaName": "千葉県 千葉市"
+  },
+  {
+    "areaCode": "13112",
+    "areaName": "東京都 世田谷区"
+  },
+  {
+    "areaCode": "40100",
+    "areaName": "福岡県 北九州市"
+  },
+  {
+    "areaCode": "27140",
+    "areaName": "大阪府 堺市"
+  },
+  {
+    "areaCode": "22130",
+    "areaName": "静岡県 浜松市"
+  },
+  {
+    "areaCode": "15100",
+    "areaName": "新潟県 新潟市"
+  },
+  {
+    "areaCode": "13120",
+    "areaName": "東京都 練馬区"
+  },
+  {
+    "areaCode": "13111",
+    "areaName": "東京都 大田区"
+  },
+  {
+    "areaCode": "43100",
+    "areaName": "熊本県 熊本市"
+  },
+  {
+    "areaCode": "14150",
+    "areaName": "神奈川県 相模原市"
+  },
+  {
+    "areaCode": "33100",
+    "areaName": "岡山県 岡山市"
+  },
+  {
+    "areaCode": "13123",
+    "areaName": "東京都 江戸川区"
+  },
+  {
+    "areaCode": "13121",
+    "areaName": "東京都 足立区"
+  },
+  {
+    "areaCode": "22100",
+    "areaName": "静岡県 静岡市"
+  },
+  {
+    "areaCode": "12204",
+    "areaName": "千葉県 船橋市"
+  },
+  {
+    "areaCode": "11203",
+    "areaName": "埼玉県 川口市"
+  },
+  {
+    "areaCode": "46201",
+    "areaName": "鹿児島県 鹿児島市"
+  },
+  {
+    "areaCode": "13115",
+    "areaName": "東京都 杉並区"
+  },
+  {
+    "areaCode": "13119",
+    "areaName": "東京都 板橋区"
+  },
+  {
+    "areaCode": "13201",
+    "areaName": "東京都 八王子市"
+  },
+  {
+    "areaCode": "28201",
+    "areaName": "兵庫県 姫路市"
+  },
+  {
+    "areaCode": "13108",
+    "areaName": "東京都 江東区"
+  },
+  {
+    "areaCode": "09201",
+    "areaName": "栃木県 宇都宮市"
+  },
+  {
+    "areaCode": "38201",
+    "areaName": "愛媛県 松山市"
+  },
+  {
+    "areaCode": "12207",
+    "areaName": "千葉県 松戸市"
+  },
+  {
+    "areaCode": "12203",
+    "areaName": "千葉県 市川市"
+  },
+  {
+    "areaCode": "27227",
+    "areaName": "大阪府 東大阪市"
+  },
+  {
+    "areaCode": "28204",
+    "areaName": "兵庫県 西宮市"
+  },
+  {
+    "areaCode": "44201",
+    "areaName": "大分県 大分市"
+  },
+  {
+    "areaCode": "33202",
+    "areaName": "岡山県 倉敷市"
+  },
+  {
+    "areaCode": "17201",
+    "areaName": "石川県 金沢市"
+  },
+  {
+    "areaCode": "34207",
+    "areaName": "広島県 福山市"
+  },
+  {
+    "areaCode": "28202",
+    "areaName": "兵庫県 尼崎市"
+  },
+  {
+    "areaCode": "13122",
+    "areaName": "東京都 葛飾区"
+  },
+  {
+    "areaCode": "14205",
+    "areaName": "神奈川県 藤沢市"
+  },
+  {
+    "areaCode": "13209",
+    "areaName": "東京都 町田市"
+  },
+  {
+    "areaCode": "12217",
+    "areaName": "千葉県 柏市"
+  },
+  {
+    "areaCode": "13109",
+    "areaName": "東京都 品川区"
+  },
+  {
+    "areaCode": "23211",
+    "areaName": "愛知県 豊田市"
+  },
+  {
+    "areaCode": "37201",
+    "areaName": "香川県 高松市"
+  },
+  {
+    "areaCode": "16201",
+    "areaName": "富山県 富山市"
+  },
+  {
+    "areaCode": "42201",
+    "areaName": "長崎県 長崎市"
+  },
+  {
+    "areaCode": "21201",
+    "areaName": "岐阜県 岐阜市"
+  },
+  {
+    "areaCode": "27203",
+    "areaName": "大阪府 豊中市"
+  },
+  {
+    "areaCode": "45201",
+    "areaName": "宮崎県 宮崎市"
+  },
+  {
+    "areaCode": "27210",
+    "areaName": "大阪府 枚方市"
+  },
+  {
+    "areaCode": "14201",
+    "areaName": "神奈川県 横須賀市"
+  },
+  {
+    "areaCode": "27205",
+    "areaName": "大阪府 吹田市"
+  },
+  {
+    "areaCode": "23202",
+    "areaName": "愛知県 岡崎市"
+  },
+  {
+    "areaCode": "23203",
+    "areaName": "愛知県 一宮市"
+  },
+  {
+    "areaCode": "10202",
+    "areaName": "群馬県 高崎市"
+  },
+  {
+    "areaCode": "20201",
+    "areaName": "長野県 長野市"
+  },
+  {
+    "areaCode": "23201",
+    "areaName": "愛知県 豊橋市"
+  },
+  {
+    "areaCode": "14109",
+    "areaName": "神奈川県 横浜市 港北区"
+  },
+  {
+    "areaCode": "30201",
+    "areaName": "和歌山県 和歌山市"
+  },
+  {
+    "areaCode": "13117",
+    "areaName": "東京都 北区"
+  },
+  {
+    "areaCode": "29201",
+    "areaName": "奈良県 奈良市"
+  },
+  {
+    "areaCode": "11201",
+    "areaName": "埼玉県 川越市"
+  },
+  {
+    "areaCode": "27207",
+    "areaName": "大阪府 高槻市"
+  },
+  {
+    "areaCode": "13104",
+    "areaName": "東京都 新宿区"
+  },
+  {
+    "areaCode": "25201",
+    "areaName": "滋賀県 大津市"
+  },
+  {
+    "areaCode": "13114",
+    "areaName": "東京都 中野区"
+  },
+  {
+    "areaCode": "11208",
+    "areaName": "埼玉県 所沢市"
+  },
+  {
+    "areaCode": "11222",
+    "areaName": "埼玉県 越谷市"
+  },
+  {
+    "areaCode": "07204",
+    "areaName": "福島県 いわき市"
+  },
+  {
+    "areaCode": "10201",
+    "areaName": "群馬県 前橋市"
+  },
+  {
+    "areaCode": "01204",
+    "areaName": "北海道 旭川市"
+  },
+  {
+    "areaCode": "07203",
+    "areaName": "福島県 郡山市"
+  },
+  {
+    "areaCode": "39201",
+    "areaName": "高知県 高知市"
+  },
+  {
+    "areaCode": "40131",
+    "areaName": "福岡県 福岡市 東区"
+  },
+  {
+    "areaCode": "47201",
+    "areaName": "沖縄県 那覇市"
+  },
+  {
+    "areaCode": "33101",
+    "areaName": "岡山県 岡山市 北区"
+  },
+  {
+    "areaCode": "04101",
+    "areaName": "宮城県 仙台市 青葉区"
+  },
+  {
+    "areaCode": "14117",
+    "areaName": "神奈川県 横浜市 青葉区"
+  },
+  {
+    "areaCode": "23206",
+    "areaName": "愛知県 春日井市"
+  },
+  {
+    "areaCode": "05201",
+    "areaName": "秋田県 秋田市"
+  },
+  {
+    "areaCode": "24202",
+    "areaName": "三重県 四日市市"
+  },
+  {
+    "areaCode": "28203",
+    "areaName": "兵庫県 明石市"
+  },
+  {
+    "areaCode": "40203",
+    "areaName": "福岡県 久留米市"
+  },
+  {
+    "areaCode": "13116",
+    "areaName": "東京都 豊島区"
+  },
+  {
+    "areaCode": "14101",
+    "areaName": "神奈川県 横浜市 鶴見区"
+  },
+  {
+    "areaCode": "03201",
+    "areaName": "岩手県 盛岡市"
+  },
+  {
+    "areaCode": "01102",
+    "areaName": "北海道 札幌市 北区"
+  },
+  {
+    "areaCode": "13110",
+    "areaName": "東京都 目黒区"
+  },
+  {
+    "areaCode": "27211",
+    "areaName": "大阪府 茨木市"
+  },
+  {
+    "areaCode": "14110",
+    "areaName": "神奈川県 横浜市 戸塚区"
+  },
+  {
+    "areaCode": "07201",
+    "areaName": "福島県 福島市"
+  },
+  {
+    "areaCode": "14153",
+    "areaName": "神奈川県 相模原市 南区"
+  },
+  {
+    "areaCode": "26109",
+    "areaName": "京都府 京都市 伏見区"
+  },
+  {
+    "areaCode": "02201",
+    "areaName": "青森県 青森市"
+  },
+  {
+    "areaCode": "24201",
+    "areaName": "三重県 津市"
+  },
+  {
+    "areaCode": "14152",
+    "areaName": "神奈川県 相模原市 中央区"
+  },
+  {
+    "areaCode": "13107",
+    "areaName": "東京都 墨田区"
+  },
+  {
+    "areaCode": "08201",
+    "areaName": "茨城県 水戸市"
+  },
+  {
+    "areaCode": "12219",
+    "areaName": "千葉県 市原市"
+  },
+  {
+    "areaCode": "15202",
+    "areaName": "新潟県 長岡市"
+  },
+  {
+    "areaCode": "40134",
+    "areaName": "福岡県 福岡市 南区"
+  },
+  {
+    "areaCode": "01103",
+    "areaName": "北海道 札幌市 東区"
+  },
+  {
+    "areaCode": "27212",
+    "areaName": "大阪府 八尾市"
+  },
+  {
+    "areaCode": "14133",
+    "areaName": "神奈川県 川崎市 中原区"
+  },
+  {
+    "areaCode": "13206",
+    "areaName": "東京都 府中市"
+  },
+  {
+    "areaCode": "18201",
+    "areaName": "福井県 福井市"
+  },
+  {
+    "areaCode": "28210",
+    "areaName": "兵庫県 加古川市"
+  },
+  {
+    "areaCode": "13103",
+    "areaName": "東京都 港区"
+  },
+  {
+    "areaCode": "14203",
+    "areaName": "神奈川県 平塚市"
+  },
+  {
+    "areaCode": "35201",
+    "areaName": "山口県 下関市"
+  },
+  {
+    "areaCode": "36201",
+    "areaName": "徳島県 徳島市"
+  },
+  {
+    "areaCode": "40132",
+    "areaName": "福岡県 福岡市 博多区"
+  },
+  {
+    "areaCode": "01202",
+    "areaName": "北海道 函館市"
+  },
+  {
+    "areaCode": "40109",
+    "areaName": "福岡県 北九州市 八幡西区"
+  },
+  {
+    "areaCode": "22101",
+    "areaName": "静岡県 静岡市 葵区"
+  },
+  {
+    "areaCode": "23114",
+    "areaName": "愛知県 名古屋市 緑区"
+  },
+  {
+    "areaCode": "01101",
+    "areaName": "北海道 札幌市 中央区"
+  },
+  {
+    "areaCode": "11221",
+    "areaName": "埼玉県 草加市"
+  },
+  {
+    "areaCode": "06201",
+    "areaName": "山形県 山形市"
+  },
+  {
+    "areaCode": "14102",
+    "areaName": "神奈川県 横浜市 神奈川区"
+  },
+  {
+    "areaCode": "34105",
+    "areaName": "広島県 広島市 安佐南区"
+  },
+  {
+    "areaCode": "22210",
+    "areaName": "静岡県 富士市"
+  },
+  {
+    "areaCode": "14112",
+    "areaName": "神奈川県 横浜市 旭区"
+  },
+  {
+    "areaCode": "13113",
+    "areaName": "東京都 渋谷区"
+  },
+  {
+    "areaCode": "42202",
+    "areaName": "長崎県 佐世保市"
+  },
+  {
+    "areaCode": "13208",
+    "areaName": "東京都 調布市"
+  },
+  {
+    "areaCode": "14207",
+    "areaName": "神奈川県 茅ヶ崎市"
+  },
+  {
+    "areaCode": "08220",
+    "areaName": "茨城県 つくば市"
+  },
+  {
+    "areaCode": "20202",
+    "areaName": "長野県 松本市"
+  },
+  {
+    "areaCode": "13105",
+    "areaName": "東京都 文京区"
+  },
+  {
+    "areaCode": "14213",
+    "areaName": "神奈川県 大和市"
+  },
+  {
+    "areaCode": "28111",
+    "areaName": "兵庫県 神戸市 西区"
+  },
+  {
+    "areaCode": "22131",
+    "areaName": "静岡県 浜松市 中区"
+  },
+  {
+    "areaCode": "04104",
+    "areaName": "宮城県 仙台市 太白区"
+  },
+  {
+    "areaCode": "14134",
+    "areaName": "神奈川県 川崎市 高津区"
+  },
+  {
+    "areaCode": "14136",
+    "areaName": "神奈川県 川崎市 宮前区"
+  },
+  {
+    "areaCode": "41201",
+    "areaName": "佐賀県 佐賀市"
+  },
+  {
+    "areaCode": "14131",
+    "areaName": "神奈川県 川崎市 川崎区"
+  },
+  {
+    "areaCode": "22103",
+    "areaName": "静岡県 静岡市 清水区"
+  },
+  {
+    "areaCode": "11214",
+    "areaName": "埼玉県 春日部市"
+  },
+  {
+    "areaCode": "27215",
+    "areaName": "大阪府 寝屋川市"
+  },
+  {
+    "areaCode": "11219",
+    "areaName": "埼玉県 上尾市"
+  },
+  {
+    "areaCode": "28214",
+    "areaName": "兵庫県 宝塚市"
+  },
+  {
+    "areaCode": "01105",
+    "areaName": "北海道 札幌市 豊平区"
+  },
+  {
+    "areaCode": "14212",
+    "areaName": "神奈川県 厚木市"
+  },
+  {
+    "areaCode": "02203",
+    "areaName": "青森県 八戸市"
+  },
+  {
+    "areaCode": "10205",
+    "areaName": "群馬県 太田市"
+  },
+  {
+    "areaCode": "14135",
+    "areaName": "神奈川県 川崎市 多摩区"
+  },
+  {
+    "areaCode": "40137",
+    "areaName": "福岡県 福岡市 早良区"
+  },
+  {
+    "areaCode": "23110",
+    "areaName": "愛知県 名古屋市 中川区"
+  },
+  {
+    "areaCode": "13118",
+    "areaName": "東京都 荒川区"
+  },
+  {
+    "areaCode": "01107",
+    "areaName": "北海道 札幌市 西区"
+  },
+  {
+    "areaCode": "28108",
+    "areaName": "兵庫県 神戸市 垂水区"
+  },
+  {
+    "areaCode": "14111",
+    "areaName": "神奈川県 横浜市 港南区"
+  },
+  {
+    "areaCode": "34202",
+    "areaName": "広島県 呉市"
+  },
+  {
+    "areaCode": "28101",
+    "areaName": "兵庫県 神戸市 東灘区"
+  },
+  {
+    "areaCode": "14118",
+    "areaName": "神奈川県 横浜市 都筑区"
+  },
+  {
+    "areaCode": "22102",
+    "areaName": "静岡県 静岡市 駿河区"
+  },
+  {
+    "areaCode": "40135",
+    "areaName": "福岡県 福岡市 西区"
+  },
+  {
+    "areaCode": "04105",
+    "areaName": "宮城県 仙台市 泉区"
+  },
+  {
+    "areaCode": "10204",
+    "areaName": "群馬県 伊勢崎市"
+  },
+  {
+    "areaCode": "01104",
+    "areaName": "北海道 札幌市 白石区"
+  },
+  {
+    "areaCode": "12101",
+    "areaName": "千葉県 千葉市 中央区"
+  },
+  {
+    "areaCode": "13106",
+    "areaName": "東京都 台東区"
+  },
+  {
+    "areaCode": "28109",
+    "areaName": "兵庫県 神戸市 北区"
+  },
+  {
+    "areaCode": "40107",
+    "areaName": "福岡県 北九州市 小倉南区"
+  },
+  {
+    "areaCode": "14106",
+    "areaName": "神奈川県 横浜市 保土ケ谷区"
+  },
+  {
+    "areaCode": "13229",
+    "areaName": "東京都 西東京市"
+  },
+  {
+    "areaCode": "40133",
+    "areaName": "福岡県 福岡市 中央区"
+  },
+  {
+    "areaCode": "32201",
+    "areaName": "島根県 松江市"
+  },
+  {
+    "areaCode": "26108",
+    "areaName": "京都府 京都市 右京区"
+  },
+  {
+    "areaCode": "12220",
+    "areaName": "千葉県 流山市"
+  },
+  {
+    "areaCode": "12221",
+    "areaName": "千葉県 八千代市"
+  },
+  {
+    "areaCode": "14108",
+    "areaName": "神奈川県 横浜市 金沢区"
+  },
+  {
+    "areaCode": "13211",
+    "areaName": "東京都 小平市"
+  },
+  {
+    "areaCode": "14105",
+    "areaName": "神奈川県 横浜市 南区"
+  },
+  {
+    "areaCode": "28207",
+    "areaName": "兵庫県 伊丹市"
+  },
+  {
+    "areaCode": "04102",
+    "areaName": "宮城県 仙台市 宮城野区"
+  },
+  {
+    "areaCode": "34212",
+    "areaName": "広島県 東広島市"
+  },
+  {
+    "areaCode": "24207",
+    "areaName": "三重県 鈴鹿市"
+  },
+  {
+    "areaCode": "13204",
+    "areaName": "東京都 三鷹市"
+  },
+  {
+    "areaCode": "11202",
+    "areaName": "埼玉県 熊谷市"
+  },
+  {
+    "areaCode": "35203",
+    "areaName": "山口県 山口市"
+  },
+  {
+    "areaCode": "27126",
+    "areaName": "大阪府 大阪市 平野区"
+  },
+  {
+    "areaCode": "11108",
+    "areaName": "埼玉県 さいたま市 南区"
+  },
+  {
+    "areaCode": "27202",
+    "areaName": "大阪府 岸和田市"
+  },
+  {
+    "areaCode": "13212",
+    "areaName": "東京都 日野市"
+  },
+  {
+    "areaCode": "34104",
+    "areaName": "広島県 広島市 西区"
+  },
+  {
+    "areaCode": "19201",
+    "areaName": "山梨県 甲府市"
+  },
+  {
+    "areaCode": "43102",
+    "areaName": "熊本県 熊本市 東区"
+  },
+  {
+    "areaCode": "22203",
+    "areaName": "静岡県 沼津市"
+  },
+  {
+    "areaCode": "14206",
+    "areaName": "神奈川県 小田原市"
+  },
+  {
+    "areaCode": "31201",
+    "areaName": "鳥取県 鳥取市"
+  },
+  {
+    "areaCode": "15222",
+    "areaName": "新潟県 上越市"
+  },
+  {
+    "areaCode": "23212",
+    "areaName": "愛知県 安城市"
+  },
+  {
+    "areaCode": "43101",
+    "areaName": "熊本県 熊本市 中央区"
+  },
+  {
+    "areaCode": "23207",
+    "areaName": "愛知県 豊川市"
+  },
+  {
+    "areaCode": "27219",
+    "areaName": "大阪府 和泉市"
+  },
+  {
+    "areaCode": "13202",
+    "areaName": "東京都 立川市"
+  },
+  {
+    "areaCode": "27123",
+    "areaName": "大阪府 大阪市 淀川区"
+  },
+  {
+    "areaCode": "40106",
+    "areaName": "福岡県 北九州市 小倉北区"
+  },
+  {
+    "areaCode": "14113",
+    "areaName": "神奈川県 横浜市 緑区"
+  },
+  {
+    "areaCode": "14137",
+    "areaName": "神奈川県 川崎市 麻生区"
+  },
+  {
+    "areaCode": "15103",
+    "areaName": "新潟県 新潟市 中央区"
+  },
+  {
+    "areaCode": "26204",
+    "areaName": "京都府 宇治市"
+  },
+  {
+    "areaCode": "12102",
+    "areaName": "千葉県 千葉市 花見川区"
+  },
+  {
+    "areaCode": "27114",
+    "areaName": "大阪府 大阪市 東淀川区"
+  },
+  {
+    "areaCode": "23113",
+    "areaName": "愛知県 名古屋市 守山区"
+  },
+  {
+    "areaCode": "12216",
+    "areaName": "千葉県 習志野市"
+  },
+  {
+    "areaCode": "08202",
+    "areaName": "茨城県 日立市"
+  },
+  {
+    "areaCode": "32203",
+    "areaName": "島根県 出雲市"
+  },
+  {
+    "areaCode": "14204",
+    "areaName": "神奈川県 鎌倉市"
+  },
+  {
+    "areaCode": "12227",
+    "areaName": "千葉県 浦安市"
+  },
+  {
+    "areaCode": "14132",
+    "areaName": "神奈川県 川崎市 幸区"
+  },
+  {
+    "areaCode": "14151",
+    "areaName": "神奈川県 相模原市 緑区"
+  },
+  {
+    "areaCode": "01213",
+    "areaName": "北海道 苫小牧市"
+  },
+  {
+    "areaCode": "13102",
+    "areaName": "東京都 中央区"
+  },
+  {
+    "areaCode": "23213",
+    "areaName": "愛知県 西尾市"
+  },
+  {
+    "areaCode": "27118",
+    "areaName": "大阪府 大阪市 城東区"
+  },
+  {
+    "areaCode": "12212",
+    "areaName": "千葉県 佐倉市"
+  },
+  {
+    "areaCode": "02202",
+    "areaName": "青森県 弘前市"
+  },
+  {
+    "areaCode": "33104",
+    "areaName": "岡山県 岡山市 南区"
+  },
+  {
+    "areaCode": "14107",
+    "areaName": "神奈川県 横浜市 磯子区"
+  },
+  {
+    "areaCode": "22211",
+    "areaName": "静岡県 磐田市"
+  },
+  {
+    "areaCode": "09208",
+    "areaName": "栃木県 小山市"
+  },
+  {
+    "areaCode": "01207",
+    "areaName": "北海道 帯広市"
+  },
+  {
+    "areaCode": "16202",
+    "areaName": "富山県 高岡市"
+  },
+  {
+    "areaCode": "26103",
+    "areaName": "京都府 京都市 左京区"
+  },
+  {
+    "areaCode": "11230",
+    "areaName": "埼玉県 新座市"
+  },
+  {
+    "areaCode": "23101",
+    "areaName": "愛知県 名古屋市 千種区"
+  },
+  {
+    "areaCode": "01206",
+    "areaName": "北海道 釧路市"
+  },
+  {
+    "areaCode": "11104",
+    "areaName": "埼玉県 さいたま市 見沼区"
+  },
+  {
+    "areaCode": "11107",
+    "areaName": "埼玉県 さいたま市 浦和区"
+  },
+  {
+    "areaCode": "23116",
+    "areaName": "愛知県 名古屋市 天白区"
+  },
+  {
+    "areaCode": "23115",
+    "areaName": "愛知県 名古屋市 名東区"
+  },
+  {
+    "areaCode": "23103",
+    "areaName": "愛知県 名古屋市 北区"
+  },
+  {
+    "areaCode": "35202",
+    "areaName": "山口県 宇部市"
+  },
+  {
+    "areaCode": "14211",
+    "areaName": "神奈川県 秦野市"
+  },
+  {
+    "areaCode": "15107",
+    "areaName": "新潟県 新潟市 西区"
+  },
+  {
+    "areaCode": "45202",
+    "areaName": "宮崎県 都城市"
+  },
+  {
+    "areaCode": "12103",
+    "areaName": "千葉県 千葉市 稲毛区"
+  },
+  {
+    "areaCode": "27146",
+    "areaName": "大阪府 堺市 北区"
+  },
+  {
+    "areaCode": "24204",
+    "areaName": "三重県 松阪市"
+  },
+  {
+    "areaCode": "28107",
+    "areaName": "兵庫県 神戸市 須磨区"
+  },
+  {
+    "areaCode": "21202",
+    "areaName": "岐阜県 大垣市"
+  },
+  {
+    "areaCode": "08221",
+    "areaName": "茨城県 ひたちなか市"
+  },
+  {
+    "areaCode": "09203",
+    "areaName": "栃木県 栃木市"
+  },
+  {
+    "areaCode": "20203",
+    "areaName": "長野県 上田市"
+  },
+  {
+    "areaCode": "23210",
+    "areaName": "愛知県 刈谷市"
+  },
+  {
+    "areaCode": "27120",
+    "areaName": "大阪府 大阪市 住吉区"
+  },
+  {
+    "areaCode": "12208",
+    "areaName": "千葉県 野田市"
+  },
+  {
+    "areaCode": "14116",
+    "areaName": "神奈川県 横浜市 泉区"
+  },
+  {
+    "areaCode": "28217",
+    "areaName": "兵庫県 川西市"
+  },
+  {
+    "areaCode": "13213",
+    "areaName": "東京都 東村山市"
+  },
+  {
+    "areaCode": "38202",
+    "areaName": "愛媛県 今治市"
+  },
+  {
+    "areaCode": "14104",
+    "areaName": "神奈川県 横浜市 中区"
+  },
+  {
+    "areaCode": "23104",
+    "areaName": "愛知県 名古屋市 西区"
+  },
+  {
+    "areaCode": "11232",
+    "areaName": "埼玉県 久喜市"
+  },
+  {
+    "areaCode": "13203",
+    "areaName": "東京都 武蔵野市"
+  },
+  {
+    "areaCode": "26111",
+    "areaName": "京都府 京都市 西京区"
+  },
+  {
+    "areaCode": "11102",
+    "areaName": "埼玉県 さいたま市 北区"
+  },
+  {
+    "areaCode": "33102",
+    "areaName": "岡山県 岡山市 中区"
+  },
+  {
+    "areaCode": "12106",
+    "areaName": "千葉県 千葉市 美浜区"
+  },
+  {
+    "areaCode": "23219",
+    "areaName": "愛知県 小牧市"
+  },
+  {
+    "areaCode": "11215",
+    "areaName": "埼玉県 狭山市"
+  },
+  {
+    "areaCode": "27141",
+    "areaName": "大阪府 堺市 堺区"
+  },
+  {
+    "areaCode": "28110",
+    "areaName": "兵庫県 神戸市 中央区"
+  },
+  {
+    "areaCode": "31202",
+    "areaName": "鳥取県 米子市"
+  },
+  {
+    "areaCode": "13224",
+    "areaName": "東京都 多摩市"
+  },
+  {
+    "areaCode": "12104",
+    "areaName": "千葉県 千葉市 若葉区"
+  },
+  {
+    "areaCode": "34103",
+    "areaName": "広島県 広島市 南区"
+  },
+  {
+    "areaCode": "11225",
+    "areaName": "埼玉県 入間市"
+  },
+  {
+    "areaCode": "09202",
+    "areaName": "栃木県 足利市"
+  },
+  {
+    "areaCode": "21213",
+    "areaName": "岐阜県 各務原市"
+  },
+  {
+    "areaCode": "25206",
+    "areaName": "滋賀県 草津市"
+  },
+  {
+    "areaCode": "23111",
+    "areaName": "愛知県 名古屋市 港区"
+  },
+  {
+    "areaCode": "27209",
+    "areaName": "大阪府 守口市"
+  },
+  {
+    "areaCode": "47211",
+    "areaName": "沖縄県 沖縄市"
+  },
+  {
+    "areaCode": "34101",
+    "areaName": "広島県 広島市 中区"
+  },
+  {
+    "areaCode": "01109",
+    "areaName": "北海道 札幌市 手稲区"
+  },
+  {
+    "areaCode": "11237",
+    "areaName": "埼玉県 三郷市"
+  },
+  {
+    "areaCode": "08203",
+    "areaName": "茨城県 土浦市"
+  },
+  {
+    "areaCode": "04103",
+    "areaName": "宮城県 仙台市 若林区"
+  },
+  {
+    "areaCode": "22214",
+    "areaName": "静岡県 藤枝市"
+  },
+  {
+    "areaCode": "11218",
+    "areaName": "埼玉県 深谷市"
+  },
+  {
+    "areaCode": "11227",
+    "areaName": "埼玉県 朝霞市"
+  },
+  {
+    "areaCode": "11224",
+    "areaName": "埼玉県 戸田市"
+  },
+  {
+    "areaCode": "04202",
+    "areaName": "宮城県 石巻市"
+  },
+  {
+    "areaCode": "43105",
+    "areaName": "熊本県 熊本市 北区"
+  },
+  {
+    "areaCode": "34108",
+    "areaName": "広島県 広島市 佐伯区"
+  },
+  {
+    "areaCode": "27127",
+    "areaName": "大阪府 大阪市 北区"
+  },
+  {
+    "areaCode": "08204",
+    "areaName": "茨城県 古河市"
+  },
+  {
+    "areaCode": "34106",
+    "areaName": "広島県 広島市 安佐北区"
+  },
+  {
+    "areaCode": "24205",
+    "areaName": "三重県 桑名市"
+  },
+  {
+    "areaCode": "23105",
+    "areaName": "愛知県 名古屋市 中村区"
+  },
+  {
+    "areaCode": "27145",
+    "areaName": "大阪府 堺市 南区"
+  },
+  {
+    "areaCode": "35215",
+    "areaName": "山口県 周南市"
+  },
+  {
+    "areaCode": "27220",
+    "areaName": "大阪府 箕面市"
+  },
+  {
+    "areaCode": "22212",
+    "areaName": "静岡県 焼津市"
+  },
+  {
+    "areaCode": "28102",
+    "areaName": "兵庫県 神戸市 灘区"
+  },
+  {
+    "areaCode": "14215",
+    "areaName": "神奈川県 海老名市"
+  },
+  {
+    "areaCode": "12206",
+    "areaName": "千葉県 木更津市"
+  },
+  {
+    "areaCode": "01106",
+    "areaName": "北海道 札幌市 南区"
+  },
+  {
+    "areaCode": "27144",
+    "areaName": "大阪府 堺市 西区"
+  },
+  {
+    "areaCode": "26110",
+    "areaName": "京都府 京都市 山科区"
+  },
+  {
+    "areaCode": "23220",
+    "areaName": "愛知県 稲沢市"
+  },
+  {
+    "areaCode": "23112",
+    "areaName": "愛知県 名古屋市 南区"
+  },
+  {
+    "areaCode": "15102",
+    "areaName": "新潟県 新潟市 東区"
+  },
+  {
+    "areaCode": "42204",
+    "areaName": "長崎県 諫早市"
+  },
+  {
+    "areaCode": "13205",
+    "areaName": "東京都 青梅市"
+  },
+  {
+    "areaCode": "12211",
+    "areaName": "千葉県 成田市"
+  },
+  {
+    "areaCode": "40136",
+    "areaName": "福岡県 福岡市 城南区"
+  },
+  {
+    "areaCode": "14216",
+    "areaName": "神奈川県 座間市"
+  },
+  {
+    "areaCode": "34205",
+    "areaName": "広島県 尾道市"
+  },
+  {
+    "areaCode": "43104",
+    "areaName": "熊本県 熊本市 南区"
+  },
+  {
+    "areaCode": "12222",
+    "areaName": "千葉県 我孫子市"
+  },
+  {
+    "areaCode": "12105",
+    "areaName": "千葉県 千葉市 緑区"
+  },
+  {
+    "areaCode": "22132",
+    "areaName": "静岡県 浜松市 東区"
+  },
+  {
+    "areaCode": "13214",
+    "areaName": "東京都 国分寺市"
+  },
+  {
+    "areaCode": "35208",
+    "areaName": "山口県 岩国市"
+  },
+  {
+    "areaCode": "11109",
+    "areaName": "埼玉県 さいたま市 緑区"
+  },
+  {
+    "areaCode": "22207",
+    "areaName": "静岡県 富士宮市"
+  },
+  {
+    "areaCode": "27121",
+    "areaName": "大阪府 大阪市 東住吉区"
+  },
+  {
+    "areaCode": "23204",
+    "areaName": "愛知県 瀬戸市"
+  },
+  {
+    "areaCode": "04215",
+    "areaName": "宮城県 大崎市"
+  },
+  {
+    "areaCode": "27116",
+    "areaName": "大阪府 大阪市 生野区"
+  },
+  {
+    "areaCode": "40205",
+    "areaName": "福岡県 飯塚市"
+  },
+  {
+    "areaCode": "13210",
+    "areaName": "東京都 小金井市"
+  },
+  {
+    "areaCode": "47213",
+    "areaName": "沖縄県 うるま市"
+  },
+  {
+    "areaCode": "01108",
+    "areaName": "北海道 札幌市 厚別区"
+  },
+  {
+    "areaCode": "46218",
+    "areaName": "鹿児島県 霧島市"
+  },
+  {
+    "areaCode": "43202",
+    "areaName": "熊本県 八代市"
+  },
+  {
+    "areaCode": "24203",
+    "areaName": "三重県 伊勢市"
+  },
+  {
+    "areaCode": "14114",
+    "areaName": "神奈川県 横浜市 瀬谷区"
+  },
+  {
+    "areaCode": "06203",
+    "areaName": "山形県 鶴岡市"
+  },
+  {
+    "areaCode": "27142",
+    "areaName": "大阪府 堺市 中区"
+  },
+  {
+    "areaCode": "01217",
+    "areaName": "北海道 江別市"
+  },
+  {
+    "areaCode": "29205",
+    "areaName": "奈良県 橿原市"
+  },
+  {
+    "areaCode": "14115",
+    "areaName": "神奈川県 横浜市 栄区"
+  },
+  {
+    "areaCode": "27125",
+    "areaName": "大阪府 大阪市 住之江区"
+  },
+  {
+    "areaCode": "27223",
+    "areaName": "大阪府 門真市"
+  },
+  {
+    "areaCode": "27218",
+    "areaName": "大阪府 大東市"
+  },
+  {
+    "areaCode": "34102",
+    "areaName": "広島県 広島市 東区"
+  },
+  {
+    "areaCode": "45203",
+    "areaName": "宮崎県 延岡市"
+  },
+  {
+    "areaCode": "23205",
+    "areaName": "愛知県 半田市"
+  },
+  {
+    "areaCode": "11103",
+    "areaName": "埼玉県 さいたま市 大宮区"
+  },
+  {
+    "areaCode": "27217",
+    "areaName": "大阪府 松原市"
+  },
+  {
+    "areaCode": "07202",
+    "areaName": "福島県 会津若松市"
+  },
+  {
+    "areaCode": "41202",
+    "areaName": "佐賀県 唐津市"
+  },
+  {
+    "areaCode": "26101",
+    "areaName": "京都府 京都市 北区"
+  },
+  {
+    "areaCode": "11217",
+    "areaName": "埼玉県 鴻巣市"
+  },
+  {
+    "areaCode": "29209",
+    "areaName": "奈良県 生駒市"
+  },
+  {
+    "areaCode": "09204",
+    "areaName": "栃木県 佐野市"
+  },
+  {
+    "areaCode": "38205",
+    "areaName": "愛媛県 新居浜市"
+  },
+  {
+    "areaCode": "47208",
+    "areaName": "沖縄県 浦添市"
+  },
+  {
+    "areaCode": "01208",
+    "areaName": "北海道 北見市"
+  },
+  {
+    "areaCode": "44202",
+    "areaName": "大分県 別府市"
+  },
+  {
+    "areaCode": "13222",
+    "areaName": "東京都 東久留米市"
+  },
+  {
+    "areaCode": "09213",
+    "areaName": "栃木県 那須塩原市"
+  },
+  {
+    "areaCode": "22213",
+    "areaName": "静岡県 掛川市"
+  },
+  {
+    "areaCode": "34213",
+    "areaName": "広島県 廿日市市"
+  },
+  {
+    "areaCode": "35206",
+    "areaName": "山口県 防府市"
+  },
+  {
+    "areaCode": "13207",
+    "areaName": "東京都 昭島市"
+  },
+  {
+    "areaCode": "23222",
+    "areaName": "愛知県 東海市"
+  },
+  {
+    "areaCode": "25202",
+    "areaName": "滋賀県 彦根市"
+  },
+  {
+    "areaCode": "25203",
+    "areaName": "滋賀県 長浜市"
+  },
+  {
+    "areaCode": "11245",
+    "areaName": "埼玉県 ふじみ野市"
+  },
+  {
+    "areaCode": "03215",
+    "areaName": "岩手県 奥州市"
+  },
+  {
+    "areaCode": "25213",
+    "areaName": "滋賀県 東近江市"
+  },
+  {
+    "areaCode": "27124",
+    "areaName": "大阪府 大阪市 鶴見区"
+  },
+  {
+    "areaCode": "01110",
+    "areaName": "北海道 札幌市 清田区"
+  },
+  {
+    "areaCode": "03209",
+    "areaName": "岩手県 一関市"
+  },
+  {
+    "areaCode": "11235",
+    "areaName": "埼玉県 富士見市"
+  },
+  {
+    "areaCode": "11110",
+    "areaName": "埼玉県 さいたま市 岩槻区"
+  },
+  {
+    "areaCode": "11210",
+    "areaName": "埼玉県 加須市"
+  },
+  {
+    "areaCode": "01203",
+    "areaName": "北海道 小樽市"
+  },
+  {
+    "areaCode": "40202",
+    "areaName": "福岡県 大牟田市"
+  },
+  {
+    "areaCode": "40218",
+    "areaName": "福岡県 春日市"
+  },
+  {
+    "areaCode": "27119",
+    "areaName": "大阪府 大阪市 阿倍野区"
+  },
+  {
+    "areaCode": "26104",
+    "areaName": "京都府 京都市 中京区"
+  },
+  {
+    "areaCode": "17210",
+    "areaName": "石川県 白山市"
+  },
+  {
+    "areaCode": "12224",
+    "areaName": "千葉県 鎌ケ谷市"
+  },
+  {
+    "areaCode": "37202",
+    "areaName": "香川県 丸亀市"
+  },
+  {
+    "areaCode": "28219",
+    "areaName": "兵庫県 三田市"
+  },
+  {
+    "areaCode": "28105",
+    "areaName": "兵庫県 神戸市 兵庫区"
+  },
+  {
+    "areaCode": "27222",
+    "areaName": "大阪府 羽曳野市"
+  },
+  {
+    "areaCode": "27214",
+    "areaName": "大阪府 富田林市"
+  },
+  {
+    "areaCode": "23108",
+    "areaName": "愛知県 名古屋市 瑞穂区"
+  },
+  {
+    "areaCode": "22133",
+    "areaName": "静岡県 浜松市 西区"
+  },
+  {
+    "areaCode": "27102",
+    "areaName": "大阪府 大阪市 都島区"
+  },
+  {
+    "areaCode": "22206",
+    "areaName": "静岡県 三島市"
+  },
+  {
+    "areaCode": "23107",
+    "areaName": "愛知県 名古屋市 昭和区"
+  },
+  {
+    "areaCode": "21204",
+    "areaName": "岐阜県 多治見市"
+  },
+  {
+    "areaCode": "10203",
+    "areaName": "群馬県 桐生市"
+  },
+  {
+    "areaCode": "17203",
+    "areaName": "石川県 小松市"
+  },
+  {
+    "areaCode": "27122",
+    "areaName": "大阪府 大阪市 西成区"
+  },
+  {
+    "areaCode": "27106",
+    "areaName": "大阪府 大阪市 西区"
+  },
+  {
+    "areaCode": "27204",
+    "areaName": "大阪府 池田市"
+  },
+  {
+    "areaCode": "14103",
+    "areaName": "神奈川県 横浜市 西区"
+  },
+  {
+    "areaCode": "38206",
+    "areaName": "愛媛県 西条市"
+  },
+  {
+    "areaCode": "08217",
+    "areaName": "茨城県 取手市"
+  },
+  {
+    "areaCode": "27128",
+    "areaName": "大阪府 大阪市 中央区"
+  },
+  {
+    "areaCode": "40217",
+    "areaName": "福岡県 筑紫野市"
+  },
+  {
+    "areaCode": "11105",
+    "areaName": "埼玉県 さいたま市 中央区"
+  },
+  {
+    "areaCode": "12231",
+    "areaName": "千葉県 印西市"
+  },
+  {
+    "areaCode": "40219",
+    "areaName": "福岡県 大野城市"
+  },
+  {
+    "areaCode": "26107",
+    "areaName": "京都府 京都市 南区"
+  },
+  {
+    "areaCode": "14214",
+    "areaName": "神奈川県 伊勢原市"
+  },
+  {
+    "areaCode": "27216",
+    "areaName": "大阪府 河内長野市"
+  },
+  {
+    "areaCode": "46203",
+    "areaName": "鹿児島県 鹿屋市"
+  },
+  {
+    "areaCode": "08227",
+    "areaName": "茨城県 筑西市"
+  },
+  {
+    "areaCode": "11239",
+    "areaName": "埼玉県 坂戸市"
+  },
+  {
+    "areaCode": "06204",
+    "areaName": "山形県 酒田市"
+  },
+  {
+    "areaCode": "27213",
+    "areaName": "大阪府 泉佐野市"
+  },
+  {
+    "areaCode": "47205",
+    "areaName": "沖縄県 宜野湾市"
+  },
+  {
+    "areaCode": "21214",
+    "areaName": "岐阜県 可児市"
+  },
+  {
+    "areaCode": "33203",
+    "areaName": "岡山県 津山市"
+  },
+  {
+    "areaCode": "22134",
+    "areaName": "静岡県 浜松市 南区"
+  },
+  {
+    "areaCode": "40230",
+    "areaName": "福岡県 糸島市"
+  },
+  {
+    "areaCode": "22136",
+    "areaName": "静岡県 浜松市 浜北区"
+  },
+  {
+    "areaCode": "11106",
+    "areaName": "埼玉県 さいたま市 桜区"
+  },
+  {
+    "areaCode": "23217",
+    "areaName": "愛知県 江南市"
+  },
+  {
+    "areaCode": "20217",
+    "areaName": "長野県 佐久市"
+  },
+  {
+    "areaCode": "20205",
+    "areaName": "長野県 飯田市"
+  },
+  {
+    "areaCode": "01224",
+    "areaName": "北海道 千歳市"
+  },
+  {
+    "areaCode": "40220",
+    "areaName": "福岡県 宗像市"
+  },
+  {
+    "areaCode": "27113",
+    "areaName": "大阪府 大阪市 西淀川区"
+  },
+  {
+    "areaCode": "22209",
+    "areaName": "静岡県 島田市"
+  },
+  {
+    "areaCode": "08232",
+    "areaName": "茨城県 神栖市"
+  },
+  {
+    "areaCode": "42205",
+    "areaName": "長崎県 大村市"
+  },
+  {
+    "areaCode": "15206",
+    "areaName": "新潟県 新発田市"
+  },
+  {
+    "areaCode": "28106",
+    "areaName": "兵庫県 神戸市 長田区"
+  },
+  {
+    "areaCode": "15204",
+    "areaName": "新潟県 三条市"
+  },
+  {
+    "areaCode": "20220",
+    "areaName": "長野県 安曇野市"
+  },
+  {
+    "areaCode": "09205",
+    "areaName": "栃木県 鹿沼市"
+  },
+  {
+    "areaCode": "28206",
+    "areaName": "兵庫県 芦屋市"
+  },
+  {
+    "areaCode": "40101",
+    "areaName": "福岡県 北九州市 門司区"
+  },
+  {
+    "areaCode": "12228",
+    "areaName": "千葉県 四街道市"
+  },
+  {
+    "areaCode": "11101",
+    "areaName": "埼玉県 さいたま市 西区"
+  },
+  {
+    "areaCode": "11234",
+    "areaName": "埼玉県 八潮市"
+  },
+  {
+    "areaCode": "03205",
+    "areaName": "岩手県 花巻市"
+  },
+  {
+    "areaCode": "13225",
+    "areaName": "東京都 稲城市"
+  },
+  {
+    "areaCode": "23223",
+    "areaName": "愛知県 大府市"
+  },
+  {
+    "areaCode": "33103",
+    "areaName": "岡山県 岡山市 東区"
+  },
+  {
+    "areaCode": "23106",
+    "areaName": "愛知県 名古屋市 中区"
+  },
+  {
+    "areaCode": "03206",
+    "areaName": "岩手県 北上市"
+  },
+  {
+    "areaCode": "22135",
+    "areaName": "静岡県 浜松市 北区"
+  },
+  {
+    "areaCode": "46215",
+    "areaName": "鹿児島県 薩摩川内市"
+  },
+  {
+    "areaCode": "11212",
+    "areaName": "埼玉県 東松山市"
+  },
+  {
+    "areaCode": "23230",
+    "areaName": "愛知県 日進市"
+  },
+  {
+    "areaCode": "43103",
+    "areaName": "熊本県 熊本市 西区"
+  },
+  {
+    "areaCode": "16211",
+    "areaName": "富山県 射水市"
+  },
+  {
+    "areaCode": "34204",
+    "areaName": "広島県 三原市"
+  },
+  {
+    "areaCode": "27117",
+    "areaName": "大阪府 大阪市 旭区"
+  },
+  {
+    "areaCode": "24216",
+    "areaName": "三重県 伊賀市"
+  },
+  {
+    "areaCode": "18210",
+    "areaName": "福井県 坂井市"
+  },
+  {
+    "areaCode": "25209",
+    "areaName": "滋賀県 甲賀市"
+  },
+  {
+    "areaCode": "22216",
+    "areaName": "静岡県 袋井市"
+  },
+  {
+    "areaCode": "28216",
+    "areaName": "兵庫県 高砂市"
+  },
+  {
+    "areaCode": "27224",
+    "areaName": "大阪府 摂津市"
+  },
+  {
+    "areaCode": "12210",
+    "areaName": "千葉県 茂原市"
+  },
+  {
+    "areaCode": "22215",
+    "areaName": "静岡県 御殿場市"
+  },
+  {
+    "areaCode": "23234",
+    "areaName": "愛知県 北名古屋市"
+  },
+  {
+    "areaCode": "26206",
+    "areaName": "京都府 亀岡市"
+  },
+  {
+    "areaCode": "23237",
+    "areaName": "愛知県 あま市"
+  },
+  {
+    "areaCode": "05203",
+    "areaName": "秋田県 横手市"
+  },
+  {
+    "areaCode": "21205",
+    "areaName": "岐阜県 関市"
+  },
+  {
+    "areaCode": "27143",
+    "areaName": "大阪府 堺市 東区"
+  },
+  {
+    "areaCode": "27115",
+    "areaName": "大阪府 大阪市 東成区"
+  },
+  {
+    "areaCode": "13219",
+    "areaName": "東京都 狛江市"
+  },
+  {
+    "areaCode": "08219",
+    "areaName": "茨城県 牛久市"
+  },
+  {
+    "areaCode": "27208",
+    "areaName": "大阪府 貝塚市"
+  },
+  {
+    "areaCode": "21203",
+    "areaName": "岐阜県 高山市"
+  },
+  {
+    "areaCode": "23102",
+    "areaName": "愛知県 名古屋市 東区"
+  },
+  {
+    "areaCode": "23224",
+    "areaName": "愛知県 知多市"
+  },
+  {
+    "areaCode": "11229",
+    "areaName": "埼玉県 和光市"
+  },
+  {
+    "areaCode": "14218",
+    "areaName": "神奈川県 綾瀬市"
+  },
+  {
+    "areaCode": "13220",
+    "areaName": "東京都 東大和市"
+  },
+  {
+    "areaCode": "26102",
+    "areaName": "京都府 京都市 上京区"
+  },
+  {
+    "areaCode": "29203",
+    "areaName": "奈良県 大和郡山市"
+  },
+  {
+    "areaCode": "25207",
+    "areaName": "滋賀県 守山市"
+  },
+  {
+    "areaCode": "23226",
+    "areaName": "愛知県 尾張旭市"
+  },
+  {
+    "areaCode": "44203",
+    "areaName": "大分県 中津市"
+  },
+  {
+    "areaCode": "26106",
+    "areaName": "京都府 京都市 下京区"
+  },
+  {
+    "areaCode": "38213",
+    "areaName": "愛媛県 四国中央市"
+  },
+  {
+    "areaCode": "01205",
+    "areaName": "北海道 室蘭市"
+  },
+  {
+    "areaCode": "12225",
+    "areaName": "千葉県 君津市"
+  },
+  {
+    "areaCode": "27109",
+    "areaName": "大阪府 大阪市 天王寺区"
+  },
+  {
+    "areaCode": "15205",
+    "areaName": "新潟県 柏崎市"
+  },
+  {
+    "areaCode": "06202",
+    "areaName": "山形県 米沢市"
+  },
+  {
+    "areaCode": "25204",
+    "areaName": "滋賀県 近江八幡市"
+  },
+  {
+    "areaCode": "27107",
+    "areaName": "大阪府 大阪市 港区"
+  },
+  {
+    "areaCode": "18209",
+    "areaName": "福井県 越前市"
+  },
+  {
+    "areaCode": "26209",
+    "areaName": "京都府 長岡京市"
+  },
+  {
+    "areaCode": "40103",
+    "areaName": "福岡県 北九州市 若松区"
+  },
+  {
+    "areaCode": "11209",
+    "areaName": "埼玉県 飯能市"
+  },
+  {
+    "areaCode": "26202",
+    "areaName": "京都府 舞鶴市"
+  },
+  {
+    "areaCode": "23214",
+    "areaName": "愛知県 蒲郡市"
+  },
+  {
+    "areaCode": "27103",
+    "areaName": "大阪府 大阪市 福島区"
+  },
+  {
+    "areaCode": "01210",
+    "areaName": "北海道 岩見沢市"
+  },
+  {
+    "areaCode": "13228",
+    "areaName": "東京都 あきる野市"
+  },
+  {
+    "areaCode": "04207",
+    "areaName": "宮城県 名取市"
+  },
+  {
+    "areaCode": "11206",
+    "areaName": "埼玉県 行田市"
+  },
+  {
+    "areaCode": "11211",
+    "areaName": "埼玉県 本庄市"
+  },
+  {
+    "areaCode": "09209",
+    "areaName": "栃木県 真岡市"
+  },
+  {
+    "areaCode": "29210",
+    "areaName": "奈良県 香芝市"
+  },
+  {
+    "areaCode": "26214",
+    "areaName": "京都府 木津川市"
+  },
+  {
+    "areaCode": "09206",
+    "areaName": "栃木県 日光市"
+  },
+  {
+    "areaCode": "05212",
+    "areaName": "秋田県 大仙市"
+  },
+  {
+    "areaCode": "28209",
+    "areaName": "兵庫県 豊岡市"
+  },
+  {
+    "areaCode": "26201",
+    "areaName": "京都府 福知山市"
+  },
+  {
+    "areaCode": "15213",
+    "areaName": "新潟県 燕市"
+  },
+  {
+    "areaCode": "13215",
+    "areaName": "東京都 国立市"
+  },
+  {
+    "areaCode": "34107",
+    "areaName": "広島県 広島市 安芸区"
+  },
+  {
+    "areaCode": "21206",
+    "areaName": "岐阜県 中津川市"
+  },
+  {
+    "areaCode": "08208",
+    "areaName": "茨城県 龍ケ崎市"
+  },
+  {
+    "areaCode": "24208",
+    "areaName": "三重県 名張市"
+  },
+  {
+    "areaCode": "46225",
+    "areaName": "鹿児島県 姶良市"
+  },
+  {
+    "areaCode": "13221",
+    "areaName": "東京都 清瀬市"
+  },
+  {
+    "areaCode": "04212",
+    "areaName": "宮城県 登米市"
+  },
+  {
+    "areaCode": "43215",
+    "areaName": "熊本県 天草市"
+  },
+  {
+    "areaCode": "27111",
+    "areaName": "大阪府 大阪市 浪速区"
+  },
+  {
+    "areaCode": "11228",
+    "areaName": "埼玉県 志木市"
+  },
+  {
+    "areaCode": "19210",
+    "areaName": "山梨県 甲斐市"
+  },
+  {
+    "areaCode": "10207",
+    "areaName": "群馬県 館林市"
+  },
+  {
+    "areaCode": "28215",
+    "areaName": "兵庫県 三木市"
+  },
+  {
+    "areaCode": "15105",
+    "areaName": "新潟県 新潟市 秋葉区"
+  },
+  {
+    "areaCode": "27230",
+    "areaName": "大阪府 交野市"
+  },
+  {
+    "areaCode": "07207",
+    "areaName": "福島県 須賀川市"
+  },
+  {
+    "areaCode": "11231",
+    "areaName": "埼玉県 桶川市"
+  },
+  {
+    "areaCode": "05210",
+    "areaName": "秋田県 由利本荘市"
+  },
+  {
+    "areaCode": "26207",
+    "areaName": "京都府 城陽市"
+  },
+  {
+    "areaCode": "10208",
+    "areaName": "群馬県 渋川市"
+  },
+  {
+    "areaCode": "27206",
+    "areaName": "大阪府 泉大津市"
+  },
+  {
+    "areaCode": "28229",
+    "areaName": "兵庫県 たつの市"
+  },
+  {
+    "areaCode": "11223",
+    "areaName": "埼玉県 蕨市"
+  },
+  {
+    "areaCode": "41203",
+    "areaName": "佐賀県 鳥栖市"
+  },
+  {
+    "areaCode": "26211",
+    "areaName": "京都府 京田辺市"
+  },
+  {
+    "areaCode": "08216",
+    "areaName": "茨城県 笠間市"
+  },
+  {
+    "areaCode": "40221",
+    "areaName": "福岡県 太宰府市"
+  },
+  {
+    "areaCode": "23215",
+    "areaName": "愛知県 犬山市"
+  },
+  {
+    "areaCode": "08205",
+    "areaName": "茨城県 石岡市"
+  },
+  {
+    "areaCode": "15101",
+    "areaName": "新潟県 新潟市 北区"
+  },
+  {
+    "areaCode": "23209",
+    "areaName": "愛知県 碧南市"
+  },
+  {
+    "areaCode": "12236",
+    "areaName": "千葉県 香取市"
+  },
+  {
+    "areaCode": "23225",
+    "areaName": "愛知県 知立市"
+  },
+  {
+    "areaCode": "09210",
+    "areaName": "栃木県 大田原市"
+  },
+  {
+    "areaCode": "11243",
+    "areaName": "埼玉県 吉川市"
+  },
+  {
+    "areaCode": "40213",
+    "areaName": "福岡県 行橋市"
+  },
+  {
+    "areaCode": "13223",
+    "areaName": "東京都 武蔵村山市"
+  },
+  {
+    "areaCode": "38203",
+    "areaName": "愛媛県 宇和島市"
+  },
+  {
+    "areaCode": "26210",
+    "areaName": "京都府 八幡市"
+  },
+  {
+    "areaCode": "01231",
+    "areaName": "北海道 恵庭市"
+  },
+  {
+    "areaCode": "11241",
+    "areaName": "埼玉県 鶴ヶ島市"
+  },
+  {
+    "areaCode": "30206",
+    "areaName": "和歌山県 田辺市"
+  },
+  {
+    "areaCode": "36204",
+    "areaName": "徳島県 阿南市"
+  },
+  {
+    "areaCode": "19208",
+    "areaName": "山梨県 南アルプス市"
+  },
+  {
+    "areaCode": "23229",
+    "areaName": "愛知県 豊明市"
+  },
+  {
+    "areaCode": "05204",
+    "areaName": "秋田県 大館市"
+  },
+  {
+    "areaCode": "33208",
+    "areaName": "岡山県 総社市"
+  },
+  {
+    "areaCode": "25208",
+    "areaName": "滋賀県 栗東市"
+  },
+  {
+    "areaCode": "27221",
+    "areaName": "大阪府 柏原市"
+  },
+  {
+    "areaCode": "08224",
+    "areaName": "茨城県 守谷市"
+  },
+  {
+    "areaCode": "18207",
+    "areaName": "福井県 鯖江市"
+  },
+  {
+    "areaCode": "15104",
+    "areaName": "新潟県 新潟市 江南区"
+  },
+  {
+    "areaCode": "12230",
+    "areaName": "千葉県 八街市"
+  },
+  {
+    "areaCode": "23233",
+    "areaName": "愛知県 清須市"
+  },
+  {
+    "areaCode": "20215",
+    "areaName": "長野県 塩尻市"
+  },
+  {
+    "areaCode": "40224",
+    "areaName": "福岡県 福津市"
+  },
+  {
+    "areaCode": "23109",
+    "areaName": "愛知県 名古屋市 熱田区"
+  },
+  {
+    "areaCode": "08222",
+    "areaName": "茨城県 鹿嶋市"
+  },
+  {
+    "areaCode": "19211",
+    "areaName": "山梨県 笛吹市"
+  },
+  {
+    "areaCode": "44205",
+    "areaName": "大分県 佐伯市"
+  },
+  {
+    "areaCode": "13101",
+    "areaName": "東京都 千代田区"
+  },
+  {
+    "areaCode": "20209",
+    "areaName": "長野県 伊那市"
+  },
+  {
+    "areaCode": "21209",
+    "areaName": "岐阜県 羽島市"
+  },
+  {
+    "areaCode": "22208",
+    "areaName": "静岡県 伊東市"
+  },
+  {
+    "areaCode": "27104",
+    "areaName": "大阪府 大阪市 此花区"
+  },
+  {
+    "areaCode": "11233",
+    "areaName": "埼玉県 北本市"
+  },
+  {
+    "areaCode": "40108",
+    "areaName": "福岡県 北九州市 八幡東区"
+  },
+  {
+    "areaCode": "04213",
+    "areaName": "宮城県 栗原市"
+  },
+  {
+    "areaCode": "47212",
+    "areaName": "沖縄県 豊見城市"
+  },
+  {
+    "areaCode": "40207",
+    "areaName": "福岡県 柳川市"
+  },
+  {
+    "areaCode": "43206",
+    "areaName": "熊本県 玉名市"
+  },
+  {
+    "areaCode": "18202",
+    "areaName": "福井県 敦賀市"
+  },
+  {
+    "areaCode": "29204",
+    "areaName": "奈良県 天理市"
+  },
+  {
+    "areaCode": "12229",
+    "areaName": "千葉県 袖ケ浦市"
+  },
+  {
+    "areaCode": "12215",
+    "areaName": "千葉県 旭市"
+  },
+  {
+    "areaCode": "27226",
+    "areaName": "大阪府 藤井寺市"
+  },
+  {
+    "areaCode": "47209",
+    "areaName": "沖縄県 名護市"
+  },
+  {
+    "areaCode": "10209",
+    "areaName": "群馬県 藤岡市"
+  },
+  {
+    "areaCode": "17206",
+    "areaName": "石川県 加賀市"
+  },
+  {
+    "areaCode": "04209",
+    "areaName": "宮城県 多賀城市"
+  },
+  {
+    "areaCode": "44204",
+    "areaName": "大分県 日田市"
+  },
+  {
+    "areaCode": "12232",
+    "areaName": "千葉県 白井市"
+  },
+  {
+    "areaCode": "06210",
+    "areaName": "山形県 天童市"
+  },
+  {
+    "areaCode": "27108",
+    "areaName": "大阪府 大阪市 大正区"
+  },
+  {
+    "areaCode": "23236",
+    "areaName": "愛知県 みよし市"
+  },
+  {
+    "areaCode": "37208",
+    "areaName": "香川県 三豊市"
+  },
+  {
+    "areaCode": "43216",
+    "areaName": "熊本県 合志市"
+  },
+  {
+    "areaCode": "29202",
+    "areaName": "奈良県 大和高田市"
+  },
+  {
+    "areaCode": "11238",
+    "areaName": "埼玉県 蓮田市"
+  },
+  {
+    "areaCode": "28223",
+    "areaName": "兵庫県 丹波市"
+  },
+  {
+    "areaCode": "04205",
+    "areaName": "宮城県 気仙沼市"
+  },
+  {
+    "areaCode": "47210",
+    "areaName": "沖縄県 糸満市"
+  },
+  {
+    "areaCode": "23208",
+    "areaName": "愛知県 津島市"
+  },
+  {
+    "areaCode": "08211",
+    "areaName": "茨城県 常総市"
+  },
+  {
+    "areaCode": "23232",
+    "areaName": "愛知県 愛西市"
+  },
+  {
+    "areaCode": "30203",
+    "areaName": "和歌山県 橋本市"
+  },
+  {
+    "areaCode": "40210",
+    "areaName": "福岡県 八女市"
+  },
+  {
+    "areaCode": "02206",
+    "areaName": "青森県 十和田市"
+  },
+  {
+    "areaCode": "35216",
+    "areaName": "山口県 山陽小野田市"
+  },
+  {
+    "areaCode": "23238",
+    "areaName": "愛知県 長久手市"
+  },
+  {
+    "areaCode": "27228",
+    "areaName": "大阪府 泉南市"
+  },
+  {
+    "areaCode": "11207",
+    "areaName": "埼玉県 秩父市"
+  },
+  {
+    "areaCode": "45206",
+    "areaName": "宮崎県 日向市"
+  },
+  {
+    "areaCode": "09216",
+    "areaName": "栃木県 下野市"
+  },
+  {
+    "areaCode": "07205",
+    "areaName": "福島県 白河市"
+  },
+  {
+    "areaCode": "23231",
+    "areaName": "愛知県 田原市"
+  },
+  {
+    "areaCode": "40216",
+    "areaName": "福岡県 小郡市"
+  },
+  {
+    "areaCode": "07212",
+    "areaName": "福島県 南相馬市"
+  },
+  {
+    "areaCode": "20218",
+    "areaName": "長野県 千曲市"
+  },
+  {
+    "areaCode": "30208",
+    "areaName": "和歌山県 紀の川市"
+  },
+  {
+    "areaCode": "40223",
+    "areaName": "福岡県 古賀市"
+  },
+  {
+    "areaCode": "23216",
+    "areaName": "愛知県 常滑市"
+  },
+  {
+    "areaCode": "27231",
+    "areaName": "大阪府 大阪狭山市"
+  },
+  {
+    "areaCode": "12202",
+    "areaName": "千葉県 銚子市"
+  },
+  {
+    "areaCode": "07213",
+    "areaName": "福島県 伊達市"
+  },
+  {
+    "areaCode": "12213",
+    "areaName": "千葉県 東金市"
+  },
+  {
+    "areaCode": "01234",
+    "areaName": "北海道 北広島市"
+  },
+  {
+    "areaCode": "22221",
+    "areaName": "静岡県 湖西市"
+  },
+  {
+    "areaCode": "40105",
+    "areaName": "福岡県 北九州市 戸畑区"
+  },
+  {
+    "areaCode": "37205",
+    "areaName": "香川県 観音寺市"
+  },
+  {
+    "areaCode": "15212",
+    "areaName": "新潟県 村上市"
+  },
+  {
+    "areaCode": "17212",
+    "areaName": "石川県 野々市市"
+  },
+  {
+    "areaCode": "14208",
+    "areaName": "神奈川県 逗子市"
+  },
+  {
+    "areaCode": "43213",
+    "areaName": "熊本県 宇城市"
+  },
+  {
+    "areaCode": "01235",
+    "areaName": "北海道 石狩市"
+  },
+  {
+    "areaCode": "26208",
+    "areaName": "京都府 向日市"
+  },
+  {
+    "areaCode": "21211",
+    "areaName": "岐阜県 美濃加茂市"
+  },
+  {
+    "areaCode": "33204",
+    "areaName": "岡山県 玉野市"
+  },
+  {
+    "areaCode": "13218",
+    "areaName": "東京都 福生市"
+  },
+  {
+    "areaCode": "20214",
+    "areaName": "長野県 茅野市"
+  },
+  {
+    "areaCode": "21216",
+    "areaName": "岐阜県 瑞穂市"
+  },
+  {
+    "areaCode": "40204",
+    "areaName": "福岡県 直方市"
+  },
+  {
+    "areaCode": "35207",
+    "areaName": "山口県 下松市"
+  },
+  {
+    "areaCode": "27225",
+    "areaName": "大阪府 高石市"
+  },
+  {
+    "areaCode": "03216",
+    "areaName": "岩手県 滝沢市"
+  },
+  {
+    "areaCode": "21212",
+    "areaName": "岐阜県 土岐市"
+  },
+  {
+    "areaCode": "27229",
+    "areaName": "大阪府 四條畷市"
+  },
+  {
+    "areaCode": "10211",
+    "areaName": "群馬県 安中市"
+  },
+  {
+    "areaCode": "29206",
+    "areaName": "奈良県 桜井市"
+  },
+  {
+    "areaCode": "15226",
+    "areaName": "新潟県 南魚沼市"
+  },
+  {
+    "areaCode": "36202",
+    "areaName": "徳島県 鳴門市"
+  },
+  {
+    "areaCode": "32202",
+    "areaName": "島根県 浜田市"
+  },
+  {
+    "areaCode": "11242",
+    "areaName": "埼玉県 日高市"
+  },
+  {
+    "areaCode": "15108",
+    "areaName": "新潟県 新潟市 西蒲区"
+  },
+  {
+    "areaCode": "25211",
+    "areaName": "滋賀県 湖南市"
+  },
+  {
+    "areaCode": "13227",
+    "areaName": "東京都 羽村市"
+  },
+  {
+    "areaCode": "02208",
+    "areaName": "青森県 むつ市"
+  },
+  {
+    "areaCode": "30209",
+    "areaName": "和歌山県 岩出市"
+  },
+  {
+    "areaCode": "07210",
+    "areaName": "福島県 二本松市"
+  },
+  {
+    "areaCode": "08226",
+    "areaName": "茨城県 那珂市"
+  },
+  {
+    "areaCode": "47214",
+    "areaName": "沖縄県 宮古島市"
+  },
+  {
+    "areaCode": "11216",
+    "areaName": "埼玉県 羽生市"
+  },
+  {
+    "areaCode": "44211",
+    "areaName": "大分県 宇佐市"
+  },
+  {
+    "areaCode": "41205",
+    "areaName": "佐賀県 伊万里市"
+  },
+  {
+    "areaCode": "08228",
+    "areaName": "茨城県 坂東市"
+  },
+  {
+    "areaCode": "11246",
+    "areaName": "埼玉県 白岡市"
+  },
+  {
+    "areaCode": "04203",
+    "areaName": "宮城県 塩竈市"
+  },
+  {
+    "areaCode": "46208",
+    "areaName": "鹿児島県 出水市"
+  },
+  {
+    "areaCode": "04216",
+    "areaName": "宮城県 富谷市"
+  },
+  {
+    "areaCode": "15224",
+    "areaName": "新潟県 佐渡市"
+  },
+  {
+    "areaCode": "02205",
+    "areaName": "青森県 五所川原市"
+  },
+  {
+    "areaCode": "27232",
+    "areaName": "大阪府 阪南市"
+  },
+  {
+    "areaCode": "34302",
+    "areaName": "広島県 府中町"
+  },
+  {
+    "areaCode": "22220",
+    "areaName": "静岡県 裾野市"
+  },
+  {
+    "areaCode": "26212",
+    "areaName": "京都府 京丹後市"
+  },
+  {
+    "areaCode": "45204",
+    "areaName": "宮崎県 日南市"
+  },
+  {
+    "areaCode": "43204",
+    "areaName": "熊本県 荒尾市"
+  },
+  {
+    "areaCode": "34209",
+    "areaName": "広島県 三次市"
+  },
+  {
+    "areaCode": "08207",
+    "areaName": "茨城県 結城市"
+  },
+  {
+    "areaCode": "37203",
+    "areaName": "香川県 坂出市"
+  },
+  {
+    "areaCode": "25210",
+    "areaName": "滋賀県 野洲市"
+  },
+  {
+    "areaCode": "03202",
+    "areaName": "岩手県 宮古市"
+  },
+  {
+    "areaCode": "17202",
+    "areaName": "石川県 七尾市"
+  },
+  {
+    "areaCode": "40228",
+    "areaName": "福岡県 朝倉市"
+  },
+  {
+    "areaCode": "40231",
+    "areaName": "福岡県 那珂川市"
+  },
+  {
+    "areaCode": "11240",
+    "areaName": "埼玉県 幸手市"
+  },
+  {
+    "areaCode": "05202",
+    "areaName": "秋田県 能代市"
+  },
+  {
+    "areaCode": "08235",
+    "areaName": "茨城県 つくばみらい市"
+  },
+  {
+    "areaCode": "24210",
+    "areaName": "三重県 亀山市"
+  },
+  {
+    "areaCode": "15210",
+    "areaName": "新潟県 十日町市"
+  },
+  {
+    "areaCode": "35210",
+    "areaName": "山口県 光市"
+  },
+  {
+    "areaCode": "12233",
+    "areaName": "千葉県 富里市"
+  },
+  {
+    "areaCode": "10212",
+    "areaName": "群馬県 みどり市"
+  },
+  {
+    "areaCode": "23442",
+    "areaName": "愛知県 東浦町"
+  },
+  {
+    "areaCode": "20207",
+    "areaName": "長野県 須坂市"
+  },
+  {
+    "areaCode": "43208",
+    "areaName": "熊本県 山鹿市"
+  },
+  {
+    "areaCode": "08236",
+    "areaName": "茨城県 小美玉市"
+  },
+  {
+    "areaCode": "40211",
+    "areaName": "福岡県 筑後市"
+  },
+  {
+    "areaCode": "20206",
+    "areaName": "長野県 諏訪市"
+  },
+  {
+    "areaCode": "08212",
+    "areaName": "茨城県 常陸太田市"
+  },
+  {
+    "areaCode": "08443",
+    "areaName": "茨城県 阿見町"
+  },
+  {
+    "areaCode": "17211",
+    "areaName": "石川県 能美市"
+  },
+  {
+    "areaCode": "12237",
+    "areaName": "千葉県 山武市"
+  },
+  {
+    "areaCode": "30202",
+    "areaName": "和歌山県 海南市"
+  },
+  {
+    "areaCode": "14321",
+    "areaName": "神奈川県 寒川町"
+  },
+  {
+    "areaCode": "40349",
+    "areaName": "福岡県 粕屋町"
+  },
+  {
+    "areaCode": "16208",
+    "areaName": "富山県 砺波市"
+  },
+  {
+    "areaCode": "12239",
+    "areaName": "千葉県 大網白里市"
+  },
+  {
+    "areaCode": "23228",
+    "areaName": "愛知県 岩倉市"
+  },
+  {
+    "areaCode": "16210",
+    "areaName": "富山県 南砺市"
+  },
+  {
+    "areaCode": "41206",
+    "areaName": "佐賀県 武雄市"
+  },
+  {
+    "areaCode": "20204",
+    "areaName": "長野県 岡谷市"
+  },
+  {
+    "areaCode": "22224",
+    "areaName": "静岡県 菊川市"
+  },
+  {
+    "areaCode": "21210",
+    "areaName": "岐阜県 恵那市"
+  },
+  {
+    "areaCode": "06211",
+    "areaName": "山形県 東根市"
+  },
+  {
+    "areaCode": "47207",
+    "areaName": "沖縄県 石垣市"
+  },
+  {
+    "areaCode": "15218",
+    "areaName": "新潟県 五泉市"
+  },
+  {
+    "areaCode": "28218",
+    "areaName": "兵庫県 小野市"
+  },
+  {
+    "areaCode": "10210",
+    "areaName": "群馬県 富岡市"
+  },
+  {
+    "areaCode": "46216",
+    "areaName": "鹿児島県 日置市"
+  },
+  {
+    "areaCode": "37206",
+    "areaName": "香川県 さぬき市"
+  },
+  {
+    "areaCode": "22225",
+    "areaName": "静岡県 伊豆の国市"
+  },
+  {
+    "areaCode": "39204",
+    "areaName": "高知県 南国市"
+  },
+  {
+    "areaCode": "19202",
+    "areaName": "山梨県 富士吉田市"
+  },
+  {
+    "areaCode": "31203",
+    "areaName": "鳥取県 倉吉市"
+  },
+  {
+    "areaCode": "43210",
+    "areaName": "熊本県 菊池市"
+  },
+  {
+    "areaCode": "01230",
+    "areaName": "北海道 登別市"
+  },
+  {
+    "areaCode": "25212",
+    "areaName": "滋賀県 高島市"
+  },
+  {
+    "areaCode": "40343",
+    "areaName": "福岡県 志免町"
+  },
+  {
+    "areaCode": "40206",
+    "areaName": "福岡県 田川市"
+  },
+  {
+    "areaCode": "23227",
+    "areaName": "愛知県 高浜市"
+  },
+  {
+    "areaCode": "33205",
+    "areaName": "岡山県 笠岡市"
+  },
+  {
+    "areaCode": "24215",
+    "areaName": "三重県 志摩市"
+  },
+  {
+    "areaCode": "08234",
+    "areaName": "茨城県 鉾田市"
+  },
+  {
+    "areaCode": "28212",
+    "areaName": "兵庫県 赤穂市"
+  },
+  {
+    "areaCode": "10206",
+    "areaName": "群馬県 沼田市"
+  },
+  {
+    "areaCode": "12205",
+    "areaName": "千葉県 館山市"
+  },
+  {
+    "areaCode": "32204",
+    "areaName": "島根県 益田市"
+  },
+  {
+    "areaCode": "24214",
+    "areaName": "三重県 いなべ市"
+  },
+  {
+    "areaCode": "11301",
+    "areaName": "埼玉県 伊奈町"
+  },
+  {
+    "areaCode": "07208",
+    "areaName": "福島県 喜多方市"
+  },
+  {
+    "areaCode": "35204",
+    "areaName": "山口県 萩市"
+  },
+  {
+    "areaCode": "09214",
+    "areaName": "栃木県 さくら市"
+  },
+  {
+    "areaCode": "23221",
+    "areaName": "愛知県 新城市"
+  },
+  {
+    "areaCode": "01236",
+    "areaName": "北海道 北斗市"
+  },
+  {
+    "areaCode": "28224",
+    "areaName": "兵庫県 南あわじ市"
+  },
+  {
+    "areaCode": "04211",
+    "areaName": "宮城県 岩沼市"
+  },
+  {
+    "areaCode": "19209",
+    "areaName": "山梨県 北杜市"
+  },
+  {
+    "areaCode": "47215",
+    "areaName": "沖縄県 南城市"
+  },
+  {
+    "areaCode": "41208",
+    "areaName": "佐賀県 小城市"
+  },
+  {
+    "areaCode": "16205",
+    "areaName": "富山県 氷見市"
+  },
+  {
+    "areaCode": "23302",
+    "areaName": "愛知県 東郷町"
+  },
+  {
+    "areaCode": "11464",
+    "areaName": "埼玉県 杉戸町"
+  },
+  {
+    "areaCode": "27361",
+    "areaName": "大阪府 熊取町"
+  },
+  {
+    "areaCode": "45205",
+    "areaName": "宮崎県 小林市"
+  },
+  {
+    "areaCode": "01631",
+    "areaName": "北海道 音更町"
+  },
+  {
+    "areaCode": "23447",
+    "areaName": "愛知県 武豊町"
+  },
+  {
+    "areaCode": "22226",
+    "areaName": "静岡県 牧之原市"
+  },
+  {
+    "areaCode": "15106",
+    "areaName": "新潟県 新潟市 南区"
+  },
+  {
+    "areaCode": "42203",
+    "areaName": "長崎県 島原市"
+  },
+  {
+    "areaCode": "43404",
+    "areaName": "熊本県 菊陽町"
+  },
+  {
+    "areaCode": "22342",
+    "areaName": "静岡県 長泉町"
+  },
+  {
+    "areaCode": "23235",
+    "areaName": "愛知県 弥富市"
+  },
+  {
+    "areaCode": "33214",
+    "areaName": "岡山県 真庭市"
+  },
+  {
+    "areaCode": "28220",
+    "areaName": "兵庫県 加西市"
+  },
+  {
+    "areaCode": "33213",
+    "areaName": "岡山県 赤磐市"
+  },
+  {
+    "areaCode": "08210",
+    "areaName": "茨城県 下妻市"
+  },
+  {
+    "areaCode": "12226",
+    "areaName": "千葉県 富津市"
+  },
+  {
+    "areaCode": "23501",
+    "areaName": "愛知県 幸田町"
+  },
+  {
+    "areaCode": "20211",
+    "areaName": "長野県 中野市"
+  },
+  {
+    "areaCode": "42214",
+    "areaName": "長崎県 南島原市"
+  },
+  {
+    "areaCode": "05207",
+    "areaName": "秋田県 湯沢市"
+  },
+  {
+    "areaCode": "10524",
+    "areaName": "群馬県 大泉町"
+  },
+  {
+    "areaCode": "14210",
+    "areaName": "神奈川県 三浦市"
+  },
+  {
+    "areaCode": "28226",
+    "areaName": "兵庫県 淡路市"
+  },
+  {
+    "areaCode": "08215",
+    "areaName": "茨城県 北茨城市"
+  },
+  {
+    "areaCode": "46222",
+    "areaName": "鹿児島県 奄美市"
+  },
+  {
+    "areaCode": "28205",
+    "areaName": "兵庫県 洲本市"
+  },
+  {
+    "areaCode": "47324",
+    "areaName": "沖縄県 読谷村"
+  },
+  {
+    "areaCode": "42213",
+    "areaName": "長崎県 雲仙市"
+  },
+  {
+    "areaCode": "20208",
+    "areaName": "長野県 小諸市"
+  },
+  {
+    "areaCode": "14217",
+    "areaName": "神奈川県 南足柄市"
+  },
+  {
+    "areaCode": "42307",
+    "areaName": "長崎県 長与町"
+  },
+  {
+    "areaCode": "15216",
+    "areaName": "新潟県 糸魚川市"
+  },
+  {
+    "areaCode": "15223",
+    "areaName": "新潟県 阿賀野市"
+  },
+  {
+    "areaCode": "28228",
+    "areaName": "兵庫県 加東市"
+  },
+  {
+    "areaCode": "38207",
+    "areaName": "愛媛県 大洲市"
+  },
+  {
+    "areaCode": "24341",
+    "areaName": "三重県 菰野町"
+  },
+  {
+    "areaCode": "16204",
+    "areaName": "富山県 魚津市"
+  },
+  {
+    "areaCode": "47350",
+    "areaName": "沖縄県 南風原町"
+  },
+  {
+    "areaCode": "40215",
+    "areaName": "福岡県 中間市"
+  },
+  {
+    "areaCode": "06206",
+    "areaName": "山形県 寒河江市"
+  },
+  {
+    "areaCode": "08230",
+    "areaName": "茨城県 かすみがうら市"
+  },
+  {
+    "areaCode": "14401",
+    "areaName": "神奈川県 愛川町"
+  },
+  {
+    "areaCode": "16207",
+    "areaName": "富山県 黒部市"
+  },
+  {
+    "areaCode": "28221",
+    "areaName": "兵庫県 丹波篠山市"
+  },
+  {
+    "areaCode": "01225",
+    "areaName": "北海道 滝川市"
+  },
+  {
+    "areaCode": "09361",
+    "areaName": "栃木県 壬生町"
+  },
+  {
+    "areaCode": "08225",
+    "areaName": "茨城県 常陸大宮市"
+  },
+  {
+    "areaCode": "15211",
+    "areaName": "新潟県 見附市"
+  },
+  {
+    "areaCode": "02207",
+    "areaName": "青森県 三沢市"
+  },
+  {
+    "areaCode": "08231",
+    "areaName": "茨城県 桜川市"
+  },
+  {
+    "areaCode": "04214",
+    "areaName": "宮城県 東松島市"
+  },
+  {
+    "areaCode": "08229",
+    "areaName": "茨城県 稲敷市"
+  },
+  {
+    "areaCode": "46210",
+    "areaName": "鹿児島県 指宿市"
+  },
+  {
+    "areaCode": "21219",
+    "areaName": "岐阜県 郡上市"
+  },
+  {
+    "areaCode": "36205",
+    "areaName": "徳島県 吉野川市"
+  },
+  {
+    "areaCode": "28213",
+    "areaName": "兵庫県 西脇市"
+  },
+  {
+    "areaCode": "11324",
+    "areaName": "埼玉県 三芳町"
+  },
+  {
+    "areaCode": "33207",
+    "areaName": "岡山県 井原市"
+  },
+  {
+    "areaCode": "04323",
+    "areaName": "宮城県 柴田町"
+  },
+  {
+    "areaCode": "08341",
+    "areaName": "茨城県 東海村"
+  },
+  {
+    "areaCode": "40621",
+    "areaName": "福岡県 苅田町"
+  },
+  {
+    "areaCode": "40341",
+    "areaName": "福岡県 宇美町"
+  },
+  {
+    "areaCode": "34208",
+    "areaName": "広島県 府中市"
+  },
+  {
+    "areaCode": "27147",
+    "areaName": "大阪府 堺市 美原区"
+  },
+  {
+    "areaCode": "23425",
+    "areaName": "愛知県 蟹江町"
+  },
+  {
+    "areaCode": "25214",
+    "areaName": "滋賀県 米原市"
+  },
+  {
+    "areaCode": "21208",
+    "areaName": "岐阜県 瑞浪市"
+  },
+  {
+    "areaCode": "32206",
+    "areaName": "島根県 安来市"
+  },
+  {
+    "areaCode": "17361",
+    "areaName": "石川県 津幡町"
+  },
+  {
+    "areaCode": "29211",
+    "areaName": "奈良県 葛城市"
+  },
+  {
+    "areaCode": "22325",
+    "areaName": "静岡県 函南町"
+  },
+  {
+    "areaCode": "26105",
+    "areaName": "京都府 京都市 東山区"
+  },
+  {
+    "areaCode": "26366",
+    "areaName": "京都府 精華町"
+  },
+  {
+    "areaCode": "44206",
+    "areaName": "大分県 臼杵市"
+  },
+  {
+    "areaCode": "36203",
+    "areaName": "徳島県 小松島市"
+  },
+  {
+    "areaCode": "43211",
+    "areaName": "熊本県 宇土市"
+  },
+  {
+    "areaCode": "10464",
+    "areaName": "群馬県 玉村町"
+  },
+  {
+    "areaCode": "33212",
+    "areaName": "岡山県 瀬戸内市"
+  },
+  {
+    "areaCode": "32209",
+    "areaName": "島根県 雲南市"
+  },
+  {
+    "areaCode": "40229",
+    "areaName": "福岡県 みやま市"
+  },
+  {
+    "areaCode": "12234",
+    "areaName": "千葉県 南房総市"
+  },
+  {
+    "areaCode": "01211",
+    "areaName": "北海道 網走市"
+  },
+  {
+    "areaCode": "12238",
+    "areaName": "千葉県 いすみ市"
+  },
+  {
+    "areaCode": "40227",
+    "areaName": "福岡県 嘉麻市"
+  },
+  {
+    "areaCode": "38214",
+    "areaName": "愛媛県 西予市"
+  },
+  {
+    "areaCode": "11326",
+    "areaName": "埼玉県 毛呂山町"
+  },
+  {
+    "areaCode": "36403",
+    "areaName": "徳島県 藍住町"
+  },
+  {
+    "areaCode": "43403",
+    "areaName": "熊本県 大津町"
+  },
+  {
+    "areaCode": "04406",
+    "areaName": "宮城県 利府町"
+  },
+  {
+    "areaCode": "07211",
+    "areaName": "福島県 田村市"
+  },
+  {
+    "areaCode": "38210",
+    "areaName": "愛媛県 伊予市"
+  },
+  {
+    "areaCode": "12235",
+    "areaName": "千葉県 匝瑳市"
+  },
+  {
+    "areaCode": "47329",
+    "areaName": "沖縄県 西原町"
+  },
+  {
+    "areaCode": "17209",
+    "areaName": "石川県 かほく市"
+  },
+  {
+    "areaCode": "07209",
+    "areaName": "福島県 相馬市"
+  },
+  {
+    "areaCode": "28227",
+    "areaName": "兵庫県 宍粟市"
+  },
+  {
+    "areaCode": "03203",
+    "areaName": "岩手県 大船渡市"
+  },
+  {
+    "areaCode": "36206",
+    "areaName": "徳島県 阿波市"
+  },
+  {
+    "areaCode": "15225",
+    "areaName": "新潟県 魚沼市"
+  },
+  {
+    "areaCode": "06205",
+    "areaName": "山形県 新庄市"
+  },
+  {
+    "areaCode": "42211",
+    "areaName": "長崎県 五島市"
+  },
+  {
+    "areaCode": "22205",
+    "areaName": "静岡県 熱海市"
+  },
+  {
+    "areaCode": "11442",
+    "areaName": "埼玉県 宮代町"
+  },
+  {
+    "areaCode": "23362",
+    "areaName": "愛知県 扶桑町"
+  },
+  {
+    "areaCode": "15208",
+    "areaName": "新潟県 小千谷市"
+  },
+  {
+    "areaCode": "38215",
+    "areaName": "愛媛県 東温市"
+  },
+  {
+    "areaCode": "29426",
+    "areaName": "奈良県 広陵町"
+  },
+  {
+    "areaCode": "44212",
+    "areaName": "大分県 豊後大野市"
+  },
+  {
+    "areaCode": "34210",
+    "areaName": "広島県 庄原市"
+  },
+  {
+    "areaCode": "28382",
+    "areaName": "兵庫県 播磨町"
+  },
+  {
+    "areaCode": "01214",
+    "areaName": "北海道 稚内市"
+  },
+  {
+    "areaCode": "28464",
+    "areaName": "兵庫県 太子町"
+  },
+  {
+    "areaCode": "19205",
+    "areaName": "山梨県 山梨市"
+  },
+  {
+    "areaCode": "46217",
+    "areaName": "鹿児島県 曽於市"
+  },
+  {
+    "areaCode": "04361",
+    "areaName": "宮城県 亘理町"
+  },
+  {
+    "areaCode": "46223",
+    "areaName": "鹿児島県 南九州市"
+  },
+  {
+    "areaCode": "03207",
+    "areaName": "岩手県 久慈市"
+  },
+  {
+    "areaCode": "40212",
+    "areaName": "福岡県 大川市"
+  },
+  {
+    "areaCode": "21218",
+    "areaName": "岐阜県 本巣市"
+  },
+  {
+    "areaCode": "40345",
+    "areaName": "福岡県 新宮町"
+  },
+  {
+    "areaCode": "46220",
+    "areaName": "鹿児島県 南さつま市"
+  },
+  {
+    "areaCode": "32205",
+    "areaName": "島根県 大田市"
+  },
+  {
+    "areaCode": "01233",
+    "areaName": "北海道 伊達市"
+  },
+  {
+    "areaCode": "33216",
+    "areaName": "岡山県 浅口市"
+  },
+  {
+    "areaCode": "44213",
+    "areaName": "大分県 由布市"
+  },
+  {
+    "areaCode": "04206",
+    "areaName": "宮城県 白石市"
+  },
+  {
+    "areaCode": "31204",
+    "areaName": "鳥取県 境港市"
+  },
+  {
+    "areaCode": "21221",
+    "areaName": "岐阜県 海津市"
+  },
+  {
+    "areaCode": "39210",
+    "areaName": "高知県 四万十市"
+  },
+  {
+    "areaCode": "35211",
+    "areaName": "山口県 長門市"
+  },
+  {
+    "areaCode": "43443",
+    "areaName": "熊本県 益城町"
+  },
+  {
+    "areaCode": "23424",
+    "areaName": "愛知県 大治町"
+  },
+  {
+    "areaCode": "11408",
+    "areaName": "埼玉県 寄居町"
+  },
+  {
+    "areaCode": "16206",
+    "areaName": "富山県 滑川市"
+  },
+  {
+    "areaCode": "33211",
+    "areaName": "岡山県 備前市"
+  },
+  {
+    "areaCode": "39211",
+    "areaName": "高知県 香南市"
+  },
+  {
+    "areaCode": "20210",
+    "areaName": "長野県 駒ヶ根市"
+  },
+  {
+    "areaCode": "08233",
+    "areaName": "茨城県 行方市"
+  },
+  {
+    "areaCode": "03321",
+    "areaName": "岩手県 紫波町"
+  },
+  {
+    "areaCode": "12223",
+    "areaName": "千葉県 鴨川市"
+  },
+  {
+    "areaCode": "03211",
+    "areaName": "岩手県 釜石市"
+  },
+  {
+    "areaCode": "38204",
+    "areaName": "愛媛県 八幡浜市"
+  },
+  {
+    "areaCode": "02204",
+    "areaName": "青森県 黒石市"
+  },
+  {
+    "areaCode": "26203",
+    "areaName": "京都府 綾部市"
+  },
+  {
+    "areaCode": "13303",
+    "areaName": "東京都 瑞穂町"
+  },
+  {
+    "areaCode": "05211",
+    "areaName": "秋田県 潟上市"
+  },
+  {
+    "areaCode": "22341",
+    "areaName": "静岡県 清水町"
+  },
+  {
+    "areaCode": "14301",
+    "areaName": "神奈川県 葉山町"
+  },
+  {
+    "areaCode": "14341",
+    "areaName": "神奈川県 大磯町"
+  },
+  {
+    "areaCode": "37204",
+    "areaName": "香川県 善通寺市"
+  },
+  {
+    "areaCode": "26213",
+    "areaName": "京都府 南丹市"
+  },
+  {
+    "areaCode": "08302",
+    "areaName": "茨城県 茨城町"
+  },
+  {
+    "areaCode": "18205",
+    "areaName": "福井県 大野市"
+  },
+  {
+    "areaCode": "19214",
+    "areaName": "山梨県 中央市"
+  },
+  {
+    "areaCode": "40342",
+    "areaName": "福岡県 篠栗町"
+  },
+  {
+    "areaCode": "29363",
+    "areaName": "奈良県 田原本町"
+  },
+  {
+    "areaCode": "09211",
+    "areaName": "栃木県 矢板市"
+  },
+  {
+    "areaCode": "43203",
+    "areaName": "熊本県 人吉市"
+  },
+  {
+    "areaCode": "22223",
+    "areaName": "静岡県 御前崎市"
+  },
+  {
+    "areaCode": "41210",
+    "areaName": "佐賀県 神埼市"
+  },
+  {
+    "areaCode": "19204",
+    "areaName": "山梨県 都留市"
+  },
+  {
+    "areaCode": "40383",
+    "areaName": "福岡県 岡垣町"
+  },
+  {
+    "areaCode": "47362",
+    "areaName": "沖縄県 八重瀬町"
+  },
+  {
+    "areaCode": "02209",
+    "areaName": "青森県 つがる市"
+  },
+  {
+    "areaCode": "27301",
+    "areaName": "大阪府 島本町"
+  },
+  {
+    "areaCode": "09301",
+    "areaName": "栃木県 上三川町"
+  },
+  {
+    "areaCode": "35212",
+    "areaName": "山口県 柳井市"
+  },
+  {
+    "areaCode": "02210",
+    "areaName": "青森県 平川市"
+  },
+  {
+    "areaCode": "21220",
+    "areaName": "岐阜県 下呂市"
+  },
+  {
+    "areaCode": "06213",
+    "areaName": "山形県 南陽市"
+  },
+  {
+    "areaCode": "15217",
+    "areaName": "新潟県 妙高市"
+  },
+  {
+    "areaCode": "11385",
+    "areaName": "埼玉県 上里町"
+  },
+  {
+    "areaCode": "28381",
+    "areaName": "兵庫県 稲美町"
+  },
+  {
+    "areaCode": "07214",
+    "areaName": "福島県 本宮市"
+  },
+  {
+    "areaCode": "05213",
+    "areaName": "秋田県 北秋田市"
+  },
+  {
+    "areaCode": "20219",
+    "areaName": "長野県 東御市"
+  },
+  {
+    "areaCode": "28301",
+    "areaName": "兵庫県 猪名川町"
+  },
+  {
+    "areaCode": "34304",
+    "areaName": "広島県 海田町"
+  },
+  {
+    "areaCode": "38401",
+    "areaName": "愛媛県 松前町"
+  },
+  {
+    "areaCode": "40447",
+    "areaName": "福岡県 筑前町"
+  },
+  {
+    "areaCode": "42207",
+    "areaName": "長崎県 平戸市"
+  },
+  {
+    "areaCode": "42308",
+    "areaName": "長崎県 時津町"
+  },
+  {
+    "areaCode": "46221",
+    "areaName": "鹿児島県 志布志市"
+  },
+  {
+    "areaCode": "19213",
+    "areaName": "山梨県 甲州市"
+  },
+  {
+    "areaCode": "09386",
+    "areaName": "栃木県 高根沢町"
+  },
+  {
+    "areaCode": "06207",
+    "areaName": "山形県 上山市"
+  },
+  {
+    "areaCode": "05209",
+    "areaName": "秋田県 鹿角市"
+  },
+  {
+    "areaCode": "33209",
+    "areaName": "岡山県 高梁市"
+  },
+  {
+    "areaCode": "19207",
+    "areaName": "山梨県 韮崎市"
+  },
+  {
+    "areaCode": "18204",
+    "areaName": "福井県 小浜市"
+  },
+  {
+    "areaCode": "28225",
+    "areaName": "兵庫県 朝来市"
+  },
+  {
+    "areaCode": "16209",
+    "areaName": "富山県 小矢部市"
+  },
+  {
+    "areaCode": "22424",
+    "areaName": "静岡県 吉田町"
+  },
+  {
+    "areaCode": "04421",
+    "areaName": "宮城県 大和町"
+  },
+  {
+    "areaCode": "40344",
+    "areaName": "福岡県 須恵町"
+  },
+  {
+    "areaCode": "45208",
+    "areaName": "宮崎県 西都市"
+  },
+  {
+    "areaCode": "11343",
+    "areaName": "埼玉県 小川町"
+  },
+  {
+    "areaCode": "15227",
+    "areaName": "新潟県 胎内市"
+  },
+  {
+    "areaCode": "42209",
+    "areaName": "長崎県 対馬市"
+  },
+  {
+    "areaCode": "23441",
+    "areaName": "愛知県 阿久比町"
+  },
+  {
+    "areaCode": "28208",
+    "areaName": "兵庫県 相生市"
+  },
+  {
+    "areaCode": "37207",
+    "areaName": "香川県 東かがわ市"
+  },
+  {
+    "areaCode": "11465",
+    "areaName": "埼玉県 松伏町"
+  },
+  {
+    "areaCode": "47326",
+    "areaName": "沖縄県 北谷町"
+  },
+  {
+    "areaCode": "22222",
+    "areaName": "静岡県 伊豆市"
+  },
+  {
+    "areaCode": "29212",
+    "areaName": "奈良県 宇陀市"
+  },
+  {
+    "areaCode": "40382",
+    "areaName": "福岡県 水巻町"
+  },
+  {
+    "areaCode": "33210",
+    "areaName": "岡山県 新見市"
+  },
+  {
+    "areaCode": "03322",
+    "areaName": "岩手県 矢巾町"
+  },
+  {
+    "areaCode": "36207",
+    "areaName": "徳島県 美馬市"
+  },
+  {
+    "areaCode": "44210",
+    "areaName": "大分県 杵築市"
+  },
+  {
+    "areaCode": "40225",
+    "areaName": "福岡県 うきは市"
+  },
+  {
+    "areaCode": "04208",
+    "areaName": "宮城県 角田市"
+  },
+  {
+    "areaCode": "29207",
+    "areaName": "奈良県 五條市"
+  },
+  {
+    "areaCode": "41207",
+    "areaName": "佐賀県 鹿島市"
+  },
+  {
+    "areaCode": "44341",
+    "areaName": "大分県 日出町"
+  },
+  {
+    "areaCode": "08214",
+    "areaName": "茨城県 高萩市"
+  },
+  {
+    "areaCode": "01337",
+    "areaName": "北海道 七飯町"
+  },
+  {
+    "areaCode": "08223",
+    "areaName": "茨城県 潮来市"
+  },
+  {
+    "areaCode": "29344",
+    "areaName": "奈良県 斑鳩町"
+  },
+  {
+    "areaCode": "14342",
+    "areaName": "神奈川県 二宮町"
+  },
+  {
+    "areaCode": "18208",
+    "areaName": "福井県 あわら市"
+  },
+  {
+    "areaCode": "46219",
+    "areaName": "鹿児島県 いちき串木野市"
+  },
+  {
+    "areaCode": "01221",
+    "areaName": "北海道 名寄市"
+  },
+  {
+    "areaCode": "30207",
+    "areaName": "和歌山県 新宮市"
+  },
+  {
+    "areaCode": "21341",
+    "areaName": "岐阜県 養老町"
+  },
+  {
+    "areaCode": "37341",
+    "areaName": "香川県 三木町"
+  },
+  {
+    "areaCode": "22137",
+    "areaName": "静岡県 浜松市 天竜区"
+  },
+  {
+    "areaCode": "17365",
+    "areaName": "石川県 内灘町"
+  },
+  {
+    "areaCode": "06209",
+    "areaName": "山形県 長井市"
+  },
+  {
+    "areaCode": "30204",
+    "areaName": "和歌山県 有田市"
+  },
+  {
+    "areaCode": "39212",
+    "areaName": "高知県 香美市"
+  },
+  {
+    "areaCode": "34214",
+    "areaName": "広島県 安芸高田市"
+  },
+  {
+    "areaCode": "21361",
+    "areaName": "岐阜県 垂井町"
+  },
+  {
+    "areaCode": "34211",
+    "areaName": "広島県 大竹市"
+  },
+  {
+    "areaCode": "40226",
+    "areaName": "福岡県 宮若市"
+  },
+  {
+    "areaCode": "42212",
+    "areaName": "長崎県 西海市"
+  },
+  {
+    "areaCode": "44214",
+    "areaName": "大分県 国東市"
+  },
+  {
+    "areaCode": "19430",
+    "areaName": "山梨県 富士河口湖町"
+  },
+  {
+    "areaCode": "20212",
+    "areaName": "長野県 大町市"
+  },
+  {
+    "areaCode": "33215",
+    "areaName": "岡山県 美作市"
+  },
+  {
+    "areaCode": "21302",
+    "areaName": "岐阜県 岐南町"
+  },
+  {
+    "areaCode": "41209",
+    "areaName": "佐賀県 嬉野市"
+  },
+  {
+    "areaCode": "24324",
+    "areaName": "三重県 東員町"
+  },
+  {
+    "areaCode": "01643",
+    "areaName": "北海道 幕別町"
+  },
+  {
+    "areaCode": "39205",
+    "areaName": "高知県 土佐市"
+  },
+  {
+    "areaCode": "45341",
+    "areaName": "宮崎県 三股町"
+  },
+  {
+    "areaCode": "10525",
+    "areaName": "群馬県 邑楽町"
+  },
+  {
+    "areaCode": "03213",
+    "areaName": "岩手県 二戸市"
+  },
+  {
+    "areaCode": "41346",
+    "areaName": "佐賀県 みやき町"
+  },
+  {
+    "areaCode": "15209",
+    "areaName": "新潟県 加茂市"
+  },
+  {
+    "areaCode": "03208",
+    "areaName": "岩手県 遠野市"
+  },
+  {
+    "areaCode": "21215",
+    "areaName": "岐阜県 山県市"
+  },
+  {
+    "areaCode": "30366",
+    "areaName": "和歌山県 有田川町"
+  },
+  {
+    "areaCode": "05206",
+    "areaName": "秋田県 男鹿市"
+  },
+  {
+    "areaCode": "20383",
+    "areaName": "長野県 箕輪町"
+  },
+  {
+    "areaCode": "42210",
+    "areaName": "長崎県 壱岐市"
+  },
+  {
+    "areaCode": "43214",
+    "areaName": "熊本県 阿蘇市"
+  },
+  {
+    "areaCode": "09364",
+    "areaName": "栃木県 野木町"
+  },
+  {
+    "areaCode": "09215",
+    "areaName": "栃木県 那須烏山市"
+  },
+  {
+    "areaCode": "36341",
+    "areaName": "徳島県 石井町"
+  },
+  {
+    "areaCode": "16323",
+    "areaName": "富山県 立山町"
+  },
+  {
+    "areaCode": "01223",
+    "areaName": "北海道 根室市"
+  },
+  {
+    "areaCode": "05215",
+    "areaName": "秋田県 仙北市"
+  },
+  {
+    "areaCode": "17204",
+    "areaName": "石川県 輪島市"
+  },
+  {
+    "areaCode": "43212",
+    "areaName": "熊本県 上天草市"
+  },
+  {
+    "areaCode": "46224",
+    "areaName": "鹿児島県 伊佐市"
+  },
+  {
+    "areaCode": "40214",
+    "areaName": "福岡県 豊前市"
+  },
+  {
+    "areaCode": "23361",
+    "areaName": "愛知県 大口町"
+  },
+  {
+    "areaCode": "02412",
+    "areaName": "青森県 おいらせ町"
+  },
+  {
+    "areaCode": "08546",
+    "areaName": "茨城県 境町"
+  },
+  {
+    "areaCode": "29208",
+    "areaName": "奈良県 御所市"
+  },
+  {
+    "areaCode": "29425",
+    "areaName": "奈良県 王寺町"
+  },
+  {
+    "areaCode": "03214",
+    "areaName": "岩手県 八幡平市"
+  },
+  {
+    "areaCode": "04505",
+    "areaName": "宮城県 美里町"
+  },
+  {
+    "areaCode": "34203",
+    "areaName": "広島県 竹原市"
+  },
+  {
+    "areaCode": "09407",
+    "areaName": "栃木県 那須町"
+  },
+  {
+    "areaCode": "16342",
+    "areaName": "富山県 入善町"
+  },
+  {
+    "areaCode": "36208",
+    "areaName": "徳島県 三好市"
+  },
+  {
+    "areaCode": "04321",
+    "areaName": "宮城県 大河原町"
+  },
+  {
+    "areaCode": "43205",
+    "areaName": "熊本県 水俣市"
+  },
+  {
+    "areaCode": "30205",
+    "areaName": "和歌山県 御坊市"
+  },
+  {
+    "areaCode": "05214",
+    "areaName": "秋田県 にかほ市"
+  },
+  {
+    "areaCode": "14384",
+    "areaName": "神奈川県 湯河原町"
+  },
+  {
+    "areaCode": "21404",
+    "areaName": "岐阜県 池田町"
+  },
+  {
+    "areaCode": "35213",
+    "areaName": "山口県 美祢市"
+  },
+  {
+    "areaCode": "29343",
+    "areaName": "奈良県 三郷町"
+  },
+  {
+    "areaCode": "01692",
+    "areaName": "北海道 中標津町"
+  },
+  {
+    "areaCode": "32207",
+    "areaName": "島根県 江津市"
+  },
+  {
+    "areaCode": "34307",
+    "areaName": "広島県 熊野町"
+  },
+  {
+    "areaCode": "36402",
+    "areaName": "徳島県 北島町"
+  },
+  {
+    "areaCode": "37387",
+    "areaName": "香川県 綾川町"
+  },
+  {
+    "areaCode": "19212",
+    "areaName": "山梨県 上野原市"
+  },
+  {
+    "areaCode": "21217",
+    "areaName": "岐阜県 飛騨市"
+  },
+  {
+    "areaCode": "06208",
+    "areaName": "山形県 村山市"
+  },
+  {
+    "areaCode": "19206",
+    "areaName": "山梨県 大月市"
+  },
+  {
+    "areaCode": "23446",
+    "areaName": "愛知県 美浜町"
+  },
+  {
+    "areaCode": "06381",
+    "areaName": "山形県 高畠町"
+  },
+  {
+    "areaCode": "24442",
+    "areaName": "三重県 明和町"
+  },
+  {
+    "areaCode": "37404",
+    "areaName": "香川県 多度津町"
+  },
+  {
+    "areaCode": "21303",
+    "areaName": "岐阜県 笠松町"
+  },
+  {
+    "areaCode": "47328",
+    "areaName": "沖縄県 中城村"
+  },
+  {
+    "areaCode": "18206",
+    "areaName": "福井県 勝山市"
+  },
+  {
+    "areaCode": "28222",
+    "areaName": "兵庫県 養父市"
+  },
+  {
+    "areaCode": "44209",
+    "areaName": "大分県 豊後高田市"
+  },
+  {
+    "areaCode": "12410",
+    "areaName": "千葉県 横芝光町"
+  },
+  {
+    "areaCode": "41425",
+    "areaName": "佐賀県 白石町"
+  },
+  {
+    "areaCode": "21403",
+    "areaName": "岐阜県 大野町"
+  },
+  {
+    "areaCode": "04445",
+    "areaName": "宮城県 加美町"
+  },
+  {
+    "areaCode": "34215",
+    "areaName": "広島県 江田島市"
+  },
+  {
+    "areaCode": "09342",
+    "areaName": "栃木県 益子町"
+  },
+  {
+    "areaCode": "10345",
+    "areaName": "群馬県 吉岡町"
+  },
+  {
+    "areaCode": "29424",
+    "areaName": "奈良県 上牧町"
+  },
+  {
+    "areaCode": "01610",
+    "areaName": "北海道 新ひだか町"
+  },
+  {
+    "areaCode": "40610",
+    "areaName": "福岡県 福智町"
+  },
+  {
+    "areaCode": "39386",
+    "areaName": "高知県 いの町"
+  },
+  {
+    "areaCode": "42208",
+    "areaName": "長崎県 松浦市"
+  },
+  {
+    "areaCode": "01219",
+    "areaName": "北海道 紋別市"
+  },
+  {
+    "areaCode": "01229",
+    "areaName": "北海道 富良野市"
+  },
+  {
+    "areaCode": "08521",
+    "areaName": "茨城県 八千代町"
+  },
+  {
+    "areaCode": "25383",
+    "areaName": "滋賀県 日野町"
+  },
+  {
+    "areaCode": "19384",
+    "areaName": "山梨県 昭和町"
+  },
+  {
+    "areaCode": "25425",
+    "areaName": "滋賀県 愛荘町"
+  },
+  {
+    "areaCode": "07461",
+    "areaName": "福島県 西郷村"
+  },
+  {
+    "areaCode": "12322",
+    "areaName": "千葉県 酒々井町"
+  },
+  {
+    "areaCode": "39206",
+    "areaName": "高知県 須崎市"
+  },
+  {
+    "areaCode": "38402",
+    "areaName": "愛媛県 砥部町"
+  },
+  {
+    "areaCode": "01215",
+    "areaName": "北海道 美唄市"
+  },
+  {
+    "areaCode": "17207",
+    "areaName": "石川県 羽咋市"
+  },
+  {
+    "areaCode": "44208",
+    "areaName": "大分県 竹田市"
+  },
+  {
+    "areaCode": "30401",
+    "areaName": "和歌山県 白浜町"
+  },
+  {
+    "areaCode": "46392",
+    "areaName": "鹿児島県 さつま町"
+  },
+  {
+    "areaCode": "22219",
+    "areaName": "静岡県 下田市"
+  },
+  {
+    "areaCode": "06428",
+    "areaName": "山形県 庄内町"
+  },
+  {
+    "areaCode": "12329",
+    "areaName": "千葉県 栄町"
+  },
+  {
+    "areaCode": "18423",
+    "areaName": "福井県 越前町"
+  },
+  {
+    "areaCode": "01212",
+    "areaName": "北海道 留萌市"
+  },
+  {
+    "areaCode": "26465",
+    "areaName": "京都府 与謝野町"
+  },
+  {
+    "areaCode": "01228",
+    "areaName": "北海道 深川市"
+  },
+  {
+    "areaCode": "46204",
+    "areaName": "鹿児島県 枕崎市"
+  },
+  {
+    "areaCode": "40544",
+    "areaName": "福岡県 広川町"
+  },
+  {
+    "areaCode": "45401",
+    "areaName": "宮崎県 高鍋町"
+  },
+  {
+    "areaCode": "11341",
+    "areaName": "埼玉県 滑川町"
+  },
+  {
+    "areaCode": "47348",
+    "areaName": "沖縄県 与那原町"
+  },
+  {
+    "areaCode": "38506",
+    "areaName": "愛媛県 愛南町"
+  },
+  {
+    "areaCode": "20213",
+    "areaName": "長野県 飯山市"
+  },
+  {
+    "areaCode": "21401",
+    "areaName": "岐阜県 揖斐川町"
+  },
+  {
+    "areaCode": "11346",
+    "areaName": "埼玉県 川島町"
+  },
+  {
+    "areaCode": "28443",
+    "areaName": "兵庫県 福崎町"
+  },
+  {
+    "areaCode": "16322",
+    "areaName": "富山県 上市町"
+  },
+  {
+    "areaCode": "46206",
+    "areaName": "鹿児島県 阿久根市"
+  },
+  {
+    "areaCode": "28365",
+    "areaName": "兵庫県 多可町"
+  },
+  {
+    "areaCode": "21207",
+    "areaName": "岐阜県 美濃市"
+  },
+  {
+    "areaCode": "01555",
+    "areaName": "北海道 遠軽町"
+  },
+  {
+    "areaCode": "20321",
+    "areaName": "長野県 軽井沢町"
+  },
+  {
+    "areaCode": "20361",
+    "areaName": "長野県 下諏訪町"
+  },
+  {
+    "areaCode": "01661",
+    "areaName": "北海道 釧路町"
+  },
+  {
+    "areaCode": "39208",
+    "areaName": "高知県 宿毛市"
+  },
+  {
+    "areaCode": "07447",
+    "areaName": "福島県 会津美里町"
+  },
+  {
+    "areaCode": "41401",
+    "areaName": "佐賀県 有田町"
+  },
+  {
+    "areaCode": "18322",
+    "areaName": "福井県 永平寺町"
+  },
+  {
+    "areaCode": "40625",
+    "areaName": "福岡県 みやこ町"
+  },
+  {
+    "areaCode": "40384",
+    "areaName": "福岡県 遠賀町"
+  },
+  {
+    "areaCode": "37386",
+    "areaName": "香川県 宇多津町"
+  },
+  {
+    "areaCode": "01543",
+    "areaName": "北海道 美幌町"
+  },
+  {
+    "areaCode": "17384",
+    "areaName": "石川県 志賀町"
+  },
+  {
+    "areaCode": "05434",
+    "areaName": "秋田県 美郷町"
+  },
+  {
+    "areaCode": "21381",
+    "areaName": "岐阜県 神戸町"
+  },
+  {
+    "areaCode": "22344",
+    "areaName": "静岡県 小山町"
+  },
+  {
+    "areaCode": "20382",
+    "areaName": "長野県 辰野町"
+  },
+  {
+    "areaCode": "45382",
+    "areaName": "宮崎県 国富町"
+  },
+  {
+    "areaCode": "14366",
+    "areaName": "神奈川県 開成町"
+  },
+  {
+    "areaCode": "41204",
+    "areaName": "佐賀県 多久市"
+  },
+  {
+    "areaCode": "27321",
+    "areaName": "大阪府 豊能町"
+  },
+  {
+    "areaCode": "03210",
+    "areaName": "岩手県 陸前高田市"
+  },
+  {
+    "areaCode": "11347",
+    "areaName": "埼玉県 吉見町"
+  },
+  {
+    "areaCode": "21421",
+    "areaName": "岐阜県 北方町"
+  },
+  {
+    "areaCode": "04404",
+    "areaName": "宮城県 七ヶ浜町"
+  },
+  {
+    "areaCode": "08310",
+    "areaName": "茨城県 城里町"
+  },
+  {
+    "areaCode": "01637",
+    "areaName": "北海道 芽室町"
+  },
+  {
+    "areaCode": "29342",
+    "areaName": "奈良県 平群町"
+  },
+  {
+    "areaCode": "01408",
+    "areaName": "北海道 余市町"
+  },
+  {
+    "areaCode": "47327",
+    "areaName": "沖縄県 北中城村"
+  },
+  {
+    "areaCode": "11342",
+    "areaName": "埼玉県 嵐山町"
+  },
+  {
+    "areaCode": "01220",
+    "areaName": "北海道 士別市"
+  },
+  {
+    "areaCode": "34369",
+    "areaName": "広島県 北広島町"
+  },
+  {
+    "areaCode": "06321",
+    "areaName": "山形県 河北町"
+  },
+  {
+    "areaCode": "45209",
+    "areaName": "宮崎県 えびの市"
+  },
+  {
+    "areaCode": "24211",
+    "areaName": "三重県 鳥羽市"
+  },
+  {
+    "areaCode": "21521",
+    "areaName": "岐阜県 御嵩町"
+  },
+  {
+    "areaCode": "42411",
+    "areaName": "長崎県 新上五島町"
+  },
+  {
+    "areaCode": "22461",
+    "areaName": "静岡県 森町"
+  },
+  {
+    "areaCode": "37406",
+    "areaName": "香川県 まんのう町"
+  },
+  {
+    "areaCode": "45421",
+    "areaName": "宮崎県 門川町"
+  },
+  {
+    "areaCode": "07466",
+    "areaName": "福島県 矢吹町"
+  },
+  {
+    "areaCode": "41341",
+    "areaName": "佐賀県 基山町"
+  },
+  {
+    "areaCode": "10449",
+    "areaName": "群馬県 みなかみ町"
+  },
+  {
+    "areaCode": "40647",
+    "areaName": "福岡県 築上町"
+  },
+  {
+    "areaCode": "14362",
+    "areaName": "神奈川県 大井町"
+  },
+  {
+    "areaCode": "07521",
+    "areaName": "福島県 三春町"
+  },
+  {
+    "areaCode": "29427",
+    "areaName": "奈良県 河合町"
+  },
+  {
+    "areaCode": "13305",
+    "areaName": "東京都 日の出町"
+  },
+  {
+    "areaCode": "12218",
+    "areaName": "千葉県 勝浦市"
+  },
+  {
+    "areaCode": "45207",
+    "areaName": "宮崎県 串間市"
+  },
+  {
+    "areaCode": "02445",
+    "areaName": "青森県 南部町"
+  },
+  {
+    "areaCode": "26205",
+    "areaName": "京都府 宮津市"
+  },
+  {
+    "areaCode": "29442",
+    "areaName": "奈良県 大淀町"
+  },
+  {
+    "areaCode": "23445",
+    "areaName": "愛知県 南知多町"
+  },
+  {
+    "areaCode": "27341",
+    "areaName": "大阪府 忠岡町"
+  },
+  {
+    "areaCode": "45402",
+    "areaName": "宮崎県 新富町"
+  },
+  {
+    "areaCode": "17407",
+    "areaName": "石川県 中能登町"
+  },
+  {
+    "areaCode": "01226",
+    "areaName": "北海道 砂川市"
+  },
+  {
+    "areaCode": "02408",
+    "areaName": "青森県 東北町"
+  },
+  {
+    "areaCode": "31371",
+    "areaName": "鳥取県 琴浦町"
+  },
+  {
+    "areaCode": "41327",
+    "areaName": "佐賀県 吉野ヶ里町"
+  },
+  {
+    "areaCode": "43441",
+    "areaName": "熊本県 御船町"
+  },
+  {
+    "areaCode": "24209",
+    "areaName": "三重県 尾鷲市"
+  },
+  {
+    "areaCode": "39203",
+    "areaName": "高知県 安芸市"
+  },
+  {
+    "areaCode": "01578",
+    "areaName": "北海道 白老町"
+  },
+  {
+    "areaCode": "44207",
+    "areaName": "大分県 津久見市"
+  },
+  {
+    "areaCode": "28585",
+    "areaName": "兵庫県 香美町"
+  },
+  {
+    "areaCode": "31370",
+    "areaName": "鳥取県 湯梨浜町"
+  },
+  {
+    "areaCode": "02442",
+    "areaName": "青森県 五戸町"
+  },
+  {
+    "areaCode": "30341",
+    "areaName": "和歌山県 かつらぎ町"
+  },
+  {
+    "areaCode": "24212",
+    "areaName": "三重県 熊野市"
+  },
+  {
+    "areaCode": "26303",
+    "areaName": "京都府 大山崎町"
+  },
+  {
+    "areaCode": "31329",
+    "areaName": "鳥取県 八頭町"
+  },
+  {
+    "areaCode": "01303",
+    "areaName": "北海道 当別町"
+  },
+  {
+    "areaCode": "28501",
+    "areaName": "兵庫県 佐用町"
+  },
+  {
+    "areaCode": "01346",
+    "areaName": "北海道 八雲町"
+  },
+  {
+    "areaCode": "20385",
+    "areaName": "長野県 南箕輪村"
+  },
+  {
+    "areaCode": "08364",
+    "areaName": "茨城県 大子町"
+  },
+  {
+    "areaCode": "03301",
+    "areaName": "岩手県 雫石町"
+  },
+  {
+    "areaCode": "08309",
+    "areaName": "茨城県 大洗町"
+  },
+  {
+    "areaCode": "27382",
+    "areaName": "大阪府 河南町"
+  },
+  {
+    "areaCode": "17463",
+    "areaName": "石川県 能登町"
+  },
+  {
+    "areaCode": "43482",
+    "areaName": "熊本県 芦北町"
+  },
+  {
+    "areaCode": "23342",
+    "areaName": "愛知県 豊山町"
+  },
+  {
+    "areaCode": "39412",
+    "areaName": "高知県 四万十町"
+  },
+  {
+    "areaCode": "20323",
+    "areaName": "長野県 御代田町"
+  },
+  {
+    "areaCode": "03381",
+    "areaName": "岩手県 金ケ崎町"
+  },
+  {
+    "areaCode": "40503",
+    "areaName": "福岡県 大刀洗町"
+  },
+  {
+    "areaCode": "04501",
+    "areaName": "宮城県 涌谷町"
+  },
+  {
+    "areaCode": "10421",
+    "areaName": "群馬県 中之条町"
+  },
+  {
+    "areaCode": "43368",
+    "areaName": "熊本県 長洲町"
+  },
+  {
+    "areaCode": "31386",
+    "areaName": "鳥取県 大山町"
+  },
+  {
+    "areaCode": "08564",
+    "areaName": "茨城県 利根町"
+  },
+  {
+    "areaCode": "38422",
+    "areaName": "愛媛県 内子町"
+  },
+  {
+    "areaCode": "05348",
+    "areaName": "秋田県 三種町"
+  },
+  {
+    "areaCode": "26322",
+    "areaName": "京都府 久御山町"
+  },
+  {
+    "areaCode": "30404",
+    "areaName": "和歌山県 上富田町"
+  },
+  {
+    "areaCode": "09411",
+    "areaName": "栃木県 那珂川町"
+  },
+  {
+    "areaCode": "45405",
+    "areaName": "宮崎県 川南町"
+  },
+  {
+    "areaCode": "40605",
+    "areaName": "福岡県 川崎町"
+  },
+  {
+    "areaCode": "01400",
+    "areaName": "北海道 倶知安町"
+  },
+  {
+    "areaCode": "34462",
+    "areaName": "広島県 世羅町"
+  },
+  {
+    "areaCode": "24344",
+    "areaName": "三重県 川越町"
+  },
+  {
+    "areaCode": "03507",
+    "areaName": "岩手県 洋野町"
+  },
+  {
+    "areaCode": "40402",
+    "areaName": "福岡県 鞍手町"
+  },
+  {
+    "areaCode": "07421",
+    "areaName": "福島県 会津坂下町"
+  },
+  {
+    "areaCode": "24461",
+    "areaName": "三重県 玉城町"
+  },
+  {
+    "areaCode": "06212",
+    "areaName": "山形県 尾花沢市"
+  },
+  {
+    "areaCode": "09345",
+    "areaName": "栃木県 芳賀町"
+  },
+  {
+    "areaCode": "30428",
+    "areaName": "和歌山県 串本町"
+  },
+  {
+    "areaCode": "35305",
+    "areaName": "山口県 周防大島町"
+  },
+  {
+    "areaCode": "27366",
+    "areaName": "大阪府 岬町"
+  },
+  {
+    "areaCode": "46213",
+    "areaName": "鹿児島県 西之表市"
+  },
+  {
+    "areaCode": "19346",
+    "areaName": "山梨県 市川三郷町"
+  },
+  {
+    "areaCode": "43514",
+    "areaName": "熊本県 あさぎり町"
+  },
+  {
+    "areaCode": "07501",
+    "areaName": "福島県 石川町"
+  },
+  {
+    "areaCode": "12403",
+    "areaName": "千葉県 九十九里町"
+  },
+  {
+    "areaCode": "24543",
+    "areaName": "三重県 紀北町"
+  },
+  {
+    "areaCode": "08442",
+    "areaName": "茨城県 美浦村"
+  },
+  {
+    "areaCode": "36401",
+    "areaName": "徳島県 松茂町"
+  },
+  {
+    "areaCode": "02361",
+    "areaName": "青森県 藤崎町"
+  },
+  {
+    "areaCode": "06382",
+    "areaName": "山形県 川西町"
+  },
+  {
+    "areaCode": "02402",
+    "areaName": "青森県 七戸町"
+  },
+  {
+    "areaCode": "35343",
+    "areaName": "山口県 田布施町"
+  },
+  {
+    "areaCode": "07368",
+    "areaName": "福島県 南会津町"
+  },
+  {
+    "areaCode": "44462",
+    "areaName": "大分県 玖珠町"
+  },
+  {
+    "areaCode": "01691",
+    "areaName": "北海道 別海町"
+  },
+  {
+    "areaCode": "21383",
+    "areaName": "岐阜県 安八町"
+  },
+  {
+    "areaCode": "01345",
+    "areaName": "北海道 森町"
+  },
+  {
+    "areaCode": "03482",
+    "areaName": "岩手県 山田町"
+  },
+  {
+    "areaCode": "42323",
+    "areaName": "長崎県 波佐見町"
+  },
+  {
+    "areaCode": "15307",
+    "areaName": "新潟県 聖籠町"
+  },
+  {
+    "areaCode": "31372",
+    "areaName": "鳥取県 北栄町"
+  },
+  {
+    "areaCode": "46492",
+    "areaName": "鹿児島県 肝付町"
+  },
+  {
+    "areaCode": "19368",
+    "areaName": "山梨県 富士川町"
+  },
+  {
+    "areaCode": "10344",
+    "areaName": "群馬県 榛東村"
+  },
+  {
+    "areaCode": "30421",
+    "areaName": "和歌山県 那智勝浦町"
+  },
+  {
+    "areaCode": "20362",
+    "areaName": "長野県 富士見町"
+  },
+  {
+    "areaCode": "10521",
+    "areaName": "群馬県 板倉町"
+  },
+  {
+    "areaCode": "24441",
+    "areaName": "三重県 多気町"
+  },
+  {
+    "areaCode": "20521",
+    "areaName": "長野県 坂城町"
+  },
+  {
+    "areaCode": "18501",
+    "areaName": "福井県 若狭町"
+  },
+  {
+    "areaCode": "42391",
+    "areaName": "長崎県 佐々町"
+  },
+  {
+    "areaCode": "28481",
+    "areaName": "兵庫県 上郡町"
+  },
+  {
+    "areaCode": "37324",
+    "areaName": "香川県 小豆島町"
+  },
+  {
+    "areaCode": "05463",
+    "areaName": "秋田県 羽後町"
+  },
+  {
+    "areaCode": "40522",
+    "areaName": "福岡県 大木町"
+  },
+  {
+    "areaCode": "46214",
+    "areaName": "鹿児島県 垂水市"
+  },
+  {
+    "areaCode": "12423",
+    "areaName": "千葉県 長生村"
+  },
+  {
+    "areaCode": "12347",
+    "areaName": "千葉県 多古町"
+  },
+  {
+    "areaCode": "06301",
+    "areaName": "山形県 山辺町"
+  },
+  {
+    "areaCode": "33346",
+    "areaName": "岡山県 和気町"
+  },
+  {
+    "areaCode": "36489",
+    "areaName": "徳島県 東みよし町"
+  },
+  {
+    "areaCode": "11348",
+    "areaName": "埼玉県 鳩山町"
+  },
+  {
+    "areaCode": "07408",
+    "areaName": "福島県 猪苗代町"
+  },
+  {
+    "areaCode": "40381",
+    "areaName": "福岡県 芦屋町"
+  },
+  {
+    "areaCode": "47325",
+    "areaName": "沖縄県 嘉手納町"
+  },
+  {
+    "areaCode": "43447",
+    "areaName": "熊本県 山都町"
+  },
+  {
+    "areaCode": "02446",
+    "areaName": "青森県 階上町"
+  },
+  {
+    "areaCode": "32528",
+    "areaName": "島根県 隠岐の島町"
+  },
+  {
+    "areaCode": "33461",
+    "areaName": "岡山県 矢掛町"
+  },
+  {
+    "areaCode": "42322",
+    "areaName": "長崎県 川棚町"
+  },
+  {
+    "areaCode": "11383",
+    "areaName": "埼玉県 神川町"
+  },
+  {
+    "areaCode": "07481",
+    "areaName": "福島県 棚倉町"
+  },
+  {
+    "areaCode": "04401",
+    "areaName": "宮城県 松島町"
+  },
+  {
+    "areaCode": "28586",
+    "areaName": "兵庫県 新温泉町"
+  },
+  {
+    "areaCode": "12349",
+    "areaName": "千葉県 東庄町"
+  },
+  {
+    "areaCode": "33666",
+    "areaName": "岡山県 美咲町"
+  },
+  {
+    "areaCode": "36404",
+    "areaName": "徳島県 板野町"
+  },
+  {
+    "areaCode": "06461",
+    "areaName": "山形県 遊佐町"
+  },
+  {
+    "areaCode": "27381",
+    "areaName": "大阪府 太子町"
+  },
+  {
+    "areaCode": "17205",
+    "areaName": "石川県 珠洲市"
+  },
+  {
+    "areaCode": "26407",
+    "areaName": "京都府 京丹波町"
+  },
+  {
+    "areaCode": "06402",
+    "areaName": "山形県 白鷹町"
+  },
+  {
+    "areaCode": "40421",
+    "areaName": "福岡県 桂川町"
+  },
+  {
+    "areaCode": "37322",
+    "areaName": "香川県 土庄町"
+  },
+  {
+    "areaCode": "20403",
+    "areaName": "長野県 高森町"
+  },
+  {
+    "areaCode": "10429",
+    "areaName": "群馬県 東吾妻町"
+  },
+  {
+    "areaCode": "02381",
+    "areaName": "青森県 板柳町"
+  },
+  {
+    "areaCode": "34309",
+    "areaName": "広島県 坂町"
+  },
+  {
+    "areaCode": "01216",
+    "areaName": "北海道 芦別市"
+  },
+  {
+    "areaCode": "20402",
+    "areaName": "長野県 松川町"
+  },
+  {
+    "areaCode": "47308",
+    "areaName": "沖縄県 本部町"
+  },
+  {
+    "areaCode": "10384",
+    "areaName": "群馬県 甘楽町"
+  },
+  {
+    "areaCode": "39209",
+    "areaName": "高知県 土佐清水市"
+  },
+  {
+    "areaCode": "46468",
+    "areaName": "鹿児島県 大崎町"
+  },
+  {
+    "areaCode": "02401",
+    "areaName": "青森県 野辺地町"
+  },
+  {
+    "areaCode": "33423",
+    "areaName": "岡山県 早島町"
+  },
+  {
+    "areaCode": "39402",
+    "areaName": "高知県 佐川町"
+  },
+  {
+    "areaCode": "07342",
+    "areaName": "福島県 鏡石町"
+  },
+  {
+    "areaCode": "03303",
+    "areaName": "岩手県 岩手町"
+  },
+  {
+    "areaCode": "04341",
+    "areaName": "宮城県 丸森町"
+  },
+  {
+    "areaCode": "04606",
+    "areaName": "宮城県 南三陸町"
+  },
+  {
+    "areaCode": "07308",
+    "areaName": "福島県 川俣町"
+  },
+  {
+    "areaCode": "17386",
+    "areaName": "石川県 宝達志水町"
+  },
+  {
+    "areaCode": "01607",
+    "areaName": "北海道 浦河町"
+  },
+  {
+    "areaCode": "02384",
+    "areaName": "青森県 鶴田町"
+  },
+  {
+    "areaCode": "33606",
+    "areaName": "岡山県 鏡野町"
+  },
+  {
+    "areaCode": "04362",
+    "areaName": "宮城県 山元町"
+  },
+  {
+    "areaCode": "35344",
+    "areaName": "山口県 平生町"
+  },
+  {
+    "areaCode": "12421",
+    "areaName": "千葉県 一宮町"
+  },
+  {
+    "areaCode": "09343",
+    "areaName": "栃木県 茂木町"
+  },
+  {
+    "areaCode": "46505",
+    "areaName": "鹿児島県 屋久島町"
+  },
+  {
+    "areaCode": "32343",
+    "areaName": "島根県 奥出雲町"
+  },
+  {
+    "areaCode": "30391",
+    "areaName": "和歌山県 みなべ町"
+  },
+  {
+    "areaCode": "25384",
+    "areaName": "滋賀県 竜王町"
+  },
+  {
+    "areaCode": "39202",
+    "areaName": "高知県 室戸市"
+  },
+  {
+    "areaCode": "01402",
+    "areaName": "北海道 岩内町"
+  },
+  {
+    "areaCode": "45441",
+    "areaName": "宮崎県 高千穂町"
+  },
+  {
+    "areaCode": "03524",
+    "areaName": "岩手県 一戸町"
+  },
+  {
+    "areaCode": "22301",
+    "areaName": "静岡県 東伊豆町"
+  },
+  {
+    "areaCode": "07301",
+    "areaName": "福島県 桑折町"
+  },
+  {
+    "areaCode": "01545",
+    "areaName": "北海道 斜里町"
+  },
+  {
+    "areaCode": "04301",
+    "areaName": "宮城県 蔵王町"
+  },
+  {
+    "areaCode": "36405",
+    "areaName": "徳島県 上板町"
+  },
+  {
+    "areaCode": "20561",
+    "areaName": "長野県 山ノ内町"
+  },
+  {
+    "areaCode": "14382",
+    "areaName": "神奈川県 箱根町"
+  },
+  {
+    "areaCode": "01601",
+    "areaName": "北海道 日高町"
+  },
+  {
+    "areaCode": "01429",
+    "areaName": "北海道 栗山町"
+  },
+  {
+    "areaCode": "09344",
+    "areaName": "栃木県 市貝町"
+  },
+  {
+    "areaCode": "28442",
+    "areaName": "兵庫県 市川町"
+  },
+  {
+    "areaCode": "15361",
+    "areaName": "新潟県 田上町"
+  },
+  {
+    "areaCode": "30361",
+    "areaName": "和歌山県 湯浅町"
+  },
+  {
+    "areaCode": "43468",
+    "areaName": "熊本県 氷川町"
+  },
+  {
+    "areaCode": "16343",
+    "areaName": "富山県 朝日町"
+  },
+  {
+    "areaCode": "11381",
+    "areaName": "埼玉県 美里町"
+  },
+  {
+    "areaCode": "11327",
+    "areaName": "埼玉県 越生町"
+  },
+  {
+    "areaCode": "24343",
+    "areaName": "三重県 朝日町"
+  },
+  {
+    "areaCode": "03461",
+    "areaName": "岩手県 大槌町"
+  },
+  {
+    "areaCode": "24472",
+    "areaName": "三重県 南伊勢町"
+  },
+  {
+    "areaCode": "33445",
+    "areaName": "岡山県 里庄町"
+  },
+  {
+    "areaCode": "11365",
+    "areaName": "埼玉県 小鹿野町"
+  },
+  {
+    "areaCode": "33622",
+    "areaName": "岡山県 勝央町"
+  },
+  {
+    "areaCode": "33681",
+    "areaName": "岡山県 吉備中央町"
+  },
+  {
+    "areaCode": "10522",
+    "areaName": "群馬県 明和町"
+  },
+  {
+    "areaCode": "47311",
+    "areaName": "沖縄県 恩納村"
+  },
+  {
+    "areaCode": "10523",
+    "areaName": "群馬県 千代田町"
+  },
+  {
+    "areaCode": "14363",
+    "areaName": "神奈川県 松田町"
+  },
+  {
+    "areaCode": "47314",
+    "areaName": "沖縄県 金武町"
+  },
+  {
+    "areaCode": "31302",
+    "areaName": "鳥取県 岩美町"
+  },
+  {
+    "areaCode": "06302",
+    "areaName": "山形県 中山町"
+  },
+  {
+    "areaCode": "31390",
+    "areaName": "鳥取県 伯耆町"
+  },
+  {
+    "areaCode": "04322",
+    "areaName": "宮城県 村田町"
+  },
+  {
+    "areaCode": "19365",
+    "areaName": "山梨県 身延町"
+  },
+  {
+    "areaCode": "20541",
+    "areaName": "長野県 小布施町"
+  },
+  {
+    "areaCode": "28446",
+    "areaName": "兵庫県 神河町"
+  },
+  {
+    "areaCode": "20432",
+    "areaName": "長野県 木曽町"
+  },
+  {
+    "areaCode": "11349",
+    "areaName": "埼玉県 ときがわ町"
+  },
+  {
+    "areaCode": "02405",
+    "areaName": "青森県 六戸町"
+  },
+  {
+    "areaCode": "02411",
+    "areaName": "青森県 六ヶ所村"
+  },
+  {
+    "areaCode": "09384",
+    "areaName": "栃木県 塩谷町"
+  },
+  {
+    "areaCode": "01460",
+    "areaName": "北海道 上富良野町"
+  },
+  {
+    "areaCode": "18481",
+    "areaName": "福井県 高浜町"
+  },
+  {
+    "areaCode": "31389",
+    "areaName": "鳥取県 南部町"
+  },
+  {
+    "areaCode": "24562",
+    "areaName": "三重県 紀宝町"
+  },
+  {
+    "areaCode": "12424",
+    "areaName": "千葉県 白子町"
+  },
+  {
+    "areaCode": "20590",
+    "areaName": "長野県 飯綱町"
+  },
+  {
+    "areaCode": "01428",
+    "areaName": "北海道 長沼町"
+  },
+  {
+    "areaCode": "43501",
+    "areaName": "熊本県 錦町"
+  },
+  {
+    "areaCode": "39428",
+    "areaName": "高知県 黒潮町"
+  },
+  {
+    "areaCode": "20309",
+    "areaName": "長野県 佐久穂町"
+  },
+  {
+    "areaCode": "21505",
+    "areaName": "岐阜県 八百津町"
+  },
+  {
+    "areaCode": "40601",
+    "areaName": "福岡県 香春町"
+  },
+  {
+    "areaCode": "32449",
+    "areaName": "島根県 邑南町"
+  },
+  {
+    "areaCode": "46530",
+    "areaName": "鹿児島県 徳之島町"
+  },
+  {
+    "areaCode": "43444",
+    "areaName": "熊本県 甲佐町"
+  },
+  {
+    "areaCode": "01453",
+    "areaName": "北海道 東神楽町"
+  },
+  {
+    "areaCode": "02301",
+    "areaName": "青森県 平内町"
+  },
+  {
+    "areaCode": "18404",
+    "areaName": "福井県 南越前町"
+  },
+  {
+    "areaCode": "15385",
+    "areaName": "新潟県 阿賀町"
+  },
+  {
+    "areaCode": "45406",
+    "areaName": "宮崎県 都農町"
+  },
+  {
+    "areaCode": "21503",
+    "areaName": "岐阜県 川辺町"
+  },
+  {
+    "areaCode": "43433",
+    "areaName": "熊本県 南阿蘇村"
+  },
+  {
+    "areaCode": "14364",
+    "areaName": "神奈川県 山北町"
+  },
+  {
+    "areaCode": "46404",
+    "areaName": "鹿児島県 長島町"
+  },
+  {
+    "areaCode": "01218",
+    "areaName": "北海道 赤平市"
+  },
+  {
+    "areaCode": "38488",
+    "areaName": "愛媛県 鬼北町"
+  },
+  {
+    "areaCode": "01459",
+    "areaName": "北海道 美瑛町"
+  },
+  {
+    "areaCode": "02387",
+    "areaName": "青森県 中泊町"
+  },
+  {
+    "areaCode": "21382",
+    "areaName": "岐阜県 輪之内町"
+  },
+  {
+    "areaCode": "20482",
+    "areaName": "長野県 松川村"
+  },
+  {
+    "areaCode": "41424",
+    "areaName": "佐賀県 江北町"
+  },
+  {
+    "areaCode": "43442",
+    "areaName": "熊本県 嘉島町"
+  },
+  {
+    "areaCode": "07522",
+    "areaName": "福島県 小野町"
+  },
+  {
+    "areaCode": "43348",
+    "areaName": "熊本県 美里町"
+  },
+  {
+    "areaCode": "20481",
+    "areaName": "長野県 池田町"
+  },
+  {
+    "areaCode": "43369",
+    "areaName": "熊本県 和水町"
+  },
+  {
+    "areaCode": "11362",
+    "areaName": "埼玉県 皆野町"
+  },
+  {
+    "areaCode": "14361",
+    "areaName": "神奈川県 中井町"
+  },
+  {
+    "areaCode": "41345",
+    "areaName": "佐賀県 上峰町"
+  },
+  {
+    "areaCode": "19424",
+    "areaName": "山梨県 忍野村"
+  },
+  {
+    "areaCode": "30392",
+    "areaName": "和歌山県 日高川町"
+  },
+  {
+    "areaCode": "18442",
+    "areaName": "福井県 美浜町"
+  },
+  {
+    "areaCode": "46452",
+    "areaName": "鹿児島県 湧水町"
+  },
+  {
+    "areaCode": "01636",
+    "areaName": "北海道 清水町"
+  },
+  {
+    "areaCode": "02441",
+    "areaName": "青森県 三戸町"
+  },
+  {
+    "areaCode": "27322",
+    "areaName": "大阪府 能勢町"
+  },
+  {
+    "areaCode": "43505",
+    "areaName": "熊本県 多良木町"
+  },
+  {
+    "areaCode": "40348",
+    "areaName": "福岡県 久山町"
+  },
+  {
+    "areaCode": "02321",
+    "areaName": "青森県 鰺ヶ沢町"
+  },
+  {
+    "areaCode": "20384",
+    "areaName": "長野県 飯島町"
+  },
+  {
+    "areaCode": "15482",
+    "areaName": "新潟県 津南町"
+  },
+  {
+    "areaCode": "43367",
+    "areaName": "熊本県 南関町"
+  },
+  {
+    "areaCode": "26344",
+    "areaName": "京都府 宇治田原町"
+  },
+  {
+    "areaCode": "07322",
+    "areaName": "福島県 大玉村"
+  },
+  {
+    "areaCode": "47306",
+    "areaName": "沖縄県 今帰仁村"
+  },
+  {
+    "areaCode": "01662",
+    "areaName": "北海道 厚岸町"
+  },
+  {
+    "areaCode": "12441",
+    "areaName": "千葉県 大多喜町"
+  },
+  {
+    "areaCode": "10425",
+    "areaName": "群馬県 嬬恋村"
+  },
+  {
+    "areaCode": "40602",
+    "areaName": "福岡県 添田町"
+  },
+  {
+    "areaCode": "03483",
+    "areaName": "岩手県 岩泉町"
+  },
+  {
+    "areaCode": "24443",
+    "areaName": "三重県 大台町"
+  },
+  {
+    "areaCode": "02362",
+    "areaName": "青森県 大鰐町"
+  },
+  {
+    "areaCode": "07303",
+    "areaName": "福島県 国見町"
+  },
+  {
+    "areaCode": "45361",
+    "areaName": "宮崎県 高原町"
+  },
+  {
+    "areaCode": "20485",
+    "areaName": "長野県 白馬村"
+  },
+  {
+    "areaCode": "20388",
+    "areaName": "長野県 宮田村"
+  },
+  {
+    "areaCode": "46525",
+    "areaName": "鹿児島県 瀬戸内町"
+  },
+  {
+    "areaCode": "44461",
+    "areaName": "大分県 九重町"
+  },
+  {
+    "areaCode": "05361",
+    "areaName": "秋田県 五城目町"
+  },
+  {
+    "areaCode": "37403",
+    "areaName": "香川県 琴平町"
+  },
+  {
+    "areaCode": "01584",
+    "areaName": "北海道 洞爺湖町"
+  },
+  {
+    "areaCode": "27362",
+    "areaName": "大阪府 田尻町"
+  },
+  {
+    "areaCode": "03501",
+    "areaName": "岩手県 軽米町"
+  },
+  {
+    "areaCode": "40604",
+    "areaName": "福岡県 糸田町"
+  },
+  {
+    "areaCode": "20450",
+    "areaName": "長野県 山形村"
+  },
+  {
+    "areaCode": "38442",
+    "areaName": "愛媛県 伊方町"
+  },
+  {
+    "areaCode": "36388",
+    "areaName": "徳島県 海陽町"
+  },
+  {
+    "areaCode": "04324",
+    "areaName": "宮城県 川崎町"
+  },
+  {
+    "areaCode": "01458",
+    "areaName": "北海道 東川町"
+  },
+  {
+    "areaCode": "07483",
+    "areaName": "福島県 塙町"
+  },
+  {
+    "areaCode": "01559",
+    "areaName": "北海道 湧別町"
+  },
+  {
+    "areaCode": "30304",
+    "areaName": "和歌山県 紀美野町"
+  },
+  {
+    "areaCode": "34545",
+    "areaName": "広島県 神石高原町"
+  },
+  {
+    "areaCode": "08447",
+    "areaName": "茨城県 河内町"
+  },
+  {
+    "areaCode": "29361",
+    "areaName": "奈良県 川西町"
+  },
+  {
+    "areaCode": "41441",
+    "areaName": "佐賀県 太良町"
+  },
+  {
+    "areaCode": "08542",
+    "areaName": "茨城県 五霞町"
+  },
+  {
+    "areaCode": "06362",
+    "areaName": "山形県 最上町"
+  },
+  {
+    "areaCode": "24561",
+    "areaName": "三重県 御浜町"
+  },
+  {
+    "areaCode": "21501",
+    "areaName": "岐阜県 坂祝町"
+  },
+  {
+    "areaCode": "01222",
+    "areaName": "北海道 三笠市"
+  },
+  {
+    "areaCode": "11361",
+    "areaName": "埼玉県 横瀬町"
+  },
+  {
+    "areaCode": "18483",
+    "areaName": "福井県 おおい町"
+  },
+  {
+    "areaCode": "07561",
+    "areaName": "福島県 新地町"
+  },
+  {
+    "areaCode": "17461",
+    "areaName": "石川県 穴水町"
+  },
+  {
+    "areaCode": "22304",
+    "areaName": "静岡県 南伊豆町"
+  },
+  {
+    "areaCode": "24470",
+    "areaName": "三重県 度会町"
+  },
+  {
+    "areaCode": "24471",
+    "areaName": "三重県 大紀町"
+  },
+  {
+    "areaCode": "04422",
+    "areaName": "宮城県 大郷町"
+  },
+  {
+    "areaCode": "15461",
+    "areaName": "新潟県 湯沢町"
+  },
+  {
+    "areaCode": "20583",
+    "areaName": "長野県 信濃町"
+  },
+  {
+    "areaCode": "42321",
+    "areaName": "長崎県 東彼杵町"
+  },
+  {
+    "areaCode": "30390",
+    "areaName": "和歌山県 印南町"
+  },
+  {
+    "areaCode": "36468",
+    "areaName": "徳島県 つるぎ町"
+  },
+  {
+    "areaCode": "15342",
+    "areaName": "新潟県 弥彦村"
+  },
+  {
+    "areaCode": "20363",
+    "areaName": "長野県 原村"
+  },
+  {
+    "areaCode": "30382",
+    "areaName": "和歌山県 日高町"
+  },
+  {
+    "areaCode": "01586",
+    "areaName": "北海道 むかわ町"
+  },
+  {
+    "areaCode": "06324",
+    "areaName": "山形県 大江町"
+  },
+  {
+    "areaCode": "06426",
+    "areaName": "山形県 三川町"
+  },
+  {
+    "areaCode": "01514",
+    "areaName": "北海道 枝幸町"
+  },
+  {
+    "areaCode": "46501",
+    "areaName": "鹿児島県 中種子町"
+  },
+  {
+    "areaCode": "01361",
+    "areaName": "北海道 江差町"
+  },
+  {
+    "areaCode": "21506",
+    "areaName": "岐阜県 白川町"
+  },
+  {
+    "areaCode": "26343",
+    "areaName": "京都府 井手町"
+  },
+  {
+    "areaCode": "38386",
+    "areaName": "愛媛県 久万高原町"
+  },
+  {
+    "areaCode": "01371",
+    "areaName": "北海道 せたな町"
+  },
+  {
+    "areaCode": "36368",
+    "areaName": "徳島県 那賀町"
+  },
+  {
+    "areaCode": "02323",
+    "areaName": "青森県 深浦町"
+  },
+  {
+    "areaCode": "01585",
+    "areaName": "北海道 安平町"
+  },
+  {
+    "areaCode": "01209",
+    "areaName": "北海道 夕張市"
+  },
+  {
+    "areaCode": "02367",
+    "areaName": "青森県 田舎館村"
+  },
+  {
+    "areaCode": "01423",
+    "areaName": "北海道 南幌町"
+  },
+  {
+    "areaCode": "01668",
+    "areaName": "北海道 白糠町"
+  },
+  {
+    "areaCode": "25443",
+    "areaName": "滋賀県 多賀町"
+  },
+  {
+    "areaCode": "03402",
+    "areaName": "岩手県 平泉町"
+  },
+  {
+    "areaCode": "40646",
+    "areaName": "福岡県 上毛町"
+  },
+  {
+    "areaCode": "01664",
+    "areaName": "北海道 標茶町"
+  },
+  {
+    "areaCode": "29345",
+    "areaName": "奈良県 安堵町"
+  },
+  {
+    "areaCode": "06364",
+    "areaName": "山形県 真室川町"
+  },
+  {
+    "areaCode": "12427",
+    "areaName": "千葉県 長南町"
+  },
+  {
+    "areaCode": "47361",
+    "areaName": "沖縄県 久米島町"
+  },
+  {
+    "areaCode": "34431",
+    "areaName": "広島県 大崎上島町"
+  },
+  {
+    "areaCode": "19366",
+    "areaName": "山梨県 南部町"
+  },
+  {
+    "areaCode": "40401",
+    "areaName": "福岡県 小竹町"
+  },
+  {
+    "areaCode": "25441",
+    "areaName": "滋賀県 豊郷町"
+  },
+  {
+    "areaCode": "43531",
+    "areaName": "熊本県 苓北町"
+  },
+  {
+    "areaCode": "06401",
+    "areaName": "山形県 小国町"
+  },
+  {
+    "areaCode": "13361",
+    "areaName": "東京都 大島町"
+  },
+  {
+    "areaCode": "22306",
+    "areaName": "静岡県 西伊豆町"
+  },
+  {
+    "areaCode": "13401",
+    "areaName": "東京都 八丈町"
+  },
+  {
+    "areaCode": "12409",
+    "areaName": "千葉県 芝山町"
+  },
+  {
+    "areaCode": "12463",
+    "areaName": "千葉県 鋸南町"
+  },
+  {
+    "areaCode": "01665",
+    "areaName": "北海道 弟子屈町"
+  },
+  {
+    "areaCode": "10448",
+    "areaName": "群馬県 昭和村"
+  },
+  {
+    "areaCode": "46490",
+    "areaName": "鹿児島県 錦江町"
+  },
+  {
+    "areaCode": "45383",
+    "areaName": "宮崎県 綾町"
+  },
+  {
+    "areaCode": "32501",
+    "areaName": "島根県 津和野町"
+  },
+  {
+    "areaCode": "12443",
+    "areaName": "千葉県 御宿町"
+  },
+  {
+    "areaCode": "22302",
+    "areaName": "静岡県 河津町"
+  },
+  {
+    "areaCode": "30381",
+    "areaName": "和歌山県 美浜町"
+  },
+  {
+    "areaCode": "11363",
+    "areaName": "埼玉県 長瀞町"
+  },
+  {
+    "areaCode": "30362",
+    "areaName": "和歌山県 広川町"
+  },
+  {
+    "areaCode": "01564",
+    "areaName": "北海道 大空町"
+  },
+  {
+    "areaCode": "12422",
+    "areaName": "千葉県 睦沢町"
+  },
+  {
+    "areaCode": "29401",
+    "areaName": "奈良県 高取町"
+  },
+  {
+    "areaCode": "14383",
+    "areaName": "神奈川県 真鶴町"
+  },
+  {
+    "areaCode": "12426",
+    "areaName": "千葉県 長柄町"
+  },
+  {
+    "areaCode": "04444",
+    "areaName": "宮城県 色麻町"
+  },
+  {
+    "areaCode": "46529",
+    "areaName": "鹿児島県 喜界町"
+  },
+  {
+    "areaCode": "01646",
+    "areaName": "北海道 本別町"
+  },
+  {
+    "areaCode": "20543",
+    "areaName": "長野県 高山村"
+  },
+  {
+    "areaCode": "06403",
+    "areaName": "山形県 飯豊町"
+  },
+  {
+    "areaCode": "20324",
+    "areaName": "長野県 立科町"
+  },
+  {
+    "areaCode": "21362",
+    "areaName": "岐阜県 関ケ原町"
+  },
+  {
+    "areaCode": "43424",
+    "areaName": "熊本県 小国町"
+  },
+  {
+    "areaCode": "05349",
+    "areaName": "秋田県 八峰町"
+  },
+  {
+    "areaCode": "06341",
+    "areaName": "山形県 大石田町"
+  },
+  {
+    "areaCode": "10382",
+    "areaName": "群馬県 下仁田町"
+  },
+  {
+    "areaCode": "01452",
+    "areaName": "北海道 鷹栖町"
+  },
+  {
+    "areaCode": "01647",
+    "areaName": "北海道 足寄町"
+  },
+  {
+    "areaCode": "01484",
+    "areaName": "北海道 羽幌町"
+  },
+  {
+    "areaCode": "40642",
+    "areaName": "福岡県 吉富町"
+  },
+  {
+    "areaCode": "38356",
+    "areaName": "愛媛県 上島町"
+  },
+  {
+    "areaCode": "01432",
+    "areaName": "北海道 新十津川町"
+  },
+  {
+    "areaCode": "46491",
+    "areaName": "鹿児島県 南大隅町"
+  },
+  {
+    "areaCode": "29362",
+    "areaName": "奈良県 三宅町"
+  },
+  {
+    "areaCode": "04581",
+    "areaName": "宮城県 女川町"
+  },
+  {
+    "areaCode": "31328",
+    "areaName": "鳥取県 智頭町"
+  },
+  {
+    "areaCode": "20416",
+    "areaName": "長野県 豊丘村"
+  },
+  {
+    "areaCode": "43432",
+    "areaName": "熊本県 西原村"
+  },
+  {
+    "areaCode": "07502",
+    "areaName": "福島県 玉川村"
+  },
+  {
+    "areaCode": "01642",
+    "areaName": "北海道 広尾町"
+  },
+  {
+    "areaCode": "06323",
+    "areaName": "山形県 朝日町"
+  },
+  {
+    "areaCode": "25442",
+    "areaName": "滋賀県 甲良町"
+  },
+  {
+    "areaCode": "01454",
+    "areaName": "北海道 当麻町"
+  },
+  {
+    "areaCode": "01644",
+    "areaName": "北海道 池田町"
+  },
+  {
+    "areaCode": "41423",
+    "areaName": "佐賀県 大町町"
+  },
+  {
+    "areaCode": "01331",
+    "areaName": "北海道 松前町"
+  },
+  {
+    "areaCode": "46533",
+    "areaName": "鹿児島県 和泊町"
+  },
+  {
+    "areaCode": "46482",
+    "areaName": "鹿児島県 東串良町"
+  },
+  {
+    "areaCode": "29441",
+    "areaName": "奈良県 吉野町"
+  },
+  {
+    "areaCode": "36387",
+    "areaName": "徳島県 美波町"
+  },
+  {
+    "areaCode": "07464",
+    "areaName": "福島県 泉崎村"
+  },
+  {
+    "areaCode": "22429",
+    "areaName": "静岡県 川根本町"
+  },
+  {
+    "areaCode": "46532",
+    "areaName": "鹿児島県 伊仙町"
+  },
+  {
+    "areaCode": "17324",
+    "areaName": "石川県 川北町"
+  },
+  {
+    "areaCode": "32505",
+    "areaName": "島根県 吉賀町"
+  },
+  {
+    "areaCode": "20407",
+    "areaName": "長野県 阿智村"
+  },
+  {
+    "areaCode": "31364",
+    "areaName": "鳥取県 三朝町"
+  },
+  {
+    "areaCode": "10426",
+    "areaName": "群馬県 草津町"
+  },
+  {
+    "areaCode": "22305",
+    "areaName": "静岡県 松崎町"
+  },
+  {
+    "areaCode": "07504",
+    "areaName": "福島県 浅川町"
+  },
+  {
+    "areaCode": "35321",
+    "areaName": "山口県 和木町"
+  },
+  {
+    "areaCode": "24303",
+    "areaName": "三重県 木曽岬町"
+  },
+  {
+    "areaCode": "39401",
+    "areaName": "高知県 中土佐町"
+  },
+  {
+    "areaCode": "20415",
+    "areaName": "長野県 喬木村"
+  },
+  {
+    "areaCode": "02424",
+    "areaName": "青森県 東通村"
+  },
+  {
+    "areaCode": "04424",
+    "areaName": "宮城県 大衡村"
+  },
+  {
+    "areaCode": "01632",
+    "areaName": "北海道 士幌町"
+  },
+  {
+    "areaCode": "47313",
+    "areaName": "沖縄県 宜野座村"
+  },
+  {
+    "areaCode": "07503",
+    "areaName": "福島県 平田村"
+  },
+  {
+    "areaCode": "01635",
+    "areaName": "北海道 新得町"
+  },
+  {
+    "areaCode": "46527",
+    "areaName": "鹿児島県 龍郷町"
+  },
+  {
+    "areaCode": "12342",
+    "areaName": "千葉県 神崎町"
+  },
+  {
+    "areaCode": "43428",
+    "areaName": "熊本県 高森町"
+  },
+  {
+    "areaCode": "01401",
+    "areaName": "北海道 共和町"
+  },
+  {
+    "areaCode": "07405",
+    "areaName": "福島県 西会津町"
+  },
+  {
+    "areaCode": "46534",
+    "areaName": "鹿児島県 知名町"
+  },
+  {
+    "areaCode": "34368",
+    "areaName": "広島県 安芸太田町"
+  },
+  {
+    "areaCode": "03302",
+    "areaName": "岩手県 葛巻町"
+  },
+  {
+    "areaCode": "21502",
+    "areaName": "岐阜県 富加町"
+  },
+  {
+    "areaCode": "41387",
+    "areaName": "佐賀県 玄海町"
+  },
+  {
+    "areaCode": "20350",
+    "areaName": "長野県 長和町"
+  },
+  {
+    "areaCode": "05363",
+    "areaName": "秋田県 八郎潟町"
+  },
+  {
+    "areaCode": "33623",
+    "areaName": "岡山県 奈義町"
+  },
+  {
+    "areaCode": "46531",
+    "areaName": "鹿児島県 天城町"
+  },
+  {
+    "areaCode": "01663",
+    "areaName": "北海道 浜中町"
+  },
+  {
+    "areaCode": "46502",
+    "areaName": "鹿児島県 南種子町"
+  },
+  {
+    "areaCode": "01641",
+    "areaName": "北海道 大樹町"
+  },
+  {
+    "areaCode": "07541",
+    "areaName": "福島県 広野町"
+  },
+  {
+    "areaCode": "02307",
+    "areaName": "青森県 外ヶ浜町"
+  },
+  {
+    "areaCode": "07482",
+    "areaName": "福島県 矢祭町"
+  },
+  {
+    "areaCode": "03506",
+    "areaName": "岩手県 九戸村"
+  },
+  {
+    "areaCode": "30383",
+    "areaName": "和歌山県 由良町"
+  },
+  {
+    "areaCode": "01604",
+    "areaName": "北海道 新冠町"
+  },
+  {
+    "areaCode": "39411",
+    "areaName": "高知県 津野町"
+  },
+  {
+    "areaCode": "01634",
+    "areaName": "北海道 鹿追町"
+  },
+  {
+    "areaCode": "07362",
+    "areaName": "福島県 下郷町"
+  },
+  {
+    "areaCode": "07344",
+    "areaName": "福島県 天栄村"
+  },
+  {
+    "areaCode": "39403",
+    "areaName": "高知県 越知町"
+  },
+  {
+    "areaCode": "19425",
+    "areaName": "山梨県 山中湖村"
+  },
+  {
+    "areaCode": "29402",
+    "areaName": "奈良県 明日香村"
+  },
+  {
+    "areaCode": "15581",
+    "areaName": "新潟県 関川村"
+  },
+  {
+    "areaCode": "03366",
+    "areaName": "岩手県 西和賀町"
+  },
+  {
+    "areaCode": "01424",
+    "areaName": "北海道 奈井江町"
+  },
+  {
+    "areaCode": "46535",
+    "areaName": "鹿児島県 与論町"
+  },
+  {
+    "areaCode": "01347",
+    "areaName": "北海道 長万部町"
+  },
+  {
+    "areaCode": "10424",
+    "areaName": "群馬県 長野原町"
+  },
+  {
+    "areaCode": "01395",
+    "areaName": "北海道 ニセコ町"
+  },
+  {
+    "areaCode": "01370",
+    "areaName": "北海道 今金町"
+  },
+  {
+    "areaCode": "06361",
+    "areaName": "山形県 金山町"
+  },
+  {
+    "areaCode": "03441",
+    "areaName": "岩手県 住田町"
+  },
+  {
+    "areaCode": "43364",
+    "areaName": "熊本県 玉東町"
+  },
+  {
+    "areaCode": "29443",
+    "areaName": "奈良県 下市町"
+  },
+  {
+    "areaCode": "01693",
+    "areaName": "北海道 標津町"
+  },
+  {
+    "areaCode": "40608",
+    "areaName": "福岡県 大任町"
+  },
+  {
+    "areaCode": "06363",
+    "areaName": "山形県 舟形町"
+  },
+  {
+    "areaCode": "02443",
+    "areaName": "青森県 田子町"
+  },
+  {
+    "areaCode": "06322",
+    "areaName": "山形県 西川町"
+  },
+  {
+    "areaCode": "27383",
+    "areaName": "大阪府 千早赤阪村"
+  },
+  {
+    "areaCode": "45404",
+    "areaName": "宮崎県 木城町"
+  },
+  {
+    "areaCode": "07465",
+    "areaName": "福島県 中島村"
+  },
+  {
+    "areaCode": "01552",
+    "areaName": "北海道 佐呂間町"
+  },
+  {
+    "areaCode": "36301",
+    "areaName": "徳島県 勝浦町"
+  },
+  {
+    "areaCode": "39387",
+    "areaName": "高知県 仁淀川町"
+  },
+  {
+    "areaCode": "45431",
+    "areaName": "宮崎県 美郷町"
+  },
+  {
+    "areaCode": "07505",
+    "areaName": "福島県 古殿町"
+  },
+  {
+    "areaCode": "01427",
+    "areaName": "北海道 由仁町"
+  },
+  {
+    "areaCode": "39410",
+    "areaName": "高知県 日高村"
+  },
+  {
+    "areaCode": "05303",
+    "areaName": "秋田県 小坂町"
+  },
+  {
+    "areaCode": "01633",
+    "areaName": "北海道 上士幌町"
+  },
+  {
+    "areaCode": "01602",
+    "areaName": "北海道 平取町"
+  },
+  {
+    "areaCode": "13308",
+    "areaName": "東京都 奥多摩町"
+  },
+  {
+    "areaCode": "01461",
+    "areaName": "北海道 中富良野町"
+  },
+  {
+    "areaCode": "01694",
+    "areaName": "北海道 羅臼町"
+  },
+  {
+    "areaCode": "02423",
+    "areaName": "青森県 大間町"
+  },
+  {
+    "areaCode": "01549",
+    "areaName": "北海道 訓子府町"
+  },
+  {
+    "areaCode": "20386",
+    "areaName": "長野県 中川村"
+  },
+  {
+    "areaCode": "36342",
+    "areaName": "徳島県 神山町"
+  },
+  {
+    "areaCode": "01547",
+    "areaName": "北海道 小清水町"
+  },
+  {
+    "areaCode": "32386",
+    "areaName": "島根県 飯南町"
+  },
+  {
+    "areaCode": "23427",
+    "areaName": "愛知県 飛島村"
+  },
+  {
+    "areaCode": "01394",
+    "areaName": "北海道 蘭越町"
+  },
+  {
+    "areaCode": "05366",
+    "areaName": "秋田県 井川町"
+  },
+  {
+    "areaCode": "33663",
+    "areaName": "岡山県 久米南町"
+  },
+  {
+    "areaCode": "47301",
+    "areaName": "沖縄県 国頭村"
+  },
+  {
+    "areaCode": "23561",
+    "areaName": "愛知県 設楽町"
+  },
+  {
+    "areaCode": "39424",
+    "areaName": "高知県 大月町"
+  },
+  {
+    "areaCode": "01581",
+    "areaName": "北海道 厚真町"
+  },
+  {
+    "areaCode": "01649",
+    "areaName": "北海道 浦幌町"
+  },
+  {
+    "areaCode": "15504",
+    "areaName": "新潟県 刈羽村"
+  },
+  {
+    "areaCode": "20562",
+    "areaName": "長野県 木島平村"
+  },
+  {
+    "areaCode": "01609",
+    "areaName": "北海道 えりも町"
+  },
+  {
+    "areaCode": "01544",
+    "areaName": "北海道 津別町"
+  },
+  {
+    "areaCode": "32448",
+    "areaName": "島根県 美郷町"
+  },
+  {
+    "areaCode": "20303",
+    "areaName": "長野県 小海町"
+  },
+  {
+    "areaCode": "20304",
+    "areaName": "長野県 川上村"
+  },
+  {
+    "areaCode": "01362",
+    "areaName": "北海道 上ノ国町"
+  },
+  {
+    "areaCode": "20404",
+    "areaName": "長野県 阿南町"
+  },
+  {
+    "areaCode": "20451",
+    "areaName": "長野県 朝日村"
+  },
+  {
+    "areaCode": "43484",
+    "areaName": "熊本県 津奈木町"
+  },
+  {
+    "areaCode": "02406",
+    "areaName": "青森県 横浜町"
+  },
+  {
+    "areaCode": "01563",
+    "areaName": "北海道 雄武町"
+  },
+  {
+    "areaCode": "06367",
+    "areaName": "山形県 戸沢村"
+  },
+  {
+    "areaCode": "31401",
+    "areaName": "鳥取県 日南町"
+  },
+  {
+    "areaCode": "01333",
+    "areaName": "北海道 知内町"
+  },
+  {
+    "areaCode": "20452",
+    "areaName": "長野県 筑北村"
+  },
+  {
+    "areaCode": "01469",
+    "areaName": "北海道 美深町"
+  },
+  {
+    "areaCode": "20422",
+    "areaName": "長野県 上松町"
+  },
+  {
+    "areaCode": "20349",
+    "areaName": "長野県 青木村"
+  },
+  {
+    "areaCode": "47315",
+    "areaName": "沖縄県 伊江村"
+  },
+  {
+    "areaCode": "15405",
+    "areaName": "新潟県 出雲崎町"
+  },
+  {
+    "areaCode": "43510",
+    "areaName": "熊本県 相良村"
+  },
+  {
+    "areaCode": "07367",
+    "areaName": "福島県 只見町"
+  },
+  {
+    "areaCode": "01608",
+    "areaName": "北海道 様似町"
+  },
+  {
+    "areaCode": "19423",
+    "areaName": "山梨県 西桂町"
+  },
+  {
+    "areaCode": "10443",
+    "areaName": "群馬県 片品村"
+  },
+  {
+    "areaCode": "01516",
+    "areaName": "北海道 豊富町"
+  },
+  {
+    "areaCode": "47381",
+    "areaName": "沖縄県 竹富町"
+  },
+  {
+    "areaCode": "03503",
+    "areaName": "岩手県 野田村"
+  },
+  {
+    "areaCode": "20423",
+    "areaName": "長野県 南木曽町"
+  },
+  {
+    "areaCode": "01481",
+    "areaName": "北海道 増毛町"
+  },
+  {
+    "areaCode": "06366",
+    "areaName": "山形県 鮭川村"
+  },
+  {
+    "areaCode": "01638",
+    "areaName": "北海道 中札内村"
+  },
+  {
+    "areaCode": "01546",
+    "areaName": "北海道 清里町"
+  },
+  {
+    "areaCode": "30343",
+    "areaName": "和歌山県 九度山町"
+  },
+  {
+    "areaCode": "01334",
+    "areaName": "北海道 木古内町"
+  },
+  {
+    "areaCode": "01571",
+    "areaName": "北海道 豊浦町"
+  },
+  {
+    "areaCode": "01332",
+    "areaName": "北海道 福島町"
+  },
+  {
+    "areaCode": "01343",
+    "areaName": "北海道 鹿部町"
+  },
+  {
+    "areaCode": "39363",
+    "areaName": "高知県 土佐町"
+  },
+  {
+    "areaCode": "43423",
+    "areaName": "熊本県 南小国町"
+  },
+  {
+    "areaCode": "36383",
+    "areaName": "徳島県 牟岐町"
+  },
+  {
+    "areaCode": "07542",
+    "areaName": "福島県 楢葉町"
+  },
+  {
+    "areaCode": "39307",
+    "areaName": "高知県 芸西村"
+  },
+  {
+    "areaCode": "01430",
+    "areaName": "北海道 月形町"
+  },
+  {
+    "areaCode": "30406",
+    "areaName": "和歌山県 すさみ町"
+  },
+  {
+    "areaCode": "38484",
+    "areaName": "愛媛県 松野町"
+  },
+  {
+    "areaCode": "45442",
+    "areaName": "宮崎県 日之影町"
+  },
+  {
+    "areaCode": "01561",
+    "areaName": "北海道 興部町"
+  },
+  {
+    "areaCode": "43506",
+    "areaName": "熊本県 湯前町"
+  },
+  {
+    "areaCode": "01363",
+    "areaName": "北海道 厚沢部町"
+  },
+  {
+    "areaCode": "20411",
+    "areaName": "長野県 下條村"
+  },
+  {
+    "areaCode": "01455",
+    "areaName": "北海道 比布町"
+  },
+  {
+    "areaCode": "10428",
+    "areaName": "群馬県 高山村"
+  },
+  {
+    "areaCode": "31384",
+    "areaName": "鳥取県 日吉津村"
+  },
+  {
+    "areaCode": "01457",
+    "areaName": "北海道 上川町"
+  },
+  {
+    "areaCode": "10444",
+    "areaName": "群馬県 川場村"
+  },
+  {
+    "areaCode": "26365",
+    "areaName": "京都府 和束町"
+  },
+  {
+    "areaCode": "45443",
+    "areaName": "宮崎県 五ヶ瀬町"
+  },
+  {
+    "areaCode": "01512",
+    "areaName": "北海道 浜頓別町"
+  },
+  {
+    "areaCode": "20430",
+    "areaName": "長野県 大桑村"
+  },
+  {
+    "areaCode": "01364",
+    "areaName": "北海道 乙部町"
+  },
+  {
+    "areaCode": "21504",
+    "areaName": "岐阜県 七宗町"
+  },
+  {
+    "areaCode": "07407",
+    "areaName": "福島県 磐梯町"
+  },
+  {
+    "areaCode": "39405",
+    "areaName": "高知県 檮原町"
+  },
+  {
+    "areaCode": "20563",
+    "areaName": "長野県 野沢温泉村"
+  },
+  {
+    "areaCode": "39341",
+    "areaName": "高知県 本山町"
+  },
+  {
+    "areaCode": "39344",
+    "areaName": "高知県 大豊町"
+  },
+  {
+    "areaCode": "32441",
+    "areaName": "島根県 川本町"
+  },
+  {
+    "areaCode": "20305",
+    "areaName": "長野県 南牧村"
+  },
+  {
+    "areaCode": "43512",
+    "areaName": "熊本県 山江村"
+  },
+  {
+    "areaCode": "29322",
+    "areaName": "奈良県 山添村"
+  },
+  {
+    "areaCode": "01464",
+    "areaName": "北海道 和寒町"
+  },
+  {
+    "areaCode": "01407",
+    "areaName": "北海道 仁木町"
+  },
+  {
+    "areaCode": "16321",
+    "areaName": "富山県 舟橋村"
+  },
+  {
+    "areaCode": "01468",
+    "areaName": "北海道 下川町"
+  },
+  {
+    "areaCode": "37364",
+    "areaName": "香川県 直島町"
+  },
+  {
+    "areaCode": "47302",
+    "areaName": "沖縄県 大宜味村"
+  },
+  {
+    "areaCode": "07422",
+    "areaName": "福島県 湯川村"
+  },
+  {
+    "areaCode": "07423",
+    "areaName": "福島県 柳津町"
+  },
+  {
+    "areaCode": "01639",
+    "areaName": "北海道 更別村"
+  },
+  {
+    "areaCode": "29449",
+    "areaName": "奈良県 十津川村"
+  },
+  {
+    "areaCode": "03484",
+    "areaName": "岩手県 田野畑村"
+  },
+  {
+    "areaCode": "35502",
+    "areaName": "山口県 阿武町"
+  },
+  {
+    "areaCode": "07484",
+    "areaName": "福島県 鮫川村"
+  },
+  {
+    "areaCode": "01304",
+    "areaName": "北海道 新篠津村"
+  },
+  {
+    "areaCode": "14402",
+    "areaName": "神奈川県 清川村"
+  },
+  {
+    "areaCode": "39302",
+    "areaName": "高知県 奈半利町"
+  },
+  {
+    "areaCode": "06365",
+    "areaName": "山形県 大蔵村"
+  },
+  {
+    "areaCode": "01645",
+    "areaName": "北海道 豊頃町"
+  },
+  {
+    "areaCode": "05368",
+    "areaName": "秋田県 大潟村"
+  },
+  {
+    "areaCode": "01482",
+    "areaName": "北海道 小平町"
+  },
+  {
+    "areaCode": "01227",
+    "areaName": "北海道 歌志内市"
+  },
+  {
+    "areaCode": "30344",
+    "areaName": "和歌山県 高野町"
+  },
+  {
+    "areaCode": "01487",
+    "areaName": "北海道 天塩町"
+  },
+  {
+    "areaCode": "23562",
+    "areaName": "愛知県 東栄町"
+  },
+  {
+    "areaCode": "01399",
+    "areaName": "北海道 京極町"
+  },
+  {
+    "areaCode": "01483",
+    "areaName": "北海道 苫前町"
+  },
+  {
+    "areaCode": "13421",
+    "areaName": "東京都 小笠原村"
+  },
+  {
+    "areaCode": "01465",
+    "areaName": "北海道 剣淵町"
+  },
+  {
+    "areaCode": "01438",
+    "areaName": "北海道 沼田町"
+  },
+  {
+    "areaCode": "31402",
+    "areaName": "鳥取県 日野町"
+  },
+  {
+    "areaCode": "05346",
+    "areaName": "秋田県 藤里町"
+  },
+  {
+    "areaCode": "31325",
+    "areaName": "鳥取県 若桜町"
+  },
+  {
+    "areaCode": "01425",
+    "areaName": "北海道 上砂川町"
+  },
+  {
+    "areaCode": "01392",
+    "areaName": "北海道 寿都町"
+  },
+  {
+    "areaCode": "19429",
+    "areaName": "山梨県 鳴沢村"
+  },
+  {
+    "areaCode": "01393",
+    "areaName": "北海道 黒松内町"
+  },
+  {
+    "areaCode": "30422",
+    "areaName": "和歌山県 太地町"
+  },
+  {
+    "areaCode": "32526",
+    "areaName": "島根県 西ノ島町"
+  },
+  {
+    "areaCode": "01550",
+    "areaName": "北海道 置戸町"
+  },
+  {
+    "areaCode": "40609",
+    "areaName": "福岡県 赤村"
+  },
+  {
+    "areaCode": "01406",
+    "areaName": "北海道 古平町"
+  },
+  {
+    "areaCode": "01575",
+    "areaName": "北海道 壮瞥町"
+  },
+  {
+    "areaCode": "11369",
+    "areaName": "埼玉県 東秩父村"
+  },
+  {
+    "areaCode": "05464",
+    "areaName": "秋田県 東成瀬村"
+  },
+  {
+    "areaCode": "01433",
+    "areaName": "北海道 妹背牛町"
+  },
+  {
+    "areaCode": "20425",
+    "areaName": "長野県 木祖村"
+  },
+  {
+    "areaCode": "31403",
+    "areaName": "鳥取県 江府町"
+  },
+  {
+    "areaCode": "20486",
+    "areaName": "長野県 小谷村"
+  },
+  {
+    "areaCode": "01511",
+    "areaName": "北海道 猿払村"
+  },
+  {
+    "areaCode": "01456",
+    "areaName": "北海道 愛別町"
+  },
+  {
+    "areaCode": "20446",
+    "areaName": "長野県 麻績村"
+  },
+  {
+    "areaCode": "01667",
+    "areaName": "北海道 鶴居村"
+  },
+  {
+    "areaCode": "07402",
+    "areaName": "福島県 北塩原村"
+  },
+  {
+    "areaCode": "02304",
+    "areaName": "青森県 蓬田村"
+  },
+  {
+    "areaCode": "01486",
+    "areaName": "北海道 遠別町"
+  },
+  {
+    "areaCode": "01517",
+    "areaName": "北海道 礼文町"
+  },
+  {
+    "areaCode": "45430",
+    "areaName": "宮崎県 椎葉村"
+  },
+  {
+    "areaCode": "39303",
+    "areaName": "高知県 田野町"
+  },
+  {
+    "areaCode": "03485",
+    "areaName": "岩手県 普代村"
+  },
+  {
+    "areaCode": "30424",
+    "areaName": "和歌山県 古座川町"
+  },
+  {
+    "areaCode": "01519",
+    "areaName": "北海道 利尻富士町"
+  },
+  {
+    "areaCode": "13363",
+    "areaName": "東京都 新島村"
+  },
+  {
+    "areaCode": "43513",
+    "areaName": "熊本県 球磨村"
+  },
+  {
+    "areaCode": "18382",
+    "areaName": "福井県 池田町"
+  },
+  {
+    "areaCode": "01560",
+    "areaName": "北海道 滝上町"
+  },
+  {
+    "areaCode": "01367",
+    "areaName": "北海道 奥尻町"
+  },
+  {
+    "areaCode": "26367",
+    "areaName": "京都府 南山城村"
+  },
+  {
+    "areaCode": "01436",
+    "areaName": "北海道 雨竜町"
+  },
+  {
+    "areaCode": "01462",
+    "areaName": "北海道 南富良野町"
+  },
+  {
+    "areaCode": "01520",
+    "areaName": "北海道 幌延町"
+  },
+  {
+    "areaCode": "39304",
+    "areaName": "高知県 安田町"
+  },
+  {
+    "areaCode": "35341",
+    "areaName": "山口県 上関町"
+  },
+  {
+    "areaCode": "02303",
+    "areaName": "青森県 今別町"
+  },
+  {
+    "areaCode": "01434",
+    "areaName": "北海道 秩父別町"
+  },
+  {
+    "areaCode": "42383",
+    "areaName": "長崎県 小値賀町"
+  },
+  {
+    "areaCode": "13381",
+    "areaName": "東京都 三宅村"
+  },
+  {
+    "areaCode": "32525",
+    "areaName": "島根県 海士町"
+  },
+  {
+    "areaCode": "01648",
+    "areaName": "北海道 陸別町"
+  },
+  {
+    "areaCode": "20588",
+    "areaName": "長野県 小川村"
+  },
+  {
+    "areaCode": "02450",
+    "areaName": "青森県 新郷村"
+  },
+  {
+    "areaCode": "39301",
+    "areaName": "高知県 東洋町"
+  },
+  {
+    "areaCode": "01398",
+    "areaName": "北海道 喜茂別町"
+  },
+  {
+    "areaCode": "07543",
+    "areaName": "福島県 富岡町"
+  },
+  {
+    "areaCode": "05327",
+    "areaName": "秋田県 上小阿仁村"
+  },
+  {
+    "areaCode": "36321",
+    "areaName": "徳島県 佐那河内村"
+  },
+  {
+    "areaCode": "01396",
+    "areaName": "北海道 真狩村"
+  },
+  {
+    "areaCode": "07544",
+    "areaName": "福島県 川内村"
+  },
+  {
+    "areaCode": "43507",
+    "areaName": "熊本県 水上村"
+  },
+  {
+    "areaCode": "21507",
+    "areaName": "岐阜県 東白川村"
+  },
+  {
+    "areaCode": "01518",
+    "areaName": "北海道 利尻町"
+  },
+  {
+    "areaCode": "13307",
+    "areaName": "東京都 檜原村"
+  },
+  {
+    "areaCode": "26463",
+    "areaName": "京都府 伊根町"
+  },
+  {
+    "areaCode": "07547",
+    "areaName": "福島県 浪江町"
+  },
+  {
+    "areaCode": "01397",
+    "areaName": "北海道 留寿都村"
+  },
+  {
+    "areaCode": "40448",
+    "areaName": "福岡県 東峰村"
+  },
+  {
+    "areaCode": "07445",
+    "areaName": "福島県 金山町"
+  },
+  {
+    "areaCode": "13364",
+    "areaName": "東京都 神津島村"
+  },
+  {
+    "areaCode": "01405",
+    "areaName": "北海道 積丹町"
+  },
+  {
+    "areaCode": "02426",
+    "areaName": "青森県 佐井村"
+  },
+  {
+    "areaCode": "01431",
+    "areaName": "北海道 浦臼町"
+  },
+  {
+    "areaCode": "44322",
+    "areaName": "大分県 姫島村"
+  },
+  {
+    "areaCode": "01437",
+    "areaName": "北海道 北竜町"
+  },
+  {
+    "areaCode": "47382",
+    "areaName": "沖縄県 与那国町"
+  },
+  {
+    "areaCode": "20602",
+    "areaName": "長野県 栄村"
+  },
+  {
+    "areaCode": "10367",
+    "areaName": "群馬県 神流町"
+  },
+  {
+    "areaCode": "20448",
+    "areaName": "長野県 生坂村"
+  },
+  {
+    "areaCode": "01513",
+    "areaName": "北海道 中頓別町"
+  },
+  {
+    "areaCode": "02425",
+    "areaName": "青森県 風間浦村"
+  },
+  {
+    "areaCode": "46524",
+    "areaName": "鹿児島県 宇検村"
+  },
+  {
+    "areaCode": "10383",
+    "areaName": "群馬県 南牧村"
+  },
+  {
+    "areaCode": "19422",
+    "areaName": "山梨県 道志村"
+  },
+  {
+    "areaCode": "47303",
+    "areaName": "沖縄県 東村"
+  },
+  {
+    "areaCode": "01403",
+    "areaName": "北海道 泊村"
+  },
+  {
+    "areaCode": "20414",
+    "areaName": "長野県 泰阜村"
+  },
+  {
+    "areaCode": "01471",
+    "areaName": "北海道 中川町"
+  },
+  {
+    "areaCode": "21604",
+    "areaName": "岐阜県 白川村"
+  },
+  {
+    "areaCode": "29453",
+    "areaName": "奈良県 東吉野村"
+  },
+  {
+    "areaCode": "45429",
+    "areaName": "宮崎県 諸塚村"
+  },
+  {
+    "areaCode": "29386",
+    "areaName": "奈良県 御杖村"
+  },
+  {
+    "areaCode": "07444",
+    "areaName": "福島県 三島町"
+  },
+  {
+    "areaCode": "39427",
+    "areaName": "高知県 三原村"
+  },
+  {
+    "areaCode": "33643",
+    "areaName": "岡山県 西粟倉村"
+  },
+  {
+    "areaCode": "43425",
+    "areaName": "熊本県 産山村"
+  },
+  {
+    "areaCode": "36302",
+    "areaName": "徳島県 上勝町"
+  },
+  {
+    "areaCode": "01472",
+    "areaName": "北海道 幌加内町"
+  },
+  {
+    "areaCode": "46523",
+    "areaName": "鹿児島県 大和村"
+  },
+  {
+    "areaCode": "01391",
+    "areaName": "北海道 島牧村"
+  },
+  {
+    "areaCode": "47360",
+    "areaName": "沖縄県 伊是名村"
+  },
+  {
+    "areaCode": "07564",
+    "areaName": "福島県 飯舘村"
+  },
+  {
+    "areaCode": "01463",
+    "areaName": "北海道 占冠村"
+  },
+  {
+    "areaCode": "29385",
+    "areaName": "奈良県 曽爾村"
+  },
+  {
+    "areaCode": "47357",
+    "areaName": "沖縄県 南大東村"
+  },
+  {
+    "areaCode": "02343",
+    "areaName": "青森県 西目屋村"
+  },
+  {
+    "areaCode": "04302",
+    "areaName": "宮城県 七ヶ宿町"
+  },
+  {
+    "areaCode": "07446",
+    "areaName": "福島県 昭和村"
+  },
+  {
+    "areaCode": "20413",
+    "areaName": "長野県 天龍村"
+  },
+  {
+    "areaCode": "29446",
+    "areaName": "奈良県 天川村"
+  },
+  {
+    "areaCode": "01409",
+    "areaName": "北海道 赤井川村"
+  },
+  {
+    "areaCode": "29452",
+    "areaName": "奈良県 川上村"
+  },
+  {
+    "areaCode": "39305",
+    "areaName": "高知県 北川村"
+  },
+  {
+    "areaCode": "26364",
+    "areaName": "京都府 笠置町"
+  },
+  {
+    "areaCode": "10366",
+    "areaName": "群馬県 上野村"
+  },
+  {
+    "areaCode": "47359",
+    "areaName": "沖縄県 伊平屋村"
+  },
+  {
+    "areaCode": "19364",
+    "areaName": "山梨県 早川町"
+  },
+  {
+    "areaCode": "01485",
+    "areaName": "北海道 初山別村"
+  },
+  {
+    "areaCode": "47375",
+    "areaName": "沖縄県 多良間村"
+  },
+  {
+    "areaCode": "01562",
+    "areaName": "北海道 西興部村"
+  },
+  {
+    "areaCode": "20417",
+    "areaName": "長野県 大鹿村"
+  },
+  {
+    "areaCode": "23563",
+    "areaName": "愛知県 豊根村"
+  },
+  {
+    "areaCode": "45403",
+    "areaName": "宮崎県 西米良村"
+  },
+  {
+    "areaCode": "20306",
+    "areaName": "長野県 南相木村"
+  },
+  {
+    "areaCode": "43511",
+    "areaName": "熊本県 五木村"
+  },
+  {
+    "areaCode": "47354",
+    "areaName": "沖縄県 座間味村"
+  },
+  {
+    "areaCode": "01404",
+    "areaName": "北海道 神恵内村"
+  },
+  {
+    "areaCode": "20410",
+    "areaName": "長野県 根羽村"
+  },
+  {
+    "areaCode": "07545",
+    "areaName": "福島県 大熊町"
+  },
+  {
+    "areaCode": "33586",
+    "areaName": "岡山県 新庄村"
+  },
+  {
+    "areaCode": "29450",
+    "areaName": "奈良県 下北山村"
+  },
+  {
+    "areaCode": "20307",
+    "areaName": "長野県 北相木村"
+  },
+  {
+    "areaCode": "39306",
+    "areaName": "高知県 馬路村"
+  },
+  {
+    "areaCode": "46304",
+    "areaName": "鹿児島県 十島村"
+  },
+  {
+    "areaCode": "47353",
+    "areaName": "沖縄県 渡嘉敷村"
+  },
+  {
+    "areaCode": "20429",
+    "areaName": "長野県 王滝村"
+  },
+  {
+    "areaCode": "01470",
+    "areaName": "北海道 音威子府村"
+  },
+  {
+    "areaCode": "19442",
+    "areaName": "山梨県 小菅村"
+  },
+  {
+    "areaCode": "47355",
+    "areaName": "沖縄県 粟国村"
+  },
+  {
+    "areaCode": "32527",
+    "areaName": "島根県 知夫村"
+  },
+  {
+    "areaCode": "29444",
+    "areaName": "奈良県 黒滝村"
+  },
+  {
+    "areaCode": "47358",
+    "areaName": "沖縄県 北大東村"
+  },
+  {
+    "areaCode": "20412",
+    "areaName": "長野県 売木村"
+  },
+  {
+    "areaCode": "19443",
+    "areaName": "山梨県 丹波山村"
+  },
+  {
+    "areaCode": "07364",
+    "areaName": "福島県 檜枝岐村"
+  },
+  {
+    "areaCode": "29451",
+    "areaName": "奈良県 上北山村"
+  },
+  {
+    "areaCode": "07548",
+    "areaName": "福島県 葛尾村"
+  },
+  {
+    "areaCode": "46303",
+    "areaName": "鹿児島県 三島村"
+  },
+  {
+    "areaCode": "30427",
+    "areaName": "和歌山県 北山村"
+  },
+  {
+    "areaCode": "20409",
+    "areaName": "長野県 平谷村"
+  },
+  {
+    "areaCode": "39364",
+    "areaName": "高知県 大川村"
+  },
+  {
+    "areaCode": "29447",
+    "areaName": "奈良県 野迫川村"
+  },
+  {
+    "areaCode": "15586",
+    "areaName": "新潟県 粟島浦村"
+  },
+  {
+    "areaCode": "47356",
+    "areaName": "沖縄県 渡名喜村"
+  },
+  {
+    "areaCode": "13362",
+    "areaName": "東京都 利島村"
+  },
+  {
+    "areaCode": "13382",
+    "areaName": "東京都 御蔵島村"
+  },
+  {
+    "areaCode": "13402",
+    "areaName": "東京都 青ヶ島村"
+  },
+  {
+    "areaCode": "07546",
+    "areaName": "福島県 双葉町"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "documentTitle": "年齢中位数",
+  "documentId": "median-age",
+  "categories": [
+    {
+      "categoryCode": "A1231",
+      "categoryName": "年齢中位数",
+      "categoryUnit": "歳",
+      "digit": 1,
+      "estatParams": {
+        "statsDataId": "0000020201",
+        "cdCat01": "A1231"
+      }
+    }
+  ]
+}

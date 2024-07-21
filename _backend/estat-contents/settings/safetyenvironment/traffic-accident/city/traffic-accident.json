@@ -1,0 +1,15 @@
+{
+  "documentTitle": "交通事故",
+  "documentId": "traffic-accident",
+  "categories": [
+    {
+      "categoryCode": "K3101",
+      "categoryName": "交通事故件数",
+      "categoryUnit": "件",
+      "estatParams": {
+        "statsDataId": "0000020211",
+        "cdCat01": "K3101"
+      }
+    }
+  ]
+}

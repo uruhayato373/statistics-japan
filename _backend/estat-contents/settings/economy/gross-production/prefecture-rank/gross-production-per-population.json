@@ -1,0 +1,26 @@
+{
+  "documentTitle": "県内総生産（人口当たり）",
+  "documentId": "gross-production-per-population",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      //　単位を万円に変更
+      "divisor": 0.01,
+      "categoryUnit": "万円/人",
+      "digit": 1,
+      "processingType": "ratio", // 割合を計算
+      "estatParams": [
+        {
+          "statsDataId": "0000010103",
+          "cdCat01": "C1111"
+        },
+        {
+          // 総人口
+          "statsDataId": "0000010101",
+          "cdCat01": "A1101"
+        }
+      ]
+    }
+  ]
+}

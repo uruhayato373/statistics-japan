@@ -1,0 +1,16 @@
+{
+  "cardTitle": "病院数",
+  "cardId": "hospital",
+  "cardType": "dashboard",
+  "categories": [
+    {
+      "categoryCode": "I5101",
+      "categoryName": "病院数",
+      "categoryUnit": "施設",
+      "estatParams": {
+        "statsDataId": "0000010109",
+        "cdCat01": "I5101"
+      }
+    }
+  ]
+}

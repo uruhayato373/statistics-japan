@@ -1,0 +1,132 @@
+[
+  {
+    "menuId": "total-area",
+    "menuTitle": "総面積",
+    "fieldId": "landweather"
+  },
+  {
+    "menuId": "climate",
+    "menuTitle": "気温・湿度",
+    "fieldId": "landweather"
+  },
+  {
+    "menuId": "weather",
+    "menuTitle": "天候",
+    "fieldId": "landweather"
+  },
+  {
+    "menuId": "total-population",
+    "menuTitle": "総人口",
+    "fieldId": "population"
+  },
+  {
+    "menuId": "household",
+    "menuTitle": "世帯",
+    "fieldId": "population"
+  },
+  {
+    "menuId": "marriage",
+    "menuTitle": "結婚・離婚",
+    "fieldId": "population"
+  },
+  {
+    "menuId": "birthdeath",
+    "menuTitle": "出生・死亡",
+    "fieldId": "population"
+  },
+  {
+    "menuId": "laborforce",
+    "menuTitle": "労働力",
+    "fieldId": "laborwage"
+  },
+  {
+    "menuId": "agriculture",
+    "menuTitle": "農業産出額",
+    "fieldId": "agriculture"
+  },
+  {
+    "menuId": "products",
+    "menuTitle": "製造品出荷額",
+    "fieldId": "miningindustry"
+  },
+  {
+    "menuId": "product-sales",
+    "menuTitle": "商品販売額",
+    "fieldId": "commercial"
+  },
+  {
+    "menuId": "gross-production",
+    "menuTitle": "県内総生産",
+    "fieldId": "economy"
+  },
+  {
+    "menuId": "office-employee",
+    "menuTitle": "事業所・従業者",
+    "fieldId": "economy"
+  },
+  {
+    "menuId": "consumer-price-index",
+    "menuTitle": "消費者物価指数",
+    "fieldId": "economy"
+  },
+  {
+    "menuId": "construction",
+    "menuTitle": "建設業",
+    "fieldId": "construction"
+  },
+  {
+    "menuId": "standard-price",
+    "menuTitle": "標準価格",
+    "fieldId": "construction"
+  },
+  {
+    "menuId": "industrial-water",
+    "menuTitle": "工業用水",
+    "fieldId": "energy"
+  },
+  {
+    "menuId": "inns",
+    "menuTitle": "宿泊施設",
+    "fieldId": "tourism"
+  },
+  {
+    "menuId": "primary-school",
+    "menuTitle": "小学校",
+    "fieldId": "educationsports"
+  },
+  {
+    "menuId": "junior-high-school",
+    "menuTitle": "中学校",
+    "fieldId": "educationsports"
+  },
+  {
+    "menuId": "high-school",
+    "menuTitle": "高等学校",
+    "fieldId": "educationsports"
+  },
+  {
+    "menuId": "staff",
+    "menuTitle": "職員",
+    "fieldId": "administrativefinancial"
+  },
+  {
+    "menuId": "traffic-accident",
+    "menuTitle": "交通事故",
+    "fieldId": "safetyenvironment"
+  },
+  {
+    "menuId": "hospital",
+    "menuTitle": "病院数",
+    "fieldId": "socialsecurity"
+  },
+  {
+    "menuId": "height-weight",
+    "menuTitle": "身長・体重",
+    "fieldId": "socialsecurity"
+  },
+  {
+    "menuId": "foreigner",
+    "menuTitle": "外国人",
+    "fieldId": "international"
+  }
+]

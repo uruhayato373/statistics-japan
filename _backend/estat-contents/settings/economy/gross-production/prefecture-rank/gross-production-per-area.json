@@ -1,0 +1,26 @@
+{
+  "documentTitle": "県内総生産（面積当たり）",
+  "documentId": "gross-production-per-area",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      //　単位を万円に変更
+      "divisor": 0.01,
+      "categoryUnit": "万円/ha",
+      "digit": 1,
+      "processingType": "ratio", // 割合を計算
+      "estatParams": [
+        {
+          "statsDataId": "0000010103",
+          "cdCat01": "C1111"
+        },
+        {
+          // 総面積
+          "statsDataId": "0000010102",
+          "cdCat01": "B1101"
+        }
+      ]
+    }
+  ]
+}

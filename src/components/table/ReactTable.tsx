@@ -1,0 +1,104 @@
+'use client'
+
+import Paper from '@mui/material/Paper'
+import Table from '@mui/material/Table'
+import TableBody from '@mui/material/TableBody'
+import TableCell from '@mui/material/TableCell'
+import TableContainer from '@mui/material/TableContainer'
+import TableHead from '@mui/material/TableHead'
+import TableRow from '@mui/material/TableRow'
+
+import {
+  flexRender,
+  useReactTable,
+  getCoreRowModel,
+} from '@tanstack/react-table'
+
+import {
+  TimeTableColumnType,
+  TimeTableDataType,
+} from 'utils/table/formatReactTable'
+
+type Props = {
+  columns: TimeTableColumnType[]
+  data: TimeTableDataType[]
+}
+
+export default function ReactTable({ columns, data }: Props) {
+  const table = useReactTable({
+    data,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+  })
+
+  return (
+    <TableContainer
+      component={Paper}
+      sx={{
+        maxHeight: 350,
+        overflow: 'auto',
+        '& .MuiTableHead-root': {
+          position: 'sticky',
+          top: 0,
+          zIndex: 1,
+        },
+      }}
+    >
+      <Table
+        size="small"
+        stickyHeader
+        sx={{
+          '& .MuiTableCell-root': {
+            fontSize: '0.75rem',
+            padding: '6px 16px',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            maxWidth: '200px',
+          },
+          '& .MuiTableCell-head': {
+            fontWeight: 'bold',
+            backgroundColor: '#f5f5f5',
+            textAlign: 'center',
+          },
+        }}
+      >
+        <TableHead>
+          {table.getHeaderGroups().map((headerGroup) => (
+            <TableRow key={headerGroup.id}>
+              {headerGroup.headers.map((header) => (
+                <TableCell
+                  key={header.id}
+                  {...header.column.columnDef.meta}
+                  align="center"
+                >
+                  {header.isPlaceholder
+                    ? null
+                    : flexRender(
+                        header.column.columnDef.header,
+                        header.getContext()
+                      )}
+                </TableCell>
+              ))}
+            </TableRow>
+          ))}
+        </TableHead>
+        <TableBody>
+          {table.getRowModel().rows.map((row) => (
+            <TableRow key={row.id}>
+              {row.getVisibleCells().map((cell, index) => (
+                <TableCell
+                  key={cell.id}
+                  {...cell.column.columnDef.meta}
+                  align={index === 0 ? 'left' : 'right'} // 最初の列（年度）は左寄せ、それ以外は右寄せ
+                >
+                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                </TableCell>
+              ))}
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  )
+}

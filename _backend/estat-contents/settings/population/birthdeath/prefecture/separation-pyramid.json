@@ -1,0 +1,277 @@
+{
+  "cardTitle": "離別人口",
+  "cardId": "separation-pyramid",
+  "cardType": "highcharts-pyramid",
+  "categories": [
+    {
+      "categoryCode": "A1604011",
+      "categoryName": "15～19歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604031"
+      }
+    },
+    {
+      "categoryCode": "A1604012",
+      "categoryName": "15～19歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604032"
+      }
+    },
+    {
+      "categoryCode": "A1604021",
+      "categoryName": "20～24歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604031"
+      }
+    },
+    {
+      "categoryCode": "A1604022",
+      "categoryName": "20～24歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604032"
+      }
+    },
+    {
+      "categoryCode": "A1604031",
+      "categoryName": "25～29歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604031"
+      }
+    },
+    {
+      "categoryCode": "A1604032",
+      "categoryName": "25～29歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604032"
+      }
+    },
+    {
+      "categoryCode": "A1604041",
+      "categoryName": "30～34歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604041"
+      }
+    },
+    {
+      "categoryCode": "A1604042",
+      "categoryName": "30～34歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604042"
+      }
+    },
+    {
+      "categoryCode": "A1604051",
+      "categoryName": "35～39歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604051"
+      }
+    },
+    {
+      "categoryCode": "A1604052",
+      "categoryName": "35～39歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604052"
+      }
+    },
+    {
+      "categoryCode": "A1604061",
+      "categoryName": "40～44歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604061"
+      }
+    },
+    {
+      "categoryCode": "A1604062",
+      "categoryName": "40～44歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604062"
+      }
+    },
+    {
+      "categoryCode": "A1604071",
+      "categoryName": "45～49歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604071"
+      }
+    },
+    {
+      "categoryCode": "A1604072",
+      "categoryName": "45～49歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604072"
+      }
+    },
+    {
+      "categoryCode": "A1604081",
+      "categoryName": "50～54歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604081"
+      }
+    },
+    {
+      "categoryCode": "A1604082",
+      "categoryName": "50～54歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604082"
+      }
+    },
+    {
+      "categoryCode": "A1604091",
+      "categoryName": "55～59歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604091"
+      }
+    },
+    {
+      "categoryCode": "A1604092",
+      "categoryName": "55～59歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604092"
+      }
+    },
+    {
+      "categoryCode": "A1604101",
+      "categoryName": "60～64歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604101"
+      }
+    },
+    {
+      "categoryCode": "A1604102",
+      "categoryName": "60～64歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604102"
+      }
+    },
+    {
+      "categoryCode": "A1604111",
+      "categoryName": "65～69歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604111"
+      }
+    },
+    {
+      "categoryCode": "A1604112",
+      "categoryName": "65～69歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604112"
+      }
+    },
+    {
+      "categoryCode": "A1604121",
+      "categoryName": "70～74歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604121"
+      }
+    },
+    {
+      "categoryCode": "A1604122",
+      "categoryName": "70～74歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604122"
+      }
+    },
+    {
+      "categoryCode": "A1604131",
+      "categoryName": "75～79歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604131"
+      }
+    },
+    {
+      "categoryCode": "A1604132",
+      "categoryName": "75～79歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604132"
+      }
+    },
+    {
+      "categoryCode": "A1604141",
+      "categoryName": "80～84歳（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604141"
+      }
+    },
+    {
+      "categoryCode": "A1604142",
+      "categoryName": "80～84歳（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604142"
+      }
+    },
+    {
+      "categoryCode": "A1604151",
+      "categoryName": "85歳以上（男性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604151"
+      }
+    },
+    {
+      "categoryCode": "A1604152",
+      "categoryName": "85歳以上（女性）",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1604152"
+      }
+    }
+  ]
+}

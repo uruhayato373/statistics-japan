@@ -1,0 +1,60 @@
+{
+  "documentTitle": "交通事故",
+  "documentId": "traffic-accident",
+  "categories": [
+    {
+      "categoryCode": "K3101",
+      "categoryName": "交通事故件数",
+      "categoryUnit": "件",
+      "estatParams": {
+        "statsDataId": "0000010111",
+        "cdCat01": "K3101"
+      }
+    },
+    {
+      "categoryCode": "K3102",
+      "categoryName": "交通事故死傷者数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010111",
+        "cdCat01": "K3102"
+      }
+    },
+    {
+      "categoryCode": "K3103",
+      "categoryName": "死者数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010111",
+        "cdCat01": "K3103"
+      }
+    },
+    {
+      "categoryCode": "K3104",
+      "categoryName": "負傷者数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010111",
+        "cdCat01": "K3104"
+      }
+    },
+    {
+      "categoryCode": "K4402",
+      "categoryName": "交通事故事件件数",
+      "categoryUnit": "件",
+      "estatParams": {
+        "statsDataId": "0000010111",
+        "cdCat01": "K4402"
+      }
+    },
+    {
+      "categoryCode": "K4404",
+      "categoryName": "交通事故事件人員",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010111",
+        "cdCat01": "K4404"
+      }
+    }
+  ]
+}

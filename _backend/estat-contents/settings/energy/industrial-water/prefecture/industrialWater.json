@@ -1,0 +1,34 @@
+{
+  "cardTitle": "工業用水量",
+  "cardId": "industrial-water",
+  "cardType": "dashboard",
+  "categories": [
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "m3/日",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C3406"
+      }
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "淡水",
+      "categoryUnit": "m3/日",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C340601"
+      }
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "海水",
+      "categoryUnit": "m3/日",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C340602"
+      }
+    }
+  ]
+}

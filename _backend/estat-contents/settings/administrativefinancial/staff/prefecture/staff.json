@@ -1,0 +1,16 @@
+{
+  "cardTitle": "一般行政部門職員数",
+  "cardId": "staff",
+  "cardType": "dashboard",
+  "categories": [
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010104",
+        "cdCat01": "D1201"
+      }
+    }
+  ]
+}

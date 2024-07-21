@@ -1,0 +1,37 @@
+{
+  "cardTitle": "高齢単身世帯",
+  "cardId": "elderly-single-person-household",
+  "cardType": "highcharts-composed",
+  "categories": [
+    {
+      "categoryCode": "A8303",
+      "categoryName": "総数",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A8303"
+      },
+      "type": "line"
+    },
+    {
+      "categoryCode": "A830301",
+      "categoryName": "男性",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A830301"
+      },
+      "type": "line"
+    },
+    {
+      "categoryCode": "A830302",
+      "categoryName": "女性",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A830302"
+      },
+      "type": "line"
+    }
+  ]
+}

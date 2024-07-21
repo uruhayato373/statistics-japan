@@ -1,0 +1,52 @@
+{
+  "cardTitle": "一般世帯数",
+  "cardId": "household",
+  "cardType": "dashboard",
+  "categories": [
+    {
+      "categoryCode": "A710101",
+      "categoryName": "一般世帯数",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A710101"
+      }
+    },
+    {
+      "categoryCode": "A810102",
+      "categoryName": "核家族世帯数",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A810102"
+      }
+    },
+    {
+      "categoryCode": "A810103",
+      "categoryName": "各家族以外の世帯数",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A810103"
+      }
+    },
+    {
+      "categoryCode": "A810104",
+      "categoryName": "非親族を含む世帯数",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A810104"
+      }
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A810105"
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "fieldId": "landweather",
+    "fieldTitle": "国土・気象"
+  },
+  {
+    "fieldId": "population",
+    "fieldTitle": "人口・世帯"
+  },
+  {
+    "fieldId": "laborwage",
+    "fieldTitle": "労働・賃金"
+  },
+  {
+    "fieldId": "agriculture",
+    "fieldTitle": "農林水産業"
+  },
+  {
+    "fieldId": "miningindustry",
+    "fieldTitle": "鉱工業"
+  },
+  {
+    "fieldId": "commercial",
+    "fieldTitle": "商業・サービス業"
+  },
+  {
+    "fieldId": "economy",
+    "fieldTitle": "企業・家計・経済"
+  },
+  {
+    "fieldId": "construction",
+    "fieldTitle": "住宅・土地・建設"
+  },
+  {
+    "fieldId": "energy",
+    "fieldTitle": "エネルギー・水"
+  },
+  {
+    "fieldId": "tourism",
+    "fieldTitle": "運輸・観光"
+  },
+  {
+    "fieldId": "educationsports",
+    "fieldTitle": "教育・文化・スポーツ"
+  },
+  {
+    "fieldId": "administrativefinancial",
+    "fieldTitle": "行財政"
+  },
+  {
+    "fieldId": "safetyenvironment",
+    "fieldTitle": "司法・安全・環境"
+  },
+  {
+    "fieldId": "socialsecurity",
+    "fieldTitle": "社会保障・衛生"
+  },
+  {
+    "fieldId": "international",
+    "fieldTitle": "国際"
+  }
+]

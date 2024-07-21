@@ -1,0 +1,284 @@
+[
+  {
+    "prefCode": 1,
+    "cityCode": "01100",
+    "cityName": "札幌市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 2,
+    "cityCode": "02201",
+    "cityName": "青森市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 3,
+    "cityCode": "03201",
+    "cityName": "盛岡市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 4,
+    "cityCode": "04100",
+    "cityName": "仙台市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 5,
+    "cityCode": "05201",
+    "cityName": "秋田市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 6,
+    "cityCode": "06201",
+    "cityName": "山形市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 7,
+    "cityCode": "07201",
+    "cityName": "福島市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 8,
+    "cityCode": "08201",
+    "cityName": "水戸市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 9,
+    "cityCode": "09201",
+    "cityName": "宇都宮市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 10,
+    "cityCode": "10201",
+    "cityName": "前橋市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 11,
+    "cityCode": "11100",
+    "cityName": "さいたま市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 12,
+    "cityCode": "12100",
+    "cityName": "千葉市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 13,
+    "cityCode": "13101",
+    "cityName": "千代田区",
+    "bigCityFlag": "3"
+  },
+  {
+    "prefCode": 14,
+    "cityCode": "14100",
+    "cityName": "横浜市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 15,
+    "cityCode": "15100",
+    "cityName": "新潟市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 16,
+    "cityCode": "16201",
+    "cityName": "富山市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 17,
+    "cityCode": "17201",
+    "cityName": "金沢市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 18,
+    "cityCode": "18201",
+    "cityName": "福井市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 19,
+    "cityCode": "19201",
+    "cityName": "甲府市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 20,
+    "cityCode": "20201",
+    "cityName": "長野市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 21,
+    "cityCode": "21201",
+    "cityName": "岐阜市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 22,
+    "cityCode": "22100",
+    "cityName": "静岡市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 23,
+    "cityCode": "23100",
+    "cityName": "名古屋市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 24,
+    "cityCode": "24201",
+    "cityName": "津市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 25,
+    "cityCode": "25201",
+    "cityName": "大津市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 26,
+    "cityCode": "26100",
+    "cityName": "京都市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 27,
+    "cityCode": "27100",
+    "cityName": "大阪市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 28,
+    "cityCode": "28100",
+    "cityName": "神戸市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 29,
+    "cityCode": "29201",
+    "cityName": "奈良市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 30,
+    "cityCode": "30201",
+    "cityName": "和歌山市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 31,
+    "cityCode": "31201",
+    "cityName": "鳥取市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 32,
+    "cityCode": "32201",
+    "cityName": "松江市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 33,
+    "cityCode": "33100",
+    "cityName": "岡山市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 34,
+    "cityCode": "34100",
+    "cityName": "広島市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 35,
+    "cityCode": "35201",
+    "cityName": "下関市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 36,
+    "cityCode": "36201",
+    "cityName": "徳島市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 37,
+    "cityCode": "37201",
+    "cityName": "高松市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 38,
+    "cityCode": "38201",
+    "cityName": "松山市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 39,
+    "cityCode": "39201",
+    "cityName": "高知市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 40,
+    "cityCode": "40100",
+    "cityName": "北九州市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 41,
+    "cityCode": "41201",
+    "cityName": "佐賀市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 42,
+    "cityCode": "42201",
+    "cityName": "長崎市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 43,
+    "cityCode": "43100",
+    "cityName": "熊本市",
+    "bigCityFlag": "2"
+  },
+  {
+    "prefCode": 44,
+    "cityCode": "44201",
+    "cityName": "大分市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 45,
+    "cityCode": "45201",
+    "cityName": "宮崎市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 46,
+    "cityCode": "46201",
+    "cityName": "鹿児島市",
+    "bigCityFlag": "0"
+  },
+  {
+    "prefCode": 47,
+    "cityCode": "47201",
+    "cityName": "那覇市",
+    "bigCityFlag": "0"
+  }
+]

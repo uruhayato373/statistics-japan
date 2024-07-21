@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": "src",
+    "paths": {
+      "src/*": ["./src/*"]
+    },
+    "types": [],
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    // TODO : 最終的にはnoImplicitAnyをtrueにする
+    "noImplicitAny": false,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/layout/DashboardLayout/Drawer/DrawerContent/Navigation/index.jsx",
+    "src/sections/population/total-population/Population3AgeChart.jsxrc/sections/population/total-population/Popukation3AgeChart.jsx"
+  ],
+  "exclude": ["node_modules"]
+}

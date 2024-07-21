@@ -1,0 +1,36 @@
+{
+  "documentTitle": "気温",
+  "documentId": "temperature",
+  "categories": [
+    {
+      "categoryCode": "B4101",
+      "categoryName": "年平均気温",
+      "categoryUnit": "℃",
+      "digit": 1,
+      "estatParams": {
+        "statsDataId": "0000010102",
+        "cdCat01": "B4101"
+      }
+    },
+    {
+      "categoryCode": "B4102",
+      "categoryName": "最高気温",
+      "categoryUnit": "℃",
+      "digit": 1,
+      "estatParams": {
+        "statsDataId": "0000010102",
+        "cdCat01": "B4102"
+      }
+    },
+    {
+      "categoryCode": "B4103",
+      "categoryName": "最低気温",
+      "categoryUnit": "℃",
+      "digit": 1,
+      "estatParams": {
+        "statsDataId": "0000010102",
+        "cdCat01": "B4103"
+      }
+    }
+  ]
+}

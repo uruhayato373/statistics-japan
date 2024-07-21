@@ -1,0 +1,27 @@
+[
+  {
+    "pageId": "total-area",
+    "pageTitle": "総面積",
+    "menuId": "total-area"
+  },
+  {
+    "pageId": "total-population",
+    "pageTitle": "総人口",
+    "menuId": "total-population"
+  },
+  {
+    "pageId": "old-population",
+    "pageTitle": "65歳以上人口",
+    "menuId": "total-population"
+  },
+  {
+    "pageId": "laborforce",
+    "pageTitle": "労働力人口",
+    "menuId": "laborforce"
+  },
+  {
+    "pageId": "agricultural-output",
+    "pageTitle": "農業産出額",
+    "menuId": "agriculture"
+  }
+]

@@ -1,0 +1,70 @@
+{
+  // エディター上での空白文字の表示方法
+  "editor.renderWhitespace": "all",
+  // フォントサイズを変更
+  "editor.fontSize": 14,
+  // 選択行の行番号をハイライトする
+  "editor.renderLineHighlight": "all",
+  // 列に選を表示
+  // "editor.rulers": [40, 80, 120],
+  // 1つのタブに相当する半角スペースの数
+  "editor.tabSize": 2,
+  // 括弧の対応を色付ける
+  "editor.bracketPairColorization.enabled": true,
+  // 制御文字を表示する
+  "editor.renderControlCharacters": true,
+
+  // ファイル保存時に最終行以降の空行を削除
+  "files.trimFinalNewlines": true,
+  // ファイル保存時に各行の末尾にある半角スペースを削除
+  "files.trimTrailingWhitespace": true,
+  // 検索ビューの検索結果に行数を併記
+  "search.showLineNumbers": true,
+  // ファイルアイコンテーマ
+  "workbench.iconTheme": "vscode-great-icons",
+  // Emmet の候補を表示
+  "emmet.showSuggestionsAsSnippets": true,
+  // TAB キーで Emmet を展開
+  "emmet.triggerExpansionOnTab": true,
+  // emmetで自動補完
+  "emmet.variables": {
+    "lang": "ja"
+  },
+  //配色を設定
+  "workbench.colorCustomizations": {
+    // ホバー時のリスト/ツリーの背景
+    "list.hoverBackground": "#474747",
+    //アクティビティバーの背景色
+    "activityBar.border": "#ffffff"
+  },
+
+  //eslintの設定
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  "prettier.semi": false,
+  "prettier.trailingComma": "es5",
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove",
+
+  "todo-tree.general.tags": [
+    "BUG",
+    "bug",
+    "BUGS",
+    "bugs",
+    "TODO",
+    "ToDo",
+    "todo",
+    "TODOS",
+    "ToDos",
+    "todos",
+    "FIXME",
+    "fixme",
+    "FIX",
+    "fix",
+    "NOTE",
+    "note"
+  ]
+}

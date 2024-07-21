@@ -1,0 +1,52 @@
+{
+  "cardTitle": "父子世帯数",
+  "cardId": "father-child-household-age-pie",
+  "cardType": "highcharts-pie",
+  "categories": [
+    {
+      "categoryCode": "A850201",
+      "categoryName": "15〜24歳",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A850201"
+      }
+    },
+    {
+      "categoryCode": "A850202",
+      "categoryName": "25〜34歳",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A850202"
+      }
+    },
+    {
+      "categoryCode": "A850203",
+      "categoryName": "35〜44歳",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A850203"
+      }
+    },
+    {
+      "categoryCode": "A850204",
+      "categoryName": "45〜54歳",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A850204"
+      }
+    },
+    {
+      "categoryCode": "A850205",
+      "categoryName": "55歳以上",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A850205"
+      }
+    }
+  ]
+}

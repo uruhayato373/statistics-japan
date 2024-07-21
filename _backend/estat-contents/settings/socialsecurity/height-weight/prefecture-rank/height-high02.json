@@ -1,0 +1,26 @@
+{
+  "cardTitle": "身長（高校2年）",
+  "cardId": "height-high02",
+  "categories": [
+    {
+      "categoryCode": "man",
+      "categoryName": "男性",
+      "categoryUnit": "cm",
+      "digit": 1,
+      "estatParams": {
+        "statsDataId": "0000010109",
+        "cdCat01": "I411301"
+      }
+    },
+    {
+      "categoryCode": "woman",
+      "categoryName": "女性",
+      "categoryUnit": "cm",
+      "digit": 1,
+      "estatParams": {
+        "statsDataId": "0000010109",
+        "cdCat01": "I411302"
+      }
+    }
+  ]
+}

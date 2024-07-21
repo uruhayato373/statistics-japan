@@ -1,0 +1,42 @@
+{
+  "cardTitle": "事業所数",
+  "cardId": "office",
+  "categories": [
+    {
+      "categoryCode": "C2101",
+      "categoryName": "総数",
+      "categoryUnit": "所",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C2101"
+      }
+    },
+    {
+      "categoryCode": "C2106",
+      "categoryName": "第１次産業",
+      "categoryUnit": "所",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C2106"
+      }
+    },
+    {
+      "categoryCode": "C2104",
+      "categoryName": "第２次産業",
+      "categoryUnit": "所",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C2104"
+      }
+    },
+    {
+      "categoryCode": "C2105",
+      "categoryName": "第３次産業",
+      "categoryUnit": "所",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C2105"
+      }
+    }
+  ]
+}

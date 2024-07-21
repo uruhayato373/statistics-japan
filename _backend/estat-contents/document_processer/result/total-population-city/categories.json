@@ -1,0 +1,20 @@
+[
+  {
+    "categoryCode": "total",
+    "categoryName": "総人口",
+    "categoryUnit": "人",
+    "digit": null
+  },
+  {
+    "categoryCode": "man",
+    "categoryName": "男性",
+    "categoryUnit": "人",
+    "digit": null
+  },
+  {
+    "categoryCode": "woman",
+    "categoryName": "女性",
+    "categoryUnit": "人",
+    "digit": null
+  }
+]

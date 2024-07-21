@@ -1,0 +1,60 @@
+{
+  "documentTitle": "総人口",
+  "documentId": "total-population",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1101"
+      }
+    },
+    {
+      "categoryCode": "man",
+      "categoryName": "男性",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A110101"
+      }
+    },
+    {
+      "categoryCode": "woman",
+      "categoryName": "女性",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A110102"
+      }
+    },
+    {
+      "categoryCode": "A1303",
+      "categoryName": "65歳以上",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1303"
+      }
+    },
+    {
+      "categoryCode": "A1302",
+      "categoryName": "15～64歳",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1302"
+      }
+    },
+    {
+      "categoryCode": "A1301",
+      "categoryName": "15歳未満",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1301"
+      }
+    }
+  ]
+}

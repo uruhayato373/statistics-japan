@@ -1,0 +1,15 @@
+{
+  "cardTitle": "外国人人口",
+  "cardId": "foreigner",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1700"
+      }
+    }
+  ]
+}

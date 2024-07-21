@@ -1,0 +1,52 @@
+{
+  "cardTitle": "外国人人口",
+  "cardId": "foreigner-breakdown",
+  "cardType": "dashboard",
+  "categories": [
+    {
+      "categoryCode": "A1701",
+      "categoryName": "韓国・朝鮮",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1701"
+      }
+    },
+    {
+      "categoryCode": "A1702",
+      "categoryName": "中国",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1702"
+      }
+    },
+    {
+      "categoryCode": "A1703",
+      "categoryName": "アメリカ",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1703"
+      }
+    },
+    {
+      "categoryCode": "A1706",
+      "categoryName": "フィリピン",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1706"
+      }
+    },
+    {
+      "categoryCode": "A1707",
+      "categoryName": "ブラジル",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A1707"
+      }
+    }
+  ]
+}

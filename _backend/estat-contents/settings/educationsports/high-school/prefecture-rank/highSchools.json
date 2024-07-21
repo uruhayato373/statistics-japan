@@ -1,0 +1,42 @@
+{
+  "cardTitle": "高等学校数",
+  "cardId": "high-schools",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      "categoryUnit": "校",
+      "estatParams": {
+        "statsDataId": "0000010105",
+        "cdCat01": "E4101"
+      }
+    },
+    {
+      "categoryCode": "E410101",
+      "categoryName": "国立",
+      "categoryUnit": "校",
+      "estatParams": {
+        "statsDataId": "0000010105",
+        "cdCat01": "E410101"
+      }
+    },
+    {
+      "categoryCode": "E410102",
+      "categoryName": "公立",
+      "categoryUnit": "校",
+      "estatParams": {
+        "statsDataId": "0000010105",
+        "cdCat01": "E410102"
+      }
+    },
+    {
+      "categoryCode": "E410102",
+      "categoryName": "私立",
+      "categoryUnit": "校",
+      "estatParams": {
+        "statsDataId": "0000010105",
+        "cdCat01": "E410103"
+      }
+    }
+  ]
+}

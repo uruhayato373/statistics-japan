@@ -1,0 +1,15 @@
+{
+  "documentTitle": "総面積",
+  "documentId": "total-area",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総面積",
+      "categoryUnit": "ha",
+      "estatParams": {
+        "statsDataId": "0000010102",
+        "cdCat01": "B1101"
+      }
+    }
+  ]
+}

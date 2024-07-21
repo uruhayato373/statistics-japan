@@ -1,0 +1,15 @@
+{
+  "cardTitle": "建設業者数",
+  "cardId": "number-of-construction-companies",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      "categoryUnit": "社",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C3306"
+      }
+    }
+  ]
+}

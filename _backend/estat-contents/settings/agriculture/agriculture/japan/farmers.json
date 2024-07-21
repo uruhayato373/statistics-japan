@@ -1,0 +1,33 @@
+{
+  "documentTitle": "農家数",
+  "documentId": "farmers",
+  "categories": [
+    {
+      "categoryCode": "C3102",
+      "categoryName": "総数",
+      "categoryUnit": "戸",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C3102"
+      }
+    },
+    {
+      "categoryCode": "C310201",
+      "categoryName": "販売農家",
+      "categoryUnit": "戸",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C310201"
+      }
+    },
+    {
+      "categoryCode": "C310202",
+      "categoryName": "自給的農家",
+      "categoryUnit": "戸",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C310202"
+      }
+    }
+  ]
+}

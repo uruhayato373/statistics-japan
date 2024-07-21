@@ -1,0 +1,15 @@
+{
+  "documentTitle": "旅館等営業施設数",
+  "documentId": "inns",
+  "categories": [
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館等営業施設数",
+      "categoryUnit": "施設",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C3801"
+      }
+    }
+  ]
+}

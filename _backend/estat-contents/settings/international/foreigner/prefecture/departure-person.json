@@ -1,0 +1,34 @@
+{
+  "cardTitle": "出国者数（日本人）",
+  "cardId": "departure-person",
+  "cardType": "highcharts-composed",
+  "categories": [
+    {
+      "categoryCode": "A5202",
+      "categoryName": "総数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A5202"
+      }
+    },
+    {
+      "categoryCode": "A520201",
+      "categoryName": "男性",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A520201"
+      }
+    },
+    {
+      "categoryCode": "A520202",
+      "categoryName": "女性",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A520202"
+      }
+    }
+  ]
+}

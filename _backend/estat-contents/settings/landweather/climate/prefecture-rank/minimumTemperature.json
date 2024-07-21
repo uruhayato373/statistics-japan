@@ -1,0 +1,15 @@
+{
+  "cardTitle": "最低気温",
+  "cardId": "minimum-temperature",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "最低気温",
+      "categoryUnit": "℃",
+      "estatParams": {
+        "statsDataId": "0000010102",
+        "cdCat01": "B4103"
+      }
+    }
+  ]
+}

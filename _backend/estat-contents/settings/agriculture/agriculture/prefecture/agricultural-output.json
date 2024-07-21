@@ -1,0 +1,17 @@
+{
+  "documentTitle": "農業産出額",
+  "documentId": "agricultural-output",
+  "categories": [
+    {
+      "categoryCode": "C3101",
+      "categoryName": "農業産出額",
+      //　単位を億円に変更
+      "divisor": 100,
+      "categoryUnit": "億円",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C3101"
+      }
+    }
+  ]
+}

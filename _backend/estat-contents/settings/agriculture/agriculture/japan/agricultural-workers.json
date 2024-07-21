@@ -1,0 +1,33 @@
+{
+  "documentTitle": "農業就業人口（販売農家）",
+  "documentId": "agricultural-workers",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C310410"
+      }
+    },
+    {
+      "categoryCode": "man",
+      "categoryName": "男性",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C310411"
+      }
+    },
+    {
+      "categoryCode": "woman",
+      "categoryName": "女性",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C310412"
+      }
+    }
+  ]
+}

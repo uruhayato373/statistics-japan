@@ -1,0 +1,17 @@
+{
+  "documentTitle": "県内総生産",
+  "documentId": "gross-production",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      //　単位を億円に変更
+      "divisor": 100,
+      "categoryUnit": "億円",
+      "estatParams": {
+        "statsDataId": "0000010103",
+        "cdCat01": "C1111"
+      }
+    }
+  ]
+}

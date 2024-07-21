@@ -1,0 +1,26 @@
+{
+  "cardTitle": "体重（高校2年）",
+  "cardId": "weight-high02",
+  "categories": [
+    {
+      "categoryCode": "man",
+      "categoryName": "男性",
+      "categoryUnit": "cm",
+      "digit": 1,
+      "estatParams": {
+        "statsDataId": "0000010109",
+        "cdCat01": "I412301"
+      }
+    },
+    {
+      "categoryCode": "woman",
+      "categoryName": "女性",
+      "categoryUnit": "cm",
+      "digit": 1,
+      "estatParams": {
+        "statsDataId": "0000010109",
+        "cdCat01": "I412302"
+      }
+    }
+  ]
+}

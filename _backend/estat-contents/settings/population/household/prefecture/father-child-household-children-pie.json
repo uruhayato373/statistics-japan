@@ -1,0 +1,34 @@
+{
+  "cardTitle": "父子世帯数",
+  "cardId": "father-child-household-children-pie",
+  "cardType": "highcharts-pie",
+  "categories": [
+    {
+      "categoryCode": "A850101",
+      "categoryName": "子供が１人",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A850101"
+      }
+    },
+    {
+      "categoryCode": "A850102",
+      "categoryName": "子供が２人",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A850102"
+      }
+    },
+    {
+      "categoryCode": "A850103",
+      "categoryName": "子供が３人以上",
+      "categoryUnit": "世帯",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A850103"
+      }
+    }
+  ]
+}

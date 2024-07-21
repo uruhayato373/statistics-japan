@@ -1,0 +1,34 @@
+{
+  "cardTitle": "新生児死亡数",
+  "cardId": "neonatal-deaths",
+  "cardType": "dashboard",
+  "categories": [
+    {
+      "categoryCode": "A4272",
+      "categoryName": "早期新生児",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A4272"
+      }
+    },
+    {
+      "categoryCode": "A4280",
+      "categoryName": "新生児",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A4280"
+      }
+    },
+    {
+      "categoryCode": "A4281",
+      "categoryName": "乳児",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010101",
+        "cdCat01": "A4281"
+      }
+    }
+  ]
+}

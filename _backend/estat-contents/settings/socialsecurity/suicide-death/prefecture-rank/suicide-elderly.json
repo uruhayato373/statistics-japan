@@ -1,0 +1,15 @@
+{
+  "cardTitle": "自殺者数（65歳以上）",
+  "cardId": "suicide-elderly",
+  "categories": [
+    {
+      "categoryCode": "total",
+      "categoryName": "総数",
+      "categoryUnit": "人",
+      "estatParams": {
+        "statsDataId": "0000010109",
+        "cdCat01": "I9109"
+      }
+    }
+  ]
+}
