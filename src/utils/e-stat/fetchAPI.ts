@@ -5,10 +5,31 @@ import paramsSerializer from './modules/paramsSerializer'
 import { EstatParamsType } from './types/params'
 import { EStatResponseType } from './types/response'
 
+/**
+ * e-Stat API の認証キー
+ * 環境変数 ESTAT_API_APPID から取得します。
+ * このキーは API リクエストの認証に必要です。
+ */
 const API_KEY = process.env.ESTAT_API_APPID
+
+/**
+ * e-Stat API のベース URL
+ * このURLに対してクエリパラメータを追加してAPIリクエストを行います。
+ */
 const BASE_URL = 'https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData'
+
+/**
+ * HTTPプロキシのURL
+ * 環境変数 HTTP_PROXY から取得します。
+ * プロキシサーバーを経由してAPIリクестを行う場合に使用します。
+ */
 const PROXY_URL = process.env.HTTP_PROXY
 
+/**
+ * HTTPSプロキシエージェント
+ * PROXY_URL が設定されている場合、HttpsProxyAgent のインスタンスを作成します。
+ * プロキシサーバーを使用する場合、このエージェントを fetch 関数に渡します。
+ */
 const agent = PROXY_URL ? new HttpsProxyAgent(PROXY_URL) : undefined
 
 /**
