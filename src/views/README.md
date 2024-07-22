@@ -1,10 +1,14 @@
 # viewsディレクトリ
 
-appディレクトリからrouterPropsを受け取り、実際のページ構成を整えるコンポーネント
+appディレクトリからrouterPropsを受け取り、実際のページ構成を整えるコンポーネント。
+
+routerPropsは`utils/props`で定義している。
+
+[utils/props](/src/utils/props/)
 
 ## 構成
 
-fieldId > menuId のサブディレクトリを手動で作成
+fieldId > menuId のサブディレクトリを手動で作成する。
 
 menuIdごとに、次の４つのコンポーネントを作成する。
 
@@ -17,10 +21,18 @@ menuIdごとに、次の４つのコンポーネントを作成する。
 
 ### breadcrumbsPropsの生成
 
+[Breadcrumbs](/src/components/@extended/Breadcrumbs.tsx)に渡すデータを生成する。
+
 ```ts
 const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 ```
 
-### Gridレイアウト
+breadcrumbsPropsは`utils/props`で定義している。
 
-Gridはviewsコンポーネントでしか利用しない（sections以下では利用しない）
+[utils/props](/src/utils/props/)
+
+### レイアウトの設定
+
+DashboardやChartの各カードを配置するレイアウトを定義する。
+
+カードを配置するためのGridはviewsコンポーネントでしか利用しない（sections以下では利用しない）
