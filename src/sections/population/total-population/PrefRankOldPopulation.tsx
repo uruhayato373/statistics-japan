@@ -1,6 +1,7 @@
 import CardsLineSelectPrefecture from 'cards/CardsLineSelectPrefecture'
 import CardsPrefRankChart from 'cards/CardsPrefRankChart'
 import CardsPrefRankTable from 'cards/CardsPrefRankTable'
+
 import { RouterProps } from 'utils/props'
 
 interface Props {
