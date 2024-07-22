@@ -49,12 +49,8 @@ ESTAT_API_APPID=''
 # RESAS APIのAPIキー
 RESAS_API_KEY=''
 
-# PROXY設定　不要な場合はfalse
-USE_PROXY=true
-PROXY_HOST=''
-PROXY_PORT=''
-PROXY_USERNAME=''
-PROXY_PASSWORD=''
+# PROXY設定　必要な場合のみ記載
+HTTP_PROXY='http://{IPアドレス}:{ポート番号}'
 ```
 
 ### パッケージのインストール
