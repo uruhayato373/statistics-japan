@@ -51,6 +51,8 @@ const generateMetaProps = async ({
       break
   }
 
+  const ogImageUrl = `/api/og?prefCode=${encodeURIComponent(prefCode)}&title=${encodeURIComponent(title)}`
+
   return {
     title: `${title} | 統計で見る都道府県`,
     description,
@@ -58,6 +60,18 @@ const generateMetaProps = async ({
     metadataBase: new URL(url),
     alternates: {
       canonical: '/',
+    },
+    openGraph: {
+      title: `${title} | 統計で見る都道府県`,
+      type: 'website',
+      url,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+        },
+      ],
     },
   }
 }

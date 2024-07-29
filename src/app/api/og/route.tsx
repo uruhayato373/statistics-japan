@@ -15,7 +15,6 @@ export async function GET(request: NextRequest) {
    * URLクエリパラメータから都道府県名、都道府県コード、タイトルを取得
    */
   const { searchParams } = new URL(request.url)
-  const prefName = searchParams.get('prefName') ?? '兵庫県'
   const prefCode = searchParams.get('prefCode') ?? '28000'
   const title = searchParams.get('title') ?? '総人口'
 
@@ -47,8 +46,7 @@ export async function GET(request: NextRequest) {
      <rect width="1200" height="630" fill="#f0f0f0" fill-opacity="0.7"/>
     ${svgContent}
     <rect x="10" y="10" width="1180" height="610" fill="none" stroke="#00bfff" stroke-width="20"/>
-    <text x="100" y="200" font-family="Arial" font-size="90" font-weight="bold" fill="#778899" >${prefName}の</text>
-    <text x="100" y="350" font-family="Arial" font-size="90" font-weight="bold" fill="#778899" >${title}</text>
+    <text x="100" y="200" font-family="Arial" font-size="90" font-weight="bold" fill="#778899" >${title}</text>
     <text x="100" y="560" font-family="Arial" font-size="50" fill="#c0c0c0" >statistics-japan.com</text>
   </svg>
   `
