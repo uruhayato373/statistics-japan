@@ -1,4 +1,5 @@
 import CardsDashboardSingle from 'cards/CardsDashboard'
+
 import formatDashboard from 'utils/dashboard'
 import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
@@ -31,7 +32,7 @@ interface Props {
 }
 
 export default async function DashboardTotalArea({ routerProps }: Props) {
-  const document  = await handleEstatAPI(params(routerProps)).fetchDocument()
+  const document = await handleEstatAPI(params(routerProps)).fetchDocument()
 
   const contents = formatDashboard(document).single()
 
