@@ -5,11 +5,23 @@ import { NextRequest } from 'next/server'
 
 import sharp from 'sharp'
 
+/**
+ * 都道府県のSVG画像を取得し、タイトルと共に新しい画像を生成するAPI
+ * @param request - Next.js API Routeのリクエストオブジェクト
+ * @returns PNG形式の画像レスポンス
+ */
 export async function GET(request: NextRequest) {
+  /**
+   * URLクエリパラメータから都道府県名、都道府県コード、タイトルを取得
+   */
   const { searchParams } = new URL(request.url)
-  const prefName = searchParams.get('prefName') ?? 'Default Title'
-  const prefCode = searchParams.get('prefCode') ?? '01000'
+  const prefName = searchParams.get('prefName') ?? '兵庫県'
+  const prefCode = searchParams.get('prefCode') ?? '28000'
+  const title = searchParams.get('title') ?? '総人口'
 
+  /**
+   * 都道府県のSVGファイルを読み込む
+   */
   const svgPath = path.join(
     process.cwd(),
     'public',
@@ -26,12 +38,15 @@ export async function GET(request: NextRequest) {
     return new Response('Error reading SVG file', { status: 500 })
   }
 
+  /**
+   * SVG画像に都道府県名とタイトルを追加してPNG画像を生成
+   */
   const titleSvg = `
   <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
     <rect width="1200" height="630" fill="#f0f0f0"/>
     <rect x="10" y="10" width="1180" height="610" fill="none" stroke="#00bfff" stroke-width="20"/>
     <text x="100" y="200" font-family="Arial" font-size="90" font-weight="bold" fill="#778899" >${prefName}の</text>
-    <text x="100" y="350" font-family="Arial" font-size="90" font-weight="bold" fill="#778899" >総人口</text>
+    <text x="100" y="350" font-family="Arial" font-size="90" font-weight="bold" fill="#778899" >${title}</text>
     <text x="100" y="560" font-family="Arial" font-size="50" fill="#c0c0c0" >statistics-japan.com</text>
     ${svgContent}
   </svg>
