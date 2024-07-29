@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f0f8ff" />
+  <defs>
+    <pattern id="main" viewBox="0 0 5 5" x="0" y="0" width="5" height="5" patternUnits="userSpaceOnUse"
+      patternTransform="scale(0.4)">
+      <rect x="1" y="1" width="5" height="5" fill="rgba(56,141,245,0.8)" />
+    </pattern>
+  </defs>
+  <defs>
+    <pattern id="default" viewBox="0 0 5 5" x="0" y="0" width="5" height="5" patternUnits="userSpaceOnUse"
+      patternTransform="scale(0.2)">
+      <rect x="1" y="1" width="5" height="5" fill="rgba(202,205,209,0.8)" />
+    </pattern>
+  </defs>
+
+  <g transform="translate(350, -200) scale(2.0)">
+    <g class="prefectures">
+      <g class="okinawa kyusyu-okinawa prefecture" data-code="47" stroke-linejoin="round" fill="url(#main)"
+        fill-rule="nonzero" stroke="#ffffff" stroke-width="0.8" transform="translate(52.000000, 193.000000)">
+        <title>沖縄 / Okinawa</title>
+        <polygon points="4 109 6 110 4 111 0 110" />
+        <polygon points="48 121 55 123 51 129 39 124 42 122 44 125 46 118" />
+        <polygon points="132 113 130 110 132 110 130 108 133 105 132 100 135 108 142 114" />
+        <polygon points="225 23 224 28 219 23 223 21" />
+        <polygon points="73 117 77 112 79 113 73 120 72 126 66 127 64 125 67 122 63 119 71 120" />
+        <polygon
+          points="287 20 291 17 286 15 285 8 292 10 292 14 299 13 298 11 307 0 309 5 309 9 305 15 300 15 299 19 293 19 294 21 288 25 281 25 286 34 281 31 276 39 280 41 270 46 270 38 277 32 275 24 280 25" />
+        <polygon points="127 106 126 103 128 104" />
+        <polygon points="279 8 279 6 283 8" />
+        <polygon points="293 11 294 13 292 12" />
+      </g>
+    </g>
+  </g>
+</svg>
