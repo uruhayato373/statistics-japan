@@ -17,7 +17,9 @@ export type MenuType = {
  */
 const handleMenu = () => {
   return {
-    items: (fieldId: string) => filterItems(fieldId),
+    items: (fieldId?: string ) => {
+      return fieldId ? filterItems(fieldId) : items
+    },
     findItem: (menuId: string) => findItem(menuId),
   }
 }

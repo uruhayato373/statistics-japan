@@ -1,37 +1,68 @@
 import { MetadataRoute } from 'next'
 
+import { handleMenu } from 'utils/menu'
+import { handlePage } from 'utils/page'
 import { handlePrefecture } from 'utils/prefecture'
 
+const BASE_URL = 'https://statistics-japan.com'
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://statistics-japan.com'
+  const { items } = handleMenu()
+  const menus = items()
 
   const { fetchItems: fetchPrefecture } = handlePrefecture()
   const prefectures = await fetchPrefecture()
 
-  // 人口・世帯のサイトマップを作成
-  const populationEntries = prefectures.map((prefecture) => ({
-    url: `${baseUrl}/population/total-population/${prefecture.prefCode}`,
+  const japanEntries = menus.map((menu) => ({
+    url: `${BASE_URL}/${menu.fieldId}/${menu.menuId}/japan`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 
-  // 静的なページのエントリ
+  const prefectureRankEntries = menus
+    .map((menu) => {
+      const { items } = handlePage()
+      const pages = items(menu.menuId)
+      return pages.map((page) => ({
+        url: `${BASE_URL}/${menu.fieldId}/${menu.menuId}/prefecture-rank/${page.pageId}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+      }))
+    })
+    .flat()
+
+  const prefectureEntries = menus
+    .map((menu) => {
+      return prefectures.map((prefecture) => ({
+        url: `${BASE_URL}/${menu.fieldId}/${menu.menuId}/prefecture/${prefecture.prefCode}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+      }))
+    })
+    .flat()
+
   const staticEntries: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
+      url: BASE_URL,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1,
     },
     {
-      url: `${baseUrl}/about-site`,
+      url: `${BASE_URL}/about-site`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
   ]
 
-  // 静的エントリと動的エントリを結合
-  return [...staticEntries, ...populationEntries]
+  return [
+    ...staticEntries,
+    ...japanEntries,
+    ...prefectureRankEntries,
+    ...prefectureEntries,
+  ]
 }
