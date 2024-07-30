@@ -42,12 +42,11 @@ export async function GET(request: NextRequest) {
    * SVG画像に都道府県名とタイトルを追加してPNG画像を生成
    */
   const titleSvg = `
-  <?xml version="1.0" encoding="UTF-8"?>
   <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
      <rect width="1200" height="630" fill="#f0f0f0" fill-opacity="0.7"/>
     ${svgContent}
     <rect x="10" y="10" width="1180" height="610" fill="none" stroke="#00bfff" stroke-width="20"/>
-    <text x="100" y="200" font-family="'Noto Sans JP', Arial, sans-serif" font-size="90" font-weight="bold" fill="#778899">${title}</text>
+    <text x="100" y="200" font-family="Arial" font-size="90" font-weight="bold" fill="#778899" >${title}</text>
     <text x="100" y="560" font-family="Arial" font-size="50" fill="#c0c0c0" >statistics-japan.com</text>
   </svg>
   `
