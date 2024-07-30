@@ -51,7 +51,7 @@ const generateMetaProps = async ({
       break
   }
 
-  const ogImageUrl = `/api/og?prefCode=${encodeURIComponent(prefCode)}&title=${encodeURIComponent(title)}`
+  const ogImageUrl = `https://statistics-japan.com/api/og?prefCode=${encodeURIComponent(prefCode)}&title=${encodeURIComponent(title)}`
 
   return {
     title: `${title} | 統計で見る都道府県`,
