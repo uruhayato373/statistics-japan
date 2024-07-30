@@ -71,6 +71,7 @@
     "https-proxy-agent": "^7.0.5",
     "immutability-helper": "^3.1.1",
     "jotai": "^2.8.3",
+    "jsdom": "^24.1.1",
     "lint-staged": "^15.2.7",
     "lodash": "^4.17.21",
     "mapbox-gl": "^3.4.0",
