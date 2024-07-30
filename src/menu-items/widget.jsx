@@ -34,6 +34,13 @@ const widget = {
           url: '/landweather/total-area',
           breadcrumbs: false,
         },
+        {
+          id: 'weather',
+          title: '天候・気象',
+          type: 'item',
+          url: '/landweather/weather',
+          breadcrumbs: false,
+        },
       ],
     },
     {

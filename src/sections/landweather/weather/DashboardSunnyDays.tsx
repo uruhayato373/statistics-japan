@@ -1,6 +1,6 @@
-import CardsApexArea from 'cards/CardsApexArea'
+import CardsDashboardSingle from 'cards/CardsDashboard'
 
-import formatApexcharts from 'utils/apexcharts'
+import formatDashboard from 'utils/dashboard'
 import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
 
@@ -9,19 +9,19 @@ const params = (routerProps: RouterProps) => {
     case 'japan':
       return {
         statsDataId: '0000010102',
-        cdCat01: 'B1101,B1103,B1105',
+        cdCat01: 'B4104',
         cdArea: '00000',
       }
     case 'prefecture':
       return {
         statsDataId: '0000010102',
-        cdCat01: 'B1101,B1103,B1105',
+        cdCat01: 'B4104',
         cdArea: routerProps.prefCode,
       }
     case 'city':
       return {
         statsDataId: '0000020202',
-        cdCat01: 'B1101',
+        cdCat01: 'B4104',
         cdArea: routerProps.cityCode,
       }
   }
@@ -31,10 +31,10 @@ interface Props {
   routerProps: RouterProps
 }
 
-export default async function ApexTotalArea({ routerProps }: Props) {
+export default async function DashboardSunnyDays({ routerProps }: Props) {
   const document = await handleEstatAPI(params(routerProps)).fetchDocument()
 
-  const contents = formatApexcharts(document).timeChart()
+  const contents = formatDashboard(document).single()
 
-  return <CardsApexArea title={'総面積の推移'} contents={contents} />
+  return <CardsDashboardSingle title={'快晴日数'} contents={contents} />
 }

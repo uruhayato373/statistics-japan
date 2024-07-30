@@ -5,6 +5,16 @@
     "menuId": "total-area"
   },
   {
+    "pageId": "rainy-days",
+    "pageTitle": "降水日数",
+    "menuId": "weather"
+  },
+  {
+    "pageId": "sunny-days",
+    "pageTitle": "快晴日数",
+    "menuId": "weather"
+  },
+  {
     "pageId": "total-population",
     "pageTitle": "総人口",
     "menuId": "total-population"
