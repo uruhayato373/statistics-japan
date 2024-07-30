@@ -1,11 +1,5 @@
-import Box from '@mui/material/Box'
-import Stack from '@mui/material/Stack'
+import CardsApexPyramid from 'cards/CardsApexPyramid'
 
-import ApexPyramidChart from 'components/apexcharts/ApexPyramidChart'
-import MainCard from 'components/MainCard'
-
-import formatApexcharts from 'utils/apexcharts'
-import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
 
 const categories = [
@@ -65,16 +59,7 @@ interface Props {
 }
 
 export default async function ApexPopulationPyramid({ routerProps }: Props) {
-  const document = await handleEstatAPI(params(routerProps)).fetchDocument()
-  const contents = formatApexcharts(document).PyramidChart('2022')
-
   return (
-    <MainCard content={false} title={'人口ピラミッド'}>
-      <Stack>
-        <Box sx={{ pt: 1, pr: 2 }}>
-          <ApexPyramidChart contents={contents} />
-        </Box>
-      </Stack>
-    </MainCard>
+    <CardsApexPyramid title={'人口ピラミッド'} params={params(routerProps)} />
   )
 }

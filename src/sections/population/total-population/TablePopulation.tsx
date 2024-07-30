@@ -1,5 +1,3 @@
-import MainCard from 'components/MainCard'
-
 import CardsTimeTable from 'cards/CardsTimeTable'
 
 import handleEstatAPI from 'utils/e-stat'
@@ -40,13 +38,5 @@ export default async function TablePopulation({ routerProps }: Props) {
 
   const contents = formatTable(document).reactTable()
 
-  return (
-    <MainCard
-      content={false}
-      title={'総人口のデータ'}
-      // secondary={<CSVExport {...{ data, headers, filename: 'dense.csv' }} />}
-    >
-      <CardsTimeTable contents={contents} />
-    </MainCard>
-  )
+  return <CardsTimeTable title={'総人口のデータ'} contents={contents} />
 }

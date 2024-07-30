@@ -5,6 +5,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/@extended/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import DashboardForestLandArea from 'sections/landweather/total-area/DashboardForestLandArea'
+import DashboardHabitableArea from 'sections/landweather/total-area/DashboardHabitableArea'
 import DashboardTotalArea from 'sections/landweather/total-area/DashboardTotalArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -24,6 +26,12 @@ export default async function TotalAreaPrecture({ routerProps }: Props) {
           {/* row 1 */}
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <DashboardTotalArea routerProps={routerProps} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
+            <DashboardHabitableArea routerProps={routerProps} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
+            <DashboardForestLandArea routerProps={routerProps} />
           </Grid>
         </Grid>
       </Suspense>
