@@ -6,6 +6,9 @@ import { handlePrefecture } from 'utils/prefecture'
 
 const BASE_URL = 'https://statistics-japan.com'
 
+/**
+ * サイトマップを生成する非同期関数
+ */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { items } = handleMenu()
   const menus = items()
@@ -13,6 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { fetchItems: fetchPrefecture } = handlePrefecture()
   const prefectures = await fetchPrefecture()
 
+  // 日本の統計
   const japanEntries = menus.map((menu) => ({
     url: `${BASE_URL}/${menu.fieldId}/${menu.menuId}/japan`,
     lastModified: new Date(),
@@ -20,6 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }))
 
+  // 都道府県別ランキング
   const prefectureRankEntries = menus
     .map((menu) => {
       const { items } = handlePage()
@@ -33,6 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
     .flat()
 
+  // 都道府県の統計
   const prefectureEntries = menus
     .map((menu) => {
       return prefectures.map((prefecture) => ({
@@ -44,6 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
     .flat()
 
+  // 静的なエントリー
   const staticEntries: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
