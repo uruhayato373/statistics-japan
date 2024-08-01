@@ -10,6 +10,7 @@ import ApexTotalArea from 'sections/landweather/total-area/ApexTotalArea'
 import DashboardForestLandArea from 'sections/landweather/total-area/DashboardForestLandArea'
 import DashboardHabitableArea from 'sections/landweather/total-area/DashboardHabitableArea'
 import DashboardTotalArea from 'sections/landweather/total-area/DashboardTotalArea'
+import TableParks from 'sections/landweather/total-area/TableParks'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -41,6 +42,9 @@ export default async function TotalAreaPrecture({ routerProps }: Props) {
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={4}>
             <ApexPie routerProps={routerProps} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={6}>
+            <TableParks routerProps={routerProps} />
           </Grid>
         </Grid>
       </Suspense>
