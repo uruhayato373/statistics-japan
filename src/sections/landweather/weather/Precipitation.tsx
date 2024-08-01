@@ -4,6 +4,14 @@ import formatApexcharts from 'utils/apexcharts'
 import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
 
+interface Props {
+  routerProps: RouterProps
+}
+
+/**
+ * e-Stat APIのパラメータを生成する
+ * @returns e-Stat APIのパラメータ
+ */
 const params = (routerProps: RouterProps) => {
   switch (routerProps.kindId) {
     case 'japan':
@@ -21,24 +29,24 @@ const params = (routerProps: RouterProps) => {
   }
 }
 
-interface Props {
-  routerProps: RouterProps
-}
-
+/**
+ * カスタムチャートオプション
+ */
 const customOptions = {
   yaxis: [
     {
       title: {
-        text: 'Website Blog',
+        text: '降水日数',
       },
     },
     {
       opposite: true,
       title: {
-        text: 'Social Media',
+        text: '降水量',
       },
     },
   ],
+  colors: ['#66cdaa', '#1e90ff'],
 }
 
 export default async function Precipitation({ routerProps }: Props) {
@@ -46,6 +54,7 @@ export default async function Precipitation({ routerProps }: Props) {
 
   const contents = formatApexcharts(document).timeChart()
 
+  // 降水日数のグラフを棒グラフに変更
   contents.series[1].type = 'column'
 
   return (

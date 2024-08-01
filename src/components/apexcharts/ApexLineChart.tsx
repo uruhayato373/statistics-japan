@@ -65,6 +65,14 @@ const defaultOptions: ApexOptions = {
 export default function ApexLineChart({ contents, customOptions }: Props) {
   const { series, categories } = contents
 
+  const formatYAxisLabels = (axis: ApexYAxis): ApexYAxis => ({
+    ...axis,
+    labels: {
+      ...axis.labels,
+      formatter: (value) => Math.round(value).toLocaleString('ja-JP'),
+    },
+  })
+
   const options: ApexOptions = {
     ...defaultOptions,
     ...customOptions,
@@ -74,6 +82,11 @@ export default function ApexLineChart({ contents, customOptions }: Props) {
       ...customOptions?.xaxis,
       categories: categories,
     },
+    yaxis: Array.isArray(customOptions?.yaxis)
+      ? customOptions.yaxis.map(formatYAxisLabels)
+      : customOptions?.yaxis
+        ? formatYAxisLabels(customOptions.yaxis)
+        : defaultOptions.yaxis,
   }
 
   return (

@@ -24,6 +24,7 @@ const formatCategories = (response: EStatResponseType): CategoryType[] => {
     return categories.map((c) => ({
       categoryCode: c['@code'],
       categoryName: c['@name'].replace(`${c['@code']}_`, ''),
+      categoryUnit: c['@unit'],
     }))
   } else if (typeof categories === 'object' && categories !== null) {
     // オブジェクトの場合は配列に変換して返す

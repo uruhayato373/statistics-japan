@@ -4,15 +4,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
 import formatTable from 'utils/table'
 
-const categories = [
-  'B4104',
-  'B4105',
-  'B4106',
-  'B4107',
-  'B4108',
-  'B4109',
-  'B4110',
-]
+const categories = ['B4106', 'B4109', 'B4108']
 
 const params = (routerProps: RouterProps) => {
   switch (routerProps.kindId) {
@@ -40,5 +32,7 @@ export default async function TableDays({ routerProps }: Props) {
 
   const contents = formatTable(document).reactTable()
 
-  return <CardsTimeTable title={'気温・湿度のデータ'} contents={contents} />
+  return (
+    <CardsTimeTable title={'降水量・日照時間のデータ'} contents={contents} />
+  )
 }

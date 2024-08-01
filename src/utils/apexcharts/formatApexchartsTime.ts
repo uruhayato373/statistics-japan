@@ -27,7 +27,7 @@ const formatApexchartsTime = (
             .filter((f) => f.categoryCode === c.categoryCode)
             .sort((a, b) => a.timeCode.localeCompare(b.timeCode))
             .map((d) => d.value),
-          unit: values[0].unit,
+          unit: c.categoryUnit,
         }
       }),
     }
