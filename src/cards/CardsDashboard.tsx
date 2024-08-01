@@ -46,6 +46,9 @@ export default function CardsDashboardSingle({
   // titleの指定がない場合はnameをtitleにする
   const cardTitle = title ? title : name
 
+  // console.log('difference', difference)
+  // console.log('rate', rate)
+
   // 減少の場合はwarning、増加の場合はprimary
   const color = parseFloat(difference) < 0 ? 'warning' : 'primary'
 

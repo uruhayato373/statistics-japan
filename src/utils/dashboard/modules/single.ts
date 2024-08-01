@@ -28,7 +28,6 @@ const roundToDigit = (value: number, digit: number): number => {
 const formatDashboardSingle = ({
   categories,
   values,
-  times,
   digit = 0,
 }: Args): DashboardSingleContentsType => {
   if (categories.length !== 1) {
@@ -37,21 +36,11 @@ const formatDashboardSingle = ({
     )
   }
 
-  const sortedTimes = times.sort((a, b) => b.timeCode.localeCompare(a.timeCode))
-  const [latestTime, previousTime] = sortedTimes
+  const sorterValues = values
+    .filter((f) => !Number.isNaN(f.value))
+    .sort((a, b) => b.timeCode.localeCompare(a.timeCode))
 
-  if (!previousTime) {
-    throw new Error('最新の2年分のデータが見つかりません。')
-  }
-
-  const findValue = (timeCode: string) =>
-    values.find((v) => v.timeCode === timeCode) ||
-    (() => {
-      throw new Error(`年次コード ${timeCode} に対応する値が見つかりません。`)
-    })()
-
-  const curValue = findValue(latestTime.timeCode)
-  const preValue = findValue(previousTime.timeCode)
+  const [curValue, preValue] = sorterValues
 
   const difference = roundToDigit(curValue.value - preValue.value, digit)
 

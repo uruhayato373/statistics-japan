@@ -34,7 +34,9 @@ interface Props {
 export default async function DashboardMaxTemp({ routerProps }: Props) {
   const document = await handleEstatAPI(params(routerProps)).fetchDocument()
 
-  const contents = formatDashboard(document).single()
+  const contents = formatDashboard(document).single({ digit: 1 })
 
-  return <CardsDashboardSingle title={'最高気温'} contents={contents} />
+  return (
+    <CardsDashboardSingle title={'最高気温'} contents={contents} digit={1} />
+  )
 }

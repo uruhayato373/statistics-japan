@@ -34,7 +34,13 @@ interface Props {
 export default async function DashboardAveHum({ routerProps }: Props) {
   const document = await handleEstatAPI(params(routerProps)).fetchDocument()
 
-  const contents = formatDashboard(document).single()
+  const contents = formatDashboard(document).single({ digit: 1 })
 
-  return <CardsDashboardSingle title={'年平均相対湿度'} contents={contents} />
+  return (
+    <CardsDashboardSingle
+      title={'年平均相対湿度'}
+      contents={contents}
+      digit={1}
+    />
+  )
 }
