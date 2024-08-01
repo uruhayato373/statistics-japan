@@ -5,6 +5,7 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/@extended/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import ApexPie from 'sections/landweather/total-area/ApexPie'
 import ApexTotalArea from 'sections/landweather/total-area/ApexTotalArea'
 import DashboardForestLandArea from 'sections/landweather/total-area/DashboardForestLandArea'
 import DashboardHabitableArea from 'sections/landweather/total-area/DashboardHabitableArea'
@@ -37,6 +38,9 @@ export default async function TotalAreaPrecture({ routerProps }: Props) {
           {/* row 2 */}
           <Grid item xs={12} sm={6} md={4} lg={8}>
             <ApexTotalArea routerProps={routerProps} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={4}>
+            <ApexPie routerProps={routerProps} />
           </Grid>
         </Grid>
       </Suspense>

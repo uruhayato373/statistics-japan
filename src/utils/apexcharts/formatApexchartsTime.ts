@@ -6,13 +6,14 @@ export type ApexChartTimeContentsType = {
     name: string
     data: number[]
     unit: string
+    type?: string
   }[]
 }
 
 const formatApexchartsTime = (
   document: DocumentType,
   group: 'category' | 'area' = 'category'
-) => {
+): ApexChartTimeContentsType => {
   if (group === 'category') {
     const { categories, times, values } = document
     return {

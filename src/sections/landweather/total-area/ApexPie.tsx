@@ -1,4 +1,4 @@
-import CardsApexArea from 'cards/CardsApexArea'
+import CardsApexPie from 'cards/CardsApexPie'
 
 import formatApexcharts from 'utils/apexcharts'
 import handleEstatAPI from 'utils/e-stat'
@@ -9,13 +9,13 @@ const params = (routerProps: RouterProps) => {
     case 'japan':
       return {
         statsDataId: '0000010102',
-        cdCat01: ['B1101', 'B1103'],
+        cdCat01: ['B1103', 'B1105'],
         cdArea: '00000',
       }
     case 'prefecture':
       return {
         statsDataId: '0000010102',
-        cdCat01: ['B1101', 'B1103'],
+        cdCat01: ['B1103', 'B1105'],
         cdArea: routerProps.prefCode,
       }
     case 'city':
@@ -31,10 +31,10 @@ interface Props {
   routerProps: RouterProps
 }
 
-export default async function ApexTotalArea({ routerProps }: Props) {
+export default async function ApexPie({ routerProps }: Props) {
   const document = await handleEstatAPI(params(routerProps)).fetchDocument()
 
-  const contents = formatApexcharts(document).timeChart()
+  const contents = formatApexcharts(document).PieChart('2000')
 
-  return <CardsApexArea title={'総面積の推移'} contents={contents} />
+  return <CardsApexPie title={'可住地面積の割合'} contents={contents} />
 }

@@ -15,6 +15,21 @@
     "menuId": "weather"
   },
   {
+    "pageId": "maximum-temperature",
+    "pageTitle": "最高気温",
+    "menuId": "climate"
+  },
+  {
+    "pageId": "minimum-temperature",
+    "pageTitle": "最低気温",
+    "menuId": "climate"
+  },
+  {
+    "pageId": "average-temperature",
+    "pageTitle": "年平均気温",
+    "menuId": "climate"
+  },
+  {
     "pageId": "total-population",
     "pageTitle": "総人口",
     "menuId": "total-population"

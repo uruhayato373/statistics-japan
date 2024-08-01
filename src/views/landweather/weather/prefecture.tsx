@@ -5,12 +5,18 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/@extended/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import DashboardAveHum from 'sections/landweather/weather/DashboardAveHum'
+import DashboardAveTemp from 'sections/landweather/weather/DashboardAveTemp'
 import DashboardCloudyDays from 'sections/landweather/weather/DashboardCloudyDays'
+import DashboardMaxTemp from 'sections/landweather/weather/DashboardMaxTemp'
+import DashboardMinTemp from 'sections/landweather/weather/DashboardMinTemp'
 import DashboardPrecipitation from 'sections/landweather/weather/DashboardPrecipitation'
 import DashboardRainyDays from 'sections/landweather/weather/DashboardRainyDays'
 import DashboardSnowDays from 'sections/landweather/weather/DashboardSnowDays'
 import DashboardSunnyDays from 'sections/landweather/weather/DashboardSunnyDays'
 import DashboardSunshineHours from 'sections/landweather/weather/DashboardSunshineHours'
+import Precipitation from 'sections/landweather/weather/Precipitation'
+import Templatures from 'sections/landweather/weather/Templatures'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -44,6 +50,24 @@ export default async function WeatherPrecture({ routerProps }: Props) {
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <DashboardSunshineHours routerProps={routerProps} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
+            <DashboardMaxTemp routerProps={routerProps} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
+            <DashboardMinTemp routerProps={routerProps} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
+            <DashboardAveTemp routerProps={routerProps} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3}>
+            <DashboardAveHum routerProps={routerProps} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={6}>
+            <Templatures routerProps={routerProps} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={6}>
+            <Precipitation routerProps={routerProps} />
           </Grid>
         </Grid>
       </Suspense>

@@ -1,71 +1,78 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
 'use client'
 
+import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
 import { ApexChartTimeContentsType } from 'utils/apexcharts'
 
 interface Props {
   contents: ApexChartTimeContentsType
+  customOptions?: ApexOptions
 }
 
-export default function ApexLineChart({ contents }: Props) {
-  const { series, categories } = contents
-
-  // chart options
-  const options = {
-    chart: {
-      height: 350,
-      type: 'line',
-      zoom: {
-        enabled: false,
-      },
-    },
-    dataLabels: {
+const defaultOptions: ApexOptions = {
+  chart: {
+    height: 350,
+    type: 'line',
+    zoom: {
       enabled: false,
     },
-    stroke: {
-      curve: 'straight',
-      width: 3,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    curve: 'straight',
+    width: 3,
+  },
+  grid: {
+    row: {
+      colors: ['#f3f3f3', 'transparent'],
+      opacity: 0.5,
     },
-    grid: {
-      row: {
-        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-        opacity: 0.5,
+  },
+  xaxis: {
+    labels: {
+      show: false,
+    },
+  },
+  yaxis: {
+    labels: {
+      formatter: function (value) {
+        if (typeof value === 'number') {
+          return value.toLocaleString('ja-JP', { maximumFractionDigits: 0 })
+        }
+        return value
+      },
+      style: {
+        fontSize: '12px',
+        fontFamily: 'Helvetica, Arial, sans-serif',
       },
     },
+  },
+  tooltip: {
+    shared: true,
+    intersect: false,
+    y: {
+      formatter: function (value, { seriesIndex, w }) {
+        const unit = w.config.series[seriesIndex].unit || ''
+        return `${value.toLocaleString('ja-JP', { maximumFractionDigits: 0 })} ${unit}`
+      },
+    },
+  },
+}
+
+export default function ApexLineChart({ contents, customOptions }: Props) {
+  const { series, categories } = contents
+
+  const options: ApexOptions = {
+    ...defaultOptions,
+    ...customOptions,
+    // xaxisカテゴリーを確実に保持
     xaxis: {
+      ...defaultOptions.xaxis,
+      ...customOptions?.xaxis,
       categories: categories,
-      labels: {
-        show: false, // x軸のラベルを非表示にする
-      },
-    },
-    yaxis: {
-      labels: {
-        formatter: function (value) {
-          // 値が数値であることを確認
-          if (typeof value === 'number') {
-            return value.toLocaleString('ja-JP', { maximumFractionDigits: 0 })
-          }
-          // 数値でない場合は元の値をそのまま返す
-          return value
-        },
-        style: {
-          fontSize: '12px',
-          fontFamily: 'Helvetica, Arial, sans-serif',
-        },
-      },
-    },
-    tooltip: {
-      shared: true,
-      intersect: false,
-      y: {
-        formatter: function (value, { seriesIndex, w }) {
-          const unit = w.config.series[seriesIndex].unit || ''
-          return `${value.toLocaleString('ja-JP', { maximumFractionDigits: 0 })} ${unit}`
-        },
-      },
     },
   }
 
