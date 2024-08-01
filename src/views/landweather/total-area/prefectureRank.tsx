@@ -9,6 +9,7 @@ import MainCard from 'components/MainCard'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 import TabPage from 'components/TabPage'
 
+import PrefRankHabitableArea from 'sections/landweather/total-area/PrefRankHabitableArea'
 import PrefRankTotalArea from 'sections/landweather/total-area/PrefRankTotalArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -28,6 +29,8 @@ async function getComponents(routerProps: RouterProps) {
   switch (routerProps.pageId) {
     case 'total-area':
       return PrefRankTotalArea({ routerProps })
+    case 'habitable-area':
+      return PrefRankHabitableArea({ routerProps })
     default:
       throw new Error('Invalid pageId')
   }
