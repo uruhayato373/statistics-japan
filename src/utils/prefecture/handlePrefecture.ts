@@ -1,5 +1,6 @@
 /**
  * 都道府県データを管理するモジュール
+ * @module handlePrefecture
  */
 
 import regionsData from 'utils/prefecture/regions.json'
@@ -7,6 +8,7 @@ import handleResasAPI from 'utils/resas'
 
 /**
  * RESAS APIから取得する都道府県データの型
+ * @interface ResasPrefectureType
  */
 export interface ResasPrefectureType {
   /** 都道府県コード */
@@ -17,6 +19,7 @@ export interface ResasPrefectureType {
 
 /**
  * アプリケーション内で使用する都道府県データの型
+ * @interface PrefectureType
  * @remarks 都道府県コードは5桁の文字列として扱う
  */
 export interface PrefectureType {
@@ -28,6 +31,7 @@ export interface PrefectureType {
 
 /**
  * 地方と所属する都道府県のデータ型
+ * @interface RegionPrefectureType
  */
 export interface RegionPrefectureType {
   /** 地方名 */
@@ -38,7 +42,7 @@ export interface RegionPrefectureType {
 
 /**
  * 都道府県データを操作するための関数群を提供する
- * @returns 都道府県データ操作用の関数オブジェクト
+ * @returns {Object} 都道府県データ操作用の関数オブジェクト
  */
 const handlePrefecture = () => {
   return {
@@ -52,7 +56,9 @@ export default handlePrefecture
 
 /**
  * RESAS APIから都道府県データを取得し、アプリケーション用に整形する
- * @returns 整形された都道府県データの配列
+ * @async
+ * @returns {Promise<PrefectureType[]>} 整形された都道府県データの配列
+ * @throws {Error} データ取得中にエラーが発生した場合
  */
 const fetchItems = async (): Promise<PrefectureType[]> => {
   try {
@@ -61,6 +67,7 @@ const fetchItems = async (): Promise<PrefectureType[]> => {
 
     const prefectures = await fetchAPI()
 
+    // APIから取得したデータを内部形式に変換
     return prefectures.map((d) => ({
       prefCode: String(d.prefCode).padStart(2, '0') + '000',
       prefName: d.prefName,
@@ -73,8 +80,10 @@ const fetchItems = async (): Promise<PrefectureType[]> => {
 
 /**
  * 指定された都道府県コードに一致する都道府県データを検索する
- * @param prefCode - 検索対象の都道府県コード
- * @returns 一致する都道府県データ、または undefined
+ * @async
+ * @param {string} prefCode - 検索対象の都道府県コード
+ * @returns {Promise<PrefectureType | undefined>} 一致する都道府県データ、または undefined
+ * @throws {Error} 検索中にエラーが発生した場合
  */
 const findItem = async (
   prefCode: string
@@ -87,15 +96,19 @@ const findItem = async (
     throw error
   }
 }
+
 /**
  * 地方ごとの都道府県データを取得する
- * @returns 地方ごとの都道府県データの配列
+ * @async
+ * @returns {Promise<RegionPrefectureType[]>} 地方ごとの都道府県データの配列
+ * @throws {Error} データ取得中にエラーが発生した場合
  */
 const fetchRegions = async (): Promise<RegionPrefectureType[]> => {
   try {
     const prefectures = await fetchItems()
     const prefectureMap = new Map(prefectures.map((p) => [p.prefName, p]))
 
+    // regionsDataを基に、各地方の都道府県データを構築
     return regionsData.map((region) => ({
       name: region.name,
       prefectures: region.prefectures
