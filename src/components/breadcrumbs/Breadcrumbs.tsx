@@ -31,7 +31,6 @@ type Props = {
   card?: boolean
   custom?: boolean
   divider?: boolean
-  // heading?: string
   icon?: boolean
   icons?: boolean
   maxItems?: number
@@ -48,7 +47,6 @@ function Breadcrumbs({
   card = false,
   custom = false,
   divider = false,
-  // heading,
   icon,
   icons,
   maxItems,

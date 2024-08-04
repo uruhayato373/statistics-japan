@@ -21,7 +21,7 @@ menuIdごとに、次の４つのコンポーネントを作成する。
 
 ### breadcrumbsPropsの生成
 
-[Breadcrumbs](/src/components/@extended/Breadcrumbs.tsx)に渡すデータを生成する。
+[Breadcrumbs](/src/components/breadcrumbs/Breadcrumbs.tsx)に渡すデータを生成する。
 
 ```ts
 const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()

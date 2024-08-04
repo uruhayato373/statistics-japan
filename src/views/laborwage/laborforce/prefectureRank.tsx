@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 
-import Breadcrumbs from 'components/@extended/Breadcrumbs'
+import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CheckPrefectures from 'components/CheckPrefectures'
 import MainCard from 'components/MainCard'
 import CircularProgressViews from 'components/progress/CircularProgressViews'

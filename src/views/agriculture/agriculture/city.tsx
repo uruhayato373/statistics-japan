@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 import Grid from '@mui/material/Grid'
 
-import Breadcrumbs from 'components/@extended/Breadcrumbs'
+import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardAgriculturalOutput from 'sections/agriculture/agriculture/DashboardAgriculturalOutput'

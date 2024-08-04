@@ -9,7 +9,7 @@ import Container from '@mui/material/Container'
 import Toolbar from '@mui/material/Toolbar'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
-import Breadcrumbs from 'components/@extended/Breadcrumbs'
+import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import Loader from 'components/Loader'
 
 import PropTypes from 'prop-types'
