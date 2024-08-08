@@ -10,8 +10,11 @@ import handleProps from 'utils/props'
 import Error404 from 'views/maintenance/404'
 
 const Japan = dynamic(() => import('views/landweather/total-area/japan'))
-const PrefectureRank = dynamic(
-  () => import('views/landweather/total-area/prefectureRank')
+const PrefRankTotalArea = dynamic(
+  () => import('views/landweather/total-area/prefRankTotalArea')
+)
+const PrefRankHabitableArea = dynamic(
+  () => import('views/landweather/total-area/prefRankHabitableArea')
 )
 const Prefecture = dynamic(
   () => import('views/landweather/total-area/prefecture')
@@ -82,8 +85,19 @@ const Page = ({ params }) => {
       props = { routerProps }
       break
     case 'prefecture-rank':
-      Component = PrefectureRank
-      props = { routerProps }
+      switch (pageId) {
+        case 'total-area':
+          Component = PrefRankTotalArea
+          props = { routerProps }
+          break
+        case 'habitable-area':
+          Component = PrefRankHabitableArea
+          props = { routerProps }
+          break
+        default:
+          Component = PrefRankTotalArea
+          props = { routerProps }
+      }
       break
     case 'prefecture':
       Component = Prefecture

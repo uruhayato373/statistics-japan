@@ -95,6 +95,15 @@ export default function useURL() {
   }
 
   /**
+   * 都道府県を変更した場合のURLを生成
+   */
+  const changePageURL = (newId: string): string => {
+    const { fieldId, menuId } = currentRouterProps
+
+    return `/${fieldId}/${menuId}/prefecture-rank/${newId}`
+  }
+
+  /**
    * 市区町村を変更した場合のURLを生成
    */
   const changeCityURL = (newCode: string): string => {
@@ -108,5 +117,6 @@ export default function useURL() {
     changePrefURL,
     changeCityURL,
     currentKindURL,
+    changePageURL,
   }
 }

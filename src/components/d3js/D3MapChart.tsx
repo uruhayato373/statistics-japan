@@ -153,6 +153,7 @@ export default function D3MapChart({ contents, geoShape }: Props) {
 
       svg.call(zoom)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [document, zoomLevel, geoShape, dimensions, series])
 
   return (

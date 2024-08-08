@@ -16,6 +16,7 @@ import Typography from '@mui/material/Typography'
 import BreadcrumbsCity from 'components/breadcrumbs/BreadcrumbsCity'
 import BreadcrumbsField from 'components/breadcrumbs/BreadcrumbsField'
 import BreadcrumbsMenu from 'components/breadcrumbs/BreadcrumbsMenu'
+import BreadcrumbsPage from 'components/breadcrumbs/BreadcrumbsPage'
 import BreadcrumbsPrefecture from 'components/breadcrumbs/BreadcrumbsPrefecture'
 import MainCard from 'components/MainCard'
 
@@ -40,7 +41,6 @@ type Props = {
   title?: boolean
   titleBottom?: boolean
   sx?: unknown
-  others?: unknown
 }
 
 function Breadcrumbs({
@@ -56,7 +56,6 @@ function Breadcrumbs({
   title = true,
   titleBottom = true,
   sx,
-  ...others
 }: Props) {
   const theme = useTheme()
   const location = usePathname()
@@ -158,7 +157,6 @@ function Breadcrumbs({
             ? { mb: 3, bgcolor: 'inherit', backgroundImage: 'none', ...sx }
             : { mb: 3, ...sx }
         }
-        {...others}
         content={card}
         shadow="none"
       >
@@ -279,6 +277,12 @@ function Breadcrumbs({
             menus={breadcrumbsProps.menus}
             currentMenu={breadcrumbsProps.currentMenu}
           />
+          {kindId === 'prefecture-rank' && (
+            <BreadcrumbsPage
+              pages={breadcrumbsProps.pages}
+              currentPage={breadcrumbsProps.currentPage}
+            />
+          )}
           {(kindId === 'prefecture' || kindId === 'city') && (
             <BreadcrumbsPrefecture
               prefectures={breadcrumbsProps.prefectures}
@@ -304,7 +308,7 @@ function Breadcrumbs({
               ? { mb: 3, bgcolor: 'inherit', backgroundImage: 'none', ...sx }
               : { mb: 3, ...sx }
           }
-          {...others}
+          // {...others}
           content={card}
           shadow="none"
         >

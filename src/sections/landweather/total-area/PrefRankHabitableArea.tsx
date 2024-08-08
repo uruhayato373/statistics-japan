@@ -1,24 +1,22 @@
+import CardsApexScatter from 'cards/CardsApexScatter'
 import CardsLineSelectPrefecture from 'cards/CardsLineSelectPrefecture'
 import CardsPrefRankChart from 'cards/CardsPrefRankChart'
 import CardsPrefRankTable from 'cards/CardsPrefRankTable'
 
-import { RouterProps } from 'utils/props'
-
-interface Props {
-  routerProps: RouterProps
+/**
+ * 可住地面積
+ */
+const habitableArea = {
+  statsDataId: '0000010102',
+  cdCat01: 'B1103',
 }
 
 /**
- * e-Stat APIのパラメータを生成する関数
+ * 総面積
  */
-const params = (routerProps: RouterProps) => {
-  switch (routerProps.kindId) {
-    case 'prefecture-rank':
-      return {
-        statsDataId: '0000010102',
-        cdCat01: 'B1103',
-      }
-  }
+const totalArea = {
+  statsDataId: '0000010102',
+  cdCat01: 'B1101',
 }
 
 /**
@@ -28,21 +26,30 @@ const params = (routerProps: RouterProps) => {
  * routerPropsに応じて取得したparamsを元に、コンポーネントを返却する。
  * Gridレイアウトは親コンポーネントで設定する。
  */
-export default async function PrefRankHabitableArea({ routerProps }: Props) {
+export default async function PrefRankHabitableArea() {
   return {
     /**
      * 都道府県ランキングのChart
      */
-    chart: <CardsPrefRankChart params={params(routerProps)} />,
+    chart: <CardsPrefRankChart params={habitableArea} />,
     /**
      * 都道府県ランキングのTable
      */
-    table: <CardsPrefRankTable params={params(routerProps)} />,
+    table: <CardsPrefRankTable params={habitableArea} />,
     /**
      * 選択した都道府県のLineChart
      */
-    selectPrefecture: (
-      <CardsLineSelectPrefecture params={params(routerProps)} />
+    selectPrefecture: <CardsLineSelectPrefecture params={habitableArea} />,
+    /**
+     * 可住地面積と総面積の散布図
+     */
+    scatterTotalArea: (
+      <CardsApexScatter
+        title={'可住地面積と総面積の相関関係'}
+        xparams={totalArea}
+        yparams={habitableArea}
+        excludedAreaCode={['01000']}
+      />
     ),
   }
 }
