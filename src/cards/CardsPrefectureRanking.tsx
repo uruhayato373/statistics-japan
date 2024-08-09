@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
-'use client'
 import { Suspense } from 'react'
 
 import Box from '@mui/material/Box'
@@ -12,62 +9,26 @@ import CircularProgressCards from 'components/CircularProgressCards'
 import D3MapChart from 'components/d3js/D3MapChart'
 import MainCard from 'components/MainCard'
 
-import { time } from 'atoms'
-import useEstatAPI from 'hooks/useEstatAPI'
-import useGeoshape from 'hooks/useGeoshape'
 import formatD3charts from 'utils/d3charts'
-import { EstatParamsType, TimeType } from 'utils/e-stat'
-
-import { useAtom } from 'jotai'
+import { DocumentType, TimeType } from 'utils/e-stat'
 
 interface Props {
-  params: EstatParamsType
+  document: DocumentType
   SelectTimeComponent: React.ComponentType<{ times: TimeType[] }>
   times: TimeType[]
-}
-
-/**
- * e-Stat APIから取得したデータをD3 Map Chartで表示するコンポーネント
- *
- * @description
- * Suspenseの影響範囲を限定するため、データ取得と描画を担う部分だけ分離している。
- */
-function MapChartContent({ params }: { params: EstatParamsType }) {
-  /**
-   * 選択中の年次はJotaiを使用して管理
-   */
-  const [selectedTime] = useAtom(time)
-
-  /**
-   * e-Stat APIからデータを取得（selectedTimeが変更されるたびに再取得）
-   */
-  const { document } = useEstatAPI({
-    ...params,
-    cdTime: `${selectedTime.timeCode}100000`,
-  })
-
-  /**
-   * geoShapeリポジトリからTopojsonデータを取得（一度だけ取得）
-   */
-  const { geoShape } = useGeoshape('prefecture')
-
-  /**
-   * D3 Map Chartのコンテンツを整形
-   */
-  const contents = formatD3charts(document).mapChart()
-
-  return <D3MapChart contents={contents} geoShape={geoShape} />
 }
 
 /**
  * 都道府県ランキングのコロプレス地図を表示するコンポーネント
  *
  */
-export default function CardsPrefRankChart({
-  params,
+export default function CardsPrefectureRanking({
+  // title,
+  document,
   SelectTimeComponent,
   times,
 }: Props) {
+  const mapChartContents = formatD3charts(document).mapChart()
   return (
     <MainCard sx={{ mt: 1 }} content={false}>
       <Box sx={{ p: 2, pb: 0, height: '600px' }}>
@@ -84,7 +45,7 @@ export default function CardsPrefRankChart({
         </Stack>
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
         <Suspense fallback={<CircularProgressCards />}>
-          <MapChartContent params={params} />
+          <D3MapChart contents={mapChartContents} />
         </Suspense>
         <Box sx={{ pt: 2.25 }}>
           <Typography variant="caption" color="text.secondary">

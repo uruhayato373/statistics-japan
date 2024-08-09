@@ -14,12 +14,19 @@ import Error500 from 'views/maintenance/500'
 
 interface Props {
   routerProps: RouterProps
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function prefRankTotalArea({ routerProps }: Props) {
+export default async function prefRankTotalArea({
+  routerProps,
+  searchParams,
+}: Props) {
+
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const { chart, table, selectPrefecture } = await PrefRankTotalArea()
+    const { chart, table, selectPrefecture } = await PrefRankTotalArea({
+      searchParams,
+    })
 
     return (
       <Suspense fallback={<CircularProgressViews />}>

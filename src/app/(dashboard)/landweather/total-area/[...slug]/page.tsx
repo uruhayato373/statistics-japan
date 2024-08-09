@@ -51,19 +51,8 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   return metaProps()
 }
 
-/**
- * ページコンポーネント
- *
- * @description
- * URLのスラッグに基づいて、viewsコンポーネントのいずれかを動的にロードして表示する。
- * - 日本の統計
- * - 都道府県ランキング
- * - 都道府県の統計
- * - 市区町村の統計
- * 該当するルートがない場合は404エラーページを表示する。
- *
- */
-const Page = ({ params }) => {
+const Page = ({ params, searchParams }) => {
+
   const [kindId, prefCodeOrPageId, cityCode] = params.slug
 
   const {
@@ -91,7 +80,7 @@ const Page = ({ params }) => {
       switch (pageId) {
         case 'total-area':
           Component = PrefRankTotalArea
-          props = { routerProps }
+          props = { routerProps, searchParams }
           break
         case 'habitable-area':
           Component = PrefRankHabitableArea

@@ -18,7 +18,7 @@ interface Props {
   routerProps: RouterProps
 }
 
-export default async function TotalAreaPrecture({ routerProps }: Props) {
+export default async function TotalAreaPrefecture({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 

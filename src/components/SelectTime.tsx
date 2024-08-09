@@ -1,35 +1,34 @@
 'use client'
-import { useCallback } from 'react'
+
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 import FormControl from '@mui/material/FormControl'
 import MenuItem from '@mui/material/MenuItem'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 
-import { time } from 'atoms'
 import { TimeType } from 'utils/e-stat'
-
-import { useAtom } from 'jotai'
 
 type Props = {
   times: TimeType[]
 }
 
 function SelectTime({ times }: Props) {
-  // 年次はJotaiで管理する
-  const [selectedTime, setSelectedTime] = useAtom(time)
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const pathname = usePathname()
 
   // 降順に並び替え
   const sortedTimes = times.sort(
     (a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)
   )
 
-  // 選択した年次をJotaiにセット
-  const handleTimeChange = useCallback(
-    (newTime: TimeType) => {
-      setSelectedTime(newTime)
-    },
-    [setSelectedTime]
-  )
+  const handleTimeChange = (event: SelectChangeEvent<string>) => {
+    const newTime = event.target.value
+    router.push(`${pathname}?timeCode=${newTime}`)
+  }
+
+  const selectedTimeCode =
+    searchParams.get('timeCode') || sortedTimes[0].timeCode
 
   return (
     <>
@@ -37,16 +36,9 @@ function SelectTime({ times }: Props) {
         <Select
           labelId="select-time-label"
           id="select-time"
-          value={selectedTime.timeCode}
+          value={selectedTimeCode}
           displayEmpty
-          onChange={(event: SelectChangeEvent) => {
-            const selectedTime = times.find(
-              (t) => t.timeCode === event.target.value
-            )
-            if (selectedTime) {
-              handleTimeChange(selectedTime)
-            }
-          }}
+          onChange={handleTimeChange}
         >
           {sortedTimes.map((d) => (
             <MenuItem key={d.timeCode} value={d.timeCode}>

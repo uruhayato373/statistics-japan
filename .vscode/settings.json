@@ -74,6 +74,7 @@
     "Geoshape",
     "landweather",
     "nocheck",
+    "tanstack",
     "Topojson"
   ]
 }

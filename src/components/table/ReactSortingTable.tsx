@@ -66,7 +66,7 @@ export default function ReactSortingTable({ contents }: Props) {
     <TableContainer
       component={Paper}
       sx={{
-        height: '400px',
+        // height: '400px',
         overflow: 'auto',
         '&::-webkit-scrollbar': {
           width: '10px',
