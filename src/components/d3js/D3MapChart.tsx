@@ -6,9 +6,8 @@ import { useEffect, useRef, useState } from 'react'
 
 import * as d3 from 'd3'
 import * as topojson from 'topojson-client'
-
+import useGeoshape from 'hooks/useGeoshape'
 import { D3ChartMapContentsType } from 'utils/d3charts'
-import { TopoJSONData } from 'utils/geoshape'
 
 /**
  * D3MapChartコンポーネントのプロパティ型定義
@@ -17,19 +16,19 @@ import { TopoJSONData } from 'utils/geoshape'
 interface Props {
   /** チャートのデータ内容 */
   contents: D3ChartMapContentsType
-  /** 地図の地理的形状データ */
-  geoShape: TopoJSONData
 }
 
 /**
  * D3.jsを使用して日本地図のインタラクティブな可視化を行うコンポーネント
  * @param {Props} props - コンポーネントのプロパティ
  */
-export default function D3MapChart({ contents, geoShape }: Props) {
+export default function D3MapChart({ contents }: Props) {
   const svgRef = useRef<SVGSVGElement | null>(null)
   const containerRef = useRef<HTMLDivElement | null>(null)
   const [zoomLevel, setZoomLevel] = useState(1200)
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+
+  const { geoShape } = useGeoshape('prefecture')
 
   const { series } = contents
 
