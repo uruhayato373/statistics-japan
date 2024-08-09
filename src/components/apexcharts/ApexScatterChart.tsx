@@ -11,7 +11,7 @@ interface Props {
     categories: string[]
     series: {
       name: string
-      data: number[]
+      data: { x: number; y: number }[]
     }[]
   }
 }
@@ -27,6 +27,7 @@ export default function ApexScatterChart({ contents }: Props): JSX.Element {
         type: 'xy',
       },
     },
+    colors: ['#2E93fA'],
     xaxis: {
       tickAmount: 10,
       labels: {
@@ -37,6 +38,9 @@ export default function ApexScatterChart({ contents }: Props): JSX.Element {
     },
     yaxis: {
       tickAmount: 7,
+    },
+    legend: {
+      show: false,
     },
   }
 

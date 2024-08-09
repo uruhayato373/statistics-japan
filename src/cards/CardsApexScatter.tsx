@@ -6,8 +6,8 @@ import { Suspense } from 'react'
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 
+import ApexScatterChart from 'components/apexcharts/ApexScatterChart'
 import CircularProgressCards from 'components/CircularProgressCards'
-import D3ScatterChart from 'components/d3js/D3ScatterChart'
 import MainCard from 'components/MainCard'
 
 import useEstatAPIs from 'hooks/useEstatAPIs'
@@ -65,13 +65,18 @@ function ChartComponent({
     series: areas.map((d) => {
       return {
         name: d.areaName,
-        x: documents[0].values.find((f) => f.areaCode === d.areaCode).value,
-        y: documents[1].values.find((f) => f.areaCode === d.areaCode).value,
+        type: 'scatter',
+        data: [
+          {
+            x: documents[0].values.find((f) => f.areaCode === d.areaCode).value,
+            y: documents[1].values.find((f) => f.areaCode === d.areaCode).value,
+          },
+        ],
       }
     }),
   }
 
-  return <D3ScatterChart contents={contents} />
+  return <ApexScatterChart contents={contents} />
 }
 
 export default function CardsApexScatter({
