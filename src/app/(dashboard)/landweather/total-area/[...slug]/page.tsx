@@ -16,6 +16,9 @@ const PrefRankTotalArea = dynamic(
 const PrefRankHabitableArea = dynamic(
   () => import('views/landweather/total-area/prefRankHabitableArea')
 )
+const PrefRankHabitableAreaRatio = dynamic(
+  () => import('views/landweather/total-area/prefRankHabitableAreaRatio')
+)
 const Prefecture = dynamic(
   () => import('views/landweather/total-area/prefecture')
 )
@@ -92,6 +95,10 @@ const Page = ({ params }) => {
           break
         case 'habitable-area':
           Component = PrefRankHabitableArea
+          props = { routerProps }
+          break
+        case 'habitable-area-ratio':
+          Component = PrefRankHabitableAreaRatio
           props = { routerProps }
           break
         default:

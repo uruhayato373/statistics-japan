@@ -56,20 +56,26 @@ function ChartComponent({
     },
   ])
 
-  const areas = documents[0].areas
+  const areas = documents.areas
     .filter((f) => f.areaCode !== '00000')
     .filter((f) => !excludedAreaCode?.includes(f.areaCode))
 
+  const categories = documents.categories
+
   const contents = {
-    categories: documents.flatMap((d) => d.categories),
+    categories,
     series: areas.map((d) => {
       return {
         name: d.areaName,
         type: 'scatter',
         data: [
           {
-            x: documents[0].values.find((f) => f.areaCode === d.areaCode).value,
-            y: documents[1].values.find((f) => f.areaCode === d.areaCode).value,
+            x: documents.values
+              .filter((f) => f.categoryCode === categories[0].categoryCode)
+              .find((f) => f.areaCode === d.areaCode).value,
+            y: documents.values
+              .filter((f) => f.categoryCode === categories[1].categoryCode)
+              .find((f) => f.areaCode === d.areaCode).value,
           },
         ],
       }
@@ -92,9 +98,9 @@ export default function CardsApexScatter({
     { ...xparams, cdArea: '00000' },
     { ...yparams, cdArea: '00000' },
   ])
-  const latestTime = documents
-    .flatMap((d) => d.times)
-    .sort((a, b) => parseInt(b.timeCode) - parseInt(a.timeCode))[0]
+  const latestTime = documents.times.sort(
+    (a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)
+  )[0]
 
   return (
     <MainCard title={title} sx={{ mt: 1 }} content={false}>
