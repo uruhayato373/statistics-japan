@@ -52,7 +52,6 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 }
 
 const Page = ({ params, searchParams }) => {
-
   const [kindId, prefCodeOrPageId, cityCode] = params.slug
 
   const {

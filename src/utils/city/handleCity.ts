@@ -32,7 +32,7 @@ export interface CityType {
 
 /**
  * 市区町村情報を取得・検索するための関数群を提供する
- * @returns {Object} 市区町村情報を操作するための関数オブジェクト
+ * @returns {fetchItems:Promise<CityType>} 市区町村情報を操作するための関数オブジェクト
  */
 const handleCity = () => {
   return {

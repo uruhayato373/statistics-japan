@@ -8,13 +8,13 @@ import Typography from '@mui/material/Typography'
 import CircularProgressCards from 'components/CircularProgressCards'
 import D3MapChart from 'components/d3js/D3MapChart'
 import MainCard from 'components/MainCard'
+import SelectTime from 'components/SelectTime'
 
 import formatD3charts from 'utils/d3charts'
 import { DocumentType, TimeType } from 'utils/e-stat'
 
 interface Props {
   document: DocumentType
-  SelectTimeComponent: React.ComponentType<{ times: TimeType[] }>
   times: TimeType[]
 }
 
@@ -22,10 +22,9 @@ interface Props {
  * 都道府県ランキングのコロプレス地図を表示するコンポーネント
  *
  */
-export default function CardsPrefectureRanking({
+export default function CardsPrefectureRankingChart({
   // title,
   document,
-  SelectTimeComponent,
   times,
 }: Props) {
   const mapChartContents = formatD3charts(document).mapChart()
@@ -37,7 +36,7 @@ export default function CardsPrefectureRanking({
           alignItems="center"
           justifyContent="space-between"
         >
-          <SelectTimeComponent times={times} />
+          <SelectTime times={times} />
           {/* <ToggleMapBar
             chartType={chartType}
             handleChartChange={handleChartChange}

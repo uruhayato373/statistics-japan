@@ -1,10 +1,8 @@
-import SelectTime from 'components/SelectTime'
-
 import CardsLineSelectPrefecture from 'cards/CardsLineSelectPrefecture'
-import CardsPrefRankTable from 'cards/CardsPrefRankTable'
+import CardsPrefectureRankingChart from 'cards/CardsPrefectureRankingChart'
+import CardsPrefectureRankingTable from 'cards/CardsPrefectureRankingTable'
 
 import handleEstatAPI from 'utils/e-stat'
-import CardsPrefectureRanking from 'cards/CardsPrefectureRanking'
 
 /**
  * e-Stat APIのパラメータを生成する関数
@@ -45,17 +43,11 @@ export default async function PrefRankTotalArea({ searchParams }: Props) {
     /**
      * 都道府県ランキングのChart
      */
-    chart: (
-      <CardsPrefectureRanking
-        document={document}
-        SelectTimeComponent={SelectTime}
-        times={times}
-      />
-    ),
+    chart: <CardsPrefectureRankingChart document={document} times={times} />,
     /**
      * 都道府県ランキングのTable
      */
-    table: <CardsPrefRankTable params={params} />,
+    table: <CardsPrefectureRankingTable document={document} times={times} />,
     /**
      * 選択した都道府県のLineChart
      */
