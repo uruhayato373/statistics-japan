@@ -21,7 +21,6 @@ export default async function prefRankTotalArea({
   routerProps,
   searchParams,
 }: Props) {
-
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
     const { chart, table, selectPrefecture } = await PrefRankTotalArea({

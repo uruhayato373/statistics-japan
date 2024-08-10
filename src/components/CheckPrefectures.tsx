@@ -1,5 +1,7 @@
 'use client'
-import { useCallback, useEffect, Suspense } from 'react'
+import { useCallback, useEffect, Suspense, useState } from 'react'
+
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 import Box from '@mui/material/Box'
 import Checkbox from '@mui/material/Checkbox'
@@ -10,73 +12,53 @@ import Typography from '@mui/material/Typography'
 
 import useSWR from 'swr'
 
-import { checkedPrefectures, prefecture } from 'atoms'
 import fetcher from 'utils/fetcher'
 import { RegionPrefectureType } from 'utils/prefecture'
 
-import { useAtom } from 'jotai'
-
 import CircularProgressCards from './CircularProgressCards'
 
-/**
- * 都道府県チェックボックスのコンポーネント
- *
- * @remarks
- * 関東・北陸などの地域ごとにグループ化された都道府県のチェックボックスリストを表示する。
- * ユーザーは複数の都道府県を選択でき、選択状態はJotaiを使用して管理される。
- */
 function CheckPrefecturesContent() {
-  /**
-   * 選択した都道府県をJotaiで管理
-   */
-  const [selectedPrefectures, setSelectedPrefectures] =
-    useAtom(checkedPrefectures)
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const pathname = usePathname()
+  const [selectedPrefCodes, setSelectedPrefCodes] = useState<string[]>([])
 
-  /**
-   * 初期選択都道府県をセット
-   */
-  const [currentPrefecture] = useAtom(prefecture)
-  useEffect(() => {
-    setSelectedPrefectures([currentPrefecture])
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  /**
-   * 地域別都道府県データを取得
-   */
   const { data: regions } = useSWR<RegionPrefectureType[]>(
     '/api/prefecture?type=regions',
     fetcher,
     { suspense: true }
   )
 
-  /**
-   * 都道府県の選択状態を更新
-   *
-   * @param event - チェックボックスの変更イベント
-   * @param prefCode - 都道府県コード
-   * @param prefName - 都道府県名
-   */
+  // 初期レンダリング時にsearchParamsからareaCodeを取得してセット
+  useEffect(() => {
+    const areaCodes = searchParams.getAll('areaCode')
+    setSelectedPrefCodes(areaCodes)
+  }, [searchParams])
+
   const handlePrefectureChange = useCallback(
-    (
-      event: React.ChangeEvent<HTMLInputElement>,
-      prefCode: string,
-      prefName: string
-    ) => {
+    (prefCode: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
       const isChecked = event.target.checked
-      setSelectedPrefectures((prev) =>
+      setSelectedPrefCodes((prev) =>
         isChecked
-          ? [...prev, { prefCode, prefName }]
-          : prev.filter((pref) => pref.prefCode !== prefCode)
+          ? [...prev, prefCode]
+          : prev.filter((code) => code !== prefCode)
       )
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   )
 
+  // selectedPrefCodesが変更されたらURLを更新
+  useEffect(() => {
+    const params = new URLSearchParams()
+    selectedPrefCodes.forEach((code) => {
+      params.append('areaCode', code)
+    })
+    router.push(`${pathname}?${params.toString()}`, { scroll: false })
+  }, [selectedPrefCodes, pathname, router])
+
   return (
     <Box sx={{ overflowY: 'auto', maxHeight: '400px' }}>
-      {regions.map(({ name, prefectures }, index) => (
+      {regions?.map(({ name, prefectures }, index) => (
         <Box key={name} sx={{ mb: index < regions.length - 1 ? 2 : 0 }}>
           <Typography variant="caption">{name}</Typography>
           <Divider />
@@ -86,12 +68,8 @@ function CheckPrefecturesContent() {
                 <FormControlLabel
                   control={
                     <Checkbox
-                      checked={selectedPrefectures.some(
-                        (p) => p.prefCode === pref.prefCode
-                      )}
-                      onChange={(e) =>
-                        handlePrefectureChange(e, pref.prefCode, pref.prefName)
-                      }
+                      checked={selectedPrefCodes.includes(pref.prefCode)}
+                      onChange={handlePrefectureChange(pref.prefCode)}
                       name={pref.prefName}
                       size="small"
                     />
@@ -114,13 +92,6 @@ function CheckPrefecturesContent() {
   )
 }
 
-/**
- * Suspenseでラップ
- *
- * @remarks
- * 関東・北陸などの地域ごとにグループ化された都道府県のチェックボックスリストを表示する。
- * ユーザーは複数の都道府県を選択でき、選択状態はJotaiを使用して管理される。
- */
 function CheckPrefectures() {
   return (
     <Suspense fallback={<CircularProgressCards />}>

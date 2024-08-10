@@ -1,7 +1,6 @@
-import CardsLineSelectPrefecture from 'cards/CardsLineSelectPrefecture'
-import CardsPrefectureRankingChart from 'cards/CardsPrefectureRankingChart'
-import CardsPrefectureRankingTable from 'cards/CardsPrefectureRankingTable'
-
+import CardsEstatPrefectureComparisonChart from 'cards-estat/CardsEstatPrefectureComparisonChart'
+import CardsEstatPrefectureRankingChart from 'cards-estat/CardsEstatPrefectureRankingChart'
+import CardsEstatPrefectureRankingTable from 'cards-estat/CardsEstatPrefectureRankingTable'
 import handleEstatAPI from 'utils/e-stat'
 
 /**
@@ -13,7 +12,7 @@ const params = {
 }
 
 interface Props {
-  searchParams: { timeCode?: string }
+  searchParams: { timeCode?: string; areaCode?: string | string[] }
 }
 
 /**
@@ -24,33 +23,44 @@ interface Props {
  * Gridレイアウトは親コンポーネントで設定する。
  */
 export default async function PrefRankTotalArea({ searchParams }: Props) {
-  const { times } = await handleEstatAPI(params).fetchDocument()
+  const areaCode = searchParams.areaCode
 
-  const sortedTimes = times.sort(
-    (a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)
-  )
+  const document = areaCode
+    ? await handleEstatAPI({
+        ...params,
+        cdArea: areaCode,
+      }).fetchDocument()
+    : null
 
-  const selectedTimeCode = searchParams.timeCode
-    ? searchParams.timeCode
-    : sortedTimes[0].timeCode
-
-  const document = await handleEstatAPI({
-    ...params,
-    cdTime: `${selectedTimeCode}100000`,
-  }).fetchDocument()
+  console.log(document)
 
   return {
     /**
      * 都道府県ランキングのChart
      */
-    chart: <CardsPrefectureRankingChart document={document} times={times} />,
+    chart: (
+      <CardsEstatPrefectureRankingChart
+        estatParams={params}
+        searchParams={searchParams}
+      />
+    ),
     /**
      * 都道府県ランキングのTable
      */
-    table: <CardsPrefectureRankingTable document={document} times={times} />,
+    table: (
+      <CardsEstatPrefectureRankingTable
+        estatParams={params}
+        searchParams={searchParams}
+      />
+    ),
     /**
      * 選択した都道府県のLineChart
      */
-    selectPrefecture: <CardsLineSelectPrefecture params={params} />,
+    selectPrefecture: (
+      <CardsEstatPrefectureComparisonChart
+        estatParams={params}
+        searchParams={searchParams}
+      />
+    ),
   }
 }
