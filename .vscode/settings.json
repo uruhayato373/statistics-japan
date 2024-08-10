@@ -74,7 +74,10 @@
     "Geoshape",
     "landweather",
     "nocheck",
+    "RESAS",
     "tanstack",
-    "Topojson"
+    "Topojson",
+    "xaxis",
+    "yaxis"
   ]
 }

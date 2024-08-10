@@ -1,3 +1,7 @@
+import { Suspense } from 'react'
+
+import CircularProgressCards from 'components/CircularProgressCards'
+
 import CardsPrefectureComparisonChart from 'cards/CardsPrefectureComparisonChart'
 
 import handleEstatAPI, { EstatParamsType } from 'utils/e-stat'
@@ -19,6 +23,14 @@ export default async function CardsEstatPrefectureComparisonChart({
   estatParams,
   searchParams,
 }: Props) {
+  return (
+    <Suspense fallback={<CircularProgressCards />}>
+      <FetchComponent estatParams={estatParams} searchParams={searchParams} />
+    </Suspense>
+  )
+}
+
+async function FetchComponent({ estatParams, searchParams }: Props) {
   const areaCode = searchParams.areaCode
 
   const document = areaCode

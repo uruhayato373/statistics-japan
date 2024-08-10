@@ -1,8 +1,3 @@
-/**
- * 都道府県データを管理するモジュール
- * @module handlePrefecture
- */
-
 import regionsData from 'utils/prefecture/regions.json'
 import handleResasAPI from 'utils/resas'
 
