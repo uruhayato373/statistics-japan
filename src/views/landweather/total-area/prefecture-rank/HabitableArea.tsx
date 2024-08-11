@@ -6,7 +6,7 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import RankingHabitableArea from 'sections/landweather/total-area/RankingHabitableArea'
+import RankingHabitableArea from 'sections/landweather/total-area/prefecture-rank/HabitableArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -15,7 +15,7 @@ interface Props {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function prefRankHabitableArea({
+export default async function HabitableArea({
   routerProps,
   searchParams,
 }: Props) {

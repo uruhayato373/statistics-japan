@@ -9,11 +9,11 @@ import handleProps from 'utils/props'
 
 // 定数
 const FIELD_ID = 'landweather'
-const MENU_ID = 'total-area'
+const MENU_ID = 'weather'
 const KIND_ID = 'japan'
 
 // 動的インポート
-const Japan = dynamic(() => import('views/landweather/total-area/japan'))
+const Japan = dynamic(() => import('views/landweather/weather/japan'))
 
 // 共通のhandleProps呼び出し
 const getProps = () =>
@@ -21,6 +21,9 @@ const getProps = () =>
     fieldId: FIELD_ID,
     menuId: MENU_ID,
     kindId: KIND_ID,
+    pageId: null,
+    prefCode: null,
+    cityCode: null,
   })
 
 /**

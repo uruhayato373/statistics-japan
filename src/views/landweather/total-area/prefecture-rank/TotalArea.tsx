@@ -6,7 +6,7 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import RankingTotalArea from 'sections/landweather/total-area/RankingTotalArea'
+import RankingTotalArea from 'sections/landweather/total-area/prefecture-rank/TotalArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -15,10 +15,7 @@ interface Props {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function prefRankTotalArea({
-  routerProps,
-  searchParams,
-}: Props) {
+export default async function TotalArea({ routerProps, searchParams }: Props) {
   const { chart, table, comparison } = RankingTotalArea({
     searchParams,
   })

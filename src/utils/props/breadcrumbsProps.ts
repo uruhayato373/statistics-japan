@@ -19,8 +19,8 @@ export type BreadcrumbsPropsType = {
   currentMenu: MenuType
   kinds: KindType[]
   currentKind: KindType
-  pages: PageType[]
-  currentPage: PageType
+  pages?: PageType[]
+  currentPage?: PageType
   prefectures?: PrefectureType[]
   currentPrefecture?: PrefectureType
   cities?: CityType[]

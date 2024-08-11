@@ -10,7 +10,7 @@ import Error404 from 'views/maintenance/404'
 
 // 定数
 const FIELD_ID = 'landweather'
-const MENU_ID = 'total-area'
+const MENU_ID = 'weather'
 const KIND_ID = 'prefecture-rank'
 
 // 型定義
@@ -30,11 +30,8 @@ interface ComponentProps {
 
 // 動的インポートとコンポーネントマッピング
 const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
-  'total-area': dynamic(
-    () => import('views/landweather/total-area/prefecture-rank/TotalArea')
-  ),
-  'habitable-area': dynamic(
-    () => import('views/landweather/total-area/prefecture-rank/HabitableArea')
+  'rainy-days': dynamic(
+    () => import('views/landweather/weather/prefecture-rank/RainyDays')
   ),
 }
 

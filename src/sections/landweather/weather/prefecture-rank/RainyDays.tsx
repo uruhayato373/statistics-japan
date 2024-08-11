@@ -4,42 +4,32 @@ import CardsEstatPrefectureRankingTable from 'cards-estat/CardsEstatPrefectureRa
 
 const estatParams = {
   statsDataId: '0000010102',
-  cdCat01: 'B1101',
+  cdCat01: 'B4106',
 }
-
-const customCategories = [
-  {
-    categoryCode: 'B1101',
-    categoryName: '総面積',
-    categoryUnit: 'ha',
-  },
-]
 
 interface Props {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default function RankingTotalArea({ searchParams }: Props) {
+export default function RankingRainyDays({ searchParams }: Props) {
   return {
     chart: (
       <CardsEstatPrefectureRankingChart
-        title={'都道府県の総面積ランキング'}
+        title={'都道府県の降雨日数ランキング'}
         estatParams={estatParams}
         searchParams={searchParams}
-        customCategories={customCategories}
       />
     ),
     table: (
       <CardsEstatPrefectureRankingTable
-        title={'都道府県の総面積データ'}
+        title={'都道府県の降雨日数データ'}
         estatParams={estatParams}
         searchParams={searchParams}
-        customCategories={customCategories}
       />
     ),
     comparison: (
       <CardsEstatPrefectureComparisonChart
-        title={'都道府県の総面積を比較'}
+        title={'都道府県の降雨日数を比較'}
         estatParams={estatParams}
         searchParams={searchParams}
       />

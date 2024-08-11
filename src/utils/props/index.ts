@@ -5,9 +5,9 @@ export interface RouterProps {
   fieldId: string
   menuId: string
   kindId: string
-  pageId: string | null
-  prefCode: string | null
-  cityCode: string | null
+  pageId?: string
+  prefCode?: string
+  cityCode?: string
 }
 
 const handleProps = ({
@@ -22,9 +22,9 @@ const handleProps = ({
     fieldId,
     menuId,
     kindId,
-    pageId: pageId || null,
-    prefCode: prefCode || null,
-    cityCode: cityCode || null,
+    pageId: pageId,
+    prefCode: prefCode,
+    cityCode: cityCode,
   }
   return {
     routerProps,

@@ -23,7 +23,7 @@ interface Props {
   routerProps: RouterProps
 }
 
-export default async function WeatherPrecture({ routerProps }: Props) {
+export default async function Prefecture({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 

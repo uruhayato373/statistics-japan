@@ -7,9 +7,9 @@ import { PrefectureType } from 'utils/prefecture'
 type Args = {
   menu: MenuType
   kind: KindType
-  page: PageType
-  prefecture: PrefectureType
-  city: CityType
+  page?: PageType
+  prefecture?: PrefectureType
+  city?: CityType
 }
 
 /**

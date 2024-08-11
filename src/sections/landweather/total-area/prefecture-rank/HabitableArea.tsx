@@ -24,7 +24,7 @@ interface Props {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function RankingHabitableArea({ searchParams }: Props) {
+export default async function HabitableArea({ searchParams }: Props) {
   return {
     chart: (
       <CardsEstatPrefectureRankingChart

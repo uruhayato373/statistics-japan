@@ -5,11 +5,11 @@ import { Metadata } from 'next'
 import Loader from 'components/Loader'
 
 import handleProps from 'utils/props'
-import Prefecture from 'views/landweather/total-area/prefecture'
+import Prefecture from 'views/landweather/weather/prefecture'
 
 // 定数
 const FIELD_ID = 'landweather'
-const MENU_ID = 'total-area'
+const MENU_ID = 'weather'
 const KIND_ID = 'prefecture'
 
 // 型定義
@@ -23,12 +23,12 @@ const getProps = (prefCode: string) =>
     fieldId: FIELD_ID,
     menuId: MENU_ID,
     kindId: KIND_ID,
+    pageId: null,
     prefCode,
+    cityCode: null,
   })
 
-/**
- * メタデータを生成
- */
+// メタデータ生成関数
 export async function generateMetadata({
   params,
 }: {
