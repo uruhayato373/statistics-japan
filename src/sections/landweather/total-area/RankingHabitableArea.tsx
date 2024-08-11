@@ -1,4 +1,4 @@
-import CardsApexScatter from 'cards/CardsApexScatter'
+// import CardsApexScatter from 'cards/CardsApexScatter'
 
 import CardsEstatPrefectureComparisonChart from 'cards-estat/CardsEstatPrefectureComparisonChart'
 import CardsEstatPrefectureRankingChart from 'cards-estat/CardsEstatPrefectureRankingChart'
@@ -15,10 +15,10 @@ const habitableArea = {
 /**
  * 総面積
  */
-const totalArea = {
-  statsDataId: '0000010102',
-  cdCat01: 'B1101',
-}
+// const totalArea = {
+//   statsDataId: '0000010102',
+//   cdCat01: 'B1101',
+// }
 
 interface Props {
   searchParams: { [key: string]: string | string[] | undefined }
