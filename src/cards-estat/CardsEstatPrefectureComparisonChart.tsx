@@ -4,12 +4,18 @@ import CardsPrefectureComparisonChart from 'cards/CardsPrefectureComparisonChart
 import handleEstatAPI, { CategoryType, EstatParamsType } from 'utils/e-stat'
 
 interface Props {
-  estatParams?: EstatParamsType
-  searchParams?: { areaCode?: string | string[] }
+  title?: string
+  estatParams: EstatParamsType
+  searchParams: { areaCode?: string | string[] }
   customCategories?: CategoryType[]
 }
 
-function DataFetcher({ estatParams, searchParams, customCategories }: Props) {
+function DataFetcher({
+  title,
+  estatParams,
+  searchParams,
+  customCategories,
+}: Props) {
   const areaCode = searchParams?.areaCode
 
   const documentPromise = areaCode
@@ -25,7 +31,9 @@ function DataFetcher({ estatParams, searchParams, customCategories }: Props) {
     ? { ...document, categories: customCategories }
     : document
 
-  return <CardsPrefectureComparisonChart document={customDocument} />
+  return (
+    <CardsPrefectureComparisonChart title={title} document={customDocument} />
+  )
 }
 
 export default function CardsEstatPrefectureComparisonChart(props: Props) {

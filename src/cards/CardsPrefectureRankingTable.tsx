@@ -11,8 +11,10 @@ import PrefectureRankingTable from 'components/table/PrefectureRankingTable'
 
 import { DocumentType, TimeType } from 'utils/e-stat'
 import formatTable from 'utils/table'
+import Typography from '@mui/material/Typography'
 
 interface Props {
+  title?: string
   document: DocumentType
   times: TimeType[]
 }
@@ -22,6 +24,7 @@ interface Props {
  *
  */
 export default function CardsPrefectureRankingTable({
+  title,
   document,
   times,
 }: Props) {
@@ -43,6 +46,9 @@ export default function CardsPrefectureRankingTable({
           justifyContent="space-between"
           sx={{ mb: 1.5 }}
         >
+          <Typography variant="h5" color="text.primary">
+            {title}
+          </Typography>
           <SelectTime times={times} />
         </Stack>
         <Divider sx={{ mb: 1.5 }} />

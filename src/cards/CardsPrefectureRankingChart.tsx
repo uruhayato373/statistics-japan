@@ -14,16 +14,13 @@ import formatD3charts from 'utils/d3charts'
 import { DocumentType, TimeType } from 'utils/e-stat'
 
 interface Props {
+  title?: string
   document: DocumentType
   times: TimeType[]
 }
 
-/**
- * 都道府県ランキングのコロプレス地図を表示するコンポーネント
- *
- */
 export default function CardsPrefectureRankingChart({
-  // title,
+  title,
   document,
   times,
 }: Props) {
@@ -36,6 +33,9 @@ export default function CardsPrefectureRankingChart({
           alignItems="center"
           justifyContent="space-between"
         >
+          <Typography variant="h5" color="text.primary">
+            {title}
+          </Typography>
           <SelectTime times={times} />
           {/* <ToggleMapBar
             chartType={chartType}

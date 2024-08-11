@@ -2,15 +2,21 @@ import { Suspense } from 'react'
 import { use } from 'react'
 import CardsPrefectureRankingTable from 'cards/CardsPrefectureRankingTable'
 import handleEstatAPI, { CategoryType, EstatParamsType } from 'utils/e-stat'
-import CircularProgress from '@mui/material/CircularProgress'
+import CircularProgressCards from 'components/CircularProgressCards'
 
 interface Props {
+  title?: string
   estatParams: EstatParamsType
   searchParams: { timeCode?: string }
   customCategories?: CategoryType[]
 }
 
-function DataFetcher({ estatParams, searchParams, customCategories }: Props) {
+function DataFetcher({
+  title,
+  estatParams,
+  searchParams,
+  customCategories,
+}: Props) {
   const timesPromise = handleEstatAPI(estatParams).fetchDocument()
   const { times } = use(timesPromise)
 
@@ -30,12 +36,18 @@ function DataFetcher({ estatParams, searchParams, customCategories }: Props) {
     ? { ...document, categories: customCategories }
     : document
 
-  return <CardsPrefectureRankingTable document={customDocument} times={times} />
+  return (
+    <CardsPrefectureRankingTable
+      title={title}
+      document={customDocument}
+      times={times}
+    />
+  )
 }
 
 export default function CardsEstatPrefectureRankingTable(props: Props) {
   return (
-    <Suspense fallback={<CircularProgress />}>
+    <Suspense fallback={<CircularProgressCards />}>
       <DataFetcher {...props} />
     </Suspense>
   )

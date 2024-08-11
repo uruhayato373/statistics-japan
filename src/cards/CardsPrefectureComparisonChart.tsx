@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
 
-import { Stack, Box, Divider } from '@mui/material'
+import { Stack, Box, Divider, Typography } from '@mui/material'
 
 import ApexLineChart from 'components/apexcharts/ApexLineChart'
 import CircularProgressCards from 'components/CircularProgressCards'
@@ -12,6 +12,7 @@ import { DocumentType } from 'utils/e-stat'
 import { handlePrefecture } from 'utils/prefecture'
 
 interface Props {
+  title?: string
   document: DocumentType | null
 }
 
@@ -24,6 +25,7 @@ interface Props {
  * Suspenseの範囲を限定するため、コンテンツを別コンポーネントに切り離している。
  */
 export default async function CardsPrefectureComparisonChart({
+  title,
   document,
 }: Props) {
   const prefectures = await handlePrefecture().fetchItems()
@@ -39,7 +41,11 @@ export default async function CardsPrefectureComparisonChart({
         }}
       >
         <Suspense fallback={<CircularProgressCards />}>
-          <ChartContent document={document} prefectures={prefectures} />
+          <ChartContent
+            title={title}
+            document={document}
+            prefectures={prefectures}
+          />
         </Suspense>
       </Box>
     </MainCard>
@@ -47,11 +53,12 @@ export default async function CardsPrefectureComparisonChart({
 }
 
 interface ChartContentProps {
+  title?: string
   document: DocumentType | null
   prefectures: Array<{ prefCode: string; prefName: string }>
 }
 
-function ChartContent({ document, prefectures }: ChartContentProps) {
+function ChartContent({ title, document, prefectures }: ChartContentProps) {
   const contents = document
     ? formatApexcharts(document).timeChart('area')
     : null
@@ -64,6 +71,9 @@ function ChartContent({ document, prefectures }: ChartContentProps) {
         justifyContent="space-between"
         sx={{ mb: 1.5 }}
       >
+        <Typography variant="h5" color="text.primary">
+          {title}
+        </Typography>
         <SelectPrefectures prefectures={prefectures} />
       </Stack>
       <Divider sx={{ mb: 1.5 }} />

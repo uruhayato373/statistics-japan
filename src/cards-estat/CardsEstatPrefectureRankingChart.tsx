@@ -7,12 +7,18 @@ import CardsPrefectureRankingChart from 'cards/CardsPrefectureRankingChart'
 import handleEstatAPI, { CategoryType, EstatParamsType } from 'utils/e-stat'
 
 interface Props {
+  title?: string
   estatParams: EstatParamsType
   searchParams: { timeCode?: string }
   customCategories?: CategoryType[]
 }
 
-function DataFetcher({ estatParams, searchParams, customCategories }: Props) {
+function DataFetcher({
+  title,
+  estatParams,
+  searchParams,
+  customCategories,
+}: Props) {
   const timesPromise = handleEstatAPI(estatParams).fetchDocument()
   const times = use(timesPromise).times
 
@@ -32,7 +38,13 @@ function DataFetcher({ estatParams, searchParams, customCategories }: Props) {
     ? { ...document, categories: customCategories }
     : document
 
-  return <CardsPrefectureRankingChart document={customDocument} times={times} />
+  return (
+    <CardsPrefectureRankingChart
+      title={title}
+      document={customDocument}
+      times={times}
+    />
+  )
 }
 
 export default function CardsEstatPrefectureRankingChart(props: Props) {

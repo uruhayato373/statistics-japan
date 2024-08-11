@@ -23,6 +23,7 @@ export default function RankingTotalArea({ searchParams }: Props) {
   return {
     chart: (
       <CardsEstatPrefectureRankingChart
+        title={'都道府県の総面積ランキング'}
         estatParams={estatParams}
         searchParams={searchParams}
         customCategories={customCategories}
@@ -30,6 +31,7 @@ export default function RankingTotalArea({ searchParams }: Props) {
     ),
     table: (
       <CardsEstatPrefectureRankingTable
+        title={'都道府県の総面積データ'}
         estatParams={estatParams}
         searchParams={searchParams}
         customCategories={customCategories}
@@ -37,6 +39,7 @@ export default function RankingTotalArea({ searchParams }: Props) {
     ),
     comparison: (
       <CardsEstatPrefectureComparisonChart
+        title={'都道府県の総面積を比較'}
         estatParams={estatParams}
         searchParams={searchParams}
       />

@@ -62,11 +62,15 @@ export default function ReactSortingTable({ contents }: Props) {
     })
   )
 
+  const isRightAligned = (columnId: string) => {
+    return ['tableValue', 'deviationValue'].includes(columnId)
+  }
+
   return (
     <TableContainer
       component={Paper}
       sx={{
-        // height: '400px',
+        maxHeight: 400,
         overflow: 'auto',
         '&::-webkit-scrollbar': {
           width: '10px',
@@ -82,9 +86,10 @@ export default function ReactSortingTable({ contents }: Props) {
         '&::-webkit-scrollbar-thumb:hover': {
           background: '#555',
         },
+        fontSize: '0.75rem',
       }}
     >
-      <Table>
+      <Table size="small" stickyHeader sx={{ minWidth: 300 }}>
         <TableHead
           sx={{
             position: 'sticky',
@@ -122,10 +127,19 @@ export default function ReactSortingTable({ contents }: Props) {
                       backgroundColor: 'grey.100',
                       zIndex: 1,
                       fontWeight: 'bold',
+                      textAlign: 'center',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
                     }}
                   >
                     {header.isPlaceholder ? null : (
-                      <Stack direction="row" spacing={1} alignItems="center">
+                      <Stack
+                        direction="row"
+                        spacing={1}
+                        alignItems="center"
+                        justifyContent="center"
+                      >
                         <Box>
                           {flexRender(
                             header.column.columnDef.header,
@@ -147,7 +161,19 @@ export default function ReactSortingTable({ contents }: Props) {
           {table.getRowModel().rows.map((row) => (
             <TableRow key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <TableCell key={cell.id} {...cell.column.columnDef.meta}>
+                <TableCell
+                  key={cell.id}
+                  {...cell.column.columnDef.meta}
+                  sx={{
+                    textAlign: isRightAligned(cell.column.id)
+                      ? 'right'
+                      : 'center',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    maxWidth: '200px',
+                  }}
+                >
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </TableCell>
               ))}

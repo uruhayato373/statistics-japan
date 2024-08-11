@@ -1,15 +1,12 @@
 import { Suspense } from 'react'
 
 import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
+
 import Box from '@mui/system/Box'
 
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import CardsEstatPrefectureComparisonChart from 'cards-estat/CardsEstatPrefectureComparisonChart'
-import CardsEstatPrefectureRankingChart from 'cards-estat/CardsEstatPrefectureRankingChart'
-import CardsEstatPrefectureRankingTable from 'cards-estat/CardsEstatPrefectureRankingTable'
 import RankingTotalArea from 'sections/landweather/total-area/RankingTotalArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -35,9 +32,6 @@ export default async function prefRankTotalArea({
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} sx={{ mb: -2.25 }}>
-              <Typography variant="h4">総面積ランキング</Typography>
-            </Grid>
             <Grid item xs={12} md={6} lg={7}>
               {chart}
             </Grid>
@@ -45,9 +39,6 @@ export default async function prefRankTotalArea({
               {table}
             </Grid>
             {/* row 2 */}
-            <Grid item xs={12} sx={{ mb: -2.25 }}>
-              <Typography variant="h4">都道府県の比較</Typography>
-            </Grid>
             <Grid item xs={12} md={9}>
               {comparison}
             </Grid>
