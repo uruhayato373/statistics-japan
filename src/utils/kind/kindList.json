@@ -8,10 +8,6 @@
     "kindTitle": "都道府県の統計"
   },
   {
-    "kindId": "city",
-    "kindTitle": "市区町村の統計"
-  },
-  {
     "kindId": "japan",
     "kindTitle": "日本の統計"
   }
