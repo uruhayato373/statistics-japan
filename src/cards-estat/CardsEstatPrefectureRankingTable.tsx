@@ -1,37 +1,42 @@
+import { Suspense } from 'react'
+import { use } from 'react'
 import CardsPrefectureRankingTable from 'cards/CardsPrefectureRankingTable'
-
-import handleEstatAPI, { EstatParamsType } from 'utils/e-stat'
+import handleEstatAPI, { CategoryType, EstatParamsType } from 'utils/e-stat'
+import CircularProgress from '@mui/material/CircularProgress'
 
 interface Props {
-  estatParams?: EstatParamsType
-  searchParams?: { timeCode?: string }
+  estatParams: EstatParamsType
+  searchParams: { timeCode?: string }
+  customCategories?: CategoryType[]
 }
 
-/**
- * 一つのe-Stat APIからデータを取得し、都道府県ランキングのチャートを表示するコンポーネント
- *
- * @description
- * useEstatAPIとuseEstatAPIsのカスタムフックを条件分岐下で使用することができないため、
- * それぞれ別のコンポーネントとして実装している。
- */
-export default async function CardsEstatPrefectureRankingTable({
-  estatParams,
-  searchParams,
-}: Props) {
-  const { times } = await handleEstatAPI(estatParams).fetchDocument()
+function DataFetcher({ estatParams, searchParams, customCategories }: Props) {
+  const timesPromise = handleEstatAPI(estatParams).fetchDocument()
+  const { times } = use(timesPromise)
 
   const sortedTimes = times.sort(
     (a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)
   )
 
-  const selectedTimeCode = searchParams.timeCode
-    ? searchParams.timeCode
-    : sortedTimes[0].timeCode
+  const selectedTimeCode = searchParams?.timeCode || sortedTimes[0].timeCode
 
-  const document = await handleEstatAPI({
+  const documentPromise = handleEstatAPI({
     ...estatParams,
     cdTime: `${selectedTimeCode}100000`,
   }).fetchDocument()
+  const document = use(documentPromise)
 
-  return <CardsPrefectureRankingTable document={document} times={times} />
+  const customDocument = customCategories
+    ? { ...document, categories: customCategories }
+    : document
+
+  return <CardsPrefectureRankingTable document={customDocument} times={times} />
+}
+
+export default function CardsEstatPrefectureRankingTable(props: Props) {
+  return (
+    <Suspense fallback={<CircularProgress />}>
+      <DataFetcher {...props} />
+    </Suspense>
+  )
 }

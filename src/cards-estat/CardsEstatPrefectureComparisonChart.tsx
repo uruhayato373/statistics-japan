@@ -1,44 +1,37 @@
-import { Suspense } from 'react'
-
+import { Suspense, use } from 'react'
 import CircularProgressCards from 'components/CircularProgressCards'
-
 import CardsPrefectureComparisonChart from 'cards/CardsPrefectureComparisonChart'
-
-import handleEstatAPI, { EstatParamsType } from 'utils/e-stat'
+import handleEstatAPI, { CategoryType, EstatParamsType } from 'utils/e-stat'
 
 interface Props {
   estatParams?: EstatParamsType
   searchParams?: { areaCode?: string | string[] }
+  customCategories?: CategoryType[]
 }
 
-/**
- * 都道府県のLineChartを表示するコンポーネント
- *
- * @remarks
- * 選択した都道府県のデータをe-Stat APIから取得し、ApexLineChartで表示する。
- * 都道府県の選択状態はJotaiを使用して管理される。
- * Suspenseの範囲を限定するため、LineChartを切り離している。
- */
-export default async function CardsEstatPrefectureComparisonChart({
-  estatParams,
-  searchParams,
-}: Props) {
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <FetchComponent estatParams={estatParams} searchParams={searchParams} />
-    </Suspense>
-  )
-}
+function DataFetcher({ estatParams, searchParams, customCategories }: Props) {
+  const areaCode = searchParams?.areaCode
 
-async function FetchComponent({ estatParams, searchParams }: Props) {
-  const areaCode = searchParams.areaCode
-
-  const document = areaCode
-    ? await handleEstatAPI({
+  const documentPromise = areaCode
+    ? handleEstatAPI({
         ...estatParams,
         cdArea: areaCode,
       }).fetchDocument()
-    : null
+    : Promise.resolve(null)
 
-  return <CardsPrefectureComparisonChart document={document} />
+  const document = use(documentPromise)
+
+  const customDocument = customCategories
+    ? { ...document, categories: customCategories }
+    : document
+
+  return <CardsPrefectureComparisonChart document={customDocument} />
+}
+
+export default function CardsEstatPrefectureComparisonChart(props: Props) {
+  return (
+    <Suspense fallback={<CircularProgressCards />}>
+      <DataFetcher {...props} />
+    </Suspense>
+  )
 }

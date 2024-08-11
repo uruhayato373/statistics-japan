@@ -35,7 +35,7 @@ const generatePageTitle = ({
     case 'japan':
       return `日本の${menu.menuTitle}`
     case 'prefecture-rank':
-      return page ? `都道府県の${page.pageTitle}ランキング` : ''
+      return page ? `都道府県の${page.pageTitle}` : ''
     case 'prefecture':
       return `${prefecture.prefName}の${menu.menuTitle}`
     case 'city':
