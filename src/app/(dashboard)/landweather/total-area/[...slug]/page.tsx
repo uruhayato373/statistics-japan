@@ -83,7 +83,7 @@ const Page = ({ params, searchParams }) => {
           break
         case 'habitable-area':
           Component = PrefRankHabitableArea
-          props = { routerProps }
+          props = { routerProps, searchParams }
           break
         case 'habitable-area-ratio':
           Component = PrefRankHabitableAreaRatio

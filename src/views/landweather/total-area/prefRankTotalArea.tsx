@@ -1,7 +1,6 @@
 import { Suspense } from 'react'
 
 import Grid from '@mui/material/Grid'
-
 import Box from '@mui/system/Box'
 
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'

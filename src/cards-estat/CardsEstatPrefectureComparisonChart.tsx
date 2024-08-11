@@ -1,6 +1,9 @@
 import { Suspense, use } from 'react'
+
 import CircularProgressCards from 'components/CircularProgressCards'
+
 import CardsPrefectureComparisonChart from 'cards/CardsPrefectureComparisonChart'
+
 import handleEstatAPI, { CategoryType, EstatParamsType } from 'utils/e-stat'
 
 interface Props {
