@@ -21,9 +21,10 @@ export default async function HabitableArea({
 }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const { chart, table, comparison } = await RankingHabitableArea({
-      searchParams,
-    })
+    const { chart, table, comparison, scatterTotalArea } =
+      await RankingHabitableArea({
+        searchParams,
+      })
 
     return (
       <Suspense fallback={<CircularProgressViews />}>
@@ -39,9 +40,9 @@ export default async function HabitableArea({
             <Grid item xs={12} md={9}>
               {comparison}
             </Grid>
-            {/* <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6} lg={6}>
               {scatterTotalArea}
-            </Grid> */}
+            </Grid>
           </Grid>
         </Box>
       </Suspense>

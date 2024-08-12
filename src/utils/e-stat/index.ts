@@ -18,10 +18,20 @@ const handleEstatAPI = (
 ): HandleEstatAPIResult => {
   return {
     fetchTimes: async () => {
-      const params = { ...estatParams, cdArea: '00000' } as EstatParamsType
-      const response = await fetchEstatAPI(params)
-      const { times } = formatEstatAPI(response)
-      return times.sort((a, b) => parseInt(b.timeCode) - parseInt(a.timeCode))
+      if (Array.isArray(estatParams)) {
+        // 複数のパラメータが渡された場合
+        const params = estatParams.map((d) => ({ ...d, cdArea: '00000' }))
+        const responses = await Promise.all(params.map(fetchEstatAPI))
+        const documents = responses.map(formatEstatAPI)
+        const times = margeDocuments(documents).times
+        return times.sort((a, b) => parseInt(b.timeCode) - parseInt(a.timeCode))
+      } else {
+        // 単一のパラメータが渡された場合
+        const params = { ...estatParams, cdArea: '00000' } as EstatParamsType
+        const response = await fetchEstatAPI(params)
+        const { times } = formatEstatAPI(response)
+        return times.sort((a, b) => parseInt(b.timeCode) - parseInt(a.timeCode))
+      }
     },
     fetchDocument: async () => {
       if (Array.isArray(estatParams)) {
