@@ -13,7 +13,7 @@ interface Props {
   routerProps: RouterProps
 }
 
-export default async function Japan({ routerProps }: Props) {
+export default async function AgricultureJapan({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
