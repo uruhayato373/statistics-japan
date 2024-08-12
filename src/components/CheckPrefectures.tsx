@@ -10,24 +10,19 @@ import FormControlLabel from '@mui/material/FormControlLabel'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 
-import useSWR from 'swr'
-
-import fetcher from 'utils/fetcher'
 import { RegionPrefectureType } from 'utils/prefecture'
 
 import CircularProgressCards from './CircularProgressCards'
 
-function CheckPrefecturesContent() {
+interface Props {
+  regions: RegionPrefectureType[]
+}
+
+function CheckPrefecturesContent({ regions }: Props) {
   const router = useRouter()
   const searchParams = useSearchParams()
   const pathname = usePathname()
   const [selectedPrefCodes, setSelectedPrefCodes] = useState<string[]>([])
-
-  const { data: regions } = useSWR<RegionPrefectureType[]>(
-    '/api/prefecture?type=regions',
-    fetcher,
-    { suspense: true }
-  )
 
   // 初期レンダリング時にsearchParamsからareaCodeを取得してセット
   useEffect(() => {
@@ -92,10 +87,10 @@ function CheckPrefecturesContent() {
   )
 }
 
-function CheckPrefectures() {
+function CheckPrefectures({ regions }: Props) {
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CheckPrefecturesContent />
+      <CheckPrefecturesContent regions={regions} />
     </Suspense>
   )
 }
