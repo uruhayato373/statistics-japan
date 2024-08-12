@@ -13,7 +13,7 @@ const MENU_ID = 'weather'
 const KIND_ID = 'japan'
 
 // 動的インポート
-const Japan = dynamic(() => import('views/landweather/weather/Japan'))
+const Japan = dynamic(() => import('views/landweather/weather/japan'))
 
 // 共通のhandleProps呼び出し
 const getProps = () =>

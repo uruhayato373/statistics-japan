@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 import Loader from 'components/Loader'
 
 import handleProps from 'utils/props'
-import Prefecture from 'views/laborwage/laborforce/Prefecture'
+import Prefecture from 'views/laborwage/laborforce/prefecture'
 
 // 定数
 const FIELD_ID = 'laborwage'

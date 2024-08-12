@@ -8,7 +8,7 @@ import Loader from 'components/Loader'
 import handleProps from 'utils/props'
 
 // Japanコンポーネントの動的インポート
-const Japan = dynamic(() => import('views/laborwage/laborforce/Japan'), {
+const Japan = dynamic(() => import('views/laborwage/laborforce/japan'), {
   loading: () => <Loader />,
 })
 

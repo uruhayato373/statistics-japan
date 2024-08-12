@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 import Loader from 'components/Loader'
 
 import handleProps from 'utils/props'
-import Japan from 'views/landweather/total-area/Japan'
+import Japan from 'views/landweather/total-area/japan'
 
 // 定数
 const FIELD_ID = 'landweather'
