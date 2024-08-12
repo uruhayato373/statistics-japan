@@ -1,10 +1,10 @@
 import useMediaQuery from '@mui/material/useMediaQuery'
 
+import AdsResponsive from 'components/adsense/AdsResponsive'
 import SimpleBar from 'components/third-party/SimpleBar'
 
 import { useGetMenuMaster } from 'api/menu'
 
-import NavCard from './NavCard'
 import Navigation from './Navigation'
 
 export default function DrawerContent() {
@@ -24,7 +24,7 @@ export default function DrawerContent() {
         }}
       >
         <Navigation />
-        {drawerOpen && !downLG && <NavCard />}
+        {drawerOpen && !downLG && <AdsResponsive />}
       </SimpleBar>
       {/* <NavUser /> */}
     </>
