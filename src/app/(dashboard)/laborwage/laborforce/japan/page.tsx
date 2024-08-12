@@ -5,11 +5,11 @@ import { Metadata } from 'next'
 import Loader from 'components/Loader'
 
 import handleProps from 'utils/props'
-import Japan from 'views/landweather/total-area/Japan'
+import Japan from 'views/laborwage/laborforce/Japan'
 
 // 定数
-const FIELD_ID = 'landweather'
-const MENU_ID = 'total-area'
+const FIELD_ID = 'laborwage'
+const MENU_ID = 'laborforce'
 const KIND_ID = 'japan'
 
 // 共通のhandleProps呼び出し

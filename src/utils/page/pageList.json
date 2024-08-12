@@ -45,7 +45,7 @@
     "menuId": "total-population"
   },
   {
-    "pageId": "laborforce",
+    "pageId": "laborforce-population",
     "pageTitle": "労働力人口",
     "menuId": "laborforce"
   },

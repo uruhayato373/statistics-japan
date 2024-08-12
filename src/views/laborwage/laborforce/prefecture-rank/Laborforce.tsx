@@ -1,12 +1,12 @@
 import { Suspense } from 'react'
 
+import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
-import Box from '@mui/system/Box'
 
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import RankingTotalArea from 'sections/landweather/total-area/prefecture-rank/TotalArea'
+import RankingLaborforce from 'sections/laborwage/laborforce/prefecture-rank/Laborforce'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -15,11 +15,10 @@ interface Props {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function TotalArea({ routerProps, searchParams }: Props) {
-  const { chart, table, comparison } = RankingTotalArea({
+export default async function Laborforce({ routerProps, searchParams }: Props) {
+  const { chart, table, comparison } = RankingLaborforce({
     searchParams,
   })
-
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
