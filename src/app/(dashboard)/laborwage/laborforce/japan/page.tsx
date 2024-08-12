@@ -1,11 +1,15 @@
 import { Suspense } from 'react'
 
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 
 import Loader from 'components/Loader'
 
 import handleProps from 'utils/props'
-import Japan from 'views/laborwage/laborforce/Japan'
+// Japanコンポーネントの動的インポート
+const Japan = dynamic(() => import('views/laborwage/laborforce/Japan'), {
+  loading: () => <Loader />,
+})
 
 // 定数
 const FIELD_ID = 'laborwage'
