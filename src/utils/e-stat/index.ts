@@ -2,7 +2,6 @@ import margeDocuments from 'utils/document'
 
 import { fetchEstatAPI } from './fetchAPI'
 import { formatEstatAPI } from './formatAPI'
-import formatTimes from './modules/formatTimes'
 import type { DocumentType, TimeType } from './types/formatted'
 import type { EstatParamsType } from './types/params'
 
@@ -21,9 +20,8 @@ const handleEstatAPI = (
     fetchTimes: async () => {
       const params = { ...estatParams, cdArea: '00000' } as EstatParamsType
       const response = await fetchEstatAPI(params)
-      return formatTimes(response).sort(
-        (a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)
-      )
+      const { times } = formatEstatAPI(response)
+      return times.sort((a, b) => parseInt(b.timeCode) - parseInt(a.timeCode))
     },
     fetchDocument: async () => {
       if (Array.isArray(estatParams)) {

@@ -1,8 +1,10 @@
 import { Suspense } from 'react'
-import { use } from 'react'
-import CardsPrefectureRankingTable from 'cards/CardsPrefectureRankingTable'
-import handleEstatAPI, { CategoryType, EstatParamsType } from 'utils/e-stat'
+
 import CircularProgressCards from 'components/CircularProgressCards'
+
+import CardsPrefectureRankingTable from 'cards/CardsPrefectureRankingTable'
+
+import handleEstatAPI, { CategoryType, EstatParamsType } from 'utils/e-stat'
 
 interface Props {
   title?: string
@@ -11,26 +13,20 @@ interface Props {
   customCategories?: CategoryType[]
 }
 
-function DataFetcher({
+async function DataFetcher({
   title,
   estatParams,
   searchParams,
   customCategories,
 }: Props) {
-  const timesPromise = handleEstatAPI(estatParams).fetchDocument()
-  const { times } = use(timesPromise)
+  const times = await handleEstatAPI(estatParams).fetchTimes()
 
-  const sortedTimes = times.sort(
-    (a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)
-  )
+  const selectedTimeCode = searchParams?.timeCode || times[0].timeCode
 
-  const selectedTimeCode = searchParams?.timeCode || sortedTimes[0].timeCode
-
-  const documentPromise = handleEstatAPI({
+  const document = await handleEstatAPI({
     ...estatParams,
     cdTime: `${selectedTimeCode}100000`,
   }).fetchDocument()
-  const document = use(documentPromise)
 
   const customDocument = customCategories
     ? { ...document, categories: customCategories }
