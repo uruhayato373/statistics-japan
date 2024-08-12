@@ -69,6 +69,8 @@ const formatDashboardSingle = ({
     .filter((f) => !Number.isNaN(f.value))
     .sort((a, b) => b.timeCode.localeCompare(a.timeCode))
 
+  console.log(sortedValues)
+
   const [curValue, preValue] = sortedValues
 
   // 増減値を計算し、指定された桁数で丸める
