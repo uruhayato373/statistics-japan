@@ -5,9 +5,10 @@ frontend:
       commands:
         - npm ci
         - npm install -g node-gyp
-        - sudo apt-get update
-        - sudo apt-get install -y build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
-        - npm install sharp
+        - yum update -y
+        - yum groupinstall -y "Development Tools"
+        - yum install -y cairo-devel pango-devel libjpeg-turbo-devel giflib-devel
+        - npm install --arch=x64 --platform=linux --libc=glibc sharp
     build:
       commands:
         - npm run build
