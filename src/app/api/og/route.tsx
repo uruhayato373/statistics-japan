@@ -17,6 +17,7 @@ export async function GET(request: NextRequest) {
     'japan',
     `00000.svg`
   )
+
   let svgContent = ''
   try {
     svgContent = fs.readFileSync(svgPath, 'utf-8')
@@ -33,11 +34,8 @@ export async function GET(request: NextRequest) {
     return new Response('Error reading SVG file', { status: 500 })
   }
 
-  // Base64エンコードされたNoto Sans JPフォント（TTF形式）
-  const fontBase64 = fs.readFileSync(
-    path.join(process.cwd(), 'public', 'fonts', 'NotoSansJP-Bold.ttf'),
-    'base64'
-  )
+  // フォントのパスを指定（publicディレクトリ内のパスを使用）
+  const fontUrl = '/fonts/NotoSansJP-Bold.ttf'
 
   const titleSvg = `
   <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -45,7 +43,7 @@ export async function GET(request: NextRequest) {
       <style type="text/css">
         @font-face {
           font-family: 'Noto Sans JP';
-          src: url(data:font/truetype;charset=utf-8;base64,${fontBase64}) format('truetype');
+          src: url('${fontUrl}') format('truetype');
           font-weight: bold;
           font-style: normal;
         }
