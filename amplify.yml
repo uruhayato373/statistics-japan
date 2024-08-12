@@ -5,10 +5,8 @@ frontend:
       commands:
         - npm ci
         - npm install -g node-gyp
-        - yum update -y
-        - yum groupinstall -y "Development Tools"
-        - yum install -y cairo-devel pango-devel libjpeg-turbo-devel giflib-devel
-        - npm install --arch=x64 --platform=linux --libc=glibc sharp
+        - npm install --arch=x64 --platform=linux sharp
+        - npm install --save-dev @types/sharp
     build:
       commands:
         - npm run build
