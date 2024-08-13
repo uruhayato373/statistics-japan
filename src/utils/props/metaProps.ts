@@ -51,7 +51,7 @@ const generateMetaProps = async ({
       break
   }
 
-  const ogImageUrl = `https://statistics-japan.com/api/og?prefCode=${encodeURIComponent(prefCode)}&title=${encodeURIComponent(title)}`
+  // const ogImageUrl = `https://statistics-japan.com/api/og?prefCode=${encodeURIComponent(prefCode)}&title=${encodeURIComponent(title)}`
 
   return {
     title: `${title} | 統計で見る都道府県`,
@@ -65,13 +65,13 @@ const generateMetaProps = async ({
       title: `${title} | 統計で見る都道府県`,
       type: 'website',
       url,
-      images: [
-        {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
-        },
-      ],
+      // images: [
+      //   {
+      //     url: ogImageUrl,
+      //     width: 1200,
+      //     height: 630,
+      //   },
+      // ],
     },
   }
 }
