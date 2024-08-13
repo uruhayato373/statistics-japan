@@ -3,6 +3,7 @@ import { Suspense } from 'react'
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
+import Typography from '@mui/material/Typography'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
@@ -11,7 +12,6 @@ import PrefectureRankingTable from 'components/table/PrefectureRankingTable'
 
 import { DocumentType, TimeType } from 'utils/e-stat'
 import formatTable from 'utils/table'
-import Typography from '@mui/material/Typography'
 
 interface Props {
   title?: string

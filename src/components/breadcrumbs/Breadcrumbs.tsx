@@ -305,8 +305,8 @@ function Breadcrumbs({
           border={card}
           sx={
             card === false
-              ? { mb: 3, bgcolor: 'inherit', backgroundImage: 'none', ...sx }
-              : { mb: 3, ...sx }
+              ? { mb: 1, bgcolor: 'inherit', backgroundImage: 'none', ...sx }
+              : { mb: 1, ...sx }
           }
           // {...others}
           content={card}

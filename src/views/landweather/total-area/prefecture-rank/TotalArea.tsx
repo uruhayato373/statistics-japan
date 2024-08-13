@@ -28,16 +28,20 @@ export default async function TotalArea({ routerProps, searchParams }: Props) {
     return (
       <Suspense fallback={<CircularProgressViews />}>
         <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
+        <Box sx={{ mt: 0.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={5}>
-              {chart}
+            <Grid item xs={12} md={9}>
+              <Grid container rowSpacing={4.5} columnSpacing={3}>
+                <Grid item xs={12} lg={7}>
+                  {chart}
+                </Grid>
+                <Grid item xs={12} lg={5}>
+                  {table}
+                </Grid>
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              {table}
-            </Grid>
-            <Grid item xs={12} md={6} lg={3}>
+            <Grid item xs={12} md={3}>
               <CardsAdsResponsive />
             </Grid>
             {/* row 2 */}
