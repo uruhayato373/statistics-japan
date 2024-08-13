@@ -3,7 +3,6 @@ import { Metadata } from 'next'
 import { handleCity } from 'utils/city'
 import { handleKind } from 'utils/kind'
 import { handleMenu } from 'utils/menu'
-// import { handlePage } from 'utils/page'
 import { handlePrefecture } from 'utils/prefecture'
 
 import generatePageTitle from './generateTitle'
@@ -51,7 +50,21 @@ const generateMetaProps = async ({
       break
   }
 
-  // const ogImageUrl = `https://statistics-japan.com/api/og?prefCode=${encodeURIComponent(prefCode)}&title=${encodeURIComponent(title)}`
+  let ogImageUrl = `https://statistics-japan.com/images/${fieldId}/${menuId}`
+  switch (kindId) {
+    case 'japan':
+      ogImageUrl += '/japan/00000.png'
+      break
+    case 'prefecture-rank':
+      ogImageUrl += `/prefecture-rank/${pageId}.png`
+      break
+    case 'prefecture':
+      ogImageUrl += `/prefecture/${prefCode}.png`
+      break
+    case 'city':
+      ogImageUrl += `/city/${prefCode}/${cityCode}.png`
+      break
+  }
 
   return {
     title: `${title} | 統計で見る都道府県`,
@@ -65,13 +78,13 @@ const generateMetaProps = async ({
       title: `${title} | 統計で見る都道府県`,
       type: 'website',
       url,
-      // images: [
-      //   {
-      //     url: ogImageUrl,
-      //     width: 1200,
-      //     height: 630,
-      //   },
-      // ],
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+        },
+      ],
     },
   }
 }
