@@ -25,7 +25,7 @@ export default async function Image({
       >
         {/* Background Image */}
         <img
-          src={`https://statistics-japan.com/images/total-population/prefecture${params.prefCode}.png`}
+          src={`https://statistics-japan.com/images/total-population/prefectures/${params.prefCode}.png`}
           alt={`Prefecture ${params.prefCode}`}
           style={{
             position: 'absolute',
