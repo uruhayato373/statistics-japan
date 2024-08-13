@@ -16,12 +16,14 @@ const nextConfig = {
         pathname: '**',
       },
     ],
+    domains: ['localhost'],
   },
   env: {
     ESTAT_API_APPID: process.env.ESTAT_API_APPID,
     ESTAT_API_KEY: process.env.ESTAT_API_KEY,
   },
   experimental: {
+    appDir: true,
     serverComponentsExternalPackages: ['https-proxy-agent'],
   },
   webpack(config) {
@@ -31,9 +33,9 @@ const nextConfig = {
       generator: {
         filename: 'static/fonts/[name].[hash][ext]',
       },
-    });
+    })
 
-    return config;
+    return config
   },
 }
 
