@@ -1,5 +1,3 @@
-// app/prefecture/[prefCode]/opengraph-image.tsx
-
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
@@ -25,7 +23,7 @@ export default async function Image({
       >
         {/* Background Image */}
         <img
-          src={`https://statistics-japan.com/images/total-population/prefectures/${params.prefCode}.png`}
+          src={`https://statistics-japan.com/images/population/total-population/prefecture/${params.prefCode}.png`}
           alt={`Prefecture ${params.prefCode}`}
           style={{
             position: 'absolute',
