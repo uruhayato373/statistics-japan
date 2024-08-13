@@ -24,6 +24,17 @@ const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ['https-proxy-agent'],
   },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/fonts/[name].[hash][ext]',
+      },
+    });
+
+    return config;
+  },
 }
 
 module.exports = nextConfig

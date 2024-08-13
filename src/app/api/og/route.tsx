@@ -5,6 +5,8 @@ import { NextRequest } from 'next/server'
 
 import sharp from 'sharp'
 
+import NotoSansJPBold from 'data/fonts/NotoSansJP-Bold.ttf'
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
   const prefCode = searchParams.get('prefCode') ?? '28000'
@@ -34,16 +36,13 @@ export async function GET(request: NextRequest) {
     return new Response('Error reading SVG file', { status: 500 })
   }
 
-  // フォントのパスを指定（publicディレクトリ内のパスを使用）
-  const fontUrl = '/fonts/NotoSansJP-Bold.ttf'
-
   const titleSvg = `
   <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
       <style type="text/css">
         @font-face {
           font-family: 'Noto Sans JP';
-          src: url('${fontUrl}') format('truetype');
+          src: url('${NotoSansJPBold}') format('truetype');
           font-weight: bold;
           font-style: normal;
         }
