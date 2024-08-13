@@ -1,6 +1,6 @@
 import { ImageResponse } from '@vercel/og'
-import { handlePrefecture } from 'utils/prefecture'
 
+import prefList from 'utils/prefecture/prefList.json'
 export const runtime = 'edge'
 
 export function generateImageMetadata() {
@@ -13,20 +13,12 @@ export function generateImageMetadata() {
   ]
 }
 
-async function getPrefectureData(prefCode: string) {
-  const { findItem } = handlePrefecture()
-  const prefecture = await findItem(prefCode)
-  return prefecture
-}
-
-export default async function Image({
-  params,
-}: {
-  params: { prefCode: string }
-}) {
+export default function Image({ params }: { params: { prefCode: string } }) {
   const { prefCode } = params
 
-  const prefecture = await getPrefectureData(prefCode)
+  const prefecture = prefList.find(
+    (f) => f.prefCode === Number(prefCode.replace('000', ''))
+  )
 
   return new ImageResponse(
     (
