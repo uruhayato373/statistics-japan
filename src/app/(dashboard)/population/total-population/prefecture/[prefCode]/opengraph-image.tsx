@@ -1,40 +1,40 @@
+import { readFileSync } from 'fs'
+import { join } from 'path'
+
 import { ImageResponse } from 'next/og'
 
-export const runtime = 'edge'
+export default function Image({ params }: { params: { prefCode: string } }) {
+  const imagePath = join(
+    process.cwd(),
+    'public',
+    'images',
+    'population',
+    'total-population',
+    'prefecture',
+    `${params.prefCode}.png`
+  )
+  const imageData = readFileSync(imagePath)
+  const imageBase64 = imageData.toString('base64')
 
-export default async function Image({
-  params,
-}: {
-  params: { prefCode: string }
-}) {
   return new ImageResponse(
     (
       <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: '100%',
-          height: '100%',
-          backgroundColor: '#f0f0f0',
-          fontFamily: 'sans-serif',
-        }}
+        style={
+          {
+            /* ... */
+          }
+        }
       >
-        {/* Background Image */}
         <img
-          src={`https://statistics-japan.com/images/population/total-population/prefecture/${params.prefCode}.png`}
+          src={`data:image/png;base64,${imageBase64}`}
           alt={`Prefecture ${params.prefCode}`}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            opacity: 0.3,
-          }}
+          style={
+            {
+              /* ... */
+            }
+          }
         />
+        {/* ... */}
       </div>
     ),
     {
