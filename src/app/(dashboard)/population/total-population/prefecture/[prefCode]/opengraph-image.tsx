@@ -5,7 +5,7 @@ import path from 'path'
 
 import { ImageResponse } from 'next/og'
 
-export const runtime = 'edge' // Change to 'nodejs' if edge runtime is not supported
+export const runtime = 'nodejs' // Change to 'nodejs' if edge runtime is not supported
 
 export default async function Image({
   params,
