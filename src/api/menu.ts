@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 
 import useSWR, { mutate } from 'swr'
 
-import { fetcher } from 'utils/axios'
+// import { fetcher } from 'utils/axios'
 
 const initialState = {
   openedItem: 'dashboard',
@@ -16,31 +16,6 @@ export const endpoints = {
   key: 'api/menu',
   master: 'master',
   dashboard: '/dashboard', // server URL
-}
-
-export function useGetMenu() {
-  const { data, isLoading, error, isValidating } = useSWR(
-    endpoints.key + endpoints.dashboard,
-    fetcher,
-    {
-      revalidateIfStale: false,
-      revalidateOnFocus: false,
-      revalidateOnReconnect: false,
-    }
-  )
-
-  const memoizedValue = useMemo(
-    () => ({
-      menu: data?.dashboard,
-      menuLoading: isLoading,
-      menuError: error,
-      menuValidating: isValidating,
-      menuEmpty: !isLoading && !data?.length,
-    }),
-    [data, error, isLoading, isValidating]
-  )
-
-  return memoizedValue
 }
 
 export function useGetMenuMaster() {

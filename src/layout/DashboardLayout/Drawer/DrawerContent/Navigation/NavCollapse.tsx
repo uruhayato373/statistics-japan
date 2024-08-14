@@ -1,4 +1,12 @@
-import React, { useEffect, useState, useMemo } from 'react'
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
+import React, {
+  useEffect,
+  useState,
+  useMemo,
+  SetStateAction,
+  Dispatch,
+} from 'react'
 
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -26,15 +34,15 @@ import BorderOutlined from '@ant-design/icons/BorderOutlined'
 import DownOutlined from '@ant-design/icons/DownOutlined'
 import RightOutlined from '@ant-design/icons/RightOutlined'
 import UpOutlined from '@ant-design/icons/UpOutlined'
-import PropTypes from 'prop-types'
 
 import { handlerActiveItem, useGetMenuMaster } from 'api/menu'
-import { MenuOrientation, ThemeMode } from 'config'
+import { MenuOrientation } from 'config'
 import useConfig from 'hooks/useConfig'
+import { MenuItem } from 'menu-items'
 
 import NavItem from './NavItem'
 
-// mini-menu - wrapper
+// ミニメニューのラッパースタイルを定義
 const PopperStyled = styled(Popper)(({ theme }) => ({
   overflow: 'visible',
   zIndex: 1202,
@@ -66,34 +74,104 @@ const PopperStyled = styled(Popper)(({ theme }) => ({
   },
 }))
 
+interface Props {
+  /**
+   * 表示するメニュー項目の情報
+   *
+   * @example
+   * {id:'landweather',
+   *  title:'国土・気象',
+   *  type:'collapse',
+   *  children:[
+   *    {id:'total-area', title:'総面積', type:'item', url:'/landweather/total-area', breadcrumbs:false},
+   *    {id:'weather', title:'天候・気象', type:'item', url:'/landweather/weather', breadcrumbs:false}
+   *  ]
+   * }
+   */
+  menu: MenuItem
+  /**
+   * 現在のメニューの階層レベル
+   *
+   * @example
+   *  - fieldId は 1（例）国土・気象、人口・世帯
+   */
+  level: number
+  /**
+   * 親メニュー項目のID
+   *
+   * @remark
+   * levelが1の場合にはNavGroupのid 例えば 'group-widget','group-applications'となる。
+   */
+  parentId: string // 'group-widget' |  'group-applications'
+  /**
+   * 現在選択されているメニュー項目のID
+   *
+   * @remark
+   * levelが1の場合はfieldId、つまり'landweather','population'...となる。
+   * childrenのid（'total-area','weather'...）ではないことに注意
+   */
+  selectedItems: string
+  /**
+   * 選択されたメニュー項目を更新するための関数
+   */
+  setSelectedItems: Dispatch<SetStateAction<string>>
+  /**
+   * 現在選択されているメニューの階層レベル
+   *
+   * @remark
+   * 基本的には1となる。
+   */
+  selectedLevel: number
+  /**
+   * 選択されたメニューレベルを更新するための関数
+   */
+  setSelectedLevel: Dispatch<SetStateAction<number>>
+}
+
 export default function NavCollapse({
   menu,
   level,
   parentId,
-  setSelectedItems,
   selectedItems,
-  setSelectedLevel,
+  setSelectedItems,
   selectedLevel,
-}) {
-  const theme = useTheme()
+  setSelectedLevel,
+}: Props) {
+  // console.log({ menu, level, parentId, selectedItems, selectedLevel })
+
   const { menuMaster } = useGetMenuMaster()
   const drawerOpen = menuMaster.isDashboardDrawerOpened
 
+  // ブレイクポイントの設定
+  const theme = useTheme()
   const downLG = useMediaQuery(theme.breakpoints.down('lg'))
 
-  const { mode, menuOrientation } = useConfig()
+  console.log({ drawerOpen, downLG })
+
+
+  const { menuOrientation } = useConfig()
+
+  console.log({ menuOrientation })
+  console.log(MenuOrientation.VERTICAL)
   const router = useRouter()
 
   const [open, setOpen] = useState(false)
   const [selected, setSelected] = useState(null)
   const [anchorEl, setAnchorEl] = useState(null)
-
   const [anchorElCollapse, setAnchorElCollapse] = React.useState(null)
-
   const openCollapse = Boolean(anchorElCollapse)
-  const handleClickCollapse = (event) => {
+
+  console.log({ open, selected, anchorEl, anchorElCollapse, openCollapse })
+  /**
+   * コラプシブルメニューを開くhandler
+   */
+  const handleClickCollapse = (event: React.MouseEvent) => {
     setAnchorElCollapse(event.currentTarget)
   }
+
+  /**
+   * コラプシブルメニューを閉じるhandler
+   */
   const handleCloseCollapse = () => {
     setAnchorElCollapse(null)
   }
@@ -105,6 +183,7 @@ export default function NavCollapse({
       setOpen(!open)
       setSelected(!selected ? menu.id : null)
       setSelectedItems(!selected ? menu.id : '')
+
       if (menu.url && isRedirect) router.push(`${menu.url}`)
     } else {
       setAnchorEl(event?.currentTarget)
@@ -221,7 +300,17 @@ export default function NavCollapse({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname, menu.children])
 
+  /**
+   * 1. 現在のURLパス（pathname）とメニュー項目のURL（menu.url）の一致を監視する。
+   * 2. 一致した場合、以下のアクションを実行します：
+   *    a. アクティブなメニュー項目を更新
+   *    b. 選択状態を設定
+   *    c. ポップオーバーメニューをクリア
+   *    d. メニューアイテムを開く
+
+   */
   useEffect(() => {
+    // console.log({ pathname, menu })
     if (menu.url === pathname) {
       handlerActiveItem(menu.id)
       setSelected(menu.id)
@@ -230,6 +319,17 @@ export default function NavCollapse({
     }
   }, [pathname, menu])
 
+  /**
+   * menuの子要素（menu.children）について、繰り返し処理を行う。
+   * - 'collapse' タイプの場合:
+   *   - NavCollapse コンポーネントを再帰的にレンダリングする。
+   *   - level を1増やして渡すことで、階層の深さを表現する。
+   *
+   * - 'item' タイプの場合:
+   *   - NavItem コンポーネントをレンダリングする。
+   *   - これは、リンクやアクションを持つ単一のメニュー項目を表す。
+   *
+   */
   const navCollapse = menu.children?.map((item) => {
     switch (item.type) {
       case 'collapse':
@@ -255,6 +355,7 @@ export default function NavCollapse({
         )
     }
   })
+
   const isSelected = selected === menu.id
   const borderIcon =
     level === 1 ? <BorderOutlined style={{ fontSize: '1rem' }} /> : false
@@ -264,9 +365,8 @@ export default function NavCollapse({
   ) : (
     borderIcon
   )
-  const textColor = mode === ThemeMode.DARK ? 'grey.400' : 'text.primary'
-  const iconSelectedColor =
-    mode === ThemeMode.DARK && drawerOpen ? 'text.primary' : 'primary.main'
+  const textColor = 'text.primary'
+  const iconSelectedColor = drawerOpen ? 'text.primary' : 'primary.main'
   const popperId = miniMenuOpened ? `collapse-pop-${menu.id}` : undefined
   const FlexBox = {
     display: 'flex',
@@ -291,16 +391,14 @@ export default function NavCollapse({
               py: !drawerOpen && level === 1 ? 1.25 : 1,
               ...(drawerOpen && {
                 '&:hover': {
-                  bgcolor:
-                    mode === ThemeMode.DARK ? 'divider' : 'primary.lighter',
+                  bgcolor: 'primary.lighter',
                 },
                 '&.Mui-selected': {
                   bgcolor: 'transparent',
                   color: iconSelectedColor,
                   '&:hover': {
                     color: iconSelectedColor,
-                    bgcolor:
-                      mode === ThemeMode.DARK ? 'divider' : 'transparent',
+                    bgcolor: 'transparent',
                   },
                 },
               }),
@@ -337,23 +435,14 @@ export default function NavCollapse({
                     alignItems: 'center',
                     justifyContent: 'center',
                     '&:hover': {
-                      bgcolor:
-                        mode === ThemeMode.DARK
-                          ? 'secondary.light'
-                          : 'secondary.lighter',
+                      bgcolor: 'secondary.lighter',
                     },
                   }),
                   ...(!drawerOpen &&
                     selected === menu.id && {
-                      bgcolor:
-                        mode === ThemeMode.DARK
-                          ? 'primary.900'
-                          : 'primary.lighter',
+                      bgcolor: 'primary.lighter',
                       '&:hover': {
-                        bgcolor:
-                          mode === ThemeMode.DARK
-                            ? 'primary.darker'
-                            : 'primary.lighter',
+                        bgcolor: 'primary.lighter',
                       },
                     }),
                 }}
@@ -453,7 +542,7 @@ export default function NavCollapse({
                       sx={{
                         overflow: 'hidden',
                         mt: 1.5,
-                        boxShadow: theme.customShadows.z1,
+                        // boxShadow: theme.customShadows.z1,
                         backgroundImage: 'none',
                         border: '1px solid',
                         borderColor: 'divider',
@@ -608,14 +697,4 @@ export default function NavCollapse({
       )}
     </>
   )
-}
-
-NavCollapse.propTypes = {
-  menu: PropTypes.any,
-  level: PropTypes.number,
-  parentId: PropTypes.string,
-  setSelectedItems: PropTypes.oneOfType([PropTypes.func, PropTypes.any]),
-  selectedItems: PropTypes.oneOfType([PropTypes.any, PropTypes.string]),
-  setSelectedLevel: PropTypes.func,
-  selectedLevel: PropTypes.number,
 }

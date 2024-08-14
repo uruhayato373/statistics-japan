@@ -1,5 +1,7 @@
 import { ForwardRefExoticComponent, RefAttributes } from 'react'
 
+import { ChipProps } from '@mui/material/Chip'
+
 import { AntdIconProps } from '@ant-design/icons/lib/components/AntdIcon'
 
 import applications from './applications'
@@ -16,6 +18,10 @@ export interface MenuItem {
   url?: string
   breadcrumbs?: boolean
   children?: MenuItem[]
+  caption?: string
+  target?: boolean
+  chip?: ChipProps
+  disabled?: boolean
 }
 
 export interface MenuGroup {
@@ -27,6 +33,7 @@ export interface MenuGroup {
   url?: string
   type: 'group'
   children?: MenuItem[]
+  caption?: string
 }
 
 export interface MenuItems {

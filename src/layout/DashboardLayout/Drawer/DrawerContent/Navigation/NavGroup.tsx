@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
 import { usePathname } from 'next/navigation'
 
@@ -19,18 +19,17 @@ import Transitions from 'components/@extended/Transitions'
 import SimpleBar from 'components/third-party/SimpleBar'
 
 import DownOutlined from '@ant-design/icons/DownOutlined'
-import GroupOutlined from '@ant-design/icons/GroupOutlined'
 import RightOutlined from '@ant-design/icons/RightOutlined'
-import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
 
 import { handlerHorizontalActiveItem, useGetMenuMaster } from 'api/menu'
 import { MenuOrientation } from 'config'
 import useConfig from 'hooks/useConfig'
+import { MenuGroup, MenuItem } from 'menu-items'
 
 import NavCollapse from './NavCollapse'
 import NavItem from './NavItem'
 
+// スタイル付きPopperコンポーネントの定義
 const PopperStyled = styled(Popper)(({ theme }) => ({
   overflow: 'visible',
   zIndex: 1202,
@@ -51,56 +50,64 @@ const PopperStyled = styled(Popper)(({ theme }) => ({
   },
 }))
 
+interface Props {
+  item: MenuGroup
+  selectedItems: string
+  setSelectedItems: Dispatch<SetStateAction<string>>
+  selectedLevel: number
+  setSelectedLevel: Dispatch<SetStateAction<number>>
+}
+
+// NavGroupコンポーネントの定義
 export default function NavGroup({
   item,
-  lastItem,
-  remItems,
-  lastItemId,
-  setSelectedItems,
   selectedItems,
-  setSelectedLevel,
+  setSelectedItems,
   selectedLevel,
-}) {
+  setSelectedLevel,
+}: Props) {
+  // テーマとパスの取得
   const theme = useTheme()
   const pathname = usePathname()
 
+  // 設定とメニューの状態の取得
   const { menuOrientation } = useConfig()
   const { menuMaster } = useGetMenuMaster()
   const drawerOpen = menuMaster.isDashboardDrawerOpened
   const selectedID = menuMaster.openedHorizontalItem
 
+  // メディアクエリの使用
   const downLG = useMediaQuery(theme.breakpoints.down('lg'))
 
+  // ステートの初期化
   const [anchorEl, setAnchorEl] = useState(null)
-  const [currentItem, setCurrentItem] = useState(item)
+  const [currentItem] = useState(item)
 
+  // ポップアップメニューの開閉状態
   const openMini = Boolean(anchorEl)
 
-  useEffect(() => {
-    if (lastItem) {
-      if (item.id === lastItemId) {
-        const localItem = { ...item }
-        const elements = remItems.map((ele) => ele.elements)
-        localItem.children = elements.flat(1)
-        setCurrentItem(localItem)
-      } else {
-        setCurrentItem(item)
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [item, lastItem, downLG])
-
-  const checkOpenForParent = (child, id) => {
+  // 親アイテムのオープン状態をチェックする関数
+  const checkOpenForParent = (child: MenuItem[], id: string) => {
     child.forEach((ele) => {
       if (ele.children?.length) {
         checkOpenForParent(ele.children, currentItem.id)
       }
       if (ele.url === pathname) {
+        console.log({ pathname })
+        console.log({ ele, id })
         handlerHorizontalActiveItem(id)
       }
     })
   }
-  const checkSelectedOnload = (data) => {
+
+  /**
+   * ページロード時にメニューアイテムの選択状態をチェックし、必要に応じて更新する関数。
+   * @param data - チェック対象のMenuGroup
+   * @remarks
+   * 現在のパスに一致するメニューアイテムを見つけた場合、対応する親アイテムをアクティブにする。
+   *
+   */
+  const checkSelectedOnload = (data: MenuGroup) => {
     const childrens = data.children ? data.children : []
     childrens.forEach((itemCheck) => {
       if (itemCheck?.children?.length) {
@@ -112,22 +119,26 @@ export default function NavGroup({
     })
   }
 
+  // useEffectフック：コンポーネントのマウント時とパスが変更されたときに実行
   useEffect(() => {
     checkSelectedOnload(currentItem)
     if (openMini) setAnchorEl(null)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname, currentItem])
 
+  // メニューアイテムクリック時のハンドラ
   const handleClick = (event) => {
     if (!openMini) {
       setAnchorEl(event?.currentTarget)
     }
   }
 
+  // メニューを閉じるハンドラ
   const handleClose = () => {
     setAnchorEl(null)
   }
 
+  // アイコンの設定
   const Icon = currentItem?.icon
   const itemIcon = currentItem?.icon ? (
     <Icon
@@ -142,6 +153,7 @@ export default function NavGroup({
     />
   ) : null
 
+  // 子メニューアイテムのレンダリング
   const navCollapse = item.children?.map((menuItem) => {
     switch (menuItem.type) {
       case 'collapse':
@@ -173,52 +185,7 @@ export default function NavGroup({
     }
   })
 
-  const moreItems = remItems.map((itemRem, i) => (
-    <Fragment key={i}>
-      {itemRem.url ? (
-        <NavItem item={itemRem} level={1} />
-      ) : (
-        itemRem.title && (
-          <Typography variant="caption" sx={{ pl: 2 }}>
-            {itemRem.title} {itemRem.url}
-          </Typography>
-        )
-      )}
-
-      {itemRem?.elements?.map((menu) => {
-        switch (menu?.type) {
-          case 'collapse':
-            return (
-              <NavCollapse
-                key={menu.id}
-                menu={menu}
-                level={1}
-                parentId={currentItem.id}
-                setSelectedItems={setSelectedItems}
-                setSelectedLevel={setSelectedLevel}
-                selectedLevel={selectedLevel}
-                selectedItems={selectedItems}
-              />
-            )
-          case 'item':
-            return <NavItem key={menu.id} item={menu} level={1} />
-          default:
-            return (
-              <Typography
-                key={menu.id}
-                variant="h6"
-                color="error"
-                align="center"
-              >
-                Menu Items Error
-              </Typography>
-            )
-        }
-      })}
-    </Fragment>
-  ))
-
-  // menu list collapse & items
+  // メインメニューアイテムのレンダリング
   const items = currentItem.children?.map((menu) => {
     switch (menu?.type) {
       case 'collapse':
@@ -245,11 +212,14 @@ export default function NavGroup({
     }
   })
 
+  // ポップアップメニューのID
   const popperId = openMini ? `group-pop-${item.id}` : undefined
 
+  // コンポーネントのレンダリング
   return (
     <>
       {menuOrientation === MenuOrientation.VERTICAL || downLG ? (
+        // 垂直方向のメニューまたは小さい画面サイズの場合のレンダリング
         <List
           subheader={
             <>
@@ -276,6 +246,7 @@ export default function NavGroup({
           {navCollapse}
         </List>
       ) : (
+        // 水平方向のメニューの場合のレンダリング
         <List>
           <ListItemButton
             selected={selectedID === currentItem.id}
@@ -293,13 +264,7 @@ export default function NavGroup({
             aria-describedby={popperId}
           >
             {itemIcon && (
-              <ListItemIcon sx={{ minWidth: 28 }}>
-                {currentItem.id === lastItemId ? (
-                  <GroupOutlined style={{ fontSize: 20, stroke: '1.5' }} />
-                ) : (
-                  itemIcon
-                )}
-              </ListItemIcon>
+              <ListItemIcon sx={{ minWidth: 28 }}>{itemIcon}</ListItemIcon>
             )}
             <ListItemText
               sx={{ mr: 1 }}
@@ -312,11 +277,7 @@ export default function NavGroup({
                       : 'secondary.dark'
                   }
                 >
-                  {currentItem.id === lastItemId ? (
-                    <FormattedMessage id="more-items" />
-                  ) : (
-                    currentItem.title
-                  )}
+                  {currentItem.title}
                 </Typography>
               }
             />
@@ -353,7 +314,7 @@ export default function NavGroup({
                               maxHeight: 'calc(100vh - 170px)',
                             }}
                           >
-                            {currentItem.id !== lastItemId ? items : moreItems}
+                            {items}
                           </SimpleBar>
                         </>
                       </ClickAwayListener>
@@ -367,15 +328,4 @@ export default function NavGroup({
       )}
     </>
   )
-}
-
-NavGroup.propTypes = {
-  item: PropTypes.any,
-  lastItem: PropTypes.number,
-  remItems: PropTypes.array,
-  lastItemId: PropTypes.string,
-  setSelectedItems: PropTypes.oneOfType([PropTypes.func, PropTypes.any]),
-  selectedItems: PropTypes.oneOfType([PropTypes.any, PropTypes.string]),
-  setSelectedLevel: PropTypes.func,
-  selectedLevel: PropTypes.number,
 }

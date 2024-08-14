@@ -57,13 +57,13 @@ const widget: MenuGroup = {
           url: '/population/total-population',
           breadcrumbs: false,
         },
-        {
-          id: 'household',
-          title: '世帯',
-          type: 'item',
-          url: '/population/household',
-          breadcrumbs: false,
-        },
+        // {
+        //   id: 'household',
+        //   title: '世帯',
+        //   type: 'item',
+        //   url: '/population/household',
+        //   breadcrumbs: false,
+        // },
       ],
     },
     {

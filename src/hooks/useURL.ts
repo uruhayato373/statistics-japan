@@ -60,6 +60,24 @@ export default function useURL() {
   }
 
   /**
+   * Drawer Nav をクリックしたときのURLを生成
+   */
+  const navURL = (fieldId: string, menuId: string) => {
+    const kindId = atomKind.kindId
+    const pageId = handlePage().items(menuId)[0].pageId
+    switch (kindId) {
+      case 'japan':
+        return `/${fieldId}/${menuId}/${kindId}`
+      case 'prefecture-rank':
+        return `/${fieldId}/${menuId}/${kindId}/${pageId}`
+      case 'prefecture':
+        return `/${fieldId}/${menuId}/${kindId}/${atomPrefecture.prefCode}`
+      default:
+        return ''
+    }
+  }
+
+  /**
    * 統計種別を変更した場合のURLを生成
    */
   const changeKindURL = (newKind: KindType): string => {
@@ -118,5 +136,6 @@ export default function useURL() {
     changeCityURL,
     currentKindURL,
     changePageURL,
+    navURL,
   }
 }

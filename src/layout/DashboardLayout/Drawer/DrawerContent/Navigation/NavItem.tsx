@@ -14,9 +14,6 @@ import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
 import Dot from 'components/@extended/Dot'
-import IconButton from 'components/@extended/IconButton'
-
-import PropTypes from 'prop-types'
 
 import {
   handlerHorizontalActiveItem,
@@ -24,11 +21,51 @@ import {
   handlerDrawerOpen,
   useGetMenuMaster,
 } from 'api/menu'
-import { MenuOrientation, ThemeMode, NavActionType } from 'config'
+import { MenuOrientation, ThemeMode } from 'config'
 import useConfig from 'hooks/useConfig'
+import useURL from 'hooks/useURL'
+import { MenuItem } from 'menu-items'
 
-export default function NavItem({ item, level, isParents = false }) {
+interface Props {
+  /**
+   * 表示するメニューアイテムの情報
+   *
+   * @example
+   * {id:'weather',
+   *  title:'総面積',
+   *  type:'item',
+   *  url:'/landweather/total-area',
+   *  breadcrumbs:false,
+   * }
+   */
+  item: MenuItem
+  /**
+   * 現在のメニューの階層レベル
+   *
+   * @example
+   *  - 1: About Site
+   *  - 2: 総面積、天候・気象、総人口、世帯...(menuId)
+   */
+  level: number
+  /**
+   * 親メニューかどうかの判定
+   *
+   * @example
+   *  - true: About Siteなど、childrenを持たないメニュー
+   *  - false: 国土・気象、人口・世帯など、childrenを持つメニュー
+   */
+  isParents?: boolean
+}
+
+export default function NavItem({ item, level, isParents = false }: Props) {
   const theme = useTheme()
+
+  /**
+   * navURL関数を使用してURLを生成する
+   */
+  const { navURL } = useURL()
+  const [menuId, fieldId] = item.url.split('/').reverse()
+  const url = level === 1 ? item.url : navURL(fieldId, menuId)
 
   const { menuMaster } = useGetMenuMaster()
   const drawerOpen = menuMaster.isDashboardDrawerOpened
@@ -37,11 +74,19 @@ export default function NavItem({ item, level, isParents = false }) {
   const downLG = useMediaQuery(theme.breakpoints.down('lg'))
 
   const { mode, menuOrientation } = useConfig()
+
+  /**
+   * item.targetがtrueの場合、新しいタブでリンクを開く
+   */
   let itemTarget = '_self'
   if (item.target) {
     itemTarget = '_blank'
   }
 
+  /**
+   * drawerOpenがtrueの場合、アイコンのサイズを1remに設定
+   * drawerOpenがfalseの場合、アイコンのサイズを1.25remに設定
+   */
   const Icon = item.icon
   const itemIcon = item.icon ? (
     <Icon
@@ -59,15 +104,18 @@ export default function NavItem({ item, level, isParents = false }) {
 
   const pathname = usePathname()
 
-  // active menu item on page load
+  /**
+   * 初回レンダリング時に、アクティブアイテムを判定する
+   */
   useEffect(() => {
-    if (pathname === item.url) handlerActiveItem(item.id)
+    const pathNameString = pathname.split('/').splice(1, 2).toString()
+    const itemUrlString = item.url.split('/').splice(1, 2).toString()
+    if (pathNameString === itemUrlString) handlerActiveItem(item.id)
     // eslint-disable-next-line
   }, [pathname])
 
-  const textColor = mode === ThemeMode.DARK ? 'grey.400' : 'text.primary'
-  const iconSelectedColor =
-    mode === ThemeMode.DARK && drawerOpen ? 'text.primary' : 'primary.main'
+  const textColor = 'text.primary'
+  const iconSelectedColor = drawerOpen ? 'text.primary' : 'primary.main'
 
   return (
     <>
@@ -75,7 +123,7 @@ export default function NavItem({ item, level, isParents = false }) {
         <Box sx={{ position: 'relative' }}>
           <ListItemButton
             component={Link}
-            href={item.url}
+            href={url}
             target={itemTarget}
             disabled={item.disabled}
             selected={isSelected}
@@ -85,19 +133,16 @@ export default function NavItem({ item, level, isParents = false }) {
               py: !drawerOpen && level === 1 ? 1.25 : 1,
               ...(drawerOpen && {
                 '&:hover': {
-                  bgcolor:
-                    mode === ThemeMode.DARK ? 'divider' : 'primary.lighter',
+                  bgcolor: 'primary.lighter',
                 },
                 '&.Mui-selected': {
-                  bgcolor:
-                    mode === ThemeMode.DARK ? 'divider' : 'primary.lighter',
+                  bgcolor: 'primary.lighter',
                   borderRight: '2px solid',
                   borderRightColor: 'primary.main',
                   color: iconSelectedColor,
                   '&:hover': {
                     color: iconSelectedColor,
-                    bgcolor:
-                      mode === ThemeMode.DARK ? 'divider' : 'primary.lighter',
+                    bgcolor: 'primary.lighter',
                   },
                 },
               }),
@@ -175,56 +220,11 @@ export default function NavItem({ item, level, isParents = false }) {
               />
             )}
           </ListItemButton>
-          {(drawerOpen || (!drawerOpen && level !== 1)) &&
-            item?.actions &&
-            item?.actions.map((action, index) => {
-              const ActionIcon = action.icon
-              const callAction = action?.function
-              return (
-                <IconButton
-                  key={index}
-                  {...(action.type === NavActionType.FUNCTION && {
-                    onClick: (event) => {
-                      event.stopPropagation()
-                      callAction()
-                    },
-                  })}
-                  {...(action.type === NavActionType.LINK && {
-                    component: Link,
-                    href: action.url,
-                    target: action.target ? '_blank' : '_self',
-                  })}
-                  color="secondary"
-                  variant="outlined"
-                  sx={{
-                    position: 'absolute',
-                    top: 12,
-                    right: 20,
-                    zIndex: 1202,
-                    width: 20,
-                    height: 20,
-                    mr: -1,
-                    ml: 1,
-                    color: 'secondary.dark',
-                    borderColor: isSelected
-                      ? 'primary.light'
-                      : 'secondary.light',
-                    '&:hover': {
-                      borderColor: isSelected
-                        ? 'primary.main'
-                        : 'secondary.main',
-                    },
-                  }}
-                >
-                  <ActionIcon style={{ fontSize: '0.625rem' }} />
-                </IconButton>
-              )
-            })}
         </Box>
       ) : (
         <ListItemButton
           component={Link}
-          href={item.url}
+          href={url}
           target={itemTarget}
           disabled={item.disabled}
           selected={isSelected}
@@ -324,10 +324,4 @@ export default function NavItem({ item, level, isParents = false }) {
       )}
     </>
   )
-}
-
-NavItem.propTypes = {
-  item: PropTypes.any,
-  level: PropTypes.number,
-  isParents: PropTypes.bool,
 }
