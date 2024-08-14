@@ -76,7 +76,7 @@ export default function AboutSite() {
                       color="secondary"
                       aria-label="Twitter"
                       component="a"
-                      href="https://twitter.com/DAISUKEMIN75743"
+                      href="https://twitter.com/uruhayato373"
                       target="_blank"
                       rel="noopener noreferrer"
                       sx={{ fontSize: '1.5rem' }}
@@ -98,7 +98,7 @@ export default function AboutSite() {
                       color="secondary"
                       aria-label="Facebook"
                       component="a"
-                      href="https://facebook.com/yourpage"
+                      href="https://instagram.com/uruhayato373"
                       target="_blank"
                       rel="noopener noreferrer"
                       sx={{ fontSize: '1.5rem' }}
