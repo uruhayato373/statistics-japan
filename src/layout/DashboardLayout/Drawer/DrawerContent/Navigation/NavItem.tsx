@@ -119,156 +119,77 @@ export default function NavItem({ item, level, isParents = false }: Props) {
 
   return (
     <>
-      {menuOrientation === MenuOrientation.VERTICAL || downLG ? (
-        <Box sx={{ position: 'relative' }}>
-          <ListItemButton
-            component={Link}
-            href={url}
-            target={itemTarget}
-            disabled={item.disabled}
-            selected={isSelected}
-            sx={{
-              zIndex: 1201,
-              pl: drawerOpen ? `${level * 28}px` : 1.5,
-              py: !drawerOpen && level === 1 ? 1.25 : 1,
-              ...(drawerOpen && {
-                '&:hover': {
-                  bgcolor: 'primary.lighter',
-                },
-                '&.Mui-selected': {
-                  bgcolor: 'primary.lighter',
-                  borderRight: '2px solid',
-                  borderRightColor: 'primary.main',
-                  color: iconSelectedColor,
-                  '&:hover': {
-                    color: iconSelectedColor,
-                    bgcolor: 'primary.lighter',
-                  },
-                },
-              }),
-              ...(!drawerOpen && {
-                '&:hover': {
-                  bgcolor: 'transparent',
-                },
-                '&.Mui-selected': {
-                  '&:hover': {
-                    bgcolor: 'transparent',
-                  },
-                  bgcolor: 'transparent',
-                },
-              }),
-            }}
-            {...(downLG && {
-              onClick: () => handlerDrawerOpen(false),
-            })}
-          >
-            {itemIcon && (
-              <ListItemIcon
-                sx={{
-                  minWidth: 28,
-                  color: isSelected ? iconSelectedColor : textColor,
-                  ...(!drawerOpen && {
-                    borderRadius: 1.5,
-                    width: 36,
-                    height: 36,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    '&:hover': {
-                      bgcolor:
-                        mode === ThemeMode.DARK
-                          ? 'secondary.light'
-                          : 'secondary.lighter',
-                    },
-                  }),
-                  ...(!drawerOpen &&
-                    isSelected && {
-                      bgcolor:
-                        mode === ThemeMode.DARK
-                          ? 'primary.900'
-                          : 'primary.lighter',
-                      '&:hover': {
-                        bgcolor:
-                          mode === ThemeMode.DARK
-                            ? 'primary.darker'
-                            : 'primary.lighter',
-                      },
-                    }),
-                }}
-              >
-                {itemIcon}
-              </ListItemIcon>
-            )}
-            {(drawerOpen || (!drawerOpen && level !== 1)) && (
-              <ListItemText
-                primary={
-                  <Typography
-                    variant="h6"
-                    sx={{ color: isSelected ? iconSelectedColor : textColor }}
-                  >
-                    {item.title}
-                  </Typography>
-                }
-              />
-            )}
-            {(drawerOpen || (!drawerOpen && level !== 1)) && item.chip && (
-              <Chip
-                color={item.chip.color}
-                variant={item.chip.variant}
-                size={item.chip.size}
-                label={item.chip.label}
-                avatar={item.chip.avatar && <Avatar>{item.chip.avatar}</Avatar>}
-              />
-            )}
-          </ListItemButton>
-        </Box>
-      ) : (
+      <Box sx={{ position: 'relative' }}>
         <ListItemButton
           component={Link}
           href={url}
           target={itemTarget}
           disabled={item.disabled}
           selected={isSelected}
-          {...(isParents && {
-            onClick: () => {
-              handlerHorizontalActiveItem(item.id)
-            },
-          })}
           sx={{
             zIndex: 1201,
-            '&:hover': {
-              bgcolor: 'transparent',
-            },
-            ...(isParents && {
-              p: 1,
-              mr: 1,
+            pl: drawerOpen ? `${level * 28}px` : 1.5,
+            py: !drawerOpen && level === 1 ? 1.25 : 1,
+            ...(drawerOpen && {
+              '&:hover': {
+                bgcolor: 'primary.lighter',
+              },
+              '&.Mui-selected': {
+                bgcolor: 'primary.lighter',
+                borderRight: '2px solid',
+                borderRightColor: 'primary.main',
+                color: iconSelectedColor,
+                '&:hover': {
+                  color: iconSelectedColor,
+                  bgcolor: 'primary.lighter',
+                },
+              },
             }),
-            '&.Mui-selected': {
-              bgcolor: 'transparent',
+            ...(!drawerOpen && {
               '&:hover': {
                 bgcolor: 'transparent',
               },
-            },
+              '&.Mui-selected': {
+                '&:hover': {
+                  bgcolor: 'transparent',
+                },
+                bgcolor: 'transparent',
+              },
+            }),
           }}
+          {...(downLG && {
+            onClick: () => handlerDrawerOpen(false),
+          })}
         >
           {itemIcon && (
             <ListItemIcon
               sx={{
                 minWidth: 28,
+                color: isSelected ? iconSelectedColor : textColor,
                 ...(!drawerOpen && {
                   borderRadius: 1.5,
-                  width: 28,
-                  height: 28,
+                  width: 36,
+                  height: 36,
                   alignItems: 'center',
-                  justifyContent: 'flex-start',
+                  justifyContent: 'center',
                   '&:hover': {
-                    bgcolor: 'transparent',
+                    bgcolor:
+                      mode === ThemeMode.DARK
+                        ? 'secondary.light'
+                        : 'secondary.lighter',
                   },
                 }),
                 ...(!drawerOpen &&
                   isSelected && {
-                    bgcolor: 'transparent',
+                    bgcolor:
+                      mode === ThemeMode.DARK
+                        ? 'primary.900'
+                        : 'primary.lighter',
                     '&:hover': {
-                      bgcolor: 'transparent',
+                      bgcolor:
+                        mode === ThemeMode.DARK
+                          ? 'primary.darker'
+                          : 'primary.lighter',
                     },
                   }),
               }}
@@ -276,41 +197,18 @@ export default function NavItem({ item, level, isParents = false }: Props) {
               {itemIcon}
             </ListItemIcon>
           )}
-
-          {!itemIcon && (
-            <ListItemIcon
-              sx={{
-                color: isSelected ? 'primary.main' : 'secondary.dark',
-                ...(!drawerOpen && {
-                  borderRadius: 1.5,
-                  alignItems: 'center',
-                  justifyContent: 'flex-start',
-                  '&:hover': {
-                    bgcolor: 'transparent',
-                  },
-                }),
-                ...(!drawerOpen &&
-                  isSelected && {
-                    bgcolor: 'transparent',
-                    '&:hover': {
-                      bgcolor: 'transparent',
-                    },
-                  }),
-              }}
-            >
-              <Dot size={4} color={isSelected ? 'primary' : 'secondary'} />
-            </ListItemIcon>
+          {(drawerOpen || (!drawerOpen && level !== 1)) && (
+            <ListItemText
+              primary={
+                <Typography
+                  variant="h6"
+                  sx={{ color: isSelected ? iconSelectedColor : textColor }}
+                >
+                  {item.title}
+                </Typography>
+              }
+            />
           )}
-          <ListItemText
-            primary={
-              <Typography
-                variant="h6"
-                color={isSelected ? 'primary.main' : 'secondary.dark'}
-              >
-                {item.title}
-              </Typography>
-            }
-          />
           {(drawerOpen || (!drawerOpen && level !== 1)) && item.chip && (
             <Chip
               color={item.chip.color}
@@ -321,7 +219,7 @@ export default function NavItem({ item, level, isParents = false }: Props) {
             />
           )}
         </ListItemButton>
-      )}
+      </Box>
     </>
   )
 }

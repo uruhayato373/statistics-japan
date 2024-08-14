@@ -111,7 +111,7 @@ export default function ThemeLayout() {
           />
         </Grid>
 
-        {menuOrientation === MenuOrientation.VERTICAL || downLG ? (
+        { downLG ? (
           <Grid item>
             <FormControlLabel
               value="mini"
