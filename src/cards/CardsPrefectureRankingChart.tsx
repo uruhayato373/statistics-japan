@@ -12,6 +12,7 @@ import SelectTime from 'components/SelectTime'
 
 import formatD3charts from 'utils/d3charts'
 import { DocumentType, TimeType } from 'utils/e-stat'
+import HighchartsMapChart from 'components/highcharts/HighchartsMapChart'
 
 interface Props {
   title?: string
@@ -44,7 +45,7 @@ export default function CardsPrefectureRankingChart({
         </Stack>
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
         <Suspense fallback={<CircularProgressCards />}>
-          <D3MapChart contents={mapChartContents} />
+          <HighchartsMapChart contents={mapChartContents} />
         </Suspense>
         <Box sx={{ pt: 2.25 }}>
           <Typography variant="caption" color="text.secondary">
