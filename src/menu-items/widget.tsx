@@ -1,10 +1,11 @@
-// assets
 import CloudOutlined from '@ant-design/icons/CloudOutlined'
 import DatabaseOutlined from '@ant-design/icons/DatabaseOutlined'
 import DollarOutlined from '@ant-design/icons/DollarOutlined'
 import IdcardOutlined from '@ant-design/icons/IdcardOutlined'
 import LineChartOutlined from '@ant-design/icons/LineChartOutlined'
 import UserOutlined from '@ant-design/icons/UserOutlined'
+
+import { MenuGroup } from 'menu-items'
 
 const icons = {
   UserOutlined,
@@ -15,7 +16,7 @@ const icons = {
   DollarOutlined,
 }
 
-const widget = {
+const widget: MenuGroup = {
   id: 'group-widget',
   title: 'Widgets',
   icon: icons.IdcardOutlined,

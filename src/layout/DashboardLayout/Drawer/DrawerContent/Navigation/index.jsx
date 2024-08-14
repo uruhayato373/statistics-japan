@@ -70,6 +70,8 @@ export default function Navigation() {
   // 水平方向のメニューかどうかを判定
   const isHorizontal = menuOrientation === MenuOrientation.HORIZONTAL && !downLG
 
+  console.log(isHorizontal)
+
   // 水平メニューの場合の最大項目数を設定
   const lastItem = isHorizontal ? HORIZONTAL_MAX_ITEM : null
   let lastItemIndex = menuItems.items.length - 1
