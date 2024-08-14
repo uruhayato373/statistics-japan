@@ -6,13 +6,13 @@ import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
 import CircularProgressCards from 'components/CircularProgressCards'
-import D3MapChart from 'components/d3js/D3MapChart'
+// import D3MapChart from 'components/d3js/D3MapChart'
+import HighchartsMapChart from 'components/highcharts/HighchartsMapChart'
 import MainCard from 'components/MainCard'
 import SelectTime from 'components/SelectTime'
 
 import formatD3charts from 'utils/d3charts'
 import { DocumentType, TimeType } from 'utils/e-stat'
-import HighchartsMapChart from 'components/highcharts/HighchartsMapChart'
 
 interface Props {
   title?: string
