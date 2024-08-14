@@ -98,7 +98,7 @@ export default function AboutSite() {
                       color="secondary"
                       aria-label="Facebook"
                       component="a"
-                      href="https://facebook.com/yourpage"
+                      href="https://instagram.com/uruhayato373"
                       target="_blank"
                       rel="noopener noreferrer"
                       sx={{ fontSize: '1.5rem' }}
