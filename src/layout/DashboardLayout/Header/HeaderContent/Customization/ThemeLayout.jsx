@@ -13,7 +13,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import MainCard from 'components/MainCard'
 
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu'
-import { MenuOrientation, ThemeDirection } from 'config'
+import { ThemeDirection } from 'config'
 import useConfig from 'hooks/useConfig'
 
 const defaultLayout = '/assets/images/customization/default.svg'
@@ -26,13 +26,8 @@ export default function ThemeLayout() {
   const drawerOpen = menuMaster.isDashboardDrawerOpened
   const downLG = useMediaQuery(theme.breakpoints.down('lg'))
 
-  const {
-    miniDrawer,
-    themeDirection,
-    onChangeDirection,
-    onChangeMiniDrawer,
-    menuOrientation,
-  } = useConfig()
+  const { miniDrawer, themeDirection, onChangeDirection, onChangeMiniDrawer } =
+    useConfig()
 
   let initialTheme = 'default'
   if (miniDrawer === true) initialTheme = 'mini'
@@ -111,7 +106,7 @@ export default function ThemeLayout() {
           />
         </Grid>
 
-        {menuOrientation === MenuOrientation.VERTICAL || downLG ? (
+        {downLG ? (
           <Grid item>
             <FormControlLabel
               value="mini"

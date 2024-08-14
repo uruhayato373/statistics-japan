@@ -1,4 +1,5 @@
 'use client'
+
 import { useState } from 'react'
 
 import Box from '@mui/material/Box'
@@ -8,53 +9,44 @@ import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
 import { useGetMenuMaster } from 'api/menu'
-import { HORIZONTAL_MAX_ITEM, MenuOrientation } from 'config'
+import { MenuOrientation } from 'config'
 import useConfig from 'hooks/useConfig'
 import menuItem from 'menu-items'
 
 import NavGroup from './NavGroup'
 import NavItem from './NavItem'
 
+// Navigationコンポーネント: アプリケーションのメインナビゲーションを管理
 export default function Navigation() {
+  // useConfigフックからメニューの向きを取得
   const { menuOrientation } = useConfig()
+  // メニューマスターの状態を取得
   const { menuMaster } = useGetMenuMaster()
+  // ダッシュボードドロワーの開閉状態
   const drawerOpen = menuMaster.isDashboardDrawerOpened
+  // 画面サイズがlg未満かどうかを判定
   const downLG = useMediaQuery((theme) => theme.breakpoints.down('lg'))
 
+  // 選択されたメニュー項目と階層を管理するstate
   const [selectedItems, setSelectedItems] = useState('')
   const [selectedLevel, setSelectedLevel] = useState(0)
+
+  // メニュー項目の状態を管理
   const [menuItems] = useState({ items: [...menuItem.items] })
 
+  // 水平方向のメニューかどうかを判定
   const isHorizontal = menuOrientation === MenuOrientation.HORIZONTAL && !downLG
 
-  const lastItem = isHorizontal ? HORIZONTAL_MAX_ITEM : null
-  let lastItemIndex = menuItems.items.length - 1
-  let remItems = []
+  // let remItems = []
   let lastItemId
 
-  //  first it checks menu item is more than giving HORIZONTAL_MAX_ITEM after that get lastItemid by giving horizontal max
-  // item and it sets horizontal menu by giving horizontal max item lastly slice menuItem from array and set into remItems
-
-  if (lastItem && lastItem < menuItems.items.length) {
-    lastItemId = menuItems.items[lastItem - 1].id
-    lastItemIndex = lastItem - 1
-    remItems = menuItems.items
-      .slice(lastItem - 1, menuItems.items.length)
-      .map((item) => ({
-        title: item.title,
-        elements: item.children,
-        icon: item.icon,
-        ...(item.url && {
-          url: item.url,
-        }),
-      }))
-  }
-
+  // ナビゲーショングループを生成
   const navGroups = menuItems.items
-    .slice(0, lastItemIndex + 1)
+    // .slice(0, lastItemIndex + 1)
     .map((item, index) => {
       switch (item.type) {
         case 'group':
+          // URLを持つグループ項目の処理
           if (item.url && item.id !== lastItemId) {
             return (
               <List key={item.id} {...(isHorizontal && { sx: { mt: 0.5 } })}>
@@ -64,6 +56,7 @@ export default function Navigation() {
             )
           }
 
+          // 通常のグループ項目の処理
           return (
             <NavGroup
               key={item.id}
@@ -71,13 +64,11 @@ export default function Navigation() {
               setSelectedLevel={setSelectedLevel}
               selectedLevel={selectedLevel}
               selectedItems={selectedItems}
-              lastItem={lastItem}
-              remItems={remItems}
-              lastItemId={lastItemId}
               item={item}
             />
           )
         default:
+          // 不正なタイプの項目に対するエラーメッセージ
           return (
             <Typography key={item.id} variant="h6" color="error" align="center">
               Fix - Navigation Group
@@ -86,6 +77,7 @@ export default function Navigation() {
       }
     })
 
+  // ナビゲーションのレンダリング
   return (
     <Box
       sx={{
