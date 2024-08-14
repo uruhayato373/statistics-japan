@@ -13,10 +13,7 @@ import { useTheme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
-import Dot from 'components/@extended/Dot'
-
 import {
-  handlerHorizontalActiveItem,
   handlerActiveItem,
   handlerDrawerOpen,
   useGetMenuMaster,
