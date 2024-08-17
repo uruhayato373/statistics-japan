@@ -55,8 +55,11 @@ function BreadcrumbsPage({ pages, currentPage }: Props) {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        {pages.map((item) => (
-          <MenuItem key={item.menuId} onClick={() => handleSelect(item)}>
+        {pages.map((item, index) => (
+          <MenuItem
+            key={`${item.menuId}-${index}`}
+            onClick={() => handleSelect(item)}
+          >
             {item.pageTitle}
           </MenuItem>
         ))}

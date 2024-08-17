@@ -31,22 +31,25 @@ export default async function TotalArea({ routerProps, searchParams }: Props) {
         <Box sx={{ mt: 0.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={9}>
+            <Grid item xs={12} md={10}>
               <Grid container rowSpacing={4.5} columnSpacing={3}>
-                <Grid item xs={12} lg={7}>
+                <Grid item xs={12} md={6} lg={6}>
                   {chart}
                 </Grid>
-                <Grid item xs={12} lg={5}>
+                <Grid item xs={12} md={6} lg={6}>
                   {table}
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} md={2}>
               <CardsAdsResponsive />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={9}>
               {comparison}
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <CardsAdsResponsive height={'300px'} />
             </Grid>
           </Grid>
         </Box>
