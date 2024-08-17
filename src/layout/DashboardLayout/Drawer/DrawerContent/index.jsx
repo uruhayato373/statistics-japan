@@ -1,17 +1,17 @@
-import useMediaQuery from '@mui/material/useMediaQuery'
+// import useMediaQuery from '@mui/material/useMediaQuery'
 
-import AdsResponsive from 'components/adsense/AdsResponsive'
+import AdsSquare from 'components/adsense/AdsSquare'
 import SimpleBar from 'components/third-party/SimpleBar'
 
-import { useGetMenuMaster } from 'api/menu'
+// import { useGetMenuMaster } from 'api/menu'
 
 import Navigation from './Navigation'
 
 export default function DrawerContent() {
-  const { menuMaster } = useGetMenuMaster()
-  const drawerOpen = menuMaster.isDashboardDrawerOpened
+  // const { menuMaster } = useGetMenuMaster()
+  // const drawerOpen = menuMaster.isDashboardDrawerOpened
 
-  const downLG = useMediaQuery((theme) => theme.breakpoints.down('lg'))
+  // const downLG = useMediaQuery((theme) => theme.breakpoints.down('lg'))
 
   return (
     <>
@@ -24,7 +24,7 @@ export default function DrawerContent() {
         }}
       >
         <Navigation />
-        {drawerOpen && !downLG && <AdsResponsive />}
+        <AdsSquare />
       </SimpleBar>
       {/* <NavUser /> */}
     </>
