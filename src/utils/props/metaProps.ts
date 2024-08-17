@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import { handleCity } from 'utils/city'
 import { handleKind } from 'utils/kind'
 import { handleMenu } from 'utils/menu'
+import { handlePage } from 'utils/page'
 import { handlePrefecture } from 'utils/prefecture'
 
 import generatePageTitle from './generateTitle'
@@ -19,6 +20,7 @@ const generateMetaProps = async ({
 }: RouterProps): Promise<Metadata> => {
   const currentMenu = handleMenu().findItem(menuId)
   const currentKind = handleKind().findItem(kindId)
+  const currentPage = handlePage().findItem(pageId)
   const currentPrefecture = prefCode
     ? await handlePrefecture().findItem(prefCode)
     : null
@@ -28,29 +30,29 @@ const generateMetaProps = async ({
   const title = generatePageTitle({
     menu: currentMenu,
     kind: currentKind,
+    page: currentPage,
     prefecture: currentPrefecture,
     city: currentCity,
   })
 
-  const description = `${title}の統計ダッシュボード。地域の実態を数字で把握し、新たな発見と洞察を。あなたの意思決定をサポートします。`
-
+  let description = ''
   let url = 'https://statistics-japan.com/'
   switch (kindId) {
     case 'japan':
       url += `${fieldId}/${menuId}/japan`
+      description += `日本の${currentMenu.menuTitle}をダッシュボード表示。様々な統計値をビジュアライズしています。データはCSV形式でダウンロードも可能。`
       break
     case 'prefecture-rank':
       url += `${fieldId}/${menuId}/prefecture-rank/${pageId}`
+      description += `都道府県の${currentPage.pageTitle}をコロプレス地図でランキング表示。古い年度のデータも参照できます。データは全てCSV形式でダウンロードも可能。`
       break
     case 'prefecture':
       url += `${fieldId}/${menuId}/prefecture/${prefCode}`
-      break
-    case 'city':
-      url += `${fieldId}/${menuId}/city/${prefCode}/${cityCode}`
+      description += `${currentPrefecture.prefName}の${currentMenu.menuTitle}をダッシュボード表示。様々な統計値をビジュアライズしています。データはCSV形式でダウンロードも可能。`
       break
   }
 
-  let ogImageUrl = `https://statistics-japan.com/images/${fieldId}/${menuId}`
+  let ogImageUrl = `https://statistics-japan.com/ogp/${fieldId}/${menuId}`
   switch (kindId) {
     case 'japan':
       ogImageUrl += '/japan/00000.png'

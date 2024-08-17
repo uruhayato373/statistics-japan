@@ -53,8 +53,8 @@ export async function generateMetadata({
 }: {
   params: PageParams
 }): Promise<Metadata> {
-  const { metaProps } = getProps(params.pageId)
-  return metaProps()
+  const metaData = await getProps(params.pageId).metaProps()
+  return metaData
 }
 
 // メインページコンポーネント
