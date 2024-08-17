@@ -75,6 +75,9 @@ function Breadcrumbs({
   const customLocation = location
 
   useEffect(() => {
+    setMain(undefined)
+    setItem(undefined)
+
     navigation?.items?.map((menu) => {
       if (menu.type && menu.type === 'group') {
         if (menu?.url && menu.url === customLocation) {
@@ -86,7 +89,8 @@ function Breadcrumbs({
       }
       return false
     })
-  })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [customLocation])
 
   // set active item state
   const getCollapse = (menu) => {
