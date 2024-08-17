@@ -1,4 +1,6 @@
-import { AreaType, DocumentType, ValueType } from 'utils/e-stat'
+import { AreaType, DocumentType, TimeType } from 'utils/e-stat'
+
+import calculateRatioValues from './modules/calculateRatioValues'
 
 const margeDocuments = (documents: DocumentType[], type: string = 'flat') => {
   const categories = documents.flatMap((d) => d.categories)
@@ -15,11 +17,11 @@ const margeDocuments = (documents: DocumentType[], type: string = 'flat') => {
     categories,
     areas,
     times,
-    values: type === 'ratio' ? ratioValues(areas, values) : values,
+    values: type === 'ratio' ? calculateRatioValues(values) : values,
   }
 }
 
-function removeDuplicates(array, key) {
+function removeDuplicates(array: TimeType[] | AreaType[], key: string) {
   const uniqueMap = new Map()
 
   array.forEach((item) => {
@@ -29,22 +31,6 @@ function removeDuplicates(array, key) {
   })
 
   return Array.from(uniqueMap.values())
-}
-
-const ratioValues = (areas: AreaType[], values: ValueType[]) => {
-  return areas.map((area) => {
-    const areaValues = values.filter(
-      (value) => value.areaCode === area.areaCode
-    )
-    return {
-      ...areaValues[0],
-      value: (areaValues[0].value / areaValues[1].value) * 100,
-      unit:
-        areaValues[0].unit === areaValues[1].unit
-          ? '%'
-          : `${areaValues[0].unit}/${areaValues[1].unit}`,
-    }
-  })
 }
 
 export default margeDocuments

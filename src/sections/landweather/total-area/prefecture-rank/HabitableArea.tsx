@@ -27,14 +27,14 @@ export default async function HabitableArea({ searchParams }: Props) {
   return {
     chart: (
       <CardsEstatPrefectureRankingChart
-        title={'都道府県の可住地面積ランキング'}
+        title={'可住地面積ランキング'}
         estatParams={habitableArea}
         searchParams={searchParams}
       />
     ),
     table: (
       <CardsEstatPrefectureRankingTable
-        title={'都道府県の可住地面積データ'}
+        title={'可住地面積データ'}
         estatParams={habitableArea}
         searchParams={searchParams}
       />
@@ -51,6 +51,20 @@ export default async function HabitableArea({ searchParams }: Props) {
         title={'可住地面積と総面積の相関関係'}
         paramsArray={[totalArea, habitableArea]}
         excludedAreaCode={['01000']}
+      />
+    ),
+    perTotalAreaChart: (
+      <CardsEstatPrefectureRankingChart
+        title={'可住地面積の割合ランキング'}
+        estatParams={[habitableArea, totalArea]}
+        searchParams={searchParams}
+      />
+    ),
+    perTotalAreaTable: (
+      <CardsEstatPrefectureRankingTable
+        title={'可住地面積の割合データ'}
+        estatParams={[habitableArea, totalArea]}
+        searchParams={searchParams}
       />
     ),
   }
