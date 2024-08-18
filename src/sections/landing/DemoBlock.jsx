@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import NextLink from 'next/link'
 
 import Box from '@mui/material/Box'
@@ -11,14 +10,7 @@ import Typography from '@mui/material/Typography'
 import AnimateButton from 'components/@extended/AnimateButton'
 import MainCard from 'components/MainCard'
 
-import SendOutlined from '@ant-design/icons/SendOutlined'
-
 import Animation from './Animation'
-const imgdemo1 = '/assets/images/landing/img-demo1.jpg'
-const imgdemo2 = '/assets/images/landing/img-demo2.jpg'
-const imgdemo3 = '/assets/images/landing/img-demo3.jpg'
-
-// ==============================|| LANDING - DEMO PAGE ||============================== //
 
 export default function DemoBlock() {
   return (
@@ -41,18 +33,17 @@ export default function DemoBlock() {
               <Grid container spacing={1} justifyContent="center">
                 <Grid item xs={12}>
                   <Typography variant="subtitle1" color="primary">
-                    Mantis for All
+                    statistics-japan
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
                   <Typography variant="h2" sx={{ mb: 2 }}>
-                    Complete Combo
+                    統計で見る都道府県のすがた
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
                   <Typography variant="body1">
-                    Wheather you are developer or designer, Mantis serve the
-                    need of all - No matter you are novice or expert
+                    都道府県に関する様々な統計をビジュアライズ化します。あなたの街の統計を見てみましょう。
                   </Typography>
                 </Grid>
               </Grid>
@@ -71,13 +62,12 @@ export default function DemoBlock() {
               <Grid container spacing={1.5}>
                 <Grid item xs={12}>
                   <Typography variant="h3" sx={{ fontWeight: 600, mt: 2 }}>
-                    Design Source File
+                    国土・気象
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
                   <Typography variant="body1" color="secondary">
-                    Check the live preview of Mantis figma design file. Figma
-                    file included in Plus and Extended License only.
+                    都道府県の総面積や可住地面積・林野面積、降水日数や降水量、最高気温や最低気温などの統計値を見ることができます。
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
@@ -85,33 +75,30 @@ export default function DemoBlock() {
                     <AnimateButton>
                       <Button
                         variant="outlined"
-                        endIcon={<SendOutlined />}
                         sx={{ my: 2 }}
                         component={Link}
                         href="https://www.figma.com/file/NJGFukWMHgU0LVhS4qLP4A/Mantis?node-id=106412%3A169520"
                         target="_blank"
                       >
-                        Preview Figma
+                        都道府県の統計
                       </Button>
                     </AnimateButton>
-                  </Box>
-                </Grid>
-                <Grid item xs={12}>
-                  <Box
-                    sx={{
-                      position: 'relative',
-                      width: `calc(100% + 24px)`,
-                      mb: '-30px !important',
-                    }}
-                  >
-                    <Image
-                      src={imgdemo2}
-                      alt="feature"
-                      width={370}
-                      height={325}
-                      sizes="100vw"
-                      style={{ width: '100%', height: 'auto' }}
-                    />
+                    <AnimateButton>
+                      <NextLink
+                        href="/components-overview/buttons"
+                        passHref
+                        legacyBehavior
+                      >
+                        <Button
+                          variant="contained"
+                          sx={{ my: 2 }}
+                          component={Link}
+                          target="_blank"
+                        >
+                          都道府県ランキング
+                        </Button>
+                      </NextLink>
+                    </AnimateButton>
                   </Box>
                 </Grid>
               </Grid>
@@ -158,24 +145,6 @@ export default function DemoBlock() {
                     </AnimateButton>
                   </Box>
                 </Grid>
-                <Grid item xs={12}>
-                  <Box
-                    sx={{
-                      position: 'relative',
-                      width: `calc(100% + 24px)`,
-                      mb: '-30px !important',
-                    }}
-                  >
-                    <Image
-                      src={imgdemo1}
-                      alt="feature"
-                      width={370}
-                      height={325}
-                      sizes="100vw"
-                      style={{ width: '100%', height: 'auto' }}
-                    />
-                  </Box>
-                </Grid>
               </Grid>
             </MainCard>
           </Animation>
@@ -214,24 +183,6 @@ export default function DemoBlock() {
                         Explore Documentation
                       </Button>
                     </AnimateButton>
-                  </Box>
-                </Grid>
-                <Grid item xs={12}>
-                  <Box
-                    sx={{
-                      position: 'relative',
-                      width: `calc(100% + 24px)`,
-                      mb: '-30px !important',
-                    }}
-                  >
-                    <Image
-                      src={imgdemo3}
-                      alt="feature"
-                      width={370}
-                      height={325}
-                      sizes="100vw"
-                      style={{ width: '100%', height: 'auto' }}
-                    />
                   </Box>
                 </Grid>
               </Grid>

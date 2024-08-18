@@ -4,14 +4,13 @@ import { useTheme } from '@mui/material/styles'
 import Tooltip from '@mui/material/Tooltip'
 
 import DownloadOutlined from '@ant-design/icons/DownloadOutlined'
-import PropTypes from 'prop-types'
 import { CSVLink } from 'react-csv'
 
-export default function CSVExport({ data, filename, headers }) {
+export default function CSVExport({ data, filename, columns }) {
   const theme = useTheme()
 
   return (
-    <CSVLink data={data} filename={filename} headers={headers}>
+    <CSVLink data={data} filename={filename} headers={columns}>
       <Tooltip title="CSV Export">
         <DownloadOutlined
           style={{
@@ -25,10 +24,4 @@ export default function CSVExport({ data, filename, headers }) {
       </Tooltip>
     </CSVLink>
   )
-}
-
-CSVExport.propTypes = {
-  data: PropTypes.array,
-  filename: PropTypes.string,
-  headers: PropTypes.any,
 }

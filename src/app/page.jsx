@@ -1,18 +1,12 @@
 'use client'
 
-import { useEffect } from 'react'
-
-import { useRouter } from 'next/navigation'
+import SimpleLayout from 'layout/SimpleLayout'
+import Landing from 'views/landing'
 
 export default function HomePage() {
-  const router = useRouter()
-
-  useEffect(() => {
-    router.push('/population/total-population/prefecture/28000')
-  }, [router])
-  // return (
-  //   <SimpleLayout>
-  //     <Landing />
-  //   </SimpleLayout>
-  // );
+  return (
+    <SimpleLayout>
+      <Landing />
+    </SimpleLayout>
+  )
 }

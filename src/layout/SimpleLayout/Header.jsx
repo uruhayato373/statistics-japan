@@ -32,8 +32,6 @@ import PropTypes from 'prop-types'
 
 import { ThemeMode } from 'config'
 
-// ==============================|| COMPONENTS - APP BAR ||============================== //
-
 // elevation scroll
 function ElevationScroll({ children, window }) {
   const theme = useTheme()
@@ -44,10 +42,7 @@ function ElevationScroll({ children, window }) {
     target: window ? window() : undefined,
   })
 
-  const backColorScroll =
-    theme.palette.mode === ThemeMode.DARK
-      ? theme.palette.grey[50]
-      : theme.palette.grey[800]
+  const backColorScroll = theme.palette.grey[50]
 
   return React.cloneElement(children, {
     style: {
@@ -90,7 +85,7 @@ export default function Header() {
               alignItems="center"
             >
               <Typography sx={{ textAlign: 'left', display: 'inline-block' }}>
-                <Logo reverse to="/" />
+                <Logo to="/" />
               </Typography>
             </Stack>
             <Stack
