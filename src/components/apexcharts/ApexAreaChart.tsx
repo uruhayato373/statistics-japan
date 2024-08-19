@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
@@ -41,10 +41,35 @@ const defaultOptions: ApexOptions = {
 }
 
 export default function ApexAreaChart({ propOptions }: Props): JSX.Element {
-  const options: ApexOptions = {
+  const [options, setOptions] = useState<ApexOptions>({
     ...defaultOptions,
     ...propOptions,
-  }
+  })
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isXsScreen = window.innerWidth < 576 // Assuming xs is below 576px
+
+      setOptions((prevOptions) => ({
+        ...prevOptions,
+        yaxis: {
+          ...prevOptions.yaxis,
+          show: !isXsScreen,
+        },
+      }))
+    }
+
+    // Initial check
+    handleResize()
+
+    // Add event listener
+    window.addEventListener('resize', handleResize)
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <ReactApexChart
