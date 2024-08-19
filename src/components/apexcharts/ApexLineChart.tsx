@@ -3,10 +3,7 @@
 import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
-import { ApexChartTimeContentsType } from 'utils/apexcharts'
-
 interface Props {
-  contents: ApexChartTimeContentsType
   customOptions?: ApexOptions
 }
 
@@ -62,37 +59,24 @@ const defaultOptions: ApexOptions = {
   },
 }
 
-export default function ApexLineChart({ contents, customOptions }: Props) {
-  const { series, categories } = contents
-
-  const formatYAxisLabels = (axis: ApexYAxis): ApexYAxis => ({
-    ...axis,
-    labels: {
-      ...axis.labels,
-      formatter: (value) => Math.round(value).toLocaleString('ja-JP'),
-    },
-  })
+export default function ApexLineChart({ customOptions }: Props) {
+  // const formatYAxisLabels = (axis: ApexYAxis): ApexYAxis => ({
+  //   ...axis,
+  //   labels: {
+  //     ...axis.labels,
+  //     formatter: (value) => Math.round(value).toLocaleString('ja-JP'),
+  //   },
+  // })
 
   const options: ApexOptions = {
     ...defaultOptions,
     ...customOptions,
-    // xaxisカテゴリーを確実に保持
-    xaxis: {
-      ...defaultOptions.xaxis,
-      ...customOptions?.xaxis,
-      categories: categories,
-    },
-    yaxis: Array.isArray(customOptions?.yaxis)
-      ? customOptions.yaxis.map(formatYAxisLabels)
-      : customOptions?.yaxis
-        ? formatYAxisLabels(customOptions.yaxis)
-        : defaultOptions.yaxis,
   }
 
   return (
     <ReactApexChart
       options={options}
-      series={series}
+      series={options.series}
       type="line"
       height={400}
     />

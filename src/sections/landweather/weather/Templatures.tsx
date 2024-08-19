@@ -1,4 +1,7 @@
-import CardsApexLine from 'cards/CardsApexLine'
+import Box from '@mui/material/Box'
+
+import ApexLineChart from 'components/apexcharts/ApexLineChart'
+import MainCard from 'components/MainCard'
 
 import formatApexcharts from 'utils/apexcharts'
 import handleEstatAPI from 'utils/e-stat'
@@ -28,7 +31,13 @@ interface Props {
 export default async function Templatures({ routerProps }: Props) {
   const document = await handleEstatAPI(params(routerProps)).fetchDocument()
 
-  const contents = formatApexcharts(document).timeChart()
+  const contents = formatApexcharts(document).AxisTimeChart()
 
-  return <CardsApexLine title={'気温の推移'} contents={contents} />
+  return (
+    <MainCard content={false} title={'気温の推移'}>
+      <Box sx={{ pt: 1, pr: 2 }}>
+        <ApexLineChart customOptions={contents} />
+      </Box>
+    </MainCard>
+  )
 }

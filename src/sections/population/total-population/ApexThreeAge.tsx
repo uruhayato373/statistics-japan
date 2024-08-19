@@ -1,4 +1,8 @@
-import CardsApexColumn from 'cards/CardsApexColumn'
+import Box from '@mui/material/Box'
+
+// import CardsApexColumn from 'cards/CardsApexColumn'
+import ApexLineChart from 'components/apexcharts/ApexLineChart'
+import MainCard from 'components/MainCard'
 
 import formatApexcharts from 'utils/apexcharts'
 import handleEstatAPI from 'utils/e-stat'
@@ -34,7 +38,13 @@ interface Props {
 export default async function ApexThreeAge({ routerProps }: Props) {
   const document = await handleEstatAPI(params(routerProps)).fetchDocument()
 
-  const contents = formatApexcharts(document).timeChart()
+  const contents = formatApexcharts(document).AxisTimeChart()
 
-  return <CardsApexColumn title={'年齢3区分別人口の推移'} contents={contents} />
+  return (
+    <MainCard content={false} title={'総人口の推移'}>
+      <Box sx={{ pt: 1, pr: 2 }}>
+        <ApexLineChart customOptions={contents} />
+      </Box>
+    </MainCard>
+  )
 }

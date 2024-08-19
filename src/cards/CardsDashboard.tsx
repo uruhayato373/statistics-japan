@@ -82,7 +82,7 @@ export default function CardsDashboardSingle({
         </Typography>
         <Grid container alignItems="center">
           <Grid item>
-            <Typography variant="h4" color="inherit">
+            <Typography variant="h5" color="inherit">
               {formattedCurValue} {unit}
             </Typography>
           </Grid>
@@ -99,7 +99,19 @@ export default function CardsDashboardSingle({
                   )
                 }
                 label={`${rate}%`}
-                sx={{ ml: 1.25, pl: 1 }}
+                sx={{
+                  ml: 1.25,
+                  pl: 1,
+                  height: '20px', // チップの高さを小さく
+                  '& .MuiChip-label': {
+                    padding: '0 6px',
+                    fontSize: '0.65rem', // フォントサイズを小さく
+                  },
+                  '& .MuiChip-icon': {
+                    fontSize: '0.65rem', // アイコンのサイズも小さく
+                    marginLeft: '4px',
+                  },
+                }}
                 size="small"
               />
             </Grid>
