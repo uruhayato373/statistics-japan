@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID
+export const GA_MEASUREMENT_ID = process.env.GA_ID
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: string) => {

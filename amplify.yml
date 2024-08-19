@@ -4,14 +4,12 @@ frontend:
     preBuild:
       commands:
         - npm ci
-        - npm install -g node-gyp
-        - npm install --arch=x64 --platform=linux sharp
-        - npm install --save-dev @types/sharp
     build:
       commands:
         - npm run build
         - echo "ESTAT_API_APPID=$ESTAT_API_APPID" >> .env
         - echo "RESAS_API_KEY=$RESAS_API_KEY" >> .env
+        - echo "GA_ID=$GA_ID" >> .env
   artifacts:
     baseDirectory: .next
     files:

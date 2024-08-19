@@ -6,7 +6,7 @@ import Laborwage from './Laborwage'
 import LandWeather from './LandWeather'
 import Population from './Population'
 
-export default function DemoBlock() {
+export default function MainBlock() {
   return (
     <Container>
       <Grid

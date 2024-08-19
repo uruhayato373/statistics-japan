@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ja">
       <head>
-        {/* Google Seach Console スクリプト */}
+        {/* Google Search Console スクリプト */}
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
