@@ -2,6 +2,8 @@ import { AreaType, DocumentType, TimeType } from 'utils/e-stat'
 
 import calculateRatioValues from './modules/calculateRatioValues'
 
+export type * from './types/document'
+
 const margeDocuments = (documents: DocumentType[], type: string = 'flat') => {
   const categories = documents.flatMap((d) => d.categories)
   const areas = removeDuplicates(

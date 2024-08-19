@@ -12,14 +12,11 @@ export interface TimeType {
  * 統計値のカテゴリ区分
  * @property {string} categoryCode - コード
  * @property {string} categoryName - 名称（総人口、男性、女性 etc）
- * @property {string} categoryUnit - 単位（人、ha etc）
- * @property {boolean} opposite - y軸の位置（true: 右側, false: 左側）
  */
 export interface CategoryType {
   categoryCode: string
   categoryName: string
   categoryUnit?: string
-  opposite?: boolean
 }
 
 /**

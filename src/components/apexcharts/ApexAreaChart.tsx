@@ -5,54 +5,52 @@ import React from 'react'
 import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
-import { ApexChartTimeContentsType } from 'utils/apexcharts'
-
-/**
- * ApexAreaChartのプロパティ型定義
- * @interface Props
- * @property {ApexChartTimeContentsType} contents - チャートのデータとカテゴリを含むオブジェクト
- */
 interface Props {
-  contents: ApexChartTimeContentsType
+  propOptions: ApexOptions
 }
 
-/**
- * エリアチャートを描画するコンポーネント
- * @param {Props} props - コンポーネントのプロパティ
- * @returns {JSX.Element} ApexChartsを使用したエリアチャート
- */
-export default function ApexAreaChart({ contents }: Props): JSX.Element {
-  const { series, categories } = contents
-
-  /**
-   * チャートのオプション設定
-   * @type {ApexOptions}
-   */
-  const options: ApexOptions = {
-    chart: {
-      height: 350,
-      type: 'area',
-    },
-    dataLabels: {
+const defaultOptions: ApexOptions = {
+  chart: {
+    height: 350,
+    type: 'area',
+    zoom: {
       enabled: false,
     },
-    stroke: {
-      curve: 'smooth',
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    curve: 'smooth',
+  },
+  xaxis: {
+    labels: {
+      show: false, // xaxisのラベルを非表示
     },
-    xaxis: {
-      categories: categories,
+    axisBorder: {
+      show: false, // x軸の境界線を非表示
     },
-    tooltip: {
-      x: {
-        format: 'dd/MM/yy HH:mm',
-      },
+    axisTicks: {
+      show: false, // x軸の目盛りを非表示
     },
+  },
+  tooltip: {
+    x: {
+      format: 'dd/MM/yy HH:mm',
+    },
+  },
+}
+
+export default function ApexAreaChart({ propOptions }: Props): JSX.Element {
+  const options: ApexOptions = {
+    ...defaultOptions,
+    ...propOptions,
   }
 
   return (
     <ReactApexChart
       options={options}
-      series={series}
+      series={options.series}
       type="area"
       height={500}
     />

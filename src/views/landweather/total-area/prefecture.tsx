@@ -6,7 +6,7 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import ApexPie from 'sections/landweather/total-area/ApexPie'
-import ApexTotalArea from 'sections/landweather/total-area/ApexTotalArea'
+import AreaChartTotalArea from 'sections/landweather/total-area/AreaChartTotalArea'
 import DashboardForestLandArea from 'sections/landweather/total-area/DashboardForestLandArea'
 import DashboardHabitableArea from 'sections/landweather/total-area/DashboardHabitableArea'
 import DashboardTotalArea from 'sections/landweather/total-area/DashboardTotalArea'
@@ -38,7 +38,7 @@ export default async function TotalAreaPrefecture({ routerProps }: Props) {
           </Grid>
           {/* row 2 */}
           <Grid item xs={12} sm={6} md={4} lg={8}>
-            <ApexTotalArea routerProps={routerProps} />
+            <AreaChartTotalArea routerProps={routerProps} />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={4}>
             <ApexPie routerProps={routerProps} />
