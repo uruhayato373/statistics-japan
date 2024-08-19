@@ -13,8 +13,9 @@ import './globals.css'
 import ProviderWrapper from './ProviderWrapper'
 
 export const metadata: Metadata = {
-  title: 'Mantis Material UI React Dashboard Template',
-  description: 'Mantis Material UI React Dashboard Template',
+  title: '統計で見る都道府県',
+  description:
+    '都道府県に関する様々な統計をビジュアライズ化します。あなたの街の統計を見てみましょう。',
   verification: {
     google: '280OS5AQFAPj4f0U4MBLC2QOXi7pPmrBe2Vka5__2W4',
   },

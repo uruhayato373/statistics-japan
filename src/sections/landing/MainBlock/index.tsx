@@ -32,7 +32,7 @@ export default function MainBlock() {
                 </Grid>
                 <Grid item xs={12}>
                   <Typography variant="h2" sx={{ mb: 2 }}>
-                    統計で見る都道府県のすがた
+                    統計で見る都道府県
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
