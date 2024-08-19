@@ -11,7 +11,6 @@ interface Props {
 
 const defaultOptions: ApexOptions = {
   chart: {
-    height: 350,
     type: 'area',
     zoom: {
       enabled: false,
@@ -52,7 +51,7 @@ export default function ApexAreaChart({ propOptions }: Props): JSX.Element {
       options={options}
       series={options.series}
       type="area"
-      height={500}
+      height={350}
     />
   )
 }
