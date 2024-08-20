@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // output: 'export',
   modularizeImports: {
     '@mui/material': {
       transform: '@mui/material/{{member}}',

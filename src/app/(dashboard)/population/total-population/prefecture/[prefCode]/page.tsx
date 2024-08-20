@@ -4,6 +4,7 @@ import { Metadata } from 'next'
 
 import Loader from 'components/Loader'
 
+import { handlePrefecture } from 'utils/prefecture'
 import handleProps from 'utils/props'
 import Prefecture from 'views/population/total-population/prefecture'
 
@@ -25,6 +26,14 @@ const getProps = (prefCode: string) =>
     kindId: KIND_ID,
     prefCode,
   })
+
+export async function generateStaticParams() {
+  const prefectures = await handlePrefecture().fetchItems()
+
+  return prefectures.map((p) => ({
+    prefCode: p.prefCode,
+  }))
+}
 
 /**
  * メタデータを生成

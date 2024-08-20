@@ -35,6 +35,7 @@ export const fetchResasAPI = async <T>(
       headers: {
         'X-API-KEY': RESAS_API_KEY,
       },
+      cache: 'force-cache',
     }
 
     if (PROXY_URL) {
