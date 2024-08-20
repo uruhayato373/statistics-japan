@@ -12,6 +12,7 @@ import formatApexcharts from 'utils/apexcharts'
 import { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
+import CardsApexAreaChart from 'cards/CardsApexAreaChart'
 
 const TITLE = '総面積の推移'
 
@@ -75,7 +76,7 @@ function prepareChartOptions(document: DocumentType): ApexOptions {
   }
 }
 
-export default async function ApexAreaChartTotalArea({ prefecture }: Props) {
+export default async function AreaChartTotalArea({ prefecture }: Props) {
   const { prefCode, prefName } = prefecture
 
   const title = `${prefName}の${TITLE}`
@@ -85,11 +86,7 @@ export default async function ApexAreaChartTotalArea({ prefecture }: Props) {
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <MainCard content={false} title={title}>
-        <Box sx={{ pt: 1, pr: 2 }}>
-          <ApexAreaChart customOptions={options} height={300} />
-        </Box>
-      </MainCard>
+      <CardsApexAreaChart title={title} document={document} options={options} />
     </Suspense>
   )
 }

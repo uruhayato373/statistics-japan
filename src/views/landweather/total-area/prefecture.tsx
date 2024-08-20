@@ -7,7 +7,6 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import CardsAdsResponsive from 'cards/CardsAdsResponsive'
 
-import ApexAreaChartTotalArea from 'sections/landweather/total-area/ApexAreaChartTotalArea'
 import DashboardForestLandArea from 'sections/landweather/total-area/DashboardForestLandArea'
 import DashboardHabitableArea from 'sections/landweather/total-area/DashboardHabitableArea'
 import DashboardTotalArea from 'sections/landweather/total-area/DashboardTotalArea'
@@ -15,6 +14,7 @@ import PieChartHabitableArea from 'sections/landweather/total-area/PieChartHabit
 import TableParks from 'sections/landweather/total-area/TableParks'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
+import AreaChartTotalArea from 'sections/landweather/total-area/AreaChartTotalArea'
 
 interface Props {
   routerProps: RouterProps
@@ -44,7 +44,7 @@ export default async function TotalAreaPrefecture({ routerProps }: Props) {
           </Grid>
           {/* row 2 */}
           <Grid item xs={12} sm={12} md={12} lg={7}>
-            <ApexAreaChartTotalArea prefecture={currentPrefecture} />
+            <AreaChartTotalArea prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={5}>
             <PieChartHabitableArea prefecture={currentPrefecture} />

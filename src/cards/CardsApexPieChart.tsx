@@ -22,9 +22,15 @@ interface Props {
   title: string
   document: DocumentType
   options?: ApexOptions
+  height?: string
 }
 
-export default function CardsApexPieChart({ title, document, options }: Props) {
+export default function CardsApexPieChart({
+  title,
+  document,
+  options,
+  height = '400px',
+}: Props) {
   const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
 
   const { times, categories } = document
@@ -48,7 +54,7 @@ export default function CardsApexPieChart({ title, document, options }: Props) {
 
   return (
     <MainCard content={false}>
-      <Box sx={{ p: 2, pb: 0, height: '400px' }}>
+      <Box sx={{ p: 2, pb: 0, height }}>
         <Stack
           direction="row"
           alignItems="center"
