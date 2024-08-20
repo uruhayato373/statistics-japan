@@ -1,12 +1,16 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useMemo } from 'react'
 
 import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
 interface Props {
-  propOptions: ApexOptions
+  customOptions: ApexOptions
+}
+
+interface CustomSeries extends ApexAxisChartSeries {
+  unit?: string
 }
 
 const defaultOptions: ApexOptions = {
@@ -34,42 +38,80 @@ const defaultOptions: ApexOptions = {
     },
   },
   tooltip: {
-    x: {
-      format: 'dd/MM/yy HH:mm',
+    y: {
+      formatter: (value, { seriesIndex, w }) => {
+        const series = w.config.series[seriesIndex] as CustomSeries
+        const unit = series.unit || ''
+        return `${formatYAxisLabels(value)} ${unit}`
+      },
     },
   },
 }
 
-export default function ApexAreaChart({ propOptions }: Props): JSX.Element {
-  const [options, setOptions] = useState<ApexOptions>({
-    ...defaultOptions,
-    ...propOptions,
+const formatYAxisLabels = (value: number): string => {
+  if (typeof value === 'number') {
+    return value.toLocaleString()
+  } else if (typeof value === 'string') {
+    const num = parseFloat(value)
+    return isNaN(num) ? value : num.toLocaleString()
+  } else {
+    return '-'
+  }
+}
+
+const applyFormatterToYAxis = (
+  yaxis: ApexYAxis | ApexYAxis[] | undefined
+): ApexYAxis | ApexYAxis[] | undefined => {
+  if (!yaxis) return undefined
+
+  const applyFormatter = (axis: ApexYAxis): ApexYAxis => ({
+    ...axis,
+    labels: {
+      ...axis.labels,
+      formatter: (value) => {
+        if (
+          axis.labels?.formatter &&
+          typeof axis.labels.formatter === 'function'
+        ) {
+          try {
+            return axis.labels.formatter(value)
+          } catch (error) {
+            console.error('Custom formatter error:', error)
+            return formatYAxisLabels(value)
+          }
+        }
+        return formatYAxisLabels(value)
+      },
+    },
   })
 
-  useEffect(() => {
-    const handleResize = () => {
-      const isXsScreen = window.innerWidth < 576 // Assuming xs is below 576px
+  if (Array.isArray(yaxis)) {
+    return yaxis.map(applyFormatter)
+  } else {
+    return applyFormatter(yaxis)
+  }
+}
 
-      setOptions((prevOptions) => ({
-        ...prevOptions,
-        yaxis: {
-          ...prevOptions.yaxis,
-          show: !isXsScreen,
+export default function ApexAreaChart({ customOptions }: Props): JSX.Element {
+  const options = useMemo<ApexOptions>(() => {
+    const mergedOptions = { ...defaultOptions, ...customOptions }
+    return {
+      ...mergedOptions,
+      yaxis: applyFormatterToYAxis(mergedOptions.yaxis),
+      tooltip: {
+        ...mergedOptions.tooltip,
+        y: {
+          ...mergedOptions.tooltip?.y,
+          formatter: (value, { seriesIndex, w }) => {
+            const series = w.config.series[seriesIndex] as CustomSeries
+            const unit = series.unit || ''
+            const formattedValue = formatYAxisLabels(value)
+            return `${formattedValue} ${unit}`.trim()
+          },
         },
-      }))
+      },
     }
-
-    // Initial check
-    handleResize()
-
-    // Add event listener
-    window.addEventListener('resize', handleResize)
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
+  }, [customOptions])
 
   return (
     <ReactApexChart

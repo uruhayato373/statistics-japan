@@ -5,8 +5,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import ApexChartTotalArea from 'sections/landweather/total-area/ApexChartTotalArea'
 import ApexPie from 'sections/landweather/total-area/ApexPie'
-import AreaChartTotalArea from 'sections/landweather/total-area/AreaChartTotalArea'
 import DashboardForestLandArea from 'sections/landweather/total-area/DashboardForestLandArea'
 import DashboardHabitableArea from 'sections/landweather/total-area/DashboardHabitableArea'
 import DashboardTotalArea from 'sections/landweather/total-area/DashboardTotalArea'
@@ -21,6 +21,7 @@ interface Props {
 export default async function TotalAreaPrefecture({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
+    const { currentPrefecture } = breadcrumbsProps
 
     return (
       <Suspense fallback={<CircularProgressViews />}>
@@ -38,7 +39,7 @@ export default async function TotalAreaPrefecture({ routerProps }: Props) {
           </Grid>
           {/* row 2 */}
           <Grid item xs={12} sm={6} md={4} lg={8}>
-            <AreaChartTotalArea routerProps={routerProps} />
+            <ApexChartTotalArea prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={4}>
             <ApexPie routerProps={routerProps} />
