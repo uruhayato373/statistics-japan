@@ -13,20 +13,12 @@ const FIELD_ID = 'population'
 const MENU_ID = 'total-population'
 const KIND_ID = 'prefecture'
 
-// 型定義
+// Dynamic Routesの型定義
 interface Params {
   prefCode: string
 }
 
-// 共通のhandleProps呼び出し
-const getProps = (prefCode: string) =>
-  handleProps({
-    fieldId: FIELD_ID,
-    menuId: MENU_ID,
-    kindId: KIND_ID,
-    prefCode,
-  })
-
+// 静的に生成するパスを指定
 export async function generateStaticParams() {
   const prefectures = await handlePrefecture().fetchItems()
 
@@ -35,9 +27,16 @@ export async function generateStaticParams() {
   }))
 }
 
-/**
- * メタデータを生成
- */
+// 共通のhandlePropsを取得
+const getProps = (prefCode: string) =>
+  handleProps({
+    fieldId: FIELD_ID,
+    menuId: MENU_ID,
+    kindId: KIND_ID,
+    prefCode,
+  })
+
+// メタ情報を生成
 export async function generateMetadata({
   params,
 }: {
@@ -48,6 +47,7 @@ export async function generateMetadata({
   return metaProps()
 }
 
+// ページコンポーネント
 const Page = ({ params }: { params: Params }) => {
   const { prefCode } = params
   const { routerProps } = getProps(prefCode)
