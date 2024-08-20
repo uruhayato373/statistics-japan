@@ -61,10 +61,10 @@ export default async function Prefecture({ routerProps }: Props) {
             <LineChartPrecipitation prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={6}>
-            <TableTemplatures routerProps={routerProps} />
+            <TableTemplatures prefecture={currentPrefecture}  />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={6}>
-            <TableDays routerProps={routerProps} />
+            <TableDays prefecture={currentPrefecture}  />
           </Grid>
         </Grid>
       </Suspense>

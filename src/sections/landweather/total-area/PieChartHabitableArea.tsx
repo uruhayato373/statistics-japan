@@ -1,4 +1,5 @@
 import { ApexOptions } from 'apexcharts'
+
 import CardsApexPieChart from 'cards/CardsApexPieChart'
 
 import handleEstatAPI from 'utils/e-stat'

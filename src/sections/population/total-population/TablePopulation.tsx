@@ -1,42 +1,30 @@
 import CardsTimeTable from 'cards/CardsTimeTable'
 
 import handleEstatAPI from 'utils/e-stat'
-import { RouterProps } from 'utils/props'
-import formatTable from 'utils/table'
+import { PrefectureType } from 'utils/prefecture'
 
-const categories = ['A1101', 'A110101', 'A110102', 'A1301', 'A1302', 'A1303']
+const TITLE = '総人口のデータ'
 
-const params = (routerProps: RouterProps) => {
-  switch (routerProps.kindId) {
-    case 'japan':
-      return {
-        statsDataId: '0000010101',
-        cdCat01: categories,
-        cdArea: '00000',
-      }
-    case 'prefecture':
-      return {
-        statsDataId: '0000010101',
-        cdCat01: categories,
-        cdArea: routerProps.prefCode,
-      }
-    case 'city':
-      return {
-        statsDataId: '0000020201',
-        cdCat01: categories,
-        cdArea: routerProps.cityCode,
-      }
-  }
+const ESTAT_PARAMS = {
+  statsDataId: '0000010101',
+  cdCat01: ['A1101', 'A110101', 'A110102', 'A1301', 'A1302', 'A1303'],
 }
 
 interface Props {
-  routerProps: RouterProps
+  prefecture: PrefectureType
 }
 
-export default async function TablePopulation({ routerProps }: Props) {
-  const document = await handleEstatAPI(params(routerProps)).fetchDocument()
+async function fetchEstatData(prefCode: string) {
+  const estatParams = { ...ESTAT_PARAMS, cdArea: prefCode }
+  return await handleEstatAPI(estatParams).fetchDocument()
+}
 
-  const contents = formatTable(document).reactTable()
+export default async function TablePopulation({ prefecture }: Props) {
+  const { prefCode, prefName } = prefecture
 
-  return <CardsTimeTable title={'総人口のデータ'} contents={contents} />
+  const title = `${prefName}の${TITLE}`
+
+  const document = await fetchEstatData(prefCode)
+
+  return <CardsTimeTable title={title} document={document} />
 }

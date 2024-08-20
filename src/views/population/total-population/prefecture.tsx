@@ -54,7 +54,7 @@ export default async function Prefecture({ routerProps }: Props) {
             <ApexPopulationPyramid routerProps={routerProps} />
           </Grid>
           <Grid item xs={12} md={5} lg={7}>
-            <TablePopulation routerProps={routerProps} />
+            <TablePopulation prefecture={currentPrefecture} />
           </Grid>
         </Grid>
       </Suspense>

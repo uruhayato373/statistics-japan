@@ -35,7 +35,7 @@ export default function ReactTable({ columns, data }: Props) {
     <TableContainer
       component={Paper}
       sx={{
-        maxHeight: 350,
+        maxHeight: 300,
         overflow: 'auto',
         '& .MuiTableHead-root': {
           position: 'sticky',

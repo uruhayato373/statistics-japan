@@ -1,48 +1,30 @@
 import CardsTimeTable from 'cards/CardsTimeTable'
 
 import handleEstatAPI from 'utils/e-stat'
-import { RouterProps } from 'utils/props'
-import formatTable from 'utils/table'
+import { PrefectureType } from 'utils/prefecture'
 
-const categories = ['B4101', 'B4102', 'B4103', 'B4111']
+const TITLE = '気温・湿度のデータ'
 
-const params = (routerProps: RouterProps) => {
-  switch (routerProps.kindId) {
-    case 'japan':
-      return {
-        statsDataId: '0000010102',
-        cdCat01: categories,
-        cdArea: '00000',
-      }
-    case 'prefecture':
-      return {
-        statsDataId: '0000010102',
-        cdCat01: categories,
-        cdArea: routerProps.prefCode,
-      }
-  }
+const ESTAT_PARAMS = {
+  statsDataId: '0000010102',
+  cdCat01: ['B4101', 'B4102', 'B4103', 'B4111'],
 }
 
 interface Props {
-  routerProps: RouterProps
+  prefecture: PrefectureType
 }
 
-export default async function TableTemplatures({ routerProps }: Props) {
-  const document = await handleEstatAPI(params(routerProps)).fetchDocument()
+async function fetchEstatData(prefCode: string) {
+  const estatParams = { ...ESTAT_PARAMS, cdArea: prefCode }
+  return await handleEstatAPI(estatParams).fetchDocument()
+}
 
-  const contents = formatTable(document).reactTable()
+export default async function TableTemplatures({ prefecture }: Props) {
+  const { prefCode, prefName } = prefecture
 
-  contents.columns = contents.columns.map((d) => {
-    return {
-      ...d,
-      header: d.header
-        .replace('（日最高気温の月平均の最高値）', '')
-        .replace('（日最低気温の月平均の最低値）', ''),
-      footer: d.footer
-        .replace('（日最高気温の月平均の最高値）', '')
-        .replace('（日最低気温の月平均の最低値）', ''),
-    }
-  })
+  const title = `${prefName}の${TITLE}`
 
-  return <CardsTimeTable title={'気温・湿度のデータ'} contents={contents} />
+  const document = await fetchEstatData(prefCode)
+
+  return <CardsTimeTable title={title} document={document} />
 }

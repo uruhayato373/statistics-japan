@@ -50,7 +50,7 @@ export default async function TotalAreaPrefecture({ routerProps }: Props) {
             <PieChartHabitableArea prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={6}>
-            <TableParks routerProps={routerProps} />
+            <TableParks prefecture={currentPrefecture} />
           </Grid>
         </Grid>
       </Suspense>

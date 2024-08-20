@@ -58,7 +58,7 @@ export default function HighchartsMapChart({ contents }: Props) {
     colorAxis: {
       min: 0,
       stops: [
-        [0, '#EFEFFF'],
+        [0, '#FFFFFF'],
         [0.5, '#3366FF'],
         [1, '#D6E4FF'],
       ],

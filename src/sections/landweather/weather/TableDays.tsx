@@ -1,38 +1,30 @@
 import CardsTimeTable from 'cards/CardsTimeTable'
 
 import handleEstatAPI from 'utils/e-stat'
-import { RouterProps } from 'utils/props'
-import formatTable from 'utils/table'
+import { PrefectureType } from 'utils/prefecture'
 
-const categories = ['B4106', 'B4109', 'B4108']
+const TITLE = '公園面積のデータ'
 
-const params = (routerProps: RouterProps) => {
-  switch (routerProps.kindId) {
-    case 'japan':
-      return {
-        statsDataId: '0000010102',
-        cdCat01: categories,
-        cdArea: '00000',
-      }
-    case 'prefecture':
-      return {
-        statsDataId: '0000010102',
-        cdCat01: categories,
-        cdArea: routerProps.prefCode,
-      }
-  }
+const ESTAT_PARAMS = {
+  statsDataId: '0000010102',
+  cdCat01: ['B4106', 'B4109', 'B4108'],
 }
 
 interface Props {
-  routerProps: RouterProps
+  prefecture: PrefectureType
 }
 
-export default async function TableDays({ routerProps }: Props) {
-  const document = await handleEstatAPI(params(routerProps)).fetchDocument()
+async function fetchEstatData(prefCode: string) {
+  const estatParams = { ...ESTAT_PARAMS, cdArea: prefCode }
+  return await handleEstatAPI(estatParams).fetchDocument()
+}
 
-  const contents = formatTable(document).reactTable()
+export default async function TableDays({ prefecture }: Props) {
+  const { prefCode, prefName } = prefecture
 
-  return (
-    <CardsTimeTable title={'降水量・日照時間のデータ'} contents={contents} />
-  )
+  const title = `${prefName}の${TITLE}`
+
+  const document = await fetchEstatData(prefCode)
+
+  return <CardsTimeTable title={title} document={document} />
 }
