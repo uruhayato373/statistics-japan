@@ -8,6 +8,9 @@ import { handlePrefecture } from 'utils/prefecture'
 import handleProps from 'utils/props'
 import Prefecture from 'views/population/total-population/prefecture'
 
+// SSGとしてレンダリング
+export const dynamic = 'force-static'
+
 // 定数
 const FIELD_ID = 'population'
 const MENU_ID = 'total-population'
