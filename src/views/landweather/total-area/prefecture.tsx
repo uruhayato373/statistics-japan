@@ -7,6 +7,7 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import CardsAdsResponsive from 'cards/CardsAdsResponsive'
 
+import AreaChartTotalArea from 'sections/landweather/total-area/AreaChartTotalArea'
 import DashboardForestLandArea from 'sections/landweather/total-area/DashboardForestLandArea'
 import DashboardHabitableArea from 'sections/landweather/total-area/DashboardHabitableArea'
 import DashboardTotalArea from 'sections/landweather/total-area/DashboardTotalArea'
@@ -14,7 +15,6 @@ import PieChartHabitableArea from 'sections/landweather/total-area/PieChartHabit
 import TableParks from 'sections/landweather/total-area/TableParks'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
-import AreaChartTotalArea from 'sections/landweather/total-area/AreaChartTotalArea'
 
 interface Props {
   routerProps: RouterProps
@@ -31,13 +31,13 @@ export default async function TotalAreaPrefecture({ routerProps }: Props) {
         <Grid container rowSpacing={4.5} columnSpacing={3}>
           {/* row 1 */}
           <Grid item xs={12} sm={6} md={6} lg={3}>
-            <DashboardTotalArea routerProps={routerProps} />
+            <DashboardTotalArea prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={3}>
-            <DashboardHabitableArea routerProps={routerProps} />
+            <DashboardHabitableArea prefecture={currentPrefecture}/>
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={3}>
-            <DashboardForestLandArea routerProps={routerProps} />
+            <DashboardForestLandArea prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={3}>
             <CardsAdsResponsive height={'150px'} />

@@ -42,11 +42,7 @@ const defaultOptions: ApexOptions = {
   },
 }
 
-export default function ApexPieChart({
-  options,
-  units,
-  height = 300,
-}: Props) {
+export default function ApexPieChart({ options, units, height = 300 }: Props) {
   const customOptions = useMemo<ApexOptions>(() => {
     const mergedOptions = { ...defaultOptions, ...options }
     return {

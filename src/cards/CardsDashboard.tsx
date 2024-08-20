@@ -12,7 +12,8 @@ import MainCard from 'components/MainCard'
 import FallOutlined from '@ant-design/icons/FallOutlined'
 import RiseOutlined from '@ant-design/icons/RiseOutlined'
 
-import { DashboardSingleContentsType } from 'utils/dashboard'
+import formatDashboard from 'utils/dashboard'
+import { DocumentType } from 'utils/document'
 
 const iconSX = {
   fontSize: '0.75rem',
@@ -22,8 +23,8 @@ const iconSX = {
 }
 
 type Props = {
-  title?: string
-  contents: DashboardSingleContentsType
+  title: string
+  document: DocumentType
   digit?: number
 }
 
@@ -37,14 +38,12 @@ const formatNumber = (value: string | number, digit: number): string => {
 
 export default function CardsDashboardSingle({
   title,
-  contents,
+  document,
   digit = 0,
 }: Props) {
-  const { name, curTimeName, preTimeName, curValue, difference, rate, unit } =
+  const contents = formatDashboard(document).single()
+  const { curTimeName, preTimeName, curValue, difference, rate, unit } =
     contents
-
-  // titleの指定がない場合はnameをtitleにする
-  const cardTitle = title ? title : name
 
   // 減少の場合はwarning、増加の場合はprimary
   const color = parseFloat(difference) < 0 ? 'warning' : 'primary'
@@ -78,7 +77,7 @@ export default function CardsDashboardSingle({
     <MainCard contentSX={{ p: 2.25 }}>
       <Stack spacing={0.5}>
         <Typography variant="h6" color="text.secondary">
-          {cardTitle}
+          {title}
         </Typography>
         <Grid container alignItems="center">
           <Grid item>

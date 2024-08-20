@@ -1,40 +1,30 @@
 import CardsDashboardSingle from 'cards/CardsDashboard'
 
-import formatDashboard from 'utils/dashboard'
 import handleEstatAPI from 'utils/e-stat'
-import { RouterProps } from 'utils/props'
+import { PrefectureType } from 'utils/prefecture'
 
-const params = (routerProps: RouterProps) => {
-  switch (routerProps.kindId) {
-    case 'japan':
-      return {
-        statsDataId: '0000010102',
-        cdCat01: 'B1105',
-        cdArea: '00000',
-      }
-    case 'prefecture':
-      return {
-        statsDataId: '0000010102',
-        cdCat01: 'B1105',
-        cdArea: routerProps.prefCode,
-      }
-    case 'city':
-      return {
-        statsDataId: '0000020202',
-        cdCat01: 'B1105',
-        cdArea: routerProps.cityCode,
-      }
-  }
+const TITLE = '林野面積'
+
+const ESTAT_PARAMS = {
+  statsDataId: '0000010102',
+  cdCat01: 'B1105',
 }
 
 interface Props {
-  routerProps: RouterProps
+  prefecture: PrefectureType
 }
 
-export default async function DashboardForestLandArea({ routerProps }: Props) {
-  const document = await handleEstatAPI(params(routerProps)).fetchDocument()
+async function fetchEstatData(prefCode: string) {
+  const estatParams = { ...ESTAT_PARAMS, cdArea: prefCode }
+  return await handleEstatAPI(estatParams).fetchDocument()
+}
 
-  const contents = formatDashboard(document).single()
+export default async function DashboardForestLandArea({ prefecture }: Props) {
+  const { prefCode, prefName } = prefecture
 
-  return <CardsDashboardSingle title={'林野面積'} contents={contents} />
+  const title = `${prefName}の${TITLE}`
+
+  const document = await fetchEstatData(prefCode)
+
+  return <CardsDashboardSingle title={title} document={document} />
 }

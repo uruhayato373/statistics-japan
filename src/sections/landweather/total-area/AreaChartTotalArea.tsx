@@ -6,8 +6,6 @@ import { ApexOptions } from 'apexcharts'
 
 import CardsApexAreaChart from 'cards/CardsApexAreaChart'
 
-import formatApexcharts from 'utils/apexcharts'
-import { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 
@@ -18,16 +16,16 @@ const ESTAT_PARAMS = {
   cdCat01: ['B1101', 'B1103'],
 }
 
-const APEX_SERIES = [
-  {
-    name: '総面積',
-    unit: 'ha',
-  },
-  {
-    name: '可住地面積',
-    unit: 'ha',
-  },
-]
+// const APEX_SERIES = [
+//   {
+//     name: '総面積',
+//     unit: 'ha',
+//   },
+//   {
+//     name: '可住地面積',
+//     unit: 'ha',
+//   },
+// ]
 
 const APEX_OPTIONS: ApexOptions = {
   yaxis: [
@@ -65,25 +63,20 @@ async function fetchEstatData(prefCode: string) {
   return await handleEstatAPI(estatParams).fetchDocument()
 }
 
-function prepareChartOptions(document: DocumentType): ApexOptions {
-  const { series } = formatApexcharts(document).AxisTimeChart()
-  return {
-    ...APEX_OPTIONS,
-    series: series.map((d, i) => ({ ...d, ...APEX_SERIES[i] })),
-  }
-}
-
 export default async function AreaChartTotalArea({ prefecture }: Props) {
   const { prefCode, prefName } = prefecture
 
   const title = `${prefName}の${TITLE}`
 
   const document = await fetchEstatData(prefCode)
-  const options = prepareChartOptions(document)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsApexAreaChart title={title} document={document} options={options} />
+      <CardsApexAreaChart
+        title={title}
+        document={document}
+        options={APEX_OPTIONS}
+      />
     </Suspense>
   )
 }

@@ -1,11 +1,12 @@
 import Box from '@mui/material/Box'
+import Divider from '@mui/material/Divider'
+import Typography from '@mui/material/Typography'
 
+import ApexAreaChart from 'components/apexcharts/ApexAreaChart'
 import MainCard from 'components/MainCard'
 
 import { ApexOptions } from 'apexcharts'
-import ApexAreaChart from 'components/apexcharts/ApexAreaChart'
-import Typography from '@mui/material/Typography'
-import Divider from '@mui/material/Divider'
+
 import formatApexcharts from 'utils/apexcharts'
 import { DocumentType } from 'utils/document'
 
