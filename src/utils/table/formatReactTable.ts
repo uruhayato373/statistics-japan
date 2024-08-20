@@ -24,7 +24,12 @@ export type ReactTimeTableType = {
  */
 const formatNumber = (value: number | undefined, unit: string): string => {
   if (value === undefined) return ''
-  return `${value.toLocaleString()} ${unit}`
+  // 小数点以下の桁数を保持しつつ、toLocaleString()を使用
+  const formattedValue = value.toLocaleString('ja-JP', {
+    minimumFractionDigits: (value.toString().split('.')[1] || '').length,
+    maximumFractionDigits: 20,
+  })
+  return `${formattedValue} ${unit}`.trim()
 }
 
 /**
