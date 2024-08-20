@@ -59,9 +59,11 @@ interface ChartContentProps {
 }
 
 function ChartContent({ title, document, prefectures }: ChartContentProps) {
-  const contents = document
+  const options = document
     ? formatApexcharts(document).AxisTimeChart('area')
     : null
+
+  const units = document ? document.categories.map((d) => d.categoryUnit) : null
 
   return (
     <>
@@ -77,7 +79,7 @@ function ChartContent({ title, document, prefectures }: ChartContentProps) {
         <SelectPrefectures prefectures={prefectures} />
       </Stack>
       <Divider sx={{ mb: 1.5 }} />
-      {contents && <ApexLineChart customOptions={contents} />}
+      {options && <ApexLineChart options={options} units={units} />}
     </>
   )
 }

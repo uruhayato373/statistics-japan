@@ -11,10 +11,6 @@ interface Props {
   height?: number
 }
 
-interface CustomSeries extends ApexAxisChartSeries {
-  unit?: string
-}
-
 const defaultOptions: ApexOptions = {
   chart: {
     type: 'area',
@@ -30,22 +26,13 @@ const defaultOptions: ApexOptions = {
   },
   xaxis: {
     labels: {
-      show: false, // xaxisのラベルを非表示
+      show: false,
     },
     axisBorder: {
-      show: false, // x軸の境界線を非表示
+      show: false,
     },
     axisTicks: {
-      show: false, // x軸の目盛りを非表示
-    },
-  },
-  tooltip: {
-    y: {
-      formatter: (value, { seriesIndex, w }) => {
-        const series = w.config.series[seriesIndex] as CustomSeries
-        const unit = series.unit || ''
-        return `${formatYAxisLabels(value)} ${unit}`
-      },
+      show: false,
     },
   },
 }
@@ -94,10 +81,7 @@ const applyFormatterToYAxis = (
   }
 }
 
-export default function ApexAreaChart({
-  options,
-  height = 300,
-}: Props): JSX.Element {
+export default function ApexAreaChart({ options, units, height = 300 }: Props) {
   const customOptions = useMemo<ApexOptions>(() => {
     const mergedOptions = { ...defaultOptions, ...options }
     return {
@@ -106,17 +90,18 @@ export default function ApexAreaChart({
       tooltip: {
         ...mergedOptions.tooltip,
         y: {
-          ...mergedOptions.tooltip?.y,
-          formatter: (value, { seriesIndex, w }) => {
-            const series = w.config.series[seriesIndex] as CustomSeries
-            const unit = series.unit || ''
+          formatter: (
+            value: number,
+            { seriesIndex }: { seriesIndex: number }
+          ) => {
             const formattedValue = formatYAxisLabels(value)
-            return `${formattedValue} ${unit}`.trim()
+            const unit = units[seriesIndex] || ''
+            return `${formattedValue} ${unit}`
           },
         },
       },
     }
-  }, [options])
+  }, [options, units])
 
   return (
     <ReactApexChart

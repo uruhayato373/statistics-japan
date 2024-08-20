@@ -17,13 +17,18 @@ export default async function AgricultureJapan({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
+    const currentPrefecture = {
+      prefCode: '00000',
+      prefName: '日本',
+    }
+
     return (
       <Suspense fallback={<CircularProgressViews />}>
         <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
         <Grid container rowSpacing={4.5} columnSpacing={3}>
           {/* row 1 */}
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardAgriculturalOutput routerProps={routerProps} />
+            <DashboardAgriculturalOutput prefecture={currentPrefecture} />
           </Grid>
         </Grid>
       </Suspense>

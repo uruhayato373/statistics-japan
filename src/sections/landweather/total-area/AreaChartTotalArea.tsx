@@ -16,17 +16,6 @@ const ESTAT_PARAMS = {
   cdCat01: ['B1101', 'B1103'],
 }
 
-// const APEX_SERIES = [
-//   {
-//     name: '総面積',
-//     unit: 'ha',
-//   },
-//   {
-//     name: '可住地面積',
-//     unit: 'ha',
-//   },
-// ]
-
 const APEX_OPTIONS: ApexOptions = {
   yaxis: [
     {

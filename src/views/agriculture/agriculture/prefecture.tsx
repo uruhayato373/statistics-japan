@@ -16,6 +16,7 @@ interface Props {
 export default async function AgriculturePrefecture({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
+    const { currentPrefecture } = breadcrumbsProps
 
     return (
       <Suspense fallback={<CircularProgressViews />}>
@@ -23,7 +24,7 @@ export default async function AgriculturePrefecture({ routerProps }: Props) {
         <Grid container rowSpacing={4.5} columnSpacing={3}>
           {/* row 1 */}
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardAgriculturalOutput routerProps={routerProps} />
+            <DashboardAgriculturalOutput prefecture={currentPrefecture} />
           </Grid>
         </Grid>
       </Suspense>

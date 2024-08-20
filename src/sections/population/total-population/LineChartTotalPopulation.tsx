@@ -1,13 +1,17 @@
-import CardsDashboardSingle from 'cards/CardsDashboard'
+import { Suspense } from 'react'
+
+import CircularProgressCards from 'components/CircularProgressCards'
+
+import CardsApexLineChart from 'cards/CardsApexLineChart'
 
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 
-const TITLE = '年平均相対湿度'
+const TITLE = '総人口の推移'
 
 const ESTAT_PARAMS = {
-  statsDataId: '0000010102',
-  cdCat01: 'B4111',
+  statsDataId: '0000010101',
+  cdCat01: 'A1101',
 }
 
 interface Props {
@@ -19,12 +23,16 @@ async function fetchEstatData(prefCode: string) {
   return await handleEstatAPI(estatParams).fetchDocument()
 }
 
-export default async function DashboardAveHum({ prefecture }: Props) {
+export default async function LineChartTotalPopulation({ prefecture }: Props) {
   const { prefCode, prefName } = prefecture
 
   const title = `${prefName}の${TITLE}`
 
   const document = await fetchEstatData(prefCode)
 
-  return <CardsDashboardSingle title={title} document={document} digit={1} />
+  return (
+    <Suspense fallback={<CircularProgressCards />}>
+      <CardsApexLineChart title={title} document={document} />
+    </Suspense>
+  )
 }

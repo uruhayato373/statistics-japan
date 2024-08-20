@@ -12,10 +12,10 @@ import DashboardMinTemp from 'sections/landweather/weather/DashboardMinTemp'
 import DashboardPrecipitation from 'sections/landweather/weather/DashboardPrecipitation'
 import DashboardRainyDays from 'sections/landweather/weather/DashboardRainyDays'
 import DashboardSunshineHours from 'sections/landweather/weather/DashboardSunshineHours'
-import Precipitation from 'sections/landweather/weather/Precipitation'
+import LineChartPrecipitation from 'sections/landweather/weather/LineChartPrecipitation'
+import LineChartTemplatures from 'sections/landweather/weather/LineChartTemplatures'
 import TableDays from 'sections/landweather/weather/TableDays'
 import TableTemplatures from 'sections/landweather/weather/TableTemplatures'
-import Templatures from 'sections/landweather/weather/Templatures'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -26,6 +26,7 @@ interface Props {
 export default async function Prefecture({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
+    const { currentPrefecture } = breadcrumbsProps
 
     return (
       <Suspense fallback={<CircularProgressViews />}>
@@ -33,31 +34,31 @@ export default async function Prefecture({ routerProps }: Props) {
         <Grid container rowSpacing={4.5} columnSpacing={3}>
           {/* row 1 */}
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardSunshineHours routerProps={routerProps} />
+            <DashboardSunshineHours prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardRainyDays routerProps={routerProps} />
+            <DashboardRainyDays prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardPrecipitation routerProps={routerProps} />
+            <DashboardPrecipitation prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardMaxTemp routerProps={routerProps} />
+            <DashboardMaxTemp prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardMinTemp routerProps={routerProps} />
+            <DashboardMinTemp prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardAveTemp routerProps={routerProps} />
+            <DashboardAveTemp prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardAveHum routerProps={routerProps} />
+            <DashboardAveHum prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={6}>
-            <Templatures routerProps={routerProps} />
+            <LineChartTemplatures prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={6}>
-            <Precipitation routerProps={routerProps} />
+            <LineChartPrecipitation prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={6}>
             <TableTemplatures routerProps={routerProps} />

@@ -1,48 +1,32 @@
 import CardsDashboardSingle from 'cards/CardsDashboard'
 
-import formatDashboard from 'utils/dashboard'
 import handleEstatAPI from 'utils/e-stat'
-import { RouterProps } from 'utils/props'
+import { PrefectureType } from 'utils/prefecture'
 
-const params = (routerProps: RouterProps) => {
-  switch (routerProps.kindId) {
-    case 'japan':
-      return {
-        statsDataId: '0000010101',
-        cdCat01: 'A6108',
-        cdArea: '00000',
-      }
-    case 'prefecture':
-      return {
-        statsDataId: '0000010101',
-        cdCat01: 'A6108',
-        cdArea: routerProps.prefCode,
-      }
-    case 'city':
-      return {
-        statsDataId: '0000020201',
-        cdCat01: 'A6108',
-        cdArea: routerProps.cityCode,
-      }
-  }
+const TITLE = '昼夜間人口比率'
+
+const ESTAT_PARAMS = {
+  statsDataId: '0000010101',
+  cdCat01: 'A6108',
 }
 
 interface Props {
-  routerProps: RouterProps
+  prefecture: PrefectureType
+}
+
+async function fetchEstatData(prefCode: string) {
+  const estatParams = { ...ESTAT_PARAMS, cdArea: prefCode }
+  return await handleEstatAPI(estatParams).fetchDocument()
 }
 
 export default async function DashboardDayTimePopulationRatio({
-  routerProps,
+  prefecture,
 }: Props) {
-  const document = await handleEstatAPI(params(routerProps)).fetchDocument()
+  const { prefCode, prefName } = prefecture
 
-  const contents = formatDashboard(document).single({ digit: 1 })
+  const title = `${prefName}の${TITLE}`
 
-  return (
-    <CardsDashboardSingle
-      title={'昼夜間人口比率'}
-      contents={contents}
-      digit={1}
-    />
-  )
+  const document = await fetchEstatData(prefCode)
+
+  return <CardsDashboardSingle title={title} document={document} />
 }

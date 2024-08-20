@@ -1,42 +1,30 @@
 import CardsDashboardSingle from 'cards/CardsDashboard'
 
-import formatDashboard from 'utils/dashboard'
 import handleEstatAPI from 'utils/e-stat'
-import { RouterProps } from 'utils/props'
+import { PrefectureType } from 'utils/prefecture'
 
-const params = (routerProps: RouterProps) => {
-  switch (routerProps.kindId) {
-    case 'japan':
-      return {
-        statsDataId: '0000010101',
-        cdCat01: 'A1231',
-        cdArea: '00000',
-      }
-    case 'prefecture':
-      return {
-        statsDataId: '0000010101',
-        cdCat01: 'A1231',
-        cdArea: routerProps.prefCode,
-      }
-    case 'city':
-      return {
-        statsDataId: '0000020201',
-        cdCat01: 'A1231',
-        cdArea: routerProps.cityCode,
-      }
-  }
+const TITLE = '年齢中位数'
+
+const ESTAT_PARAMS = {
+  statsDataId: '0000010101',
+  cdCat01: 'A1231',
 }
 
 interface Props {
-  routerProps: RouterProps
+  prefecture: PrefectureType
 }
 
-export default async function DashboardMedianAge({ routerProps }: Props) {
-  const document = await handleEstatAPI(params(routerProps)).fetchDocument()
+async function fetchEstatData(prefCode: string) {
+  const estatParams = { ...ESTAT_PARAMS, cdArea: prefCode }
+  return await handleEstatAPI(estatParams).fetchDocument()
+}
 
-  const contents = formatDashboard(document).single({ digit: 1 })
+export default async function DashboardMedianAge({ prefecture }: Props) {
+  const { prefCode, prefName } = prefecture
 
-  return (
-    <CardsDashboardSingle title={'年齢中位数'} contents={contents} digit={1} />
-  )
+  const title = `${prefName}の${TITLE}`
+
+  const document = await fetchEstatData(prefCode)
+
+  return <CardsDashboardSingle title={title} document={document} digit={1} />
 }

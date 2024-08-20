@@ -1,15 +1,18 @@
 'use client'
 
+import { useMemo } from 'react'
+
 import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
 interface Props {
-  customOptions?: ApexOptions
+  options: ApexOptions
+  units: string[] // ApexOptionsはunitを保持しないため、追加
+  height?: number
 }
 
 const defaultOptions: ApexOptions = {
   chart: {
-    height: 350,
     type: 'line',
     zoom: {
       enabled: false,
@@ -32,53 +35,87 @@ const defaultOptions: ApexOptions = {
     labels: {
       show: false,
     },
-  },
-  yaxis: {
-    labels: {
-      formatter: function (value) {
-        if (typeof value === 'number') {
-          return value.toLocaleString('ja-JP', { maximumFractionDigits: 0 })
-        }
-        return value
-      },
-      style: {
-        fontSize: '12px',
-        fontFamily: 'Helvetica, Arial, sans-serif',
-      },
+    axisBorder: {
+      show: false,
     },
-  },
-  tooltip: {
-    shared: true,
-    intersect: false,
-    y: {
-      formatter: function (value, { seriesIndex, w }) {
-        const unit = w.config.series[seriesIndex].unit || ''
-        return `${value.toLocaleString('ja-JP', { maximumFractionDigits: 0 })} ${unit}`
-      },
+    axisTicks: {
+      show: false,
     },
   },
 }
 
-export default function ApexLineChart({ customOptions }: Props) {
-  // const formatYAxisLabels = (axis: ApexYAxis): ApexYAxis => ({
-  //   ...axis,
-  //   labels: {
-  //     ...axis.labels,
-  //     formatter: (value) => Math.round(value).toLocaleString('ja-JP'),
-  //   },
-  // })
-
-  const options: ApexOptions = {
-    ...defaultOptions,
-    ...customOptions,
+const formatYAxisLabels = (value: number): string => {
+  if (typeof value === 'number') {
+    return value.toLocaleString()
+  } else if (typeof value === 'string') {
+    const num = parseFloat(value)
+    return isNaN(num) ? value : num.toLocaleString()
+  } else {
+    return '-'
   }
+}
+
+const applyFormatterToYAxis = (
+  yaxis: ApexYAxis | ApexYAxis[] | undefined
+): ApexYAxis | ApexYAxis[] | undefined => {
+  if (!yaxis) return undefined
+
+  const applyFormatter = (axis: ApexYAxis): ApexYAxis => ({
+    ...axis,
+    labels: {
+      ...axis.labels,
+      formatter: (value) => {
+        if (
+          axis.labels?.formatter &&
+          typeof axis.labels.formatter === 'function'
+        ) {
+          try {
+            return axis.labels.formatter(value)
+          } catch (error) {
+            console.error('Custom formatter error:', error)
+            return formatYAxisLabels(value)
+          }
+        }
+        return formatYAxisLabels(value)
+      },
+    },
+  })
+
+  if (Array.isArray(yaxis)) {
+    return yaxis.map(applyFormatter)
+  } else {
+    return applyFormatter(yaxis)
+  }
+}
+
+export default function ApexLineChart({ options, units, height = 300 }: Props) {
+  const customOptions = useMemo<ApexOptions>(() => {
+    const mergedOptions = { ...defaultOptions, ...options }
+    return {
+      ...mergedOptions,
+      yaxis: applyFormatterToYAxis(mergedOptions.yaxis),
+      tooltip: {
+        ...mergedOptions.tooltip,
+        y: {
+          formatter: (
+            value: number,
+            { seriesIndex }: { seriesIndex: number }
+          ) => {
+            const formattedValue = formatYAxisLabels(value)
+            const unit = units[seriesIndex] || ''
+            return `${formattedValue} ${unit}`
+          },
+        },
+      },
+    }
+  }, [options, units])
 
   return (
     <ReactApexChart
-      options={options}
-      series={options.series}
+      options={customOptions}
+      series={customOptions.series}
       type="line"
-      height={400}
+      height={height}
     />
   )
 }
