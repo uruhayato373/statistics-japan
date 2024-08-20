@@ -1,18 +1,15 @@
 import { Suspense } from 'react'
 
-import Box from '@mui/material/Box'
-
-import ApexAreaChart from 'components/apexcharts/ApexAreaChart'
 import CircularProgressCards from 'components/CircularProgressCards'
-import MainCard from 'components/MainCard'
 
 import { ApexOptions } from 'apexcharts'
+
+import CardsApexAreaChart from 'cards/CardsApexAreaChart'
 
 import formatApexcharts from 'utils/apexcharts'
 import { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import CardsApexAreaChart from 'cards/CardsApexAreaChart'
 
 const TITLE = '総面積の推移'
 

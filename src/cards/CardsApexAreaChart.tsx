@@ -1,6 +1,5 @@
 import Box from '@mui/material/Box'
 
-import ApexLineChart from 'components/apexcharts/ApexLineChart'
 import MainCard from 'components/MainCard'
 
 import { ApexOptions } from 'apexcharts'
