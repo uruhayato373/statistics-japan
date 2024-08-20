@@ -9,6 +9,7 @@ import MainCard from 'components/MainCard'
 import { ApexOptions } from 'apexcharts'
 
 import formatApexcharts from 'utils/apexcharts'
+import { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 
@@ -61,28 +62,32 @@ interface Props {
   prefecture: PrefectureType
 }
 
-export default async function ApexChartTotalArea({ prefecture }: Props) {
-  const { prefCode, prefName } = prefecture
-
-  // タイトル
-  const title = `${prefName}の${TITLE}`
-
-  // e-Stat APIからデータを取得
+async function fetchEstatData(prefCode: string) {
   const estatParams = { ...ESTAT_PARAMS, cdArea: prefCode }
-  const document = await handleEstatAPI(estatParams).fetchDocument()
+  return await handleEstatAPI(estatParams).fetchDocument()
+}
 
-  // ApexChartsのデータを整形
+function prepareChartOptions(document: DocumentType): ApexOptions {
   const { series } = formatApexcharts(document).AxisTimeChart()
-  const options: ApexOptions = {
+  return {
     ...APEX_OPTIONS,
     series: series.map((d, i) => ({ ...d, ...APEX_SERIES[i] })),
   }
+}
+
+export default async function ApexAreaChartTotalArea({ prefecture }: Props) {
+  const { prefCode, prefName } = prefecture
+
+  const title = `${prefName}の${TITLE}`
+
+  const document = await fetchEstatData(prefCode)
+  const options = prepareChartOptions(document)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
       <MainCard content={false} title={title}>
         <Box sx={{ pt: 1, pr: 2 }}>
-          <ApexAreaChart customOptions={options} />
+          <ApexAreaChart customOptions={options} height={300} />
         </Box>
       </MainCard>
     </Suspense>

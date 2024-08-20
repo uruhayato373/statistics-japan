@@ -1,87 +1,79 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
 'use client'
 
+import { useMemo } from 'react'
+
+import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
-import { ApexChartPieContentsType } from 'utils/apexcharts'
-
 interface Props {
-  contents: ApexChartPieContentsType
+  options: ApexOptions
+  units: string[] // ApexOptionsはunitを保持しないため、追加
+  height?: number
 }
 
-export default function ApexPieChart({ contents }: Props) {
-  const { series, categories } = contents
-
-  // chart options
-  const options = {
-    chart: {
-      type: 'pie',
-      width: 450,
-      height: 450,
-      zoom: {
-        enabled: false,
-      },
-    },
-    dataLabels: {
+const defaultOptions: ApexOptions = {
+  chart: {
+    type: 'donut',
+    zoom: {
       enabled: false,
     },
-    stroke: {
-      curve: 'straight',
-      width: 3,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  legend: {
+    show: true,
+    position: 'bottom',
+    fontFamily: `'Roboto', sans-serif`,
+    offsetX: 0,
+    offsetY: 8,
+    labels: {
+      useSeriesColors: false,
     },
-    labels: categories,
-    // grid: {
-    //   row: {
-    //     colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-    //     opacity: 0.5,
-    //   },
-    // },
-    legend: {
-      show: true,
-      fontFamily: `'Roboto', sans-serif`,
-      offsetX: 10,
-      offsetY: 10,
-      labels: {
-        useSeriesColors: false,
-      },
-      labels: {
-        colors: 'grey.500',
-      },
-      markers: {
-        width: 12,
-        height: 12,
-        radius: 5,
-      },
-      itemMargin: {
-        horizontal: 25,
-        vertical: 4,
-      },
+    markers: {
+      width: 12,
+      height: 12,
+      radius: 5,
     },
-    xaxis: {
-      categories: categories,
-      labels: {
-        show: false, // x軸のラベルを非表示にする
-      },
+    itemMargin: {
+      horizontal: 25,
+      vertical: 4,
     },
-    responsive: [
-      {
-        breakpoint: 450,
-        chart: {
-          width: 280,
-          height: 280,
-        },
-        options: {
-          legend: {
-            show: false,
-            position: 'bottom',
+  },
+}
+
+export default function ApexPieChart({
+  options,
+  units,
+  height = 300,
+}: Props) {
+  const customOptions = useMemo<ApexOptions>(() => {
+    const mergedOptions = { ...defaultOptions, ...options }
+    return {
+      ...mergedOptions,
+      chart: {
+        ...mergedOptions.chart,
+        height: height, // height プロプを使用
+      },
+      tooltip: {
+        y: {
+          formatter: function (
+            value: number,
+            { seriesIndex }: { seriesIndex: number }
+          ) {
+            return value.toLocaleString() + ' ' + (units[seriesIndex] || '')
           },
         },
       },
-    ],
-  }
+    }
+  }, [options, units, height])
 
   return (
-    <ReactApexChart options={options} series={series} type="pie" height={400} />
+    <ReactApexChart
+      options={customOptions}
+      series={customOptions.series}
+      type="donut"
+      height={height}
+    />
   )
 }

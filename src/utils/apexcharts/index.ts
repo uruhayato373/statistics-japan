@@ -1,8 +1,8 @@
 import { DocumentType } from 'utils/e-stat'
 
-import formatApexchartsPie from './formatApexchartsPie'
 import formatApexchartsPyramid from './formatApexchartsPyramid'
 import formatAxisTimeChart from './modules/AxisTimeChart'
+import formatPieChart from './modules/PieChart'
 
 // 型のエクスポート
 export type * from './formatApexchartsTime'
@@ -12,7 +12,7 @@ const formatApexcharts = (document: DocumentType) => {
   return {
     AxisTimeChart: (group: 'category' | 'area' = 'category') =>
       formatAxisTimeChart(document, group),
-    PieChart: (timeCode: string) => formatApexchartsPie(document, timeCode),
+    PieChart: (timeCode: string) => formatPieChart(document, timeCode),
     PyramidChart: (timeCode: string) =>
       formatApexchartsPyramid(document, timeCode),
   }

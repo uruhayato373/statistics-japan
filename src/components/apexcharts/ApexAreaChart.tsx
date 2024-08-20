@@ -7,6 +7,7 @@ import ReactApexChart from 'react-apexcharts'
 
 interface Props {
   customOptions: ApexOptions
+  height?: number
 }
 
 interface CustomSeries extends ApexAxisChartSeries {
@@ -92,7 +93,10 @@ const applyFormatterToYAxis = (
   }
 }
 
-export default function ApexAreaChart({ customOptions }: Props): JSX.Element {
+export default function ApexAreaChart({
+  customOptions,
+  height = 350,
+}: Props): JSX.Element {
   const options = useMemo<ApexOptions>(() => {
     const mergedOptions = { ...defaultOptions, ...customOptions }
     return {
@@ -118,7 +122,7 @@ export default function ApexAreaChart({ customOptions }: Props): JSX.Element {
       options={options}
       series={options.series}
       type="area"
-      height={350}
+      height={height}
     />
   )
 }
