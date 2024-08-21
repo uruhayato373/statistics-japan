@@ -13,9 +13,9 @@ import MainCard from 'components/MainCard'
 import TimeSelector from 'components/TimeSelector'
 
 import useEstatAPI from 'hooks/useEstatAPI'
-import formatD3charts from 'utils/d3charts'
 import { TimeType } from 'utils/document'
 import { EstatParamsType } from 'utils/e-stat'
+import formatHighcharts from 'utils/highcharts'
 
 interface Props {
   title: string
@@ -41,7 +41,7 @@ export default function CardsEstatHighchartsMapChart({
     return <CircularProgressCards />
   }
 
-  const mapChartContents = formatD3charts(document).mapChart()
+  const series = formatHighcharts(document).mapChart()
 
   return (
     <MainCard sx={{ mt: 1 }} content={false}>
@@ -58,7 +58,7 @@ export default function CardsEstatHighchartsMapChart({
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
         <SelectTimeComponent />
         <Suspense fallback={<CircularProgressCards />}>
-          <HighchartsMapChart contents={mapChartContents} />{' '}
+          <HighchartsMapChart series={series} />{' '}
         </Suspense>
 
         <Box sx={{ pt: 2.25 }}>

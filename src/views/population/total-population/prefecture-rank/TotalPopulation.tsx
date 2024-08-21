@@ -6,6 +6,7 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import ComparisonChartTotalPopulationClient from 'sections/population/total-population/prefecture-rank/ComparisonChartTotalPopulationClient'
 import MapChartTotalPopulationClient from 'sections/population/total-population/prefecture-rank/MapChartTotalPopulationClient'
 import RankingTotalPopulation from 'sections/population/total-population/prefecture-rank/TotalPopulation'
 import handleProps, { RouterProps } from 'utils/props'
@@ -17,7 +18,7 @@ interface Props {
 }
 
 export default async function SunnyDays({ routerProps, searchParams }: Props) {
-  const { table, comparison } = RankingTotalPopulation({
+  const { table } = RankingTotalPopulation({
     searchParams,
   })
   try {
@@ -30,14 +31,14 @@ export default async function SunnyDays({ routerProps, searchParams }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={7}>
-              <MapChartTotalPopulationClient searchParams={searchParams} />
+              <MapChartTotalPopulationClient />
             </Grid>
             <Grid item xs={12} md={6} lg={5}>
               {table}
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={9}>
-              {comparison}
+              <ComparisonChartTotalPopulationClient />
             </Grid>
           </Grid>
         </Box>

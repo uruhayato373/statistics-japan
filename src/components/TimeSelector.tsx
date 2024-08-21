@@ -11,7 +11,7 @@ type Props = {
   times: TimeType[]
 }
 
-function TimeSelector({ times }: Props) {
+function TimeSelector({ times }: Props): [string, () => JSX.Element] {
   const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
 
   const sortedTimes = times.sort(

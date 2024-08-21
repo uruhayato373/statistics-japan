@@ -12,13 +12,7 @@ const ESTAT_PARAMS = {
   cdCat01: 'A1101',
 }
 
-interface Props {
-  searchParams: { [key: string]: string | string[] | undefined }
-}
-
-export default async function MapChartTotalPopulationClient({
-  searchParams,
-}: Props) {
+export default async function MapChartTotalPopulationClient() {
   const title = `都道府県の${TITLE}`
 
   const times = await handleEstatAPI(ESTAT_PARAMS).fetchTimes()

@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 
+import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
@@ -25,12 +26,14 @@ export default async function AgricultureJapan({ routerProps }: Props) {
     return (
       <Suspense fallback={<CircularProgressViews />}>
         <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Grid container rowSpacing={4.5} columnSpacing={3}>
-          {/* row 1 */}
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardAgriculturalOutput prefecture={currentPrefecture} />
+        <Box sx={{ mt: 2.5 }}>
+          <Grid container rowSpacing={4.5} columnSpacing={3}>
+            {/* row 1 */}
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardAgriculturalOutput prefecture={currentPrefecture} />
+            </Grid>
           </Grid>
-        </Grid>
+        </Box>
       </Suspense>
     )
   } catch (error) {

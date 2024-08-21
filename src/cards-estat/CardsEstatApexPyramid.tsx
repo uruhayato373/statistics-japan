@@ -1,6 +1,6 @@
 'use client'
 
-import { Suspense, useEffect, useMemo, useState } from 'react'
+import { Suspense, useMemo } from 'react'
 
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
@@ -30,18 +30,7 @@ export default function CardsEstatApexPyramid({
   times,
   options,
 }: Props) {
-  const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
-
-  const sortedTimes = useMemo(
-    () =>
-      [...times].sort((a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)),
-    [times]
-  )
-
-  useEffect(() => {
-    setSelectedTimeCode(sortedTimes[0]?.timeCode || '')
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  const [selectedTimeCode, SelectTimeComponent] = TimeSelector({ times })
 
   const { document } = useEstatAPI({
     ...estatParams,
@@ -64,17 +53,7 @@ export default function CardsEstatApexPyramid({
   return (
     <MainCard content={false} title={title}>
       <Box sx={{ p: 2 }}>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-        >
-          <TimeSelector
-            times={sortedTimes}
-            selectedTimeCode={selectedTimeCode}
-            setSelectedTimeCode={setSelectedTimeCode}
-          />
-        </Stack>
+        <SelectTimeComponent />
         <Stack>
           <Box sx={{ pt: 1, pr: 2 }}>
             <Suspense fallback={<CircularProgressCards />}>

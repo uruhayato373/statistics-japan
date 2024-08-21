@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 
+import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
@@ -31,42 +32,44 @@ export default async function Prefecture({ routerProps }: Props) {
     return (
       <Suspense fallback={<CircularProgressViews />}>
         <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Grid container rowSpacing={4.5} columnSpacing={3}>
-          {/* row 1 */}
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardSunshineHours prefecture={currentPrefecture} />
+        <Box sx={{ mt: 2.5 }}>
+          <Grid container rowSpacing={4.5} columnSpacing={3}>
+            {/* row 1 */}
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardSunshineHours prefecture={currentPrefecture} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardRainyDays prefecture={currentPrefecture} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardPrecipitation prefecture={currentPrefecture} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardMaxTemp prefecture={currentPrefecture} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardMinTemp prefecture={currentPrefecture} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardAveTemp prefecture={currentPrefecture} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardAveHum prefecture={currentPrefecture} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={6}>
+              <LineChartTemplatures prefecture={currentPrefecture} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={6}>
+              <LineChartPrecipitation prefecture={currentPrefecture} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={6}>
+              <TableTemplatures prefecture={currentPrefecture} />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={6}>
+              <TableDays prefecture={currentPrefecture} />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardRainyDays prefecture={currentPrefecture} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardPrecipitation prefecture={currentPrefecture} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardMaxTemp prefecture={currentPrefecture} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardMinTemp prefecture={currentPrefecture} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardAveTemp prefecture={currentPrefecture} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardAveHum prefecture={currentPrefecture} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={6}>
-            <LineChartTemplatures prefecture={currentPrefecture} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={6}>
-            <LineChartPrecipitation prefecture={currentPrefecture} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={6}>
-            <TableTemplatures prefecture={currentPrefecture}  />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={6}>
-            <TableDays prefecture={currentPrefecture}  />
-          </Grid>
-        </Grid>
+        </Box>
       </Suspense>
     )
   } catch (error) {
