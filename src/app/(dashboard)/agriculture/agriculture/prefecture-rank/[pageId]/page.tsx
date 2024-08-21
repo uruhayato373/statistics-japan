@@ -28,12 +28,10 @@ interface PageParams {
 
 interface Props {
   params: PageParams
-  searchParams: Record<string, string | string[] | undefined>
 }
 
 interface ComponentProps {
   routerProps: RouterProps
-  searchParams: Props['searchParams']
 }
 
 // 共通のprops生成関数
@@ -56,7 +54,7 @@ export async function generateMetadata({
 }
 
 // メインページコンポーネント
-const Page: React.FC<Props> = ({ params, searchParams }: Props) => {
+const Page: React.FC<Props> = ({ params }: Props) => {
   const { routerProps } = getProps(params.pageId)
   const Component = COMPONENTS[params.pageId]
 
@@ -66,7 +64,7 @@ const Page: React.FC<Props> = ({ params, searchParams }: Props) => {
 
   return (
     <Suspense fallback={<Loader />}>
-      <Component routerProps={routerProps} searchParams={searchParams} />
+      <Component routerProps={routerProps} />
     </Suspense>
   )
 }

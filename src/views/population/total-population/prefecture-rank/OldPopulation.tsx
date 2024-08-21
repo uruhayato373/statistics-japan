@@ -13,7 +13,6 @@ import Error500 from 'views/maintenance/500'
 
 interface Props {
   routerProps: RouterProps
-  searchParams: { [key: string]: string | string[] | undefined }
 }
 
 export default async function SunnyDays({ routerProps }: Props) {
