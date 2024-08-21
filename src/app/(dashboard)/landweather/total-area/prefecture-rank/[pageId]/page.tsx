@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 
 import Loader from 'components/Loader'
 
+import { handlePage } from 'utils/page'
 import handleProps, { RouterProps } from 'utils/props'
 import Error404 from 'views/maintenance/404'
 
@@ -34,6 +35,14 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'habitable-area': dynamic(
     () => import('views/landweather/total-area/prefecture-rank/HabitableArea')
   ),
+}
+
+export async function generateStaticParams() {
+  const pages = handlePage().items(MENU_ID)
+
+  return pages.map((p) => ({
+    pageId: p.pageId,
+  }))
 }
 
 // 共通のprops生成関数
