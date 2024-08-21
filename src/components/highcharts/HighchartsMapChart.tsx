@@ -28,6 +28,7 @@ export default function HighchartsMapChart({ contents }: Props) {
   const options = {
     chart: {
       map: geoShape,
+      animation: false, // チャート全体のアニメーションを無効化
     },
     title: {
       text: '',
@@ -92,6 +93,7 @@ export default function HighchartsMapChart({ contents }: Props) {
           enabled: true,
           format: '{point.name}',
         },
+        animation: false, // シリーズ固有のアニメーションを無効化
       },
     ],
   }
