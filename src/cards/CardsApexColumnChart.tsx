@@ -14,14 +14,16 @@ interface Props {
   title: string
   document: DocumentType
   options?: ApexOptions
-  height?: string
+  boxHeight?: string
+  chartHeight?: number
 }
 
 export default async function CardsApexColumnChart({
   title,
   document,
   options,
-  height = '400px',
+  boxHeight = '400px',
+  chartHeight,
 }: Props) {
   const formatOptions = formatApexcharts(document).AxisTimeChart()
   const customOptions = { ...formatOptions, ...options }
@@ -31,12 +33,16 @@ export default async function CardsApexColumnChart({
 
   return (
     <MainCard content={false}>
-      <Box sx={{ p: 2, pb: 0, height }}>
+      <Box sx={{ p: 2, pb: 0, height: boxHeight }}>
         <Typography variant="h5" color="text.primary">
           {title}
         </Typography>
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-        <ApexColumnChart options={customOptions} units={units} height={300} />
+        <ApexColumnChart
+          options={customOptions}
+          units={units}
+          {...(chartHeight !== undefined && { height: chartHeight })}
+        />
       </Box>
     </MainCard>
   )

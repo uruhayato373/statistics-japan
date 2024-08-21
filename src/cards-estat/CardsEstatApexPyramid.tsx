@@ -28,6 +28,7 @@ export default function CardsEstatApexPyramid({
   title,
   estatParams,
   times,
+  options,
 }: Props) {
   const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
 
@@ -47,13 +48,14 @@ export default function CardsEstatApexPyramid({
     cdTime: selectedTimeCode ? `${selectedTimeCode}100000` : '',
   })
 
-  const contents = useMemo(
+  const formatOptions = useMemo(
     () =>
       selectedTimeCode
         ? formatApexcharts(document).PyramidChart(selectedTimeCode)
         : null,
     [document, selectedTimeCode]
   )
+  const customOptions = { ...formatOptions, ...options }
 
   if (!selectedTimeCode) {
     return <CircularProgressCards />
@@ -76,7 +78,7 @@ export default function CardsEstatApexPyramid({
         <Stack>
           <Box sx={{ pt: 1, pr: 2 }}>
             <Suspense fallback={<CircularProgressCards />}>
-              {contents && <ApexPyramidChart contents={contents} />}
+              {customOptions && <ApexPyramidChart options={customOptions} />}
             </Suspense>
           </Box>
         </Stack>

@@ -1,12 +1,8 @@
 import { DocumentType } from 'utils/e-stat'
 
-import formatApexchartsPyramid from './formatApexchartsPyramid'
 import formatAxisTimeChart from './modules/AxisTimeChart'
 import formatPieChart from './modules/PieChart'
-
-// 型のエクスポート
-export type * from './formatApexchartsTime'
-export type * from './formatApexchartsPyramid'
+import formatApexchartsPyramid from './modules/PyramidChart'
 
 const formatApexcharts = (document: DocumentType) => {
   return {

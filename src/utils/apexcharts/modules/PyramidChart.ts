@@ -1,15 +1,11 @@
+import { ApexOptions } from 'apexcharts'
+
 import { DocumentType } from 'utils/e-stat'
 
-export type ApexChartPyramidContentsType = {
-  categories: string[]
-  series: {
-    name: '男性' | '女性'
-    data: number[]
-    unit: string
-  }[]
-}
-
-const formatApexchartsPyramid = (document: DocumentType, timeCode: string) => {
+const formatPyramidChart = (
+  document: DocumentType,
+  timeCode: string
+): ApexOptions => {
   const { categories, values } = document
 
   const timeValues = values.filter((f) => f.timeCode === timeCode)
@@ -20,7 +16,6 @@ const formatApexchartsPyramid = (document: DocumentType, timeCode: string) => {
     .reverse()
 
   return {
-    categories: formatCategories,
     series: [
       {
         name: '男性',
@@ -30,7 +25,6 @@ const formatApexchartsPyramid = (document: DocumentType, timeCode: string) => {
           )
           return value ? value.value * -1 : 0
         }),
-        unit: '人',
       },
       {
         name: '女性',
@@ -40,10 +34,12 @@ const formatApexchartsPyramid = (document: DocumentType, timeCode: string) => {
           )
           return value ? value.value : 0
         }),
-        unit: '人',
       },
     ],
+    xaxis: {
+      categories: formatCategories,
+    },
   }
 }
 
-export default formatApexchartsPyramid
+export default formatPyramidChart

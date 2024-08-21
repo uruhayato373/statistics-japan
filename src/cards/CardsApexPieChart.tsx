@@ -22,14 +22,16 @@ interface Props {
   title: string
   document: DocumentType
   options?: ApexOptions
-  height?: string
+  boxHeight?: string
+  chartHeight?: number
 }
 
 export default function CardsApexPieChart({
   title,
   document,
   options,
-  height = '400px',
+  boxHeight = '400px',
+  chartHeight,
 }: Props) {
   const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
 
@@ -54,7 +56,7 @@ export default function CardsApexPieChart({
 
   return (
     <MainCard content={false}>
-      <Box sx={{ p: 2, pb: 0, height }}>
+      <Box sx={{ p: 2, pb: 0, height: boxHeight }}>
         <Stack
           direction="row"
           alignItems="center"
@@ -80,7 +82,11 @@ export default function CardsApexPieChart({
           </FormControl>
         </Stack>
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-        <ApexPieChart options={customOptions} units={units} />
+        <ApexPieChart
+          options={customOptions}
+          units={units}
+          {...(chartHeight !== undefined && { height: chartHeight })}
+        />
       </Box>
     </MainCard>
   )

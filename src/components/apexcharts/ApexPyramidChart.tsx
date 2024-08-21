@@ -1,78 +1,82 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
 'use client'
 
+import { useMemo } from 'react'
+
+import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
 interface Props {
-  contents: ApexChartPyramidContentsType
+  options: ApexOptions
+  height?: number
 }
 
-export default function ApexPyramidChart({ contents }: Props) {
-  const { series, categories } = contents
+const defaultOptions: ApexOptions = {
+  chart: {
+    type: 'bar',
+    stacked: true,
+  },
+  colors: ['#008FFB', '#FF4560'],
+  plotOptions: {
+    bar: {
+      borderRadius: 5,
+      borderRadiusApplication: 'end',
+      borderRadiusWhenStacked: 'all',
+      horizontal: true,
+      barHeight: '80%',
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    width: 1,
+    colors: ['#fff'],
+  },
 
-  // chart options
-  const options = {
-    chart: {
-      type: 'bar',
-      height: 400,
-      stacked: true,
-    },
-    colors: ['#008FFB', '#FF4560'],
-    plotOptions: {
-      bar: {
-        borderRadius: 5,
-        borderRadiusApplication: 'end', // 'around', 'end'
-        borderRadiusWhenStacked: 'all', // 'all', 'last'
-        horizontal: true,
-        barHeight: '80%',
-      },
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    stroke: {
-      width: 1,
-      colors: ['#fff'],
-    },
-
-    grid: {
-      xaxis: {
-        lines: {
-          show: false,
-        },
-      },
-    },
-    yaxis: {
-      stepSize: 1,
-    },
-    tooltip: {
-      shared: false,
-      x: {
-        formatter: function (val) {
-          return val
-        },
-      },
-      y: {
-        formatter: function (val, { seriesIndex, w }) {
-          const absVal = Math.abs(val)
-          const formattedVal = absVal.toLocaleString(undefined, {
-            maximumFractionDigits: 2,
-          })
-          const unit = w.config.series[seriesIndex].unit || ''
-          return `${formattedVal} ${unit} `
-        },
-      },
-    },
+  grid: {
     xaxis: {
-      categories: categories,
-      labels: {
+      lines: {
         show: false,
       },
     },
-  }
+  },
+  yaxis: {
+    stepSize: 1,
+  },
+}
+
+export default function ApexPyramidChart({ options, height = 300 }: Props) {
+  const customOptions = useMemo<ApexOptions>(() => {
+    const mergedOptions = { ...defaultOptions, ...options }
+    return {
+      ...mergedOptions,
+      chart: {
+        ...mergedOptions.chart,
+        height: height,
+      },
+      xaxis: {
+        ...mergedOptions.xaxis,
+        labels: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+        axisTicks: {
+          show: false,
+        },
+      },
+    }
+  }, [options, height])
+
+  console.log(customOptions)
 
   return (
-    <ReactApexChart options={options} series={series} type="bar" height={400} />
+    <ReactApexChart
+      options={customOptions}
+      series={customOptions.series}
+      type="bar"
+      height={height}
+    />
   )
 }
