@@ -6,19 +6,16 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import RankingRainyDays from 'sections/landweather/weather/prefecture-rank/RainyDays'
+import MapChartRainyDaysClient from 'sections/landweather/weather/prefecture-rank/MapChartRainyDaysClient'
+import RankingTableRainyDaysClient from 'sections/landweather/weather/prefecture-rank/RankingTableRainyDaysClient'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
 interface Props {
   routerProps: RouterProps
-  searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function RainyDays({ routerProps, searchParams }: Props) {
-  const { chart, table, comparison } = RankingRainyDays({
-    searchParams,
-  })
+export default async function RainyDays({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
@@ -29,15 +26,15 @@ export default async function RainyDays({ routerProps, searchParams }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={7}>
-              {chart}
+              <MapChartRainyDaysClient />
             </Grid>
             <Grid item xs={12} md={6} lg={5}>
-              {table}
+              <RankingTableRainyDaysClient />
             </Grid>
             {/* row 2 */}
-            <Grid item xs={12} md={9}>
+            {/* <Grid item xs={12} md={9}>
               {comparison}
-            </Grid>
+            </Grid> */}
           </Grid>
         </Box>
       </Suspense>
