@@ -1,4 +1,4 @@
-import regionsData from 'utils/prefecture/regions.json'
+import regionsData from 'data/prefecture/regions.json'
 import handleResasAPI from 'utils/resas'
 
 /**

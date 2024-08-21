@@ -1,4 +1,4 @@
-import items from './menuList.json'
+import items from 'data/menu/menuList.json'
 
 /**
  * アプリケーション内で使用するメニュー情報の型定義
@@ -17,7 +17,7 @@ export type MenuType = {
  */
 const handleMenu = () => {
   return {
-    items: (fieldId?: string ) => {
+    items: (fieldId?: string) => {
       return fieldId ? filterItems(fieldId) : items
     },
     findItem: (menuId: string) => findItem(menuId),
