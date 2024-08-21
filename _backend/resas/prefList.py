@@ -2,6 +2,10 @@ import json
 import os
 import requests
 from dotenv import load_dotenv
+import sys
+
+sys.path.append("_backend")
+from local_settings import initialization  # noqa: E402
 
 load_dotenv(verbose=True)
 resas_api_key = os.environ["RESAS_API_KEY"]
@@ -34,6 +38,7 @@ def save_preflist():
 
 
 if __name__ == "__main__":
+    initialization()
     save_preflist()
 
     pref_list = get_preflist()

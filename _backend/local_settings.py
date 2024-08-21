@@ -16,7 +16,7 @@ def initialization():
 
     # 職場環境の場合はPROXY設定を追加
     if "m004195" in current_dir:
-        os.environ["http_proxy"] = os.environ["PROXY"]
-        os.environ["https_proxy"] = os.environ["PROXY"]
+        os.environ["http_proxy"] = os.environ["HTTP_PROXY"]
+        os.environ["https_proxy"] = os.environ["HTTP_PROXY"]
 
     return
