@@ -5,13 +5,13 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import ApexPopulationPyramid from 'sections/population/total-population/ApexPopulationPyramid'
 import ColumnChartThreeAge from 'sections/population/total-population/ColumnChartThreeAge'
 import DashboardDayTimePopulation from 'sections/population/total-population/DashboardDayTimePopulation'
 import DashboardDayTimePopulationRatio from 'sections/population/total-population/DashboardDayTimePopulationRatio'
 import DashboardMedianAge from 'sections/population/total-population/DashboardMedianAge'
 import DashboardTotalPopulation from 'sections/population/total-population/DashboardTotalPopulation'
 import LineChartTotalPopulation from 'sections/population/total-population/LineChartTotalPopulation'
+import PyramidChartPopulation from 'sections/population/total-population/PyramidChartPopulation'
 import TablePopulation from 'sections/population/total-population/TablePopulation'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -51,7 +51,7 @@ export default async function Prefecture({ routerProps }: Props) {
           </Grid>
           {/* row 3 */}
           <Grid item xs={12} md={5} lg={5}>
-            <ApexPopulationPyramid routerProps={routerProps} />
+            <PyramidChartPopulation prefecture={currentPrefecture} />
           </Grid>
           <Grid item xs={12} md={5} lg={7}>
             <TablePopulation prefecture={currentPrefecture} />
