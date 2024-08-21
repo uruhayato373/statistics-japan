@@ -30,10 +30,10 @@ interface ComponentProps {
 // 動的インポートとコンポーネントマッピング
 const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'total-area': dynamic(
-    () => import('views/landweather/total-area/prefecture-rank/TotalArea')
+    () => import('views/landweather/area/prefecture-rank/TotalArea')
   ),
   'habitable-area': dynamic(
-    () => import('views/landweather/total-area/prefecture-rank/HabitableArea')
+    () => import('views/landweather/area/prefecture-rank/HabitableArea')
   ),
 }
 

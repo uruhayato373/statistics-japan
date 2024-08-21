@@ -6,14 +6,14 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import ColumnChartThreeAge from 'sections/population/total-population/ColumnChartThreeAge'
-import DashboardDayTimePopulation from 'sections/population/total-population/DashboardDayTimePopulation'
-import DashboardDayTimePopulationRatio from 'sections/population/total-population/DashboardDayTimePopulationRatio'
-import DashboardMedianAge from 'sections/population/total-population/DashboardMedianAge'
-import DashboardTotalPopulation from 'sections/population/total-population/DashboardTotalPopulation'
-import LineChartTotalPopulation from 'sections/population/total-population/LineChartTotalPopulation'
-import PyramidChartPopulation from 'sections/population/total-population/PyramidChartPopulation'
-import TablePopulation from 'sections/population/total-population/TablePopulation'
+import ColumnChartThreeAge from 'sections/population/population/ColumnChartThreeAge'
+import DashboardDayTimePopulation from 'sections/population/population/DashboardDayTimePopulation'
+import DashboardDayTimePopulationRatio from 'sections/population/population/DashboardDayTimePopulationRatio'
+import DashboardMedianAge from 'sections/population/population/DashboardMedianAge'
+import DashboardTotalPopulation from 'sections/population/population/DashboardTotalPopulation'
+import LineChartTotalPopulation from 'sections/population/population/LineChartTotalPopulation'
+import PyramidChartPopulation from 'sections/population/population/PyramidChartPopulation'
+import TablePopulation from 'sections/population/population/TablePopulation'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -21,10 +21,14 @@ interface Props {
   routerProps: RouterProps
 }
 
-export default async function Prefecture({ routerProps }: Props) {
+export default async function TotalPopulationJapan({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const { currentPrefecture } = breadcrumbsProps
+
+    const currentPrefecture = {
+      prefCode: '00000',
+      prefName: '日本',
+    }
 
     return (
       <Suspense fallback={<CircularProgressViews />}>

@@ -1,7 +1,7 @@
 [
   {
-    "menuId": "total-area",
-    "menuTitle": "総面積",
+    "menuId": "area",
+    "menuTitle": "面積",
     "fieldId": "landweather"
   },
   {
@@ -15,8 +15,8 @@
     "fieldId": "landweather"
   },
   {
-    "menuId": "total-population",
-    "menuTitle": "総人口",
+    "menuId": "population",
+    "menuTitle": "人口",
     "fieldId": "population"
   },
   {

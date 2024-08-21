@@ -10,11 +10,6 @@
     "menuId": "total-area"
   },
   {
-    "pageId": "habitable-area-ratio",
-    "pageTitle": "可住地面積の割合",
-    "menuId": "total-area"
-  },
-  {
     "pageId": "rainy-days",
     "pageTitle": "降水日数",
     "menuId": "weather"

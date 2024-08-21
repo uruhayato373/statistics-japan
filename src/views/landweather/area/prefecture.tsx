@@ -8,12 +8,12 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import CardsAdsResponsive from 'cards/CardsAdsResponsive'
 
-import AreaChartTotalArea from 'sections/landweather/total-area/AreaChartTotalArea'
-import DashboardForestLandArea from 'sections/landweather/total-area/DashboardForestLandArea'
-import DashboardHabitableArea from 'sections/landweather/total-area/DashboardHabitableArea'
-import DashboardTotalArea from 'sections/landweather/total-area/DashboardTotalArea'
-import PieChartHabitableArea from 'sections/landweather/total-area/PieChartHabitableArea'
-import TableParks from 'sections/landweather/total-area/TableParks'
+import AreaChartTotalArea from 'sections/landweather/area/AreaChartTotalArea'
+import DashboardForestLandArea from 'sections/landweather/area/DashboardForestLandArea'
+import DashboardHabitableArea from 'sections/landweather/area/DashboardHabitableArea'
+import DashboardTotalArea from 'sections/landweather/area/DashboardTotalArea'
+import PieChartHabitableArea from 'sections/landweather/area/PieChartHabitableArea'
+import TableParks from 'sections/landweather/area/TableParks'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -21,14 +21,10 @@ interface Props {
   routerProps: RouterProps
 }
 
-export default async function TotalAreaJapan({ routerProps }: Props) {
+export default async function TotalAreaPrefecture({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-
-    const currentPrefecture = {
-      prefCode: '00000',
-      prefName: '日本',
-    }
+    const { currentPrefecture } = breadcrumbsProps
 
     return (
       <Suspense fallback={<CircularProgressViews />}>
@@ -58,7 +54,7 @@ export default async function TotalAreaJapan({ routerProps }: Props) {
             <Grid item xs={12} sm={12} md={12} lg={6}>
               <TableParks prefecture={currentPrefecture} />
             </Grid>
-          </Grid>
+          </Grid>{' '}
         </Box>
       </Suspense>
     )

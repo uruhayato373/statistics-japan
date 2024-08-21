@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/layout/DashboardLayout/Drawer/DrawerContent/Navigation/index.jsx",
-    "src/sections/population/total-population/Population3AgeChart.jsxrc/sections/population/total-population/Popukation3AgeChart.jsx"
+    "src/sections/population/population/Population3AgeChart.jsxrc/sections/population/total-population/Popukation3AgeChart.jsx"
   ],
   "exclude": ["node_modules"]
 }

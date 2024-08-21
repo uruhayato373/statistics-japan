@@ -16,14 +16,10 @@ const KIND_ID = 'prefecture-rank'
 // 動的インポートとコンポーネントマッピング
 const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'total-population': dynamic(
-    () =>
-      import(
-        'views/population/total-population/prefecture-rank/TotalPopulation'
-      )
+    () => import('views/population/population/prefecture-rank/TotalPopulation')
   ),
   'old-population': dynamic(
-    () =>
-      import('views/population/total-population/prefecture-rank/OldPopulation')
+    () => import('views/population/population/prefecture-rank/OldPopulation')
   ),
 }
 

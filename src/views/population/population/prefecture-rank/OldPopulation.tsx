@@ -6,9 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import ComparisonChartTotalPopulationClient from 'sections/population/total-population/prefecture-rank/ComparisonChartTotalPopulationClient'
-import MapChartTotalPopulationClient from 'sections/population/total-population/prefecture-rank/MapChartTotalPopulationClient'
-import RankingTableTotalPopulationClient from 'sections/population/total-population/prefecture-rank/RankingTableTotalPopulationClient'
+import MapChartOldPopulationClient from 'sections/population/population/prefecture-rank/MapChartOldPopulationClient'
+import RankingTableOldPopulationClient from 'sections/population/population/prefecture-rank/RankingTableOldPopulationClient'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -27,14 +26,10 @@ export default async function SunnyDays({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={7}>
-              <MapChartTotalPopulationClient />
+              <MapChartOldPopulationClient />
             </Grid>
             <Grid item xs={12} md={6} lg={5}>
-              <RankingTableTotalPopulationClient />
-            </Grid>
-            {/* row 2 */}
-            <Grid item xs={12} md={9}>
-              <ComparisonChartTotalPopulationClient />
+              <RankingTableOldPopulationClient />
             </Grid>
           </Grid>
         </Box>

@@ -6,8 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartTotalArea from 'sections/landweather/total-area/prefecture-rank/MapChartTotalArea'
-import RankingTableTotalArea from 'sections/landweather/total-area/prefecture-rank/RankingTableTotalArea'
+import MapChartTotalArea from 'sections/landweather/area/prefecture-rank/MapChartTotalArea'
+import RankingTableTotalArea from 'sections/landweather/area/prefecture-rank/RankingTableTotalArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 

@@ -6,14 +6,14 @@ import Loader from 'components/Loader'
 
 import { handlePrefecture } from 'utils/prefecture'
 import handleProps from 'utils/props'
-import Prefecture from 'views/landweather/total-area/prefecture'
+import Prefecture from 'views/population/population/prefecture'
 
 // SSGとしてレンダリング
 export const dynamic = 'force-static'
 
 // 定数
-const FIELD_ID = 'landweather'
-const MENU_ID = 'total-area'
+const FIELD_ID = 'population'
+const MENU_ID = 'total-population'
 const KIND_ID = 'prefecture'
 
 // Dynamic Routesの型定義
