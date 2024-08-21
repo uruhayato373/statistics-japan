@@ -1,3 +1,5 @@
+'use client'
+
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
@@ -5,15 +7,14 @@ import Typography from '@mui/material/Typography'
 
 import HighchartsMapChart from 'components/highcharts/HighchartsMapChart'
 import MainCard from 'components/MainCard'
-import SelectTime from 'components/SelectTime'
+import SelectTime from 'components/select/SelectTime'
 
-import formatD3charts from 'utils/d3charts'
-import { DocumentType, TimeType } from 'utils/e-stat'
+import { DocumentType } from 'utils/e-stat'
+import formatHighcharts from 'utils/highcharts'
 
 interface Props {
   title?: string
   document: DocumentType
-  times: TimeType[]
   boxHeight?: string
   chartHeight?: number
 }
@@ -21,28 +22,34 @@ interface Props {
 export default function CardsHighchartsMapChart({
   title,
   document,
-  times,
   boxHeight = '600px',
 }: Props) {
-  const mapChartContents = formatD3charts(document).mapChart()
+  const { times } = document
+  const [selectedTimeCode, SelectComponent] = SelectTime({ times })
+
+  const filteredDocument = {
+    ...document,
+    values: document.values.filter((f) => f.timeCode === selectedTimeCode),
+  }
+
+  const series = formatHighcharts(filteredDocument).mapChart()
 
   return (
     <MainCard sx={{ mt: 1 }} content={false}>
       <Box sx={{ p: 2, pb: 0, height: boxHeight }}>
+        <Typography variant="h5" color="text.primary">
+          {title}
+        </Typography>
+        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
         <Stack
           direction="row"
           alignItems="center"
           justifyContent="space-between"
+          sx={{ mb: 1.5 }}
         >
-          <Typography variant="h5" color="text.primary">
-            {title}
-          </Typography>
+          <SelectComponent />{' '}
         </Stack>
-        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-        <SelectTime times={times} />
-
-        <HighchartsMapChart contents={mapChartContents} />
-
+        <HighchartsMapChart series={series} />
         <Box sx={{ pt: 2.25 }}>
           <Typography variant="caption" color="text.secondary">
             地図は『歴史的行政区域データセットβ版』（CODH作成）を利用

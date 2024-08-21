@@ -6,7 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import RankingLaborforce from 'sections/laborwage/laborforce/prefecture-rank/Laborforce'
+import MapChartLaborforceClient from 'sections/laborwage/laborforce/prefecture-rank/MapChartLaborforceClient'
+import RankingTableLaborforceClient from 'sections/laborwage/laborforce/prefecture-rank/RankingTableLaborforceClient'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -15,10 +16,7 @@ interface Props {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function Laborforce({ routerProps, searchParams }: Props) {
-  const { chart, table, comparison } = RankingLaborforce({
-    searchParams,
-  })
+export default async function Laborforce({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
@@ -29,15 +27,15 @@ export default async function Laborforce({ routerProps, searchParams }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={7}>
-              {chart}
+              <MapChartLaborforceClient />
             </Grid>
             <Grid item xs={12} md={6} lg={5}>
-              {table}
+              <RankingTableLaborforceClient />
             </Grid>
             {/* row 2 */}
-            <Grid item xs={12} md={9}>
+            {/* <Grid item xs={12} md={9}>
               {comparison}
-            </Grid>
+            </Grid> */}
           </Grid>
         </Box>
       </Suspense>

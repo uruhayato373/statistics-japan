@@ -6,32 +6,16 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import CardsAdsResponsive from 'cards/CardsAdsResponsive'
-
-import RankingHabitableArea from 'sections/landweather/total-area/prefecture-rank/HabitableArea'
+import MapChartHabitableAreaClient from 'sections/landweather/total-area/prefecture-rank/MapChartHabitableAreaClient'
+import RankingTableHabitableAreaClient from 'sections/landweather/total-area/prefecture-rank/RankingTableHabitableAreaClient'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
 interface Props {
   routerProps: RouterProps
-  searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function HabitableArea({
-  routerProps,
-  searchParams,
-}: Props) {
-  const {
-    chart,
-    table,
-    comparison,
-    scatterTotalArea,
-    perTotalAreaChart,
-    perTotalAreaTable,
-  } = await RankingHabitableArea({
-    searchParams,
-  })
-
+export default async function HabitableArea({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
@@ -44,18 +28,18 @@ export default async function HabitableArea({
             <Grid item xs={12} md={10}>
               <Grid container rowSpacing={4.5} columnSpacing={3}>
                 <Grid item xs={12} md={6} lg={6}>
-                  {chart}
+                  <MapChartHabitableAreaClient />
                 </Grid>
                 <Grid item xs={12} md={6} lg={6}>
-                  {table}
+                  <RankingTableHabitableAreaClient />
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={12} md={2}>
+            {/* <Grid item xs={12} md={2}>
               <CardsAdsResponsive />
-            </Grid>
+            </Grid> */}
             {/* row 2 */}
-            <Grid item xs={12} md={9}>
+            {/* <Grid item xs={12} md={9}>
               {comparison}
             </Grid>
             <Grid item xs={12} md={3}>
@@ -72,7 +56,7 @@ export default async function HabitableArea({
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               {perTotalAreaTable}
-            </Grid>
+            </Grid> */}
           </Grid>
         </Box>
       </Suspense>

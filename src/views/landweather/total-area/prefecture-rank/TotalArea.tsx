@@ -6,9 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import CardsAdsResponsive from 'cards/CardsAdsResponsive'
-
-import RankingTotalArea from 'sections/landweather/total-area/prefecture-rank/TotalArea'
+import MapChartTotalArea from 'sections/landweather/total-area/prefecture-rank/MapChartTotalArea'
+import RankingTableTotalArea from 'sections/landweather/total-area/prefecture-rank/RankingTableTotalArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -17,11 +16,7 @@ interface Props {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function TotalArea({ routerProps, searchParams }: Props) {
-  const { chart, table, comparison } = RankingTotalArea({
-    searchParams,
-  })
-
+export default async function TotalArea({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
@@ -34,23 +29,23 @@ export default async function TotalArea({ routerProps, searchParams }: Props) {
             <Grid item xs={12} md={10}>
               <Grid container rowSpacing={4.5} columnSpacing={3}>
                 <Grid item xs={12} md={6} lg={6}>
-                  {chart}
+                  <MapChartTotalArea />
                 </Grid>
                 <Grid item xs={12} md={6} lg={6}>
-                  {table}
+                  <RankingTableTotalArea />
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={12} md={2}>
+            {/* <Grid item xs={12} md={2}>
               <CardsAdsResponsive />
-            </Grid>
+            </Grid> */}
             {/* row 2 */}
-            <Grid item xs={12} md={9}>
+            {/* <Grid item xs={12} md={9}>
               {comparison}
             </Grid>
             <Grid item xs={12} md={3}>
               <CardsAdsResponsive height={'300px'} />
-            </Grid>
+            </Grid> */}
           </Grid>
         </Box>
       </Suspense>

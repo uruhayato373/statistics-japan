@@ -11,7 +11,7 @@ type Props = {
   times: TimeType[]
 }
 
-function TimeSelector({ times }: Props): [string, () => JSX.Element] {
+function SelectTime({ times }: Props): [string, () => JSX.Element] {
   const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
 
   const sortedTimes = times.sort(
@@ -52,4 +52,4 @@ function TimeSelector({ times }: Props): [string, () => JSX.Element] {
   ]
 }
 
-export default TimeSelector
+export default SelectTime

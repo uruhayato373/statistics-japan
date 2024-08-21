@@ -6,7 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import RankingAgriculturalOutput from 'sections/agriculture/agriculture/prefecture-rank/AgriculturalOutput'
+import MapChartAgriculturalOutputClient from 'sections/agriculture/agriculture/prefecture-rank/MapChartAgriculturalOutputClient'
+import RankingTableAgriculturalOutputClient from 'sections/agriculture/agriculture/prefecture-rank/RankingTableAgriculturalOutputClient'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -15,14 +16,7 @@ interface Props {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function AgriculturalOutput({
-  routerProps,
-  searchParams,
-}: Props) {
-  const { chart, table, comparison } = RankingAgriculturalOutput({
-    searchParams,
-  })
-
+export default async function AgriculturalOutput({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
@@ -33,15 +27,15 @@ export default async function AgriculturalOutput({
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={7}>
-              {chart}
+              <MapChartAgriculturalOutputClient />
             </Grid>
             <Grid item xs={12} md={6} lg={5}>
-              {table}
+              <RankingTableAgriculturalOutputClient />
             </Grid>
             {/* row 2 */}
-            <Grid item xs={12} md={9}>
+            {/* <Grid item xs={12} md={9}>
               {comparison}
-            </Grid>
+            </Grid> */}
           </Grid>
         </Box>
       </Suspense>

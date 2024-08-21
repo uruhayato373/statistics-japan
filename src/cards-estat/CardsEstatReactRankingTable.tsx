@@ -1,21 +1,19 @@
 'use client'
 
-import { Suspense } from 'react'
-
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
 import CircularProgressCards from 'components/CircularProgressCards'
-import HighchartsMapChart from 'components/highcharts/HighchartsMapChart'
 import MainCard from 'components/MainCard'
 import SelectTime from 'components/select/SelectTime'
+import PrefectureRankingTable from 'components/table/PrefectureRankingTable'
 
 import useEstatAPI from 'hooks/useEstatAPI'
 import { TimeType } from 'utils/document'
 import { EstatParamsType } from 'utils/e-stat'
-import formatHighcharts from 'utils/highcharts'
+import formatTable from 'utils/table'
 
 interface Props {
   title: string
@@ -24,7 +22,7 @@ interface Props {
   boxHeight?: string
 }
 
-export default function CardsEstatHighchartsMapChart({
+export default function CardsEstatReactRankingTable({
   title,
   estatParams,
   times,
@@ -41,31 +39,32 @@ export default function CardsEstatHighchartsMapChart({
     return <CircularProgressCards />
   }
 
-  const series = formatHighcharts(document).mapChart()
+  const contents = formatTable(document).reactRankTable()
 
   return (
     <MainCard sx={{ mt: 1 }} content={false}>
-      <Box sx={{ p: 2, pb: 0, height: boxHeight }}>
+      <Box
+        sx={{
+          p: 2,
+          pb: 0,
+          height: boxHeight,
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <Typography variant="h5" color="text.primary">
+          {title}
+        </Typography>
+        <Divider sx={{ mb: 1.5 }} />
         <Stack
           direction="row"
           alignItems="center"
           justifyContent="space-between"
+          sx={{ mb: 1.5 }}
         >
-          <Typography variant="h5" color="text.primary">
-            {title}
-          </Typography>
+          <SelectTimeComponent />
         </Stack>
-        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-        <SelectTimeComponent />
-        <Suspense fallback={<CircularProgressCards />}>
-          <HighchartsMapChart series={series} />
-        </Suspense>
-
-        <Box sx={{ pt: 2.25 }}>
-          <Typography variant="caption" color="text.secondary">
-            地図は『歴史的行政区域データセットβ版』（CODH作成）を利用
-          </Typography>
-        </Box>
+        <PrefectureRankingTable contents={contents} />
       </Box>
     </MainCard>
   )

@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack'
 import ApexPyramidChart from 'components/apexcharts/ApexPyramidChart'
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
-import TimeSelector from 'components/TimeSelector'
+import SelectTime from 'components/select/SelectTime'
 
 import { ApexOptions } from 'apexcharts'
 
@@ -30,7 +30,7 @@ export default function CardsEstatApexPyramid({
   times,
   options,
 }: Props) {
-  const [selectedTimeCode, SelectTimeComponent] = TimeSelector({ times })
+  const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 
   const { document } = useEstatAPI({
     ...estatParams,

@@ -8,7 +8,7 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import ComparisonChartTotalPopulationClient from 'sections/population/total-population/prefecture-rank/ComparisonChartTotalPopulationClient'
 import MapChartTotalPopulationClient from 'sections/population/total-population/prefecture-rank/MapChartTotalPopulationClient'
-import RankingTotalPopulation from 'sections/population/total-population/prefecture-rank/TotalPopulation'
+import RankingTableTotalPopulationClient from 'sections/population/total-population/prefecture-rank/RankingTableTotalPopulationClient'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -17,10 +17,7 @@ interface Props {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function SunnyDays({ routerProps, searchParams }: Props) {
-  const { table } = RankingTotalPopulation({
-    searchParams,
-  })
+export default async function SunnyDays({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
@@ -34,7 +31,7 @@ export default async function SunnyDays({ routerProps, searchParams }: Props) {
               <MapChartTotalPopulationClient />
             </Grid>
             <Grid item xs={12} md={6} lg={5}>
-              {table}
+              <RankingTableTotalPopulationClient />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={9}>
