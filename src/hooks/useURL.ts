@@ -93,6 +93,24 @@ export default function useURL() {
   }
 
   /**
+   * Menuを変更した場合のURLを生成
+   */
+  const changeMenuURL = (newId: string): string => {
+    const { fieldId, kindId } = currentRouterProps
+    const pageId = handlePage().items(newId)[0].pageId
+    switch (kindId) {
+      case 'japan':
+        return `/${fieldId}/${newId}/${kindId}`
+      case 'prefecture-rank':
+        return `/${fieldId}/${newId}/${kindId}/${pageId}`
+      case 'prefecture':
+        return `/${fieldId}/${newId}/${kindId}/${atomPrefecture.prefCode}`
+      default:
+        return ''
+    }
+  }
+
+  /**
    * 都道府県を変更した場合のURLを生成
    */
   const changePrefURL = (newCode: string): string => {
@@ -127,6 +145,7 @@ export default function useURL() {
     changePrefURL,
     changeCityURL,
     changePageURL,
+    changeMenuURL,
     navURL,
   }
 }

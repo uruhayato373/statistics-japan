@@ -78,7 +78,9 @@ const formatReactRankTable = (document: DocumentType): ReactRankTableType => {
   const sortedData = filteredValues
     .map((item) => ({
       ...item,
-      tableValue: `${item.value.toLocaleString()} ${item.unit}`,
+      tableValue: item.value
+        ? `${item.value.toLocaleString()} ${item.unit}`
+        : '-',
       deviationValue: roundNumber(
         calcDeviationValue(item.value, average, standardDeviation),
         1

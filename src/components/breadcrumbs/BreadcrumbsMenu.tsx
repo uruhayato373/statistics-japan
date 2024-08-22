@@ -1,9 +1,12 @@
 import { useState } from 'react'
 
+import { useRouter } from 'next/navigation'
+
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import Typography from '@mui/material/Typography'
 
+import useURL from 'hooks/useURL'
 import { MenuType } from 'utils/menu'
 
 type Props = {
@@ -15,6 +18,9 @@ function BreadcrumbsMenu({ menus, currentMenu }: Props) {
   const [selectedItem, setSelectedItem] = useState<MenuType>(currentMenu)
   const [anchorEl, setAnchorEl] = useState(null)
 
+  const { changeMenuURL } = useURL()
+  const router = useRouter()
+
   const handleClick = (event: { currentTarget: unknown }) => {
     setAnchorEl(event.currentTarget)
   }
@@ -25,6 +31,8 @@ function BreadcrumbsMenu({ menus, currentMenu }: Props) {
 
   const handleSelect = (item: MenuType) => {
     setSelectedItem(item)
+    const url = changeMenuURL(item.menuId)
+    router.push(url)
     handleClose()
   }
 

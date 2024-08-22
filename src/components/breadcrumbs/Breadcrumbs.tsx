@@ -273,10 +273,7 @@ function Breadcrumbs({
               {(!icon || icons) && 'Home'}
             </Typography>
           </NextLink>
-          <BreadcrumbsField
-            fields={breadcrumbsProps.fields}
-            currentField={breadcrumbsProps.currentField}
-          />
+          <BreadcrumbsField currentField={breadcrumbsProps.currentField} />
           <BreadcrumbsMenu
             menus={breadcrumbsProps.menus}
             currentMenu={breadcrumbsProps.currentMenu}

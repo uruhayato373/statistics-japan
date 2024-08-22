@@ -5,13 +5,8 @@
     "fieldId": "landweather"
   },
   {
-    "menuId": "climate",
-    "menuTitle": "気温・湿度",
-    "fieldId": "landweather"
-  },
-  {
     "menuId": "weather",
-    "menuTitle": "天候",
+    "menuTitle": "天候・気象",
     "fieldId": "landweather"
   },
   {
