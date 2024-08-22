@@ -33,6 +33,8 @@ export default function CardsTimeTable({
     }
   })
 
+  const filename = `${title}.csv`
+
   return (
     <MainCard content={false}>
       <Box sx={{ p: 2, pb: 0, height }}>
@@ -44,7 +46,7 @@ export default function CardsTimeTable({
           <Typography variant="h5" color="text.primary">
             {title}
           </Typography>
-          <CSVExport data={data} headers={headers} filename="time_table.csv" />
+          <CSVExport data={data} headers={headers} filename={filename} />
         </Stack>
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
         <ReactTable columns={columns} data={data} />

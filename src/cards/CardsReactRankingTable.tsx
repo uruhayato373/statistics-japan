@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography'
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 import PrefectureRankingTable from 'components/table/PrefectureRankingTable'
+import { CSVExport } from 'components/third-party/react-table'
 
 import { DocumentType } from 'utils/e-stat'
 import formatTable from 'utils/table'
@@ -52,22 +53,40 @@ export default function CardsReactRankingTable({
   }
 
   const contents = formatTable(filteredDocument).reactRankTable()
+  const { columns, data } = contents
+
+  const headers = columns.map((column) => {
+    return {
+      label: column.footer,
+      key: column.accessorKey as string,
+    }
+  })
+
+  const csvData = data.map((d) => {
+    return {
+      rank: d.rank.toString(),
+      areaName: d.areaName,
+      tableValue: d.tableValue,
+      deviationValue: d.deviationValue.toString(),
+    }
+  })
+
+  const filename = `${title}.csv`
 
   return (
     <MainCard sx={{ mt: 1 }} content={false}>
-      <Box
-        sx={{
-          p: 2,
-          pb: 0,
-          height: boxHeight,
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
-        <Typography variant="h5" color="text.primary">
-          {title}
-        </Typography>
-        <Divider sx={{ mb: 1.5 }} />
+      <Box sx={{ p: 2, pb: 0, height: boxHeight }}>
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <Typography variant="h5" color="text.primary">
+            {title}
+          </Typography>
+          <CSVExport data={csvData} headers={headers} filename={filename} />
+        </Stack>
+        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
         <Stack
           direction="row"
           alignItems="center"

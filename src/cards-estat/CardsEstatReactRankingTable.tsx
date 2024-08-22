@@ -43,27 +43,20 @@ export default function CardsEstatReactRankingTable({
 
   return (
     <MainCard sx={{ mt: 1 }} content={false}>
-      <Box
-        sx={{
-          p: 2,
-          pb: 0,
-          height: boxHeight,
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
-        <Typography variant="h5" color="text.primary">
-          {title}
-        </Typography>
-        <Divider sx={{ mb: 1.5 }} />
+      <Box sx={{ p: 2, pb: 0, height: boxHeight }}>
         <Stack
           direction="row"
           alignItems="center"
           justifyContent="space-between"
-          sx={{ mb: 1.5 }}
         >
-          <SelectTimeComponent />
+          <Typography variant="h5" color="text.primary">
+            {title}
+          </Typography>
         </Stack>
+        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
+
+        <SelectTimeComponent />
+
         <PrefectureRankingTable contents={contents} />
       </Box>
     </MainCard>

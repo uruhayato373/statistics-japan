@@ -18,9 +18,19 @@ export default async function RankingTableTotalArea() {
 
   const document = await handleEstatAPI(ESTAT_PARAMS).fetchDocument()
 
+  const formatDocument = {
+    ...document,
+    categories: document.categories.map((d) => {
+      return { ...d, categoryName: '総面積' }
+    }),
+    values: document.values.map((d) => {
+      return { ...d, categoryName: '総面積' }
+    }),
+  }
+
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactRankingTable title={title} document={document} />
+      <CardsReactRankingTable title={title} document={formatDocument} />
     </Suspense>
   )
 }

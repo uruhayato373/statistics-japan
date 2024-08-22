@@ -29,8 +29,22 @@ type Props = {
   contents: ReactRankTableType
 }
 
+const formatNumber = (value: number, digit: number = 1) => {
+  return Number(value).toFixed(digit)
+}
+
 export default function ReactSortingTable({ contents }: Props) {
   const { data, columns } = contents
+
+  const formattedColumns = columns.map((column) => {
+    if (['deviationValue'].includes(column.accessorKey)) {
+      return {
+        ...column,
+        cell: ({ getValue }) => formatNumber(getValue()),
+      }
+    }
+    return column
+  })
 
   const [sorting, setSorting] = useState([
     {
@@ -41,7 +55,7 @@ export default function ReactSortingTable({ contents }: Props) {
 
   const table = useReactTable({
     data,
-    columns,
+    columns: formattedColumns,
     state: {
       sorting,
     },
