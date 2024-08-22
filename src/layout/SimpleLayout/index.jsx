@@ -1,29 +1,29 @@
 'use client'
 
-import { lazy } from 'react'
+// import { lazy } from 'react'
 
-import { usePathname } from 'next/navigation'
+// import { usePathname } from 'next/navigation'
 
 import PropTypes from 'prop-types'
 
 // project-import
-import { SimpleLayoutType } from 'config'
+// import { SimpleLayoutType } from 'config'
 
-const Header = lazy(() => import('./Header'))
-const FooterBlock = lazy(() => import('./FooterBlock'))
+// const Header = lazy(() => import('./Header'))
+// const FooterBlock = lazy(() => import('./FooterBlock'))
 
 export default function Layout({ children }) {
-  const pathname = usePathname()
-  const layout =
-    pathname === 'landing' || pathname === '/'
-      ? SimpleLayoutType.LANDING
-      : SimpleLayoutType.SIMPLE
+  // const pathname = usePathname()
+  // const layout =
+  //   pathname === 'landing' || pathname === '/'
+  //     ? SimpleLayoutType.LANDING
+  //     : SimpleLayoutType.SIMPLE
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {children}
-      <FooterBlock isFull={layout === SimpleLayoutType.LANDING} />
+      {/* <FooterBlock isFull={layout === SimpleLayoutType.LANDING} /> */}
     </>
   )
 }
