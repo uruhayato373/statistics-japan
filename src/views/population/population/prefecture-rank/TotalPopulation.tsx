@@ -6,7 +6,7 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import ComparisonChartTotalPopulationClient from 'sections/population/population/prefecture-rank/ComparisonChartTotalPopulationClient'
+import ComparisonChartTotalPopulation from 'sections/population/population/prefecture-rank/ComparisonChartTotalPopulation'
 import MapChartTotalPopulationClient from 'sections/population/population/prefecture-rank/MapChartTotalPopulationClient'
 import RankingTableTotalPopulationClient from 'sections/population/population/prefecture-rank/RankingTableTotalPopulationClient'
 import handleProps, { RouterProps } from 'utils/props'
@@ -34,7 +34,7 @@ export default async function SunnyDays({ routerProps }: Props) {
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={9}>
-              <ComparisonChartTotalPopulationClient />
+              <ComparisonChartTotalPopulation />
             </Grid>
           </Grid>
         </Box>
