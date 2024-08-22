@@ -14,6 +14,7 @@ import DashboardHabitableArea from 'sections/landweather/area/DashboardHabitable
 import DashboardTotalArea from 'sections/landweather/area/DashboardTotalArea'
 import PieChartHabitableArea from 'sections/landweather/area/PieChartHabitableArea'
 import TableParks from 'sections/landweather/area/TableParks'
+import TableTotalArea from 'sections/landweather/area/TableTotalArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -50,6 +51,9 @@ export default async function TotalAreaPrefecture({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={5}>
               <PieChartHabitableArea prefecture={currentPrefecture} />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={6}>
+              <TableTotalArea prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={6}>
               <TableParks prefecture={currentPrefecture} />

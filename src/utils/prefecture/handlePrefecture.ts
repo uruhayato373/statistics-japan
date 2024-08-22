@@ -1,5 +1,5 @@
 import regionsData from 'data/prefecture/regions.json'
-import handleResasAPI from 'utils/resas'
+// import handleResasAPI from 'utils/resas'
 import prefectures from 'data/prefecture/resasPrefList.json'
 
 /**
