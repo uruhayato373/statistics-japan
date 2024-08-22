@@ -76,6 +76,8 @@ export default function HighchartsMapChart({ series }: Props) {
       format: '{point.name}',
     },
     animation: false,
+    borderColor: '#FFFFFF', // 地図の枠線の色を白に設定
+    borderWidth: 0.5, // 枠線の幅を設定（必要に応じて調整）
   }
 
   const options: Options = {
