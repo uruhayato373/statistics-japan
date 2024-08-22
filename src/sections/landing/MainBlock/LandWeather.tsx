@@ -9,7 +9,7 @@ import AnimateButton from 'components/@extended/AnimateButton'
 import MainCard from 'components/MainCard'
 
 const FIELD_ID = 'landweather'
-const MENU_ID = 'total-area'
+const MENU_ID = 'area'
 const PAGE_ID = 'total-area'
 const AREA_CODE = '28000'
 
@@ -41,7 +41,7 @@ export default function LandWeather() {
             </AnimateButton>
             <AnimateButton>
               <Link
-                href={`/${FIELD_ID}/${MENU_ID}/prefecture-rank/${PAGE_ID}/?areaCode=${AREA_CODE}`}
+                href={`/${FIELD_ID}/${MENU_ID}/prefecture-rank/${PAGE_ID}/`}
                 passHref
               >
                 <Button variant="contained" sx={{ my: 2 }}>

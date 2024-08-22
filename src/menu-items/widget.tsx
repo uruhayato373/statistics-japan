@@ -29,10 +29,10 @@ const widget: MenuGroup = {
       icon: icons.CloudOutlined,
       children: [
         {
-          id: 'total-area',
-          title: '総面積',
+          id: 'area',
+          title: '面積',
           type: 'item',
-          url: '/landweather/total-area',
+          url: '/landweather/area',
           breadcrumbs: false,
         },
         {
@@ -51,10 +51,10 @@ const widget: MenuGroup = {
       icon: icons.UserOutlined,
       children: [
         {
-          id: 'total-population',
-          title: '総人口',
+          id: 'population',
+          title: '人口',
           type: 'item',
-          url: '/population/total-population',
+          url: '/population/population',
           breadcrumbs: false,
         },
         // {

@@ -9,7 +9,7 @@ import AnimateButton from 'components/@extended/AnimateButton'
 import MainCard from 'components/MainCard'
 
 const FIELD_ID = 'population'
-const MENU_ID = 'total-population'
+const MENU_ID = 'population'
 const PAGE_ID = 'total-population'
 const AREA_CODE = '28000'
 
@@ -41,7 +41,7 @@ export default function Population() {
             </AnimateButton>
             <AnimateButton>
               <Link
-                href={`/${FIELD_ID}/${MENU_ID}/prefecture-rank/${PAGE_ID}/?areaCode=${AREA_CODE}`}
+                href={`/${FIELD_ID}/${MENU_ID}/prefecture-rank/${PAGE_ID}/`}
                 passHref
               >
                 <Button variant="contained" sx={{ my: 2 }}>

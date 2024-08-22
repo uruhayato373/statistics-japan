@@ -11,7 +11,7 @@ import Error404 from 'views/maintenance/404'
 
 // 定数
 const FIELD_ID = 'landweather'
-const MENU_ID = 'total-area'
+const MENU_ID = 'area'
 const KIND_ID = 'prefecture-rank'
 
 // 型定義

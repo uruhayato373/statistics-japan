@@ -9,7 +9,7 @@ import Japan from 'views/population/population/japan'
 
 // 定数
 const FIELD_ID = 'population'
-const MENU_ID = 'total-population'
+const MENU_ID = 'population'
 const KIND_ID = 'japan'
 
 // 共通のhandleProps呼び出し

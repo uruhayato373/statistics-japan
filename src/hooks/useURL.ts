@@ -55,22 +55,14 @@ export default function useURL() {
   /**
    * Drawer Nav をクリックしたときのURLを生成
    */
-  // const currentKindURL = () => {
-  //   return changeKindURL(atomKind)
-  // }
-
-  /**
-   * Drawer Nav をクリックしたときのURLを生成
-   */
   const navURL = (fieldId: string, menuId: string) => {
     const kindId = atomKind.kindId
     const pageId = handlePage().items(menuId)[0].pageId
-    const prefCode = atomPrefecture.prefCode
     switch (kindId) {
       case 'japan':
         return `/${fieldId}/${menuId}/${kindId}`
       case 'prefecture-rank':
-        return `/${fieldId}/${menuId}/${kindId}/${pageId}?areaCode=${prefCode}`
+        return `/${fieldId}/${menuId}/${kindId}/${pageId}`
       case 'prefecture':
         return `/${fieldId}/${menuId}/${kindId}/${atomPrefecture.prefCode}`
       default:
@@ -118,8 +110,7 @@ export default function useURL() {
    */
   const changePageURL = (newId: string): string => {
     const { fieldId, menuId } = currentRouterProps
-    const prefCode = atomPrefecture.prefCode
-    return `/${fieldId}/${menuId}/prefecture-rank/${newId}?areaCode=${prefCode}`
+    return `/${fieldId}/${menuId}/prefecture-rank/${newId}`
   }
 
   /**

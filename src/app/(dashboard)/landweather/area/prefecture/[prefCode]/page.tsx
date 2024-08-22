@@ -13,7 +13,7 @@ export const dynamic = 'force-static'
 
 // 定数
 const FIELD_ID = 'landweather'
-const MENU_ID = 'total-area'
+const MENU_ID = 'area'
 const KIND_ID = 'prefecture'
 
 // Dynamic Routesの型定義

@@ -13,7 +13,7 @@ export const dynamic = 'force-static'
 
 // 定数
 const FIELD_ID = 'population'
-const MENU_ID = 'total-population'
+const MENU_ID = 'population'
 const KIND_ID = 'prefecture'
 
 // Dynamic Routesの型定義

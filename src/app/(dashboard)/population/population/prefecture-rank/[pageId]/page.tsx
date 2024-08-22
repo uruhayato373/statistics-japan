@@ -10,7 +10,7 @@ import Error404 from 'views/maintenance/404'
 
 // 定数
 const FIELD_ID = 'population'
-const MENU_ID = 'total-population'
+const MENU_ID = 'population'
 const KIND_ID = 'prefecture-rank'
 
 // 動的インポートとコンポーネントマッピング

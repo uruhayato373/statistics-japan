@@ -9,7 +9,7 @@ import Japan from 'views/landweather/area/japan'
 
 // 定数
 const FIELD_ID = 'landweather'
-const MENU_ID = 'total-area'
+const MENU_ID = 'area'
 const KIND_ID = 'japan'
 
 // 共通のhandleProps呼び出し
