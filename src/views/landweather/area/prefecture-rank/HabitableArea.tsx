@@ -8,6 +8,7 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import MapChartHabitableAreaClient from 'sections/landweather/area/prefecture-rank/MapChartHabitableAreaClient'
 import RankingTableHabitableAreaClient from 'sections/landweather/area/prefecture-rank/RankingTableHabitableAreaClient'
+import ScatterChartTotalAreaHabitableArea from 'sections/landweather/area/prefecture-rank/ScatterChartTotalAreaHabitableArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -39,13 +40,13 @@ export default async function HabitableArea({ routerProps }: Props) {
               <CardsAdsResponsive />
             </Grid> */}
             {/* row 2 */}
-            {/* <Grid item xs={12} md={9}>
-              {comparison}
+            <Grid item xs={12} md={9}>
+              <ScatterChartTotalAreaHabitableArea />
             </Grid>
-            <Grid item xs={12} md={3}>
+            {/* <Grid item xs={12} md={3}>
               <CardsAdsResponsive height={'300px'} />
-            </Grid>
-            <Grid item xs={12} md={12} lg={6}>
+            </Grid> */}
+            {/* <Grid item xs={12} md={12} lg={6}>
               {scatterTotalArea}
             </Grid>
             <Grid item xs={12} md={12} lg={6}>

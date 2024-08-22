@@ -38,6 +38,7 @@ const handleEstatAPI = (
         // 複数のパラメータが渡された場合
         const responses = await Promise.all(estatParams.map(fetchEstatAPI))
         const documents = responses.map(formatEstatAPI)
+
         return mergeDocuments(documents, type)
       } else {
         // 単一のパラメータが渡された場合
