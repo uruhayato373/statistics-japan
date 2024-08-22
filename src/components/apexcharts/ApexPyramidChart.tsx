@@ -69,8 +69,6 @@ export default function ApexPyramidChart({ options, height = 300 }: Props) {
     }
   }, [options, height])
 
-  console.log(customOptions)
-
   return (
     <ReactApexChart
       options={customOptions}
