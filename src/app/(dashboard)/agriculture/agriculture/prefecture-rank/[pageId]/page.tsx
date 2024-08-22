@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 
 import Loader from 'components/Loader'
 
+import { handlePage } from 'utils/page'
 import handleProps, { RouterProps } from 'utils/props'
 import Error404 from 'views/maintenance/404'
 
@@ -19,6 +20,14 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
     () =>
       import('views/agriculture/agriculture/prefecture-rank/AgriculturalOutput')
   ),
+}
+
+export async function generateStaticParams() {
+  const pages = handlePage().items(MENU_ID)
+
+  return pages.map((p) => ({
+    pageId: p.pageId,
+  }))
 }
 
 // 型定義
