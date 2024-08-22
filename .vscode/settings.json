@@ -101,6 +101,8 @@
     "trendline",
     "uruhayato",
     "xaxis",
-    "yaxis"
+    "yaxis",
+    "zoomin",
+    "zoomout"
   ]
 }

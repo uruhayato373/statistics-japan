@@ -26,7 +26,7 @@ const defaultOptions: ApexOptions = {
         zoomin: false,
         zoomout: false,
         pan: false,
-        reset: false
+        reset: false,
       },
       export: {
         svg: {
@@ -37,7 +37,7 @@ const defaultOptions: ApexOptions = {
         },
         csv: {
           filename: 'pie-chart-data',
-        }
+        },
       },
     },
   },

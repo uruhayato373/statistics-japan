@@ -1,5 +1,3 @@
-// 'use client'
-
 import SimpleLayout from 'layout/SimpleLayout'
 import Landing from 'views/landing'
 
@@ -7,7 +5,7 @@ import Landing from 'views/landing'
 export function generateMetadata() {
   return {
     title: `統計で見る都道府県`,
-    description:'test',
+    description: 'test',
     authors: [{ name: 'uruhayato373', url: 'https://github.com/uruhayato373' }],
     // metadataBase: new URL(url),
     alternates: {
@@ -16,7 +14,7 @@ export function generateMetadata() {
     openGraph: {
       title: `統計で見る都道府県`,
       type: 'website',
-      url:'https://statistics-japan.com',
+      url: 'https://statistics-japan.com',
       images: [
         {
           url: 'https://statistics-japan.com/ogp/opengraph-image.png',
