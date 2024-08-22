@@ -1,5 +1,6 @@
 import regionsData from 'data/prefecture/regions.json'
 import handleResasAPI from 'utils/resas'
+import prefectures from 'data/prefecture/resasPrefList.json'
 
 /**
  * RESAS APIから取得する都道府県データの型
@@ -57,10 +58,10 @@ export default handlePrefecture
  */
 const fetchItems = async (): Promise<PrefectureType[]> => {
   try {
-    const resasParams = { url: 'api/v1/prefectures' }
-    const { fetchAPI } = handleResasAPI<ResasPrefectureType[]>(resasParams)
+    // const resasParams = { url: 'api/v1/prefectures' }
+    // const { fetchAPI } = handleResasAPI<ResasPrefectureType[]>(resasParams)
 
-    const prefectures = await fetchAPI()
+    // const prefectures = await fetchAPI()
 
     // APIから取得したデータを内部形式に変換
     return prefectures.map((d) => ({

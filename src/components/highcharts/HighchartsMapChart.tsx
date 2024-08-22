@@ -90,6 +90,14 @@ export default function HighchartsMapChart({ series }: Props) {
       zoom: 5,
       center: [137.5, 38],
     },
+    tooltip: {
+      formatter: function (this: Highcharts.TooltipFormatterContextObject) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const point = this.point as any
+        const formattedValue = Highcharts.numberFormat(point.value, 0, '.', ',')
+        return `${point.areaName}: ${formattedValue}${point.unit}`
+      },
+    },
     series: [seriesOptions],
   }
 

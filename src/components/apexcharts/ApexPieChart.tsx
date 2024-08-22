@@ -17,6 +17,29 @@ const defaultOptions: ApexOptions = {
     zoom: {
       enabled: false,
     },
+    toolbar: {
+      show: true,
+      tools: {
+        download: true,
+        selection: false,
+        zoom: false,
+        zoomin: false,
+        zoomout: false,
+        pan: false,
+        reset: false
+      },
+      export: {
+        svg: {
+          filename: 'pie-chart-svg',
+        },
+        png: {
+          filename: 'pie-chart-png',
+        },
+        csv: {
+          filename: 'pie-chart-data',
+        }
+      },
+    },
   },
   dataLabels: {
     enabled: false,
