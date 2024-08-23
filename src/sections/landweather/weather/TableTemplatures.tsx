@@ -1,4 +1,4 @@
-import CardsTimeTable from 'cards/CardsTimeTable'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
@@ -26,5 +26,5 @@ export default async function TableTemplatures({ prefecture }: Props) {
 
   const document = await fetchEstatData(prefCode)
 
-  return <CardsTimeTable title={title} document={document} />
+  return <CardsReactTimeTable title={title} document={document} />
 }
