@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
+import { useTheme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 
 import useURL from 'hooks/useURL'
@@ -17,12 +18,13 @@ type Props = {
 function BreadcrumbsPrefecture({ prefectures, currentPrefecture }: Props) {
   const [selectedItem, setSelectedItem] =
     useState<PrefectureType>(currentPrefecture)
-  const [anchorEl, setAnchorEl] = useState(null)
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+  const theme = useTheme()
+  const menuRef = useRef<HTMLUListElement>(null)
 
   const { changePrefURL } = useURL()
-  const router = useRouter()
 
-  const handleClick = (event: { currentTarget: unknown }) => {
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget)
   }
 
@@ -32,23 +34,40 @@ function BreadcrumbsPrefecture({ prefectures, currentPrefecture }: Props) {
 
   const handleSelect = (item: PrefectureType) => {
     setSelectedItem(item)
-    const url = changePrefURL(item.prefCode)
-    router.push(url)
     handleClose()
   }
 
+  useEffect(() => {
+    if (anchorEl && menuRef.current) {
+      const selectedIndex = prefectures.findIndex(
+        (pref) => pref.prefCode === selectedItem.prefCode
+      )
+      const menuItems = menuRef.current.children
+      if (menuItems[selectedIndex]) {
+        ;(menuItems[selectedIndex] as HTMLElement).scrollIntoView({
+          block: 'nearest',
+          inline: 'start',
+        })
+      }
+    }
+  }, [anchorEl, selectedItem, prefectures])
+
   if (!prefectures || !currentPrefecture || !selectedItem) {
-    return <div />
+    return null
   }
 
   return (
     <>
       <Typography
-        variant={'subtitle1'}
+        variant="subtitle1"
         sx={{
           textDecoration: 'none',
+          cursor: 'pointer',
+          '&:hover': {
+            color: theme.palette.primary.main,
+          },
         }}
-        color={'text.secondary'}
+        color="text.secondary"
         onClick={handleClick}
       >
         {selectedItem.prefName}
@@ -56,14 +75,46 @@ function BreadcrumbsPrefecture({ prefectures, currentPrefecture }: Props) {
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}
-        keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
+        MenuListProps={{
+          ref: menuRef,
+        }}
+        slotProps={{
+          paper: {
+            style: {
+              maxHeight: 47 * 4.5,
+              width: '12ch',
+            },
+          },
+        }}
       >
         {prefectures.map((item) => (
-          <MenuItem key={item.prefCode} onClick={() => handleSelect(item)}>
-            {item.prefName}
-          </MenuItem>
+          <Link
+            key={item.prefCode}
+            href={changePrefURL(item.prefCode)}
+            passHref
+            legacyBehavior
+          >
+            <MenuItem
+              onClick={() => handleSelect(item)}
+              selected={selectedItem.prefCode === item.prefCode}
+              sx={{
+                backgroundColor:
+                  selectedItem.prefCode === item.prefCode
+                    ? theme.palette.primary.light
+                    : 'inherit',
+                '&:hover': {
+                  backgroundColor:
+                    selectedItem.prefCode === item.prefCode
+                      ? theme.palette.primary.main
+                      : theme.palette.action.hover,
+                },
+              }}
+            >
+              {item.prefName}
+            </MenuItem>
+          </Link>
         ))}
       </Menu>
     </>

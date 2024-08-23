@@ -13,7 +13,6 @@ import Grid from '@mui/material/Grid'
 import { useTheme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 
-import BreadcrumbsCity from 'components/breadcrumbs/BreadcrumbsCity'
 import BreadcrumbsField from 'components/breadcrumbs/BreadcrumbsField'
 import BreadcrumbsMenu from 'components/breadcrumbs/BreadcrumbsMenu'
 import BreadcrumbsPage from 'components/breadcrumbs/BreadcrumbsPage'
@@ -288,12 +287,6 @@ function Breadcrumbs({
             <BreadcrumbsPrefecture
               prefectures={breadcrumbsProps.prefectures}
               currentPrefecture={breadcrumbsProps.currentPrefecture}
-            />
-          )}
-          {kindId === 'city' && (
-            <BreadcrumbsCity
-              cities={breadcrumbsProps.cities}
-              currentCity={breadcrumbsProps.currentCity}
             />
           )}
         </MuiBreadcrumbs>

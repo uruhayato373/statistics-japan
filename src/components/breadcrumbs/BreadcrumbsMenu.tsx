@@ -1,10 +1,9 @@
 import { useState } from 'react'
-
-import { useRouter } from 'next/navigation'
-
+import Link from 'next/link'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import Typography from '@mui/material/Typography'
+import { useTheme } from '@mui/material/styles'
 
 import useURL from 'hooks/useURL'
 import { MenuType } from 'utils/menu'
@@ -16,12 +15,12 @@ type Props = {
 
 function BreadcrumbsMenu({ menus, currentMenu }: Props) {
   const [selectedItem, setSelectedItem] = useState<MenuType>(currentMenu)
-  const [anchorEl, setAnchorEl] = useState(null)
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+  const theme = useTheme()
 
   const { changeMenuURL } = useURL()
-  const router = useRouter()
 
-  const handleClick = (event: { currentTarget: unknown }) => {
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget)
   }
 
@@ -31,19 +30,21 @@ function BreadcrumbsMenu({ menus, currentMenu }: Props) {
 
   const handleSelect = (item: MenuType) => {
     setSelectedItem(item)
-    const url = changeMenuURL(item.menuId)
-    router.push(url)
     handleClose()
   }
 
   return (
     <>
       <Typography
-        variant={'subtitle1'}
+        variant="subtitle1"
         sx={{
           textDecoration: 'none',
+          cursor: 'pointer',
+          '&:hover': {
+            color: theme.palette.primary.main,
+          },
         }}
-        color={'text.secondary'}
+        color="text.secondary"
         onClick={handleClick}
       >
         {selectedItem.menuTitle}
@@ -56,9 +57,31 @@ function BreadcrumbsMenu({ menus, currentMenu }: Props) {
         onClose={handleClose}
       >
         {menus.map((item) => (
-          <MenuItem key={item.menuId} onClick={() => handleSelect(item)}>
-            {item.menuTitle}
-          </MenuItem>
+          <Link
+            key={item.menuId}
+            href={changeMenuURL(item.menuId)}
+            passHref
+            legacyBehavior
+          >
+            <MenuItem
+              onClick={() => handleSelect(item)}
+              selected={selectedItem.menuId === item.menuId}
+              sx={{
+                backgroundColor:
+                  selectedItem.menuId === item.menuId
+                    ? theme.palette.primary.light
+                    : 'inherit',
+                '&:hover': {
+                  backgroundColor:
+                    selectedItem.menuId === item.menuId
+                      ? theme.palette.primary.main
+                      : theme.palette.action.hover,
+                },
+              }}
+            >
+              {item.menuTitle}
+            </MenuItem>
+          </Link>
         ))}
       </Menu>
     </>
