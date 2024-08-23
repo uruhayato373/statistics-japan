@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-
-import { usePathname, useRouter } from 'next/navigation'
-
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
 import Grid from '@mui/material/Grid'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
+import { useTheme } from '@mui/material/styles'
 
 import { kind } from 'atoms'
 import useURL from 'hooks/useURL'
@@ -20,10 +20,11 @@ import { useAtom } from 'jotai'
  */
 export default function SelectKind(): JSX.Element {
   const [selectedItem, setSelectedItem] = useAtom<KindType>(kind)
-  const [anchorEl, setAnchorEl] = useState(null)
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
+  const theme = useTheme()
 
-  //種類のリストを取得
+  // 種類のリストを取得
   const { items, findItem } = handleKind()
 
   // 現在のURLを取得
@@ -34,11 +35,9 @@ export default function SelectKind(): JSX.Element {
     const kindId = pathname.split('/')[3]
     const kind = findItem(kindId)
     setSelectedItem(kind)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [pathname, findItem, setSelectedItem])
 
   // 種類を変更した場合のリダイレクトURLを取得
-  const router = useRouter()
   const { changeKindURL } = useURL()
 
   // About Site では非表示
@@ -57,26 +56,47 @@ export default function SelectKind(): JSX.Element {
 
   const handleSelect = (item: KindType) => {
     setSelectedItem(item)
-    const url = changeKindURL(item)
-    router.push(url)
     handleClose()
   }
 
   return (
-    <Box sx={{ width: '100%', ml: { xs: 0, md: 1 } }}>
+    <Box sx={{ width: '100%', ml: { xs: 2, md: 1 } }}>
       <Grid item>
         <Chip
           label={selectedItem ? selectedItem.kindTitle : 'Select Type'}
           variant="outlined"
           color="primary"
           onClick={handleClick}
+          // size="small"
         />
       </Grid>
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         {items.map((item) => (
-          <MenuItem key={item.kindId} onClick={() => handleSelect(item)}>
-            {item.kindTitle}
-          </MenuItem>
+          <Link
+            key={item.kindId}
+            href={changeKindURL(item)}
+            passHref
+            legacyBehavior
+          >
+            <MenuItem
+              onClick={() => handleSelect(item)}
+              selected={selectedItem?.kindId === item.kindId}
+              sx={{
+                backgroundColor:
+                  selectedItem?.kindId === item.kindId
+                    ? theme.palette.primary.light
+                    : 'inherit',
+                '&:hover': {
+                  backgroundColor:
+                    selectedItem?.kindId === item.kindId
+                      ? theme.palette.primary.main
+                      : theme.palette.action.hover,
+                },
+              }}
+            >
+              {item.kindTitle}
+            </MenuItem>
+          </Link>
         ))}
       </Menu>
     </Box>

@@ -15,21 +15,6 @@
     "fieldId": "population"
   },
   {
-    "menuId": "household",
-    "menuTitle": "世帯",
-    "fieldId": "population"
-  },
-  {
-    "menuId": "marriage",
-    "menuTitle": "結婚・離婚",
-    "fieldId": "population"
-  },
-  {
-    "menuId": "birthdeath",
-    "menuTitle": "出生・死亡",
-    "fieldId": "population"
-  },
-  {
     "menuId": "laborforce",
     "menuTitle": "労働力",
     "fieldId": "laborwage"

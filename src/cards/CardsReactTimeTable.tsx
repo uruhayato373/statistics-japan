@@ -1,6 +1,5 @@
 'use client'
 
-import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
@@ -18,11 +17,7 @@ type Props = {
   height?: string
 }
 
-export default function CardsTimeTable({
-  title,
-  document,
-  height = '400px',
-}: Props) {
+export default function CardsReactTimeTable({ title, document }: Props) {
   const contents = formatTable(document).reactTable()
   const { columns, data } = contents
 
@@ -37,20 +32,20 @@ export default function CardsTimeTable({
 
   return (
     <MainCard content={false}>
-      <Box sx={{ p: 2, pb: 0, height }}>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-        >
-          <Typography variant="h5" color="text.primary">
-            {title}
-          </Typography>
-          <CSVExport data={data} headers={headers} filename={filename} />
-        </Stack>
-        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-        <ReactTable columns={columns} data={data} />
-      </Box>
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{ p: 2, pb: 0 }}
+      >
+        <Typography variant="h5" color="text.primary">
+          {title}
+        </Typography>
+        <CSVExport data={data} headers={headers} filename={filename} />
+      </Stack>
+      <Divider sx={{ mt: 1.5, mb: 1.5 }} />
+
+      <ReactTable columns={columns} data={data} />
     </MainCard>
   )
 }
