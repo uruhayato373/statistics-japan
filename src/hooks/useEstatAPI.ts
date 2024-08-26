@@ -1,6 +1,7 @@
 import useSWR, { SWRResponse } from 'swr'
 
-import { EstatParamsType, DocumentType } from 'utils/e-stat'
+import { DocumentType } from 'utils/document'
+import { EstatParamsType } from 'utils/e-stat'
 import paramsSerializer from 'utils/e-stat/modules/paramsSerializer'
 import fetcher from 'utils/fetcher'
 
