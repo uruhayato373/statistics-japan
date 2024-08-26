@@ -1,4 +1,4 @@
-import { DocumentType, ValueType } from 'utils/e-stat'
+import { DocumentType, ValueType } from 'utils/document'
 
 import {
   calcAverage,
