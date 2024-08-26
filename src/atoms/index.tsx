@@ -1,5 +1,5 @@
 import { CityType } from 'utils/city'
-import { TimeType } from 'utils/e-stat'
+import { TimeType } from 'utils/document'
 import { KindType } from 'utils/kind'
 import { PrefectureType } from 'utils/prefecture'
 
@@ -54,8 +54,3 @@ export const checkedPrefectures = atom<PrefectureType[]>([
     prefName: '兵庫県',
   },
 ])
-
-export const divition = atom({
-  name: '総数',
-  code: 'total',
-})
