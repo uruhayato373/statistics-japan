@@ -1,4 +1,4 @@
-import { CategoryType, DocumentType } from 'utils/e-stat'
+import { CategoryType, DocumentType } from 'utils/document'
 
 /**
  * D3チャートのマップ用コンテンツの型定義
