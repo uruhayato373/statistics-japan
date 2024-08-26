@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsApexComparisonChart from 'cards/CardsApexComparisonChart'
+import CardsHighchartsComparisonChart from 'cards/CardsHighchartsComparisonChart'
 
 import { saveDocument } from 'app/actions/saveDocument'
 import { saveValues } from 'app/actions/saveValues'
@@ -51,7 +51,7 @@ export default async function ComparisonChartTotalPopulation({
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsApexComparisonChart title={title} document={document} />
+      <CardsHighchartsComparisonChart title={title} document={document} />
     </Suspense>
   )
 }
