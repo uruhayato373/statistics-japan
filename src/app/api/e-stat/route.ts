@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+import handleDocument from 'utils/document'
 import handleEstatAPI, { EstatParamsType } from 'utils/e-stat'
 
 /**
@@ -36,7 +37,8 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
   try {
     // e-Stat APIからデータを取得
-    const document = await handleEstatAPI(params).fetchDocument()
+    const values = await handleEstatAPI().fetchValues(params)
+    const document = await handleDocument().formatDocument(values)
     return NextResponse.json(document)
   } catch (error) {
     console.error('e-Stat APIからデータ取得中にエラーが発生しました:', error)
