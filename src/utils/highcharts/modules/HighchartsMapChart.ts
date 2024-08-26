@@ -1,8 +1,8 @@
-import { SeriesMapOptions } from 'highcharts'
+import { Options, SeriesMapOptions } from 'highcharts'
 
 import { DocumentType } from 'utils/document'
 
-const formatHighchartsMapChart = (document: DocumentType): SeriesMapOptions => {
+const formatHighchartsMapChart = (document: DocumentType): Options => {
   const { values, categories } = document
   const data = values
     .filter((f) => f.areaCode !== '00000')
@@ -13,11 +13,15 @@ const formatHighchartsMapChart = (document: DocumentType): SeriesMapOptions => {
       unit: d.unit,
     }))
 
-  return {
+  const series: SeriesMapOptions = {
     type: 'map',
     name: categories[0].categoryName,
     data,
     joinBy: ['N03_001', 'areaName'],
+  }
+
+  return {
+    series: [series],
   }
 }
 

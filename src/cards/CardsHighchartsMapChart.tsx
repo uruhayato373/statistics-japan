@@ -50,7 +50,7 @@ export default function CardsHighchartsMapChart({
     values: document.values.filter((f) => f.timeCode === selectedTimeCode),
   }
 
-  const series = formatHighcharts(filteredDocument).mapChart()
+  const formatOptions = formatHighcharts(filteredDocument).mapChart()
 
   return (
     <MainCard sx={{ mt: 1 }} content={false}>
@@ -81,7 +81,7 @@ export default function CardsHighchartsMapChart({
             </Select>
           </FormControl>
         </Stack>
-        <HighchartsMapChart series={series} />
+        <HighchartsMapChart options={formatOptions} />
         <Box sx={{ pt: 2.25 }}>
           <Typography variant="caption" color="text.secondary">
             地図は『歴史的行政区域データセットβ版』（CODH作成）を利用

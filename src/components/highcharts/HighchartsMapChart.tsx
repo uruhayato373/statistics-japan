@@ -18,7 +18,7 @@ if (typeof Highcharts === 'object') {
 }
 
 interface Props {
-  series: SeriesMapOptions
+  options: Options
 }
 
 const defaultOptions: Options = {
@@ -60,10 +60,10 @@ const defaultOptions: Options = {
   },
 }
 
-export default function HighchartsMapChart({ series }: Props) {
+export default function HighchartsMapChart({ options }: Props) {
   const { geoShape } = useGeoshape('prefecture')
 
-  const seriesOptions: SeriesMapOptions = {
+  const updatedSeries: SeriesMapOptions[] = options.series?.map((series) => ({
     ...series,
     mapData: geoShape as TopoJSONData,
     states: {
@@ -78,9 +78,9 @@ export default function HighchartsMapChart({ series }: Props) {
     animation: false,
     borderColor: '#FFFFFF', // 地図の枠線の色を白に設定
     borderWidth: 0.5, // 枠線の幅を設定（必要に応じて調整）
-  }
+  }))
 
-  const options: Options = {
+  const customOptions: Options = {
     ...defaultOptions,
     chart: {
       map: geoShape as TopoJSONData,
@@ -98,13 +98,13 @@ export default function HighchartsMapChart({ series }: Props) {
         return `${point.areaName}: ${formattedValue}${point.unit}`
       },
     },
-    series: [seriesOptions],
+    series: updatedSeries,
   }
 
   return (
     <HighchartsReact
       highcharts={Highcharts}
-      options={options}
+      options={customOptions}
       constructorType={'mapChart'}
     />
   )
