@@ -4,19 +4,50 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import CardsApexComparisonChart from 'cards/CardsApexComparisonChart'
 
+import { saveDocument } from 'app/actions/saveDocument'
+import { saveValues } from 'app/actions/saveValues'
+import handleDocument from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
+import { RouterProps } from 'utils/props'
 
 const CARD_TITLE = '総人口'
+const CARD_ID = 'ComparisonChartTotalPopulation'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
   cdCat01: 'A1101',
 }
 
-export default async function ComparisonChartTotalPopulationClient() {
+interface Props {
+  routerProps: RouterProps
+}
+
+// valuesの取得と整形
+async function fetchValues() {
+  const values = await handleEstatAPI().fetchValues({
+    ...ESTAT_PARAMS,
+  })
+
+  return values
+}
+
+// コンポーネントの描画
+export default async function ComparisonChartTotalPopulation({
+  routerProps,
+}: Props) {
   const title = `都道府県の${CARD_TITLE}`
 
-  const document = await handleEstatAPI(ESTAT_PARAMS).fetchDocument()
+  const saveProps = { ...routerProps, cardId: CARD_ID }
+
+  const values = await fetchValues()
+  if (process.env.NODE_ENV === 'development') {
+    await saveValues(saveProps, values)
+  }
+
+  const document = handleDocument().formatDocument(values)
+  if (process.env.NODE_ENV === 'development') {
+    await saveDocument(saveProps, document)
+  }
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
