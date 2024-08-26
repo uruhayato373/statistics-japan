@@ -1,0 +1,739 @@
+{
+  "values": [
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "人",
+      "value": 111939643
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "人",
+      "value": 113094000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "人",
+      "value": 114165000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "人",
+      "value": 115190000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "人",
+      "value": 116155000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 117060396
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "人",
+      "value": 117902000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "人",
+      "value": 118728000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "人",
+      "value": 119536000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "人",
+      "value": 120305000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 121048923
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "人",
+      "value": 121660000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "人",
+      "value": 122239000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "人",
+      "value": 122745000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "人",
+      "value": 123205000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 123611167
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "人",
+      "value": 124101000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "人",
+      "value": 124567000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "人",
+      "value": 124938000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "人",
+      "value": 125265000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 125570246
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "人",
+      "value": 125859000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "人",
+      "value": 126157000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "人",
+      "value": 126472000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "人",
+      "value": 126667000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 126925843
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "人",
+      "value": 127316000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "人",
+      "value": 127486000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "人",
+      "value": 127694000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "人",
+      "value": 127787000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 127767994
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "人",
+      "value": 127901000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "人",
+      "value": 128033000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2008",
+      "timeName": "2008年度",
+      "unit": "人",
+      "value": 128084000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2009",
+      "timeName": "2009年度",
+      "unit": "人",
+      "value": 128032000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "人",
+      "value": 128057352
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "人",
+      "value": 127834000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "人",
+      "value": 127593000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "人",
+      "value": 127414000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "人",
+      "value": 127237000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "人",
+      "value": 127094745
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "人",
+      "value": 127042000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "人",
+      "value": 126919000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "人",
+      "value": 126749000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "人",
+      "value": 126555000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "人",
+      "value": 126146099
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2021",
+      "timeName": "2021年度",
+      "unit": "人",
+      "value": 125502000
+    },
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2022",
+      "timeName": "2022年度",
+      "unit": "人",
+      "value": 124947000
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "A1101",
+      "categoryName": "総人口",
+      "categoryUnit": "人"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "00000",
+      "areaName": "全国"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1975",
+      "timeName": "1975年度"
+    },
+    {
+      "timeCode": "1976",
+      "timeName": "1976年度"
+    },
+    {
+      "timeCode": "1977",
+      "timeName": "1977年度"
+    },
+    {
+      "timeCode": "1978",
+      "timeName": "1978年度"
+    },
+    {
+      "timeCode": "1979",
+      "timeName": "1979年度"
+    },
+    {
+      "timeCode": "1980",
+      "timeName": "1980年度"
+    },
+    {
+      "timeCode": "1981",
+      "timeName": "1981年度"
+    },
+    {
+      "timeCode": "1982",
+      "timeName": "1982年度"
+    },
+    {
+      "timeCode": "1983",
+      "timeName": "1983年度"
+    },
+    {
+      "timeCode": "1984",
+      "timeName": "1984年度"
+    },
+    {
+      "timeCode": "1985",
+      "timeName": "1985年度"
+    },
+    {
+      "timeCode": "1986",
+      "timeName": "1986年度"
+    },
+    {
+      "timeCode": "1987",
+      "timeName": "1987年度"
+    },
+    {
+      "timeCode": "1988",
+      "timeName": "1988年度"
+    },
+    {
+      "timeCode": "1989",
+      "timeName": "1989年度"
+    },
+    {
+      "timeCode": "1990",
+      "timeName": "1990年度"
+    },
+    {
+      "timeCode": "1991",
+      "timeName": "1991年度"
+    },
+    {
+      "timeCode": "1992",
+      "timeName": "1992年度"
+    },
+    {
+      "timeCode": "1993",
+      "timeName": "1993年度"
+    },
+    {
+      "timeCode": "1994",
+      "timeName": "1994年度"
+    },
+    {
+      "timeCode": "1995",
+      "timeName": "1995年度"
+    },
+    {
+      "timeCode": "1996",
+      "timeName": "1996年度"
+    },
+    {
+      "timeCode": "1997",
+      "timeName": "1997年度"
+    },
+    {
+      "timeCode": "1998",
+      "timeName": "1998年度"
+    },
+    {
+      "timeCode": "1999",
+      "timeName": "1999年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2001",
+      "timeName": "2001年度"
+    },
+    {
+      "timeCode": "2002",
+      "timeName": "2002年度"
+    },
+    {
+      "timeCode": "2003",
+      "timeName": "2003年度"
+    },
+    {
+      "timeCode": "2004",
+      "timeName": "2004年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2006",
+      "timeName": "2006年度"
+    },
+    {
+      "timeCode": "2007",
+      "timeName": "2007年度"
+    },
+    {
+      "timeCode": "2008",
+      "timeName": "2008年度"
+    },
+    {
+      "timeCode": "2009",
+      "timeName": "2009年度"
+    },
+    {
+      "timeCode": "2010",
+      "timeName": "2010年度"
+    },
+    {
+      "timeCode": "2011",
+      "timeName": "2011年度"
+    },
+    {
+      "timeCode": "2012",
+      "timeName": "2012年度"
+    },
+    {
+      "timeCode": "2013",
+      "timeName": "2013年度"
+    },
+    {
+      "timeCode": "2014",
+      "timeName": "2014年度"
+    },
+    {
+      "timeCode": "2015",
+      "timeName": "2015年度"
+    },
+    {
+      "timeCode": "2016",
+      "timeName": "2016年度"
+    },
+    {
+      "timeCode": "2017",
+      "timeName": "2017年度"
+    },
+    {
+      "timeCode": "2018",
+      "timeName": "2018年度"
+    },
+    {
+      "timeCode": "2019",
+      "timeName": "2019年度"
+    },
+    {
+      "timeCode": "2020",
+      "timeName": "2020年度"
+    },
+    {
+      "timeCode": "2021",
+      "timeName": "2021年度"
+    },
+    {
+      "timeCode": "2022",
+      "timeName": "2022年度"
+    }
+  ]
+}

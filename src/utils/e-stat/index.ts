@@ -1,49 +1,79 @@
-import mergeDocuments from 'utils/document'
+import { ValueType } from 'utils/document'
 
-import { fetchEstatAPI } from './fetchAPI'
-import { formatEstatAPI } from './formatAPI'
-import type { DocumentType, TimeType } from './types/formatted'
+import { calculateDivisionValues } from './modules/calculateValues/divisionValues'
+import { calculateRatioValues } from './modules/calculateValues/ratioValues'
+import { fetchEstatAPI } from './modules/fetchAPI'
+import { formatValues } from './modules/formatResponse/formatValues'
 import type { EstatParamsType } from './types/params'
 
 export type * from './types/params'
-export type * from './types/formatted'
 
 interface HandleEstatAPIResult {
-  fetchTimes: () => Promise<TimeType[]>
-  fetchDocument: (type?: string) => Promise<DocumentType>
+  fetchValues: (
+    estatParams: EstatParamsType | EstatParamsType[]
+  ) => Promise<ValueType[]>
+  fetchDivisionValues: (
+    moleculeParams: EstatParamsType,
+    denominatorParams: EstatParamsType
+  ) => Promise<ValueType[]>
+  fetchRatioValues: (
+    moleculeParams: EstatParamsType,
+    denominatorParams: EstatParamsType
+  ) => Promise<ValueType[]>
 }
 
-const handleEstatAPI = (
-  estatParams: EstatParamsType | EstatParamsType[]
-): HandleEstatAPIResult => {
+const handleEstatAPI = (): HandleEstatAPIResult => {
   return {
-    fetchTimes: async () => {
+    /**
+     * valuesを取得して返却する
+     */
+    fetchValues: async (estatParams) => {
       if (Array.isArray(estatParams)) {
-        // 複数のパラメータが渡された場合
-        const params = estatParams.map((d) => ({ ...d, cdArea: '00000' }))
-        const responses = await Promise.all(params.map(fetchEstatAPI))
-        const documents = responses.map(formatEstatAPI)
-        const times = mergeDocuments(documents).times
-        return times.sort((a, b) => parseInt(b.timeCode) - parseInt(a.timeCode))
+        const responses = await Promise.all(estatParams.map(fetchEstatAPI))
+        const valuesArray = responses.map((response) => formatValues(response))
+        return valuesArray.flat()
       } else {
-        // 単一のパラメータが渡された場合
-        const params = { ...estatParams, cdArea: '00000' } as EstatParamsType
-        const response = await fetchEstatAPI(params)
-        const { times } = formatEstatAPI(response)
-        return times.sort((a, b) => parseInt(b.timeCode) - parseInt(a.timeCode))
+        const response = await fetchEstatAPI(estatParams)
+        const values = formatValues(response)
+        return values
       }
     },
-    fetchDocument: async (type: 'flat' | 'ratio' = 'flat') => {
-      if (Array.isArray(estatParams)) {
-        // 複数のパラメータが渡された場合
-        const responses = await Promise.all(estatParams.map(fetchEstatAPI))
-        const documents = responses.map(formatEstatAPI)
+    /**
+     * 比率を計算して返却する  [例] 人口 / 面積 (人/ha)
+     */
+    fetchDivisionValues: async (moleculeParams, denominatorParams) => {
+      try {
+        const [moleculeResponse, denominatorResponse] = await Promise.all([
+          fetchEstatAPI(moleculeParams),
+          fetchEstatAPI(denominatorParams),
+        ])
 
-        return mergeDocuments(documents, type)
-      } else {
-        // 単一のパラメータが渡された場合
-        const response = await fetchEstatAPI(estatParams)
-        return formatEstatAPI(response)
+        const moleculeValues = formatValues(moleculeResponse)
+        const denominatorValues = formatValues(denominatorResponse)
+
+        return calculateDivisionValues({ moleculeValues, denominatorValues })
+      } catch (error) {
+        console.error('fetchDivisionValues でエラーが発生しました:', error)
+        throw new Error('e-Stat API からのデータ取得に失敗しました')
+      }
+    },
+    /**
+     * 割合を計算して返却する  [例] 可住地面積 / 総面積 (%)
+     */
+    fetchRatioValues: async (moleculeParams, denominatorParams) => {
+      try {
+        const [moleculeResponse, denominatorResponse] = await Promise.all([
+          fetchEstatAPI(moleculeParams),
+          fetchEstatAPI(denominatorParams),
+        ])
+
+        const moleculeValues = formatValues(moleculeResponse)
+        const denominatorValues = formatValues(denominatorResponse)
+
+        return calculateRatioValues({ moleculeValues, denominatorValues })
+      } catch (error) {
+        console.error('fetchRatioValues でエラーが発生しました:', error)
+        throw new Error('e-Stat API からのデータ取得に失敗しました')
       }
     },
   }

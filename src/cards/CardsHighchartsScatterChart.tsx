@@ -14,7 +14,7 @@ import CircularProgressCards from 'components/CircularProgressCards'
 import HighchartsScatterChart from 'components/highcharts/HighchartsScatterChart'
 import MainCard from 'components/MainCard'
 
-import { DocumentType } from 'utils/e-stat'
+import { DocumentType } from 'utils/document'
 import formatHighcharts from 'utils/highcharts'
 
 interface Props {
@@ -55,6 +55,8 @@ export default function CardsHighchartsScatterChart({
 
   const { categories } = filteredDocument
   const series = formatHighcharts(filteredDocument).scatterChart()
+
+  console.log('series:', series)
 
   return (
     <MainCard sx={{ mt: 1 }} content={false}>

@@ -37,30 +37,54 @@ export default async function TotalPopulationJapan({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardTotalPopulation prefecture={currentPrefecture} />
+              <DashboardTotalPopulation
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardDayTimePopulation prefecture={currentPrefecture} />
+              <DashboardDayTimePopulation
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardDayTimePopulationRatio prefecture={currentPrefecture} />
+              <DashboardDayTimePopulationRatio
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardMedianAge prefecture={currentPrefecture} />
+              <DashboardMedianAge
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} sm={6} md={4} lg={8}>
-              <LineChartTotalPopulation prefecture={currentPrefecture} />
+              <LineChartTotalPopulation
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={4}>
-              <ColumnChartThreeAge prefecture={currentPrefecture} />
+              <ColumnChartThreeAge
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             {/* row 3 */}
             <Grid item xs={12} md={5} lg={5}>
-              <PyramidChartPopulation prefecture={currentPrefecture} />
+              <PyramidChartPopulation
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
-              <TablePopulation prefecture={currentPrefecture} />
+              <TablePopulation
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
           </Grid>
         </Box>

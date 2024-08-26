@@ -22,7 +22,7 @@ import { ApexOptions } from 'apexcharts'
 import { prefecture } from 'atoms'
 import prefectures from 'data/prefecture/prefList.json'
 import formatApexcharts from 'utils/apexcharts'
-import { DocumentType } from 'utils/e-stat'
+import { DocumentType } from 'utils/document'
 import { PrefectureType } from 'utils/prefecture'
 
 import { useAtom } from 'jotai'
@@ -45,7 +45,7 @@ const MenuProps = {
   },
 }
 
-export default function CardsReactRankingTable({
+export default function CardsApexComparisonChart({
   title,
   document,
   options,

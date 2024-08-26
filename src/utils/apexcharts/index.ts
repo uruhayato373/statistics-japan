@@ -1,4 +1,4 @@
-import { DocumentType } from 'utils/e-stat'
+import { DocumentType } from 'utils/document'
 
 import formatAxisTimeChart from './modules/AxisTimeChart'
 import formatPieChart from './modules/PieChart'

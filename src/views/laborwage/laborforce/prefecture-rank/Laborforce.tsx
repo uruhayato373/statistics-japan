@@ -6,8 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartLaborforceClient from 'sections/laborwage/laborforce/prefecture-rank/MapChartLaborforceClient'
-import RankingTableLaborforceClient from 'sections/laborwage/laborforce/prefecture-rank/RankingTableLaborforceClient'
+import MapChartLaborforce from 'sections/laborwage/laborforce/prefecture-rank/MapChartLaborforce'
+import RankingTableLaborforce from 'sections/laborwage/laborforce/prefecture-rank/RankingTableLaborforce'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -26,10 +26,10 @@ export default async function Laborforce({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={7}>
-              <MapChartLaborforceClient />
+              <MapChartLaborforce routerProps={routerProps} />
             </Grid>
             <Grid item xs={12} md={6} lg={5}>
-              <RankingTableLaborforceClient />
+              <RankingTableLaborforce routerProps={routerProps} />
             </Grid>
             {/* row 2 */}
             {/* <Grid item xs={12} md={9}>

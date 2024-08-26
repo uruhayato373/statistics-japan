@@ -28,10 +28,10 @@ export default async function TotalArea({ routerProps }: Props) {
             <Grid item xs={12} md={10}>
               <Grid container rowSpacing={4.5} columnSpacing={3}>
                 <Grid item xs={12} md={6} lg={6}>
-                  <MapChartTotalArea />
+                  <MapChartTotalArea routerProps={routerProps} />
                 </Grid>
                 <Grid item xs={12} md={6} lg={6}>
-                  <RankingTableTotalArea />
+                  <RankingTableTotalArea routerProps={routerProps} />
                 </Grid>
               </Grid>
             </Grid>

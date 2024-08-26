@@ -1,0 +1,154 @@
+{
+  "values": [
+    {
+      "categoryCode": "A6107",
+      "categoryName": "昼間人口",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 4915867
+    },
+    {
+      "categoryCode": "A6107",
+      "categoryName": "昼間人口",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 5036865
+    },
+    {
+      "categoryCode": "A6107",
+      "categoryName": "昼間人口",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 5109737
+    },
+    {
+      "categoryCode": "A6107",
+      "categoryName": "昼間人口",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 5150277
+    },
+    {
+      "categoryCode": "A6107",
+      "categoryName": "昼間人口",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 5276185
+    },
+    {
+      "categoryCode": "A6107",
+      "categoryName": "昼間人口",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 5298677
+    },
+    {
+      "categoryCode": "A6107",
+      "categoryName": "昼間人口",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "人",
+      "value": 5347839
+    },
+    {
+      "categoryCode": "A6107",
+      "categoryName": "昼間人口",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "人",
+      "value": 5294074
+    },
+    {
+      "categoryCode": "A6107",
+      "categoryName": "昼間人口",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "人",
+      "value": 5249636
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "A6107",
+      "categoryName": "昼間人口",
+      "categoryUnit": "人"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "28000",
+      "areaName": "兵庫県"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1980",
+      "timeName": "1980年度"
+    },
+    {
+      "timeCode": "1985",
+      "timeName": "1985年度"
+    },
+    {
+      "timeCode": "1990",
+      "timeName": "1990年度"
+    },
+    {
+      "timeCode": "1995",
+      "timeName": "1995年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2010",
+      "timeName": "2010年度"
+    },
+    {
+      "timeCode": "2015",
+      "timeName": "2015年度"
+    },
+    {
+      "timeCode": "2020",
+      "timeName": "2020年度"
+    }
+  ]
+}

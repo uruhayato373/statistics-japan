@@ -36,37 +36,70 @@ export default async function Prefecture({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardSunshineHours prefecture={currentPrefecture} />
+              <DashboardSunshineHours
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardRainyDays prefecture={currentPrefecture} />
+              <DashboardRainyDays
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardPrecipitation prefecture={currentPrefecture} />
+              <DashboardPrecipitation
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardMaxTemp prefecture={currentPrefecture} />
+              <DashboardMaxTemp
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardMinTemp prefecture={currentPrefecture} />
+              <DashboardMinTemp
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAveTemp prefecture={currentPrefecture} />
+              <DashboardAveTemp
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAveHum prefecture={currentPrefecture} />
+              <DashboardAveHum
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={6}>
-              <LineChartTemplatures prefecture={currentPrefecture} />
+              <LineChartTemplatures
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={6}>
-              <LineChartPrecipitation prefecture={currentPrefecture} />
+              <LineChartPrecipitation
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={6}>
-              <TableTemplatures prefecture={currentPrefecture} />
+              <TableTemplatures
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={6}>
-              <TableDays prefecture={currentPrefecture} />
+              <TableDays
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
           </Grid>
         </Box>

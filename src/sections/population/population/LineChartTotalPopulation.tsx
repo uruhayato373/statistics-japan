@@ -4,10 +4,15 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import CardsApexLineChart from 'cards/CardsApexLineChart'
 
+import { saveDocument } from 'app/actions/saveDocument'
+import { saveValues } from 'app/actions/saveValues'
+import handleDocument from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
+import { RouterProps } from 'utils/props'
 
-const TITLE = '総人口の推移'
+const CARD_TITLE = '総人口の推移'
+const CARD_ID = 'LineChartTotalPopulation'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
@@ -15,20 +20,40 @@ const ESTAT_PARAMS = {
 }
 
 interface Props {
+  routerProps: RouterProps
   prefecture: PrefectureType
 }
 
-async function fetchEstatData(prefCode: string) {
-  const estatParams = { ...ESTAT_PARAMS, cdArea: prefCode }
-  return await handleEstatAPI(estatParams).fetchDocument()
+// valuesの取得と整形
+async function fetchValues(prefCode: string) {
+  const values = await handleEstatAPI().fetchValues({
+    ...ESTAT_PARAMS,
+    cdArea: prefCode,
+  })
+
+  return values
 }
 
-export default async function LineChartTotalPopulation({ prefecture }: Props) {
+// コンポーネントの描画
+export default async function LineChartTotalPopulation({
+  routerProps,
+  prefecture,
+}: Props) {
   const { prefCode, prefName } = prefecture
 
-  const title = `${prefName}の${TITLE}`
+  const title = `${prefName}の${CARD_TITLE}`
 
-  const document = await fetchEstatData(prefCode)
+  const saveProps = { ...routerProps, cardId: CARD_ID }
+
+  const values = await fetchValues(prefCode)
+  if (process.env.NODE_ENV === 'development') {
+    await saveValues(saveProps, values)
+  }
+
+  const document = handleDocument().formatDocument(values)
+  if (process.env.NODE_ENV === 'development') {
+    await saveDocument(saveProps, document)
+  }
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

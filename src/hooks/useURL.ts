@@ -96,7 +96,6 @@ export default function useURL() {
    * Menuを変更した場合のURLを生成
    */
   const changeMenuURL = (newId: string): string => {
-    console.log('newId', newId)
     const { fieldId, kindId } = currentRouterProps
     const pageId = handlePage().items(newId)[0].pageId
     switch (kindId) {

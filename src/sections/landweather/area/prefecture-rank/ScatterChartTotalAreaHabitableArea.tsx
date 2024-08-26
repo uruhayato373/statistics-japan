@@ -4,54 +4,69 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import CardsHighchartsScatterChart from 'cards/CardsHighchartsScatterChart'
 
+import { saveDocument } from 'app/actions/saveDocument'
+import { saveValues } from 'app/actions/saveValues'
+import handleDocument from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
+import { RouterProps } from 'utils/props'
 
-const TITLE = '総面積'
+const CARD_TITLE = '可住地面積の割合'
+const CARD_ID = 'ScatterChartTotalAreaHabitableArea'
 
-const ESTAT_PARAMS = [
-  {
-    statsDataId: '0000010102',
-    cdCat01: 'B1101',
-  },
-  {
-    statsDataId: '0000010102',
-    cdCat01: 'B1103',
-  },
-]
+const ESTAT_PARAMS_MOLECULE = {
+  statsDataId: '0000010102',
+  cdCat01: 'B1103',
+}
 
-export default async function ScatterChartTotalAreaHabitableArea() {
-  const title = `都道府県の${TITLE}`
+const ESTAT_PARAMS_DENOMINATOR = {
+  statsDataId: '0000010102',
+  cdCat01: 'B1101',
+}
 
-  const document = await handleEstatAPI(ESTAT_PARAMS).fetchDocument()
+interface Props {
+  routerProps: RouterProps
+}
 
-  const excludedAreaCodes = ['00000', '01000']
-  const filterDocument = {
-    ...document,
-    categories: document.categories.map((d) => {
+// valuesの取得と整形
+async function fetchValues() {
+  const values = await handleEstatAPI().fetchValues([
+    ESTAT_PARAMS_MOLECULE,
+    ESTAT_PARAMS_DENOMINATOR,
+  ])
+
+  const formatValues = values
+    .filter((f) => f.areaCode !== '00000')
+    .filter((f) => f.areaCode !== '01000')
+    .map((d) => {
       return {
         ...d,
         categoryName: d.categoryName.replace('（北方地域及び竹島を除く）', ''),
       }
-    }),
-    areas: document.areas.filter(
-      (a) => !excludedAreaCodes.includes(a.areaCode)
-    ),
-    values: document.values
-      .filter((d) => !excludedAreaCodes.includes(d.areaCode))
-      .map((d) => {
-        return {
-          ...d,
-          categoryName: d.categoryName.replace(
-            '（北方地域及び竹島を除く）',
-            ''
-          ),
-        }
-      }),
+    })
+
+  return formatValues
+}
+
+export default async function ScatterChartTotalAreaHabitableArea({
+  routerProps,
+}: Props) {
+  const title = `都道府県の${CARD_TITLE}`
+
+  const saveProps = { ...routerProps, cardId: CARD_ID }
+
+  const values = await fetchValues()
+  if (process.env.NODE_ENV === 'development') {
+    await saveValues(saveProps, values)
+  }
+
+  const document = handleDocument().formatDocument(values)
+  if (process.env.NODE_ENV === 'development') {
+    await saveDocument(saveProps, document)
   }
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsHighchartsScatterChart title={title} document={filterDocument} />
+      <CardsHighchartsScatterChart title={title} document={document} />
     </Suspense>
   )
 }

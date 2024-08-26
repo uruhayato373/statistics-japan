@@ -1,9 +1,8 @@
-import { ValueType } from 'utils/e-stat'
+import { ValueType } from '../types/document'
 
-import extractAreas from './extractAreas'
+import extractAreas from './formatAreas'
 
 const calculateRatioValues = (values: ValueType[], digit: number = 0) => {
-  console.log('values:', values)
   const valueMap = new Map<string, ValueType[]>()
   values.forEach((value) => {
     if (!valueMap.has(value.areaCode)) {

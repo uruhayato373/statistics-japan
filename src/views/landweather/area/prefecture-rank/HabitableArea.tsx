@@ -6,8 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartHabitableAreaClient from 'sections/landweather/area/prefecture-rank/MapChartHabitableAreaClient'
-import RankingTableHabitableAreaClient from 'sections/landweather/area/prefecture-rank/RankingTableHabitableAreaClient'
+import MapChartHabitableArea from 'sections/landweather/area/prefecture-rank/MapChartHabitableArea'
+import RankingTableHabitableArea from 'sections/landweather/area/prefecture-rank/RankingTableHabitableArea'
 import ScatterChartTotalAreaHabitableArea from 'sections/landweather/area/prefecture-rank/ScatterChartTotalAreaHabitableArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -29,10 +29,10 @@ export default async function HabitableArea({ routerProps }: Props) {
             <Grid item xs={12} md={10}>
               <Grid container rowSpacing={4.5} columnSpacing={3}>
                 <Grid item xs={12} md={6} lg={6}>
-                  <MapChartHabitableAreaClient />
+                  <MapChartHabitableArea routerProps={routerProps} />
                 </Grid>
                 <Grid item xs={12} md={6} lg={6}>
-                  <RankingTableHabitableAreaClient />
+                  <RankingTableHabitableArea routerProps={routerProps} />
                 </Grid>
               </Grid>
             </Grid>
@@ -41,21 +41,19 @@ export default async function HabitableArea({ routerProps }: Props) {
             </Grid> */}
             {/* row 2 */}
             <Grid item xs={12} md={9}>
-              <ScatterChartTotalAreaHabitableArea />
+              <ScatterChartTotalAreaHabitableArea routerProps={routerProps} />
             </Grid>
             {/* <Grid item xs={12} md={3}>
               <CardsAdsResponsive height={'300px'} />
             </Grid> */}
+
             {/* <Grid item xs={12} md={12} lg={6}>
-              {scatterTotalArea}
-            </Grid>
-            <Grid item xs={12} md={12} lg={6}>
               <CardsAdsResponsive />
-            </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            </Grid> */}
+            {/* <Grid item xs={12} md={6} lg={6}>
               {perTotalAreaChart}
-            </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            </Grid> */}
+            {/* <Grid item xs={12} md={6} lg={6}>
               {perTotalAreaTable}
             </Grid> */}
           </Grid>

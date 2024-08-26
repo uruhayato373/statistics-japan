@@ -4,7 +4,7 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import CardsEstatApexComparisonChart from 'cards-estat/CardsEstatApexComparisonChart'
 
-const TITLE = '総人口'
+const CARD_TITLE = '総人口'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
@@ -12,7 +12,7 @@ const ESTAT_PARAMS = {
 }
 
 export default async function ComparisonChartTotalPopulationClient() {
-  const title = `都道府県の${TITLE}`
+  const title = `都道府県の${CARD_TITLE}`
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

@@ -2,23 +2,20 @@ import { ApexOptions } from 'apexcharts'
 
 import CardsApexPieChart from 'cards/CardsApexPieChart'
 
+import { saveDocument } from 'app/actions/saveDocument'
+import { saveValues } from 'app/actions/saveValues'
+import handleDocument from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
+import { RouterProps } from 'utils/props'
 
-const TITLE = '可住地面積の割合'
+const CARD_TITLE = '可住地面積の割合'
+const CARD_ID = 'PieChartHabitableArea'
 
-// 可住地面積のtimesと森林面積のtimesの要素数が異なるため、
-// 並列で取得する必要がある
-const ESTAT_PARAMS = [
-  {
-    statsDataId: '0000010102',
-    cdCat01: 'B1103',
-  },
-  {
-    statsDataId: '0000010102',
-    cdCat01: 'B1105',
-  },
-]
+const ESTAT_PARAMS = {
+  statsDataId: '0000010102',
+  cdCat01: ['B1103', 'B1105'],
+}
 
 // apexChartsのオプション
 const APEX_OPTIONS: ApexOptions = {
@@ -31,23 +28,44 @@ const APEX_OPTIONS: ApexOptions = {
 }
 
 interface Props {
+  routerProps: RouterProps
   prefecture: PrefectureType
 }
 
-async function fetchEstatData(prefCode: string) {
-  const estatParams = ESTAT_PARAMS.map((params) => ({
-    ...params,
+// valuesの取得と整形
+async function fetchValues(prefCode: string) {
+  const values = await handleEstatAPI().fetchValues({
+    ...ESTAT_PARAMS,
     cdArea: prefCode,
-  }))
-  return await handleEstatAPI(estatParams).fetchDocument()
-}
+  })
 
-export default async function PieChartHabitableArea({ prefecture }: Props) {
+  const formatValues = values.map((value) => {
+    return {
+      ...value,
+      unit: 'ha',
+    }
+  })
+  return formatValues
+}
+export default async function PieChartHabitableArea({
+  routerProps,
+  prefecture,
+}: Props) {
   const { prefCode, prefName } = prefecture
 
-  const title = `${prefName}の${TITLE}`
+  const title = `${prefName}の${CARD_TITLE}`
 
-  const document = await fetchEstatData(prefCode)
+  const saveProps = { ...routerProps, cardId: CARD_ID }
+
+  const values = await fetchValues(prefCode)
+  if (process.env.NODE_ENV === 'development') {
+    await saveValues(saveProps, values)
+  }
+
+  const document = handleDocument().formatDocument(values, 'pie')
+  if (process.env.NODE_ENV === 'development') {
+    await saveDocument(saveProps, document)
+  }
 
   return (
     <CardsApexPieChart

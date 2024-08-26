@@ -6,14 +6,12 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import CardsAdsResponsive from 'cards/CardsAdsResponsive'
-
 import AreaChartTotalArea from 'sections/landweather/area/AreaChartTotalArea'
-import DashboardForestLandArea from 'sections/landweather/area/DashboardForestLandArea'
+import DashboardForestArea from 'sections/landweather/area/DashboardForestArea'
 import DashboardHabitableArea from 'sections/landweather/area/DashboardHabitableArea'
 import DashboardTotalArea from 'sections/landweather/area/DashboardTotalArea'
 import PieChartHabitableArea from 'sections/landweather/area/PieChartHabitableArea'
-import TableParks from 'sections/landweather/area/TableParks'
+import TableParkArea from 'sections/landweather/area/TableParkArea'
 import TableTotalArea from 'sections/landweather/area/TableTotalArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -34,31 +32,52 @@ export default async function TotalAreaPrefecture({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={6} lg={3}>
-              <DashboardTotalArea prefecture={currentPrefecture} />
+              <DashboardTotalArea
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={3}>
-              <DashboardHabitableArea prefecture={currentPrefecture} />
+              <DashboardHabitableArea
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={3}>
-              <DashboardForestLandArea prefecture={currentPrefecture} />
+              <DashboardForestArea
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
-            <Grid item xs={12} sm={6} md={6} lg={3}>
+            {/* <Grid item xs={12} sm={6} md={6} lg={3}>
               <CardsAdsResponsive height={'150px'} />
-            </Grid>
+            </Grid> */}
             {/* row 2 */}
             <Grid item xs={12} sm={12} md={12} lg={7}>
-              <AreaChartTotalArea prefecture={currentPrefecture} />
+              <AreaChartTotalArea
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={5}>
-              <PieChartHabitableArea prefecture={currentPrefecture} />
+              <PieChartHabitableArea
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={6}>
-              <TableTotalArea prefecture={currentPrefecture} />
+              <TableTotalArea
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={6}>
-              <TableParks prefecture={currentPrefecture} />
+              <TableParkArea
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
             </Grid>
-          </Grid>{' '}
+          </Grid>
         </Box>
       </Suspense>
     )

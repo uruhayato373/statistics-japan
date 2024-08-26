@@ -1,0 +1,57 @@
+[
+  {
+    "categoryCode": "A6108",
+    "categoryName": "昼夜間人口比率",
+    "categoryUnit": "％",
+    "areaCode": "00000",
+    "areaName": "全国",
+    "timeCode": "2000",
+    "timeName": "2000年度",
+    "unit": "％",
+    "value": 100
+  },
+  {
+    "categoryCode": "A6108",
+    "categoryName": "昼夜間人口比率",
+    "categoryUnit": "％",
+    "areaCode": "00000",
+    "areaName": "全国",
+    "timeCode": "2005",
+    "timeName": "2005年度",
+    "unit": "％",
+    "value": 100
+  },
+  {
+    "categoryCode": "A6108",
+    "categoryName": "昼夜間人口比率",
+    "categoryUnit": "％",
+    "areaCode": "00000",
+    "areaName": "全国",
+    "timeCode": "2010",
+    "timeName": "2010年度",
+    "unit": "％",
+    "value": 100
+  },
+  {
+    "categoryCode": "A6108",
+    "categoryName": "昼夜間人口比率",
+    "categoryUnit": "％",
+    "areaCode": "00000",
+    "areaName": "全国",
+    "timeCode": "2015",
+    "timeName": "2015年度",
+    "unit": "％",
+    "value": 100
+  },
+  {
+    "categoryCode": "A6108",
+    "categoryName": "昼夜間人口比率",
+    "categoryUnit": "％",
+    "areaCode": "00000",
+    "areaName": "全国",
+    "timeCode": "2020",
+    "timeName": "2020年度",
+    "unit": "％",
+    "value": 100
+  }
+]
