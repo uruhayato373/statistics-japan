@@ -10,7 +10,7 @@ import ApexScatterChart from 'components/apexcharts/ApexScatterChart'
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 
-import { DocumentType } from 'utils/e-stat'
+import { DocumentType } from 'utils/document'
 
 interface Props {
   /** カードのタイトル */

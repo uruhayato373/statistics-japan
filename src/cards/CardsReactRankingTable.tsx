@@ -14,7 +14,7 @@ import MainCard from 'components/MainCard'
 import PrefectureRankingTable from 'components/table/PrefectureRankingTable'
 import { CSVExport } from 'components/third-party/react-table'
 
-import { DocumentType } from 'utils/e-stat'
+import { DocumentType } from 'utils/document'
 import formatTable from 'utils/table'
 
 interface Props {

@@ -1,4 +1,4 @@
-import { DocumentType } from 'utils/e-stat'
+import { DocumentType } from 'utils/document'
 
 import formatReactRankTable from './formatReactRankTable'
 import formatReactTable from './formatReactTable'

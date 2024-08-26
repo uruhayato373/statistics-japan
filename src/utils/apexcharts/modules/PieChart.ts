@@ -1,6 +1,6 @@
 import { ApexOptions } from 'apexcharts'
 
-import { DocumentType } from 'utils/e-stat'
+import { DocumentType } from 'utils/document'
 
 const formatPieChart = (
   document: DocumentType,

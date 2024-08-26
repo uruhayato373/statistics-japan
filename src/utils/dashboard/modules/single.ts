@@ -1,4 +1,4 @@
-import { DocumentType } from 'utils/e-stat'
+import { DocumentType } from 'utils/document'
 
 /**
  * ダッシュボードの単一コンテンツの型定義

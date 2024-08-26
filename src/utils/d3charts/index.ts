@@ -1,4 +1,4 @@
-import { DocumentType } from 'utils/e-stat'
+import { DocumentType } from 'utils/document'
 
 import formatD3chartsMap from './formatD3chartsMap'
 

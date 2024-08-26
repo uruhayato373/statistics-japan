@@ -9,7 +9,7 @@ import HighchartsMapChart from 'components/highcharts/HighchartsMapChart'
 import MainCard from 'components/MainCard'
 import SelectTime from 'components/select/SelectTime'
 
-import { DocumentType } from 'utils/e-stat'
+import { DocumentType } from 'utils/document'
 import formatHighcharts from 'utils/highcharts'
 
 interface Props {
