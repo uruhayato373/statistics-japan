@@ -51,7 +51,6 @@ export default async function MapChartTotalPopulation({ routerProps }: Props) {
   }
 
   const topojson = await handleGeoshape('prefecture').readJson()
-  console.log(topojson)
 
   const document = handleDocument().formatDocument(values)
   if (process.env.NODE_ENV === 'development') {

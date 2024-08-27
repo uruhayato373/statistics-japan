@@ -8,6 +8,7 @@ import { saveDocument } from 'app/actions/saveDocument'
 import { saveValues } from 'app/actions/saveValues'
 import handleDocument from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
+import handleGeoshape from 'utils/geoshape'
 import { RouterProps } from 'utils/props'
 
 const CARD_TITLE = '可住地面積'
@@ -47,6 +48,7 @@ export default async function MapChartHabitableArea({ routerProps }: Props) {
   if (process.env.NODE_ENV === 'development') {
     await saveValues(saveProps, values)
   }
+  const topojson = await handleGeoshape('prefecture').readJson()
 
   const document = handleDocument().formatDocument(values)
   if (process.env.NODE_ENV === 'development') {
@@ -55,7 +57,11 @@ export default async function MapChartHabitableArea({ routerProps }: Props) {
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsHighchartsMapChart title={title} document={document} />
+      <CardsHighchartsMapChart
+        title={title}
+        document={document}
+        topojson={topojson}
+      />
     </Suspense>
   )
 }
