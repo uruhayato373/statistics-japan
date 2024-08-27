@@ -1,4 +1,4 @@
-import items from 'data/field/fieldList.json'
+import items from 'data/contents/field/fieldList.json'
 
 /**
  * アプリケーション内で使用する分野情報の型定義

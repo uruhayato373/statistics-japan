@@ -1,4 +1,4 @@
-import items from 'data/menu/menuList.json'
+import items from 'data/contents/menu/menuList.json'
 
 /**
  * アプリケーション内で使用するメニュー情報の型定義

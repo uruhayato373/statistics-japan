@@ -1,4 +1,4 @@
-import items from 'data/kind/kindList.json'
+import items from 'data/contents/kind/kindList.json'
 
 /**
  * アプリケーション内で使用する種類情報の型定義

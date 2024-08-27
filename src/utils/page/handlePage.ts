@@ -1,4 +1,4 @@
-import items from 'data/page/pageList.json'
+import items from 'data/contents/page/pageList.json'
 
 export type PageType = {
   pageId: string
