@@ -17,8 +17,8 @@ const icons = {
 }
 
 const widget: MenuGroup = {
-  id: 'group-widget',
-  title: 'Widgets',
+  id: 'group-social',
+  title: '社会・人口統計',
   icon: icons.IdcardOutlined,
   type: 'group',
   children: [

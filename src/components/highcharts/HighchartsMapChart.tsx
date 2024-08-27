@@ -63,22 +63,24 @@ const defaultOptions: Options = {
 export default function HighchartsMapChart({ options }: Props) {
   const { geoShape } = useGeoshape('prefecture')
 
-  const updatedSeries: SeriesMapOptions[] = options.series?.map((series) => ({
-    ...series,
-    mapData: geoShape as TopoJSONData,
-    states: {
-      hover: {
-        color: '#BADA55',
+  const updatedSeries: SeriesMapOptions[] =
+    (options.series as SeriesMapOptions[])?.map((series) => ({
+      ...series,
+      type: 'map',
+      mapData: geoShape as TopoJSONData,
+      states: {
+        hover: {
+          color: '#BADA55',
+        },
       },
-    },
-    dataLabels: {
-      enabled: true,
-      format: '{point.name}',
-    },
-    animation: false,
-    borderColor: '#FFFFFF', // 地図の枠線の色を白に設定
-    borderWidth: 0.5, // 枠線の幅を設定（必要に応じて調整）
-  }))
+      dataLabels: {
+        enabled: true,
+        format: '{point.name}',
+      },
+      animation: false,
+      borderColor: '#FFFFFF',
+      borderWidth: 0.5,
+    })) || []
 
   const customOptions: Options = {
     ...defaultOptions,
@@ -87,13 +89,16 @@ export default function HighchartsMapChart({ options }: Props) {
       animation: false,
     },
     mapView: {
-      zoom: 5,
+      zoom: 5.2,
       center: [137.5, 38],
     },
     tooltip: {
       formatter: function (this: Highcharts.TooltipFormatterContextObject) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const point = this.point as any
+        const point = this.point as Highcharts.Point & {
+          value: number
+          areaName: string
+          unit: string
+        }
         const formattedValue = Highcharts.numberFormat(point.value, 0, '.', ',')
         return `${point.areaName}: ${formattedValue}${point.unit}`
       },
