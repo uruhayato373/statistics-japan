@@ -7,8 +7,12 @@ import ReactApexChart from 'react-apexcharts'
 
 interface Props {
   options: ApexOptions
-  units: string[] // ApexOptionsはunitを保持しないため、追加
-  height?: number
+}
+
+interface DataPoint {
+  x: number | string
+  y: number
+  unit: string
 }
 
 const defaultOptions: ApexOptions = {
@@ -17,6 +21,7 @@ const defaultOptions: ApexOptions = {
     zoom: {
       enabled: false,
     },
+    height: 300,
   },
   dataLabels: {
     enabled: false,
@@ -81,7 +86,7 @@ const applyFormatterToYAxis = (
   }
 }
 
-export default function ApexAreaChart({ options, units, height = 300 }: Props) {
+export default function ApexAreaChart({ options }: Props) {
   const customOptions = useMemo<ApexOptions>(() => {
     const mergedOptions = { ...defaultOptions, ...options }
     return {
@@ -90,25 +95,27 @@ export default function ApexAreaChart({ options, units, height = 300 }: Props) {
       tooltip: {
         ...mergedOptions.tooltip,
         y: {
-          formatter: (
+          formatter: function (
             value: number,
-            { seriesIndex }: { seriesIndex: number }
-          ) => {
-            const formattedValue = formatYAxisLabels(value)
-            const unit = units[seriesIndex] || ''
-            return `${formattedValue} ${unit}`
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            { seriesIndex, dataPointIndex, w }: any
+          ) {
+            const series = w.config.series[seriesIndex]
+            const dataPoint = series.data[dataPointIndex] as DataPoint
+            const unit = dataPoint.unit || ''
+            return `${formatYAxisLabels(value)} ${unit}`
           },
         },
       },
     }
-  }, [options, units])
+  }, [options])
 
   return (
     <ReactApexChart
       options={customOptions}
       series={customOptions.series}
       type="area"
-      height={height}
+      height={customOptions.chart?.height}
     />
   )
 }

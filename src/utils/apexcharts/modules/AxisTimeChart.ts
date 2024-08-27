@@ -21,9 +21,9 @@ const formatAxisTimeChart = (
             return {
               x: time.timeName,
               y: value ? value.value : null,
+              unit: value.unit,
             }
           }),
-          unit: c.categoryUnit,
         }
       }),
     }
@@ -40,9 +40,9 @@ const formatAxisTimeChart = (
             return {
               x: time.timeName,
               y: value ? value.value : null,
+              unit: value.unit,
             }
           }),
-          unit: values[0].unit,
         }
       }),
     }

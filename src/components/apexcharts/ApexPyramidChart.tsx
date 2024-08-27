@@ -32,7 +32,6 @@ const defaultOptions: ApexOptions = {
     width: 1,
     colors: ['#fff'],
   },
-
   grid: {
     xaxis: {
       lines: {
@@ -43,6 +42,10 @@ const defaultOptions: ApexOptions = {
   yaxis: {
     stepSize: 1,
   },
+}
+
+const formatNumber = (value: number): string => {
+  return Math.abs(value).toLocaleString()
 }
 
 export default function ApexPyramidChart({ options, height = 300 }: Props) {
@@ -64,6 +67,15 @@ export default function ApexPyramidChart({ options, height = 300 }: Props) {
         },
         axisTicks: {
           show: false,
+        },
+      },
+      tooltip: {
+        ...mergedOptions.tooltip,
+        y: {
+          formatter: function (value: number) {
+            const formattedValue = formatNumber(value)
+            return `${formattedValue}人`
+          },
         },
       },
     }

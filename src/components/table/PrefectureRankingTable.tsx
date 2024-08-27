@@ -19,7 +19,7 @@ export default function PrefectureRankingTable({ contents }: Props) {
   return (
     <Grid container spacing={3}>
       <Grid item xs={12} lg={12}>
-        <Box sx={{ height: '400px', width: '100%' }}>
+        <Box sx={{ width: '100%' }}>
           <SimpleBar sx={{ maxHeight: '100%', width: '100%' }}>
             <ReactSortingTable contents={contents} />
           </SimpleBar>

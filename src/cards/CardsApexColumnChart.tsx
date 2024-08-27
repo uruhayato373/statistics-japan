@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
+import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
 import ApexColumnChart from 'components/apexcharts/ApexColumnChart'
@@ -14,35 +15,35 @@ interface Props {
   title: string
   document: DocumentType
   options?: ApexOptions
-  boxHeight?: string
-  chartHeight?: number
+  height?: string
 }
 
 export default async function CardsApexColumnChart({
   title,
   document,
   options,
-  boxHeight = '400px',
-  chartHeight,
+  height,
 }: Props) {
   const formatOptions = formatApexcharts(document).AxisTimeChart()
   const customOptions = { ...formatOptions, ...options }
 
-  const { categories } = document
-  const units = categories.map((d) => d.categoryUnit)
+  const boxStyle = height ? { height } : {}
 
   return (
     <MainCard content={false}>
-      <Box sx={{ p: 2, pb: 0, height: boxHeight }}>
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{ p: 2, pb: 0 }}
+      >
         <Typography variant="h5" color="text.primary">
           {title}
         </Typography>
-        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-        <ApexColumnChart
-          options={customOptions}
-          units={units}
-          {...(chartHeight !== undefined && { height: chartHeight })}
-        />
+      </Stack>
+      <Divider sx={{ mt: 1.5, mb: 1.5 }} />
+      <Box sx={{ p: 2, ...boxStyle }}>
+        <ApexColumnChart options={customOptions} />
       </Box>
     </MainCard>
   )

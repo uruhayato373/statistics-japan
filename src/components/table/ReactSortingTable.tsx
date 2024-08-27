@@ -84,10 +84,11 @@ export default function ReactSortingTable({ contents }: Props) {
     <TableContainer
       component={Paper}
       sx={{
-        maxHeight: 400,
+        maxHeight: 350,
         overflow: 'auto',
         '&::-webkit-scrollbar': {
-          width: '10px',
+          width: '8px',
+          height: '8px',
         },
         '&::-webkit-scrollbar-track': {
           background: '#f1f1f1',
@@ -103,7 +104,25 @@ export default function ReactSortingTable({ contents }: Props) {
         fontSize: '0.75rem',
       }}
     >
-      <Table size="small" stickyHeader sx={{ minWidth: 300 }}>
+      <Table
+        size="small"
+        stickyHeader
+        sx={{
+          '& .MuiTableCell-root': {
+            fontSize: '0.75rem',
+            padding: '6px 16px',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            maxWidth: '200px',
+          },
+          '& .MuiTableCell-head': {
+            fontWeight: 'bold',
+            backgroundColor: '#f5f5f5',
+            textAlign: 'center',
+          },
+        }}
+      >
         <TableHead
           sx={{
             position: 'sticky',

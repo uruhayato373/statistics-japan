@@ -6,9 +6,7 @@ import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
 interface Props {
-  options: ApexOptions
-  units: string[] // ApexOptionsはunitを保持しないため、追加
-  height?: number
+  options: ApexOptions & { units?: string[] }
 }
 
 const defaultOptions: ApexOptions = {
@@ -17,6 +15,7 @@ const defaultOptions: ApexOptions = {
     zoom: {
       enabled: false,
     },
+    height: 300,
     toolbar: {
       show: true,
       tools: {
@@ -49,7 +48,7 @@ const defaultOptions: ApexOptions = {
     position: 'bottom',
     fontFamily: `'Roboto', sans-serif`,
     offsetX: 0,
-    offsetY: 8,
+    offsetY: -5,
     labels: {
       useSeriesColors: false,
     },
@@ -65,14 +64,15 @@ const defaultOptions: ApexOptions = {
   },
 }
 
-export default function ApexPieChart({ options, units, height = 300 }: Props) {
+export default function ApexPieChart({ options }: Props) {
   const customOptions = useMemo<ApexOptions>(() => {
     const mergedOptions = { ...defaultOptions, ...options }
+    const units = options.units || []
+
     return {
       ...mergedOptions,
       chart: {
         ...mergedOptions.chart,
-        height: height, // height プロプを使用
       },
       tooltip: {
         y: {
@@ -85,14 +85,14 @@ export default function ApexPieChart({ options, units, height = 300 }: Props) {
         },
       },
     }
-  }, [options, units, height])
+  }, [options])
 
   return (
     <ReactApexChart
       options={customOptions}
       series={customOptions.series}
       type="donut"
-      height={height}
+      height={customOptions.chart?.height}
     />
   )
 }

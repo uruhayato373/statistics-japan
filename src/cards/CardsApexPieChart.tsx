@@ -22,24 +22,21 @@ interface Props {
   title: string
   document: DocumentType
   options?: ApexOptions
-  boxHeight?: string
-  chartHeight?: number
+  height?: string
 }
 
 export default function CardsApexPieChart({
   title,
   document,
   options,
-  boxHeight = '400px',
-  chartHeight,
+  height,
 }: Props) {
   const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
 
-  const { times, categories } = document
+  const { times } = document
   const sortedTimes = times.sort(
     (a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)
   )
-  const units = categories.map((d) => d.categoryUnit)
 
   useEffect(() => {
     setSelectedTimeCode(sortedTimes[0].timeCode)
@@ -54,39 +51,45 @@ export default function CardsApexPieChart({
   const formatOptions = formatApexcharts(document).PieChart(selectedTimeCode)
   const customOptions = { ...formatOptions, ...options }
 
+  const boxStyle = height ? { height } : {}
+
   return (
     <MainCard content={false}>
-      <Box sx={{ p: 2, pb: 0, height: boxHeight }}>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-        >
-          <Typography variant="h5" color="text.primary">
-            {title}
-          </Typography>
-          <FormControl sx={{ minWidth: 80 }} size="small">
-            <Select
-              labelId="select-time-label"
-              id="select-time"
-              value={selectedTimeCode}
-              displayEmpty
-              onChange={handleTimeChange}
-            >
-              {sortedTimes.map((d) => (
-                <MenuItem key={d.timeCode} value={d.timeCode}>
-                  {d.timeName}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Stack>
-        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-        <ApexPieChart
-          options={customOptions}
-          units={units}
-          {...(chartHeight !== undefined && { height: chartHeight })}
-        />
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{ p: 2, pb: 0 }}
+      >
+        <Typography variant="h5" color="text.primary">
+          {title}
+        </Typography>
+      </Stack>
+      <Divider sx={{ mt: 1.5, mb: 1.5 }} />
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{ pl: 2 }}
+      >
+        <FormControl sx={{ minWidth: 80 }} size="small">
+          <Select
+            labelId="select-time-label"
+            id="select-time"
+            value={selectedTimeCode}
+            displayEmpty
+            onChange={handleTimeChange}
+          >
+            {sortedTimes.map((d) => (
+              <MenuItem key={d.timeCode} value={d.timeCode}>
+                {d.timeName}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>{' '}
+      </Stack>
+      <Box sx={{ p: 2, ...boxStyle }}>
+        <ApexPieChart options={customOptions} />
       </Box>
     </MainCard>
   )

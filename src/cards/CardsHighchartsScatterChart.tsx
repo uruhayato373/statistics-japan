@@ -20,14 +20,13 @@ import formatHighcharts from 'utils/highcharts'
 interface Props {
   title?: string
   document: DocumentType
-  boxHeight?: string
-  chartHeight?: number
+  height?: string
 }
 
 export default function CardsHighchartsScatterChart({
   title,
   document,
-  boxHeight = '600px',
+  height,
 }: Props) {
   const [selectedTimeCode, setSelectedTimeCode] = useState<string>()
 
@@ -56,37 +55,44 @@ export default function CardsHighchartsScatterChart({
   const { categories } = filteredDocument
   const series = formatHighcharts(filteredDocument).scatterChart()
 
-  console.log('series:', series)
+  const boxStyle = height ? { height } : {}
 
   return (
     <MainCard sx={{ mt: 1 }} content={false}>
-      <Box sx={{ p: 2, pb: 0, height: boxHeight }}>
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{ p: 2, pb: 0 }}
+      >
         <Typography variant="h5" color="text.primary">
           {title}
         </Typography>
-        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ mb: 1.5 }}
-        >
-          <FormControl sx={{ minWidth: 80 }} size="small">
-            <Select
-              labelId="select-time-label"
-              id="select-time"
-              value={selectedTimeCode}
-              displayEmpty
-              onChange={handleTimeChange}
-            >
-              {sortedTimes.map((d) => (
-                <MenuItem key={d.timeCode} value={d.timeCode}>
-                  {d.timeName}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Stack>
+      </Stack>
+      <Divider sx={{ mt: 1.5, mb: 1.5 }} />
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{ pl: 2 }}
+      >
+        <FormControl sx={{ minWidth: 80 }} size="small">
+          <Select
+            labelId="select-time-label"
+            id="select-time"
+            value={selectedTimeCode}
+            displayEmpty
+            onChange={handleTimeChange}
+          >
+            {sortedTimes.map((d) => (
+              <MenuItem key={d.timeCode} value={d.timeCode}>
+                {d.timeName}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </Stack>
+      <Box sx={{ p: 2, ...boxStyle }}>
         <HighchartsScatterChart categories={categories} series={series} />
       </Box>
     </MainCard>

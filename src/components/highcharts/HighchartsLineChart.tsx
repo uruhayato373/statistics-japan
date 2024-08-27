@@ -24,6 +24,17 @@ const defaultOptions: Options = {
   },
   xAxis: {
     crosshair: true,
+    title: {
+      text: null,
+    },
+    labels: {
+      enabled: false,
+    },
+  },
+  yAxis: {
+    title: {
+      text: null,
+    },
   },
   credits: {
     enabled: false,
@@ -39,12 +50,20 @@ const defaultOptions: Options = {
   tooltip: {
     shared: true,
   },
+  chart: {
+    height: 400,
+  },
 }
 
 export default function HighchartsLineChart({ options }: Props) {
   const customOptions: Options = {
     ...defaultOptions,
     ...options,
+    chart: {
+      ...defaultOptions.chart,
+      ...options.chart,
+      height: options.chart?.height || defaultOptions.chart?.height,
+    },
   }
 
   return <HighchartsReact highcharts={Highcharts} options={customOptions} />

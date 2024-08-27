@@ -7,8 +7,6 @@ import ReactApexChart from 'react-apexcharts'
 
 interface Props {
   options: ApexOptions
-  units: string[] // ApexOptionsはunitを保持しないため、追加
-  height?: number
 }
 
 const defaultOptions: ApexOptions = {
@@ -109,11 +107,8 @@ const applyFormatterToYAxis = (
   }
 }
 
-export default function ApexColumnChart({
-  options,
-  units,
-  height = 300,
-}: Props) {
+export default function ApexColumnChart({ options }: Props) {
+  console.log(options)
   const customOptions = useMemo<ApexOptions>(() => {
     const mergedOptions = { ...defaultOptions, ...options }
     return {
@@ -121,26 +116,29 @@ export default function ApexColumnChart({
       yaxis: applyFormatterToYAxis(mergedOptions.yaxis),
       tooltip: {
         ...mergedOptions.tooltip,
+        shared: true,
+        intersect: false,
         y: {
-          formatter: (
+          formatter: function (
             value: number,
-            { seriesIndex }: { seriesIndex: number }
-          ) => {
-            const formattedValue = formatYAxisLabels(value)
-            const unit = units[seriesIndex] || ''
-            return `${formattedValue} ${unit}`
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            { seriesIndex, dataPointIndex, w }: any
+          ) {
+            const series = w.config.series
+            const unit = series[seriesIndex].data[dataPointIndex].unit || ''
+            return `${formatYAxisLabels(value)} ${unit}`
           },
         },
       },
     }
-  }, [options, units])
+  }, [options])
 
   return (
     <ReactApexChart
       options={customOptions}
       series={customOptions.series}
       type="bar"
-      height={height}
+      height={customOptions.chart?.height}
     />
   )
 }

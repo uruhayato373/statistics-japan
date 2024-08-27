@@ -32,6 +32,7 @@ interface Props {
   document: DocumentType
   options?: Options
   boxHeight?: string
+  height?: string
 }
 
 const ITEM_HEIGHT = 48
@@ -49,7 +50,7 @@ export default function CardsHighchartsComparisonChart({
   title,
   document,
   options,
-  boxHeight = '600px',
+  height,
 }: Props) {
   const [atomPrefecture] = useAtom<PrefectureType>(prefecture)
   const [selectedPrefCodes, setSelectedPrefCodes] = useState<string[]>([
@@ -119,55 +120,56 @@ export default function CardsHighchartsComparisonChart({
     ...options,
   }
 
+  const boxStyle = height ? { height } : {}
+
   return (
     <MainCard sx={{ mt: 1 }} content={false}>
-      <Box
-        sx={{
-          p: 2,
-          pb: 0,
-          display: 'flex',
-          flexDirection: 'column',
-          height: boxHeight,
-        }}
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{ p: 2, pb: 0 }}
       >
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ mb: 1.5 }}
-        >
-          <Typography variant="h5" color="text.primary">
-            {title}
-          </Typography>
-          <FormControl sx={{ minWidth: 80 }} size="small">
-            <Select
-              labelId="demo-multiple-chip-label"
-              id="demo-multiple-chip"
-              multiple
-              value={selectedPrefCodes}
-              onChange={handleChange}
-              onClose={handleClose}
-              open={isSelectOpen}
-              onOpen={() => setIsSelectOpen(true)}
-              input={
-                <OutlinedInput
-                  id="select-multiple-chip"
-                  placeholder="都道府県を選択"
-                />
-              }
-              renderValue={renderValue}
-              displayEmpty
-              MenuProps={MenuProps}
-            >
-              {prefectures.map(({ prefCode, prefName }) => (
-                <MenuItem key={prefCode} value={prefCode}>
-                  {prefName}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Stack>
-        <Divider sx={{ mb: 1.5 }} />
+        <Typography variant="h5" color="text.primary">
+          {title}
+        </Typography>
+      </Stack>
+      <Divider sx={{ mt: 1.5, mb: 1.5 }} />
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{ pl: 2 }}
+      >
+        <FormControl sx={{ minWidth: 80 }} size="small">
+          <Select
+            labelId="demo-multiple-chip-label"
+            id="demo-multiple-chip"
+            multiple
+            value={selectedPrefCodes}
+            onChange={handleChange}
+            onClose={handleClose}
+            open={isSelectOpen}
+            onOpen={() => setIsSelectOpen(true)}
+            input={
+              <OutlinedInput
+                id="select-multiple-chip"
+                placeholder="都道府県を選択"
+              />
+            }
+            renderValue={renderValue}
+            displayEmpty
+            MenuProps={MenuProps}
+          >
+            {prefectures.map(({ prefCode, prefName }) => (
+              <MenuItem key={prefCode} value={prefCode}>
+                {prefName}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </Stack>
+      <Box sx={{ p: 2, ...boxStyle }}>
         <HighchartsLineChart options={customOptions} />
       </Box>
     </MainCard>

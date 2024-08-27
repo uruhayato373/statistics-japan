@@ -1,5 +1,6 @@
 'use client'
 
+import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
@@ -7,6 +8,7 @@ import Typography from '@mui/material/Typography'
 import MainCard from 'components/MainCard'
 import ReactTable from 'components/table/ReactTable'
 import { CSVExport } from 'components/third-party/react-table'
+import SimpleBar from 'components/third-party/SimpleBar'
 
 import { DocumentType } from 'utils/document'
 import formatTable from 'utils/table'
@@ -44,8 +46,11 @@ export default function CardsReactTimeTable({ title, document }: Props) {
         <CSVExport data={data} headers={headers} filename={filename} />
       </Stack>
       <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-
-      <ReactTable columns={columns} data={data} />
+      <Box sx={{ width: '100%' }}>
+        <SimpleBar sx={{ maxHeight: '100%', width: '100%' }}>
+          <ReactTable columns={columns} data={data} />{' '}
+        </SimpleBar>
+      </Box>
     </MainCard>
   )
 }
