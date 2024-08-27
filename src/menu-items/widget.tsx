@@ -64,6 +64,20 @@ const widget: MenuGroup = {
           url: '/population/household',
           breadcrumbs: false,
         },
+        {
+          id: 'birthdeath',
+          title: '出生・死亡',
+          type: 'item',
+          url: '/population/birthdeath',
+          breadcrumbs: false,
+        },
+        {
+          id: 'marriage',
+          title: '結婚・離婚',
+          type: 'item',
+          url: '/population/marriage',
+          breadcrumbs: false,
+        },
       ],
     },
     {
@@ -83,7 +97,7 @@ const widget: MenuGroup = {
     },
     {
       id: 'agriculture',
-      title: '農林水産業',
+      title: '農業産出額',
       type: 'collapse',
       icon: icons.LineChartOutlined,
       children: [
@@ -92,6 +106,36 @@ const widget: MenuGroup = {
           title: '農業産出額',
           type: 'item',
           url: '/agriculture/agriculture',
+          breadcrumbs: false,
+        },
+      ],
+    },
+    {
+      id: 'miningindustry',
+      title: '鉱工業',
+      type: 'collapse',
+      icon: icons.LineChartOutlined,
+      children: [
+        {
+          id: 'products',
+          title: '製造品出荷額',
+          type: 'item',
+          url: '/miningindustry/products',
+          breadcrumbs: false,
+        },
+      ],
+    },
+    {
+      id: 'commercial',
+      title: '商業・サービス業',
+      type: 'collapse',
+      icon: icons.LineChartOutlined,
+      children: [
+        {
+          id: 'product-sales',
+          title: '商品販売額',
+          type: 'item',
+          url: '/commercial/product-sales',
           breadcrumbs: false,
         },
       ],
