@@ -8,9 +8,6 @@ import HC_exporting from 'highcharts/modules/exporting'
 import HC_map from 'highcharts/modules/map'
 import HighchartsReact from 'highcharts-react-official'
 
-import useGeoshape from 'hooks/useGeoshape'
-import { TopoJSONData } from 'utils/geoshape'
-
 if (typeof Highcharts === 'object') {
   HC_map(Highcharts)
   HC_exporting(Highcharts)
@@ -61,13 +58,10 @@ const defaultOptions: Options = {
 }
 
 export default function HighchartsMapChart({ options }: Props) {
-  const { geoShape } = useGeoshape('prefecture')
-
   const updatedSeries: SeriesMapOptions[] =
     (options.series as SeriesMapOptions[])?.map((series) => ({
       ...series,
       type: 'map',
-      mapData: geoShape as TopoJSONData,
       states: {
         hover: {
           color: '#BADA55',
@@ -85,7 +79,6 @@ export default function HighchartsMapChart({ options }: Props) {
   const customOptions: Options = {
     ...defaultOptions,
     chart: {
-      map: geoShape as TopoJSONData,
       animation: false,
     },
     mapView: {
@@ -105,6 +98,8 @@ export default function HighchartsMapChart({ options }: Props) {
     },
     series: updatedSeries,
   }
+
+  console.log(customOptions)
 
   return (
     <HighchartsReact

@@ -14,17 +14,20 @@ import HighchartsMapChart from 'components/highcharts/HighchartsMapChart'
 import MainCard from 'components/MainCard'
 
 import { DocumentType } from 'utils/document'
+import { TopoJSONData } from 'utils/geoshape'
 import formatHighcharts from 'utils/highcharts'
 
 interface Props {
   title?: string
   document: DocumentType
+  topojson: TopoJSONData
   height?: string
 }
 
 export default function CardsHighchartsMapChart({
   title,
   document,
+  topojson,
   height,
 }: Props) {
   const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
@@ -49,7 +52,7 @@ export default function CardsHighchartsMapChart({
     values: document.values.filter((f) => f.timeCode === selectedTimeCode),
   }
 
-  const formatOptions = formatHighcharts(filteredDocument).mapChart()
+  const formatOptions = formatHighcharts(filteredDocument).mapChart(topojson)
 
   const boxStyle = height ? { height } : {}
 

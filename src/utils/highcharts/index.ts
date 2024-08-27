@@ -8,7 +8,7 @@ const formatHighcharts = (document: DocumentType) => {
   return {
     AxisTimeChart: (group: 'category' | 'area' = 'category') =>
       formatAxisTimeChart(document, group),
-    mapChart: () => formatHighchartsMapChart(document),
+    mapChart: (topojson) => formatHighchartsMapChart(document, topojson),
     scatterChart: () => formatHighchartsScatterChart(document),
   }
 }
