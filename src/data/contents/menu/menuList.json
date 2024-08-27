@@ -15,6 +15,11 @@
     "fieldId": "population"
   },
   {
+    "menuId": "household",
+    "menuTitle": "世帯",
+    "fieldId": "population"
+  },
+  {
     "menuId": "laborforce",
     "menuTitle": "労働力",
     "fieldId": "laborwage"

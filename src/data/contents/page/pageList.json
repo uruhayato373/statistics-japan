@@ -40,6 +40,11 @@
     "menuId": "population"
   },
   {
+    "pageId": "general-household",
+    "pageTitle": "一般世帯数",
+    "menuId": "household"
+  },
+  {
     "pageId": "laborforce-population",
     "pageTitle": "労働力人口",
     "menuId": "laborforce"
