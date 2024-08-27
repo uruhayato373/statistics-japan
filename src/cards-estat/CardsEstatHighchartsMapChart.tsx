@@ -11,13 +11,10 @@ import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
 import CircularProgressCards from 'components/CircularProgressCards'
-import HighchartsMapChart from 'components/highcharts/HighchartsMapChart'
 import MainCard from 'components/MainCard'
 
-import useEstatAPI from 'hooks/useEstatAPI'
 import { TimeType } from 'utils/document'
 import { EstatParamsType } from 'utils/e-stat'
-import formatHighcharts from 'utils/highcharts'
 
 interface Props {
   title: string
@@ -28,7 +25,7 @@ interface Props {
 
 export default function CardsEstatHighchartsMapChart({
   title,
-  estatParams,
+  // estatParams,
   times,
   boxHeight = '600px',
 }: Props) {
@@ -48,16 +45,16 @@ export default function CardsEstatHighchartsMapChart({
     setSelectedTimeCode(newTime)
   }
 
-  const { document } = useEstatAPI({
-    ...estatParams,
-    cdTime: selectedTimeCode ? `${selectedTimeCode}100000` : '',
-  })
+  // const { document } = useEstatAPI({
+  //   ...estatParams,
+  //   cdTime: selectedTimeCode ? `${selectedTimeCode}100000` : '',
+  // })
 
   if (!selectedTimeCode) {
     return <CircularProgressCards />
   }
 
-  const series = formatHighcharts(document).mapChart()
+  // const series = formatHighcharts(document).mapChart()
 
   return (
     <MainCard sx={{ mt: 1 }} content={false}>
@@ -88,7 +85,7 @@ export default function CardsEstatHighchartsMapChart({
           </Select>
         </FormControl>
         <Suspense fallback={<CircularProgressCards />}>
-          <HighchartsMapChart series={series} />
+          {/* <HighchartsMapChart series={series} /> */}
         </Suspense>
 
         <Box sx={{ pt: 2.25 }}>

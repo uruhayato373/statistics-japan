@@ -10,11 +10,14 @@
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.{json,md}": [
       "prettier --write"
     ]
   },
@@ -149,7 +152,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unused-imports": "^3.2.0",
     "file-loader": "^6.2.0",
-    "husky": "^8.0.3",
+    "husky": "^9.1.5",
     "immutable": "^4.3.5",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
