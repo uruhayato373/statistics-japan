@@ -27,9 +27,6 @@ export default async function CardsApexLineChart({
   const formatOptions = formatApexcharts(document).AxisTimeChart()
   const customOptions = { ...formatOptions, ...options }
 
-  const { categories } = document
-  const units = categories.map((d) => d.categoryUnit)
-
   const boxStyle = height ? { height } : {}
 
   return (
@@ -46,7 +43,7 @@ export default async function CardsApexLineChart({
       </Stack>
       <Divider sx={{ mt: 1.5, mb: 1.5 }} />
       <Box sx={{ p: 2, ...boxStyle }}>
-        <ApexLineChart options={customOptions} units={units} />
+        <ApexLineChart options={customOptions} />
       </Box>
     </MainCard>
   )
