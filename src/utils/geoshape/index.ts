@@ -20,7 +20,7 @@ const handleGeoshape = (type: 'prefecture' | 'city'): GeoshapeHandlers => {
   return {
     fetchAPI: async (prefCode?: string) => {
       const url = generateURL(type, prefCode)
-      console.log(url)
+
       return await fetchTopojson(url)
     },
     readJson: async () => {

@@ -99,8 +99,6 @@ export default function HighchartsMapChart({ options }: Props) {
     series: updatedSeries,
   }
 
-  console.log(customOptions)
-
   return (
     <HighchartsReact
       highcharts={Highcharts}

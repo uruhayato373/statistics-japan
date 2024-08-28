@@ -108,7 +108,6 @@ const applyFormatterToYAxis = (
 }
 
 export default function ApexColumnChart({ options }: Props) {
-  console.log(options)
   const customOptions = useMemo<ApexOptions>(() => {
     const mergedOptions = { ...defaultOptions, ...options }
     return {
