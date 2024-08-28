@@ -1,0 +1,32 @@
+[
+  {
+    "pageId": "total-area",
+    "pageTitle": "総面積",
+    "menuId": "area"
+  },
+  {
+    "pageId": "habitable-area",
+    "pageTitle": "可住地面積",
+    "menuId": "area"
+  },
+  {
+    "pageId": "rainy-days",
+    "pageTitle": "降水日数",
+    "menuId": "weather"
+  },
+  {
+    "pageId": "maximum-temperature",
+    "pageTitle": "最高気温",
+    "menuId": "weather"
+  },
+  {
+    "pageId": "minimum-temperature",
+    "pageTitle": "最低気温",
+    "menuId": "weather"
+  },
+  {
+    "pageId": "average-temperature",
+    "pageTitle": "年平均気温",
+    "menuId": "weather"
+  }
+]

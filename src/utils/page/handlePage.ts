@@ -1,4 +1,4 @@
-import items from 'data/contents/page/pageList.json'
+import items from 'data/contents/page/index'
 
 export type PageType = {
   pageId: string
@@ -22,6 +22,7 @@ const handlePage = () => {
  * @returns {PageType[]} 対応するページ情報の配列
  */
 const filterItems = (menuId: string): PageType[] => {
+  console.log(items)
   return items.filter((f) => f.menuId === menuId)
 }
 

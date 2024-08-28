@@ -1,0 +1,17 @@
+[
+  {
+    "pageId": "total-population",
+    "pageTitle": "総人口",
+    "menuId": "population"
+  },
+  {
+    "pageId": "old-population",
+    "pageTitle": "65歳以上人口",
+    "menuId": "population"
+  },
+  {
+    "pageId": "general-household",
+    "pageTitle": "一般世帯数",
+    "menuId": "household"
+  }
+]

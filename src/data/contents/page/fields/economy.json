@@ -1,0 +1,12 @@
+[
+  {
+    "pageId": "gross-production",
+    "pageTitle": "県内総生産",
+    "menuId": "gross-production"
+  },
+  {
+    "pageId": "office",
+    "pageTitle": "事業所数",
+    "menuId": "office-employee"
+  }
+]
