@@ -13,5 +13,15 @@
     "pageId": "general-household",
     "pageTitle": "一般世帯数",
     "menuId": "household"
+  },
+  {
+    "pageId": "number-of-births",
+    "pageTitle": "出生数",
+    "menuId": "birthdeath"
+  },
+  {
+    "pageId": "number-of-marriages",
+    "pageTitle": "婚姻件数",
+    "menuId": "marriage"
   }
 ]
