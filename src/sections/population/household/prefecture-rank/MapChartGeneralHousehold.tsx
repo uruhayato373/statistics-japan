@@ -16,7 +16,7 @@ const CARD_ID = 'MapChartGeneralHousehold'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
-  cdCat01: 'A710101',
+  cdCat01: 'A4101',
 }
 
 interface Props {

@@ -1,4 +1,4 @@
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import CardsDashboardSingle from 'cards/CardsDashboard'
 
 import { saveDocument } from 'app/actions/saveDocument'
 import { saveValues } from 'app/actions/saveValues'
@@ -7,12 +7,12 @@ import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 
-const CARD_TITLE = '一般世帯数'
-const CARD_ID = 'TableHousehold'
+const CARD_TITLE = '婚姻件数'
+const CARD_ID = 'DashboardMarriage'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
-  cdCat01: ['A4101', 'A410101', 'A410102'],
+  cdCat01: 'A9101',
 }
 
 interface Props {
@@ -31,7 +31,7 @@ async function fetchValues(prefCode: string) {
 }
 
 // コンポーネントの描画
-export default async function TableHousehold({
+export default async function DashboardMarriage({
   routerProps,
   prefecture,
 }: Props) {
@@ -51,5 +51,5 @@ export default async function TableHousehold({
     await saveDocument(saveProps, document)
   }
 
-  return <CardsReactTimeTable title={title} document={document} />
+  return <CardsDashboardSingle title={title} document={document} />
 }

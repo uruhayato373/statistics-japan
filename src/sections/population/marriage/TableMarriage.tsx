@@ -7,12 +7,12 @@ import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 
-const CARD_TITLE = '一般世帯数'
-const CARD_ID = 'TableHousehold'
+const CARD_TITLE = '婚姻件数・離婚件数のデータ'
+const CARD_ID = 'TableMarriage'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
-  cdCat01: ['A4101', 'A410101', 'A410102'],
+  cdCat01: ['A9101', 'A9201'],
 }
 
 interface Props {
@@ -31,7 +31,7 @@ async function fetchValues(prefCode: string) {
 }
 
 // コンポーネントの描画
-export default async function TableHousehold({
+export default async function TableMarriage({
   routerProps,
   prefecture,
 }: Props) {

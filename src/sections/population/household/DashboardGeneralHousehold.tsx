@@ -8,11 +8,11 @@ import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 
 const CARD_TITLE = '一般世帯数'
-const CARD_ID = 'DashboardGeneralHousehold'
+const CARD_ID = 'DashboardHousehold'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
-  cdCat01: 'A710101',
+  cdCat01: 'A4101',
 }
 
 interface Props {
