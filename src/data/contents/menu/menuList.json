@@ -55,16 +55,6 @@
     "fieldId": "economy"
   },
   {
-    "menuId": "office-employee",
-    "menuTitle": "事業所・従業者",
-    "fieldId": "economy"
-  },
-  {
-    "menuId": "consumer-price-index",
-    "menuTitle": "消費者物価指数",
-    "fieldId": "economy"
-  },
-  {
     "menuId": "construction",
     "menuTitle": "建設業",
     "fieldId": "construction"

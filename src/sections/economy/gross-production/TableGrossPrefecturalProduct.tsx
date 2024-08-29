@@ -7,7 +7,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 
-const CARD_TITLE = '商品販売額'
+const CARD_TITLE = '県内総生産'
 const CARD_ID = 'TableGrossPrefecturalProduct'
 
 const ESTAT_PARAMS = {
