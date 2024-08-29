@@ -60,11 +60,6 @@
     "fieldId": "construction"
   },
   {
-    "menuId": "standard-price",
-    "menuTitle": "標準価格",
-    "fieldId": "construction"
-  },
-  {
     "menuId": "industrial-water",
     "menuTitle": "工業用水",
     "fieldId": "energy"
