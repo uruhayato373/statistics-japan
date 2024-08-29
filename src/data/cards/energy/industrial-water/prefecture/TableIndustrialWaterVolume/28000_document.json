@@ -1,0 +1,1546 @@
+{
+  "values": [
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "ｍ3／日",
+      "value": 13126801
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "ｍ3／日",
+      "value": 13844191
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "ｍ3／日",
+      "value": 13677924
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "ｍ3／日",
+      "value": 12980263
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "ｍ3／日",
+      "value": 13358656
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "ｍ3／日",
+      "value": 13688217
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "ｍ3／日",
+      "value": 13335157
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "ｍ3／日",
+      "value": 13002225
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "ｍ3／日",
+      "value": 12651811
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "ｍ3／日",
+      "value": 13003809
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "ｍ3／日",
+      "value": 13333449
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "ｍ3／日",
+      "value": 13116781
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "ｍ3／日",
+      "value": 12843591
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "ｍ3／日",
+      "value": 13014913
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "ｍ3／日",
+      "value": 13296890
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "ｍ3／日",
+      "value": 13476400
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "ｍ3／日",
+      "value": 13633203
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "ｍ3／日",
+      "value": 13840394
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "ｍ3／日",
+      "value": 13658318
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "ｍ3／日",
+      "value": 13281335
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "ｍ3／日",
+      "value": 13018645
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "ｍ3／日",
+      "value": 13044112
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "ｍ3／日",
+      "value": 13837649
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "ｍ3／日",
+      "value": 13712905
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "ｍ3／日",
+      "value": 13685332
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "ｍ3／日",
+      "value": 13549190
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "ｍ3／日",
+      "value": 13607691
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "ｍ3／日",
+      "value": 13347661
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "ｍ3／日",
+      "value": 13319459
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "ｍ3／日",
+      "value": 12913895
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "ｍ3／日",
+      "value": 12588002
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "ｍ3／日",
+      "value": 12436505
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "ｍ3／日",
+      "value": 12839422
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2008",
+      "timeName": "2008年度",
+      "unit": "ｍ3／日",
+      "value": 12605815
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2009",
+      "timeName": "2009年度",
+      "unit": "ｍ3／日",
+      "value": 12602818
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "ｍ3／日",
+      "value": 12993686
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ｍ3／日",
+      "value": 12673994
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ｍ3／日",
+      "value": 12837849
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ｍ3／日",
+      "value": 12074791
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ｍ3／日",
+      "value": 12622859
+    },
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ｍ3／日",
+      "value": 13732642
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "ｍ3／日",
+      "value": 7941012
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "ｍ3／日",
+      "value": 8498491
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "ｍ3／日",
+      "value": 8653832
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "ｍ3／日",
+      "value": 8323759
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "ｍ3／日",
+      "value": 8666433
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "ｍ3／日",
+      "value": 8824169
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "ｍ3／日",
+      "value": 8740699
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "ｍ3／日",
+      "value": 8667121
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "ｍ3／日",
+      "value": 8715346
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "ｍ3／日",
+      "value": 9041165
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "ｍ3／日",
+      "value": 8933440
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "ｍ3／日",
+      "value": 8569557
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "ｍ3／日",
+      "value": 8689329
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "ｍ3／日",
+      "value": 8869869
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "ｍ3／日",
+      "value": 9184009
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "ｍ3／日",
+      "value": 9173199
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "ｍ3／日",
+      "value": 9256746
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "ｍ3／日",
+      "value": 9378155
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "ｍ3／日",
+      "value": 9099115
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "ｍ3／日",
+      "value": 8821070
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "ｍ3／日",
+      "value": 8824858
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "ｍ3／日",
+      "value": 8786859
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "ｍ3／日",
+      "value": 9237909
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "ｍ3／日",
+      "value": 9099605
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "ｍ3／日",
+      "value": 9179730
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "ｍ3／日",
+      "value": 8899968
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "ｍ3／日",
+      "value": 8966350
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "ｍ3／日",
+      "value": 8837405
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "ｍ3／日",
+      "value": 8628948
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "ｍ3／日",
+      "value": 8579660
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "ｍ3／日",
+      "value": 8637090
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "ｍ3／日",
+      "value": 8663882
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "ｍ3／日",
+      "value": 8868368
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2008",
+      "timeName": "2008年度",
+      "unit": "ｍ3／日",
+      "value": 8786678
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2009",
+      "timeName": "2009年度",
+      "unit": "ｍ3／日",
+      "value": 8922651
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "ｍ3／日",
+      "value": 9674452
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ｍ3／日",
+      "value": 9374727
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ｍ3／日",
+      "value": 9497970
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ｍ3／日",
+      "value": 9085591
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ｍ3／日",
+      "value": 9605583
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ｍ3／日",
+      "value": 9098238
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "ｍ3／日",
+      "value": 5185789
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "ｍ3／日",
+      "value": 5345700
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "ｍ3／日",
+      "value": 5024092
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "ｍ3／日",
+      "value": 4656504
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "ｍ3／日",
+      "value": 4692223
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "ｍ3／日",
+      "value": 4864048
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "ｍ3／日",
+      "value": 4594458
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "ｍ3／日",
+      "value": 4335104
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "ｍ3／日",
+      "value": 3936465
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "ｍ3／日",
+      "value": 3962644
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "ｍ3／日",
+      "value": 4400009
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "ｍ3／日",
+      "value": 4547224
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "ｍ3／日",
+      "value": 4154262
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "ｍ3／日",
+      "value": 4145044
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "ｍ3／日",
+      "value": 4112881
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "ｍ3／日",
+      "value": 4303201
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "ｍ3／日",
+      "value": 4376457
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "ｍ3／日",
+      "value": 4462239
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "ｍ3／日",
+      "value": 4559203
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "ｍ3／日",
+      "value": 4460265
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "ｍ3／日",
+      "value": 4193787
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "ｍ3／日",
+      "value": 4257253
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "ｍ3／日",
+      "value": 4599740
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "ｍ3／日",
+      "value": 4613300
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "ｍ3／日",
+      "value": 4505602
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "ｍ3／日",
+      "value": 4649222
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "ｍ3／日",
+      "value": 4641341
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "ｍ3／日",
+      "value": 4510256
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "ｍ3／日",
+      "value": 4690511
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "ｍ3／日",
+      "value": 4334235
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "ｍ3／日",
+      "value": 3950912
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "ｍ3／日",
+      "value": 3772623
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "ｍ3／日",
+      "value": 3971054
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2008",
+      "timeName": "2008年度",
+      "unit": "ｍ3／日",
+      "value": 3819137
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2009",
+      "timeName": "2009年度",
+      "unit": "ｍ3／日",
+      "value": 3680167
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "ｍ3／日",
+      "value": 3319234
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ｍ3／日",
+      "value": 3299267
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ｍ3／日",
+      "value": 3339879
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ｍ3／日",
+      "value": 2989200
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ｍ3／日",
+      "value": 3017276
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ｍ3／日",
+      "value": 4634404
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "C3406",
+      "categoryName": "工業用水量",
+      "categoryUnit": "ｍ3／日"
+    },
+    {
+      "categoryCode": "C340601",
+      "categoryName": "工業用水量（淡水）",
+      "categoryUnit": "ｍ3／日"
+    },
+    {
+      "categoryCode": "C340602",
+      "categoryName": "工業用水量（海水）",
+      "categoryUnit": "ｍ3／日"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "28000",
+      "areaName": "兵庫県"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1975",
+      "timeName": "1975年度"
+    },
+    {
+      "timeCode": "1976",
+      "timeName": "1976年度"
+    },
+    {
+      "timeCode": "1977",
+      "timeName": "1977年度"
+    },
+    {
+      "timeCode": "1978",
+      "timeName": "1978年度"
+    },
+    {
+      "timeCode": "1979",
+      "timeName": "1979年度"
+    },
+    {
+      "timeCode": "1980",
+      "timeName": "1980年度"
+    },
+    {
+      "timeCode": "1981",
+      "timeName": "1981年度"
+    },
+    {
+      "timeCode": "1982",
+      "timeName": "1982年度"
+    },
+    {
+      "timeCode": "1983",
+      "timeName": "1983年度"
+    },
+    {
+      "timeCode": "1984",
+      "timeName": "1984年度"
+    },
+    {
+      "timeCode": "1985",
+      "timeName": "1985年度"
+    },
+    {
+      "timeCode": "1986",
+      "timeName": "1986年度"
+    },
+    {
+      "timeCode": "1987",
+      "timeName": "1987年度"
+    },
+    {
+      "timeCode": "1988",
+      "timeName": "1988年度"
+    },
+    {
+      "timeCode": "1989",
+      "timeName": "1989年度"
+    },
+    {
+      "timeCode": "1990",
+      "timeName": "1990年度"
+    },
+    {
+      "timeCode": "1991",
+      "timeName": "1991年度"
+    },
+    {
+      "timeCode": "1992",
+      "timeName": "1992年度"
+    },
+    {
+      "timeCode": "1993",
+      "timeName": "1993年度"
+    },
+    {
+      "timeCode": "1994",
+      "timeName": "1994年度"
+    },
+    {
+      "timeCode": "1995",
+      "timeName": "1995年度"
+    },
+    {
+      "timeCode": "1996",
+      "timeName": "1996年度"
+    },
+    {
+      "timeCode": "1997",
+      "timeName": "1997年度"
+    },
+    {
+      "timeCode": "1998",
+      "timeName": "1998年度"
+    },
+    {
+      "timeCode": "1999",
+      "timeName": "1999年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2001",
+      "timeName": "2001年度"
+    },
+    {
+      "timeCode": "2002",
+      "timeName": "2002年度"
+    },
+    {
+      "timeCode": "2003",
+      "timeName": "2003年度"
+    },
+    {
+      "timeCode": "2004",
+      "timeName": "2004年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2006",
+      "timeName": "2006年度"
+    },
+    {
+      "timeCode": "2007",
+      "timeName": "2007年度"
+    },
+    {
+      "timeCode": "2008",
+      "timeName": "2008年度"
+    },
+    {
+      "timeCode": "2009",
+      "timeName": "2009年度"
+    },
+    {
+      "timeCode": "2010",
+      "timeName": "2010年度"
+    },
+    {
+      "timeCode": "2011",
+      "timeName": "2011年度"
+    },
+    {
+      "timeCode": "2012",
+      "timeName": "2012年度"
+    },
+    {
+      "timeCode": "2013",
+      "timeName": "2013年度"
+    },
+    {
+      "timeCode": "2014",
+      "timeName": "2014年度"
+    },
+    {
+      "timeCode": "2015",
+      "timeName": "2015年度"
+    }
+  ]
+}
