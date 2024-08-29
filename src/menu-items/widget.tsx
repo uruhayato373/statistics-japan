@@ -171,10 +171,10 @@ const widget: MenuGroup = {
       icon: icons.TransactionOutlined,
       children: [
         {
-          id: 'consumer-price-index',
-          title: '消費者物価指数',
+          id: 'gross-production',
+          title: '県内総生産',
           type: 'item',
-          url: '/economy/consumer-price-index',
+          url: '/economy/gross-production',
           breadcrumbs: false,
         },
       ],
