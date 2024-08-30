@@ -1,18 +1,14 @@
-import { Suspense } from 'react'
-
-import CircularProgressCards from 'components/CircularProgressCards'
-
-import CardsHighchartsMapChart from 'cards/CardsHighchartsMapChart'
+import CardsDashboardSingle from 'cards/CardsDashboard'
 
 import { saveDocument } from 'app/actions/saveDocument'
 import { saveValues } from 'app/actions/saveValues'
 import handleDocument from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import handleGeoshape from 'utils/geoshape'
+import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 
 const CARD_TITLE = '旅館等営業施設数'
-const CARD_ID = 'MapInns'
+const CARD_ID = 'DashboardNumberOfOperatingFacilities'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -21,42 +17,39 @@ const ESTAT_PARAMS = {
 
 interface Props {
   routerProps: RouterProps
+  prefecture: PrefectureType
 }
 
 // valuesの取得と整形
-async function fetchValues() {
+async function fetchValues(prefCode: string) {
   const values = await handleEstatAPI().fetchValues({
     ...ESTAT_PARAMS,
+    cdArea: prefCode,
   })
 
   return values
 }
 
 // コンポーネントの描画
-export default async function MapInns({ routerProps }: Props) {
-  const title = `都道府県の${CARD_TITLE}`
+export default async function DashboardNumberOfOperatingFacilities({
+  routerProps,
+  prefecture,
+}: Props) {
+  const { prefCode, prefName } = prefecture
+
+  const title = `${prefName}の${CARD_TITLE}`
 
   const saveProps = { ...routerProps, cardId: CARD_ID }
 
-  const values = await fetchValues()
+  const values = await fetchValues(prefCode)
   if (process.env.NODE_ENV === 'development') {
     await saveValues(saveProps, values)
   }
-
-  const topojson = await handleGeoshape('prefecture').readJson()
 
   const document = handleDocument().formatDocument(values)
   if (process.env.NODE_ENV === 'development') {
     await saveDocument(saveProps, document)
   }
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsHighchartsMapChart
-        title={title}
-        document={document}
-        topojson={topojson}
-      />
-    </Suspense>
-  )
+  return <CardsDashboardSingle title={title} document={document} />
 }

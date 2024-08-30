@@ -6,7 +6,7 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapInns from 'sections/tourism/inns/prefecture-rank/MapInns'
+import MapNumberOfOperatingFacilities from 'sections/tourism/inns/prefecture-rank/MapNumberOfOperatingFacilities'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -25,7 +25,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={7}>
-              <MapInns routerProps={routerProps} />
+              <MapNumberOfOperatingFacilities routerProps={routerProps} />
             </Grid>
           </Grid>
         </Box>

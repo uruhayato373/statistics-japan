@@ -8,7 +8,7 @@ import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 
 const CARD_TITLE = '旅館等営業施設数'
-const CARD_ID = 'TableInns'
+const CARD_ID = 'TableNumberOfOperatingFacilities'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -31,7 +31,10 @@ async function fetchValues(prefCode: string) {
 }
 
 // コンポーネントの描画
-export default async function TableInns({ routerProps, prefecture }: Props) {
+export default async function TableNumberOfOperatingFacilities({
+  routerProps,
+  prefecture,
+}: Props) {
   const { prefCode, prefName } = prefecture
 
   const title = `${prefName}の${CARD_TITLE}`

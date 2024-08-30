@@ -1,14 +1,18 @@
-import CardsDashboardSingle from 'cards/CardsDashboard'
+import { Suspense } from 'react'
+
+import CircularProgressCards from 'components/CircularProgressCards'
+
+import CardsHighchartsMapChart from 'cards/CardsHighchartsMapChart'
 
 import { saveDocument } from 'app/actions/saveDocument'
 import { saveValues } from 'app/actions/saveValues'
 import handleDocument from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import handleGeoshape from 'utils/geoshape'
 import { RouterProps } from 'utils/props'
 
 const CARD_TITLE = '旅館等営業施設数'
-const CARD_ID = 'DashboardInns'
+const CARD_ID = 'MapNumberOfOperatingFacilities'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -17,39 +21,44 @@ const ESTAT_PARAMS = {
 
 interface Props {
   routerProps: RouterProps
-  prefecture: PrefectureType
 }
 
 // valuesの取得と整形
-async function fetchValues(prefCode: string) {
+async function fetchValues() {
   const values = await handleEstatAPI().fetchValues({
     ...ESTAT_PARAMS,
-    cdArea: prefCode,
   })
 
   return values
 }
 
 // コンポーネントの描画
-export default async function DashboardInns({
+export default async function MapNumberOfOperatingFacilities({
   routerProps,
-  prefecture,
 }: Props) {
-  const { prefCode, prefName } = prefecture
-
-  const title = `${prefName}の${CARD_TITLE}`
+  const title = `都道府県の${CARD_TITLE}`
 
   const saveProps = { ...routerProps, cardId: CARD_ID }
 
-  const values = await fetchValues(prefCode)
+  const values = await fetchValues()
   if (process.env.NODE_ENV === 'development') {
     await saveValues(saveProps, values)
   }
+
+  const topojson = await handleGeoshape('prefecture').readJson()
 
   const document = handleDocument().formatDocument(values)
   if (process.env.NODE_ENV === 'development') {
     await saveDocument(saveProps, document)
   }
 
-  return <CardsDashboardSingle title={title} document={document} />
+  return (
+    <Suspense fallback={<CircularProgressCards />}>
+      <CardsHighchartsMapChart
+        title={title}
+        document={document}
+        topojson={topojson}
+      />
+    </Suspense>
+  )
 }

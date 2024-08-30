@@ -1,0 +1,724 @@
+{
+  "values": [
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "施設",
+      "value": 2863
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "施設",
+      "value": 2905
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "施設",
+      "value": 2891
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "施設",
+      "value": 2911
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "施設",
+      "value": 2921
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "施設",
+      "value": 2958
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "施設",
+      "value": 2959
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "施設",
+      "value": 2958
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "施設",
+      "value": 2989
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "施設",
+      "value": 3000
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "施設",
+      "value": 2978
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "施設",
+      "value": 2918
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "施設",
+      "value": 2865
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "施設",
+      "value": 2839
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "施設",
+      "value": 2812
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "施設",
+      "value": 2758
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "施設",
+      "value": 2688
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "施設",
+      "value": 2652
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "施設",
+      "value": 2628
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "施設",
+      "value": 2584
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "施設",
+      "value": 2515
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "施設",
+      "value": 2461
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "施設",
+      "value": 2416
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "施設",
+      "value": 2372
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "施設",
+      "value": 2332
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "施設",
+      "value": 2256
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "施設",
+      "value": 2205
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "施設",
+      "value": 2127
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "施設",
+      "value": 2060
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "施設",
+      "value": 1996
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "施設",
+      "value": 1942
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "施設",
+      "value": 1907
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "施設",
+      "value": 1879
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2008",
+      "timeName": "2008年度",
+      "unit": "施設",
+      "value": 1847
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2009",
+      "timeName": "2009年度",
+      "unit": "施設",
+      "value": 1799
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "施設",
+      "value": 1752
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "施設",
+      "value": 1709
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "施設",
+      "value": 1663
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "施設",
+      "value": 1637
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "施設",
+      "value": 1610
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "施設",
+      "value": 1574
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "施設",
+      "value": 1554
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "施設",
+      "value": 1525
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "施設",
+      "value": 1507
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "施設",
+      "value": 1490
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "施設",
+      "value": 1475
+    },
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2021",
+      "timeName": "2021年度",
+      "unit": "施設",
+      "value": 1447
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "C3801",
+      "categoryName": "旅館営業施設数（ホテルを含む）",
+      "categoryUnit": "施設"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "28000",
+      "areaName": "兵庫県"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1975",
+      "timeName": "1975年度"
+    },
+    {
+      "timeCode": "1976",
+      "timeName": "1976年度"
+    },
+    {
+      "timeCode": "1977",
+      "timeName": "1977年度"
+    },
+    {
+      "timeCode": "1978",
+      "timeName": "1978年度"
+    },
+    {
+      "timeCode": "1979",
+      "timeName": "1979年度"
+    },
+    {
+      "timeCode": "1980",
+      "timeName": "1980年度"
+    },
+    {
+      "timeCode": "1981",
+      "timeName": "1981年度"
+    },
+    {
+      "timeCode": "1982",
+      "timeName": "1982年度"
+    },
+    {
+      "timeCode": "1983",
+      "timeName": "1983年度"
+    },
+    {
+      "timeCode": "1984",
+      "timeName": "1984年度"
+    },
+    {
+      "timeCode": "1985",
+      "timeName": "1985年度"
+    },
+    {
+      "timeCode": "1986",
+      "timeName": "1986年度"
+    },
+    {
+      "timeCode": "1987",
+      "timeName": "1987年度"
+    },
+    {
+      "timeCode": "1988",
+      "timeName": "1988年度"
+    },
+    {
+      "timeCode": "1989",
+      "timeName": "1989年度"
+    },
+    {
+      "timeCode": "1990",
+      "timeName": "1990年度"
+    },
+    {
+      "timeCode": "1991",
+      "timeName": "1991年度"
+    },
+    {
+      "timeCode": "1992",
+      "timeName": "1992年度"
+    },
+    {
+      "timeCode": "1993",
+      "timeName": "1993年度"
+    },
+    {
+      "timeCode": "1994",
+      "timeName": "1994年度"
+    },
+    {
+      "timeCode": "1995",
+      "timeName": "1995年度"
+    },
+    {
+      "timeCode": "1996",
+      "timeName": "1996年度"
+    },
+    {
+      "timeCode": "1997",
+      "timeName": "1997年度"
+    },
+    {
+      "timeCode": "1998",
+      "timeName": "1998年度"
+    },
+    {
+      "timeCode": "1999",
+      "timeName": "1999年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2001",
+      "timeName": "2001年度"
+    },
+    {
+      "timeCode": "2002",
+      "timeName": "2002年度"
+    },
+    {
+      "timeCode": "2003",
+      "timeName": "2003年度"
+    },
+    {
+      "timeCode": "2004",
+      "timeName": "2004年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2006",
+      "timeName": "2006年度"
+    },
+    {
+      "timeCode": "2007",
+      "timeName": "2007年度"
+    },
+    {
+      "timeCode": "2008",
+      "timeName": "2008年度"
+    },
+    {
+      "timeCode": "2009",
+      "timeName": "2009年度"
+    },
+    {
+      "timeCode": "2010",
+      "timeName": "2010年度"
+    },
+    {
+      "timeCode": "2011",
+      "timeName": "2011年度"
+    },
+    {
+      "timeCode": "2012",
+      "timeName": "2012年度"
+    },
+    {
+      "timeCode": "2013",
+      "timeName": "2013年度"
+    },
+    {
+      "timeCode": "2014",
+      "timeName": "2014年度"
+    },
+    {
+      "timeCode": "2015",
+      "timeName": "2015年度"
+    },
+    {
+      "timeCode": "2016",
+      "timeName": "2016年度"
+    },
+    {
+      "timeCode": "2017",
+      "timeName": "2017年度"
+    },
+    {
+      "timeCode": "2018",
+      "timeName": "2018年度"
+    },
+    {
+      "timeCode": "2019",
+      "timeName": "2019年度"
+    },
+    {
+      "timeCode": "2020",
+      "timeName": "2020年度"
+    },
+    {
+      "timeCode": "2021",
+      "timeName": "2021年度"
+    }
+  ]
+}
