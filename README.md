@@ -83,19 +83,6 @@ Vercelのプロジェクトから Settings > Git > Ignored Build Stepにコマ�
 bash vercel-ignore-build-step.sh
 ```
 
-### 本番環境
-
-Amazon Amplifyにデプロイする。
-
-新しいアプリを作成 > GitHubでアプリを作成した後、ホスティング > 環境変数で環境変数を追加する。
-
-ビルド時に環境変数を利用するためには、[amplify.yml](amplify.yml)に追記が必要
-
-```yml
-- echo "ESTAT_API_APPID=$ESTAT_API_APPID" >> .env
-- echo "RESAS_API_KEY=$RESAS_API_KEY" >> .env
-```
-
 ## ディレクトリ構成
 
 ### app
