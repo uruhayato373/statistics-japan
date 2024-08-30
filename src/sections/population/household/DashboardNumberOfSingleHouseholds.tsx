@@ -9,12 +9,12 @@ import { RouterProps } from 'utils/props'
 import handleValues from 'utils/values'
 import { SaveProps } from 'utils/values/modules/filePath'
 
-const CARD_TITLE = '核家族世帯数'
-const CARD_ID = 'DashboardNumberOfNuclearFamilyHouseholds'
+const CARD_TITLE = '単独世帯数'
+const CARD_ID = 'DashboardNumberOfSingleHouseholds'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
-  cdCat01: 'A810102',
+  cdCat01: 'A810105',
 }
 
 interface Props {
@@ -52,7 +52,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function DashboardNumberOfNuclearFamilyHouseholds({
+export default async function DashboardNumberOfSingleHouseholds({
   routerProps,
   prefecture,
 }: Props) {

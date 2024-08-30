@@ -1,20 +1,23 @@
-import CardsDashboardSingle from 'cards/CardsDashboard'
+import { Suspense } from 'react'
 
-import { saveDocument } from 'app/actions/saveDocument'
+import CircularProgressCards from 'components/CircularProgressCards'
+
+import CardsApexLineChart from 'cards/CardsApexLineChart'
+
+import { saveDocument, SaveProps } from 'app/actions/saveDocument'
 import { saveValues } from 'app/actions/saveValues'
 import handleDocument, { ValueType, DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 import handleValues from 'utils/values'
-import { SaveProps } from 'utils/values/modules/filePath'
 
-const CARD_TITLE = '核家族世帯数'
-const CARD_ID = 'DashboardNumberOfNuclearFamilyHouseholds'
+const CARD_TITLE = '形態別世帯数の推移'
+const CARD_ID = 'LineChartHousehold'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
-  cdCat01: 'A810102',
+  cdCat01: ['A810102', 'A810105'],
 }
 
 interface Props {
@@ -52,7 +55,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function DashboardNumberOfNuclearFamilyHouseholds({
+export default async function LineChartHousehold({
   routerProps,
   prefecture,
 }: Props) {
@@ -62,5 +65,9 @@ export default async function DashboardNumberOfNuclearFamilyHouseholds({
   const values = await processValues(saveProps, prefCode)
   const document = await processDocument(saveProps, values)
 
-  return <CardsDashboardSingle title={title} document={document} />
+  return (
+    <Suspense fallback={<CircularProgressCards />}>
+      <CardsApexLineChart title={title} document={document} />
+    </Suspense>
+  )
 }

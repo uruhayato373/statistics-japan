@@ -100,6 +100,105 @@
       "value": 2399358
     },
     {
+      "categoryCode": "A810101",
+      "categoryName": "親族のみの世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "世帯",
+      "value": 1295485
+    },
+    {
+      "categoryCode": "A810101",
+      "categoryName": "親族のみの世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "世帯",
+      "value": 1347336
+    },
+    {
+      "categoryCode": "A810101",
+      "categoryName": "親族のみの世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "世帯",
+      "value": 1407001
+    },
+    {
+      "categoryCode": "A810101",
+      "categoryName": "親族のみの世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "世帯",
+      "value": 1444751
+    },
+    {
+      "categoryCode": "A810101",
+      "categoryName": "親族のみの世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "世帯",
+      "value": 1520712
+    },
+    {
+      "categoryCode": "A810101",
+      "categoryName": "親族のみの世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "世帯",
+      "value": 1550933
+    },
+    {
+      "categoryCode": "A810101",
+      "categoryName": "親族のみの世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "世帯",
+      "value": 1552311
+    },
+    {
+      "categoryCode": "A810101",
+      "categoryName": "親族のみの世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "世帯",
+      "value": 1534922
+    },
+    {
+      "categoryCode": "A810101",
+      "categoryName": "親族のみの世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "世帯",
+      "value": 1504033
+    },
+    {
       "categoryCode": "A810102",
       "categoryName": "核家族世帯数",
       "categoryUnit": "世帯",
@@ -309,6 +408,105 @@
       "value": 132191
     },
     {
+      "categoryCode": "A810104",
+      "categoryName": "非親族を含む世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "世帯",
+      "value": 2618
+    },
+    {
+      "categoryCode": "A810104",
+      "categoryName": "非親族を含む世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "世帯",
+      "value": 2986
+    },
+    {
+      "categoryCode": "A810104",
+      "categoryName": "非親族を含む世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "世帯",
+      "value": 1768
+    },
+    {
+      "categoryCode": "A810104",
+      "categoryName": "非親族を含む世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "世帯",
+      "value": 4611
+    },
+    {
+      "categoryCode": "A810104",
+      "categoryName": "非親族を含む世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "世帯",
+      "value": 6632
+    },
+    {
+      "categoryCode": "A810104",
+      "categoryName": "非親族を含む世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "世帯",
+      "value": 8549
+    },
+    {
+      "categoryCode": "A810104",
+      "categoryName": "非親族を含む世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "世帯",
+      "value": 14419
+    },
+    {
+      "categoryCode": "A810104",
+      "categoryName": "非親族を含む世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "世帯",
+      "value": 14236
+    },
+    {
+      "categoryCode": "A810104",
+      "categoryName": "非親族を含む世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "世帯",
+      "value": 18888
+    },
+    {
       "categoryCode": "A810105",
       "categoryName": "単独世帯数",
       "categoryUnit": "世帯",
@@ -426,6 +624,11 @@
       "categoryUnit": "世帯"
     },
     {
+      "categoryCode": "A810101",
+      "categoryName": "親族のみの世帯数",
+      "categoryUnit": "世帯"
+    },
+    {
       "categoryCode": "A810102",
       "categoryName": "核家族世帯数",
       "categoryUnit": "世帯"
@@ -433,6 +636,11 @@
     {
       "categoryCode": "A810103",
       "categoryName": "核家族以外の世帯数",
+      "categoryUnit": "世帯"
+    },
+    {
+      "categoryCode": "A810104",
+      "categoryName": "非親族を含む世帯数",
       "categoryUnit": "世帯"
     },
     {

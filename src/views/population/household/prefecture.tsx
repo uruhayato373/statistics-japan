@@ -8,6 +8,8 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardGeneralHousehold from 'sections/population/household/DashboardGeneralHousehold'
 import DashboardNumberOfNuclearFamilyHouseholds from 'sections/population/household/DashboardNumberOfNuclearFamilyHouseholds'
+import DashboardNumberOfSingleHouseholds from 'sections/population/household/DashboardNumberOfSingleHouseholds'
+import LineChartHousehold from 'sections/population/household/LineChartHousehold'
 import TableHousehold from 'sections/population/household/TableHousehold'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -35,6 +37,18 @@ export default async function Prefecture({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfNuclearFamilyHouseholds
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardNumberOfSingleHouseholds
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={8}>
+              <LineChartHousehold
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

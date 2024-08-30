@@ -12,7 +12,7 @@ const CARD_ID = 'TableHousehold'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
-  cdCat01: ['A710101', 'A810102', 'A810103', '0000010101', 'A810105'],
+  cdCat01: ['A710101', 'A810101', 'A810102', 'A810103', 'A810104', 'A810105'],
 }
 
 interface Props {
