@@ -8,12 +8,12 @@ import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 import handleValues from 'utils/values'
 
-const CARD_TITLE = '出生数'
-const CARD_ID = 'DashboardBirth'
+const CARD_TITLE = '死亡数'
+const CARD_ID = 'DashboardNumberOfDeaths'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
-  cdCat01: 'A4101',
+  cdCat01: 'A4200',
 }
 
 interface Props {
@@ -51,7 +51,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function DashboardBirth({
+export default async function DashboardNumberOfDeaths({
   routerProps,
   prefecture,
 }: Props) {

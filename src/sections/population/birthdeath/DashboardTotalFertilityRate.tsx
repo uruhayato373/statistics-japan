@@ -8,12 +8,12 @@ import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 import handleValues from 'utils/values'
 
-const CARD_TITLE = '出生数'
-const CARD_ID = 'DashboardBirth'
+const CARD_TITLE = '合計特殊出生率'
+const CARD_ID = 'DashboardTotalFertilityRate'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
-  cdCat01: 'A4101',
+  cdCat01: 'A4103',
 }
 
 interface Props {
@@ -51,7 +51,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function DashboardBirth({
+export default async function DashboardTotalFertilityRate({
   routerProps,
   prefecture,
 }: Props) {
@@ -61,5 +61,5 @@ export default async function DashboardBirth({
   const values = await processValues(saveProps, prefCode)
   const document = await processDocument(saveProps, values)
 
-  return <CardsDashboardSingle title={title} document={document} />
+  return <CardsDashboardSingle title={title} document={document} digit={1} />
 }
