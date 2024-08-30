@@ -22,10 +22,16 @@ interface Props {
 }
 
 // valuesの取得と整形
-async function fetchValues(prefCode: string) {
-  const values = await handleEstatAPI().fetchValues({
-    ...ESTAT_PARAMS,
-  })
+async function fetchValues(saveProps, prefCode: string) {
+  let values: ValueType[]
+  if (process.env.NODE_ENV === 'development') {
+    values = await handleEstatAPI().fetchValues({
+      ...ESTAT_PARAMS,
+    })
+    await saveValues(saveProps, values)
+  } else {
+    values = handleValues(saveProps).readValues()
+  }
 
   return values.filter((f) => f.areaCode === prefCode)
 }
@@ -41,13 +47,7 @@ export default async function DashboardNumberOfNuclearFamilyHouseholds({
 
   const saveProps = { ...routerProps, cardId: CARD_ID }
 
-  let values: ValueType[]
-  if (process.env.NODE_ENV === 'development') {
-    values = await fetchValues(prefCode)
-    await saveValues(saveProps, values)
-  } else {
-    values = handleValues(saveProps).readValues()
-  }
+  const values = await fetchValues(saveProps, prefCode)
 
   const document = handleDocument().formatDocument(values)
   if (process.env.NODE_ENV === 'development') {
