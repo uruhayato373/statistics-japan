@@ -1,0 +1,35 @@
+[
+  {
+    "categoryCode": "A1231",
+    "categoryName": "年齢中位数",
+    "categoryUnit": "歳",
+    "areaCode": "28000",
+    "areaName": "兵庫県",
+    "timeCode": "2010",
+    "timeName": "2010年度",
+    "unit": "歳",
+    "value": 45
+  },
+  {
+    "categoryCode": "A1231",
+    "categoryName": "年齢中位数",
+    "categoryUnit": "歳",
+    "areaCode": "28000",
+    "areaName": "兵庫県",
+    "timeCode": "2015",
+    "timeName": "2015年度",
+    "unit": "歳",
+    "value": 47
+  },
+  {
+    "categoryCode": "A1231",
+    "categoryName": "年齢中位数",
+    "categoryUnit": "歳",
+    "areaCode": "28000",
+    "areaName": "兵庫県",
+    "timeCode": "2020",
+    "timeName": "2020年度",
+    "unit": "歳",
+    "value": 49.1
+  }
+]
