@@ -1,18 +1,17 @@
 'use server'
 
-import path from 'path'
-
 import fs from 'fs-extra'
 
 import { ValueType } from 'utils/document'
 import { RouterProps } from 'utils/props'
+import handleValues from 'utils/values'
 
 export interface SaveProps extends RouterProps {
   cardId: string
 }
 
 export async function saveValues(saveProps: SaveProps, values: ValueType[]) {
-  const filePath = generateSaveFilePath(saveProps)
+  const { filePath } = handleValues(saveProps)
 
   try {
     // ディレクトリが存在しない場合は作成し、データを書き込み
@@ -25,35 +24,5 @@ export async function saveValues(saveProps: SaveProps, values: ValueType[]) {
       errorMessage += `: ${error.message}`
     }
     return { success: false, message: errorMessage }
-  }
-}
-
-function generateSaveFilePath(saveProps: SaveProps) {
-  const { fieldId, menuId, kindId, pageId, prefCode, cardId } = saveProps
-  const filePath = path.join(
-    process.cwd(),
-    'src',
-    'data',
-    'cards',
-    fieldId,
-    menuId
-  )
-  switch (kindId) {
-    case 'japan':
-      return path.join(filePath, 'japan', `${cardId}`, 'values.json')
-    case 'prefecture':
-      return path.join(
-        filePath,
-        'prefecture',
-        `${cardId}`,
-        `${prefCode}_values.json`
-      )
-    case 'prefecture-rank':
-      return path.join(
-        filePath,
-        'prefecture-rank',
-        `${pageId}`,
-        `${cardId}_values.json`
-      )
   }
 }

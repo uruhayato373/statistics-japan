@@ -1,1407 +1,444 @@
 {
   "values": [
     {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
+      "categoryCode": "A710101",
+      "categoryName": "一般世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "1980",
       "timeName": "1980年度",
-      "unit": "人",
-      "value": 68677
+      "unit": "世帯",
+      "value": 1582793
     },
     {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1981",
-      "timeName": "1981年度",
-      "unit": "人",
-      "value": 66219
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1982",
-      "timeName": "1982年度",
-      "unit": "人",
-      "value": 65925
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1983",
-      "timeName": "1983年度",
-      "unit": "人",
-      "value": 65368
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1984",
-      "timeName": "1984年度",
-      "unit": "人",
-      "value": 64210
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
+      "categoryCode": "A710101",
+      "categoryName": "一般世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "1985",
       "timeName": "1985年度",
-      "unit": "人",
-      "value": 61332
+      "unit": "世帯",
+      "value": 1660915
     },
     {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1986",
-      "timeName": "1986年度",
-      "unit": "人",
-      "value": 59766
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1987",
-      "timeName": "1987年度",
-      "unit": "人",
-      "value": 57600
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1988",
-      "timeName": "1988年度",
-      "unit": "人",
-      "value": 56451
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1989",
-      "timeName": "1989年度",
-      "unit": "人",
-      "value": 53689
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
+      "categoryCode": "A710101",
+      "categoryName": "一般世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "1990",
       "timeName": "1990年度",
-      "unit": "人",
-      "value": 53916
+      "unit": "世帯",
+      "value": 1774925
     },
     {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1991",
-      "timeName": "1991年度",
-      "unit": "人",
-      "value": 53294
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1992",
-      "timeName": "1992年度",
-      "unit": "人",
-      "value": 53053
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1993",
-      "timeName": "1993年度",
-      "unit": "人",
-      "value": 51942
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1994",
-      "timeName": "1994年度",
-      "unit": "人",
-      "value": 54940
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
+      "categoryCode": "A710101",
+      "categoryName": "一般世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "1995",
       "timeName": "1995年度",
-      "unit": "人",
-      "value": 51947
+      "unit": "世帯",
+      "value": 1867031
     },
     {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1996",
-      "timeName": "1996年度",
-      "unit": "人",
-      "value": 53131
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1997",
-      "timeName": "1997年度",
-      "unit": "人",
-      "value": 53356
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1998",
-      "timeName": "1998年度",
-      "unit": "人",
-      "value": 54421
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1999",
-      "timeName": "1999年度",
-      "unit": "人",
-      "value": 53765
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
+      "categoryCode": "A710101",
+      "categoryName": "一般世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2000",
       "timeName": "2000年度",
-      "unit": "人",
-      "value": 54455
+      "unit": "世帯",
+      "value": 2035097
     },
     {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2001",
-      "timeName": "2001年度",
-      "unit": "人",
-      "value": 52585
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2002",
-      "timeName": "2002年度",
-      "unit": "人",
-      "value": 52314
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2003",
-      "timeName": "2003年度",
-      "unit": "人",
-      "value": 50520
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2004",
-      "timeName": "2004年度",
-      "unit": "人",
-      "value": 49789
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
+      "categoryCode": "A710101",
+      "categoryName": "一般世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2005",
       "timeName": "2005年度",
-      "unit": "人",
-      "value": 47273
+      "unit": "世帯",
+      "value": 2128963
     },
     {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2006",
-      "timeName": "2006年度",
-      "unit": "人",
-      "value": 48771
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2007",
-      "timeName": "2007年度",
-      "unit": "人",
-      "value": 48685
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2008",
-      "timeName": "2008年度",
-      "unit": "人",
-      "value": 48833
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2009",
-      "timeName": "2009年度",
-      "unit": "人",
-      "value": 47592
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
+      "categoryCode": "A710101",
+      "categoryName": "一般世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2010",
       "timeName": "2010年度",
-      "unit": "人",
-      "value": 47834
+      "unit": "世帯",
+      "value": 2252522
     },
     {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2011",
-      "timeName": "2011年度",
-      "unit": "人",
-      "value": 47351
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2012",
-      "timeName": "2012年度",
-      "unit": "人",
-      "value": 46436
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2013",
-      "timeName": "2013年度",
-      "unit": "人",
-      "value": 45673
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2014",
-      "timeName": "2014年度",
-      "unit": "人",
-      "value": 44352
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
+      "categoryCode": "A710101",
+      "categoryName": "一般世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "人",
-      "value": 44016
+      "unit": "世帯",
+      "value": 2312284
     },
     {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2016",
-      "timeName": "2016年度",
-      "unit": "人",
-      "value": 43379
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2017",
-      "timeName": "2017年度",
-      "unit": "人",
-      "value": 41606
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2018",
-      "timeName": "2018年度",
-      "unit": "人",
-      "value": 39713
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2019",
-      "timeName": "2019年度",
-      "unit": "人",
-      "value": 38043
-    },
-    {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
+      "categoryCode": "A710101",
+      "categoryName": "一般世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2020",
       "timeName": "2020年度",
-      "unit": "人",
-      "value": 36953
+      "unit": "世帯",
+      "value": 2399358
     },
     {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人",
+      "categoryCode": "A810102",
+      "categoryName": "核家族世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
-      "timeCode": "2021",
-      "timeName": "2021年度",
-      "unit": "人",
-      "value": 35581
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "世帯",
+      "value": 960393
     },
     {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
+      "categoryCode": "A810102",
+      "categoryName": "核家族世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "1980",
       "timeName": "1980年度",
-      "unit": "人",
-      "value": 35228
+      "unit": "世帯",
+      "value": 1019976
     },
     {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1981",
-      "timeName": "1981年度",
-      "unit": "人",
-      "value": 34089
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1982",
-      "timeName": "1982年度",
-      "unit": "人",
-      "value": 33721
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1983",
-      "timeName": "1983年度",
-      "unit": "人",
-      "value": 33427
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1984",
-      "timeName": "1984年度",
-      "unit": "人",
-      "value": 32958
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
+      "categoryCode": "A810102",
+      "categoryName": "核家族世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "1985",
       "timeName": "1985年度",
-      "unit": "人",
-      "value": 31338
+      "unit": "世帯",
+      "value": 1069301
     },
     {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1986",
-      "timeName": "1986年度",
-      "unit": "人",
-      "value": 30842
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1987",
-      "timeName": "1987年度",
-      "unit": "人",
-      "value": 29505
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1988",
-      "timeName": "1988年度",
-      "unit": "人",
-      "value": 29160
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1989",
-      "timeName": "1989年度",
-      "unit": "人",
-      "value": 27906
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
+      "categoryCode": "A810102",
+      "categoryName": "核家族世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "1990",
       "timeName": "1990年度",
-      "unit": "人",
-      "value": 27644
+      "unit": "世帯",
+      "value": 1140812
     },
     {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1991",
-      "timeName": "1991年度",
-      "unit": "人",
-      "value": 27478
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1992",
-      "timeName": "1992年度",
-      "unit": "人",
-      "value": 27345
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1993",
-      "timeName": "1993年度",
-      "unit": "人",
-      "value": 26757
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1994",
-      "timeName": "1994年度",
-      "unit": "人",
-      "value": 28323
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
+      "categoryCode": "A810102",
+      "categoryName": "核家族世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "1995",
       "timeName": "1995年度",
-      "unit": "人",
-      "value": 26772
+      "unit": "世帯",
+      "value": 1189321
     },
     {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1996",
-      "timeName": "1996年度",
-      "unit": "人",
-      "value": 27214
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1997",
-      "timeName": "1997年度",
-      "unit": "人",
-      "value": 27285
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1998",
-      "timeName": "1998年度",
-      "unit": "人",
-      "value": 27979
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1999",
-      "timeName": "1999年度",
-      "unit": "人",
-      "value": 27609
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
+      "categoryCode": "A810102",
+      "categoryName": "核家族世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2000",
       "timeName": "2000年度",
-      "unit": "人",
-      "value": 27826
+      "unit": "世帯",
+      "value": 1286413
     },
     {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2001",
-      "timeName": "2001年度",
-      "unit": "人",
-      "value": 27039
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2002",
-      "timeName": "2002年度",
-      "unit": "人",
-      "value": 26828
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2003",
-      "timeName": "2003年度",
-      "unit": "人",
-      "value": 25935
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2004",
-      "timeName": "2004年度",
-      "unit": "人",
-      "value": 25527
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
+      "categoryCode": "A810102",
+      "categoryName": "核家族世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2005",
       "timeName": "2005年度",
-      "unit": "人",
-      "value": 24276
+      "unit": "世帯",
+      "value": 1334679
     },
     {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2006",
-      "timeName": "2006年度",
-      "unit": "人",
-      "value": 25096
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2007",
-      "timeName": "2007年度",
-      "unit": "人",
-      "value": 25183
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2008",
-      "timeName": "2008年度",
-      "unit": "人",
-      "value": 24857
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2009",
-      "timeName": "2009年度",
-      "unit": "人",
-      "value": 24332
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
+      "categoryCode": "A810102",
+      "categoryName": "核家族世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2010",
       "timeName": "2010年度",
-      "unit": "人",
-      "value": 24664
+      "unit": "世帯",
+      "value": 1361978
     },
     {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2011",
-      "timeName": "2011年度",
-      "unit": "人",
-      "value": 24196
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2012",
-      "timeName": "2012年度",
-      "unit": "人",
-      "value": 23854
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2013",
-      "timeName": "2013年度",
-      "unit": "人",
-      "value": 23309
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2014",
-      "timeName": "2014年度",
-      "unit": "人",
-      "value": 22778
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
+      "categoryCode": "A810102",
+      "categoryName": "核家族世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "人",
-      "value": 22672
+      "unit": "世帯",
+      "value": 1370236
     },
     {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2016",
-      "timeName": "2016年度",
-      "unit": "人",
-      "value": 22346
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2017",
-      "timeName": "2017年度",
-      "unit": "人",
-      "value": 21275
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2018",
-      "timeName": "2018年度",
-      "unit": "人",
-      "value": 20450
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2019",
-      "timeName": "2019年度",
-      "unit": "人",
-      "value": 19372
-    },
-    {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
+      "categoryCode": "A810102",
+      "categoryName": "核家族世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2020",
       "timeName": "2020年度",
-      "unit": "人",
-      "value": 18808
+      "unit": "世帯",
+      "value": 1371842
     },
     {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2021",
-      "timeName": "2021年度",
-      "unit": "人",
-      "value": 18200
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
+      "categoryCode": "A810103",
+      "categoryName": "核家族以外の世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "1980",
       "timeName": "1980年度",
-      "unit": "人",
-      "value": 33449
+      "unit": "世帯",
+      "value": 275509
     },
     {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1981",
-      "timeName": "1981年度",
-      "unit": "人",
-      "value": 32130
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1982",
-      "timeName": "1982年度",
-      "unit": "人",
-      "value": 32204
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1983",
-      "timeName": "1983年度",
-      "unit": "人",
-      "value": 31941
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1984",
-      "timeName": "1984年度",
-      "unit": "人",
-      "value": 31252
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
+      "categoryCode": "A810103",
+      "categoryName": "核家族以外の世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "1985",
       "timeName": "1985年度",
-      "unit": "人",
-      "value": 29994
+      "unit": "世帯",
+      "value": 278035
     },
     {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1986",
-      "timeName": "1986年度",
-      "unit": "人",
-      "value": 28924
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1987",
-      "timeName": "1987年度",
-      "unit": "人",
-      "value": 28095
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1988",
-      "timeName": "1988年度",
-      "unit": "人",
-      "value": 27291
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1989",
-      "timeName": "1989年度",
-      "unit": "人",
-      "value": 25783
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
+      "categoryCode": "A810103",
+      "categoryName": "核家族以外の世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "1990",
       "timeName": "1990年度",
-      "unit": "人",
-      "value": 26272
+      "unit": "世帯",
+      "value": 266189
     },
     {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1991",
-      "timeName": "1991年度",
-      "unit": "人",
-      "value": 25816
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1992",
-      "timeName": "1992年度",
-      "unit": "人",
-      "value": 25708
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1993",
-      "timeName": "1993年度",
-      "unit": "人",
-      "value": 25185
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1994",
-      "timeName": "1994年度",
-      "unit": "人",
-      "value": 26617
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
+      "categoryCode": "A810103",
+      "categoryName": "核家族以外の世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "1995",
       "timeName": "1995年度",
-      "unit": "人",
-      "value": 25175
+      "unit": "世帯",
+      "value": 255430
     },
     {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1996",
-      "timeName": "1996年度",
-      "unit": "人",
-      "value": 25917
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1997",
-      "timeName": "1997年度",
-      "unit": "人",
-      "value": 26071
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1998",
-      "timeName": "1998年度",
-      "unit": "人",
-      "value": 26442
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "1999",
-      "timeName": "1999年度",
-      "unit": "人",
-      "value": 26156
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
+      "categoryCode": "A810103",
+      "categoryName": "核家族以外の世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2000",
       "timeName": "2000年度",
-      "unit": "人",
-      "value": 26629
+      "unit": "世帯",
+      "value": 234299
     },
     {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2001",
-      "timeName": "2001年度",
-      "unit": "人",
-      "value": 25546
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2002",
-      "timeName": "2002年度",
-      "unit": "人",
-      "value": 25486
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2003",
-      "timeName": "2003年度",
-      "unit": "人",
-      "value": 24585
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2004",
-      "timeName": "2004年度",
-      "unit": "人",
-      "value": 24262
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
+      "categoryCode": "A810103",
+      "categoryName": "核家族以外の世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2005",
       "timeName": "2005年度",
-      "unit": "人",
-      "value": 22997
+      "unit": "世帯",
+      "value": 216254
     },
     {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2006",
-      "timeName": "2006年度",
-      "unit": "人",
-      "value": 23675
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2007",
-      "timeName": "2007年度",
-      "unit": "人",
-      "value": 23502
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2008",
-      "timeName": "2008年度",
-      "unit": "人",
-      "value": 23976
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2009",
-      "timeName": "2009年度",
-      "unit": "人",
-      "value": 23260
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
+      "categoryCode": "A810103",
+      "categoryName": "核家族以外の世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2010",
       "timeName": "2010年度",
-      "unit": "人",
-      "value": 23170
+      "unit": "世帯",
+      "value": 190333
     },
     {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2011",
-      "timeName": "2011年度",
-      "unit": "人",
-      "value": 23155
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2012",
-      "timeName": "2012年度",
-      "unit": "人",
-      "value": 22582
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2013",
-      "timeName": "2013年度",
-      "unit": "人",
-      "value": 22364
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2014",
-      "timeName": "2014年度",
-      "unit": "人",
-      "value": 21574
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
+      "categoryCode": "A810103",
+      "categoryName": "核家族以外の世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "人",
-      "value": 21344
+      "unit": "世帯",
+      "value": 164686
     },
     {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2016",
-      "timeName": "2016年度",
-      "unit": "人",
-      "value": 21033
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2017",
-      "timeName": "2017年度",
-      "unit": "人",
-      "value": 20331
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2018",
-      "timeName": "2018年度",
-      "unit": "人",
-      "value": 19263
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
-      "areaCode": "28000",
-      "areaName": "兵庫県",
-      "timeCode": "2019",
-      "timeName": "2019年度",
-      "unit": "人",
-      "value": 18671
-    },
-    {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
+      "categoryCode": "A810103",
+      "categoryName": "核家族以外の世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
       "timeCode": "2020",
       "timeName": "2020年度",
-      "unit": "人",
-      "value": 18145
+      "unit": "世帯",
+      "value": 132191
     },
     {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人",
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
       "areaCode": "28000",
       "areaName": "兵庫県",
-      "timeCode": "2021",
-      "timeName": "2021年度",
-      "unit": "人",
-      "value": 17381
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "世帯",
+      "value": 170574
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "世帯",
+      "value": 208135
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "世帯",
+      "value": 310593
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "世帯",
+      "value": 366156
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "世帯",
+      "value": 417669
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "世帯",
+      "value": 507753
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "世帯",
+      "value": 569481
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "世帯",
+      "value": 681009
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "世帯",
+      "value": 756223
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "世帯",
+      "value": 862511
     }
   ],
   "categories": [
     {
-      "categoryCode": "A4101",
-      "categoryName": "出生数",
-      "categoryUnit": "人"
+      "categoryCode": "A710101",
+      "categoryName": "一般世帯数",
+      "categoryUnit": "世帯"
     },
     {
-      "categoryCode": "A410101",
-      "categoryName": "出生数（男）",
-      "categoryUnit": "人"
+      "categoryCode": "A810102",
+      "categoryName": "核家族世帯数",
+      "categoryUnit": "世帯"
     },
     {
-      "categoryCode": "A410102",
-      "categoryName": "出生数（女）",
-      "categoryUnit": "人"
+      "categoryCode": "A810103",
+      "categoryName": "核家族以外の世帯数",
+      "categoryUnit": "世帯"
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯"
     }
   ],
   "areas": [
@@ -1416,168 +453,40 @@
       "timeName": "1980年度"
     },
     {
-      "timeCode": "1981",
-      "timeName": "1981年度"
-    },
-    {
-      "timeCode": "1982",
-      "timeName": "1982年度"
-    },
-    {
-      "timeCode": "1983",
-      "timeName": "1983年度"
-    },
-    {
-      "timeCode": "1984",
-      "timeName": "1984年度"
-    },
-    {
       "timeCode": "1985",
       "timeName": "1985年度"
-    },
-    {
-      "timeCode": "1986",
-      "timeName": "1986年度"
-    },
-    {
-      "timeCode": "1987",
-      "timeName": "1987年度"
-    },
-    {
-      "timeCode": "1988",
-      "timeName": "1988年度"
-    },
-    {
-      "timeCode": "1989",
-      "timeName": "1989年度"
     },
     {
       "timeCode": "1990",
       "timeName": "1990年度"
     },
     {
-      "timeCode": "1991",
-      "timeName": "1991年度"
-    },
-    {
-      "timeCode": "1992",
-      "timeName": "1992年度"
-    },
-    {
-      "timeCode": "1993",
-      "timeName": "1993年度"
-    },
-    {
-      "timeCode": "1994",
-      "timeName": "1994年度"
-    },
-    {
       "timeCode": "1995",
       "timeName": "1995年度"
-    },
-    {
-      "timeCode": "1996",
-      "timeName": "1996年度"
-    },
-    {
-      "timeCode": "1997",
-      "timeName": "1997年度"
-    },
-    {
-      "timeCode": "1998",
-      "timeName": "1998年度"
-    },
-    {
-      "timeCode": "1999",
-      "timeName": "1999年度"
     },
     {
       "timeCode": "2000",
       "timeName": "2000年度"
     },
     {
-      "timeCode": "2001",
-      "timeName": "2001年度"
-    },
-    {
-      "timeCode": "2002",
-      "timeName": "2002年度"
-    },
-    {
-      "timeCode": "2003",
-      "timeName": "2003年度"
-    },
-    {
-      "timeCode": "2004",
-      "timeName": "2004年度"
-    },
-    {
       "timeCode": "2005",
       "timeName": "2005年度"
-    },
-    {
-      "timeCode": "2006",
-      "timeName": "2006年度"
-    },
-    {
-      "timeCode": "2007",
-      "timeName": "2007年度"
-    },
-    {
-      "timeCode": "2008",
-      "timeName": "2008年度"
-    },
-    {
-      "timeCode": "2009",
-      "timeName": "2009年度"
     },
     {
       "timeCode": "2010",
       "timeName": "2010年度"
     },
     {
-      "timeCode": "2011",
-      "timeName": "2011年度"
-    },
-    {
-      "timeCode": "2012",
-      "timeName": "2012年度"
-    },
-    {
-      "timeCode": "2013",
-      "timeName": "2013年度"
-    },
-    {
-      "timeCode": "2014",
-      "timeName": "2014年度"
-    },
-    {
       "timeCode": "2015",
       "timeName": "2015年度"
-    },
-    {
-      "timeCode": "2016",
-      "timeName": "2016年度"
-    },
-    {
-      "timeCode": "2017",
-      "timeName": "2017年度"
-    },
-    {
-      "timeCode": "2018",
-      "timeName": "2018年度"
-    },
-    {
-      "timeCode": "2019",
-      "timeName": "2019年度"
     },
     {
       "timeCode": "2020",
       "timeName": "2020年度"
     },
     {
-      "timeCode": "2021",
-      "timeName": "2021年度"
+      "timeCode": "1975",
+      "timeName": "1975年度"
     }
   ]
 }

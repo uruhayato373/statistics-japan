@@ -1,101 +1,112 @@
 [
   {
-    "categoryCode": "A710101",
-    "categoryName": "一般世帯数",
+    "categoryCode": "A810102",
+    "categoryName": "核家族世帯数",
+    "categoryUnit": "世帯",
+    "areaCode": "28000",
+    "areaName": "兵庫県",
+    "timeCode": "1975",
+    "timeName": "1975年度",
+    "unit": "世帯",
+    "value": 960393
+  },
+  {
+    "categoryCode": "A810102",
+    "categoryName": "核家族世帯数",
     "categoryUnit": "世帯",
     "areaCode": "28000",
     "areaName": "兵庫県",
     "timeCode": "1980",
     "timeName": "1980年度",
     "unit": "世帯",
-    "value": 1582793
+    "value": 1019976
   },
   {
-    "categoryCode": "A710101",
-    "categoryName": "一般世帯数",
+    "categoryCode": "A810102",
+    "categoryName": "核家族世帯数",
     "categoryUnit": "世帯",
     "areaCode": "28000",
     "areaName": "兵庫県",
     "timeCode": "1985",
     "timeName": "1985年度",
     "unit": "世帯",
-    "value": 1660915
+    "value": 1069301
   },
   {
-    "categoryCode": "A710101",
-    "categoryName": "一般世帯数",
+    "categoryCode": "A810102",
+    "categoryName": "核家族世帯数",
     "categoryUnit": "世帯",
     "areaCode": "28000",
     "areaName": "兵庫県",
     "timeCode": "1990",
     "timeName": "1990年度",
     "unit": "世帯",
-    "value": 1774925
+    "value": 1140812
   },
   {
-    "categoryCode": "A710101",
-    "categoryName": "一般世帯数",
+    "categoryCode": "A810102",
+    "categoryName": "核家族世帯数",
     "categoryUnit": "世帯",
     "areaCode": "28000",
     "areaName": "兵庫県",
     "timeCode": "1995",
     "timeName": "1995年度",
     "unit": "世帯",
-    "value": 1867031
+    "value": 1189321
   },
   {
-    "categoryCode": "A710101",
-    "categoryName": "一般世帯数",
+    "categoryCode": "A810102",
+    "categoryName": "核家族世帯数",
     "categoryUnit": "世帯",
     "areaCode": "28000",
     "areaName": "兵庫県",
     "timeCode": "2000",
     "timeName": "2000年度",
     "unit": "世帯",
-    "value": 2035097
+    "value": 1286413
   },
   {
-    "categoryCode": "A710101",
-    "categoryName": "一般世帯数",
+    "categoryCode": "A810102",
+    "categoryName": "核家族世帯数",
     "categoryUnit": "世帯",
     "areaCode": "28000",
     "areaName": "兵庫県",
     "timeCode": "2005",
     "timeName": "2005年度",
     "unit": "世帯",
-    "value": 2128963
+    "value": 1334679
   },
   {
-    "categoryCode": "A710101",
-    "categoryName": "一般世帯数",
+    "categoryCode": "A810102",
+    "categoryName": "核家族世帯数",
     "categoryUnit": "世帯",
     "areaCode": "28000",
     "areaName": "兵庫県",
     "timeCode": "2010",
     "timeName": "2010年度",
     "unit": "世帯",
-    "value": 2252522
+    "value": 1361978
   },
   {
-    "categoryCode": "A710101",
-    "categoryName": "一般世帯数",
+    "categoryCode": "A810102",
+    "categoryName": "核家族世帯数",
     "categoryUnit": "世帯",
     "areaCode": "28000",
     "areaName": "兵庫県",
     "timeCode": "2015",
     "timeName": "2015年度",
     "unit": "世帯",
-    "value": 2312284
+    "value": 1370236
   },
   {
-    "categoryCode": "A710101",
-    "categoryName": "一般世帯数",
+    "categoryCode": "A810102",
+    "categoryName": "核家族世帯数",
     "categoryUnit": "世帯",
     "areaCode": "28000",
     "areaName": "兵庫県",
     "timeCode": "2020",
     "timeName": "2020年度",
     "unit": "世帯",
-    "value": 2399358
+    "value": 1371842
   }
 ]

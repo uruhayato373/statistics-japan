@@ -2,17 +2,18 @@ import CardsDashboardSingle from 'cards/CardsDashboard'
 
 import { saveDocument } from 'app/actions/saveDocument'
 import { saveValues } from 'app/actions/saveValues'
-import handleDocument from 'utils/document'
+import handleDocument, { ValueType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
+import handleValues from 'utils/values'
 
-const CARD_TITLE = '一般世帯数'
-const CARD_ID = 'DashboardHousehold'
+const CARD_TITLE = '核家族世帯数'
+const CARD_ID = 'DashboardNumberOfNuclearFamilyHouseholds'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
-  cdCat01: 'A710101',
+  cdCat01: 'A810102',
 }
 
 interface Props {
@@ -24,14 +25,13 @@ interface Props {
 async function fetchValues(prefCode: string) {
   const values = await handleEstatAPI().fetchValues({
     ...ESTAT_PARAMS,
-    cdArea: prefCode,
   })
 
-  return values
+  return values.filter((f) => f.areaCode === prefCode)
 }
 
 // コンポーネントの描画
-export default async function DashboardGeneralHousehold({
+export default async function DashboardNumberOfNuclearFamilyHouseholds({
   routerProps,
   prefecture,
 }: Props) {
@@ -41,9 +41,12 @@ export default async function DashboardGeneralHousehold({
 
   const saveProps = { ...routerProps, cardId: CARD_ID }
 
-  const values = await fetchValues(prefCode)
+  let values: ValueType[]
   if (process.env.NODE_ENV === 'development') {
+    values = await fetchValues(prefCode)
     await saveValues(saveProps, values)
+  } else {
+    values = handleValues(saveProps).readValues()
   }
 
   const document = handleDocument().formatDocument(values)
