@@ -100,11 +100,6 @@
     "fieldId": "socialsecurity"
   },
   {
-    "menuId": "height-weight",
-    "menuTitle": "身長・体重",
-    "fieldId": "socialsecurity"
-  },
-  {
     "menuId": "foreigner",
     "menuTitle": "外国人",
     "fieldId": "international"
