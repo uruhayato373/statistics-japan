@@ -8,6 +8,7 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardLaborforce from 'sections/laborwage/laborforce/DashboardLaborforce'
 import TableLaborForcePopulation from 'sections/laborwage/laborforce/TableLaborForcePopulation'
+import TableNonLaborForcePopulation from 'sections/laborwage/laborforce/TableNonLaborForcePopulation'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -34,6 +35,12 @@ export default async function LaborforcePrefecture({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={6}>
               <TableLaborForcePopulation
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={6}>
+              <TableNonLaborForcePopulation
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
