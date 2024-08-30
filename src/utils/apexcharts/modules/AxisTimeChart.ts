@@ -6,6 +6,7 @@ const formatAxisTimeChart = (
   document: DocumentType,
   group: 'category' | 'area' = 'category'
 ): ApexOptions => {
+  // console.log(document)
   if (group === 'category') {
     const { categories, times, values } = document
     return {

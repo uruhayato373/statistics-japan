@@ -5,6 +5,7 @@ import formatPieChart from './modules/PieChart'
 import formatApexchartsPyramid from './modules/PyramidChart'
 
 const formatApexcharts = (document: DocumentType) => {
+  // console.log(document.categories)
   return {
     AxisTimeChart: (group: 'category' | 'area' = 'category') =>
       formatAxisTimeChart(document, group),

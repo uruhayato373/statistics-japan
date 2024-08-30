@@ -17,6 +17,7 @@ export interface CategoryType {
   categoryCode: string
   categoryName: string
   categoryUnit?: string
+  type?: string
 }
 
 /**

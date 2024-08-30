@@ -10,6 +10,7 @@ import DashboardGeneralHousehold from 'sections/population/household/DashboardGe
 import DashboardNumberOfNuclearFamilyHouseholds from 'sections/population/household/DashboardNumberOfNuclearFamilyHouseholds'
 import DashboardNumberOfSingleHouseholds from 'sections/population/household/DashboardNumberOfSingleHouseholds'
 import LineChartHousehold from 'sections/population/household/LineChartHousehold'
+import MixedChartGeneralHousehold from 'sections/population/household/MixedChartGeneralHousehold'
 import TableHousehold from 'sections/population/household/TableHousehold'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -47,8 +48,14 @@ export default async function Prefecture({ routerProps }: Props) {
                 prefecture={currentPrefecture}
               />
             </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={8}>
+            <Grid item xs={12} sm={6} md={4} lg={6}>
               <LineChartHousehold
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={6}>
+              <MixedChartGeneralHousehold
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
