@@ -7,7 +7,7 @@ export interface SaveProps extends RouterProps {
 }
 
 export function generateSaveValuesFilePath(saveProps: SaveProps) {
-  const { fieldId, menuId, kindId, pageId, prefCode, cardId } = saveProps
+  const { fieldId, menuId, kindId, pageId, cardId } = saveProps
   const filePath = path.join(
     process.cwd(),
     'src',
@@ -20,12 +20,7 @@ export function generateSaveValuesFilePath(saveProps: SaveProps) {
     case 'japan':
       return path.join(filePath, 'japan', `${cardId}`, 'values.json')
     case 'prefecture':
-      return path.join(
-        filePath,
-        'prefecture',
-        `${cardId}`,
-        `${prefCode}_values.json`
-      )
+      return path.join(filePath, 'prefecture', `${cardId}`, `values.json`)
     case 'prefecture-rank':
       return path.join(
         filePath,
