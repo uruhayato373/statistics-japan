@@ -177,6 +177,13 @@ const widget: MenuGroup = {
           url: '/economy/gross-production',
           breadcrumbs: false,
         },
+        {
+          id: 'consumer-price-index',
+          title: '消費者物価指数',
+          type: 'item',
+          url: '/economy/consumer-price-index',
+          breadcrumbs: false,
+        },
       ],
     },
     {

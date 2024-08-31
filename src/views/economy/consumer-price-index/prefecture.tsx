@@ -6,10 +6,11 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardGrossPrefecturalProduct from 'sections/economy/gross-production/DashboardGrossPrefecturalProduct'
-import PieGrossPrefecturalProduct from 'sections/economy/gross-production/PieGrossPrefecturalProduct'
-import TableGrossPrefecturalProduct from 'sections/economy/gross-production/TableGrossPrefecturalProduct'
-import TablePrefecturalIncome from 'sections/economy/gross-production/TablePrefecturalIncome'
+import DashboardConsumerPriceIndex from 'sections/economy/consumer-price-index/DashboardConsumerPriceIndex'
+import DashboardConsumerPriceIndexChangeRate from 'sections/economy/consumer-price-index/DashboardConsumerPriceIndexChangeRate'
+import DashboardConsumerPriceRegionalDifferenceIndex from 'sections/economy/consumer-price-index/DashboardConsumerPriceRegionalDifferenceIndex'
+import DashboardNationalPriceRegionalDifferenceIndex from 'sections/economy/consumer-price-index/DashboardNationalPriceRegionalDifferenceIndex'
+import TableConsumerPriceIndex from 'sections/economy/consumer-price-index/TableConsumerPriceIndex'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -29,25 +30,31 @@ export default async function PrefectureView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardGrossPrefecturalProduct
+              <DashboardConsumerPriceIndex
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={5}>
-              <PieGrossPrefecturalProduct
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardConsumerPriceIndexChangeRate
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>{' '}
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardConsumerPriceRegionalDifferenceIndex
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardNationalPriceRegionalDifferenceIndex
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
-              <TableGrossPrefecturalProduct
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={5} lg={7}>
-              <TablePrefecturalIncome
+              <TableConsumerPriceIndex
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

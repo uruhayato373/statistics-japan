@@ -5,6 +5,26 @@
     "menuId": "gross-production"
   },
   {
+    "pageId": "consumer-price-index",
+    "pageTitle": "消費者物価指数",
+    "menuId": "consumer-price-index"
+  },
+  {
+    "pageId": "consumer-price-index-change-rate",
+    "pageTitle": "消費者物価指数変化率",
+    "menuId": "consumer-price-index"
+  },
+  {
+    "pageId": "consumer-price-regional-difference-index",
+    "pageTitle": "消費者物価地域差指数",
+    "menuId": "consumer-price-index"
+  },
+  {
+    "pageId": "national-price-regional-difference-index",
+    "pageTitle": "全国物価地域差指数",
+    "menuId": "consumer-price-index"
+  },
+  {
     "pageId": "office",
     "pageTitle": "事業所数",
     "menuId": "office-employee"

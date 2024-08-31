@@ -1,0 +1,124 @@
+{
+  "values": [
+    {
+      "categoryCode": "C5201",
+      "categoryName": "全国物価地域差指数・総合",
+      "categoryUnit": "‐",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "‐",
+      "value": 93.6
+    },
+    {
+      "categoryCode": "C5201",
+      "categoryName": "全国物価地域差指数・総合",
+      "categoryUnit": "‐",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "‐",
+      "value": 91.3
+    },
+    {
+      "categoryCode": "C5201",
+      "categoryName": "全国物価地域差指数・総合",
+      "categoryUnit": "‐",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "‐",
+      "value": 101.6
+    },
+    {
+      "categoryCode": "C5201",
+      "categoryName": "全国物価地域差指数・総合",
+      "categoryUnit": "‐",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "‐",
+      "value": 101.3
+    },
+    {
+      "categoryCode": "C5201",
+      "categoryName": "全国物価地域差指数・総合",
+      "categoryUnit": "‐",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "‐",
+      "value": 101.9
+    },
+    {
+      "categoryCode": "C5201",
+      "categoryName": "全国物価地域差指数・総合",
+      "categoryUnit": "‐",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "‐",
+      "value": 100.4
+    },
+    {
+      "categoryCode": "C5201",
+      "categoryName": "全国物価地域差指数・総合",
+      "categoryUnit": "‐",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "‐",
+      "value": 100.1
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "C5201",
+      "categoryName": "全国物価地域差指数・総合",
+      "categoryUnit": "‐"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "28000",
+      "areaName": "兵庫県"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1977",
+      "timeName": "1977年度"
+    },
+    {
+      "timeCode": "1982",
+      "timeName": "1982年度"
+    },
+    {
+      "timeCode": "1987",
+      "timeName": "1987年度"
+    },
+    {
+      "timeCode": "1992",
+      "timeName": "1992年度"
+    },
+    {
+      "timeCode": "1997",
+      "timeName": "1997年度"
+    },
+    {
+      "timeCode": "2002",
+      "timeName": "2002年度"
+    },
+    {
+      "timeCode": "2007",
+      "timeName": "2007年度"
+    }
+  ]
+}

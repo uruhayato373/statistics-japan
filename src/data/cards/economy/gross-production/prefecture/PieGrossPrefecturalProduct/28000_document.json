@@ -1,0 +1,2026 @@
+{
+  "values": [
+    {
+      "categoryCode": "C112201",
+      "categoryName": "県内総生産額（農林水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 93698
+    },
+    {
+      "categoryCode": "C112201",
+      "categoryName": "県内総生産額（農林水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 102778
+    },
+    {
+      "categoryCode": "C112201",
+      "categoryName": "県内総生産額（農林水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 90828
+    },
+    {
+      "categoryCode": "C112201",
+      "categoryName": "県内総生産額（農林水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 88844
+    },
+    {
+      "categoryCode": "C112201",
+      "categoryName": "県内総生産額（農林水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 101199
+    },
+    {
+      "categoryCode": "C112201",
+      "categoryName": "県内総生産額（農林水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 112546
+    },
+    {
+      "categoryCode": "C112201",
+      "categoryName": "県内総生産額（農林水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 109359
+    },
+    {
+      "categoryCode": "C112201",
+      "categoryName": "県内総生産額（農林水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 100602
+    },
+    {
+      "categoryCode": "C112201",
+      "categoryName": "県内総生産額（農林水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 96628
+    },
+    {
+      "categoryCode": "C112202",
+      "categoryName": "県内総生産額（農業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 70767
+    },
+    {
+      "categoryCode": "C112202",
+      "categoryName": "県内総生産額（農業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 74430
+    },
+    {
+      "categoryCode": "C112202",
+      "categoryName": "県内総生産額（農業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 68118
+    },
+    {
+      "categoryCode": "C112202",
+      "categoryName": "県内総生産額（農業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 64086
+    },
+    {
+      "categoryCode": "C112202",
+      "categoryName": "県内総生産額（農業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 72361
+    },
+    {
+      "categoryCode": "C112202",
+      "categoryName": "県内総生産額（農業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 80165
+    },
+    {
+      "categoryCode": "C112202",
+      "categoryName": "県内総生産額（農業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 77699
+    },
+    {
+      "categoryCode": "C112202",
+      "categoryName": "県内総生産額（農業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 68809
+    },
+    {
+      "categoryCode": "C112202",
+      "categoryName": "県内総生産額（農業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 66856
+    },
+    {
+      "categoryCode": "C112203",
+      "categoryName": "県内総生産額（林業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 5454
+    },
+    {
+      "categoryCode": "C112203",
+      "categoryName": "県内総生産額（林業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 5145
+    },
+    {
+      "categoryCode": "C112203",
+      "categoryName": "県内総生産額（林業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 5274
+    },
+    {
+      "categoryCode": "C112203",
+      "categoryName": "県内総生産額（林業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 5383
+    },
+    {
+      "categoryCode": "C112203",
+      "categoryName": "県内総生産額（林業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 5513
+    },
+    {
+      "categoryCode": "C112203",
+      "categoryName": "県内総生産額（林業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 5514
+    },
+    {
+      "categoryCode": "C112203",
+      "categoryName": "県内総生産額（林業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 5519
+    },
+    {
+      "categoryCode": "C112203",
+      "categoryName": "県内総生産額（林業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 5458
+    },
+    {
+      "categoryCode": "C112203",
+      "categoryName": "県内総生産額（林業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 5345
+    },
+    {
+      "categoryCode": "C112204",
+      "categoryName": "県内総生産額（水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 17477
+    },
+    {
+      "categoryCode": "C112204",
+      "categoryName": "県内総生産額（水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 23203
+    },
+    {
+      "categoryCode": "C112204",
+      "categoryName": "県内総生産額（水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 17436
+    },
+    {
+      "categoryCode": "C112204",
+      "categoryName": "県内総生産額（水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 19375
+    },
+    {
+      "categoryCode": "C112204",
+      "categoryName": "県内総生産額（水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 23325
+    },
+    {
+      "categoryCode": "C112204",
+      "categoryName": "県内総生産額（水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 26867
+    },
+    {
+      "categoryCode": "C112204",
+      "categoryName": "県内総生産額（水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 26141
+    },
+    {
+      "categoryCode": "C112204",
+      "categoryName": "県内総生産額（水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 26335
+    },
+    {
+      "categoryCode": "C112204",
+      "categoryName": "県内総生産額（水産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 24427
+    },
+    {
+      "categoryCode": "C112205",
+      "categoryName": "県内総生産額（鉱業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 5931
+    },
+    {
+      "categoryCode": "C112205",
+      "categoryName": "県内総生産額（鉱業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 5858
+    },
+    {
+      "categoryCode": "C112205",
+      "categoryName": "県内総生産額（鉱業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 7050
+    },
+    {
+      "categoryCode": "C112205",
+      "categoryName": "県内総生産額（鉱業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 8072
+    },
+    {
+      "categoryCode": "C112205",
+      "categoryName": "県内総生産額（鉱業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 7516
+    },
+    {
+      "categoryCode": "C112205",
+      "categoryName": "県内総生産額（鉱業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 5912
+    },
+    {
+      "categoryCode": "C112205",
+      "categoryName": "県内総生産額（鉱業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 5316
+    },
+    {
+      "categoryCode": "C112205",
+      "categoryName": "県内総生産額（鉱業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 5299
+    },
+    {
+      "categoryCode": "C112205",
+      "categoryName": "県内総生産額（鉱業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 5334
+    },
+    {
+      "categoryCode": "C112206",
+      "categoryName": "県内総生産額（製造業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 5215147
+    },
+    {
+      "categoryCode": "C112206",
+      "categoryName": "県内総生産額（製造業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 4911505
+    },
+    {
+      "categoryCode": "C112206",
+      "categoryName": "県内総生産額（製造業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 5172593
+    },
+    {
+      "categoryCode": "C112206",
+      "categoryName": "県内総生産額（製造業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 5385196
+    },
+    {
+      "categoryCode": "C112206",
+      "categoryName": "県内総生産額（製造業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 5750931
+    },
+    {
+      "categoryCode": "C112206",
+      "categoryName": "県内総生産額（製造業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 5763515
+    },
+    {
+      "categoryCode": "C112206",
+      "categoryName": "県内総生産額（製造業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 5886018
+    },
+    {
+      "categoryCode": "C112206",
+      "categoryName": "県内総生産額（製造業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 5930596
+    },
+    {
+      "categoryCode": "C112206",
+      "categoryName": "県内総生産額（製造業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 5923865
+    },
+    {
+      "categoryCode": "C112207",
+      "categoryName": "県内総生産額（建設業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 688792
+    },
+    {
+      "categoryCode": "C112207",
+      "categoryName": "県内総生産額（建設業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 727769
+    },
+    {
+      "categoryCode": "C112207",
+      "categoryName": "県内総生産額（建設業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 819748
+    },
+    {
+      "categoryCode": "C112207",
+      "categoryName": "県内総生産額（建設業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 847701
+    },
+    {
+      "categoryCode": "C112207",
+      "categoryName": "県内総生産額（建設業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 859273
+    },
+    {
+      "categoryCode": "C112207",
+      "categoryName": "県内総生産額（建設業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 952173
+    },
+    {
+      "categoryCode": "C112207",
+      "categoryName": "県内総生産額（建設業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 904723
+    },
+    {
+      "categoryCode": "C112207",
+      "categoryName": "県内総生産額（建設業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 899246
+    },
+    {
+      "categoryCode": "C112207",
+      "categoryName": "県内総生産額（建設業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 891622
+    },
+    {
+      "categoryCode": "C112208",
+      "categoryName": "県内総生産額（電気・ガス・水道・廃棄物処理業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 612552
+    },
+    {
+      "categoryCode": "C112208",
+      "categoryName": "県内総生産額（電気・ガス・水道・廃棄物処理業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 585492
+    },
+    {
+      "categoryCode": "C112208",
+      "categoryName": "県内総生産額（電気・ガス・水道・廃棄物処理業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 690670
+    },
+    {
+      "categoryCode": "C112208",
+      "categoryName": "県内総生産額（電気・ガス・水道・廃棄物処理業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 716834
+    },
+    {
+      "categoryCode": "C112208",
+      "categoryName": "県内総生産額（電気・ガス・水道・廃棄物処理業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 919824
+    },
+    {
+      "categoryCode": "C112208",
+      "categoryName": "県内総生産額（電気・ガス・水道・廃棄物処理業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 952817
+    },
+    {
+      "categoryCode": "C112208",
+      "categoryName": "県内総生産額（電気・ガス・水道・廃棄物処理業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 960130
+    },
+    {
+      "categoryCode": "C112208",
+      "categoryName": "県内総生産額（電気・ガス・水道・廃棄物処理業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 936641
+    },
+    {
+      "categoryCode": "C112208",
+      "categoryName": "県内総生産額（電気・ガス・水道・廃棄物処理業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 925465
+    },
+    {
+      "categoryCode": "C112209",
+      "categoryName": "県内総生産額（卸売・小売業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 2042465
+    },
+    {
+      "categoryCode": "C112209",
+      "categoryName": "県内総生産額（卸売・小売業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 2131204
+    },
+    {
+      "categoryCode": "C112209",
+      "categoryName": "県内総生産額（卸売・小売業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 2254879
+    },
+    {
+      "categoryCode": "C112209",
+      "categoryName": "県内総生産額（卸売・小売業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 2227917
+    },
+    {
+      "categoryCode": "C112209",
+      "categoryName": "県内総生産額（卸売・小売業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 2243425
+    },
+    {
+      "categoryCode": "C112209",
+      "categoryName": "県内総生産額（卸売・小売業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 2224308
+    },
+    {
+      "categoryCode": "C112209",
+      "categoryName": "県内総生産額（卸売・小売業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 2298575
+    },
+    {
+      "categoryCode": "C112209",
+      "categoryName": "県内総生産額（卸売・小売業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 2283225
+    },
+    {
+      "categoryCode": "C112209",
+      "categoryName": "県内総生産額（卸売・小売業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 2221228
+    },
+    {
+      "categoryCode": "C112210",
+      "categoryName": "県内総生産額（金融・保険業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 687097
+    },
+    {
+      "categoryCode": "C112210",
+      "categoryName": "県内総生産額（金融・保険業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 687302
+    },
+    {
+      "categoryCode": "C112210",
+      "categoryName": "県内総生産額（金融・保険業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 710774
+    },
+    {
+      "categoryCode": "C112210",
+      "categoryName": "県内総生産額（金融・保険業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 691390
+    },
+    {
+      "categoryCode": "C112210",
+      "categoryName": "県内総生産額（金融・保険業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 697401
+    },
+    {
+      "categoryCode": "C112210",
+      "categoryName": "県内総生産額（金融・保険業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 661748
+    },
+    {
+      "categoryCode": "C112210",
+      "categoryName": "県内総生産額（金融・保険業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 660413
+    },
+    {
+      "categoryCode": "C112210",
+      "categoryName": "県内総生産額（金融・保険業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 655056
+    },
+    {
+      "categoryCode": "C112210",
+      "categoryName": "県内総生産額（金融・保険業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 711234
+    },
+    {
+      "categoryCode": "C112211",
+      "categoryName": "県内総生産額（不動産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 2819225
+    },
+    {
+      "categoryCode": "C112211",
+      "categoryName": "県内総生産額（不動産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 2835923
+    },
+    {
+      "categoryCode": "C112211",
+      "categoryName": "県内総生産額（不動産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 2822999
+    },
+    {
+      "categoryCode": "C112211",
+      "categoryName": "県内総生産額（不動産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 2818891
+    },
+    {
+      "categoryCode": "C112211",
+      "categoryName": "県内総生産額（不動産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 2839364
+    },
+    {
+      "categoryCode": "C112211",
+      "categoryName": "県内総生産額（不動産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 2831824
+    },
+    {
+      "categoryCode": "C112211",
+      "categoryName": "県内総生産額（不動産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 2832568
+    },
+    {
+      "categoryCode": "C112211",
+      "categoryName": "県内総生産額（不動産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 2858057
+    },
+    {
+      "categoryCode": "C112211",
+      "categoryName": "県内総生産額（不動産業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 2895254
+    },
+    {
+      "categoryCode": "C1122121",
+      "categoryName": "県内総生産額（運輸・郵便業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 1088154
+    },
+    {
+      "categoryCode": "C1122121",
+      "categoryName": "県内総生産額（運輸・郵便業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 1165259
+    },
+    {
+      "categoryCode": "C1122121",
+      "categoryName": "県内総生産額（運輸・郵便業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 1076893
+    },
+    {
+      "categoryCode": "C1122121",
+      "categoryName": "県内総生産額（運輸・郵便業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 1246221
+    },
+    {
+      "categoryCode": "C1122121",
+      "categoryName": "県内総生産額（運輸・郵便業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 1273553
+    },
+    {
+      "categoryCode": "C1122121",
+      "categoryName": "県内総生産額（運輸・郵便業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 1197977
+    },
+    {
+      "categoryCode": "C1122121",
+      "categoryName": "県内総生産額（運輸・郵便業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 1232725
+    },
+    {
+      "categoryCode": "C1122121",
+      "categoryName": "県内総生産額（運輸・郵便業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 1187685
+    },
+    {
+      "categoryCode": "C1122121",
+      "categoryName": "県内総生産額（運輸・郵便業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 1176554
+    },
+    {
+      "categoryCode": "C1122122",
+      "categoryName": "県内総生産額（情報通信業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 592924
+    },
+    {
+      "categoryCode": "C1122122",
+      "categoryName": "県内総生産額（情報通信業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 576603
+    },
+    {
+      "categoryCode": "C1122122",
+      "categoryName": "県内総生産額（情報通信業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 583586
+    },
+    {
+      "categoryCode": "C1122122",
+      "categoryName": "県内総生産額（情報通信業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 548986
+    },
+    {
+      "categoryCode": "C1122122",
+      "categoryName": "県内総生産額（情報通信業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 562074
+    },
+    {
+      "categoryCode": "C1122122",
+      "categoryName": "県内総生産額（情報通信業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 558255
+    },
+    {
+      "categoryCode": "C1122122",
+      "categoryName": "県内総生産額（情報通信業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 537924
+    },
+    {
+      "categoryCode": "C1122122",
+      "categoryName": "県内総生産額（情報通信業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 544536
+    },
+    {
+      "categoryCode": "C1122122",
+      "categoryName": "県内総生産額（情報通信業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 533068
+    },
+    {
+      "categoryCode": "C112213",
+      "categoryName": "県内総生産額（宿泊・飲食サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 540598
+    },
+    {
+      "categoryCode": "C112213",
+      "categoryName": "県内総生産額（宿泊・飲食サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 539298
+    },
+    {
+      "categoryCode": "C112213",
+      "categoryName": "県内総生産額（宿泊・飲食サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 555253
+    },
+    {
+      "categoryCode": "C112213",
+      "categoryName": "県内総生産額（宿泊・飲食サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 516644
+    },
+    {
+      "categoryCode": "C112213",
+      "categoryName": "県内総生産額（宿泊・飲食サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 527130
+    },
+    {
+      "categoryCode": "C112213",
+      "categoryName": "県内総生産額（宿泊・飲食サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 576965
+    },
+    {
+      "categoryCode": "C112213",
+      "categoryName": "県内総生産額（宿泊・飲食サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 616092
+    },
+    {
+      "categoryCode": "C112213",
+      "categoryName": "県内総生産額（宿泊・飲食サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 612679
+    },
+    {
+      "categoryCode": "C112213",
+      "categoryName": "県内総生産額（宿泊・飲食サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 574235
+    },
+    {
+      "categoryCode": "C112214",
+      "categoryName": "県内総生産額（専門・科学技術、業務支援サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 1186701
+    },
+    {
+      "categoryCode": "C112214",
+      "categoryName": "県内総生産額（専門・科学技術、業務支援サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 1217032
+    },
+    {
+      "categoryCode": "C112214",
+      "categoryName": "県内総生産額（専門・科学技術、業務支援サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 1263304
+    },
+    {
+      "categoryCode": "C112214",
+      "categoryName": "県内総生産額（専門・科学技術、業務支援サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 1166910
+    },
+    {
+      "categoryCode": "C112214",
+      "categoryName": "県内総生産額（専門・科学技術、業務支援サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 1308836
+    },
+    {
+      "categoryCode": "C112214",
+      "categoryName": "県内総生産額（専門・科学技術、業務支援サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 1383168
+    },
+    {
+      "categoryCode": "C112214",
+      "categoryName": "県内総生産額（専門・科学技術、業務支援サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 1462041
+    },
+    {
+      "categoryCode": "C112214",
+      "categoryName": "県内総生産額（専門・科学技術、業務支援サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 1503045
+    },
+    {
+      "categoryCode": "C112214",
+      "categoryName": "県内総生産額（専門・科学技術、業務支援サービス業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 1516003
+    },
+    {
+      "categoryCode": "C112215",
+      "categoryName": "県内総生産額（公務）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 684418
+    },
+    {
+      "categoryCode": "C112215",
+      "categoryName": "県内総生産額（公務）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 655931
+    },
+    {
+      "categoryCode": "C112215",
+      "categoryName": "県内総生産額（公務）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 627664
+    },
+    {
+      "categoryCode": "C112215",
+      "categoryName": "県内総生産額（公務）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 643870
+    },
+    {
+      "categoryCode": "C112215",
+      "categoryName": "県内総生産額（公務）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 653677
+    },
+    {
+      "categoryCode": "C112215",
+      "categoryName": "県内総生産額（公務）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 665642
+    },
+    {
+      "categoryCode": "C112215",
+      "categoryName": "県内総生産額（公務）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 658961
+    },
+    {
+      "categoryCode": "C112215",
+      "categoryName": "県内総生産額（公務）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 659445
+    },
+    {
+      "categoryCode": "C112215",
+      "categoryName": "県内総生産額（公務）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 672595
+    },
+    {
+      "categoryCode": "C112216",
+      "categoryName": "県内総生産額（教育）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 886117
+    },
+    {
+      "categoryCode": "C112216",
+      "categoryName": "県内総生産額（教育）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 862289
+    },
+    {
+      "categoryCode": "C112216",
+      "categoryName": "県内総生産額（教育）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 847325
+    },
+    {
+      "categoryCode": "C112216",
+      "categoryName": "県内総生産額（教育）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 825257
+    },
+    {
+      "categoryCode": "C112216",
+      "categoryName": "県内総生産額（教育）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 849740
+    },
+    {
+      "categoryCode": "C112216",
+      "categoryName": "県内総生産額（教育）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 882422
+    },
+    {
+      "categoryCode": "C112216",
+      "categoryName": "県内総生産額（教育）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 929603
+    },
+    {
+      "categoryCode": "C112216",
+      "categoryName": "県内総生産額（教育）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 921720
+    },
+    {
+      "categoryCode": "C112216",
+      "categoryName": "県内総生産額（教育）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 934246
+    },
+    {
+      "categoryCode": "C112217",
+      "categoryName": "県内総生産額（保健衛生・社会事業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 1706128
+    },
+    {
+      "categoryCode": "C112217",
+      "categoryName": "県内総生産額（保健衛生・社会事業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 1700502
+    },
+    {
+      "categoryCode": "C112217",
+      "categoryName": "県内総生産額（保健衛生・社会事業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 1759627
+    },
+    {
+      "categoryCode": "C112217",
+      "categoryName": "県内総生産額（保健衛生・社会事業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 1766124
+    },
+    {
+      "categoryCode": "C112217",
+      "categoryName": "県内総生産額（保健衛生・社会事業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 1884731
+    },
+    {
+      "categoryCode": "C112217",
+      "categoryName": "県内総生産額（保健衛生・社会事業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 1941830
+    },
+    {
+      "categoryCode": "C112217",
+      "categoryName": "県内総生産額（保健衛生・社会事業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 1943382
+    },
+    {
+      "categoryCode": "C112217",
+      "categoryName": "県内総生産額（保健衛生・社会事業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 1971638
+    },
+    {
+      "categoryCode": "C112217",
+      "categoryName": "県内総生産額（保健衛生・社会事業）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 2077997
+    },
+    {
+      "categoryCode": "C112218",
+      "categoryName": "県内総生産額（その他のサービス）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "ha",
+      "value": 926943
+    },
+    {
+      "categoryCode": "C112218",
+      "categoryName": "県内総生産額（その他のサービス）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "ha",
+      "value": 968810
+    },
+    {
+      "categoryCode": "C112218",
+      "categoryName": "県内総生産額（その他のサービス）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "ha",
+      "value": 952426
+    },
+    {
+      "categoryCode": "C112218",
+      "categoryName": "県内総生産額（その他のサービス）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "ha",
+      "value": 886290
+    },
+    {
+      "categoryCode": "C112218",
+      "categoryName": "県内総生産額（その他のサービス）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ha",
+      "value": 921135
+    },
+    {
+      "categoryCode": "C112218",
+      "categoryName": "県内総生産額（その他のサービス）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "ha",
+      "value": 906372
+    },
+    {
+      "categoryCode": "C112218",
+      "categoryName": "県内総生産額（その他のサービス）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "ha",
+      "value": 933150
+    },
+    {
+      "categoryCode": "C112218",
+      "categoryName": "県内総生産額（その他のサービス）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "ha",
+      "value": 928321
+    },
+    {
+      "categoryCode": "C112218",
+      "categoryName": "県内総生産額（その他のサービス）（平成27年基準）",
+      "categoryUnit": "百万円",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "ha",
+      "value": 905007
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "C112201",
+      "categoryName": "県内総生産額（農林水産業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112202",
+      "categoryName": "県内総生産額（農業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112203",
+      "categoryName": "県内総生産額（林業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112204",
+      "categoryName": "県内総生産額（水産業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112205",
+      "categoryName": "県内総生産額（鉱業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112206",
+      "categoryName": "県内総生産額（製造業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112207",
+      "categoryName": "県内総生産額（建設業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112208",
+      "categoryName": "県内総生産額（電気・ガス・水道・廃棄物処理業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112209",
+      "categoryName": "県内総生産額（卸売・小売業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112210",
+      "categoryName": "県内総生産額（金融・保険業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112211",
+      "categoryName": "県内総生産額（不動産業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C1122121",
+      "categoryName": "県内総生産額（運輸・郵便業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C1122122",
+      "categoryName": "県内総生産額（情報通信業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112213",
+      "categoryName": "県内総生産額（宿泊・飲食サービス業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112214",
+      "categoryName": "県内総生産額（専門・科学技術、業務支援サービス業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112215",
+      "categoryName": "県内総生産額（公務）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112216",
+      "categoryName": "県内総生産額（教育）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112217",
+      "categoryName": "県内総生産額（保健衛生・社会事業）（平成27年基準）",
+      "categoryUnit": "ha"
+    },
+    {
+      "categoryCode": "C112218",
+      "categoryName": "県内総生産額（その他のサービス）（平成27年基準）",
+      "categoryUnit": "ha"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "28000",
+      "areaName": "兵庫県"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "2011",
+      "timeName": "2011年度"
+    },
+    {
+      "timeCode": "2012",
+      "timeName": "2012年度"
+    },
+    {
+      "timeCode": "2013",
+      "timeName": "2013年度"
+    },
+    {
+      "timeCode": "2014",
+      "timeName": "2014年度"
+    },
+    {
+      "timeCode": "2015",
+      "timeName": "2015年度"
+    },
+    {
+      "timeCode": "2016",
+      "timeName": "2016年度"
+    },
+    {
+      "timeCode": "2017",
+      "timeName": "2017年度"
+    },
+    {
+      "timeCode": "2018",
+      "timeName": "2018年度"
+    },
+    {
+      "timeCode": "2019",
+      "timeName": "2019年度"
+    }
+  ]
+}
