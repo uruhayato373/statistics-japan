@@ -8,6 +8,7 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardGrossPrefecturalProduct from 'sections/economy/gross-production/DashboardGrossPrefecturalProduct'
 import TableGrossPrefecturalProduct from 'sections/economy/gross-production/TableGrossPrefecturalProduct'
+import TablePrefecturalIncome from 'sections/economy/gross-production/TablePrefecturalIncome'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -34,6 +35,12 @@ export default async function PrefectureView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
               <TableGrossPrefecturalProduct
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>{' '}
+            <Grid item xs={12} md={5} lg={7}>
+              <TablePrefecturalIncome
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
