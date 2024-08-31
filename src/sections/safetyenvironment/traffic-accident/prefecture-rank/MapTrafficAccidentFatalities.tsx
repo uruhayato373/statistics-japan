@@ -12,12 +12,12 @@ import handleGeoshape from 'utils/geoshape'
 import { RouterProps } from 'utils/props'
 import handleValues from 'utils/values'
 
-const CARD_TITLE = '交通事故件数'
-const CARD_ID = 'MapNumberOfTrafficAccidents'
+const CARD_TITLE = '交通事故死者数'
+const CARD_ID = 'MapTrafficAccidentFatalities'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010111',
-  cdCat01: 'K3101',
+  cdCat01: 'K3103',
 }
 
 interface Props {
@@ -54,7 +54,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function MapNumberOfTrafficAccidents({
+export default async function MapTrafficAccidentFatalities({
   routerProps,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`

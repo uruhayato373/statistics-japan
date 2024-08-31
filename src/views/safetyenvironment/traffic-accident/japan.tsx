@@ -6,7 +6,10 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import DashboardNumberOfTrafficAccidentCasualties from 'sections/safetyenvironment/traffic-accident/DashboardNumberOfTrafficAccidentCasualties'
+import DashboardNumberOfTrafficAccidentInjuries from 'sections/safetyenvironment/traffic-accident/DashboardNumberOfTrafficAccidentInjuries'
 import DashboardNumberOfTrafficAccidents from 'sections/safetyenvironment/traffic-accident/DashboardNumberOfTrafficAccidents'
+import DashboardTrafficAccidentFatalities from 'sections/safetyenvironment/traffic-accident/DashboardTrafficAccidentFatalities'
 import TableTrafficAccident from 'sections/safetyenvironment/traffic-accident/TableTrafficAccident'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -32,6 +35,24 @@ export default async function JapanView({ routerProps }: Props) {
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfTrafficAccidents
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardNumberOfTrafficAccidentCasualties
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardNumberOfTrafficAccidentInjuries
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardTrafficAccidentFatalities
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

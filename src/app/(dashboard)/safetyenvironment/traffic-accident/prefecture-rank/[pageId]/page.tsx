@@ -22,6 +22,24 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
         'views/safetyenvironment/traffic-accident/prefecture-rank/NumberOfTrafficAccidents'
       )
   ),
+  'number-of-traffic-accident-casualties': dynamic(
+    () =>
+      import(
+        'views/safetyenvironment/traffic-accident/prefecture-rank/NumberOfTrafficAccidentCasualties'
+      )
+  ),
+  'traffic-accident-fatalities': dynamic(
+    () =>
+      import(
+        'views/safetyenvironment/traffic-accident/prefecture-rank/TrafficAccidentFatalities'
+      )
+  ),
+  'number-of-traffic-accident-injuries': dynamic(
+    () =>
+      import(
+        'views/safetyenvironment/traffic-accident/prefecture-rank/NumberOfTrafficAccidentInjuries'
+      )
+  ),
 }
 
 export async function generateStaticParams() {

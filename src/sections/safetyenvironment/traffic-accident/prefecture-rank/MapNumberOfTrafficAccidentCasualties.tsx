@@ -13,11 +13,11 @@ import { RouterProps } from 'utils/props'
 import handleValues from 'utils/values'
 
 const CARD_TITLE = '交通事故件数'
-const CARD_ID = 'MapNumberOfTrafficAccidents'
+const CARD_ID = 'MapNumberOfTrafficAccidentCasualties'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010111',
-  cdCat01: 'K3101',
+  cdCat01: 'K3102',
 }
 
 interface Props {
@@ -54,7 +54,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function MapNumberOfTrafficAccidents({
+export default async function MapNumberOfTrafficAccidentCasualties({
   routerProps,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`

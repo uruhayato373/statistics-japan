@@ -1,31 +1,28 @@
-import { Suspense } from 'react'
-
-import CircularProgressCards from 'components/CircularProgressCards'
-
-import CardsHighchartsMapChart from 'cards/CardsHighchartsMapChart'
+import CardsDashboardSingle from 'cards/CardsDashboard'
 
 import { saveDocument, SaveProps } from 'app/actions/saveDocument'
 import { saveValues } from 'app/actions/saveValues'
 import handleDocument, { ValueType, DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import handleGeoshape from 'utils/geoshape'
+import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 import handleValues from 'utils/values'
 
-const CARD_TITLE = '交通事故件数'
-const CARD_ID = 'MapNumberOfTrafficAccidents'
+const CARD_TITLE = '交通事故死傷者数'
+const CARD_ID = 'DashboardNumberOfTrafficAccidentCasualties'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010111',
-  cdCat01: 'K3101',
+  cdCat01: 'K3102',
 }
 
 interface Props {
   routerProps: RouterProps
+  prefecture: PrefectureType
 }
 
 // values
-async function processValues(saveProps: SaveProps) {
+async function processValues(saveProps: SaveProps, prefCode: string) {
   if (process.env.NODE_ENV === 'development') {
     const { fetchValues } = handleEstatAPI()
     const values = await fetchValues(ESTAT_PARAMS)
@@ -35,7 +32,7 @@ async function processValues(saveProps: SaveProps) {
   const { readValues } = handleValues(saveProps)
   const values = readValues()
 
-  return values
+  return values.filter((f) => f.areaCode === prefCode)
 }
 
 // document
@@ -54,22 +51,15 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function MapNumberOfTrafficAccidents({
+export default async function DashboardNumberOfTrafficAccidentCasualties({
   routerProps,
+  prefecture,
 }: Props) {
-  const title = `都道府県の${CARD_TITLE}`
+  const { prefCode, prefName } = prefecture
+  const title = `${prefName}の${CARD_TITLE}`
   const saveProps = { ...routerProps, cardId: CARD_ID }
-  const topojson = await handleGeoshape('prefecture').readJson()
-  const values = await processValues(saveProps)
+  const values = await processValues(saveProps, prefCode)
   const document = await processDocument(saveProps, values)
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsHighchartsMapChart
-        title={title}
-        document={document}
-        topojson={topojson}
-      />
-    </Suspense>
-  )
+  return <CardsDashboardSingle title={title} document={document} />
 }

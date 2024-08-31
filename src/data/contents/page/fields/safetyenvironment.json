@@ -3,5 +3,20 @@
     "pageId": "number-of-traffic-accidents",
     "pageTitle": "交通事故件数",
     "menuId": "traffic-accident"
+  },
+  {
+    "pageId": "number-of-traffic-accident-casualties",
+    "pageTitle": "交通事故死傷者数",
+    "menuId": "traffic-accident"
+  },
+  {
+    "pageId": "traffic-accident-fatalities",
+    "pageTitle": "交通事故死者数",
+    "menuId": "traffic-accident"
+  },
+  {
+    "pageId": "number-of-traffic-accident-injuries",
+    "pageTitle": "交通事故負傷者数",
+    "menuId": "traffic-accident"
   }
 ]
