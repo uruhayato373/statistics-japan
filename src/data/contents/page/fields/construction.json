@@ -6,17 +6,17 @@
   },
   {
     "pageId": "residential-area-price",
-    "pageTitle": "住宅地",
+    "pageTitle": "住宅地価格",
     "menuId": "standard-price"
   },
   {
     "pageId": "commercial-area-price",
-    "pageTitle": "商業地",
+    "pageTitle": "商業地価格",
     "menuId": "standard-price"
   },
   {
     "pageId": "industrial-area-price",
-    "pageTitle": "工業地",
+    "pageTitle": "工業地価格",
     "menuId": "standard-price"
   }
 ]

@@ -11,12 +11,12 @@ import handleEstatAPI from 'utils/e-stat'
 import handleGeoshape from 'utils/geoshape'
 import { RouterProps } from 'utils/props'
 
-const CARD_TITLE = '住宅地価格'
-const CARD_ID = 'MapResidentialAreaPrice'
+const CARD_TITLE = '工業地価格'
+const CARD_ID = 'MapIndustrialAreaPrice'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: 'C5401',
+  cdCat01: 'C5405',
 }
 
 interface Props {
@@ -33,7 +33,7 @@ async function fetchValues() {
 }
 
 // コンポーネントの描画
-export default async function MapResidentialAreaPrice({ routerProps }: Props) {
+export default async function MapIndustrialAreaPrice({ routerProps }: Props) {
   const title = `都道府県の${CARD_TITLE}`
 
   const saveProps = { ...routerProps, cardId: CARD_ID }

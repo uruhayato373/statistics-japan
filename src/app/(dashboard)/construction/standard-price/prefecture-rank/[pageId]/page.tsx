@@ -22,6 +22,18 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
         'views/construction/standard-price/prefecture-rank/ResidentialAreaPrice'
       )
   ),
+  'commercial-area-price': dynamic(
+    () =>
+      import(
+        'views/construction/standard-price/prefecture-rank/CommercialAreaPrice'
+      )
+  ),
+  'industrial-area-price': dynamic(
+    () =>
+      import(
+        'views/construction/standard-price/prefecture-rank/IndustrialAreaPrice'
+      )
+  ),
 }
 
 export async function generateStaticParams() {
