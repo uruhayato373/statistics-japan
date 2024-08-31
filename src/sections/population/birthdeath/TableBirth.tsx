@@ -1,14 +1,15 @@
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import { saveDocument } from 'app/actions/saveDocument'
+import { saveDocument, SaveProps } from 'app/actions/saveDocument'
 import { saveValues } from 'app/actions/saveValues'
-import handleDocument from 'utils/document'
+import handleDocument, { ValueType, DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
+import handleValues from 'utils/values'
 
 const CARD_TITLE = '出生数'
-const CARD_ID = 'TableMarriage'
+const CARD_ID = 'TableBirth'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
@@ -20,33 +21,42 @@ interface Props {
   prefecture: PrefectureType
 }
 
-// valuesの取得と整形
-async function fetchValues(prefCode: string) {
-  const values = await handleEstatAPI().fetchValues({
-    ...ESTAT_PARAMS,
-    cdArea: prefCode,
-  })
+// values
+async function processValues(saveProps: SaveProps, prefCode: string) {
+  if (process.env.NODE_ENV === 'development') {
+    const { fetchValues } = handleEstatAPI()
+    const values = await fetchValues(ESTAT_PARAMS)
+    await saveValues(saveProps, values)
+  }
 
-  return values
+  const { readValues } = handleValues(saveProps)
+  const values = readValues()
+
+  return values.filter((f) => f.areaCode === prefCode)
+}
+
+// document
+async function processDocument(
+  saveProps: SaveProps,
+  values: ValueType[]
+): Promise<DocumentType> {
+  const { formatDocument } = handleDocument()
+  const document = formatDocument(values)
+
+  if (process.env.NODE_ENV === 'development') {
+    await saveDocument(saveProps, document)
+  }
+
+  return document
 }
 
 // コンポーネントの描画
 export default async function TableBirth({ routerProps, prefecture }: Props) {
   const { prefCode, prefName } = prefecture
-
   const title = `${prefName}の${CARD_TITLE}`
-
   const saveProps = { ...routerProps, cardId: CARD_ID }
-
-  const values = await fetchValues(prefCode)
-  if (process.env.NODE_ENV === 'development') {
-    await saveValues(saveProps, values)
-  }
-
-  const document = handleDocument().formatDocument(values)
-  if (process.env.NODE_ENV === 'development') {
-    await saveDocument(saveProps, document)
-  }
+  const values = await processValues(saveProps, prefCode)
+  const document = await processDocument(saveProps, values)
 
   return <CardsReactTimeTable title={title} document={document} />
 }

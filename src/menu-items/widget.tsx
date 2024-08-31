@@ -192,6 +192,13 @@ const widget: MenuGroup = {
           url: '/construction/construction',
           breadcrumbs: false,
         },
+        {
+          id: 'standard-price',
+          title: '標準価格',
+          type: 'item',
+          url: '/construction/standard-price',
+          breadcrumbs: false,
+        },
       ],
     },
     {

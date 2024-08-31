@@ -8,12 +8,12 @@ import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 import handleValues from 'utils/values'
 
-const CARD_TITLE = '農業産出額'
-const CARD_ID = 'DashboardAgriculturalOutput'
+const CARD_TITLE = '農業就業人口（販売農家）'
+const CARD_ID = 'DashboardAgricultureEmploymentPopulation'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: 'C3101',
+  cdCat01: 'C310410',
 }
 
 interface Props {
@@ -51,7 +51,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function DashboardAgriculturalOutput({
+export default async function DashboardAgricultureEmploymentPopulation({
   routerProps,
   prefecture,
 }: Props) {

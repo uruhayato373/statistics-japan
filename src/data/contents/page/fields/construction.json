@@ -3,5 +3,20 @@
     "pageId": "construction-companies",
     "pageTitle": "建設業者数",
     "menuId": "construction"
+  },
+  {
+    "pageId": "residential-area-price",
+    "pageTitle": "住宅地",
+    "menuId": "standard-price"
+  },
+  {
+    "pageId": "commercial-area-price",
+    "pageTitle": "商業地",
+    "menuId": "standard-price"
+  },
+  {
+    "pageId": "industrial-area-price",
+    "pageTitle": "工業地",
+    "menuId": "standard-price"
   }
 ]
