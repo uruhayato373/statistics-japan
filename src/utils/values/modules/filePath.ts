@@ -18,9 +18,9 @@ export function generateSaveValuesFilePath(saveProps: SaveProps) {
   )
   switch (kindId) {
     case 'japan':
-      return path.join(filePath, 'japan', `${cardId}`, 'values.json')
+      return path.join(filePath, 'japan', `${cardId}_values.json`)
     case 'prefecture':
-      return path.join(filePath, 'prefecture', `${cardId}`, `values.json`)
+      return path.join(filePath, 'prefecture', `${cardId}_values.json`)
     case 'prefecture-rank':
       return path.join(
         filePath,

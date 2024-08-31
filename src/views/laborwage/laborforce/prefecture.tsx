@@ -6,7 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardLaborforce from 'sections/laborwage/laborforce/DashboardLaborforce'
+import DashboardLaborForcePopulation from 'sections/laborwage/laborforce/DashboardLaborForcePopulation'
+import DashboardNonLaborForcePopulation from 'sections/laborwage/laborforce/DashboardNonLaborForcePopulation'
 import TableLaborForcePopulation from 'sections/laborwage/laborforce/TableLaborForcePopulation'
 import TableNonLaborForcePopulation from 'sections/laborwage/laborforce/TableNonLaborForcePopulation'
 import handleProps, { RouterProps } from 'utils/props'
@@ -28,7 +29,13 @@ export default async function LaborforcePrefecture({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardLaborforce
+              <DashboardLaborForcePopulation
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardNonLaborForcePopulation
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

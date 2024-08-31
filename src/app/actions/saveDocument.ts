@@ -43,7 +43,7 @@ function generateSaveFilePath(saveProps: SaveProps) {
   )
   switch (kindId) {
     case 'japan':
-      return path.join(filePath, 'japan', `${cardId}`, 'document.json')
+      return path.join(filePath, 'japan', `${cardId}_document.json`)
     case 'prefecture':
       return path.join(
         filePath,
