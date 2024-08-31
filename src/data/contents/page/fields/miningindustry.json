@@ -3,5 +3,10 @@
     "pageId": "product-shipment-amount",
     "pageTitle": "製造品出荷額",
     "menuId": "products"
+  },
+  {
+    "pageId": "manufacturing-industry-added-value",
+    "pageTitle": "製造業付加価値額",
+    "menuId": "products"
   }
 ]

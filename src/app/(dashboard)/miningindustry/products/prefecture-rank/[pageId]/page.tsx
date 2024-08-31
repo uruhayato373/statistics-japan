@@ -19,7 +19,13 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'product-shipment-amount': dynamic(
     () =>
       import(
-        'views/miningindustry/products/prefecture-rank/MapProductShipmentAmount'
+        'views/miningindustry/products/prefecture-rank/ProductShipmentAmount'
+      )
+  ),
+  'manufacturing-industry-added-value': dynamic(
+    () =>
+      import(
+        'views/miningindustry/products/prefecture-rank/ManufacturingIndustryAddedValue'
       )
   ),
 }

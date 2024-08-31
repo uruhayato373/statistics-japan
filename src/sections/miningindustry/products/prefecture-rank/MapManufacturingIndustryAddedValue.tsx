@@ -12,12 +12,12 @@ import handleGeoshape from 'utils/geoshape'
 import { RouterProps } from 'utils/props'
 import handleValues from 'utils/values'
 
-const CARD_TITLE = '製造品出荷額'
-const CARD_ID = 'MapProductShipmentAmount'
+const CARD_TITLE = '製造業付加価値額'
+const CARD_ID = 'MapManufacturingIndustryAddedValue'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: 'C3401',
+  cdCat01: 'C3402',
 }
 
 interface Props {
@@ -54,7 +54,9 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function MapProductShipmentAmount({ routerProps }: Props) {
+export default async function MapManufacturingIndustryAddedValue({
+  routerProps,
+}: Props) {
   const title = `都道府県の${CARD_TITLE}`
 
   const saveProps = { ...routerProps, cardId: CARD_ID }
