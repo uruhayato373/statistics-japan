@@ -1,4 +1,4 @@
-import { ValueType } from 'utils/document'
+import { ValueType } from 'utils/value'
 
 import { calculateDivisionValues } from './modules/calculateValues/divisionValues'
 import { calculateRatioValues } from './modules/calculateValues/ratioValues'

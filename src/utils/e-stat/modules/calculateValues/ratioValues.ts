@@ -1,4 +1,4 @@
-import { ValueType } from 'utils/document'
+import { ValueType } from 'utils/value'
 
 interface Args {
   moleculeValues: ValueType[] // 分子
