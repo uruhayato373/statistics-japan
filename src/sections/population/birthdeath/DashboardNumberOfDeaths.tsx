@@ -5,7 +5,7 @@ import { saveValues } from 'app/actions/saveValues'
 import handleDocument, { ValueType, DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
+import { RouterProps, SaveProps } from 'utils/props'
 import handleValues from 'utils/values'
 
 const CARD_TITLE = '死亡数'
