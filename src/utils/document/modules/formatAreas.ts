@@ -1,4 +1,6 @@
-import { AreaType, ValueType } from '../types/document'
+import { ValueType } from 'utils/value'
+
+import { AreaType } from '../types/document'
 
 /**
  * valuesから地域リストareasを作成する関数。

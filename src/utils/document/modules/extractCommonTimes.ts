@@ -1,4 +1,6 @@
-import { TimeType, ValueType } from '../types/document'
+import { ValueType } from 'utils/value'
+
+import { TimeType } from '../types/document'
 
 import formatCategories from './formatCategories'
 

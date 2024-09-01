@@ -1,4 +1,4 @@
-import { ValueType } from '../types/document'
+import { ValueType } from 'utils/value'
 
 import extractAreas from './formatAreas'
 

@@ -1,4 +1,6 @@
-import { CategoryType, ValueType } from '../types/document'
+import { ValueType } from 'utils/value'
+
+import { CategoryType } from '../types/document'
 
 function formatCategories(values: ValueType[]): CategoryType[] {
   const uniqueMap = new Map<string, CategoryType>()
