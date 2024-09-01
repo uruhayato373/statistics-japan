@@ -12,7 +12,15 @@ const CARD_ID = 'TablePrimarySchool'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010105',
-  cdCat01: ['E2101', 'E2501', 'E2401'],
+  cdCat01: [
+    'E2101',
+    'E2501',
+    'E250104',
+    'E250105',
+    'E2401',
+    'E240101',
+    'E240102',
+  ],
 }
 
 interface Props {

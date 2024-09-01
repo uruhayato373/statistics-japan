@@ -7,6 +7,8 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardPrimarySchools from 'sections/educationsports/primary-school/DashboardPrimarySchools'
+import DashboardPrimarySchoolStudents from 'sections/educationsports/primary-school/DashboardPrimarySchoolStudents'
+import DashboardPrimarySchoolTeachers from 'sections/educationsports/primary-school/DashboardPrimarySchoolTeachers'
 import TablePrimarySchool from 'sections/educationsports/primary-school/TablePrimarySchool'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -28,6 +30,18 @@ export default async function PrefectureView({ routerProps }: Props) {
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardPrimarySchools
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardPrimarySchoolStudents
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardPrimarySchoolTeachers
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

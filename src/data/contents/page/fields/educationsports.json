@@ -5,13 +5,43 @@
     "menuId": "primary-school"
   },
   {
+    "pageId": "primary-school-students",
+    "pageTitle": "小学校生徒数",
+    "menuId": "primary-school"
+  },
+  {
+    "pageId": "primary-school-teachers",
+    "pageTitle": "小学校教員数",
+    "menuId": "primary-school"
+  },
+  {
     "pageId": "junior-high-schools",
     "pageTitle": "中学校数",
     "menuId": "junior-high-school"
   },
   {
+    "pageId": "junior-high-school-students",
+    "pageTitle": "中学校生徒数",
+    "menuId": "junior-high-school"
+  },
+  {
+    "pageId": "junior-high-school-teachers",
+    "pageTitle": "中学校教員数",
+    "menuId": "junior-high-school"
+  },
+  {
     "pageId": "high-schools",
     "pageTitle": "高等学校数",
+    "menuId": "high-school"
+  },
+  {
+    "pageId": "high-school-students",
+    "pageTitle": "高等学校生徒数",
+    "menuId": "high-school"
+  },
+  {
+    "pageId": "high-school-teachers",
+    "pageTitle": "高等学校教員数",
     "menuId": "high-school"
   }
 ]

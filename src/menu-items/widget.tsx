@@ -251,6 +251,20 @@ const widget: MenuGroup = {
           url: '/educationsports/primary-school',
           breadcrumbs: false,
         },
+        {
+          id: 'junior-high-school',
+          title: '中学校',
+          type: 'item',
+          url: '/educationsports/junior-high-school',
+          breadcrumbs: false,
+        },
+        {
+          id: 'high-school',
+          title: '高等学校',
+          type: 'item',
+          url: '/educationsports/high-school',
+          breadcrumbs: false,
+        },
       ],
     },
     {

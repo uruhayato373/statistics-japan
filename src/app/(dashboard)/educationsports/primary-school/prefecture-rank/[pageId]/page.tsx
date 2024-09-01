@@ -19,7 +19,19 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'primary-schools': dynamic(
     () =>
       import(
-        'views/educationsports/primary-school/prefecture-rank/MapPrimarySchools'
+        'views/educationsports/primary-school/prefecture-rank/PrimarySchools'
+      )
+  ),
+  'primary-school-students': dynamic(
+    () =>
+      import(
+        'views/educationsports/primary-school/prefecture-rank/PrimarySchoolStudents'
+      )
+  ),
+  'primary-school-teachers': dynamic(
+    () =>
+      import(
+        'views/educationsports/primary-school/prefecture-rank/PrimarySchoolTeachers'
       )
   ),
 }

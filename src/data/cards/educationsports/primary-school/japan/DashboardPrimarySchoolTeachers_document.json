@@ -1,0 +1,739 @@
+{
+  "values": [
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "人",
+      "value": 415071
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "人",
+      "value": 424355
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "人",
+      "value": 433168
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "人",
+      "value": 445767
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "人",
+      "value": 459580
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 467953
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "人",
+      "value": 473965
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "人",
+      "value": 475043
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "人",
+      "value": 473987
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "人",
+      "value": 468672
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 461256
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "人",
+      "value": 454760
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "人",
+      "value": 448977
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "人",
+      "value": 445222
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "人",
+      "value": 445450
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 444218
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "人",
+      "value": 444903
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "人",
+      "value": 440769
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "人",
+      "value": 438064
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "人",
+      "value": 434945
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 430958
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "人",
+      "value": 425714
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "人",
+      "value": 420901
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "人",
+      "value": 415680
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "人",
+      "value": 411439
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 407598
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "人",
+      "value": 407829
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "人",
+      "value": 410505
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "人",
+      "value": 413890
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "人",
+      "value": 414908
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 416833
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "人",
+      "value": 417858
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "人",
+      "value": 418246
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2008",
+      "timeName": "2008年度",
+      "unit": "人",
+      "value": 419309
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2009",
+      "timeName": "2009年度",
+      "unit": "人",
+      "value": 419518
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "人",
+      "value": 419776
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "人",
+      "value": 419467
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "人",
+      "value": 418707
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "人",
+      "value": 417553
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "人",
+      "value": 416475
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "人",
+      "value": 417152
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "人",
+      "value": 416973
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "人",
+      "value": 418790
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "人",
+      "value": 420659
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "人",
+      "value": 421935
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "人",
+      "value": 422554
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2021",
+      "timeName": "2021年度",
+      "unit": "人",
+      "value": 422864
+    },
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2022",
+      "timeName": "2022年度",
+      "unit": "人",
+      "value": 423440
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "E2401",
+      "categoryName": "小学校教員数",
+      "categoryUnit": "人"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "00000",
+      "areaName": "全国"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1975",
+      "timeName": "1975年度"
+    },
+    {
+      "timeCode": "1976",
+      "timeName": "1976年度"
+    },
+    {
+      "timeCode": "1977",
+      "timeName": "1977年度"
+    },
+    {
+      "timeCode": "1978",
+      "timeName": "1978年度"
+    },
+    {
+      "timeCode": "1979",
+      "timeName": "1979年度"
+    },
+    {
+      "timeCode": "1980",
+      "timeName": "1980年度"
+    },
+    {
+      "timeCode": "1981",
+      "timeName": "1981年度"
+    },
+    {
+      "timeCode": "1982",
+      "timeName": "1982年度"
+    },
+    {
+      "timeCode": "1983",
+      "timeName": "1983年度"
+    },
+    {
+      "timeCode": "1984",
+      "timeName": "1984年度"
+    },
+    {
+      "timeCode": "1985",
+      "timeName": "1985年度"
+    },
+    {
+      "timeCode": "1986",
+      "timeName": "1986年度"
+    },
+    {
+      "timeCode": "1987",
+      "timeName": "1987年度"
+    },
+    {
+      "timeCode": "1988",
+      "timeName": "1988年度"
+    },
+    {
+      "timeCode": "1989",
+      "timeName": "1989年度"
+    },
+    {
+      "timeCode": "1990",
+      "timeName": "1990年度"
+    },
+    {
+      "timeCode": "1991",
+      "timeName": "1991年度"
+    },
+    {
+      "timeCode": "1992",
+      "timeName": "1992年度"
+    },
+    {
+      "timeCode": "1993",
+      "timeName": "1993年度"
+    },
+    {
+      "timeCode": "1994",
+      "timeName": "1994年度"
+    },
+    {
+      "timeCode": "1995",
+      "timeName": "1995年度"
+    },
+    {
+      "timeCode": "1996",
+      "timeName": "1996年度"
+    },
+    {
+      "timeCode": "1997",
+      "timeName": "1997年度"
+    },
+    {
+      "timeCode": "1998",
+      "timeName": "1998年度"
+    },
+    {
+      "timeCode": "1999",
+      "timeName": "1999年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2001",
+      "timeName": "2001年度"
+    },
+    {
+      "timeCode": "2002",
+      "timeName": "2002年度"
+    },
+    {
+      "timeCode": "2003",
+      "timeName": "2003年度"
+    },
+    {
+      "timeCode": "2004",
+      "timeName": "2004年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2006",
+      "timeName": "2006年度"
+    },
+    {
+      "timeCode": "2007",
+      "timeName": "2007年度"
+    },
+    {
+      "timeCode": "2008",
+      "timeName": "2008年度"
+    },
+    {
+      "timeCode": "2009",
+      "timeName": "2009年度"
+    },
+    {
+      "timeCode": "2010",
+      "timeName": "2010年度"
+    },
+    {
+      "timeCode": "2011",
+      "timeName": "2011年度"
+    },
+    {
+      "timeCode": "2012",
+      "timeName": "2012年度"
+    },
+    {
+      "timeCode": "2013",
+      "timeName": "2013年度"
+    },
+    {
+      "timeCode": "2014",
+      "timeName": "2014年度"
+    },
+    {
+      "timeCode": "2015",
+      "timeName": "2015年度"
+    },
+    {
+      "timeCode": "2016",
+      "timeName": "2016年度"
+    },
+    {
+      "timeCode": "2017",
+      "timeName": "2017年度"
+    },
+    {
+      "timeCode": "2018",
+      "timeName": "2018年度"
+    },
+    {
+      "timeCode": "2019",
+      "timeName": "2019年度"
+    },
+    {
+      "timeCode": "2020",
+      "timeName": "2020年度"
+    },
+    {
+      "timeCode": "2021",
+      "timeName": "2021年度"
+    },
+    {
+      "timeCode": "2022",
+      "timeName": "2022年度"
+    }
+  ]
+}
