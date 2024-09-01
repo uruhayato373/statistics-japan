@@ -5,11 +5,7 @@ import path from 'path'
 import fs from 'fs-extra'
 
 import { DocumentType } from 'utils/document'
-import { RouterProps } from 'utils/props'
-
-export interface SaveProps extends RouterProps {
-  cardId: string
-}
+import { SaveProps } from 'utils/props'
 
 export async function saveDocument(
   saveProps: SaveProps,

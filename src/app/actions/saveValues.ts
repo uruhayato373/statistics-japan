@@ -3,12 +3,8 @@
 import fs from 'fs-extra'
 
 import { ValueType } from 'utils/document'
-import { RouterProps } from 'utils/props'
+import { SaveProps } from 'utils/props'
 import handleValues from 'utils/values'
-
-export interface SaveProps extends RouterProps {
-  cardId: string
-}
 
 export async function saveValues(saveProps: SaveProps, values: ValueType[]) {
   const { filePath } = handleValues(saveProps)

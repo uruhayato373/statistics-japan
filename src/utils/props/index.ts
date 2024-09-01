@@ -9,6 +9,9 @@ export interface RouterProps {
   prefCode?: string
   cityCode?: string
 }
+export interface SaveProps extends RouterProps {
+  cardId: string
+}
 
 const handleProps = ({
   fieldId,
