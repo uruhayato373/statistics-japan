@@ -9,8 +9,11 @@
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint-staged": "lint-staged",
-    "prepare": "husky"
+    "lint-staged": {
+      "*.js": "eslint --fix",
+      "*.{js,css,md}": "prettier --write"
+    },
+    "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
@@ -78,7 +81,6 @@
     "immutability-helper": "^3.1.1",
     "jotai": "^2.8.3",
     "jsdom": "^24.1.1",
-    "lint-staged": "^15.2.7",
     "lodash": "^4.17.21",
     "mapbox-gl": "^3.4.0",
     "next": "^14.1.3",
@@ -154,6 +156,7 @@
     "file-loader": "^6.2.0",
     "husky": "^9.1.5",
     "immutable": "^4.3.5",
+    "lint-staged": "^15.2.9",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
     "url-loader": "^4.1.1"

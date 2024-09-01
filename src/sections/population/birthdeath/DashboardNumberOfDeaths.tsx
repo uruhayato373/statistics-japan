@@ -1,6 +1,6 @@
 import CardsDashboardSingle from 'cards/CardsDashboard'
 
-import { saveDocument, SaveProps } from 'app/actions/saveDocument'
+import { saveDocument } from 'app/actions/saveDocument'
 import { saveValues } from 'app/actions/saveValues'
 import handleDocument, { ValueType, DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
