@@ -28,8 +28,13 @@ type Props = {
   digit?: number
 }
 
-const formatNumber = (value: string | number, digit: number): string => {
+const formatNumber = (
+  value: string | number | null | undefined,
+  digit: number
+): string => {
+  if (value === null || value === undefined) return 'N/A'
   const num = typeof value === 'string' ? parseFloat(value) : value
+  if (isNaN(num)) return 'N/A'
   return num.toLocaleString('ja-JP', {
     minimumFractionDigits: digit,
     maximumFractionDigits: digit,

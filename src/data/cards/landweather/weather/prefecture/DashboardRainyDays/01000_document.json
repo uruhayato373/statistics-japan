@@ -1,0 +1,739 @@
+{
+  "values": [
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "日",
+      "value": 134
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "日",
+      "value": 133
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "日",
+      "value": 130
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "日",
+      "value": 137
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "日",
+      "value": 129
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "日",
+      "value": 155
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "日",
+      "value": 153
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "日",
+      "value": 130
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "日",
+      "value": 134
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "日",
+      "value": 120
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "日",
+      "value": 129
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "日",
+      "value": 147
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "日",
+      "value": 135
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "日",
+      "value": 148
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "日",
+      "value": 125
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "日",
+      "value": 141
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "日",
+      "value": 137
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "日",
+      "value": 149
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "日",
+      "value": 148
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "日",
+      "value": 143
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "日",
+      "value": 159
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "日",
+      "value": 137
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "日",
+      "value": 139
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "日",
+      "value": 138
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "日",
+      "value": 143
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "日",
+      "value": 160
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "日",
+      "value": 139
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "日",
+      "value": 126
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "日",
+      "value": 121
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "日",
+      "value": 150
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "日",
+      "value": 141
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "日",
+      "value": 143
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "日",
+      "value": 132
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2008",
+      "timeName": "2008年度",
+      "unit": "日",
+      "value": 121
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2009",
+      "timeName": "2009年度",
+      "unit": "日",
+      "value": 149
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "日",
+      "value": 149
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "日",
+      "value": 146
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "日",
+      "value": 148
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "日",
+      "value": 161
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "日",
+      "value": 144
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "日",
+      "value": 144
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "日",
+      "value": 152
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "日",
+      "value": 146
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "日",
+      "value": 157
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "日",
+      "value": 131
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "日",
+      "value": 151
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2021",
+      "timeName": "2021年度",
+      "unit": "日",
+      "value": 122
+    },
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日",
+      "areaCode": "01000",
+      "areaName": "北海道",
+      "timeCode": "2022",
+      "timeName": "2022年度",
+      "unit": "日",
+      "value": 137
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "B4106",
+      "categoryName": "降水日数（年間）",
+      "categoryUnit": "日"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "01000",
+      "areaName": "北海道"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1975",
+      "timeName": "1975年度"
+    },
+    {
+      "timeCode": "1976",
+      "timeName": "1976年度"
+    },
+    {
+      "timeCode": "1977",
+      "timeName": "1977年度"
+    },
+    {
+      "timeCode": "1978",
+      "timeName": "1978年度"
+    },
+    {
+      "timeCode": "1979",
+      "timeName": "1979年度"
+    },
+    {
+      "timeCode": "1980",
+      "timeName": "1980年度"
+    },
+    {
+      "timeCode": "1981",
+      "timeName": "1981年度"
+    },
+    {
+      "timeCode": "1982",
+      "timeName": "1982年度"
+    },
+    {
+      "timeCode": "1983",
+      "timeName": "1983年度"
+    },
+    {
+      "timeCode": "1984",
+      "timeName": "1984年度"
+    },
+    {
+      "timeCode": "1985",
+      "timeName": "1985年度"
+    },
+    {
+      "timeCode": "1986",
+      "timeName": "1986年度"
+    },
+    {
+      "timeCode": "1987",
+      "timeName": "1987年度"
+    },
+    {
+      "timeCode": "1988",
+      "timeName": "1988年度"
+    },
+    {
+      "timeCode": "1989",
+      "timeName": "1989年度"
+    },
+    {
+      "timeCode": "1990",
+      "timeName": "1990年度"
+    },
+    {
+      "timeCode": "1991",
+      "timeName": "1991年度"
+    },
+    {
+      "timeCode": "1992",
+      "timeName": "1992年度"
+    },
+    {
+      "timeCode": "1993",
+      "timeName": "1993年度"
+    },
+    {
+      "timeCode": "1994",
+      "timeName": "1994年度"
+    },
+    {
+      "timeCode": "1995",
+      "timeName": "1995年度"
+    },
+    {
+      "timeCode": "1996",
+      "timeName": "1996年度"
+    },
+    {
+      "timeCode": "1997",
+      "timeName": "1997年度"
+    },
+    {
+      "timeCode": "1998",
+      "timeName": "1998年度"
+    },
+    {
+      "timeCode": "1999",
+      "timeName": "1999年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2001",
+      "timeName": "2001年度"
+    },
+    {
+      "timeCode": "2002",
+      "timeName": "2002年度"
+    },
+    {
+      "timeCode": "2003",
+      "timeName": "2003年度"
+    },
+    {
+      "timeCode": "2004",
+      "timeName": "2004年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2006",
+      "timeName": "2006年度"
+    },
+    {
+      "timeCode": "2007",
+      "timeName": "2007年度"
+    },
+    {
+      "timeCode": "2008",
+      "timeName": "2008年度"
+    },
+    {
+      "timeCode": "2009",
+      "timeName": "2009年度"
+    },
+    {
+      "timeCode": "2010",
+      "timeName": "2010年度"
+    },
+    {
+      "timeCode": "2011",
+      "timeName": "2011年度"
+    },
+    {
+      "timeCode": "2012",
+      "timeName": "2012年度"
+    },
+    {
+      "timeCode": "2013",
+      "timeName": "2013年度"
+    },
+    {
+      "timeCode": "2014",
+      "timeName": "2014年度"
+    },
+    {
+      "timeCode": "2015",
+      "timeName": "2015年度"
+    },
+    {
+      "timeCode": "2016",
+      "timeName": "2016年度"
+    },
+    {
+      "timeCode": "2017",
+      "timeName": "2017年度"
+    },
+    {
+      "timeCode": "2018",
+      "timeName": "2018年度"
+    },
+    {
+      "timeCode": "2019",
+      "timeName": "2019年度"
+    },
+    {
+      "timeCode": "2020",
+      "timeName": "2020年度"
+    },
+    {
+      "timeCode": "2021",
+      "timeName": "2021年度"
+    },
+    {
+      "timeCode": "2022",
+      "timeName": "2022年度"
+    }
+  ]
+}

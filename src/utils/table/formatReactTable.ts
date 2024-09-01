@@ -22,9 +22,13 @@ export type ReactTimeTableType = {
  * @param {string} unit - 付加する単位
  * @returns {string} フォーマットされた文字列
  */
-const formatNumber = (value: number | undefined, unit: string): string => {
-  if (value === undefined) return ''
-  // 小数点以下の桁数を保持しつつ、toLocaleString()を使用
+const formatNumber = (
+  value: number | null | undefined,
+  unit: string
+): string => {
+  if (value === null || value === undefined) return ''
+  if (isNaN(value)) return 'N/A'
+
   const formattedValue = value.toLocaleString('ja-JP', {
     minimumFractionDigits: (value.toString().split('.')[1] || '').length,
     maximumFractionDigits: 20,
