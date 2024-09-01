@@ -4,12 +4,13 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import CardsHighchartsMapChart from 'cards/CardsHighchartsMapChart'
 
-import { saveDocument } from 'actions/saveDocument'
-import { saveValues } from 'actions/saveValues'
-import handleDocument from 'utils/document'
+import { actionSaveDocument } from 'actions/saveDocument'
+import { actionSaveValues } from 'actions/saveValues'
+import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import handleGeoshape from 'utils/geoshape'
-import { RouterProps } from 'utils/props'
+import { CardProps, RouterProps } from 'utils/props'
+import handleValue, { ValueType } from 'utils/value'
 
 const CARD_TITLE = '旅館等営業施設数'
 const CARD_ID = 'MapNumberOfOperatingFacilities'
@@ -23,13 +24,33 @@ interface Props {
   routerProps: RouterProps
 }
 
-// valuesの取得と整形
-async function fetchValues() {
-  const values = await handleEstatAPI().fetchValues({
-    ...ESTAT_PARAMS,
-  })
+// values
+async function processValues(cardProps: CardProps) {
+  if (process.env.NODE_ENV === 'development') {
+    const { fetchValues } = handleEstatAPI()
+    const values = await fetchValues(ESTAT_PARAMS)
+    await actionSaveValues(cardProps, values)
+  }
+
+  const { readValues } = handleValue(cardProps)
+  const values = readValues()
 
   return values
+}
+
+// document
+async function processDocument(
+  cardProps: CardProps,
+  values: ValueType[]
+): Promise<DocumentType> {
+  const { formatDocument } = handleDocument()
+  const document = formatDocument(values)
+
+  if (process.env.NODE_ENV === 'development') {
+    await actionSaveDocument(cardProps, document)
+  }
+
+  return document
 }
 
 // コンポーネントの描画
@@ -37,20 +58,10 @@ export default async function MapNumberOfOperatingFacilities({
   routerProps,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`
-
-  const saveProps = { ...routerProps, cardId: CARD_ID }
-
-  const values = await fetchValues()
-  if (process.env.NODE_ENV === 'development') {
-    await saveValues(saveProps, values)
-  }
-
+  const cardProps = { ...routerProps, cardId: CARD_ID }
   const topojson = await handleGeoshape('prefecture').readJson()
-
-  const document = handleDocument().formatDocument(values)
-  if (process.env.NODE_ENV === 'development') {
-    await saveDocument(saveProps, document)
-  }
+  const values = await processValues(cardProps)
+  const document = await processDocument(cardProps, values)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
