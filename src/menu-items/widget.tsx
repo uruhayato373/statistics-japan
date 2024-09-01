@@ -305,9 +305,16 @@ const widget: MenuGroup = {
       children: [
         {
           id: 'hospital',
-          title: '病院数',
+          title: '病院',
           type: 'item',
           url: '/socialsecurity/hospital',
+          breadcrumbs: false,
+        },
+        {
+          id: 'suicide-person',
+          title: '自殺者',
+          type: 'item',
+          url: '/socialsecurity/suicide-person',
           breadcrumbs: false,
         },
       ],

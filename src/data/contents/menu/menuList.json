@@ -106,7 +106,12 @@
   },
   {
     "menuId": "hospital",
-    "menuTitle": "病院数",
+    "menuTitle": "病院",
+    "fieldId": "socialsecurity"
+  },
+  {
+    "menuId": "suicide-person",
+    "menuTitle": "自殺者",
     "fieldId": "socialsecurity"
   },
   {

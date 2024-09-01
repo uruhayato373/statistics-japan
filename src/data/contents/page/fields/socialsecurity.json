@@ -3,5 +3,10 @@
     "pageId": "number-of-hospitals",
     "pageTitle": "病院数",
     "menuId": "hospital"
+  },
+  {
+    "pageId": "number-of-suicides",
+    "pageTitle": "自殺者数",
+    "menuId": "suicide-person"
   }
 ]
