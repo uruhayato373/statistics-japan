@@ -8,12 +8,12 @@ import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 import handleValues from 'utils/values'
 
-const CARD_TITLE = '総面積'
-const CARD_ID = 'DashboardTotalArea'
+const CARD_TITLE = '人口集中地区面積'
+const CARD_ID = 'DashboardDenselyPopulatedArea'
 
 const ESTAT_PARAMS = {
-  statsDataId: '0000010102',
-  cdCat01: 'B1101',
+  statsDataId: '0000010101',
+  cdCat01: 'A1802',
 }
 
 interface Props {
@@ -51,7 +51,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function DashboardTotalArea({
+export default async function DashboardDenselyPopulatedArea({
   routerProps,
   prefecture,
 }: Props) {

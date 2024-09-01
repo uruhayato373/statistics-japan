@@ -7,6 +7,7 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import AreaChartTotalArea from 'sections/landweather/area/AreaChartTotalArea'
+import DashboardDenselyPopulatedArea from 'sections/landweather/area/DashboardDenselyPopulatedArea'
 import DashboardForestArea from 'sections/landweather/area/DashboardForestArea'
 import DashboardHabitableArea from 'sections/landweather/area/DashboardHabitableArea'
 import DashboardTotalArea from 'sections/landweather/area/DashboardTotalArea'
@@ -45,6 +46,12 @@ export default async function TotalAreaPrefecture({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={3}>
               <DashboardForestArea
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={6} lg={3}>
+              <DashboardDenselyPopulatedArea
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

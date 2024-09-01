@@ -1,0 +1,169 @@
+{
+  "values": [
+    {
+      "categoryCode": "A1802",
+      "categoryName": "人口集中地区面積",
+      "categoryUnit": "ｋｍ2",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "ｋｍ2",
+      "value": 386.8
+    },
+    {
+      "categoryCode": "A1802",
+      "categoryName": "人口集中地区面積",
+      "categoryUnit": "ｋｍ2",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "ｋｍ2",
+      "value": 460.7
+    },
+    {
+      "categoryCode": "A1802",
+      "categoryName": "人口集中地区面積",
+      "categoryUnit": "ｋｍ2",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "ｋｍ2",
+      "value": 478.9
+    },
+    {
+      "categoryCode": "A1802",
+      "categoryName": "人口集中地区面積",
+      "categoryUnit": "ｋｍ2",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "ｋｍ2",
+      "value": 518.4
+    },
+    {
+      "categoryCode": "A1802",
+      "categoryName": "人口集中地区面積",
+      "categoryUnit": "ｋｍ2",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "ｋｍ2",
+      "value": 541.2
+    },
+    {
+      "categoryCode": "A1802",
+      "categoryName": "人口集中地区面積",
+      "categoryUnit": "ｋｍ2",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "ｋｍ2",
+      "value": 557.73
+    },
+    {
+      "categoryCode": "A1802",
+      "categoryName": "人口集中地区面積",
+      "categoryUnit": "ｋｍ2",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "ｋｍ2",
+      "value": 563.03
+    },
+    {
+      "categoryCode": "A1802",
+      "categoryName": "人口集中地区面積",
+      "categoryUnit": "ｋｍ2",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "ｋｍ2",
+      "value": 577.36
+    },
+    {
+      "categoryCode": "A1802",
+      "categoryName": "人口集中地区面積",
+      "categoryUnit": "ｋｍ2",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "ｋｍ2",
+      "value": 583.61
+    },
+    {
+      "categoryCode": "A1802",
+      "categoryName": "人口集中地区面積",
+      "categoryUnit": "ｋｍ2",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "ｋｍ2",
+      "value": 601
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "A1802",
+      "categoryName": "人口集中地区面積",
+      "categoryUnit": "ｋｍ2"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "28000",
+      "areaName": "兵庫県"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1975",
+      "timeName": "1975年度"
+    },
+    {
+      "timeCode": "1980",
+      "timeName": "1980年度"
+    },
+    {
+      "timeCode": "1985",
+      "timeName": "1985年度"
+    },
+    {
+      "timeCode": "1990",
+      "timeName": "1990年度"
+    },
+    {
+      "timeCode": "1995",
+      "timeName": "1995年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2010",
+      "timeName": "2010年度"
+    },
+    {
+      "timeCode": "2015",
+      "timeName": "2015年度"
+    },
+    {
+      "timeCode": "2020",
+      "timeName": "2020年度"
+    }
+  ]
+}

@@ -10,6 +10,11 @@
     "menuId": "area"
   },
   {
+    "pageId": "densely-populated-area",
+    "pageTitle": "人口集中地区面積",
+    "menuId": "area"
+  },
+  {
     "pageId": "rainy-days",
     "pageTitle": "降水日数",
     "menuId": "weather"
