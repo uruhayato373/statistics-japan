@@ -1,4 +1,6 @@
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+// import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
+import dynamic from 'next/dynamic'
 
 import { actionSaveDocument } from 'actions/saveDocument'
 import { actionSaveValues } from 'actions/saveValues'
@@ -7,6 +9,10 @@ import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
+
+const CardsReactTimeTable = dynamic(() => import('cards/CardsReactTimeTable'), {
+  loading: () => <p>Loading...</p>,
+})
 
 const CARD_TITLE = '農業就業人口（販売農家）'
 const CARD_ID = 'TableAgricultureEmploymentPopulation'
