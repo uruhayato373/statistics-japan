@@ -8,12 +8,12 @@ import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 import handleValues from 'utils/values'
 
-const CARD_TITLE = '製造品出荷額'
-const CARD_ID = 'DashboardProductShipmentAmount'
+const CARD_TITLE = '製造業事業所数'
+const CARD_ID = 'DashboardNumberOfManufacturingEstablishments'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: 'C3401',
+  cdCat01: 'C3403',
 }
 
 interface Props {
@@ -51,7 +51,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function DashboardProductShipmentAmount({
+export default async function DashboardNumberOfManufacturingEstablishments({
   routerProps,
   prefecture,
 }: Props) {

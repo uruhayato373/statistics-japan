@@ -1,0 +1,724 @@
+{
+  "values": [
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "事業所",
+      "value": 735970
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "事業所",
+      "value": 423904
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "事業所",
+      "value": 415014
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "事業所",
+      "value": 431102
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "事業所",
+      "value": 430439
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "事業所",
+      "value": 429336
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "事業所",
+      "value": 436463
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "事業所",
+      "value": 427998
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "事業所",
+      "value": 446942
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "事業所",
+      "value": 428998
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "事業所",
+      "value": 438518
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "事業所",
+      "value": 436009
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "事業所",
+      "value": 420804
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "事業所",
+      "value": 437574
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "事業所",
+      "value": 421757
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "事業所",
+      "value": 435997
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "事業所",
+      "value": 430414
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "事業所",
+      "value": 415112
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "事業所",
+      "value": 413670
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "事業所",
+      "value": 382825
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "事業所",
+      "value": 387726
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "事業所",
+      "value": 369612
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "事業所",
+      "value": 358246
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "事業所",
+      "value": 373713
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "事業所",
+      "value": 345457
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "事業所",
+      "value": 341421
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "事業所",
+      "value": 316267
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "事業所",
+      "value": 290848
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "事業所",
+      "value": 293910
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "事業所",
+      "value": 270905
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "事業所",
+      "value": 276715
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "事業所",
+      "value": 258543
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "事業所",
+      "value": 258232
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2008",
+      "timeName": "2008年度",
+      "unit": "事業所",
+      "value": 263061
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2009",
+      "timeName": "2009年度",
+      "unit": "事業所",
+      "value": 235817
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "事業所",
+      "value": 224403
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "事業所",
+      "value": 233186
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "事業所",
+      "value": 216262
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "事業所",
+      "value": 208029
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "事業所",
+      "value": 202410
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "事業所",
+      "value": 217601
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "事業所",
+      "value": 191339
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "事業所",
+      "value": 188249
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "事業所",
+      "value": 185116
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "事業所",
+      "value": 181877
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2021",
+      "timeName": "2021年度",
+      "unit": "事業所",
+      "value": 176858
+    },
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2022",
+      "timeName": "2022年度",
+      "unit": "事業所",
+      "value": 222770
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "C3403",
+      "categoryName": "製造業事業所数",
+      "categoryUnit": "事業所"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "00000",
+      "areaName": "全国"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1975",
+      "timeName": "1975年度"
+    },
+    {
+      "timeCode": "1976",
+      "timeName": "1976年度"
+    },
+    {
+      "timeCode": "1977",
+      "timeName": "1977年度"
+    },
+    {
+      "timeCode": "1978",
+      "timeName": "1978年度"
+    },
+    {
+      "timeCode": "1979",
+      "timeName": "1979年度"
+    },
+    {
+      "timeCode": "1980",
+      "timeName": "1980年度"
+    },
+    {
+      "timeCode": "1981",
+      "timeName": "1981年度"
+    },
+    {
+      "timeCode": "1982",
+      "timeName": "1982年度"
+    },
+    {
+      "timeCode": "1983",
+      "timeName": "1983年度"
+    },
+    {
+      "timeCode": "1984",
+      "timeName": "1984年度"
+    },
+    {
+      "timeCode": "1985",
+      "timeName": "1985年度"
+    },
+    {
+      "timeCode": "1986",
+      "timeName": "1986年度"
+    },
+    {
+      "timeCode": "1987",
+      "timeName": "1987年度"
+    },
+    {
+      "timeCode": "1988",
+      "timeName": "1988年度"
+    },
+    {
+      "timeCode": "1989",
+      "timeName": "1989年度"
+    },
+    {
+      "timeCode": "1990",
+      "timeName": "1990年度"
+    },
+    {
+      "timeCode": "1991",
+      "timeName": "1991年度"
+    },
+    {
+      "timeCode": "1992",
+      "timeName": "1992年度"
+    },
+    {
+      "timeCode": "1993",
+      "timeName": "1993年度"
+    },
+    {
+      "timeCode": "1994",
+      "timeName": "1994年度"
+    },
+    {
+      "timeCode": "1995",
+      "timeName": "1995年度"
+    },
+    {
+      "timeCode": "1996",
+      "timeName": "1996年度"
+    },
+    {
+      "timeCode": "1997",
+      "timeName": "1997年度"
+    },
+    {
+      "timeCode": "1998",
+      "timeName": "1998年度"
+    },
+    {
+      "timeCode": "1999",
+      "timeName": "1999年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2001",
+      "timeName": "2001年度"
+    },
+    {
+      "timeCode": "2002",
+      "timeName": "2002年度"
+    },
+    {
+      "timeCode": "2003",
+      "timeName": "2003年度"
+    },
+    {
+      "timeCode": "2004",
+      "timeName": "2004年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2006",
+      "timeName": "2006年度"
+    },
+    {
+      "timeCode": "2007",
+      "timeName": "2007年度"
+    },
+    {
+      "timeCode": "2008",
+      "timeName": "2008年度"
+    },
+    {
+      "timeCode": "2009",
+      "timeName": "2009年度"
+    },
+    {
+      "timeCode": "2010",
+      "timeName": "2010年度"
+    },
+    {
+      "timeCode": "2011",
+      "timeName": "2011年度"
+    },
+    {
+      "timeCode": "2012",
+      "timeName": "2012年度"
+    },
+    {
+      "timeCode": "2013",
+      "timeName": "2013年度"
+    },
+    {
+      "timeCode": "2014",
+      "timeName": "2014年度"
+    },
+    {
+      "timeCode": "2016",
+      "timeName": "2016年度"
+    },
+    {
+      "timeCode": "2017",
+      "timeName": "2017年度"
+    },
+    {
+      "timeCode": "2018",
+      "timeName": "2018年度"
+    },
+    {
+      "timeCode": "2019",
+      "timeName": "2019年度"
+    },
+    {
+      "timeCode": "2020",
+      "timeName": "2020年度"
+    },
+    {
+      "timeCode": "2021",
+      "timeName": "2021年度"
+    },
+    {
+      "timeCode": "2022",
+      "timeName": "2022年度"
+    }
+  ]
+}

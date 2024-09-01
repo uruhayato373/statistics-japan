@@ -6,6 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import DashboardNumberOfManufacturingEmployees from 'sections/miningindustry/products/DashboardNumberOfManufacturingEmployees'
+import DashboardNumberOfManufacturingEstablishments from 'sections/miningindustry/products/DashboardNumberOfManufacturingEstablishments'
 import DashboardProductShipmentAmount from 'sections/miningindustry/products/DashboardProductShipmentAmount'
 import TableProductShipmentAmount from 'sections/miningindustry/products/TableProductShipmentAmount'
 import handleProps, { RouterProps } from 'utils/props'
@@ -28,6 +30,18 @@ export default async function PrefectureView({ routerProps }: Props) {
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardProductShipmentAmount
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardNumberOfManufacturingEstablishments
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardNumberOfManufacturingEmployees
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

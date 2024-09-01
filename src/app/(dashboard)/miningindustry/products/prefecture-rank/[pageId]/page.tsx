@@ -28,6 +28,18 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
         'views/miningindustry/products/prefecture-rank/ManufacturingIndustryAddedValue'
       )
   ),
+  'number-of-manufacturing-establishments': dynamic(
+    () =>
+      import(
+        'views/miningindustry/products/prefecture-rank/NumberOfManufacturingEstablishments'
+      )
+  ),
+  'number-of-manufacturing-employees': dynamic(
+    () =>
+      import(
+        'views/miningindustry/products/prefecture-rank/NumberOfManufacturingEmployees'
+      )
+  ),
 }
 
 export async function generateStaticParams() {

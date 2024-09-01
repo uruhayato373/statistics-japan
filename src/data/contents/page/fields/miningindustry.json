@@ -8,5 +8,15 @@
     "pageId": "manufacturing-industry-added-value",
     "pageTitle": "製造業付加価値額",
     "menuId": "products"
+  },
+  {
+    "pageId": "number-of-manufacturing-establishments",
+    "pageTitle": "製造業事業所数",
+    "menuId": "products"
+  },
+  {
+    "pageId": "number-of-manufacturing-employees",
+    "pageTitle": "製造業従業者数",
+    "menuId": "products"
   }
 ]

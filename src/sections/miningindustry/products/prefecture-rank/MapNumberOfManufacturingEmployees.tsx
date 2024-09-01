@@ -1,28 +1,31 @@
-import CardsDashboardSingle from 'cards/CardsDashboard'
+import { Suspense } from 'react'
+
+import CircularProgressCards from 'components/CircularProgressCards'
+
+import CardsHighchartsMapChart from 'cards/CardsHighchartsMapChart'
 
 import { saveDocument, SaveProps } from 'app/actions/saveDocument'
 import { saveValues } from 'app/actions/saveValues'
 import handleDocument, { ValueType, DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import handleGeoshape from 'utils/geoshape'
 import { RouterProps } from 'utils/props'
 import handleValues from 'utils/values'
 
-const CARD_TITLE = '製造品出荷額'
-const CARD_ID = 'DashboardProductShipmentAmount'
+const CARD_TITLE = '製造業従業者数'
+const CARD_ID = 'MapNumberOfManufacturingEmployees'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: 'C3401',
+  cdCat01: 'C3404',
 }
 
 interface Props {
   routerProps: RouterProps
-  prefecture: PrefectureType
 }
 
 // values
-async function processValues(saveProps: SaveProps, prefCode: string) {
+async function processValues(saveProps: SaveProps) {
   if (process.env.NODE_ENV === 'development') {
     const { fetchValues } = handleEstatAPI()
     const values = await fetchValues(ESTAT_PARAMS)
@@ -32,7 +35,7 @@ async function processValues(saveProps: SaveProps, prefCode: string) {
   const { readValues } = handleValues(saveProps)
   const values = readValues()
 
-  return values.filter((f) => f.areaCode === prefCode)
+  return values
 }
 
 // document
@@ -51,15 +54,25 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function DashboardProductShipmentAmount({
+export default async function MapNumberOfManufacturingEmployees({
   routerProps,
-  prefecture,
 }: Props) {
-  const { prefCode, prefName } = prefecture
-  const title = `${prefName}の${CARD_TITLE}`
+  const title = `都道府県の${CARD_TITLE}`
+
   const saveProps = { ...routerProps, cardId: CARD_ID }
-  const values = await processValues(saveProps, prefCode)
+
+  const topojson = await handleGeoshape('prefecture').readJson()
+
+  const values = await processValues(saveProps)
   const document = await processDocument(saveProps, values)
 
-  return <CardsDashboardSingle title={title} document={document} />
+  return (
+    <Suspense fallback={<CircularProgressCards />}>
+      <CardsHighchartsMapChart
+        title={title}
+        document={document}
+        topojson={topojson}
+      />
+    </Suspense>
+  )
 }
