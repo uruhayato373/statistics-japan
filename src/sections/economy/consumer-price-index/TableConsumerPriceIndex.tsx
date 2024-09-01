@@ -1,12 +1,11 @@
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import { saveDocument, SaveProps } from 'app/actions/saveDocument'
-import { saveValues } from 'app/actions/saveValues'
-import handleDocument, { ValueType, DocumentType } from 'utils/document'
+import { saveDocument } from 'actions/saveDocument'
+import { saveValues } from 'actions/saveValues'
+import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
-import handleValues from 'utils/values'
 
 const CARD_TITLE = '消費者物価指数'
 const CARD_ID = 'TableConsumerPriceIndex'
@@ -29,7 +28,7 @@ async function processValues(saveProps: SaveProps, prefCode: string) {
     await saveValues(saveProps, values)
   }
 
-  const { readValues } = handleValues(saveProps)
+  const { readValues } = handleValue(saveProps)
   const values = readValues()
 
   return values.filter((f) => f.areaCode === prefCode)

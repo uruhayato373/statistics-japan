@@ -2,8 +2,8 @@ import { ApexOptions } from 'apexcharts'
 
 import CardsApexPieChart from 'cards/CardsApexPieChart'
 
-import { saveDocument } from 'app/actions/saveDocument'
-import { saveValues } from 'app/actions/saveValues'
+import { saveDocument } from 'actions/saveDocument'
+import { saveValues } from 'actions/saveValues'
 import handleDocument from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'

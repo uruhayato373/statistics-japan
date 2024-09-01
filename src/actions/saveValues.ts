@@ -2,12 +2,11 @@
 
 import fs from 'fs-extra'
 
-import { ValueType } from 'utils/document'
 import { SaveProps } from 'utils/props'
-import handleValues from 'utils/values'
+import handleValue, { ValueType } from 'utils/value'
 
 export async function saveValues(saveProps: SaveProps, values: ValueType[]) {
-  const { filePath } = handleValues(saveProps)
+  const { filePath } = handleValue(saveProps)
 
   try {
     // ディレクトリが存在しない場合は作成し、データを書き込み

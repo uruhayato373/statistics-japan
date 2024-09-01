@@ -1,3 +1,5 @@
+import { ValueType } from 'utils/value'
+
 /**
  * 統計値の年次
  * @property {string} timeCode - 2000, 2005, 2010, 2015, 2020
@@ -28,28 +30,6 @@ export interface CategoryType {
 export interface AreaType {
   areaCode: string
   areaName: string
-}
-
-/**
- * 統計値の基本型 - すべてのデータはこの型に整形する
- * @property {string} timeCode
- * @property {string} timeName
- * @property {string} areaCode
- * @property {string} areaName
- * @property {string} categoryCode
- * @property {string} categoryName
- * @property {string} unit
- * @property {number} value
- */
-export interface ValueType {
-  timeCode: string
-  timeName: string
-  areaCode: string
-  areaName: string
-  categoryCode: string
-  categoryName: string
-  unit: string
-  value: number
 }
 
 export interface DocumentType {

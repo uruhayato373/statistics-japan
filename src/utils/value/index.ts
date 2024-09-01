@@ -1,15 +1,16 @@
 import fs from 'fs'
 
-import { ValueType } from 'utils/document'
-
 import { generateSaveValuesFilePath, SaveProps } from './modules/filePath'
+import { ValueType } from './types/value'
+
+export type * from './types/value'
 
 interface HandleValuesResult {
   filePath: string
   readValues: () => ValueType[]
 }
 
-const handleValues = (saveProps: SaveProps): HandleValuesResult => {
+const handleValue = (saveProps: SaveProps): HandleValuesResult => {
   const filePath = generateSaveValuesFilePath(saveProps)
 
   const readValues = (): ValueType[] => {
@@ -29,4 +30,4 @@ const handleValues = (saveProps: SaveProps): HandleValuesResult => {
   }
 }
 
-export default handleValues
+export default handleValue

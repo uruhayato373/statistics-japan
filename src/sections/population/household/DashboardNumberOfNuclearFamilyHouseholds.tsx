@@ -1,13 +1,12 @@
 import CardsDashboardSingle from 'cards/CardsDashboard'
 
-import { saveDocument } from 'app/actions/saveDocument'
-import { saveValues } from 'app/actions/saveValues'
-import handleDocument, { ValueType, DocumentType } from 'utils/document'
+import { saveDocument } from 'actions/saveDocument'
+import { saveValues } from 'actions/saveValues'
+import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
-import handleValues from 'utils/values'
-import { SaveProps } from 'utils/values/modules/filePath'
+import { SaveProps } from 'utils/value/modules/filePath'
 
 const CARD_TITLE = '核家族世帯数'
 const CARD_ID = 'DashboardNumberOfNuclearFamilyHouseholds'
@@ -30,7 +29,7 @@ async function processValues(saveProps: SaveProps, prefCode: string) {
     await saveValues(saveProps, values)
   }
 
-  const { readValues } = handleValues(saveProps)
+  const { readValues } = handleValue(saveProps)
   const values = readValues()
 
   return values.filter((f) => f.areaCode === prefCode)

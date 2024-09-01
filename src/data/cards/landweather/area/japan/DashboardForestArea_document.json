@@ -8,7 +8,7 @@
       "areaName": "全国",
       "timeCode": "1980",
       "timeName": "1980年度",
-      "unit": "ha",
+      "unit": "ｈａ",
       "value": 24728221
     },
     {
@@ -19,7 +19,7 @@
       "areaName": "全国",
       "timeCode": "1984",
       "timeName": "1984年度",
-      "unit": "ha",
+      "unit": "ｈａ",
       "value": 24717566
     },
     {
@@ -30,7 +30,7 @@
       "areaName": "全国",
       "timeCode": "1990",
       "timeName": "1990年度",
-      "unit": "ha",
+      "unit": "ｈａ",
       "value": 24621173
     },
     {
@@ -41,7 +41,7 @@
       "areaName": "全国",
       "timeCode": "2000",
       "timeName": "2000年度",
-      "unit": "ha",
+      "unit": "ｈａ",
       "value": 24490387
     },
     {
@@ -52,7 +52,7 @@
       "areaName": "全国",
       "timeCode": "2009",
       "timeName": "2009年度",
-      "unit": "ha",
+      "unit": "ｈａ",
       "value": 24461631
     },
     {
@@ -63,7 +63,7 @@
       "areaName": "全国",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "ｈａ",
       "value": 24432757
     },
     {
@@ -74,7 +74,7 @@
       "areaName": "全国",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "ｈａ",
       "value": 24436003
     }
   ],
@@ -82,7 +82,7 @@
     {
       "categoryCode": "B1106",
       "categoryName": "森林面積",
-      "categoryUnit": "ha"
+      "categoryUnit": "ｈａ"
     }
   ],
   "areas": [
