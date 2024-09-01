@@ -1,0 +1,154 @@
+{
+  "values": [
+    {
+      "categoryCode": "A1700",
+      "categoryName": "外国人人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 668675
+    },
+    {
+      "categoryCode": "A1700",
+      "categoryName": "外国人人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 720093
+    },
+    {
+      "categoryCode": "A1700",
+      "categoryName": "外国人人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 886397
+    },
+    {
+      "categoryCode": "A1700",
+      "categoryName": "外国人人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 1140326
+    },
+    {
+      "categoryCode": "A1700",
+      "categoryName": "外国人人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 1310545
+    },
+    {
+      "categoryCode": "A1700",
+      "categoryName": "外国人人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 1555505
+    },
+    {
+      "categoryCode": "A1700",
+      "categoryName": "外国人人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "人",
+      "value": 1648037
+    },
+    {
+      "categoryCode": "A1700",
+      "categoryName": "外国人人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "人",
+      "value": 1752368
+    },
+    {
+      "categoryCode": "A1700",
+      "categoryName": "外国人人口",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "人",
+      "value": 2402460
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "A1700",
+      "categoryName": "外国人人口",
+      "categoryUnit": "人"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "00000",
+      "areaName": "全国"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1980",
+      "timeName": "1980年度"
+    },
+    {
+      "timeCode": "1985",
+      "timeName": "1985年度"
+    },
+    {
+      "timeCode": "1990",
+      "timeName": "1990年度"
+    },
+    {
+      "timeCode": "1995",
+      "timeName": "1995年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2010",
+      "timeName": "2010年度"
+    },
+    {
+      "timeCode": "2015",
+      "timeName": "2015年度"
+    },
+    {
+      "timeCode": "2020",
+      "timeName": "2020年度"
+    }
+  ]
+}

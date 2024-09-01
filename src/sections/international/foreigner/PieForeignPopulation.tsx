@@ -2,12 +2,13 @@ import { ApexOptions } from 'apexcharts'
 
 import CardsApexPieChart from 'cards/CardsApexPieChart'
 
-import { saveDocument } from 'actions/saveDocument'
-import { saveValues } from 'actions/saveValues'
-import handleDocument from 'utils/document'
+import { actionSaveDocument } from 'actions/saveDocument'
+import { actionSaveValues } from 'actions/saveValues'
+import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
+import handleProps, { CardProps, RouterProps } from 'utils/props'
+import handleValue, { ValueType } from 'utils/value'
 
 const CARD_TITLE = '外国人人口の内訳'
 const CARD_ID = 'PieForeignPopulation'
@@ -32,40 +33,44 @@ interface Props {
   prefecture: PrefectureType
 }
 
-// valuesの取得と整形
-async function fetchValues(prefCode: string) {
-  const values = await handleEstatAPI().fetchValues({
-    ...ESTAT_PARAMS,
-    cdArea: prefCode,
-  })
+// values
+async function processValues(cardProps: CardProps, prefCode: string) {
+  if (process.env.NODE_ENV === 'development') {
+    const { fetchValues } = handleEstatAPI()
+    const values = await fetchValues(ESTAT_PARAMS)
+    await actionSaveValues(cardProps, values)
+  }
 
-  const formatValues = values.map((value) => {
-    return {
-      ...value,
-      unit: 'ha',
-    }
-  })
-  return formatValues
+  const { readValues } = handleValue(cardProps)
+  const values = readValues()
+
+  return values.filter((f) => f.areaCode === prefCode)
 }
+
+// document
+async function processDocument(
+  cardProps: CardProps,
+  values: ValueType[]
+): Promise<DocumentType> {
+  const { formatDocument } = handleDocument()
+  const document = formatDocument(values, 'pie')
+
+  if (process.env.NODE_ENV === 'development') {
+    await actionSaveDocument(cardProps, document)
+  }
+
+  return document
+}
+
 export default async function PieForeignPopulation({
   routerProps,
   prefecture,
 }: Props) {
   const { prefCode, prefName } = prefecture
-
   const title = `${prefName}の${CARD_TITLE}`
-
-  const saveProps = { ...routerProps, cardId: CARD_ID }
-
-  const values = await fetchValues(prefCode)
-  if (process.env.NODE_ENV === 'development') {
-    await saveValues(saveProps, values)
-  }
-
-  const document = handleDocument().formatDocument(values, 'pie')
-  if (process.env.NODE_ENV === 'development') {
-    await saveDocument(saveProps, document)
-  }
+  const cardProps = handleProps(routerProps).cardProps(CARD_ID)
+  const values = await processValues(cardProps, prefCode)
+  const document = await processDocument(cardProps, values)
 
   return (
     <CardsApexPieChart

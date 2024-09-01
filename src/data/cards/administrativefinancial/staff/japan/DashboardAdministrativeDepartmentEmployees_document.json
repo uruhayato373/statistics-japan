@@ -1,0 +1,394 @@
+{
+  "values": [
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "人",
+      "value": 318586
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "人",
+      "value": 315416
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 302683
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "人",
+      "value": 296977
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "人",
+      "value": 292413
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "人",
+      "value": 287284
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "人",
+      "value": 282394
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 276988
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "人",
+      "value": 271859
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "人",
+      "value": 264737
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2008",
+      "timeName": "2008年度",
+      "unit": "人",
+      "value": 256125
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2009",
+      "timeName": "2009年度",
+      "unit": "人",
+      "value": 248731
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "人",
+      "value": 241677
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "人",
+      "value": 237468
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "人",
+      "value": 233417
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "人",
+      "value": 231485
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "人",
+      "value": 231350
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "人",
+      "value": 230864
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "人",
+      "value": 230718
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "人",
+      "value": 231523
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "人",
+      "value": 232134
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "人",
+      "value": 233319
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "人",
+      "value": 234302
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2021",
+      "timeName": "2021年度",
+      "unit": "人",
+      "value": 236374
+    },
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2022",
+      "timeName": "2022年度",
+      "unit": "人",
+      "value": 236539
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "D1201",
+      "categoryName": "一般行政部門職員数（都道府県）",
+      "categoryUnit": "人"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "00000",
+      "areaName": "全国"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1998",
+      "timeName": "1998年度"
+    },
+    {
+      "timeCode": "1999",
+      "timeName": "1999年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2001",
+      "timeName": "2001年度"
+    },
+    {
+      "timeCode": "2002",
+      "timeName": "2002年度"
+    },
+    {
+      "timeCode": "2003",
+      "timeName": "2003年度"
+    },
+    {
+      "timeCode": "2004",
+      "timeName": "2004年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2006",
+      "timeName": "2006年度"
+    },
+    {
+      "timeCode": "2007",
+      "timeName": "2007年度"
+    },
+    {
+      "timeCode": "2008",
+      "timeName": "2008年度"
+    },
+    {
+      "timeCode": "2009",
+      "timeName": "2009年度"
+    },
+    {
+      "timeCode": "2010",
+      "timeName": "2010年度"
+    },
+    {
+      "timeCode": "2011",
+      "timeName": "2011年度"
+    },
+    {
+      "timeCode": "2012",
+      "timeName": "2012年度"
+    },
+    {
+      "timeCode": "2013",
+      "timeName": "2013年度"
+    },
+    {
+      "timeCode": "2014",
+      "timeName": "2014年度"
+    },
+    {
+      "timeCode": "2015",
+      "timeName": "2015年度"
+    },
+    {
+      "timeCode": "2016",
+      "timeName": "2016年度"
+    },
+    {
+      "timeCode": "2017",
+      "timeName": "2017年度"
+    },
+    {
+      "timeCode": "2018",
+      "timeName": "2018年度"
+    },
+    {
+      "timeCode": "2019",
+      "timeName": "2019年度"
+    },
+    {
+      "timeCode": "2020",
+      "timeName": "2020年度"
+    },
+    {
+      "timeCode": "2021",
+      "timeName": "2021年度"
+    },
+    {
+      "timeCode": "2022",
+      "timeName": "2022年度"
+    }
+  ]
+}
