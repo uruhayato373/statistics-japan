@@ -1,8 +1,10 @@
+import { ValueType } from 'utils/value'
+
 import extractCommonTimes from './modules/extractCommonTimes'
 import formatAreas from './modules/formatAreas'
 import formatCategories from './modules/formatCategories'
 import formatTimes from './modules/formatTimes'
-import { ValueType, DocumentType } from './types/document'
+import { DocumentType } from './types/document'
 
 export type * from './types/document'
 

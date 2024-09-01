@@ -1,13 +1,9 @@
 import path from 'path'
 
-import { RouterProps } from 'utils/props'
+import { CardProps } from 'utils/props'
 
-export interface SaveProps extends RouterProps {
-  cardId: string
-}
-
-export function generateSaveValuesFilePath(saveProps: SaveProps) {
-  const { fieldId, menuId, kindId, pageId, cardId } = saveProps
+export function generateSaveValuesFilePath(cardProps: CardProps) {
+  const { fieldId, menuId, kindId, pageId, cardId } = cardProps
   const filePath = path.join(
     process.cwd(),
     'src',

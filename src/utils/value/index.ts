@@ -1,6 +1,8 @@
-import fs from 'fs'
+import { CardProps } from 'utils/props'
 
-import { generateSaveValuesFilePath, SaveProps } from './modules/filePath'
+import { generateSaveValuesFilePath } from './modules/filePath'
+import { readValues } from './modules/readValues'
+import { saveValues } from './modules/saveValues'
 import { ValueType } from './types/value'
 
 export type * from './types/value'
@@ -8,25 +10,19 @@ export type * from './types/value'
 interface HandleValuesResult {
   filePath: string
   readValues: () => ValueType[]
+  saveValues: (values: ValueType[]) => Promise<{
+    success: boolean
+    message: string
+  }>
 }
 
-const handleValue = (saveProps: SaveProps): HandleValuesResult => {
-  const filePath = generateSaveValuesFilePath(saveProps)
-
-  const readValues = (): ValueType[] => {
-    let values: ValueType[] | null = null
-    try {
-      const rawData = fs.readFileSync(filePath, 'utf-8')
-      values = JSON.parse(rawData)
-    } catch (error) {
-      console.error(`ファイルの読み込みエラー: ${error}`)
-    }
-    return values
-  }
+const handleValue = (cardProps: CardProps): HandleValuesResult => {
+  const filePath = generateSaveValuesFilePath(cardProps)
 
   return {
     filePath,
-    readValues,
+    readValues: () => readValues(filePath),
+    saveValues: async (values: ValueType[]) => saveValues(filePath, values),
   }
 }
 

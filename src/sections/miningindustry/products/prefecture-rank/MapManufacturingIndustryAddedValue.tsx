@@ -57,11 +57,8 @@ export default async function MapManufacturingIndustryAddedValue({
   routerProps,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`
-
   const saveProps = { ...routerProps, cardId: CARD_ID }
-
   const topojson = await handleGeoshape('prefecture').readJson()
-
   const values = await processValues(saveProps)
   const document = await processDocument(saveProps, values)
 

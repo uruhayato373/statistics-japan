@@ -5,13 +5,13 @@ import path from 'path'
 import fs from 'fs-extra'
 
 import { DocumentType } from 'utils/document'
-import { SaveProps } from 'utils/props'
+import { CardProps } from 'utils/props'
 
-export async function saveDocument(
-  saveProps: SaveProps,
+export async function actionSaveDocument(
+  cardProps: CardProps,
   document: DocumentType
 ) {
-  const filePath = generateSaveFilePath(saveProps)
+  const filePath = generateSaveFilePath(cardProps)
 
   try {
     // ディレクトリが存在しない場合は作成し、データを書き込み
@@ -27,8 +27,8 @@ export async function saveDocument(
   }
 }
 
-function generateSaveFilePath(saveProps: SaveProps) {
-  const { fieldId, menuId, kindId, pageId, prefCode, cardId } = saveProps
+function generateSaveFilePath(cardProps: CardProps) {
+  const { fieldId, menuId, kindId, pageId, prefCode, cardId } = cardProps
   const filePath = path.join(
     process.cwd(),
     'src',

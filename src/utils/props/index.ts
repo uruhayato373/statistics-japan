@@ -9,7 +9,7 @@ export interface RouterProps {
   prefCode?: string
   cityCode?: string
 }
-export interface SaveProps extends RouterProps {
+export interface CardProps extends RouterProps {
   cardId: string
 }
 
@@ -31,6 +31,7 @@ const handleProps = ({
   }
   return {
     routerProps,
+    cardProps: (cardId: string) => ({ ...routerProps, cardId }),
     metaProps: async () => generateMetaProps(routerProps),
     breadcrumbsProps: async () => generateBreadcrumbsProps(routerProps),
   }

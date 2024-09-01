@@ -4,8 +4,8 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import CardsHighchartsScatterChart from 'cards/CardsHighchartsScatterChart'
 
-import { saveDocument } from 'actions/saveDocument'
-import { saveValues } from 'actions/saveValues'
+import { actionSaveDocument } from 'actions/saveDocument'
+import { actionSaveValues } from 'actions/saveValues'
 import handleDocument from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
@@ -56,12 +56,12 @@ export default async function ScatterChartTotalAreaHabitableArea({
 
   const values = await fetchValues()
   if (process.env.NODE_ENV === 'development') {
-    await saveValues(saveProps, values)
+    await actionSaveValues(saveProps, values)
   }
 
   const document = handleDocument().formatDocument(values)
   if (process.env.NODE_ENV === 'development') {
-    await saveDocument(saveProps, document)
+    await actionSaveDocument(saveProps, document)
   }
 
   return (
