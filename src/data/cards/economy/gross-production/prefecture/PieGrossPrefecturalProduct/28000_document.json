@@ -8,7 +8,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 93698
     },
     {
@@ -19,7 +19,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 102778
     },
     {
@@ -30,7 +30,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 90828
     },
     {
@@ -41,7 +41,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 88844
     },
     {
@@ -52,7 +52,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 101199
     },
     {
@@ -63,7 +63,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 112546
     },
     {
@@ -74,7 +74,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 109359
     },
     {
@@ -85,7 +85,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 100602
     },
     {
@@ -96,7 +96,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 96628
     },
     {
@@ -107,7 +107,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 70767
     },
     {
@@ -118,7 +118,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 74430
     },
     {
@@ -129,7 +129,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 68118
     },
     {
@@ -140,7 +140,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 64086
     },
     {
@@ -151,7 +151,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 72361
     },
     {
@@ -162,7 +162,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 80165
     },
     {
@@ -173,7 +173,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 77699
     },
     {
@@ -184,7 +184,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 68809
     },
     {
@@ -195,7 +195,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 66856
     },
     {
@@ -206,7 +206,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5454
     },
     {
@@ -217,7 +217,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5145
     },
     {
@@ -228,7 +228,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5274
     },
     {
@@ -239,7 +239,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5383
     },
     {
@@ -250,7 +250,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5513
     },
     {
@@ -261,7 +261,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5514
     },
     {
@@ -272,7 +272,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5519
     },
     {
@@ -283,7 +283,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5458
     },
     {
@@ -294,7 +294,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5345
     },
     {
@@ -305,7 +305,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 17477
     },
     {
@@ -316,7 +316,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 23203
     },
     {
@@ -327,7 +327,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 17436
     },
     {
@@ -338,7 +338,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 19375
     },
     {
@@ -349,7 +349,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 23325
     },
     {
@@ -360,7 +360,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 26867
     },
     {
@@ -371,7 +371,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 26141
     },
     {
@@ -382,7 +382,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 26335
     },
     {
@@ -393,7 +393,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 24427
     },
     {
@@ -404,7 +404,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5931
     },
     {
@@ -415,7 +415,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5858
     },
     {
@@ -426,7 +426,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 7050
     },
     {
@@ -437,7 +437,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 8072
     },
     {
@@ -448,7 +448,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 7516
     },
     {
@@ -459,7 +459,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5912
     },
     {
@@ -470,7 +470,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5316
     },
     {
@@ -481,7 +481,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5299
     },
     {
@@ -492,7 +492,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5334
     },
     {
@@ -503,7 +503,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5215147
     },
     {
@@ -514,7 +514,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 4911505
     },
     {
@@ -525,7 +525,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5172593
     },
     {
@@ -536,7 +536,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5385196
     },
     {
@@ -547,7 +547,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5750931
     },
     {
@@ -558,7 +558,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5763515
     },
     {
@@ -569,7 +569,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5886018
     },
     {
@@ -580,7 +580,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5930596
     },
     {
@@ -591,7 +591,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 5923865
     },
     {
@@ -602,7 +602,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 688792
     },
     {
@@ -613,7 +613,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 727769
     },
     {
@@ -624,7 +624,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 819748
     },
     {
@@ -635,7 +635,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 847701
     },
     {
@@ -646,7 +646,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 859273
     },
     {
@@ -657,7 +657,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 952173
     },
     {
@@ -668,7 +668,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 904723
     },
     {
@@ -679,7 +679,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 899246
     },
     {
@@ -690,7 +690,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 891622
     },
     {
@@ -701,7 +701,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 612552
     },
     {
@@ -712,7 +712,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 585492
     },
     {
@@ -723,7 +723,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 690670
     },
     {
@@ -734,7 +734,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 716834
     },
     {
@@ -745,7 +745,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 919824
     },
     {
@@ -756,7 +756,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 952817
     },
     {
@@ -767,7 +767,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 960130
     },
     {
@@ -778,7 +778,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 936641
     },
     {
@@ -789,7 +789,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 925465
     },
     {
@@ -800,7 +800,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2042465
     },
     {
@@ -811,7 +811,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2131204
     },
     {
@@ -822,7 +822,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2254879
     },
     {
@@ -833,7 +833,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2227917
     },
     {
@@ -844,7 +844,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2243425
     },
     {
@@ -855,7 +855,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2224308
     },
     {
@@ -866,7 +866,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2298575
     },
     {
@@ -877,7 +877,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2283225
     },
     {
@@ -888,7 +888,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2221228
     },
     {
@@ -899,7 +899,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 687097
     },
     {
@@ -910,7 +910,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 687302
     },
     {
@@ -921,7 +921,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 710774
     },
     {
@@ -932,7 +932,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 691390
     },
     {
@@ -943,7 +943,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 697401
     },
     {
@@ -954,7 +954,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 661748
     },
     {
@@ -965,7 +965,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 660413
     },
     {
@@ -976,7 +976,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 655056
     },
     {
@@ -987,7 +987,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 711234
     },
     {
@@ -998,7 +998,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2819225
     },
     {
@@ -1009,7 +1009,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2835923
     },
     {
@@ -1020,7 +1020,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2822999
     },
     {
@@ -1031,7 +1031,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2818891
     },
     {
@@ -1042,7 +1042,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2839364
     },
     {
@@ -1053,7 +1053,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2831824
     },
     {
@@ -1064,7 +1064,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2832568
     },
     {
@@ -1075,7 +1075,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2858057
     },
     {
@@ -1086,7 +1086,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2895254
     },
     {
@@ -1097,7 +1097,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1088154
     },
     {
@@ -1108,7 +1108,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1165259
     },
     {
@@ -1119,7 +1119,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1076893
     },
     {
@@ -1130,7 +1130,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1246221
     },
     {
@@ -1141,7 +1141,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1273553
     },
     {
@@ -1152,7 +1152,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1197977
     },
     {
@@ -1163,7 +1163,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1232725
     },
     {
@@ -1174,7 +1174,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1187685
     },
     {
@@ -1185,7 +1185,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1176554
     },
     {
@@ -1196,7 +1196,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 592924
     },
     {
@@ -1207,7 +1207,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 576603
     },
     {
@@ -1218,7 +1218,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 583586
     },
     {
@@ -1229,7 +1229,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 548986
     },
     {
@@ -1240,7 +1240,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 562074
     },
     {
@@ -1251,7 +1251,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 558255
     },
     {
@@ -1262,7 +1262,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 537924
     },
     {
@@ -1273,7 +1273,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 544536
     },
     {
@@ -1284,7 +1284,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 533068
     },
     {
@@ -1295,7 +1295,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 540598
     },
     {
@@ -1306,7 +1306,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 539298
     },
     {
@@ -1317,7 +1317,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 555253
     },
     {
@@ -1328,7 +1328,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 516644
     },
     {
@@ -1339,7 +1339,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 527130
     },
     {
@@ -1350,7 +1350,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 576965
     },
     {
@@ -1361,7 +1361,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 616092
     },
     {
@@ -1372,7 +1372,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 612679
     },
     {
@@ -1383,7 +1383,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 574235
     },
     {
@@ -1394,7 +1394,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1186701
     },
     {
@@ -1405,7 +1405,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1217032
     },
     {
@@ -1416,7 +1416,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1263304
     },
     {
@@ -1427,7 +1427,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1166910
     },
     {
@@ -1438,7 +1438,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1308836
     },
     {
@@ -1449,7 +1449,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1383168
     },
     {
@@ -1460,7 +1460,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1462041
     },
     {
@@ -1471,7 +1471,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1503045
     },
     {
@@ -1482,7 +1482,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1516003
     },
     {
@@ -1493,7 +1493,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 684418
     },
     {
@@ -1504,7 +1504,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 655931
     },
     {
@@ -1515,7 +1515,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 627664
     },
     {
@@ -1526,7 +1526,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 643870
     },
     {
@@ -1537,7 +1537,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 653677
     },
     {
@@ -1548,7 +1548,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 665642
     },
     {
@@ -1559,7 +1559,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 658961
     },
     {
@@ -1570,7 +1570,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 659445
     },
     {
@@ -1581,7 +1581,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 672595
     },
     {
@@ -1592,7 +1592,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 886117
     },
     {
@@ -1603,7 +1603,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 862289
     },
     {
@@ -1614,7 +1614,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 847325
     },
     {
@@ -1625,7 +1625,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 825257
     },
     {
@@ -1636,7 +1636,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 849740
     },
     {
@@ -1647,7 +1647,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 882422
     },
     {
@@ -1658,7 +1658,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 929603
     },
     {
@@ -1669,7 +1669,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 921720
     },
     {
@@ -1680,7 +1680,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 934246
     },
     {
@@ -1691,7 +1691,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1706128
     },
     {
@@ -1702,7 +1702,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1700502
     },
     {
@@ -1713,7 +1713,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1759627
     },
     {
@@ -1724,7 +1724,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1766124
     },
     {
@@ -1735,7 +1735,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1884731
     },
     {
@@ -1746,7 +1746,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1941830
     },
     {
@@ -1757,7 +1757,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1943382
     },
     {
@@ -1768,7 +1768,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 1971638
     },
     {
@@ -1779,7 +1779,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 2077997
     },
     {
@@ -1790,7 +1790,7 @@
       "areaName": "兵庫県",
       "timeCode": "2011",
       "timeName": "2011年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 926943
     },
     {
@@ -1801,7 +1801,7 @@
       "areaName": "兵庫県",
       "timeCode": "2012",
       "timeName": "2012年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 968810
     },
     {
@@ -1812,7 +1812,7 @@
       "areaName": "兵庫県",
       "timeCode": "2013",
       "timeName": "2013年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 952426
     },
     {
@@ -1823,7 +1823,7 @@
       "areaName": "兵庫県",
       "timeCode": "2014",
       "timeName": "2014年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 886290
     },
     {
@@ -1834,7 +1834,7 @@
       "areaName": "兵庫県",
       "timeCode": "2015",
       "timeName": "2015年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 921135
     },
     {
@@ -1845,7 +1845,7 @@
       "areaName": "兵庫県",
       "timeCode": "2016",
       "timeName": "2016年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 906372
     },
     {
@@ -1856,7 +1856,7 @@
       "areaName": "兵庫県",
       "timeCode": "2017",
       "timeName": "2017年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 933150
     },
     {
@@ -1867,7 +1867,7 @@
       "areaName": "兵庫県",
       "timeCode": "2018",
       "timeName": "2018年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 928321
     },
     {
@@ -1878,7 +1878,7 @@
       "areaName": "兵庫県",
       "timeCode": "2019",
       "timeName": "2019年度",
-      "unit": "ha",
+      "unit": "百万円",
       "value": 905007
     }
   ],
@@ -1886,97 +1886,97 @@
     {
       "categoryCode": "C112201",
       "categoryName": "県内総生産額（農林水産業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112202",
       "categoryName": "県内総生産額（農業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112203",
       "categoryName": "県内総生産額（林業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112204",
       "categoryName": "県内総生産額（水産業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112205",
       "categoryName": "県内総生産額（鉱業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112206",
       "categoryName": "県内総生産額（製造業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112207",
       "categoryName": "県内総生産額（建設業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112208",
       "categoryName": "県内総生産額（電気・ガス・水道・廃棄物処理業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112209",
       "categoryName": "県内総生産額（卸売・小売業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112210",
       "categoryName": "県内総生産額（金融・保険業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112211",
       "categoryName": "県内総生産額（不動産業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C1122121",
       "categoryName": "県内総生産額（運輸・郵便業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C1122122",
       "categoryName": "県内総生産額（情報通信業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112213",
       "categoryName": "県内総生産額（宿泊・飲食サービス業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112214",
       "categoryName": "県内総生産額（専門・科学技術、業務支援サービス業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112215",
       "categoryName": "県内総生産額（公務）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112216",
       "categoryName": "県内総生産額（教育）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112217",
       "categoryName": "県内総生産額（保健衛生・社会事業）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     },
     {
       "categoryCode": "C112218",
       "categoryName": "県内総生産額（その他のサービス）（平成27年基準）",
-      "categoryUnit": "ha"
+      "categoryUnit": "百万円"
     }
   ],
   "areas": [
