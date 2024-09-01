@@ -1,4 +1,5 @@
-import { DocumentType, ValueType } from 'utils/document'
+import { DocumentType } from 'utils/document'
+import { ValueType } from 'utils/value'
 
 import {
   calcAverage,
