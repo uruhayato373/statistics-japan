@@ -1,3 +1,7 @@
+import { Suspense } from 'react'
+
+import CircularProgressCards from 'components/CircularProgressCards'
+
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
 import { actionSaveDocument } from 'actions/saveDocument'
@@ -69,5 +73,9 @@ export default async function TableJuniorHighSchool({
   const values = await processValues(cardProps, prefCode)
   const document = await processDocument(cardProps, values)
 
-  return <CardsReactTimeTable title={title} document={document} />
+  return (
+    <Suspense fallback={<CircularProgressCards />}>
+      <CardsReactTimeTable title={title} document={document} />
+    </Suspense>
+  )
 }

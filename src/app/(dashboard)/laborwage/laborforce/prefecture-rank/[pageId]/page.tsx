@@ -30,7 +30,14 @@ interface ComponentProps {
 // 動的インポートとコンポーネントマッピング
 const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'laborforce-population': dynamic(
-    () => import('views/laborwage/laborforce/prefecture-rank/Laborforce')
+    () =>
+      import('views/laborwage/laborforce/prefecture-rank/LaborForcePopulation')
+  ),
+  'non-laborforce-population': dynamic(
+    () =>
+      import(
+        'views/laborwage/laborforce/prefecture-rank/NonLaborForcePopulation'
+      )
   ),
 }
 

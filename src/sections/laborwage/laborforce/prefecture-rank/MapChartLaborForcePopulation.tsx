@@ -2,17 +2,18 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsReactRankingTable from 'cards/CardsReactRankingTable'
+import CardsHighchartsMapChart from 'cards/CardsHighchartsMapChart'
 
 import { actionSaveDocument } from 'actions/saveDocument'
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
+import handleGeoshape from 'utils/geoshape'
 import { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
 const CARD_TITLE = '労働力人口'
-const CARD_ID = 'RankingTableHabitableArea'
+const CARD_ID = 'MapChartLaborForcePopulation'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010106',
@@ -53,15 +54,22 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function RankingTableLaborforce({ routerProps }: Props) {
+export default async function MapChartLaborForcePopulation({
+  routerProps,
+}: Props) {
   const title = `都道府県の${CARD_TITLE}`
   const cardProps = { ...routerProps, cardId: CARD_ID }
+  const topojson = await handleGeoshape('prefecture').readJson()
   const values = await processValues(cardProps)
   const document = await processDocument(cardProps, values)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactRankingTable title={title} document={document} />
+      <CardsHighchartsMapChart
+        title={title}
+        document={document}
+        topojson={topojson}
+      />
     </Suspense>
   )
 }
