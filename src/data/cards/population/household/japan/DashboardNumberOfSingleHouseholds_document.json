@@ -1,0 +1,169 @@
+{
+  "values": [
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "世帯",
+      "value": 4236094
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "世帯",
+      "value": 5387595
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "世帯",
+      "value": 7894636
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "世帯",
+      "value": 9389660
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "世帯",
+      "value": 11239389
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "世帯",
+      "value": 12911318
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "世帯",
+      "value": 14457083
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "世帯",
+      "value": 16784507
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "世帯",
+      "value": 18417922
+    },
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯",
+      "areaCode": "00000",
+      "areaName": "全国",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "世帯",
+      "value": 21151042
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "A810105",
+      "categoryName": "単独世帯数",
+      "categoryUnit": "世帯"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "00000",
+      "areaName": "全国"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1975",
+      "timeName": "1975年度"
+    },
+    {
+      "timeCode": "1980",
+      "timeName": "1980年度"
+    },
+    {
+      "timeCode": "1985",
+      "timeName": "1985年度"
+    },
+    {
+      "timeCode": "1990",
+      "timeName": "1990年度"
+    },
+    {
+      "timeCode": "1995",
+      "timeName": "1995年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2010",
+      "timeName": "2010年度"
+    },
+    {
+      "timeCode": "2015",
+      "timeName": "2015年度"
+    },
+    {
+      "timeCode": "2020",
+      "timeName": "2020年度"
+    }
+  ]
+}
