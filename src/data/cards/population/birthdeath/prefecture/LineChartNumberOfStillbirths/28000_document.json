@@ -1,0 +1,1026 @@
+{
+  "values": [
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "胎",
+      "value": 4440
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "胎",
+      "value": 4520
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "胎",
+      "value": 3949
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "胎",
+      "value": 3669
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "胎",
+      "value": 3348
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "胎",
+      "value": 3200
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "胎",
+      "value": 3303
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "胎",
+      "value": 3223
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "胎",
+      "value": 2861
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "胎",
+      "value": 2873
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "胎",
+      "value": 2657
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "胎",
+      "value": 2622
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "胎",
+      "value": 2484
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "胎",
+      "value": 2408
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "胎",
+      "value": 2190
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "胎",
+      "value": 2064
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "胎",
+      "value": 2005
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "胎",
+      "value": 1946
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "胎",
+      "value": 1781
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "胎",
+      "value": 1678
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "胎",
+      "value": 1439
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "胎",
+      "value": 1563
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "胎",
+      "value": 1521
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "胎",
+      "value": 1510
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "胎",
+      "value": 1582
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "胎",
+      "value": 1578
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "胎",
+      "value": 1545
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "胎",
+      "value": 1528
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "胎",
+      "value": 1453
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "胎",
+      "value": 1358
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "胎",
+      "value": 1296
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "胎",
+      "value": 1247
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "胎",
+      "value": 1286
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2008",
+      "timeName": "2008年度",
+      "unit": "胎",
+      "value": 1143
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2009",
+      "timeName": "2009年度",
+      "unit": "胎",
+      "value": 1133
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "胎",
+      "value": 1070
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "胎",
+      "value": 1028
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "胎",
+      "value": 1066
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "胎",
+      "value": 964
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "胎",
+      "value": 951
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "胎",
+      "value": 916
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "胎",
+      "value": 856
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "胎",
+      "value": 813
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "胎",
+      "value": 852
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "胎",
+      "value": 770
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "胎",
+      "value": 706
+    },
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2021",
+      "timeName": "2021年度",
+      "unit": "胎",
+      "value": 632
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "胎",
+      "value": 233
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "胎",
+      "value": 253
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "胎",
+      "value": 253
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "胎",
+      "value": 206
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "胎",
+      "value": 216
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "胎",
+      "value": 212
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "胎",
+      "value": 238
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "胎",
+      "value": 187
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "胎",
+      "value": 225
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "胎",
+      "value": 162
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "胎",
+      "value": 176
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "胎",
+      "value": 148
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "胎",
+      "value": 184
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2008",
+      "timeName": "2008年度",
+      "unit": "胎",
+      "value": 141
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2009",
+      "timeName": "2009年度",
+      "unit": "胎",
+      "value": 158
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2010",
+      "timeName": "2010年度",
+      "unit": "胎",
+      "value": 147
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2011",
+      "timeName": "2011年度",
+      "unit": "胎",
+      "value": 139
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2012",
+      "timeName": "2012年度",
+      "unit": "胎",
+      "value": 142
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2013",
+      "timeName": "2013年度",
+      "unit": "胎",
+      "value": 125
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2014",
+      "timeName": "2014年度",
+      "unit": "胎",
+      "value": 121
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2015",
+      "timeName": "2015年度",
+      "unit": "胎",
+      "value": 125
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2016",
+      "timeName": "2016年度",
+      "unit": "胎",
+      "value": 104
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2017",
+      "timeName": "2017年度",
+      "unit": "胎",
+      "value": 102
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2018",
+      "timeName": "2018年度",
+      "unit": "胎",
+      "value": 87
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2019",
+      "timeName": "2019年度",
+      "unit": "胎",
+      "value": 89
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2020",
+      "timeName": "2020年度",
+      "unit": "胎",
+      "value": 101
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2021",
+      "timeName": "2021年度",
+      "unit": "胎",
+      "value": 107
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "A4270",
+      "categoryName": "死産数",
+      "categoryUnit": "胎"
+    },
+    {
+      "categoryCode": "A4271",
+      "categoryName": "死産数（妊娠満22週以後）",
+      "categoryUnit": "胎"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "28000",
+      "areaName": "兵庫県"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1975",
+      "timeName": "1975年度"
+    },
+    {
+      "timeCode": "1976",
+      "timeName": "1976年度"
+    },
+    {
+      "timeCode": "1977",
+      "timeName": "1977年度"
+    },
+    {
+      "timeCode": "1978",
+      "timeName": "1978年度"
+    },
+    {
+      "timeCode": "1979",
+      "timeName": "1979年度"
+    },
+    {
+      "timeCode": "1980",
+      "timeName": "1980年度"
+    },
+    {
+      "timeCode": "1981",
+      "timeName": "1981年度"
+    },
+    {
+      "timeCode": "1982",
+      "timeName": "1982年度"
+    },
+    {
+      "timeCode": "1983",
+      "timeName": "1983年度"
+    },
+    {
+      "timeCode": "1984",
+      "timeName": "1984年度"
+    },
+    {
+      "timeCode": "1985",
+      "timeName": "1985年度"
+    },
+    {
+      "timeCode": "1986",
+      "timeName": "1986年度"
+    },
+    {
+      "timeCode": "1987",
+      "timeName": "1987年度"
+    },
+    {
+      "timeCode": "1988",
+      "timeName": "1988年度"
+    },
+    {
+      "timeCode": "1989",
+      "timeName": "1989年度"
+    },
+    {
+      "timeCode": "1990",
+      "timeName": "1990年度"
+    },
+    {
+      "timeCode": "1991",
+      "timeName": "1991年度"
+    },
+    {
+      "timeCode": "1992",
+      "timeName": "1992年度"
+    },
+    {
+      "timeCode": "1993",
+      "timeName": "1993年度"
+    },
+    {
+      "timeCode": "1994",
+      "timeName": "1994年度"
+    },
+    {
+      "timeCode": "1995",
+      "timeName": "1995年度"
+    },
+    {
+      "timeCode": "1996",
+      "timeName": "1996年度"
+    },
+    {
+      "timeCode": "1997",
+      "timeName": "1997年度"
+    },
+    {
+      "timeCode": "1998",
+      "timeName": "1998年度"
+    },
+    {
+      "timeCode": "1999",
+      "timeName": "1999年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2001",
+      "timeName": "2001年度"
+    },
+    {
+      "timeCode": "2002",
+      "timeName": "2002年度"
+    },
+    {
+      "timeCode": "2003",
+      "timeName": "2003年度"
+    },
+    {
+      "timeCode": "2004",
+      "timeName": "2004年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2006",
+      "timeName": "2006年度"
+    },
+    {
+      "timeCode": "2007",
+      "timeName": "2007年度"
+    },
+    {
+      "timeCode": "2008",
+      "timeName": "2008年度"
+    },
+    {
+      "timeCode": "2009",
+      "timeName": "2009年度"
+    },
+    {
+      "timeCode": "2010",
+      "timeName": "2010年度"
+    },
+    {
+      "timeCode": "2011",
+      "timeName": "2011年度"
+    },
+    {
+      "timeCode": "2012",
+      "timeName": "2012年度"
+    },
+    {
+      "timeCode": "2013",
+      "timeName": "2013年度"
+    },
+    {
+      "timeCode": "2014",
+      "timeName": "2014年度"
+    },
+    {
+      "timeCode": "2015",
+      "timeName": "2015年度"
+    },
+    {
+      "timeCode": "2016",
+      "timeName": "2016年度"
+    },
+    {
+      "timeCode": "2017",
+      "timeName": "2017年度"
+    },
+    {
+      "timeCode": "2018",
+      "timeName": "2018年度"
+    },
+    {
+      "timeCode": "2019",
+      "timeName": "2019年度"
+    },
+    {
+      "timeCode": "2020",
+      "timeName": "2020年度"
+    },
+    {
+      "timeCode": "2021",
+      "timeName": "2021年度"
+    }
+  ]
+}

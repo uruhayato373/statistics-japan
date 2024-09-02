@@ -9,8 +9,13 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 import DashboardBirth from 'sections/population/birthdeath/DashboardBirth'
 import DashboardNumberOfDeaths from 'sections/population/birthdeath/DashboardNumberOfDeaths'
 import DashboardTotalFertilityRate from 'sections/population/birthdeath/DashboardTotalFertilityRate'
+import LineChartNumberOfStillbirths from 'sections/population/birthdeath/LineChartNumberOfStillbirths'
+import PieChartNumberOfBirthsByMothersAge from 'sections/population/birthdeath/PieChartNumberOfBirthsByMothersAge'
+import PyramidChartNumberOfDeaths from 'sections/population/birthdeath/PyramidChartNumberOfDeaths'
 import TableBirth from 'sections/population/birthdeath/TableBirth'
 import TableDeath from 'sections/population/birthdeath/TableDeath'
+import TableMortalityRate from 'sections/population/birthdeath/TableMortalityRate'
+import TableNumberOfNeonatalDeaths from 'sections/population/birthdeath/TableNumberOfNeonatalDeaths'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -47,6 +52,24 @@ export default async function PrefectureView({ routerProps }: Props) {
                 prefecture={currentPrefecture}
               />
             </Grid>
+            <Grid item xs={12} md={5} lg={5}>
+              <PyramidChartNumberOfDeaths
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={5}>
+              <PieChartNumberOfBirthsByMothersAge
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={8}>
+              <LineChartNumberOfStillbirths
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <TableBirth
                 routerProps={routerProps}
@@ -55,6 +78,18 @@ export default async function PrefectureView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <TableDeath
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableNumberOfNeonatalDeaths
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableMortalityRate
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

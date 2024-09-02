@@ -203,12 +203,14 @@
     {
       "categoryCode": "A710101",
       "categoryName": "一般世帯数",
-      "categoryUnit": "世帯"
+      "categoryUnit": "世帯",
+      "type": "column"
     },
     {
       "categoryCode": "A710211",
       "categoryName": "一般世帯平均人員数",
-      "categoryUnit": "人"
+      "categoryUnit": "人",
+      "type": "line"
     }
   ],
   "areas": [

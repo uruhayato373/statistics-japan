@@ -19,6 +19,13 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'number-of-births': dynamic(
     () => import('views/population/birthdeath/prefecture-rank/NumberOfBirths')
   ),
+  'number-of-deaths': dynamic(
+    () => import('views/population/birthdeath/prefecture-rank/NumberOfDeaths')
+  ),
+  'total-fertility-rate': dynamic(
+    () =>
+      import('views/population/birthdeath/prefecture-rank/TotalFertilityRate')
+  ),
 }
 
 export async function generateStaticParams() {

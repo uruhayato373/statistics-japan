@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardGeneralHousehold from 'sections/population/household/DashboardGeneralHousehold'
+import DashboardNumberOfGeneralHouseholds from 'sections/population/household/DashboardNumberOfGeneralHouseholds'
 import DashboardNumberOfNuclearFamilyHouseholds from 'sections/population/household/DashboardNumberOfNuclearFamilyHouseholds'
 import DashboardNumberOfSingleHouseholds from 'sections/population/household/DashboardNumberOfSingleHouseholds'
 import LineChartHousehold from 'sections/population/household/LineChartHousehold'
@@ -35,7 +35,7 @@ export default async function TotalPopulationJapan({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardGeneralHousehold
+              <DashboardNumberOfGeneralHouseholds
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

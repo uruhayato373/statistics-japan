@@ -10,13 +10,33 @@
     "menuId": "population"
   },
   {
-    "pageId": "general-household",
+    "pageId": "number-of-general-households",
     "pageTitle": "一般世帯数",
+    "menuId": "household"
+  },
+  {
+    "pageId": "number-of-nuclear-family-households",
+    "pageTitle": "核家族世帯数",
+    "menuId": "household"
+  },
+  {
+    "pageId": "number-of-single-households",
+    "pageTitle": "単独世帯数",
     "menuId": "household"
   },
   {
     "pageId": "number-of-births",
     "pageTitle": "出生数",
+    "menuId": "birthdeath"
+  },
+  {
+    "pageId": "number-of-deaths",
+    "pageTitle": "死亡数",
+    "menuId": "birthdeath"
+  },
+  {
+    "pageId": "total-fertility-rate",
+    "pageTitle": "合計特殊出生率",
     "menuId": "birthdeath"
   },
   {

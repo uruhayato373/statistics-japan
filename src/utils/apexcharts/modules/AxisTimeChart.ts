@@ -21,7 +21,7 @@ const formatAxisTimeChart = (
             return {
               x: time.timeName,
               y: value ? value.value : null,
-              unit: value.unit,
+              unit: value ? value.unit : null,
             }
           }),
           type: c.type ? c.type : 'line',
@@ -41,7 +41,7 @@ const formatAxisTimeChart = (
             return {
               x: time.timeName,
               y: value ? value.value : null,
-              unit: value.unit,
+              unit: value ? value.unit : null,
             }
           }),
           type: 'line',

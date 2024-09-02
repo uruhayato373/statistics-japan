@@ -76,6 +76,9 @@ async function processDocument(
   const { formatDocument } = handleDocument()
   const document = formatDocument(values)
 
+  document.categories[0].type = 'column'
+  document.categories[1].type = 'line'
+
   if (process.env.NODE_ENV === 'development') {
     await actionSaveDocument(cardProps, document)
   }

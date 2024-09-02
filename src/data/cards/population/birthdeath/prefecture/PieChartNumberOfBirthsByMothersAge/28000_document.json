@@ -1,0 +1,3458 @@
+{
+  "values": [
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "人",
+      "value": 2
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 3
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "人",
+      "value": 2
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "人",
+      "value": 5
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "人",
+      "value": 2
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "人",
+      "value": 2
+    },
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "人",
+      "value": 680
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "人",
+      "value": 554
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "人",
+      "value": 542
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "人",
+      "value": 601
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "人",
+      "value": 558
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 603
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "人",
+      "value": 697
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "人",
+      "value": 750
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "人",
+      "value": 859
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "人",
+      "value": 936
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 890
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "人",
+      "value": 868
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "人",
+      "value": 826
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "人",
+      "value": 886
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "人",
+      "value": 827
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 894
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "人",
+      "value": 926
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "人",
+      "value": 871
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "人",
+      "value": 869
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "人",
+      "value": 830
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 724
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "人",
+      "value": 698
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "人",
+      "value": 735
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "人",
+      "value": 761
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "人",
+      "value": 829
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 868
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "人",
+      "value": 909
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "人",
+      "value": 907
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "人",
+      "value": 856
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "人",
+      "value": 762
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 735
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "人",
+      "value": 747
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "人",
+      "value": 647
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "人",
+      "value": 20907
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "人",
+      "value": 18361
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "人",
+      "value": 16031
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "人",
+      "value": 14398
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "人",
+      "value": 13044
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 12389
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "人",
+      "value": 11645
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "人",
+      "value": 11559
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "人",
+      "value": 11752
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "人",
+      "value": 11378
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 10569
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "人",
+      "value": 10348
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "人",
+      "value": 9910
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "人",
+      "value": 9260
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "人",
+      "value": 8824
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 8668
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "人",
+      "value": 8787
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "人",
+      "value": 9018
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "人",
+      "value": 8776
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "人",
+      "value": 9060
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 8364
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "人",
+      "value": 8296
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "人",
+      "value": 8197
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "人",
+      "value": 7945
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "人",
+      "value": 7265
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 6837
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "人",
+      "value": 6338
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "人",
+      "value": 6030
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "人",
+      "value": 5688
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "人",
+      "value": 5408
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 5062
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "人",
+      "value": 5214
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "人",
+      "value": 5196
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "人",
+      "value": 47909
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "人",
+      "value": 48021
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "人",
+      "value": 45565
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "人",
+      "value": 42671
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "人",
+      "value": 38214
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 35974
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "人",
+      "value": 33580
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "人",
+      "value": 32935
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "人",
+      "value": 31743
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "人",
+      "value": 31196
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 29809
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "人",
+      "value": 28733
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "人",
+      "value": 27935
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "人",
+      "value": 27310
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "人",
+      "value": 25061
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 25144
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "人",
+      "value": 24420
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "人",
+      "value": 23754
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "人",
+      "value": 23016
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "人",
+      "value": 24152
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 22160
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "人",
+      "value": 22909
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "人",
+      "value": 22961
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "人",
+      "value": 23000
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "人",
+      "value": 22517
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 22358
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "人",
+      "value": 20730
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "人",
+      "value": 19537
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "人",
+      "value": 17931
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "人",
+      "value": 16524
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 14799
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "人",
+      "value": 14710
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "人",
+      "value": 13931
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "人",
+      "value": 14324
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "人",
+      "value": 12526
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "人",
+      "value": 13448
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "人",
+      "value": 15094
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "人",
+      "value": 16307
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 16903
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "人",
+      "value": 17541
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "人",
+      "value": 17579
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "人",
+      "value": 17188
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "人",
+      "value": 16469
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 15733
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "人",
+      "value": 15464
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "人",
+      "value": 14763
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "人",
+      "value": 14762
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "人",
+      "value": 14759
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 14923
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "人",
+      "value": 15126
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "人",
+      "value": 15231
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "人",
+      "value": 15246
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "人",
+      "value": 16427
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 16377
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "人",
+      "value": 16578
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "人",
+      "value": 16707
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "人",
+      "value": 17505
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "人",
+      "value": 17793
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 18371
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "人",
+      "value": 18606
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "人",
+      "value": 19411
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "人",
+      "value": 19242
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "人",
+      "value": 19660
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 19047
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "人",
+      "value": 19559
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "人",
+      "value": 19323
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "人",
+      "value": 2638
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "人",
+      "value": 2603
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "人",
+      "value": 2645
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "人",
+      "value": 2691
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "人",
+      "value": 2582
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 2502
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "人",
+      "value": 2456
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "人",
+      "value": 2789
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "人",
+      "value": 3409
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "人",
+      "value": 3866
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 3988
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "人",
+      "value": 4028
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "人",
+      "value": 3834
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "人",
+      "value": 3768
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "人",
+      "value": 3725
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 3737
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "人",
+      "value": 3564
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "人",
+      "value": 3641
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "人",
+      "value": 3565
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "人",
+      "value": 3933
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 3834
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "人",
+      "value": 4180
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "人",
+      "value": 4284
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "人",
+      "value": 4687
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "人",
+      "value": 4842
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 5416
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "人",
+      "value": 5447
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "人",
+      "value": 5739
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "人",
+      "value": 6119
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "人",
+      "value": 6632
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 6837
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "人",
+      "value": 7567
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "人",
+      "value": 8524
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "人",
+      "value": 375
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "人",
+      "value": 326
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "人",
+      "value": 370
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "人",
+      "value": 302
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "人",
+      "value": 269
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 291
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "人",
+      "value": 288
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "人",
+      "value": 308
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "人",
+      "value": 404
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "人",
+      "value": 352
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 334
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "人",
+      "value": 316
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "人",
+      "value": 323
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "人",
+      "value": 448
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "人",
+      "value": 482
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 531
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "人",
+      "value": 461
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "人",
+      "value": 533
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "人",
+      "value": 458
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "人",
+      "value": 520
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 471
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "人",
+      "value": 453
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "人",
+      "value": 453
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "人",
+      "value": 507
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "人",
+      "value": 499
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 597
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "人",
+      "value": 544
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "人",
+      "value": 669
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "人",
+      "value": 664
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "人",
+      "value": 783
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 762
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "人",
+      "value": 950
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "人",
+      "value": 1042
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "人",
+      "value": 6
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "人",
+      "value": 13
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "人",
+      "value": 10
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "人",
+      "value": 9
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "人",
+      "value": 12
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 14
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "人",
+      "value": 10
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "人",
+      "value": 4
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "人",
+      "value": 11
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "人",
+      "value": 13
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 8
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "人",
+      "value": 8
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "人",
+      "value": 7
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "人",
+      "value": 16
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "人",
+      "value": 8
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 13
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "人",
+      "value": 10
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "人",
+      "value": 5
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "人",
+      "value": 10
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "人",
+      "value": 16
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 15
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "人",
+      "value": 16
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "人",
+      "value": 16
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "人",
+      "value": 14
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "人",
+      "value": 17
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 7
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "人",
+      "value": 9
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "人",
+      "value": 16
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "人",
+      "value": 16
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "人",
+      "value": 18
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 30
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "人",
+      "value": 20
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "人",
+      "value": 19
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1975",
+      "timeName": "1975年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1976",
+      "timeName": "1976年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1977",
+      "timeName": "1977年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1978",
+      "timeName": "1978年度",
+      "unit": "人",
+      "value": 1
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1979",
+      "timeName": "1979年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1980",
+      "timeName": "1980年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1981",
+      "timeName": "1981年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1982",
+      "timeName": "1982年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1983",
+      "timeName": "1983年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1984",
+      "timeName": "1984年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1985",
+      "timeName": "1985年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1986",
+      "timeName": "1986年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1987",
+      "timeName": "1987年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1988",
+      "timeName": "1988年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1989",
+      "timeName": "1989年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1990",
+      "timeName": "1990年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1991",
+      "timeName": "1991年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1992",
+      "timeName": "1992年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1993",
+      "timeName": "1993年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1994",
+      "timeName": "1994年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1995",
+      "timeName": "1995年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1996",
+      "timeName": "1996年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1997",
+      "timeName": "1997年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1998",
+      "timeName": "1998年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "1999",
+      "timeName": "1999年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2000",
+      "timeName": "2000年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2001",
+      "timeName": "2001年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2002",
+      "timeName": "2002年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2003",
+      "timeName": "2003年度",
+      "unit": "人",
+      "value": 3
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2004",
+      "timeName": "2004年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2005",
+      "timeName": "2005年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2006",
+      "timeName": "2006年度",
+      "unit": "人",
+      "value": 0
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人",
+      "areaCode": "28000",
+      "areaName": "兵庫県",
+      "timeCode": "2007",
+      "timeName": "2007年度",
+      "unit": "人",
+      "value": 2
+    }
+  ],
+  "categories": [
+    {
+      "categoryCode": "A410201",
+      "categoryName": "出生数（母親の年齢15歳未満）",
+      "categoryUnit": "人"
+    },
+    {
+      "categoryCode": "A410202",
+      "categoryName": "出生数（母親の年齢15～19歳）",
+      "categoryUnit": "人"
+    },
+    {
+      "categoryCode": "A410203",
+      "categoryName": "出生数（母親の年齢20～24歳）",
+      "categoryUnit": "人"
+    },
+    {
+      "categoryCode": "A410204",
+      "categoryName": "出生数（母親の年齢25～29歳）",
+      "categoryUnit": "人"
+    },
+    {
+      "categoryCode": "A410205",
+      "categoryName": "出生数（母親の年齢30～34歳）",
+      "categoryUnit": "人"
+    },
+    {
+      "categoryCode": "A410206",
+      "categoryName": "出生数（母親の年齢35～39歳）",
+      "categoryUnit": "人"
+    },
+    {
+      "categoryCode": "A410207",
+      "categoryName": "出生数（母親の年齢40～44歳）",
+      "categoryUnit": "人"
+    },
+    {
+      "categoryCode": "A410208",
+      "categoryName": "出生数（母親の年齢45～49歳）",
+      "categoryUnit": "人"
+    },
+    {
+      "categoryCode": "A410209",
+      "categoryName": "出生数（母親の年齢50歳以上）",
+      "categoryUnit": "人"
+    }
+  ],
+  "areas": [
+    {
+      "areaCode": "28000",
+      "areaName": "兵庫県"
+    }
+  ],
+  "times": [
+    {
+      "timeCode": "1975",
+      "timeName": "1975年度"
+    },
+    {
+      "timeCode": "1976",
+      "timeName": "1976年度"
+    },
+    {
+      "timeCode": "1977",
+      "timeName": "1977年度"
+    },
+    {
+      "timeCode": "1978",
+      "timeName": "1978年度"
+    },
+    {
+      "timeCode": "1979",
+      "timeName": "1979年度"
+    },
+    {
+      "timeCode": "1980",
+      "timeName": "1980年度"
+    },
+    {
+      "timeCode": "1981",
+      "timeName": "1981年度"
+    },
+    {
+      "timeCode": "1982",
+      "timeName": "1982年度"
+    },
+    {
+      "timeCode": "1983",
+      "timeName": "1983年度"
+    },
+    {
+      "timeCode": "1984",
+      "timeName": "1984年度"
+    },
+    {
+      "timeCode": "1985",
+      "timeName": "1985年度"
+    },
+    {
+      "timeCode": "1986",
+      "timeName": "1986年度"
+    },
+    {
+      "timeCode": "1987",
+      "timeName": "1987年度"
+    },
+    {
+      "timeCode": "1988",
+      "timeName": "1988年度"
+    },
+    {
+      "timeCode": "1989",
+      "timeName": "1989年度"
+    },
+    {
+      "timeCode": "1990",
+      "timeName": "1990年度"
+    },
+    {
+      "timeCode": "1991",
+      "timeName": "1991年度"
+    },
+    {
+      "timeCode": "1992",
+      "timeName": "1992年度"
+    },
+    {
+      "timeCode": "1993",
+      "timeName": "1993年度"
+    },
+    {
+      "timeCode": "1994",
+      "timeName": "1994年度"
+    },
+    {
+      "timeCode": "1995",
+      "timeName": "1995年度"
+    },
+    {
+      "timeCode": "1996",
+      "timeName": "1996年度"
+    },
+    {
+      "timeCode": "1997",
+      "timeName": "1997年度"
+    },
+    {
+      "timeCode": "1998",
+      "timeName": "1998年度"
+    },
+    {
+      "timeCode": "1999",
+      "timeName": "1999年度"
+    },
+    {
+      "timeCode": "2000",
+      "timeName": "2000年度"
+    },
+    {
+      "timeCode": "2001",
+      "timeName": "2001年度"
+    },
+    {
+      "timeCode": "2002",
+      "timeName": "2002年度"
+    },
+    {
+      "timeCode": "2003",
+      "timeName": "2003年度"
+    },
+    {
+      "timeCode": "2004",
+      "timeName": "2004年度"
+    },
+    {
+      "timeCode": "2005",
+      "timeName": "2005年度"
+    },
+    {
+      "timeCode": "2006",
+      "timeName": "2006年度"
+    },
+    {
+      "timeCode": "2007",
+      "timeName": "2007年度"
+    }
+  ]
+}

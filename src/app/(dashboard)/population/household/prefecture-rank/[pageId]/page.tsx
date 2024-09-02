@@ -16,8 +16,23 @@ const KIND_ID = 'prefecture-rank'
 
 // 動的インポートとコンポーネントマッピング
 const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
-  'general-household': dynamic(
-    () => import('views/population/household/prefecture-rank/GeneralHousehold')
+  'number-of-general-households': dynamic(
+    () =>
+      import(
+        'views/population/household/prefecture-rank/NumberOfGeneralHouseholds'
+      )
+  ),
+  'number-of-nuclear-family-households': dynamic(
+    () =>
+      import(
+        'views/population/household/prefecture-rank/NumberOfNuclearFamilyHouseholds'
+      )
+  ),
+  'number-of-single-households': dynamic(
+    () =>
+      import(
+        'views/population/household/prefecture-rank/NumberOfSingleHouseholds'
+      )
   ),
 }
 
