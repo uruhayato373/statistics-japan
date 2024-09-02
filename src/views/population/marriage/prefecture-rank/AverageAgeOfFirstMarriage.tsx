@@ -6,8 +6,10 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartNumberOfManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/MapChartNumberOfManufacturingEmployees'
-import RankingTableNumberOfManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingTableNumberOfManufacturingEmployees'
+import MapChartAverageAgeOfFirstMarriageHusband from 'sections/population/marriage/prefecture-rank/MapChartAverageAgeOfFirstMarriageHusband'
+import MapChartAverageAgeOfFirstMarriageWife from 'sections/population/marriage/prefecture-rank/MapChartAverageAgeOfFirstMarriageWife'
+import RankingTableAverageAgeOfFirstMarriageHusband from 'sections/population/marriage/prefecture-rank/RankingTableAverageAgeOfFirstMarriageHusband'
+import RankingTableAverageAgeOfFirstMarriageWife from 'sections/population/marriage/prefecture-rank/RankingTableAverageAgeOfFirstMarriageWife'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -26,12 +28,22 @@ export default async function PrefectureRankView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartNumberOfManufacturingEmployees
+              <MapChartAverageAgeOfFirstMarriageHusband
                 routerProps={routerProps}
               />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
-              <RankingTableNumberOfManufacturingEmployees
+              <RankingTableAverageAgeOfFirstMarriageHusband
+                routerProps={routerProps}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <MapChartAverageAgeOfFirstMarriageWife
+                routerProps={routerProps}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingTableAverageAgeOfFirstMarriageWife
                 routerProps={routerProps}
               />
             </Grid>

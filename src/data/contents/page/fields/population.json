@@ -25,6 +25,16 @@
     "menuId": "household"
   },
   {
+    "pageId": "number-of-single-mother-households",
+    "pageTitle": "母子世帯数",
+    "menuId": "household"
+  },
+  {
+    "pageId": "number-of-single-father-households",
+    "pageTitle": "父子世帯数",
+    "menuId": "household"
+  },
+  {
     "pageId": "number-of-births",
     "pageTitle": "出生数",
     "menuId": "birthdeath"
@@ -42,6 +52,16 @@
   {
     "pageId": "number-of-marriages",
     "pageTitle": "婚姻件数",
+    "menuId": "marriage"
+  },
+  {
+    "pageId": "number-of-divorces",
+    "pageTitle": "離婚件数",
+    "menuId": "marriage"
+  },
+  {
+    "pageId": "average-age-of-first-marriage",
+    "pageTitle": "平均初婚年齢",
     "menuId": "marriage"
   }
 ]

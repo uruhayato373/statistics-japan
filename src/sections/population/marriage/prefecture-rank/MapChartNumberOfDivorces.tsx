@@ -12,12 +12,12 @@ import handleGeoshape from 'utils/geoshape'
 import { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造業従業者数'
-const CARD_ID = 'MapNumberOfManufacturingEmployees'
+const CARD_TITLE = '離婚件数'
+const CARD_ID = 'MapChartNumberOfDivorces'
 
 const ESTAT_PARAMS = {
-  statsDataId: '0000010103',
-  cdCat01: 'C3404',
+  statsDataId: '0000010101',
+  cdCat01: 'A9201',
 }
 
 interface Props {
@@ -54,9 +54,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function MapNumberOfManufacturingEmployees({
-  routerProps,
-}: Props) {
+export default async function MapChartNumberOfDivorces({ routerProps }: Props) {
   const title = `都道府県の${CARD_TITLE}`
   const cardProps = { ...routerProps, cardId: CARD_ID }
   const topojson = await handleGeoshape('prefecture').readJson()

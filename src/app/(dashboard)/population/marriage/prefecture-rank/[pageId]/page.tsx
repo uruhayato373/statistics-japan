@@ -17,7 +17,16 @@ const KIND_ID = 'prefecture-rank'
 // 動的インポートとコンポーネントマッピング
 const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'number-of-marriages': dynamic(
-    () => import('views/population/marriage/prefecture-rank/Marriage')
+    () => import('views/population/marriage/prefecture-rank/NumberOfMarriages')
+  ),
+  'number-of-divorces': dynamic(
+    () => import('views/population/marriage/prefecture-rank/NumberOfDivorces')
+  ),
+  'average-age-of-first-marriage': dynamic(
+    () =>
+      import(
+        'views/population/marriage/prefecture-rank/AverageAgeOfFirstMarriage'
+      )
   ),
 }
 

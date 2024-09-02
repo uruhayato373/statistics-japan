@@ -34,6 +34,18 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
         'views/population/household/prefecture-rank/NumberOfSingleHouseholds'
       )
   ),
+  'number-of-single-mother-households': dynamic(
+    () =>
+      import(
+        'views/population/household/prefecture-rank/NumberOfSingleMotherHouseholds'
+      )
+  ),
+  'number-of-single-father-households': dynamic(
+    () =>
+      import(
+        'views/population/household/prefecture-rank/NumberOfSingleFatherHouseholds'
+      )
+  ),
 }
 
 export async function generateStaticParams() {

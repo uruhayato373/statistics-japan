@@ -13,7 +13,7 @@ import { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造業付加価値額'
-const CARD_ID = 'MapManufacturingIndustryAddedValue'
+const CARD_ID = 'MapChartManufacturingIndustryAddedValue'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -54,7 +54,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function MapManufacturingIndustryAddedValue({
+export default async function MapChartManufacturingIndustryAddedValue({
   routerProps,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`
