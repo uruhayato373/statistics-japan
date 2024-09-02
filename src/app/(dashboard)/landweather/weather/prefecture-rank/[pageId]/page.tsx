@@ -29,8 +29,18 @@ interface ComponentProps {
 
 // 動的インポートとコンポーネントマッピング
 const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
-  'rainy-days': dynamic(
-    () => import('views/landweather/weather/prefecture-rank/RainyDays')
+  // eslint-disable-next-line prettier/prettier
+  precipitation: dynamic(
+    () => import('views/landweather/weather/prefecture-rank/Precipitation')
+  ),
+  'maximum-temperature': dynamic(
+    () => import('views/landweather/weather/prefecture-rank/MaximumTemperature')
+  ),
+  'lowest-temperature': dynamic(
+    () => import('views/landweather/weather/prefecture-rank/LowestTemperature')
+  ),
+  'average-temperature': dynamic(
+    () => import('views/landweather/weather/prefecture-rank/AverageTemperature')
   ),
 }
 

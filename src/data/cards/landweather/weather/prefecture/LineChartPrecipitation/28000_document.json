@@ -1061,12 +1061,14 @@
     {
       "categoryCode": "B4106",
       "categoryName": "降水日数（年間）",
-      "categoryUnit": "日"
+      "categoryUnit": "日",
+      "type": "line"
     },
     {
       "categoryCode": "B4109",
       "categoryName": "降水量（年間）",
-      "categoryUnit": "ｍｍ"
+      "categoryUnit": "ｍｍ",
+      "type": "column"
     }
   ],
   "areas": [

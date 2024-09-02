@@ -25,7 +25,6 @@ export default async function CardsApexLineChart({
   height,
 }: Props) {
   const formatOptions = formatApexcharts(document).AxisTimeChart()
-
   const customOptions = { ...formatOptions, ...options }
 
   const boxStyle = height ? { height } : {}

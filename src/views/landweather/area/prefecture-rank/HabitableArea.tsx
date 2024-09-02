@@ -7,7 +7,9 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import MapChartHabitableArea from 'sections/landweather/area/prefecture-rank/MapChartHabitableArea'
+import MapChartHabitableAreaPerTotalArea from 'sections/landweather/area/prefecture-rank/MapChartHabitableAreaPerTotalArea'
 import RankingTableHabitableArea from 'sections/landweather/area/prefecture-rank/RankingTableHabitableArea'
+import RankingTableHabitableAreaPerTotalArea from 'sections/landweather/area/prefecture-rank/RankingTableHabitableAreaPerTotalArea'
 import ScatterChartTotalAreaHabitableArea from 'sections/landweather/area/prefecture-rank/ScatterChartTotalAreaHabitableArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -42,6 +44,14 @@ export default async function HabitableArea({ routerProps }: Props) {
             {/* row 2 */}
             <Grid item xs={12} md={9}>
               <ScatterChartTotalAreaHabitableArea routerProps={routerProps} />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <MapChartHabitableAreaPerTotalArea routerProps={routerProps} />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingTableHabitableAreaPerTotalArea
+                routerProps={routerProps}
+              />
             </Grid>
             {/* <Grid item xs={12} md={3}>
               <CardsAdsResponsive height={'300px'} />

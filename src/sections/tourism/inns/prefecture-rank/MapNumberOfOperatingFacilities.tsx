@@ -31,7 +31,6 @@ async function processValues(cardProps: CardProps) {
     const values = await fetchValues(ESTAT_PARAMS)
     await actionSaveValues(cardProps, values)
   }
-  console.log('cardProps:', cardProps)
 
   const { readValues } = handleValue(cardProps)
   const values = readValues()

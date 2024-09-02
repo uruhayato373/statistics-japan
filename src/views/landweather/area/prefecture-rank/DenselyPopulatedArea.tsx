@@ -7,7 +7,11 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import MapChartDenselyPopulatedArea from 'sections/landweather/area/prefecture-rank/MapChartDenselyPopulatedArea'
+import MapChartDenselyPopulatedAreaPerHabitableArea from 'sections/landweather/area/prefecture-rank/MapChartDenselyPopulatedAreaPerHabitableArea'
+import MapChartDenselyPopulatedAreaPerTotalArea from 'sections/landweather/area/prefecture-rank/MapChartDenselyPopulatedAreaPerTotalArea'
 import RankingTableDenselyPopulatedArea from 'sections/landweather/area/prefecture-rank/RankingTableDenselyPopulatedArea'
+import RankingTableDenselyPopulatedAreaPerHabitableArea from 'sections/landweather/area/prefecture-rank/RankingTableDenselyPopulatedAreaPerHabitableArea'
+import RankingTableDenselyPopulatedAreaPerTotalArea from 'sections/landweather/area/prefecture-rank/RankingTableDenselyPopulatedAreaPerTotalArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -34,6 +38,26 @@ export default async function HabitableArea({ routerProps }: Props) {
                   <RankingTableDenselyPopulatedArea routerProps={routerProps} />
                 </Grid>
               </Grid>
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <MapChartDenselyPopulatedAreaPerTotalArea
+                routerProps={routerProps}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingTableDenselyPopulatedAreaPerTotalArea
+                routerProps={routerProps}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <MapChartDenselyPopulatedAreaPerHabitableArea
+                routerProps={routerProps}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingTableDenselyPopulatedAreaPerHabitableArea
+                routerProps={routerProps}
+              />
             </Grid>
             {/* <Grid item xs={12} md={2}>
               <CardsAdsResponsive />

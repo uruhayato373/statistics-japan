@@ -7,14 +7,15 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardAveHum from 'sections/landweather/weather/DashboardAveHum'
-import DashboardAveTemp from 'sections/landweather/weather/DashboardAveTemp'
-import DashboardMaxTemp from 'sections/landweather/weather/DashboardMaxTemp'
-import DashboardMinTemp from 'sections/landweather/weather/DashboardMinTemp'
+import DashboardAverageTemperature from 'sections/landweather/weather/DashboardAverageTemperature'
+import DashboardLowestTemperature from 'sections/landweather/weather/DashboardLowestTemperature'
+import DashboardMaximumTemperature from 'sections/landweather/weather/DashboardMaximumTemperature'
 import DashboardPrecipitation from 'sections/landweather/weather/DashboardPrecipitation'
 import DashboardRainyDays from 'sections/landweather/weather/DashboardRainyDays'
 import DashboardSunshineHours from 'sections/landweather/weather/DashboardSunshineHours'
 import LineChartPrecipitation from 'sections/landweather/weather/LineChartPrecipitation'
 import LineChartTemplatures from 'sections/landweather/weather/LineChartTemplatures'
+import SourceAnnotationWeather from 'sections/landweather/weather/SourceAnnotationWeather'
 import TableDays from 'sections/landweather/weather/TableDays'
 import TableTemplatures from 'sections/landweather/weather/TableTemplatures'
 import handleProps, { RouterProps } from 'utils/props'
@@ -54,19 +55,19 @@ export default async function Prefecture({ routerProps }: Props) {
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardMaxTemp
+              <DashboardMaximumTemperature
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardMinTemp
+              <DashboardLowestTemperature
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAveTemp
+              <DashboardAverageTemperature
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
@@ -100,6 +101,9 @@ export default async function Prefecture({ routerProps }: Props) {
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={6}>
+              <SourceAnnotationWeather />
             </Grid>
           </Grid>
         </Box>

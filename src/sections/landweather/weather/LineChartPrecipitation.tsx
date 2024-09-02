@@ -2,6 +2,8 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
+import { ApexOptions } from 'apexcharts'
+
 import CardsApexLineChart from 'cards/CardsApexLineChart'
 
 import { actionSaveDocument } from 'actions/saveDocument'
@@ -23,6 +25,33 @@ const ESTAT_PARAMS = {
 interface Props {
   routerProps: RouterProps
   prefecture: PrefectureType
+}
+
+const APEX_OPTIONS: ApexOptions = {
+  yaxis: [
+    {
+      seriesName: '降水日数',
+      opposite: false,
+      show: true,
+      labels: {
+        show: true,
+      },
+      tooltip: {
+        enabled: false,
+      },
+    },
+    {
+      seriesName: '降水量',
+      opposite: true,
+      show: true,
+      labels: {
+        show: true,
+      },
+      tooltip: {
+        enabled: false,
+      },
+    },
+  ],
 }
 
 // values
@@ -47,6 +76,9 @@ async function processDocument(
   const { formatDocument } = handleDocument()
   const document = formatDocument(values)
 
+  document.categories[0].type = 'line'
+  document.categories[1].type = 'column'
+
   if (process.env.NODE_ENV === 'development') {
     await actionSaveDocument(cardProps, document)
   }
@@ -67,7 +99,11 @@ export default async function LineChartPrecipitation({
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsApexLineChart title={title} document={document} />
+      <CardsApexLineChart
+        title={title}
+        document={document}
+        options={APEX_OPTIONS}
+      />
     </Suspense>
   )
 }

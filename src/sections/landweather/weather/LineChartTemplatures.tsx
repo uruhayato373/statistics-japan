@@ -30,13 +30,23 @@ async function processValues(cardProps: CardProps, prefCode: string) {
   if (process.env.NODE_ENV === 'development') {
     const { fetchValues } = handleEstatAPI()
     const values = await fetchValues(ESTAT_PARAMS)
-    await actionSaveValues(cardProps, values)
+    await actionSaveValues(cardProps, formatValues(values))
   }
 
   const { readValues } = handleValue(cardProps)
   const values = readValues()
 
-  return values.filter((f) => f.areaCode === prefCode)
+  return formatValues(values).filter((f) => f.areaCode === prefCode)
+}
+
+// format values
+function formatValues(values: ValueType[]) {
+  return values.map((d) => ({
+    ...d,
+    categoryName: d.categoryName
+      .replace('（日最高気温の月平均の最高値）', '')
+      .replace('（日最低気温の月平均の最低値）', ''),
+  }))
 }
 
 // document

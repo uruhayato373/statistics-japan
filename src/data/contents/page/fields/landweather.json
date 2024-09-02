@@ -15,8 +15,8 @@
     "menuId": "area"
   },
   {
-    "pageId": "rainy-days",
-    "pageTitle": "降水日数",
+    "pageId": "precipitation",
+    "pageTitle": "降水量",
     "menuId": "weather"
   },
   {
@@ -25,7 +25,7 @@
     "menuId": "weather"
   },
   {
-    "pageId": "minimum-temperature",
+    "pageId": "lowest-temperature",
     "pageTitle": "最低気温",
     "menuId": "weather"
   },
