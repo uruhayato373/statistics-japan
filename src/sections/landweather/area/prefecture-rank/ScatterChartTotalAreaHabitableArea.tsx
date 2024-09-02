@@ -4,7 +4,6 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import CardsHighchartsScatterChart from 'cards/CardsHighchartsScatterChart'
 
-import { actionSaveDocument } from 'actions/saveDocument'
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -60,9 +59,6 @@ export default async function ScatterChartTotalAreaHabitableArea({
   }
 
   const document = handleDocument().formatDocument(values)
-  if (process.env.NODE_ENV === 'development') {
-    await actionSaveDocument(saveProps, document)
-  }
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

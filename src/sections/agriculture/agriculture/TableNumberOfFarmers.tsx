@@ -1,6 +1,5 @@
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import { actionSaveDocument } from 'actions/saveDocument'
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -42,10 +41,6 @@ async function processDocument(
 ): Promise<DocumentType> {
   const { formatDocument } = handleDocument()
   const document = formatDocument(values)
-
-  if (process.env.NODE_ENV === 'development') {
-    await actionSaveDocument(cardProps, document)
-  }
 
   return document
 }

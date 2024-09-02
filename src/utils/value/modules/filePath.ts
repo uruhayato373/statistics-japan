@@ -14,15 +14,10 @@ export function generateSaveValuesFilePath(cardProps: CardProps) {
   )
   switch (kindId) {
     case 'japan':
-      return path.join(filePath, 'japan', `${cardId}_values.json`)
+      return path.join(filePath, `${cardId}_values.json`)
     case 'prefecture':
-      return path.join(filePath, 'prefecture', `${cardId}_values.json`)
+      return path.join(filePath, `${cardId}_values.json`)
     case 'prefecture-rank':
-      return path.join(
-        filePath,
-        'prefecture-rank',
-        `${pageId}`,
-        `${cardId}_values.json`
-      )
+      return path.join(filePath, `${pageId}`, `${cardId}_values.json`)
   }
 }

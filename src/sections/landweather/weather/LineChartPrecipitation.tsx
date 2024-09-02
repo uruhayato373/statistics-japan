@@ -6,7 +6,6 @@ import { ApexOptions } from 'apexcharts'
 
 import CardsApexLineChart from 'cards/CardsApexLineChart'
 
-import { actionSaveDocument } from 'actions/saveDocument'
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -78,10 +77,6 @@ async function processDocument(
 
   document.categories[0].type = 'line'
   document.categories[1].type = 'column'
-
-  if (process.env.NODE_ENV === 'development') {
-    await actionSaveDocument(cardProps, document)
-  }
 
   return document
 }
