@@ -8,9 +8,13 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardNumberOfGeneralHouseholds from 'sections/population/household/DashboardNumberOfGeneralHouseholds'
 import DashboardNumberOfNuclearFamilyHouseholds from 'sections/population/household/DashboardNumberOfNuclearFamilyHouseholds'
+import DashboardNumberOfSingleFatherHouseholds from 'sections/population/household/DashboardNumberOfSingleFatherHouseholds'
 import DashboardNumberOfSingleHouseholds from 'sections/population/household/DashboardNumberOfSingleHouseholds'
+import DashboardNumberOfSingleMotherHouseholds from 'sections/population/household/DashboardNumberOfSingleMotherHouseholds'
 import LineChartHousehold from 'sections/population/household/LineChartHousehold'
 import MixedChartGeneralHousehold from 'sections/population/household/MixedChartGeneralHousehold'
+import PieChartNumberOfSingleFatherHouseholdsByFathersAge from 'sections/population/household/PieChartNumberOfSingleFatherHouseholdsByFathersAge'
+import PieChartNumberOfSingleMotherHouseholdsByMothersAge from 'sections/population/household/PieChartNumberOfSingleMotherHouseholdsByMothersAge'
 import TableHousehold from 'sections/population/household/TableHousehold'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -48,6 +52,18 @@ export default async function Prefecture({ routerProps }: Props) {
                 prefecture={currentPrefecture}
               />
             </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardNumberOfSingleMotherHouseholds
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardNumberOfSingleFatherHouseholds
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
             <Grid item xs={12} sm={6} md={4} lg={6}>
               <LineChartHousehold
                 routerProps={routerProps}
@@ -56,6 +72,18 @@ export default async function Prefecture({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={6}>
               <MixedChartGeneralHousehold
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={5}>
+              <PieChartNumberOfSingleMotherHouseholdsByMothersAge
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={5}>
+              <PieChartNumberOfSingleFatherHouseholdsByFathersAge
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
