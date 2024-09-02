@@ -2,49 +2,40 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import CardsHighchartsMapChart from 'cards/CardsHighchartsMapChart'
 
 import { actionSaveDocument } from 'actions/saveDocument'
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
-import handleProps, { CardProps, RouterProps } from 'utils/props'
+import handleGeoshape from 'utils/geoshape'
+import { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
-const CARD_TITLE = '総面積のデータ'
-const CARD_ID = 'TableTotalArea'
+const CARD_TITLE = '人口集中地区面積'
+const CARD_ID = 'MapChartDenselyPopulatedArea'
 
 const ESTAT_PARAMS = {
-  statsDataId: '0000010102',
-  cdCat01: ['B1101', 'B1103', 'B1106'],
+  statsDataId: '0000010101',
+  cdCat01: 'A1802',
 }
 
 interface Props {
   routerProps: RouterProps
-  prefecture: PrefectureType
 }
 
 // values
-async function processValues(cardProps: CardProps, prefCode: string) {
+async function processValues(cardProps: CardProps) {
   if (process.env.NODE_ENV === 'development') {
     const { fetchValues } = handleEstatAPI()
     const values = await fetchValues(ESTAT_PARAMS)
-    await actionSaveValues(cardProps, formatValues(values))
+    await actionSaveValues(cardProps, values)
   }
 
   const { readValues } = handleValue(cardProps)
   const values = readValues()
 
-  return formatValues(values).filter((f) => f.areaCode === prefCode)
-}
-
-// format values
-function formatValues(values: ValueType[]) {
-  return values.map((d) => ({
-    ...d,
-    categoryName: d.categoryName.replace('（北方地域及び竹島を除く）', ''),
-  }))
+  return values
 }
 
 // document
@@ -63,19 +54,22 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function TableTotalArea({
+export default async function MapChartDenselyPopulatedArea({
   routerProps,
-  prefecture,
 }: Props) {
-  const { prefCode, prefName } = prefecture
-  const title = `${prefName}の${CARD_TITLE}`
-  const cardProps = handleProps(routerProps).cardProps(CARD_ID)
-  const values = await processValues(cardProps, prefCode)
+  const title = `都道府県の${CARD_TITLE}`
+  const cardProps = { ...routerProps, cardId: CARD_ID }
+  const topojson = await handleGeoshape('prefecture').readJson()
+  const values = await processValues(cardProps)
   const document = await processDocument(cardProps, values)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
+      <CardsHighchartsMapChart
+        title={title}
+        document={document}
+        topojson={topojson}
+      />
     </Suspense>
   )
 }

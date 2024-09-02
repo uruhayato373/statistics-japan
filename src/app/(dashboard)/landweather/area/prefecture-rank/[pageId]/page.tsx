@@ -35,6 +35,9 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'habitable-area': dynamic(
     () => import('views/landweather/area/prefecture-rank/HabitableArea')
   ),
+  'densely-populated-area': dynamic(
+    () => import('views/landweather/area/prefecture-rank/DenselyPopulatedArea')
+  ),
 }
 
 export async function generateStaticParams() {
