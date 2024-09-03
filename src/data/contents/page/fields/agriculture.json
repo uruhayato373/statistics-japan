@@ -3,5 +3,10 @@
     "pageId": "agricultural-output",
     "pageTitle": "農業産出額",
     "menuId": "agriculture"
+  },
+  {
+    "pageId": "fishery-output-value",
+    "pageTitle": "漁業産出額",
+    "menuId": "fishing"
   }
 ]

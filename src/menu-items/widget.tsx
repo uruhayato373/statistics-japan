@@ -127,9 +127,16 @@ const widget: MenuGroup = {
       children: [
         {
           id: 'agriculture',
-          title: '農業産出額',
+          title: '農業',
           type: 'item',
           url: '/agriculture/agriculture',
+          breadcrumbs: false,
+        },
+        {
+          id: 'fishing',
+          title: '漁業',
+          type: 'item',
+          url: '/agriculture/fishing',
           breadcrumbs: false,
         },
       ],

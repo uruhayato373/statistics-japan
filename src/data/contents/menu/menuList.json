@@ -36,7 +36,12 @@
   },
   {
     "menuId": "agriculture",
-    "menuTitle": "農業産出額",
+    "menuTitle": "農業",
+    "fieldId": "agriculture"
+  },
+  {
+    "menuId": "fishing",
+    "menuTitle": "漁業",
     "fieldId": "agriculture"
   },
   {
