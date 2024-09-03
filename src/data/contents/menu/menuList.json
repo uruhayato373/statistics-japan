@@ -120,6 +120,11 @@
     "fieldId": "safetyenvironment"
   },
   {
+    "menuId": "fire",
+    "menuTitle": "消防・火災",
+    "fieldId": "safetyenvironment"
+  },
+  {
     "menuId": "hospital",
     "menuTitle": "病院",
     "fieldId": "socialsecurity"

@@ -18,5 +18,10 @@
     "pageId": "number-of-traffic-accident-injuries",
     "pageTitle": "交通事故負傷者数",
     "menuId": "traffic-accident"
+  },
+  {
+    "pageId": "number-of-fire-stations",
+    "pageTitle": "消防署数",
+    "menuId": "fire"
   }
 ]
