@@ -5,6 +5,11 @@
     "menuId": "gross-production"
   },
   {
+    "pageId": "prefectural-income",
+    "pageTitle": "県民所得",
+    "menuId": "gross-production"
+  },
+  {
     "pageId": "consumer-price-index",
     "pageTitle": "消費者物価指数",
     "menuId": "consumer-price-index"

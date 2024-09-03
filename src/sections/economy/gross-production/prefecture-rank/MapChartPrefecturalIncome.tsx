@@ -1,27 +1,30 @@
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import { Suspense } from 'react'
+
+import CircularProgressCards from 'components/CircularProgressCards'
+
+import CardsHighchartsMapChart from 'cards/CardsHighchartsMapChart'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
-import handleProps, { CardProps, RouterProps } from 'utils/props'
+import handleGeoshape from 'utils/geoshape'
+import { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
-const CARD_TITLE = '農家数'
-const CARD_ID = 'TableNumberOfFarmers'
+const CARD_TITLE = '県民所得'
+const CARD_ID = 'MapChartPrefecturalIncome'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C3102', 'C310201', 'C310202', 'C310211', 'C310212'],
+  cdCat01: 'C1221',
 }
 
 interface Props {
   routerProps: RouterProps
-  prefecture: PrefectureType
 }
 
 // values
-async function processValues(cardProps: CardProps, prefCode: string) {
+async function processValues(cardProps: CardProps) {
   if (process.env.NODE_ENV === 'development') {
     const { fetchValues } = handleEstatAPI()
     const values = await fetchValues(ESTAT_PARAMS)
@@ -31,7 +34,7 @@ async function processValues(cardProps: CardProps, prefCode: string) {
   const { readValues } = handleValue(cardProps)
   const values = readValues()
 
-  return values.filter((f) => f.areaCode === prefCode)
+  return values
 }
 
 // document
@@ -46,15 +49,22 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function TableNumberOfFarmers({
+export default async function MapChartPrefecturalIncome({
   routerProps,
-  prefecture,
 }: Props) {
-  const { prefCode, prefName } = prefecture
-  const title = `${prefName}の${CARD_TITLE}`
-  const cardProps = handleProps(routerProps).cardProps(CARD_ID)
-  const values = await processValues(cardProps, prefCode)
+  const title = `都道府県の${CARD_TITLE}`
+  const cardProps = { ...routerProps, cardId: CARD_ID }
+  const topojson = await handleGeoshape('prefecture').readJson()
+  const values = await processValues(cardProps)
   const document = await processDocument(cardProps, values)
 
-  return <CardsReactTimeTable title={title} document={document} />
+  return (
+    <Suspense fallback={<CircularProgressCards />}>
+      <CardsHighchartsMapChart
+        title={title}
+        document={document}
+        topojson={topojson}
+      />
+    </Suspense>
+  )
 }

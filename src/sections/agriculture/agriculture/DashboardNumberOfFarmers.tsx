@@ -1,4 +1,4 @@
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import CardsDashboardSingle from 'cards/CardsDashboard'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -8,11 +8,11 @@ import handleProps, { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
 const CARD_TITLE = '農家数'
-const CARD_ID = 'TableNumberOfFarmers'
+const CARD_ID = 'DashboardNumberOfFarmers'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C3102', 'C310201', 'C310202', 'C310211', 'C310212'],
+  cdCat01: 'C3102',
 }
 
 interface Props {
@@ -46,7 +46,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function TableNumberOfFarmers({
+export default async function DashboardNumberOfFarmers({
   routerProps,
   prefecture,
 }: Props) {
@@ -56,5 +56,5 @@ export default async function TableNumberOfFarmers({
   const values = await processValues(cardProps, prefCode)
   const document = await processDocument(cardProps, values)
 
-  return <CardsReactTimeTable title={title} document={document} />
+  return <CardsDashboardSingle title={title} document={document} />
 }

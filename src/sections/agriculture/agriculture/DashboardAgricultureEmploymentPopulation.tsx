@@ -7,7 +7,7 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
-const CARD_TITLE = '農業就業人口（販売農家）'
+const CARD_TITLE = '農業就業人口'
 const CARD_ID = 'DashboardAgricultureEmploymentPopulation'
 
 const ESTAT_PARAMS = {

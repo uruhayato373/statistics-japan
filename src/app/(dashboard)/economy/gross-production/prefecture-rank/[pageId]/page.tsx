@@ -35,6 +35,10 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
         'views/economy/gross-production/prefecture-rank/GrossPrefecturalProduct'
       )
   ),
+  'prefectural-income': dynamic(
+    () =>
+      import('views/economy/gross-production/prefecture-rank/PrefecturalIncome')
+  ),
 }
 
 export async function generateStaticParams() {

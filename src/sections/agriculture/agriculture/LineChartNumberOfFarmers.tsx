@@ -1,4 +1,8 @@
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import { Suspense } from 'react'
+
+import CircularProgressCards from 'components/CircularProgressCards'
+
+import CardsApexLineChart from 'cards/CardsApexLineChart'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -7,12 +11,12 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
-const CARD_TITLE = '農家数'
-const CARD_ID = 'TableNumberOfFarmers'
+const CARD_TITLE = '農家数の推移'
+const CARD_ID = 'LineChartNumberOfFarmers'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C3102', 'C310201', 'C310202', 'C310211', 'C310212'],
+  cdCat01: 'C3102',
 }
 
 interface Props {
@@ -46,7 +50,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function TableNumberOfFarmers({
+export default async function LineChartNumberOfFarmers({
   routerProps,
   prefecture,
 }: Props) {
@@ -56,5 +60,9 @@ export default async function TableNumberOfFarmers({
   const values = await processValues(cardProps, prefCode)
   const document = await processDocument(cardProps, values)
 
-  return <CardsReactTimeTable title={title} document={document} />
+  return (
+    <Suspense fallback={<CircularProgressCards />}>
+      <CardsApexLineChart title={title} document={document} />
+    </Suspense>
+  )
 }

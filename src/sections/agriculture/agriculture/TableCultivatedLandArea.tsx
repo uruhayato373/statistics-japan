@@ -7,12 +7,12 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
-const CARD_TITLE = '農家数'
-const CARD_ID = 'TableNumberOfFarmers'
+const CARD_TITLE = '耕地面積'
+const CARD_ID = 'TableCultivatedLandArea'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C3102', 'C310201', 'C310202', 'C310211', 'C310212'],
+  cdCat01: ['C3107', 'C310701', 'C310702', 'C310703', 'C310704', 'C310705'],
 }
 
 interface Props {
@@ -46,7 +46,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function TableNumberOfFarmers({
+export default async function TableCultivatedLandArea({
   routerProps,
   prefecture,
 }: Props) {
