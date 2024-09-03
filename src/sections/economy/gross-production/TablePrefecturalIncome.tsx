@@ -29,13 +29,24 @@ async function processValues(cardProps: CardProps, prefCode: string) {
   if (process.env.NODE_ENV === 'development') {
     const { fetchValues } = handleEstatAPI()
     const values = await fetchValues(ESTAT_PARAMS)
-    await actionSaveValues(cardProps, values)
+    await actionSaveValues(cardProps, formatValues(values))
   }
 
   const { readValues } = handleValue(cardProps)
   const values = readValues()
 
-  return values.filter((f) => f.areaCode === prefCode)
+  return formatValues(values).filter((f) => f.areaCode === prefCode)
+}
+
+// format values
+const formatValues = (values: ValueType[]) => {
+  return values.map((d) => ({
+    ...d,
+    categoryName: d.categoryName
+      .replace('平成27年基準', '')
+      .replace('（', '')
+      .replace('）', ''),
+  }))
 }
 
 // document

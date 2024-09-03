@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import CardsApexColumnChart from 'cards/CardsApexColumnChart'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -11,12 +11,12 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
-const CARD_TITLE = '県内総生産'
-const CARD_ID = 'TableGrossPrefecturalProduct'
+const CARD_TITLE = '県内総生産の推移'
+const CARD_ID = 'ColumnChartGrossPrefecturalProduct'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C1121', 'C1125', 'C1126', 'C1127'],
+  cdCat01: ['C1125', 'C1126', 'C1127'],
 }
 
 interface Props {
@@ -58,13 +58,16 @@ async function processDocument(
   const { formatDocument } = handleDocument()
   const document = formatDocument(values)
 
-  document.categories[0].categoryName = '合計'
+  document.categories = document.categories.map((d) => ({
+    ...d,
+    type: 'column',
+  }))
 
   return document
 }
 
 // コンポーネントの描画
-export default async function TableGrossPrefecturalProduct({
+export default async function ColumnChartGrossPrefecturalProduct({
   routerProps,
   prefecture,
 }: Props) {
@@ -76,7 +79,7 @@ export default async function TableGrossPrefecturalProduct({
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
+      <CardsApexColumnChart title={title} document={document} />
     </Suspense>
   )
 }

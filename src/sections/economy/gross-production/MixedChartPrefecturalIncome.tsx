@@ -2,7 +2,9 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import { ApexOptions } from 'apexcharts'
+
+import CardsApexLineChart from 'cards/CardsApexLineChart'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -11,12 +13,39 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
-const CARD_TITLE = '県内総生産'
-const CARD_ID = 'TableGrossPrefecturalProduct'
+const CARD_TITLE = '県民所得'
+const CARD_ID = 'MixedChartPrefecturalIncome'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C1121', 'C1125', 'C1126', 'C1127'],
+  cdCat01: ['C1221', 'C122101'],
+}
+
+const APEX_OPTIONS: ApexOptions = {
+  yaxis: [
+    {
+      seriesName: '県民所得',
+      opposite: false,
+      show: true,
+      labels: {
+        show: true,
+      },
+      tooltip: {
+        enabled: false,
+      },
+    },
+    {
+      seriesName: '1人当たり県民所得',
+      opposite: true,
+      show: true,
+      labels: {
+        show: true,
+      },
+      tooltip: {
+        enabled: false,
+      },
+    },
+  ],
 }
 
 interface Props {
@@ -43,7 +72,6 @@ const formatValues = (values: ValueType[]) => {
   return values.map((d) => ({
     ...d,
     categoryName: d.categoryName
-      .replace('県内総生産額', '')
       .replace('平成27年基準', '')
       .replace('（', '')
       .replace('）', ''),
@@ -58,13 +86,14 @@ async function processDocument(
   const { formatDocument } = handleDocument()
   const document = formatDocument(values)
 
-  document.categories[0].categoryName = '合計'
+  document.categories[0].type = 'column'
+  document.categories[1].type = 'line'
 
   return document
 }
 
 // コンポーネントの描画
-export default async function TableGrossPrefecturalProduct({
+export default async function MixedChartPrefecturalIncome({
   routerProps,
   prefecture,
 }: Props) {
@@ -76,7 +105,11 @@ export default async function TableGrossPrefecturalProduct({
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
+      <CardsApexLineChart
+        title={title}
+        document={document}
+        options={APEX_OPTIONS}
+      />
     </Suspense>
   )
 }

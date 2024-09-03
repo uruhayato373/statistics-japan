@@ -6,8 +6,12 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import ColumnChartGrossPrefecturalProduct from 'sections/economy/gross-production/ColumnChartGrossPrefecturalProduct'
 import DashboardGrossPrefecturalProduct from 'sections/economy/gross-production/DashboardGrossPrefecturalProduct'
-import PieGrossPrefecturalProduct from 'sections/economy/gross-production/PieGrossPrefecturalProduct'
+import DashboardPrefecturalIncome from 'sections/economy/gross-production/DashboardPrefecturalIncome'
+import MixedChartPrefecturalIncome from 'sections/economy/gross-production/MixedChartPrefecturalIncome'
+import PieChartGrossPrefecturalProduct from 'sections/economy/gross-production/PieChartGrossPrefecturalProduct'
+import PieChartPrefecturalIncome from 'sections/economy/gross-production/PieChartPrefecturalIncome'
 import TableGrossPrefecturalProduct from 'sections/economy/gross-production/TableGrossPrefecturalProduct'
 import TablePrefecturalIncome from 'sections/economy/gross-production/TablePrefecturalIncome'
 import handleProps, { RouterProps } from 'utils/props'
@@ -34,8 +38,32 @@ export default async function PrefectureView({ routerProps }: Props) {
                 prefecture={currentPrefecture}
               />
             </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardPrefecturalIncome
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={4}>
+              <ColumnChartGrossPrefecturalProduct
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={4}>
+              <MixedChartPrefecturalIncome
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
             <Grid item xs={12} sm={12} md={12} lg={5}>
-              <PieGrossPrefecturalProduct
+              <PieChartGrossPrefecturalProduct
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={5}>
+              <PieChartPrefecturalIncome
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

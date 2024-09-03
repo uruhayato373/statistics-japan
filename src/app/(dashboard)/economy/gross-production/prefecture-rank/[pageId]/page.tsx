@@ -32,7 +32,7 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'gross-prefectural-product': dynamic(
     () =>
       import(
-        'views/economy/gross-production/prefecture-rank/MapGrossPrefecturalProduct'
+        'views/economy/gross-production/prefecture-rank/GrossPrefecturalProduct'
       )
   ),
 }

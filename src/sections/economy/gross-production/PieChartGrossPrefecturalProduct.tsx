@@ -1,8 +1,6 @@
-import { Suspense } from 'react'
+import { ApexOptions } from 'apexcharts'
 
-import CircularProgressCards from 'components/CircularProgressCards'
-
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -11,12 +9,45 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
-const CARD_TITLE = '県内総生産'
-const CARD_ID = 'TableGrossPrefecturalProduct'
+const CARD_TITLE = '県内総生産の内訳'
+const CARD_ID = 'PieChartGrossPrefecturalProduct'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C1121', 'C1125', 'C1126', 'C1127'],
+  cdCat01: [
+    'C112201',
+    'C112202',
+    'C112203',
+    'C112204',
+    'C112205',
+    'C112206',
+    'C112207',
+    'C112208',
+    'C112209',
+    'C112210',
+    'C112211',
+    'C1122121',
+    'C1122122',
+    'C112213',
+    'C112214',
+    'C112215',
+    'C112216',
+    'C112217',
+    'C112218',
+  ],
+}
+
+// apexChartsのオプション
+const APEX_OPTIONS: ApexOptions = {
+  dataLabels: {
+    dropShadow: {
+      blur: 3,
+      opacity: 0.8,
+    },
+  },
+  legend: {
+    show: false,
+  },
 }
 
 interface Props {
@@ -56,15 +87,12 @@ async function processDocument(
   values: ValueType[]
 ): Promise<DocumentType> {
   const { formatDocument } = handleDocument()
-  const document = formatDocument(values)
-
-  document.categories[0].categoryName = '合計'
+  const document = formatDocument(values, 'pie')
 
   return document
 }
 
-// コンポーネントの描画
-export default async function TableGrossPrefecturalProduct({
+export default async function PieChartGrossPrefecturalProduct({
   routerProps,
   prefecture,
 }: Props) {
@@ -75,8 +103,10 @@ export default async function TableGrossPrefecturalProduct({
   const document = await processDocument(cardProps, values)
 
   return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
-    </Suspense>
+    <CardsApexPieChart
+      title={title}
+      document={document}
+      options={APEX_OPTIONS}
+    />
   )
 }
