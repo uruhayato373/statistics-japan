@@ -65,6 +65,11 @@
     "fieldId": "economy"
   },
   {
+    "menuId": "household-budget",
+    "menuTitle": "家計",
+    "fieldId": "economy"
+  },
+  {
     "menuId": "construction",
     "menuTitle": "建設業",
     "fieldId": "construction"
