@@ -7,7 +7,7 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardNumberOfOperatingFacilities from 'sections/tourism/inns/DashboardNumberOfOperatingFacilities'
-import TableNumberOfOperatingFacilities from 'sections/tourism/inns/TableInns'
+import TableBusinessFacilities from 'sections/tourism/inns/TableInns'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -33,7 +33,7 @@ export default async function PrefectureView({ routerProps }: Props) {
               />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
-              <TableNumberOfOperatingFacilities
+              <TableBusinessFacilities
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

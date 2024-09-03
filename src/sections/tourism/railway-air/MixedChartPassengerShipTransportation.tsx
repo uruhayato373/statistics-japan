@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import CardsApexLineChart from 'cards/CardsApexLineChart'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -11,12 +11,12 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
-const CARD_TITLE = '営業施設'
-const CARD_ID = 'TableBusinessFacilities'
+const CARD_TITLE = '旅客船輸送の推移'
+const CARD_ID = 'MixedChartPassengerShipTransportation'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C3801', 'C3802', 'C3803', 'C3804', 'C3805'],
+  cdCat01: ['C370701', 'C3707'],
 }
 
 interface Props {
@@ -46,11 +46,14 @@ async function processDocument(
   const { formatDocument } = handleDocument()
   const document = formatDocument(values)
 
+  document.categories[0].type = 'column'
+  document.categories[1].type = 'line'
+
   return document
 }
 
 // コンポーネントの描画
-export default async function TableBusinessFacilities({
+export default async function MixedChartPassengerShipTransportation({
   routerProps,
   prefecture,
 }: Props) {
@@ -62,7 +65,7 @@ export default async function TableBusinessFacilities({
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
+      <CardsApexLineChart title={title} document={document} />
     </Suspense>
   )
 }

@@ -9,8 +9,13 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 import DashboardAirTransportPersonnel from 'sections/tourism/railway-air/DashboardAirTransportPersonnel'
 import DashboardJRCargoShipmentVolume from 'sections/tourism/railway-air/DashboardJRCargoShipmentVolume'
 import DashboardJRTransportationPersonnel from 'sections/tourism/railway-air/DashboardJRTransportationPersonnel'
+import DashboardPassengerShipTransportPersonnel from 'sections/tourism/railway-air/DashboardPassengerShipTransportPersonnel'
 import DashboardPrivateRailwayTransportationPersonnel from 'sections/tourism/railway-air/DashboardPrivateRailwayTransportationPersonnel'
+import LineChartPassengerTransport from 'sections/tourism/railway-air/LineChartPassengerTransport'
+import MixedChartAirTransport from 'sections/tourism/railway-air/MixedChartAirTransport'
 import MixedChartJapanRailwayTransport from 'sections/tourism/railway-air/MixedChartJapanRailwayTransport'
+import MixedChartPassengerShipTransportation from 'sections/tourism/railway-air/MixedChartPassengerShipTransportation'
+import TableBusinessOperator from 'sections/tourism/railway-air/TableBusinessOperator'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -53,8 +58,38 @@ export default async function PrefectureView({ routerProps }: Props) {
                 prefecture={currentPrefecture}
               />
             </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardPassengerShipTransportPersonnel
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
               <MixedChartJapanRailwayTransport
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={6} lg={6}>
+              <MixedChartAirTransport
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={6} lg={6}>
+              <MixedChartPassengerShipTransportation
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={6} lg={6}>
+              <LineChartPassengerTransport
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={6} lg={6}>
+              <TableBusinessOperator
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

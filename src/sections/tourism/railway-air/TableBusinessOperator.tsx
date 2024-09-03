@@ -11,12 +11,12 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
-const CARD_TITLE = '営業施設'
-const CARD_ID = 'TableBusinessFacilities'
+const CARD_TITLE = '事業者'
+const CARD_ID = 'TableBusinessOperator'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C3801', 'C3802', 'C3803', 'C3804', 'C3805'],
+  cdCat01: ['C3708', 'C3709', 'C3710', 'C3711'],
 }
 
 interface Props {
@@ -50,7 +50,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function TableBusinessFacilities({
+export default async function TableBusinessOperator({
   routerProps,
   prefecture,
 }: Props) {

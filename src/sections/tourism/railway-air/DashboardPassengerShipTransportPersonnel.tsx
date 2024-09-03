@@ -1,8 +1,4 @@
-import { Suspense } from 'react'
-
-import CircularProgressCards from 'components/CircularProgressCards'
-
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import CardsDashboardSingle from 'cards/CardsDashboard'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -11,12 +7,12 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import handleValue, { ValueType } from 'utils/value'
 
-const CARD_TITLE = '営業施設'
-const CARD_ID = 'TableBusinessFacilities'
+const CARD_TITLE = '旅客船輸送人員'
+const CARD_ID = 'DashboardPassengerShipTransportPersonnel'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C3801', 'C3802', 'C3803', 'C3804', 'C3805'],
+  cdCat01: 'C3704',
 }
 
 interface Props {
@@ -50,7 +46,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function TableBusinessFacilities({
+export default async function DashboardPassengerShipTransportPersonnel({
   routerProps,
   prefecture,
 }: Props) {
@@ -60,9 +56,5 @@ export default async function TableBusinessFacilities({
   const values = await processValues(cardProps, prefCode)
   const document = await processDocument(cardProps, values)
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
-    </Suspense>
-  )
+  return <CardsDashboardSingle title={title} document={document} />
 }
