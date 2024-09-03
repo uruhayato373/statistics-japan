@@ -3,5 +3,10 @@
     "pageId": "number-of-operating-facilities",
     "pageTitle": "旅館等営業施設数",
     "menuId": "inns"
+  },
+  {
+    "pageId": "jr-transportation-personnel",
+    "pageTitle": "JR輸送人員",
+    "menuId": "railway-air"
   }
 ]

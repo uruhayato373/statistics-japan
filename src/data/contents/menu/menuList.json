@@ -80,6 +80,11 @@
     "fieldId": "energy"
   },
   {
+    "menuId": "railway-air",
+    "menuTitle": "鉄道・航空",
+    "fieldId": "tourism"
+  },
+  {
     "menuId": "inns",
     "menuTitle": "宿泊施設",
     "fieldId": "tourism"

@@ -237,6 +237,13 @@ const widget: MenuGroup = {
       icon: icons.TruckOutlined,
       children: [
         {
+          id: 'railway-air',
+          title: '鉄道・航空',
+          type: 'item',
+          url: '/tourism/railway-air',
+          breadcrumbs: false,
+        },
+        {
           id: 'inns',
           title: '宿泊施設',
           type: 'item',

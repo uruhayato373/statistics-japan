@@ -6,9 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardJRCargoShipmentVolume from 'sections/tourism/railway-air/DashboardJRCargoShipmentVolume'
-import DashboardJRTransportationPersonnel from 'sections/tourism/railway-air/DashboardJRTransportationPersonnel'
-import DashboardPrivateRailwayTransportationPersonnel from 'sections/tourism/railway-air/DashboardPrivateRailwayTransportationPersonnel'
+import DashboardNumberOfOperatingFacilities from 'sections/tourism/inns/DashboardNumberOfOperatingFacilities'
+import TableNumberOfOperatingFacilities from 'sections/tourism/inns/TableInns'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -32,19 +31,13 @@ export default async function JapanView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardJRCargoShipmentVolume
+              <DashboardNumberOfOperatingFacilities
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardJRTransportationPersonnel
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardPrivateRailwayTransportationPersonnel
+            <Grid item xs={12} md={5} lg={7}>
+              <TableNumberOfOperatingFacilities
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
