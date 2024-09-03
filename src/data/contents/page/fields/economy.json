@@ -33,5 +33,10 @@
     "pageId": "office",
     "pageTitle": "事業所数",
     "menuId": "office-employee"
+  },
+  {
+    "pageId": "actual-income",
+    "pageTitle": "実収入",
+    "menuId": "household-budget"
   }
 ]

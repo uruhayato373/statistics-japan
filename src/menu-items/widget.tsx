@@ -191,6 +191,13 @@ const widget: MenuGroup = {
           url: '/economy/consumer-price-index',
           breadcrumbs: false,
         },
+        {
+          id: 'household-budget',
+          title: '家計',
+          type: 'item',
+          url: '/economy/household-budget',
+          breadcrumbs: false,
+        },
       ],
     },
     {
