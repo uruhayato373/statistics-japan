@@ -19,6 +19,7 @@ import PieChartPercentageOfFullTimeFarmers from 'sections/agriculture/agricultur
 import SourceAnnotation from 'sections/agriculture/agriculture/SourceAnnotation'
 import TableAgricultureEmploymentPopulation from 'sections/agriculture/agriculture/TableAgricultureEmploymentPopulation'
 import TableCultivatedLandArea from 'sections/agriculture/agriculture/TableCultivatedLandArea'
+import TableFarmersIncome from 'sections/agriculture/agriculture/TableFarmersIncome'
 import TableNumberOfFarmers from 'sections/agriculture/agriculture/TableNumberOfFarmers'
 import TableAgriculturalProductsMarket from 'sections/agriculture/agriculture/TableNumberOfFarmers copy'
 import handleProps, { RouterProps } from 'utils/props'
@@ -119,6 +120,12 @@ export default async function AgriculturePrefecture({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <TableAgriculturalProductsMarket
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableFarmersIncome
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

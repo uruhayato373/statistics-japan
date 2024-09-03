@@ -16,9 +16,15 @@ export default function SourceAnnotation() {
             <Stack spacing={1}>
               <Typography>出典</Typography>
               <Typography color="secondary" variant="body2">
-                政府統計の総合窓口 e-Stat
-                <Link href="https://www.e-stat.go.jp/dbview?sid=0000010102">
-                  「社会・人口統計体系」
+                政府統計の総合窓口 e-Stat 「社会・人口統計体系」
+                <Link href="https://www.e-stat.go.jp/dbview?sid=0000010103">
+                  C 経済基盤
+                </Link>
+              </Typography>
+              <Typography color="secondary" variant="body2">
+                政府統計の総合窓口 e-Stat 「社会・人口統計体系」
+                <Link href="https://www.e-stat.go.jp/dbview?sid=0000010112">
+                  L 家計
                 </Link>
               </Typography>
             </Stack>
