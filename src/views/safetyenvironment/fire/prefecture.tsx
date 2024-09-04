@@ -7,7 +7,10 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardNumberOfFireStations from 'sections/safetyenvironment/fire/DashboardNumberOfFireStations'
+import TableEmergencyDispatch from 'sections/safetyenvironment/fire/TableEmergencyDispatch'
 import TableFireDepartment from 'sections/safetyenvironment/fire/TableFireDepartment'
+import TableFireEngineDispatched from 'sections/safetyenvironment/fire/TableFireEngineDispatched'
+import TableFireWaterSupply from 'sections/safetyenvironment/fire/TableFireWaterSupply'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -34,6 +37,24 @@ export default async function PrefectureView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <TableFireDepartment
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableFireWaterSupply
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableFireEngineDispatched
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableEmergencyDispatch
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

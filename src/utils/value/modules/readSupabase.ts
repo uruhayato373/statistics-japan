@@ -18,8 +18,11 @@ const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey)
 const BUCKET_NAME = 'cards'
 
 export default async function readSupabaseJson(cardProps: CardProps) {
+  console.log('readSupabaseJson running')
   const { fieldId, menuId, cardId } = cardProps
   const path = `${fieldId}/${menuId}/${cardId}_values.json`
+
+  console.log('path:', path)
 
   try {
     const { data, error } = await supabase.storage
