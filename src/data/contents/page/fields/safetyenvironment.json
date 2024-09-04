@@ -26,7 +26,12 @@
   },
   {
     "pageId": "number-of-police-officers",
-    "pageTitle": "犯罪",
+    "pageTitle": "警察官数",
     "menuId": "crime"
+  },
+  {
+    "pageId": "disaster-damage-amount",
+    "pageTitle": "災害被害額",
+    "menuId": "disaster-pollution"
   }
 ]

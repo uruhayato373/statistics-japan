@@ -130,6 +130,11 @@
     "fieldId": "safetyenvironment"
   },
   {
+    "menuId": "disaster-pollution",
+    "menuTitle": "災害・公害",
+    "fieldId": "safetyenvironment"
+  },
+  {
     "menuId": "hospital",
     "menuTitle": "病院",
     "fieldId": "socialsecurity"

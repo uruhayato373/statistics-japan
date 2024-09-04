@@ -330,6 +330,13 @@ const widget: MenuGroup = {
           url: '/safetyenvironment/crime',
           breadcrumbs: false,
         },
+        {
+          id: 'disaster-pollution',
+          title: '災害・公害',
+          type: 'item',
+          url: '/safetyenvironment/disaster-pollution',
+          breadcrumbs: false,
+        },
       ],
     },
     {
