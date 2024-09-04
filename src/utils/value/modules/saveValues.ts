@@ -1,11 +1,16 @@
 import fs from 'fs-extra'
 
+import { CardProps } from 'utils/props'
+
 import { ValueType } from '../types/value'
 
-export async function saveValues(filePath: string, values: ValueType[]) {
+import { generateLocalFileName } from './generateLocalFileName'
+
+export async function saveValues(cardProps: CardProps, values: ValueType[]) {
+  const filename = generateLocalFileName(cardProps)
   try {
     // ディレクトリが存在しない場合は作成し、データを書き込み
-    await fs.outputJson(filePath, values, { spaces: 2 })
+    await fs.outputJson(filename, values, { spaces: 2 })
     return { success: true, message: 'データが正常に保存されました' }
   } catch (error) {
     console.error('データの保存に失敗しました:', error)

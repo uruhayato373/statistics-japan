@@ -40,7 +40,7 @@ async function processValues(cardProps: CardProps) {
   }
 
   const { readValues } = handleValue(cardProps)
-  const values = readValues()
+  const values = await readValues()
 
   return formatValues(values)
 }
