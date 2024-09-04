@@ -7,8 +7,15 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardNumberOfPoliceOfficers from 'sections/safetyenvironment/crime/DashboardNumberOfPoliceOfficers'
+import MixedChartProstitutionOffender from 'sections/safetyenvironment/crime/MixedChartProstitutionOffender'
+import MixedChartSpecialLawOffender from 'sections/safetyenvironment/crime/MixedChartSpecialLawOffender'
+import MixedChartStimulantDrugCrackdown from 'sections/safetyenvironment/crime/MixedChartStimulantDrugCrackdown'
+import TableIncident from 'sections/safetyenvironment/crime/TableIncident'
 import TableNumberOfCriminalOffensesCleared from 'sections/safetyenvironment/crime/TableNumberOfCriminalOffensesCleared'
+import TableNumberOfPeopleArrestedForCriminalLawCrimes from 'sections/safetyenvironment/crime/TableNumberOfPeopleArrestedForCriminalLawCrimes'
+import TableNumberOfPeopleArrestedForJuvenileCriminalLawOffenses from 'sections/safetyenvironment/crime/TableNumberOfPeopleArrestedForJuvenileCriminalLawOffenses'
 import TableNumberOfRecognizedCriminalLawOffenses from 'sections/safetyenvironment/crime/TableNumberOfRecognizedCriminalLawOffenses'
+import TableRoadTrafficLawViolation from 'sections/safetyenvironment/crime/TableRoadTrafficLawViolation'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -34,6 +41,24 @@ export default async function PrefectureView({ routerProps }: Props) {
               />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
+              <MixedChartSpecialLawOffender
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <MixedChartProstitutionOffender
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <MixedChartStimulantDrugCrackdown
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
               <TableNumberOfRecognizedCriminalLawOffenses
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
@@ -41,6 +66,30 @@ export default async function PrefectureView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <TableNumberOfCriminalOffensesCleared
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableNumberOfPeopleArrestedForCriminalLawCrimes
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableNumberOfPeopleArrestedForJuvenileCriminalLawOffenses
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableRoadTrafficLawViolation
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableIncident
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

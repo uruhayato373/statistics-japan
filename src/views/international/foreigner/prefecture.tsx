@@ -7,6 +7,8 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardForeignPopulation from 'sections/international/foreigner/DashboardForeignPopulation'
+import MixedChartImmigrationControlLaw from 'sections/international/foreigner/MixedChartImmigrationControlLaw'
+import TableForeignerSuspectCase from 'sections/international/foreigner/TableForeignerSuspectCase'
 import TableForeignPopulation from 'sections/international/foreigner/TableForeignPopulation'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -32,8 +34,20 @@ export default async function PrefectureView({ routerProps }: Props) {
                 prefecture={currentPrefecture}
               />
             </Grid>
-            <Grid item xs={12} md={5} lg={7}>
+            <Grid item xs={12} md={6} lg={6}>
+              <MixedChartImmigrationControlLaw
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
               <TableForeignPopulation
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableForeignerSuspectCase
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
