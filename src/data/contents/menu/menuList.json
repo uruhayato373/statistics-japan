@@ -125,6 +125,11 @@
     "fieldId": "safetyenvironment"
   },
   {
+    "menuId": "crime",
+    "menuTitle": "犯罪",
+    "fieldId": "safetyenvironment"
+  },
+  {
     "menuId": "hospital",
     "menuTitle": "病院",
     "fieldId": "socialsecurity"

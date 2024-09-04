@@ -23,5 +23,10 @@
     "pageId": "number-of-fire-stations",
     "pageTitle": "消防署数",
     "menuId": "fire"
+  },
+  {
+    "pageId": "number-of-police-officers",
+    "pageTitle": "犯罪",
+    "menuId": "crime"
   }
 ]

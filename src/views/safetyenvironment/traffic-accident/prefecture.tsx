@@ -11,6 +11,9 @@ import DashboardNumberOfTrafficAccidentInjuries from 'sections/safetyenvironment
 import DashboardNumberOfTrafficAccidents from 'sections/safetyenvironment/traffic-accident/DashboardNumberOfTrafficAccidents'
 import DashboardTrafficAccidentFatalities from 'sections/safetyenvironment/traffic-accident/DashboardTrafficAccidentFatalities'
 import LineChartNumberOfTrafficAccidentCasualties from 'sections/safetyenvironment/traffic-accident/LineChartNumberOfTrafficAccidentCasualties'
+import TableAutomobileLiabilityInsurance from 'sections/safetyenvironment/traffic-accident/TableAutomobileLiabilityInsurance'
+import TableNumberOfDrivingLicenseHolders from 'sections/safetyenvironment/traffic-accident/TableNumberOfDrivingLicenseHolders'
+import TableNumberOfPeopleTakingCoursesForTheElderly from 'sections/safetyenvironment/traffic-accident/TableNumberOfPeopleTakingCoursesForTheElderly'
 import TableTrafficAccident from 'sections/safetyenvironment/traffic-accident/TableTrafficAccident'
 import TableVoluntaryCarInsurance from 'sections/safetyenvironment/traffic-accident/TableVoluntaryCarInsurance'
 import handleProps, { RouterProps } from 'utils/props'
@@ -69,6 +72,24 @@ export default async function PrefectureView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <TableVoluntaryCarInsurance
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableAutomobileLiabilityInsurance
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableNumberOfDrivingLicenseHolders
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableNumberOfPeopleTakingCoursesForTheElderly
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

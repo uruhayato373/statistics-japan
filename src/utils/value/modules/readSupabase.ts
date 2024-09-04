@@ -16,11 +16,8 @@ const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey)
 const BUCKET_NAME = 'cards'
 
 function sanitizePath(path: string): string {
-  // スラッシュで始まる場合は削除
   path = path.replace(/^\/+/, '')
-  // 連続するスラッシュを単一のスラッシュに置換
   path = path.replace(/\/+/g, '/')
-  // URLエンコードを行うが、スラッシュはエンコードしない
   return path
     .split('/')
     .map((segment) => encodeURIComponent(segment))
@@ -29,7 +26,7 @@ function sanitizePath(path: string): string {
 
 export default async function readSupabaseJson(
   cardProps: CardProps
-): Promise<ValueType[] | null> {
+): Promise<ValueType[]> {
   console.log('readSupabaseJson running')
   const { fieldId, menuId, cardId } = cardProps
 
@@ -41,21 +38,22 @@ export default async function readSupabaseJson(
   console.log('From bucket:', BUCKET_NAME)
 
   try {
-    const { data, error } = await supabase.storage
+    const { data: urlData } = supabase.storage
       .from(BUCKET_NAME)
-      .download(path)
+      .getPublicUrl(path)
 
-    if (error) {
-      console.error('ダウンロードエラー:', error)
-      console.error('エラーの詳細:', JSON.stringify(error, null, 2))
-      throw error
+    if (!urlData || !urlData.publicUrl) {
+      throw new Error('公開URLの取得に失敗しました')
     }
 
-    if (!data) {
-      throw new Error('ダウンロードされたデータが空です')
+    console.log('File public URL:', urlData.publicUrl)
+
+    const response = await fetch(urlData.publicUrl)
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
     }
 
-    const text = await data.text()
+    const text = await response.text()
     if (!text.trim()) {
       throw new Error('ダウンロードされたファイルの内容が空です')
     }
@@ -71,6 +69,7 @@ export default async function readSupabaseJson(
       console.error('エラーメッセージ:', error.message)
       console.error('スタックトレース:', error.stack)
     }
-    return null
+    // エラーが発生した場合は空の配列を返す
+    return []
   }
 }
