@@ -24,6 +24,7 @@ async function retry<T>(
     return await fn()
   } catch (error) {
     if (retries <= 0) throw error
+    console.log(`リトライ中... 残り試行回数: ${retries}`)
     await new Promise((resolve) => setTimeout(resolve, delay))
     return retry(fn, retries - 1, delay * 2)
   }
@@ -36,7 +37,8 @@ export default async function readSupabaseJson(
   const { fieldId, menuId, cardId } = cardProps
   const path = `${fieldId}/${menuId}/${cardId}_values.json`
 
-  console.log('path:', path)
+  console.log('Attempting to download file:', path)
+  console.log('From bucket:', BUCKET_NAME)
 
   try {
     const result = await retry(async () => {
@@ -45,8 +47,19 @@ export default async function readSupabaseJson(
         .download(path)
 
       if (error) {
-        console.error(`ダウンロードエラー: ${error.message}`)
+        console.error('ダウンロードエラー:', error)
         console.error('エラーの詳細:', JSON.stringify(error, null, 2))
+        // エラーオブジェクトの一般的なプロパティをログ出力
+        if (typeof error === 'object' && error !== null) {
+          console.error('エラータイプ:', error.constructor.name)
+          console.error('エラーメッセージ:', (error as Error).message)
+          if ('status' in error) {
+            console.error(
+              'エラーステータス:',
+              (error as { status: unknown }).status
+            )
+          }
+        }
         throw error
       }
 
@@ -59,8 +72,12 @@ export default async function readSupabaseJson(
         throw new Error('ダウンロードされたファイルの内容が空です')
       }
 
+      console.log('ファイルの内容:', text.substring(0, 100) + '...') // 最初の100文字のみログ出力
+
       try {
-        return JSON.parse(text) as ValueType[]
+        const parsed = JSON.parse(text) as ValueType[]
+        console.log('パースされたデータの件数:', parsed.length)
+        return parsed
       } catch (parseError) {
         console.error('JSONパースエラー:', parseError)
         console.error('受信したテキスト:', text)
