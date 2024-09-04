@@ -27,15 +27,15 @@ function sanitizePath(path: string): string {
 export default async function readSupabaseJson(
   cardProps: CardProps
 ): Promise<ValueType[]> {
-  console.log('readSupabaseJson running')
+  // console.log('readSupabaseJson running')
   const { fieldId, menuId, cardId } = cardProps
 
   const rawPath = `${fieldId}/${menuId}/${cardId}_values.json`
   const path = sanitizePath(rawPath)
 
-  console.log('Raw path:', rawPath)
-  console.log('Sanitized path:', path)
-  console.log('From bucket:', BUCKET_NAME)
+  // console.log('Raw path:', rawPath)
+  // console.log('Sanitized path:', path)
+  // console.log('From bucket:', BUCKET_NAME)
 
   try {
     const { data: urlData } = supabase.storage
@@ -46,7 +46,7 @@ export default async function readSupabaseJson(
       throw new Error('公開URLの取得に失敗しました')
     }
 
-    console.log('File public URL:', urlData.publicUrl)
+    // console.log('File public URL:', urlData.publicUrl)
 
     const response = await fetch(urlData.publicUrl)
     if (!response.ok) {
@@ -58,7 +58,7 @@ export default async function readSupabaseJson(
       throw new Error('ダウンロードされたファイルの内容が空です')
     }
 
-    console.log('ファイルの内容:', text.substring(0, 100) + '...') // 最初の100文字のみログ出力
+    // console.log('ファイルの内容:', text.substring(0, 100) + '...') // 最初の100文字のみログ出力
 
     const parsed = JSON.parse(text) as ValueType[]
     console.log('パースされたデータの件数:', parsed.length)

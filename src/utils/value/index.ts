@@ -15,7 +15,6 @@ interface HandleValuesResult {
 }
 
 const handleValue = (cardProps: CardProps): HandleValuesResult => {
-  console.log('handleValue running')
   return {
     readValues: async () => await readValues(cardProps),
     saveValues: async (values: ValueType[]) => saveValues(cardProps, values),

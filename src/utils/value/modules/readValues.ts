@@ -11,7 +11,6 @@ export async function readValues(
   if (process.env.NODE_ENV === 'development') {
     return await readLocalJson(cardProps)
   }
-  console.log('readValues running')
 
   return await readSupabaseJson(cardProps)
 }

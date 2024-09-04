@@ -323,6 +323,13 @@ const widget: MenuGroup = {
           url: '/safetyenvironment/fire',
           breadcrumbs: false,
         },
+        {
+          id: 'crime',
+          title: '犯罪',
+          type: 'item',
+          url: '/safetyenvironment/crime',
+          breadcrumbs: false,
+        },
       ],
     },
     {
