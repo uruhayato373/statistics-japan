@@ -10,7 +10,9 @@ import DashboardNumberOfTrafficAccidentCasualties from 'sections/safetyenvironme
 import DashboardNumberOfTrafficAccidentInjuries from 'sections/safetyenvironment/traffic-accident/DashboardNumberOfTrafficAccidentInjuries'
 import DashboardNumberOfTrafficAccidents from 'sections/safetyenvironment/traffic-accident/DashboardNumberOfTrafficAccidents'
 import DashboardTrafficAccidentFatalities from 'sections/safetyenvironment/traffic-accident/DashboardTrafficAccidentFatalities'
+import LineChartNumberOfTrafficAccidentCasualties from 'sections/safetyenvironment/traffic-accident/LineChartNumberOfTrafficAccidentCasualties'
 import TableTrafficAccident from 'sections/safetyenvironment/traffic-accident/TableTrafficAccident'
+import TableVoluntaryCarInsurance from 'sections/safetyenvironment/traffic-accident/TableVoluntaryCarInsurance'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -53,8 +55,20 @@ export default async function PrefectureView({ routerProps }: Props) {
                 prefecture={currentPrefecture}
               />
             </Grid>
-            <Grid item xs={12} md={5} lg={7}>
+            <Grid item xs={12} md={6} lg={6}>
+              <LineChartNumberOfTrafficAccidentCasualties
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
               <TableTrafficAccident
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableVoluntaryCarInsurance
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

@@ -10,7 +10,9 @@ import DashboardNumberOfFireStations from 'sections/safetyenvironment/fire/Dashb
 import TableEmergencyDispatch from 'sections/safetyenvironment/fire/TableEmergencyDispatch'
 import TableFireDepartment from 'sections/safetyenvironment/fire/TableFireDepartment'
 import TableFireEngineDispatched from 'sections/safetyenvironment/fire/TableFireEngineDispatched'
+import TableFireInsurance from 'sections/safetyenvironment/fire/TableFireInsurance'
 import TableFireWaterSupply from 'sections/safetyenvironment/fire/TableFireWaterSupply'
+import TableNumberOfFireCasualties from 'sections/safetyenvironment/fire/TableNumberOfFireCasualties'
 import TableNumberOfFires from 'sections/safetyenvironment/fire/TableNumberOfFires'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -62,6 +64,18 @@ export default async function PrefectureView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <TableNumberOfFires
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableNumberOfFireCasualties
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableFireInsurance
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
