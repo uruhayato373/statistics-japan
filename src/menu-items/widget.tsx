@@ -316,6 +316,13 @@ const widget: MenuGroup = {
           url: '/safetyenvironment/traffic-accident',
           breadcrumbs: false,
         },
+        {
+          id: 'fire',
+          title: '消防・火災',
+          type: 'item',
+          url: '/safetyenvironment/fire',
+          breadcrumbs: false,
+        },
       ],
     },
     {
