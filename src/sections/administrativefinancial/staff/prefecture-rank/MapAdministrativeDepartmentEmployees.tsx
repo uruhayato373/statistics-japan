@@ -9,7 +9,7 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import handleGeoshape from 'utils/geoshape'
 import { CardProps, RouterProps } from 'utils/props'
-import { ValueType } from 'utils/value'
+import handleValue, { ValueType } from 'utils/value'
 
 const CARD_TITLE = '一般行政部門職員数'
 const CARD_ID = 'MapAdministrativeDepartmentEmployees'
@@ -25,9 +25,14 @@ interface Props {
 
 // values
 async function processValues(cardProps: CardProps) {
-  const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues(ESTAT_PARAMS)
-  await actionSaveValues(cardProps, values)
+  if (process.env.NODE_ENV === 'development') {
+    const { fetchValues } = handleEstatAPI()
+    const values = await fetchValues(ESTAT_PARAMS)
+    await actionSaveValues(cardProps, values)
+  }
+
+  const { readValues } = handleValue()
+  const values = await readValues(cardProps)
 
   return values
 }
