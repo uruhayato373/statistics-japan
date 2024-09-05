@@ -32,6 +32,21 @@ export default async function saveSupabaseDB(
 
     console.log('更新するデータ:', extendedValues[0]) // 最初の要素のみログ出力
 
+    // テーブル構造の確認
+    const { data: columns, error: columnError } = await supabase
+      .from(tableName)
+      .select()
+      .limit(0)
+
+    if (columnError) {
+      console.error('テーブル構造の確認エラー:', columnError)
+      throw new Error(
+        `テーブル構造の確認に失敗しました: ${columnError.message}`
+      )
+    }
+
+    console.log('テーブル構造:', Object.keys(columns[0] || {}))
+
     const { data: upsertData, error: upsertError } = await supabase
       .from(tableName)
       .upsert(extendedValues, {

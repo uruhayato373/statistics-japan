@@ -36,10 +36,10 @@ interface Props {
 // values
 async function processValues(cardProps: CardProps, prefCode: string) {
   const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues(ESTAT_PARAMS)
+  const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
   await actionSaveValues(cardProps, values)
 
-  return values.filter((f) => f.areaCode === prefCode)
+  return values
 }
 
 // document
