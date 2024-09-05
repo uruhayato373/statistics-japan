@@ -24,7 +24,7 @@ const nextConfig = {
     ESTAT_API_KEY: process.env.ESTAT_API_KEY,
   },
   experimental: {
-    appDir: true,
+    // appDir: true,
     serverComponentsExternalPackages: ['https-proxy-agent'],
   },
   webpack(config) {
