@@ -21,7 +21,6 @@ import TableAgricultureEmploymentPopulation from 'sections/agriculture/agricultu
 import TableCultivatedLandArea from 'sections/agriculture/agriculture/TableCultivatedLandArea'
 import TableFarmersIncome from 'sections/agriculture/agriculture/TableFarmersIncome'
 import TableNumberOfFarmers from 'sections/agriculture/agriculture/TableNumberOfFarmers'
-import TableAgriculturalProductsMarket from 'sections/agriculture/agriculture/TableNumberOfFarmers copy'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -114,12 +113,6 @@ export default async function AgriculturePrefecture({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <TableCultivatedLandArea
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={6} lg={6}>
-              <TableAgriculturalProductsMarket
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
