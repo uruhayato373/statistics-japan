@@ -30,8 +30,11 @@ async function insertOrUpdateData(tableName: string, values: ValueType[]) {
   if (error) throw new Error(`データの保存に失敗しました: ${error.message}`)
 }
 
-export async function saveValues(cardProps: CardProps, values: ValueType[]) {
-  const tableName = `values_${cardProps.fieldId}`
+export async function saveSupabaseDB(
+  cardProps: CardProps,
+  values: ValueType[]
+) {
+  const tableName = `${cardProps.fieldId}`
 
   try {
     await refreshSchemaCache()
