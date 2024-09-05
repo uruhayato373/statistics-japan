@@ -1,33 +1,17 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
 import { CardProps } from 'utils/props'
 
 import { ValueType } from '../types/value'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-if (!supabaseUrl || !supabaseServiceRoleKey) {
+if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error('Supabaseの環境変数が設定されていません')
 }
 
-const supabase = createClient(supabaseUrl, supabaseServiceRoleKey, {
-  auth: { persistSession: false },
-})
-
-async function createTableIfNotExists(tableName: string) {
-  try {
-    const { data, error } = await supabase.rpc(
-      'create_values_table_if_not_exists',
-      { table_name: tableName }
-    )
-    if (error) throw error
-    console.log('テーブル作成結果:', data)
-  } catch (error) {
-    console.error('テーブル作成エラー:', error)
-    throw new Error(`テーブルの作成に失敗しました: ${error.message}`)
-  }
-}
+const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey)
 
 export default async function saveSupabaseDB(
   cardProps: CardProps,
@@ -36,34 +20,38 @@ export default async function saveSupabaseDB(
   const { fieldId, menuId, cardId } = cardProps
 
   try {
-    const tableName = `${fieldId}`
-
-    console.log('使用中のSupabase URL:', supabaseUrl)
-    console.log('テーブル名:', tableName)
+    const tableName = `values_${fieldId}`
+    console.log(`テーブル名: ${tableName}`)
 
     // テーブルが存在しない場合は作成
-    await createTableIfNotExists(tableName)
+    const { data: createTableData, error: createTableError } =
+      await supabase.rpc('create_values_table_if_not_exists', {
+        table_name: tableName,
+      })
 
-    // データの準備
+    if (createTableError) {
+      console.error('テーブル作成エラー:', createTableError)
+      throw new Error(
+        `テーブルの作成に失敗しました: ${createTableError.message}`
+      )
+    }
+
+    console.log('テーブル作成結果:', createTableData)
+
+    // menuIdとcardIdを含めてデータを拡張
     const extendedValues = values.map((value) => ({
-      categorycode: value.categoryCode,
-      categoryname: value.categoryName,
-      categoryunit: value.categoryUnit,
-      areacode: value.areaCode,
-      areaname: value.areaName,
-      timecode: value.timeCode,
-      timename: value.timeName,
-      unit: value.unit,
-      value: value.value,
-      menuid: menuId,
-      cardid: cardId,
+      ...value,
+      menuId,
+      cardId,
     }))
 
-    // データのupsert
+    console.log('挿入/更新するデータ例:', extendedValues[0])
+
+    // データを一括でupsert（挿入または更新）
     const { data: upsertData, error: upsertError } = await supabase
       .from(tableName)
       .upsert(extendedValues, {
-        onConflict: 'menuid, cardid, timecode, areacode, categorycode',
+        onConflict: 'menuId, cardId, timeCode, areaCode, categoryCode',
         ignoreDuplicates: false,
       })
 
