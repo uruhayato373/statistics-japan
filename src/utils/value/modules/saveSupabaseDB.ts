@@ -14,19 +14,36 @@ if (!supabaseUrl || !supabaseAnonKey) {
 const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey)
 
 async function checkTableStructure(tableName: string) {
-  const { data, error } = await supabase
-    .from('information_schema.columns')
-    .select('column_name, data_type')
-    .eq('table_schema', 'public')
-    .eq('table_name', tableName)
+  // テーブルの存在確認
+  const { data: tableExists, error: tableError } = await supabase
+    .from('pg_tables')
+    .select('tablename')
+    .eq('schemaname', 'public')
+    .eq('tablename', tableName)
 
-  if (error) {
-    console.error('テーブル構造の確認に失敗しました:', error)
-    throw new Error(`テーブル構造の確認に失敗しました: ${error.message}`)
+  if (tableError) {
+    console.error('テーブル存在確認エラー:', tableError)
+    throw new Error(`テーブル存在確認に失敗しました: ${tableError.message}`)
   }
 
-  console.log(`テーブル ${tableName} の構造:`, data)
-  return data
+  if (!tableExists || tableExists.length === 0) {
+    console.log(`テーブル ${tableName} は存在しません`)
+    return null
+  }
+
+  // 列情報の取得（カスタム関数を使用）
+  const { data: columns, error: columnError } = await supabase.rpc(
+    'get_table_columns',
+    { table_name: tableName }
+  )
+
+  if (columnError) {
+    console.error('列情報取得エラー:', columnError)
+    throw new Error(`列情報の取得に失敗しました: ${columnError.message}`)
+  }
+
+  console.log(`テーブル ${tableName} の構造:`, columns)
+  return columns
 }
 
 export default async function saveSupabaseDB(
@@ -51,7 +68,10 @@ export default async function saveSupabaseDB(
       )
     }
 
-    await checkTableStructure(tableName)
+    const tableStructure = await checkTableStructure(tableName)
+    if (!tableStructure) {
+      throw new Error(`テーブル ${tableName} が存在しません`)
+    }
 
     const extendedValues = values.map((value) => ({
       ...value,
