@@ -1,17 +1,31 @@
-import { createClient, SupabaseClient } from '@supabase/supabase-js'
+import { createClient } from '@supabase/supabase-js'
 
 import { CardProps } from 'utils/props'
 
 import { ValueType } from '../types/value'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+// サーバーサイドでのみ使用する環境変数
+const supabaseUrl = process.env.SUPABASE_URL
+const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
 
-if (!supabaseUrl || !supabaseAnonKey) {
+if (!supabaseUrl || !supabaseServiceRoleKey) {
   throw new Error('Supabaseの環境変数が設定されていません')
 }
 
-const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey)
+// サービスロールキーを使用してクライアントを作成
+const supabase = createClient(supabaseUrl, supabaseServiceRoleKey, {
+  auth: { persistSession: false },
+})
+
+async function createTableIfNotExists(tableName: string) {
+  const { error } = await supabase.rpc('create_dynamic_table', {
+    table_name: tableName,
+  })
+  if (error) {
+    console.error('テーブル作成エラー:', error)
+    throw new Error(`テーブルの作成に失敗しました: ${error.message}`)
+  }
+}
 
 export default async function saveSupabaseDB(
   cardProps: CardProps,
@@ -20,24 +34,12 @@ export default async function saveSupabaseDB(
   const { fieldId, menuId, cardId } = cardProps
 
   try {
-    // fieldIdを使用してテーブル名を生成
     const tableName = `${fieldId}`
 
     // テーブルが存在しない場合は作成
-    const { error: createTableError } = await supabase.rpc(
-      'create_values_table_if_not_exists',
-      {
-        table_name: tableName,
-      }
-    )
+    await createTableIfNotExists(tableName)
 
-    if (createTableError) {
-      throw new Error(
-        `テーブルの作成に失敗しました: ${createTableError.message}`
-      )
-    }
-
-    // menuIdとcardIdを含めてデータを拡張し、カラム名を小文字に変換
+    // データの準備
     const extendedValues = values.map((value) => ({
       categorycode: value.categoryCode,
       categoryname: value.categoryName,
@@ -52,7 +54,7 @@ export default async function saveSupabaseDB(
       cardid: cardId,
     }))
 
-    // データを一括でupsert（挿入または更新）
+    // データのupsert
     const { error: upsertError } = await supabase
       .from(tableName)
       .upsert(extendedValues, {
@@ -61,6 +63,7 @@ export default async function saveSupabaseDB(
       })
 
     if (upsertError) {
+      console.error('Upsertエラー:', upsertError)
       throw new Error(`データの保存に失敗しました: ${upsertError.message}`)
     }
 
