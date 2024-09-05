@@ -4,68 +4,65 @@ import { CardProps } from 'utils/props'
 
 import { ValueType } from '../types/value'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-const supabase: SupabaseClient = createClient(supabaseUrl, supabaseKey)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-async function logTableStructure(tableName: string) {
-  const { data, error } = await supabase
-    .from('information_schema.columns')
-    .select('column_name, data_type')
-    .eq('table_name', tableName)
-
-  if (error) {
-    console.error('テーブル構造の取得に失敗しました:', error)
-  } else {
-    console.log('テーブル構造:', data)
-  }
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error('Supabaseの環境変数が設定されていません')
 }
 
-async function insertOrUpdateData(
-  tableName: string,
-  values: ValueType[]
-): Promise<ValueType[] | null> {
-  console.log('挿入/更新するデータ:', values[0])
+const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey)
 
-  const { data, error } = await supabase.from(tableName).upsert(values, {
-    onConflict: 'timeCode, areaCode, categoryCode',
-    ignoreDuplicates: false,
-  })
-
-  if (error) {
-    console.error('データ更新エラーの詳細:', error)
-    throw new Error(`データの保存に失敗しました: ${error.message}`)
-  }
-
-  console.log('更新されたデータ:', data)
-  return data
-}
-
-export async function saveSupabaseDB(
+export default async function saveSupabaseDB(
   cardProps: CardProps,
   values: ValueType[]
 ) {
-  const tableName = `values_${cardProps.fieldId}`
+  const { fieldId, menuId, cardId } = cardProps
 
   try {
-    await logTableStructure(tableName)
+    // fieldIdを使用してテーブル名を生成
+    const tableName = `${fieldId}`
 
-    const updatedData = await insertOrUpdateData(tableName, values)
-
-    if (updatedData && updatedData.length > 0) {
-      return {
-        success: true,
-        message: `${updatedData.length}件のデータが正常に保存されました`,
+    // テーブルが存在しない場合は作成
+    const { error: createTableError } = await supabase.rpc(
+      'create_values_table_if_not_exists',
+      {
+        table_name: tableName,
       }
-    } else {
-      return { success: false, message: 'データは更新されませんでした' }
+    )
+
+    if (createTableError) {
+      throw new Error(
+        `テーブルの作成に失敗しました: ${createTableError.message}`
+      )
     }
+
+    // menuIdとcardIdを含めてデータを拡張
+    const extendedValues = values.map((value) => ({
+      ...value,
+      menuId,
+      cardId,
+    }))
+
+    // データを一括でupsert（挿入または更新）
+    const { error: upsertError } = await supabase
+      .from(tableName)
+      .upsert(extendedValues, {
+        onConflict: 'menuId, cardId, timeCode, areaCode, categoryCode',
+        ignoreDuplicates: false,
+      })
+
+    if (upsertError) {
+      throw new Error(`データの保存に失敗しました: ${upsertError.message}`)
+    }
+
+    return { success: true, message: 'データが正常に保存されました' }
   } catch (error) {
     console.error('データの保存に失敗しました:', error)
-    return {
-      success: false,
-      message:
-        error instanceof Error ? error.message : 'データの保存に失敗しました',
+    let errorMessage = 'データの保存に失敗しました'
+    if (error instanceof Error) {
+      errorMessage += `: ${error.message}`
     }
+    return { success: false, message: errorMessage }
   }
 }
