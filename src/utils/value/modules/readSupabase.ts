@@ -25,11 +25,13 @@ function sanitizePath(path: string): string {
 }
 
 export default async function readSupabaseJson(
-  cardProps: CardProps
+  cardProps: CardProps,
+  areaCode?: string
 ): Promise<ValueType[]> {
   const { fieldId, menuId, cardId } = cardProps
 
-  const rawPath = `${fieldId}/${menuId}/${cardId}_values.json`
+  const filename = areaCode ? `${cardId}_${areaCode}.json` : `${cardId}.json`
+  const rawPath = `${fieldId}/${menuId}/${filename}`
   const path = sanitizePath(rawPath)
 
   try {

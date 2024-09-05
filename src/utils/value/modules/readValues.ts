@@ -3,6 +3,7 @@ import { CardProps } from 'utils/props'
 import { ValueType } from '../types/value'
 
 import readLocalJson from './readLocal'
+import readSupabaseJson from './readSupabase'
 
 export async function readValues(
   cardProps: CardProps,
@@ -12,5 +13,5 @@ export async function readValues(
     return await readLocalJson(cardProps, areaCode)
   }
 
-  // return await readSupabaseJson(cardProps)
+  return await readSupabaseJson(cardProps, areaCode)
 }
