@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
 import { CardProps } from 'utils/props'
 
@@ -6,43 +6,60 @@ import { ValueType } from '../types/value'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-const supabase = createClient(supabaseUrl, supabaseKey)
+const supabase: SupabaseClient = createClient(supabaseUrl, supabaseKey)
 
-async function refreshSchemaCache() {
-  const { error } = await supabase.rpc('refresh_schema_cache')
-  if (error)
-    throw new Error(`スキーマキャッシュの更新に失敗しました: ${error.message}`)
+async function logTableStructure(tableName: string) {
+  const { data, error } = await supabase
+    .from('information_schema.columns')
+    .select('column_name, data_type')
+    .eq('table_name', tableName)
+
+  if (error) {
+    console.error('テーブル構造の取得に失敗しました:', error)
+  } else {
+    console.log('テーブル構造:', data)
+  }
 }
 
-async function createOrUpdateTable(tableName: string) {
-  const { error } = await supabase.rpc('create_or_update_values_table', {
-    p_table_name: tableName,
-  })
-  if (error)
-    throw new Error(`テーブルの作成または更新に失敗しました: ${error.message}`)
-}
+async function insertOrUpdateData(
+  tableName: string,
+  values: ValueType[]
+): Promise<ValueType[] | null> {
+  console.log('挿入/更新するデータ:', values[0])
 
-async function insertOrUpdateData(tableName: string, values: ValueType[]) {
-  const { error } = await supabase.from(tableName).upsert(values, {
+  const { data, error } = await supabase.from(tableName).upsert(values, {
     onConflict: 'timeCode, areaCode, categoryCode',
     ignoreDuplicates: false,
   })
-  if (error) throw new Error(`データの保存に失敗しました: ${error.message}`)
+
+  if (error) {
+    console.error('データ更新エラーの詳細:', error)
+    throw new Error(`データの保存に失敗しました: ${error.message}`)
+  }
+
+  console.log('更新されたデータ:', data)
+  return data
 }
 
 export async function saveSupabaseDB(
   cardProps: CardProps,
   values: ValueType[]
 ) {
-  const tableName = `${cardProps.fieldId}`
+  const tableName = `values_${cardProps.fieldId}`
 
   try {
-    await refreshSchemaCache()
-    await createOrUpdateTable(tableName)
-    // スキーマの変更が反映されるまで少し待機
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    await insertOrUpdateData(tableName, values)
-    return { success: true, message: 'データが正常に保存されました' }
+    await logTableStructure(tableName)
+
+    const updatedData = await insertOrUpdateData(tableName, values)
+
+    if (updatedData && updatedData.length > 0) {
+      return {
+        success: true,
+        message: `${updatedData.length}件のデータが正常に保存されました`,
+      }
+    } else {
+      return { success: false, message: 'データは更新されませんでした' }
+    }
   } catch (error) {
     console.error('データの保存に失敗しました:', error)
     return {
