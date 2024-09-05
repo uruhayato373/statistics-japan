@@ -1,5 +1,5 @@
 import { HttpsProxyAgent } from 'https-proxy-agent'
-import fetch from 'node-fetch'
+import fetch, { Response as NodeFetchResponse } from 'node-fetch'
 
 import { EstatParamsType } from '../types/params'
 import { EStatResponseType } from '../types/response'
@@ -22,7 +22,7 @@ const BASE_URL = 'https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData'
 /**
  * HTTPプロキシのURL
  * 環境変数 HTTP_PROXY から取得します。
- * プロキシサーバーを経由してAPIリクестを行う場合に使用します。
+ * プロキシサーバーを経由してAPIリクエストを行う場合に使用します。
  */
 const PROXY_URL = process.env.HTTP_PROXY
 
@@ -34,6 +34,16 @@ const PROXY_URL = process.env.HTTP_PROXY
 const agent = PROXY_URL ? new HttpsProxyAgent(PROXY_URL) : undefined
 
 /**
+ * 再試行の最大回数
+ */
+const MAX_RETRIES = 3
+
+/**
+ * 初期の再試行遅延時間（ミリ秒）
+ */
+const INITIAL_RETRY_DELAY = 1000 // 1秒
+
+/**
  * レスポンスが有効なEStatResponseTypeかどうかをチェックする関数
  *
  * @param {any} data - チェックするデータ
@@ -41,6 +51,41 @@ const agent = PROXY_URL ? new HttpsProxyAgent(PROXY_URL) : undefined
  */
 function isValidEStatResponse(data: unknown): data is EStatResponseType {
   return data && typeof data === 'object' && 'GET_STATS_DATA' in data
+}
+
+/**
+ * 再試行ロジックを含むフェッチ関数
+ *
+ * @param {string} url - リクエストURL
+ * @param {any} options - フェッチオプション
+ * @param {number} retries - 残りの再試行回数
+ * @param {number} delay - 次の再試行までの遅延時間（ミリ秒）
+ * @returns {Promise<NodeFetchResponse>} フェッチレスポンスのPromise
+ * @throws {Error} すべての再試行が失敗した場合にエラーをスロー
+ */
+async function fetchWithRetry(
+  url: string,
+  options: unknown,
+  retries = MAX_RETRIES,
+  delay = INITIAL_RETRY_DELAY
+): Promise<NodeFetchResponse> {
+  try {
+    const response = await fetch(url, options)
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    }
+    return response
+  } catch (error) {
+    if (retries > 0) {
+      console.warn(
+        `リクエストが失敗しました。${delay / 1000}秒後に再試行します。残り再試行回数: ${retries - 1}`
+      )
+      await new Promise((resolve) => setTimeout(resolve, delay))
+      return fetchWithRetry(url, options, retries - 1, delay * 2)
+    } else {
+      throw error
+    }
+  }
 }
 
 /**
@@ -66,17 +111,11 @@ export async function fetchEstatAPI(
   const url = `${BASE_URL}?${paramsSerializer(queryParams)}`
 
   try {
-    const response = await fetch(url, {
+    const response = await fetchWithRetry(url, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
       agent,
     })
-
-    if (!response.ok) {
-      throw new Error(
-        `e-Stat APIリクエストが失敗しました: ${response.status} ${response.statusText}`
-      )
-    }
 
     const data = await response.json()
 
