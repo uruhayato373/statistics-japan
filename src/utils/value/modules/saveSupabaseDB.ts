@@ -5,7 +5,7 @@ import { CardProps } from 'utils/props'
 import { ValueType } from '../types/value'
 
 // サーバーサイドでのみ使用する環境変数
-const supabaseUrl = process.env.SUPABASE_URL
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
 
 if (!supabaseUrl || !supabaseServiceRoleKey) {
