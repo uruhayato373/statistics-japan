@@ -40,9 +40,17 @@ export default async function saveSupabaseDB(
 
     // menuIdとcardIdを含めてデータを拡張
     const extendedValues = values.map((value) => ({
-      ...value,
-      menuId,
-      cardId,
+      menuid: menuId,
+      cardid: cardId,
+      timecode: value.timeCode,
+      areacode: value.areaCode,
+      categorycode: value.categoryCode,
+      categoryname: value.categoryName,
+      categoryunit: value.categoryUnit,
+      areaname: value.areaName,
+      timename: value.timeName,
+      unit: value.unit,
+      value: value.value,
     }))
 
     console.log('挿入/更新するデータ例:', extendedValues[0])
@@ -51,7 +59,7 @@ export default async function saveSupabaseDB(
     const { data: upsertData, error: upsertError } = await supabase
       .from(tableName)
       .upsert(extendedValues, {
-        onConflict: 'menuId, cardId, timeCode, areaCode, categoryCode',
+        onConflict: 'menuid, cardid, timecode, areacode, categorycode',
         ignoreDuplicates: false,
       })
 
