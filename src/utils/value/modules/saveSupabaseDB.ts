@@ -4,24 +4,26 @@ import { CardProps } from 'utils/props'
 
 import { ValueType } from '../types/value'
 
-// サーバーサイドでのみ使用する環境変数
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseUrl = process.env.SUPABASE_URL
 const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
 
 if (!supabaseUrl || !supabaseServiceRoleKey) {
   throw new Error('Supabaseの環境変数が設定されていません')
 }
 
-// サービスロールキーを使用してクライアントを作成
 const supabase = createClient(supabaseUrl, supabaseServiceRoleKey, {
   auth: { persistSession: false },
 })
 
 async function createTableIfNotExists(tableName: string) {
-  const { error } = await supabase.rpc('create_dynamic_table', {
-    table_name: tableName,
-  })
-  if (error) {
+  try {
+    const { data, error } = await supabase.rpc(
+      'create_values_table_if_not_exists',
+      { table_name: tableName }
+    )
+    if (error) throw error
+    console.log('テーブル作成結果:', data)
+  } catch (error) {
     console.error('テーブル作成エラー:', error)
     throw new Error(`テーブルの作成に失敗しました: ${error.message}`)
   }
@@ -35,6 +37,9 @@ export default async function saveSupabaseDB(
 
   try {
     const tableName = `${fieldId}`
+
+    console.log('使用中のSupabase URL:', supabaseUrl)
+    console.log('テーブル名:', tableName)
 
     // テーブルが存在しない場合は作成
     await createTableIfNotExists(tableName)
@@ -55,7 +60,7 @@ export default async function saveSupabaseDB(
     }))
 
     // データのupsert
-    const { error: upsertError } = await supabase
+    const { data: upsertData, error: upsertError } = await supabase
       .from(tableName)
       .upsert(extendedValues, {
         onConflict: 'menuid, cardid, timecode, areacode, categorycode',
@@ -66,6 +71,8 @@ export default async function saveSupabaseDB(
       console.error('Upsertエラー:', upsertError)
       throw new Error(`データの保存に失敗しました: ${upsertError.message}`)
     }
+
+    console.log('Upsert結果:', upsertData)
 
     return { success: true, message: 'データが正常に保存されました' }
   } catch (error) {
