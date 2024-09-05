@@ -7,6 +7,6 @@ export async function actionSaveValues(
   cardProps: CardProps,
   values: ValueType[]
 ) {
-  const { saveValues } = handleValue(cardProps)
-  return saveValues(values)
+  const { saveValues } = handleValue()
+  return saveValues(cardProps, values)
 }

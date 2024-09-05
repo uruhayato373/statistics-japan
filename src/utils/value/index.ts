@@ -7,17 +7,24 @@ import { ValueType } from './types/value'
 export type * from './types/value'
 
 interface HandleValuesResult {
-  readValues: () => Promise<ValueType[] | null>
-  saveValues: (values: ValueType[]) => Promise<{
+  readValues: (
+    cardProps: CardProps,
+    areaCode?: string
+  ) => Promise<ValueType[] | null>
+  saveValues: (
+    cardProps: CardProps,
+    values: ValueType[]
+  ) => Promise<{
     success: boolean
     message: string
   }>
 }
 
-const handleValue = (cardProps: CardProps): HandleValuesResult => {
+const handleValue = (): HandleValuesResult => {
   return {
-    readValues: async () => await readValues(cardProps),
-    saveValues: async (values: ValueType[]) => saveValues(cardProps, values),
+    readValues: async (cardProps, areaCode) =>
+      await readValues(cardProps, areaCode),
+    saveValues: async (cardProps, values) => saveValues(cardProps, values),
   }
 }
 

@@ -40,8 +40,8 @@ async function processValues(cardProps: CardProps) {
     await actionSaveValues(cardProps, formatValues(values))
   }
 
-  const { readValues } = handleValue(cardProps)
-  const values = await readValues()
+  const { readValues } = handleValue()
+  const values = await readValues(cardProps)
 
   return formatValues(values)
 }

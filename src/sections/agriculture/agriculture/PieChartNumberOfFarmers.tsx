@@ -53,8 +53,8 @@ async function processValues(cardProps: CardProps, prefCode: string) {
     await actionSaveValues(cardProps, formatValues(values))
   }
 
-  const { readValues } = handleValue(cardProps)
-  const values = await readValues()
+  const { readValues } = handleValue()
+  const values = await readValues(cardProps, prefCode)
 
   return formatValues(values).filter((f) => f.areaCode === prefCode)
 }
