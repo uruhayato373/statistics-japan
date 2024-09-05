@@ -16,6 +16,7 @@ export interface ValueType {
   areaName: string
   categoryCode: string
   categoryName: string
+  categoryUnit?: string
   unit: string
   value: number
 }
