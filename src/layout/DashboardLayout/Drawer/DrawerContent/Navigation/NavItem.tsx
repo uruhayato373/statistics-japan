@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
+
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+
 import Avatar from '@mui/material/Avatar'
 import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
