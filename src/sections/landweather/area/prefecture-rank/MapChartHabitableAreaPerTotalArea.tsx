@@ -9,7 +9,7 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import handleGeoshape from 'utils/geoshape'
 import { CardProps, RouterProps } from 'utils/props'
-import handleValue, { ValueType } from 'utils/value'
+import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '可住地面積（総面積に占める割合）'
 const CARD_ID = 'MapChartHabitableAreaPerTotalArea'
@@ -32,16 +32,11 @@ interface Props {
 
 // values
 async function processValues(cardProps: CardProps) {
-  if (process.env.NODE_ENV === 'development') {
-    const values = await handleEstatAPI().fetchRatioValues(
-      ESTAT_PARAMS_MOLECULE,
-      ESTAT_PARAMS_DENOMINATOR
-    )
-    await actionSaveValues(cardProps, values)
-  }
-
-  const { readValues } = handleValue()
-  const values = await readValues(cardProps)
+  const values = await handleEstatAPI().fetchRatioValues(
+    ESTAT_PARAMS_MOLECULE,
+    ESTAT_PARAMS_DENOMINATOR
+  )
+  await actionSaveValues(cardProps, values)
 
   return values
 }
