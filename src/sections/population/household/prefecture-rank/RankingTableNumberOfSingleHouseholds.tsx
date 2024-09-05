@@ -8,7 +8,7 @@ import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { CardProps, RouterProps } from 'utils/props'
-import handleValue, { ValueType } from 'utils/value'
+import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '単独世帯数'
 const CARD_ID = 'RankingTableNumberOfSingleHouseholds'
@@ -24,14 +24,9 @@ interface Props {
 
 // values
 async function processValues(cardProps: CardProps) {
-  if (process.env.NODE_ENV === 'development') {
-    const { fetchValues } = handleEstatAPI()
-    const values = await fetchValues(ESTAT_PARAMS)
-    await actionSaveValues(cardProps, values)
-  }
-
-  const { readValues } = handleValue()
-  const values = await readValues(cardProps)
+  const { fetchValues } = handleEstatAPI()
+  const values = await fetchValues(ESTAT_PARAMS)
+  await actionSaveValues(cardProps, values)
 
   return values
 }

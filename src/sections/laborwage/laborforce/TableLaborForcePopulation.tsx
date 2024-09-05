@@ -9,7 +9,7 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
-import handleValue, { ValueType } from 'utils/value'
+import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '労働力人口'
 const CARD_ID = 'TableLaborForcePopulation'
@@ -26,14 +26,9 @@ interface Props {
 
 // values
 async function processValues(cardProps: CardProps, prefCode: string) {
-  if (process.env.NODE_ENV === 'development') {
-    const { fetchValues } = handleEstatAPI()
-    const values = await fetchValues(ESTAT_PARAMS)
-    await actionSaveValues(cardProps, values)
-  }
-
-  const { readValues } = handleValue()
-  const values = await readValues(cardProps, prefCode)
+  const { fetchValues } = handleEstatAPI()
+  const values = await fetchValues(ESTAT_PARAMS)
+  await actionSaveValues(cardProps, values)
 
   return values.filter((f) => f.areaCode === prefCode)
 }

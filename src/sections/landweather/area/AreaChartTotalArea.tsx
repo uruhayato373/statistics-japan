@@ -11,7 +11,7 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
-import handleValue, { ValueType } from 'utils/value'
+import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '総面積の推移'
 const CARD_ID = 'AreaChartTotalArea'
@@ -55,14 +55,9 @@ interface Props {
 
 // values
 async function processValues(cardProps: CardProps, prefCode: string) {
-  if (process.env.NODE_ENV === 'development') {
-    const { fetchValues } = handleEstatAPI()
-    const values = await fetchValues(ESTAT_PARAMS)
-    await actionSaveValues(cardProps, formatValues(values))
-  }
-
-  const { readValues } = handleValue()
-  const values = await readValues(cardProps, prefCode)
+  const { fetchValues } = handleEstatAPI()
+  const values = await fetchValues(ESTAT_PARAMS)
+  await actionSaveValues(cardProps, formatValues(values))
 
   return formatValues(values).filter((f) => f.areaCode === prefCode)
 }
