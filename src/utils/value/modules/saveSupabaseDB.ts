@@ -1,12 +1,13 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
 import { CardProps } from 'utils/props'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-// const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY!
+import { ValueType } from '../types/value'
 
-// const supabase = createClient(supabaseUrl, supabaseAnonKey)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
+const supabase: SupabaseClient = createClient(supabaseUrl, supabaseKey)
 const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
   auth: {
     autoRefreshToken: false,
@@ -14,46 +15,38 @@ const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
   },
 })
 
-export interface ValueType {
-  timeCode: string
-  timeName: string
-  areaCode: string
-  areaName: string
-  categoryCode: string
-  categoryName: string
-  categoryUnit?: string
-  unit: string
-  value: number
-}
+async function logTableStructure(tableName: string) {
+  const { data, error } = await supabase
+    .from('information_schema.columns')
+    .select('column_name, data_type')
+    .eq('table_name', tableName)
 
-let debugId = 0
+  if (error) {
+    console.error('テーブル構造の取得に失敗しました:', error)
+  } else {
+    console.log('テーブル構造:', data)
+  }
+}
 
 async function insertOrUpdateData(
   tableName: string,
   values: ValueType[]
-): Promise<number> {
-  const currentDebugId = ++debugId
-  console.log(
-    `[Debug ${currentDebugId}] 挿入/更新開始: ${values.length}件のデータ`
-  )
-  console.log(
-    `[Debug ${currentDebugId}] 最初のデータ:`,
-    JSON.stringify(values[0], null, 2)
-  )
+): Promise<ValueType[] | null> {
+  console.log('挿入/更新するデータ:', values[0])
 
-  const { error, count } = await supabaseAdmin.from(tableName).upsert(values, {
+  const { data, error } = await supabaseAdmin.from(tableName).upsert(values, {
     onConflict: 'timeCode, areaCode, categoryCode',
     ignoreDuplicates: false,
     count: 'exact',
   })
 
   if (error) {
-    console.error(`[Debug ${currentDebugId}] データ更新エラーの詳細:`, error)
+    console.error('データ更新エラーの詳細:', error)
     throw new Error(`データの保存に失敗しました: ${error.message}`)
   }
 
-  console.log(`[Debug ${currentDebugId}] 更新された行数:`, count)
-  return count ?? 0
+  console.log('更新されたデータ:', data)
+  return data
 }
 
 export async function saveSupabaseDB(
@@ -61,55 +54,22 @@ export async function saveSupabaseDB(
   values: ValueType[]
 ) {
   const tableName = `values_${cardProps.fieldId}`
-  const currentDebugId = ++debugId
-
-  console.log(
-    `[Debug ${currentDebugId}] saveValues開始: ${values.length}件のデータ`
-  )
 
   try {
-    const validValues = values.filter(
-      (value) =>
-        typeof value.timeCode === 'string' &&
-        typeof value.timeName === 'string' &&
-        typeof value.areaCode === 'string' &&
-        typeof value.areaName === 'string' &&
-        typeof value.categoryCode === 'string' &&
-        typeof value.categoryName === 'string' &&
-        typeof value.categoryUnit === 'string' &&
-        typeof value.unit === 'string' &&
-        typeof value.value === 'number'
-    )
+    await logTableStructure(tableName)
 
-    if (validValues.length !== values.length) {
-      console.warn(
-        `[Debug ${currentDebugId}] ${values.length - validValues.length}件の無効なデータがフィルタリングされました。`
-      )
-    }
+    const updatedData = await insertOrUpdateData(tableName, values)
 
-    console.log(
-      `[Debug ${currentDebugId}] 有効なデータ数: ${validValues.length}件`
-    )
-
-    const updatedCount = await insertOrUpdateData(tableName, validValues)
-
-    console.log(
-      `[Debug ${currentDebugId}] 更新完了: ${updatedCount}件のデータが更新されました`
-    )
-
-    if (updatedCount > 0) {
+    if (updatedData && updatedData.length > 0) {
       return {
         success: true,
-        message: `${updatedCount}件のデータが正常に保存されました`,
+        message: `${updatedData.length}件のデータが正常に保存されました`,
       }
     } else {
       return { success: false, message: 'データは更新されませんでした' }
     }
   } catch (error) {
-    console.error(
-      `[Debug ${currentDebugId}] データの保存に失敗しました:`,
-      error
-    )
+    console.error('データの保存に失敗しました:', error)
     return {
       success: false,
       message:
