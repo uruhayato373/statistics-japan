@@ -13,6 +13,25 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey)
 
+async function createTable(tableName: string) {
+  const { error } = await supabase.rpc('create_dynamic_table', {
+    table_name: tableName,
+  })
+  if (error) throw new Error(`テーブルの作成に失敗しました: ${error.message}`)
+}
+
+async function tableExists(tableName: string): Promise<boolean> {
+  const { data, error } = await supabase
+    .from('information_schema.tables')
+    .select('table_name')
+    .eq('table_schema', 'public')
+    .eq('table_name', tableName)
+
+  if (error)
+    throw new Error(`テーブルの存在確認に失敗しました: ${error.message}`)
+  return data && data.length > 0
+}
+
 export default async function saveSupabaseDB(
   cardProps: CardProps,
   values: ValueType[]
@@ -21,6 +40,13 @@ export default async function saveSupabaseDB(
 
   try {
     const tableName = `${fieldId}`
+
+    // テーブルの存在確認と作成
+    const exists = await tableExists(tableName)
+    if (!exists) {
+      console.log(`テーブル ${tableName} が存在しないため、作成します`)
+      await createTable(tableName)
+    }
 
     console.log(`テーブル ${tableName} にデータを更新します`)
 
