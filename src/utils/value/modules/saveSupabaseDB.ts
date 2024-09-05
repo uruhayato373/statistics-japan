@@ -21,7 +21,7 @@ export default async function saveSupabaseDB(
 
   try {
     // fieldIdを使用してテーブル名を生成
-    const tableName = `values_${fieldId}`
+    const tableName = `${fieldId}`
 
     // テーブルが存在しない場合は作成
     const { error: createTableError } = await supabase.rpc(
