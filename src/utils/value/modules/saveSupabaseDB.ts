@@ -13,6 +13,22 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey)
 
+async function checkTableStructure(tableName: string) {
+  const { data, error } = await supabase
+    .from('information_schema.columns')
+    .select('column_name, data_type')
+    .eq('table_schema', 'public')
+    .eq('table_name', tableName)
+
+  if (error) {
+    console.error('テーブル構造の確認に失敗しました:', error)
+    throw new Error(`テーブル構造の確認に失敗しました: ${error.message}`)
+  }
+
+  console.log(`テーブル ${tableName} の構造:`, data)
+  return data
+}
+
 export default async function saveSupabaseDB(
   cardProps: CardProps,
   values: ValueType[]
@@ -20,32 +36,32 @@ export default async function saveSupabaseDB(
   const { fieldId, menuId, cardId } = cardProps
 
   try {
-    // fieldIdを使用してテーブル名を生成
     const tableName = `${fieldId}`
 
-    // テーブルが存在しない場合は作成
+    console.log(`テーブル ${tableName} の作成を試みます`)
     const { error: createTableError } = await supabase.rpc(
       'create_values_table_if_not_exists',
-      {
-        table_name: tableName,
-      }
+      { table_name: tableName }
     )
 
     if (createTableError) {
+      console.error('テーブル作成エラー:', createTableError)
       throw new Error(
         `テーブルの作成に失敗しました: ${createTableError.message}`
       )
     }
 
-    // menuIdとcardIdを含めてデータを拡張
+    await checkTableStructure(tableName)
+
     const extendedValues = values.map((value) => ({
       ...value,
       menuId,
       cardId,
     }))
 
-    // データを一括でupsert（挿入または更新）
-    const { error: upsertError } = await supabase
+    console.log('保存するデータ:', extendedValues[0]) // 最初の要素のみログ出力
+
+    const { data: upsertData, error: upsertError } = await supabase
       .from(tableName)
       .upsert(extendedValues, {
         onConflict: 'menuId, cardId, timeCode, areaCode, categoryCode',
@@ -53,8 +69,11 @@ export default async function saveSupabaseDB(
       })
 
     if (upsertError) {
+      console.error('Upsertエラー:', upsertError)
       throw new Error(`データの保存に失敗しました: ${upsertError.message}`)
     }
+
+    console.log('Upsertの結果:', upsertData)
 
     return { success: true, message: 'データが正常に保存されました' }
   } catch (error) {
@@ -62,6 +81,7 @@ export default async function saveSupabaseDB(
     let errorMessage = 'データの保存に失敗しました'
     if (error instanceof Error) {
       errorMessage += `: ${error.message}`
+      console.error('エラースタック:', error.stack)
     }
     return { success: false, message: errorMessage }
   }
