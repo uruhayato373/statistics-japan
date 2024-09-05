@@ -37,18 +37,26 @@ export default async function saveSupabaseDB(
       )
     }
 
-    // menuIdとcardIdを含めてデータを拡張
+    // menuIdとcardIdを含めてデータを拡張し、カラム名を小文字に変換
     const extendedValues = values.map((value) => ({
-      ...value,
-      menuId,
-      cardId,
+      categorycode: value.categoryCode,
+      categoryname: value.categoryName,
+      categoryunit: value.categoryUnit,
+      areacode: value.areaCode,
+      areaname: value.areaName,
+      timecode: value.timeCode,
+      timename: value.timeName,
+      unit: value.unit,
+      value: value.value,
+      menuid: menuId,
+      cardid: cardId,
     }))
 
     // データを一括でupsert（挿入または更新）
     const { error: upsertError } = await supabase
       .from(tableName)
       .upsert(extendedValues, {
-        onConflict: 'menuId, cardId, timeCode, areaCode, categoryCode',
+        onConflict: 'menuid, cardid, timecode, areacode, categorycode',
         ignoreDuplicates: false,
       })
 
