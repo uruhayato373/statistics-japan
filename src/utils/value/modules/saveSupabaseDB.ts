@@ -2,6 +2,8 @@ import { createClient } from '@supabase/supabase-js'
 
 import { CardProps } from 'utils/props'
 
+import { ValueType } from '../types/value'
+
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
 // const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
@@ -13,18 +15,6 @@ const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
     persistSession: false,
   },
 })
-
-export interface ValueType {
-  timeCode: string
-  timeName: string
-  areaCode: string
-  areaName: string
-  categoryCode: string
-  categoryName: string
-  categoryUnit: string
-  unit: string
-  value: number
-}
 
 async function insertOrUpdateData(
   tableName: string,
@@ -47,7 +37,10 @@ async function insertOrUpdateData(
   return count ?? 0
 }
 
-export async function saveValues(cardProps: CardProps, values: ValueType[]) {
+export async function saveSupabaseDB(
+  cardProps: CardProps,
+  values: ValueType[]
+) {
   const tableName = `values_${cardProps.fieldId}`
 
   try {
