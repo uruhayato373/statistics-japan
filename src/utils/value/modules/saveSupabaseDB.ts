@@ -6,14 +6,7 @@ import { ValueType } from '../types/value'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
 const supabase: SupabaseClient = createClient(supabaseUrl, supabaseKey)
-const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
-  auth: {
-    autoRefreshToken: false,
-    persistSession: false,
-  },
-})
 
 async function logTableStructure(tableName: string) {
   const { data, error } = await supabase
@@ -34,10 +27,9 @@ async function insertOrUpdateData(
 ): Promise<ValueType[] | null> {
   console.log('挿入/更新するデータ:', values[0])
 
-  const { data, error } = await supabaseAdmin.from(tableName).upsert(values, {
+  const { data, error } = await supabase.from(tableName).upsert(values, {
     onConflict: 'timeCode, areaCode, categoryCode',
     ignoreDuplicates: false,
-    count: 'exact',
   })
 
   if (error) {
