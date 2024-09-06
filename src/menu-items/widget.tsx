@@ -229,6 +229,13 @@ const widget: MenuGroup = {
       icon: icons.FireOutlined,
       children: [
         {
+          id: 'electric-gas',
+          title: '電力・ガス',
+          type: 'item',
+          url: '/energy/electric-gas',
+          breadcrumbs: false,
+        },
+        {
           id: 'industrial-water',
           title: '工業用水',
           type: 'item',

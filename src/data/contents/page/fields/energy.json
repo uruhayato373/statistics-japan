@@ -1,5 +1,10 @@
 [
   {
+    "pageId": "generated-power-amount",
+    "pageTitle": "発電電力量",
+    "menuId": "electric-gas"
+  },
+  {
     "pageId": "industrial-water-volume",
     "pageTitle": "工業用水量",
     "menuId": "industrial-water"

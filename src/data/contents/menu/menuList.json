@@ -80,6 +80,11 @@
     "fieldId": "construction"
   },
   {
+    "menuId": "electric-gas",
+    "menuTitle": "電力・ガス",
+    "fieldId": "energy"
+  },
+  {
     "menuId": "industrial-water",
     "menuTitle": "工業用水",
     "fieldId": "energy"
