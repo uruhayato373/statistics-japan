@@ -18,5 +18,10 @@
     "pageId": "industrial-area-price",
     "pageTitle": "工業地価格",
     "menuId": "standard-price"
+  },
+  {
+    "pageId": "total-number-of-houses",
+    "pageTitle": "総住宅数",
+    "menuId": "housing"
   }
 ]

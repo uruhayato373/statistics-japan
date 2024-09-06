@@ -222,6 +222,13 @@ const social: MenuGroup = {
           url: '/construction/standard-price',
           breadcrumbs: false,
         },
+        {
+          id: 'housing',
+          title: '住宅',
+          type: 'item',
+          url: '/construction/housing',
+          breadcrumbs: false,
+        },
       ],
     },
     {

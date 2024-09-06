@@ -80,6 +80,11 @@
     "fieldId": "construction"
   },
   {
+    "menuId": "housing",
+    "menuTitle": "住宅",
+    "fieldId": "construction"
+  },
+  {
     "menuId": "electric-gas",
     "menuTitle": "電力・ガス",
     "fieldId": "energy"
