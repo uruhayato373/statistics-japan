@@ -135,6 +135,11 @@
     "fieldId": "safetyenvironment"
   },
   {
+    "menuId": "health",
+    "menuTitle": "健康",
+    "fieldId": "socialsecurity"
+  },
+  {
     "menuId": "hospital",
     "menuTitle": "病院",
     "fieldId": "socialsecurity"

@@ -1,5 +1,10 @@
 [
   {
+    "pageId": "healthy-life-expectancy",
+    "pageTitle": "健康寿命",
+    "menuId": "health"
+  },
+  {
     "pageId": "number-of-hospitals",
     "pageTitle": "病院数",
     "menuId": "hospital"

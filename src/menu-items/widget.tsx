@@ -346,6 +346,13 @@ const widget: MenuGroup = {
       icon: icons.MedicineBoxOutlined,
       children: [
         {
+          id: 'health',
+          title: '健康',
+          type: 'item',
+          url: '/socialsecurity/health',
+          breadcrumbs: false,
+        },
+        {
           id: 'hospital',
           title: '病院',
           type: 'item',
