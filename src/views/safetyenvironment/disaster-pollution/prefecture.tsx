@@ -7,7 +7,13 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardDisasterDamageAmount from 'sections/safetyenvironment/disaster-pollution/DashboardDisasterDamageAmount'
+import DashboardNumberOfPollutionComplaints from 'sections/safetyenvironment/disaster-pollution/DashboardNumberOfPollutionComplaints'
 import TableDisasterDamageAmount from 'sections/safetyenvironment/disaster-pollution/TableDisasterDamageAmount'
+import TableGreenhouseGasEmissions from 'sections/safetyenvironment/disaster-pollution/TableGreenhouseGasEmissions'
+import TableNumberOfFacilitiesGeneratingSootAndSmoke from 'sections/safetyenvironment/disaster-pollution/TableNumberOfFacilitiesGeneratingSootAndSmoke'
+import TableNumberOfPollutionComplaints from 'sections/safetyenvironment/disaster-pollution/TableNumberOfPollutionComplaints'
+import TablePostalLifeInsurance from 'sections/safetyenvironment/disaster-pollution/TablePostalLifeInsurance'
+import TablePrivateLifeInsurance from 'sections/safetyenvironment/disaster-pollution/TablePrivateLifeInsurance'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -32,8 +38,44 @@ export default async function PrefectureView({ routerProps }: Props) {
                 prefecture={currentPrefecture}
               />
             </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardNumberOfPollutionComplaints
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <TableDisasterDamageAmount
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableNumberOfPollutionComplaints
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableNumberOfFacilitiesGeneratingSootAndSmoke
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableGreenhouseGasEmissions
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TablePrivateLifeInsurance
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TablePostalLifeInsurance
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

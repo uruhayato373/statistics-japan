@@ -10,6 +10,7 @@ import DashboardNumberOfPoliceOfficers from 'sections/safetyenvironment/crime/Da
 import MixedChartProstitutionOffender from 'sections/safetyenvironment/crime/MixedChartProstitutionOffender'
 import MixedChartSpecialLawOffender from 'sections/safetyenvironment/crime/MixedChartSpecialLawOffender'
 import MixedChartStimulantDrugCrackdown from 'sections/safetyenvironment/crime/MixedChartStimulantDrugCrackdown'
+import TableCrimePreventionVolunteer from 'sections/safetyenvironment/crime/TableCrimePreventionVolunteer'
 import TableIncident from 'sections/safetyenvironment/crime/TableIncident'
 import TableNumberOfCriminalOffensesCleared from 'sections/safetyenvironment/crime/TableNumberOfCriminalOffensesCleared'
 import TableNumberOfPeopleArrestedForCriminalLawCrimes from 'sections/safetyenvironment/crime/TableNumberOfPeopleArrestedForCriminalLawCrimes'
@@ -90,6 +91,12 @@ export default async function PrefectureView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <TableIncident
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableCrimePreventionVolunteer
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
