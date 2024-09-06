@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import CardsApexColumnChart from 'cards/CardsApexColumnChart'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -11,12 +11,12 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '病院数'
-const CARD_ID = 'TableNumberOfHospitals'
+const CARD_TITLE = '悪性腫瘍による死亡者数'
+const CARD_ID = 'ColumnChartNumberOfDeathsDueToMalignantTumors'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010109',
-  cdCat01: ['I5101', 'I510110', 'I510120', 'I510150', 'I5102', 'I5103'],
+  cdCat01: ['I9102', 'I910201', 'I910202'],
 }
 
 interface Props {
@@ -41,11 +41,16 @@ async function processDocument(
   const { formatDocument } = handleDocument()
   const document = formatDocument(values)
 
+  document.categories = document.categories.map((d) => ({
+    ...d,
+    type: 'column',
+  }))
+
   return document
 }
 
 // コンポーネントの描画
-export default async function TableNumberOfHospitals({
+export default async function ColumnChartNumberOfDeathsDueToMalignantTumors({
   routerProps,
   prefecture,
 }: Props) {
@@ -57,7 +62,43 @@ export default async function TableNumberOfHospitals({
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
+      <CardsApexColumnChart title={title} document={document} />
     </Suspense>
   )
 }
+
+// <List
+// component="nav"
+// sx={{
+//   p: 0,
+//   '& .MuiListItemButton-root': {
+//     py: 1.5,
+//     '& .MuiAvatar-root': avatarSX,
+//     '& .MuiListItemSecondaryAction-root': {
+//       ...actionSX,
+//       position: 'relative',
+//     },
+//   },
+// }}
+// >
+// {series.map((item, index) => (
+//   <ListItemButton key={index} divider>
+//     <ListItemText
+//       primary={
+//         <Typography variant="subtitle1">{item.name}</Typography>
+//       }
+//       secondary={categories[categories.length - 1]}
+//     />
+//     <ListItemSecondaryAction>
+//       <Stack alignItems="flex-end">
+//         <Typography variant="subtitle1" noWrap>
+//           {`${item.data[item.data.length - 1].toLocaleString()} ${item.unit}`}
+//         </Typography>
+//         {/* <Typography variant="h6" color="secondary" noWrap>
+//           {item.rate}%
+//         </Typography> */}
+//       </Stack>
+//     </ListItemSecondaryAction>
+//   </ListItemButton>
+// ))}
+// </List>

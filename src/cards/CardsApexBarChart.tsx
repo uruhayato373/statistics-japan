@@ -10,7 +10,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
-import ApexPieChart from 'components/apexcharts/ApexPieChart'
+import ApexBarChart from 'components/apexcharts/ApexBarChart'
 import MainCard from 'components/MainCard'
 
 import { ApexOptions } from 'apexcharts'
@@ -25,7 +25,7 @@ interface Props {
   height?: string
 }
 
-export default function CardsApexPieChart({
+export default function CardsApexBarChart({
   title,
   document,
   options,
@@ -48,10 +48,8 @@ export default function CardsApexPieChart({
     setSelectedTimeCode(newTime)
   }
 
-  const formatOptions = formatApexcharts(document).PieChart(selectedTimeCode)
+  const formatOptions = formatApexcharts(document).BarChart(selectedTimeCode)
   const customOptions = { ...formatOptions, ...options }
-
-  console.log(customOptions)
 
   const boxStyle = height ? { height } : {}
 
@@ -91,7 +89,7 @@ export default function CardsApexPieChart({
         </FormControl>{' '}
       </Stack>
       <Box sx={{ p: 2, ...boxStyle }}>
-        <ApexPieChart options={customOptions} />
+        <ApexBarChart options={customOptions} />
       </Box>
     </MainCard>
   )

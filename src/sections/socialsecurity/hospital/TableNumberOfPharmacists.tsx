@@ -11,12 +11,21 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '病院数'
-const CARD_ID = 'TableNumberOfHospitals'
+const CARD_TITLE = '薬剤師数'
+const CARD_ID = 'TableNumberOfPharmacists'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010109',
-  cdCat01: ['I5101', 'I510110', 'I510120', 'I510150', 'I5102', 'I5103'],
+  cdCat01: [
+    'I6300',
+    'I6310',
+    'I6311',
+    'I6312',
+    'I631210',
+    'I631211',
+    'I6320',
+    'I6330',
+  ],
 }
 
 interface Props {
@@ -45,7 +54,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function TableNumberOfHospitals({
+export default async function TableNumberOfPharmacists({
   routerProps,
   prefecture,
 }: Props) {

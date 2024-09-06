@@ -1,6 +1,7 @@
 import { DocumentType } from 'utils/document'
 
 import formatAxisTimeChart from './modules/AxisTimeChart'
+import formatBarChart from './modules/BarChart'
 import formatPieChart from './modules/PieChart'
 import formatApexchartsPyramid from './modules/PyramidChart'
 
@@ -9,6 +10,7 @@ const formatApexcharts = (document: DocumentType) => {
     AxisTimeChart: (group: 'category' | 'area' = 'category') =>
       formatAxisTimeChart(document, group),
     PieChart: (timeCode: string) => formatPieChart(document, timeCode),
+    BarChart: (timeCode: string) => formatBarChart(document, timeCode),
     PyramidChart: (timeCode: string) =>
       formatApexchartsPyramid(document, timeCode),
   }

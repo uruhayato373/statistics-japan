@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import CardsApexBarChart from 'cards/CardsApexBarChart'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -11,12 +11,12 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '病院数'
-const CARD_ID = 'TableNumberOfHospitals'
+const CARD_TITLE = '病床規模別病院数'
+const CARD_ID = 'BarChartNumberOfHospitalsByBedSize'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010109',
-  cdCat01: ['I5101', 'I510110', 'I510120', 'I510150', 'I5102', 'I5103'],
+  cdCat01: ['I520101', 'I520102', 'I520103', 'I520104', 'I520105'],
 }
 
 interface Props {
@@ -45,7 +45,7 @@ async function processDocument(
 }
 
 // コンポーネントの描画
-export default async function TableNumberOfHospitals({
+export default async function BarChartNumberOfHospitalsByBedSize({
   routerProps,
   prefecture,
 }: Props) {
@@ -57,7 +57,7 @@ export default async function TableNumberOfHospitals({
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
+      <CardsApexBarChart title={title} document={document} />
     </Suspense>
   )
 }
