@@ -14,6 +14,7 @@ import administrativefinancial from './fields/administrativefinancial.json'
 import safetyenvironment from './fields/safetyenvironment.json'
 import socialsecurity from './fields/socialsecurity.json'
 import international from './fields/international.json'
+import infrastructure from './fields/infrastructure.json'
 
 const pageItems = [
   ...landWeather,
@@ -31,6 +32,7 @@ const pageItems = [
   ...safetyenvironment,
   ...socialsecurity,
   ...international,
+  ...infrastructure,
 ]
 
 export default pageItems

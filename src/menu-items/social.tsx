@@ -1,3 +1,4 @@
+import AreaChartOutlined from '@ant-design/icons/AreaChartOutlined'
 import BankOutlined from '@ant-design/icons/BankOutlined'
 import CarOutlined from '@ant-design/icons/CarOutlined'
 import CloudOutlined from '@ant-design/icons/CloudOutlined'
@@ -38,9 +39,10 @@ const icons = {
   ShopOutlined,
   HomeOutlined,
   GoldOutlined,
+  AreaChartOutlined,
 }
 
-const widget: MenuGroup = {
+const social: MenuGroup = {
   id: 'group-social',
   title: '社会・人口統計',
   icon: icons.IdcardOutlined,
@@ -390,7 +392,29 @@ const widget: MenuGroup = {
         },
       ],
     },
+    {
+      id: 'infrastructure',
+      title: '社会基盤施設',
+      type: 'collapse',
+      icon: icons.AreaChartOutlined,
+      children: [
+        {
+          id: 'road',
+          title: '道路',
+          type: 'item',
+          url: '/infrastructure/road',
+          breadcrumbs: false,
+        },
+        {
+          id: 'urban-planning',
+          title: '都市計画',
+          type: 'item',
+          url: '/infrastructure/urban-planning',
+          breadcrumbs: false,
+        },
+      ],
+    },
   ],
 }
 
-export default widget
+export default social

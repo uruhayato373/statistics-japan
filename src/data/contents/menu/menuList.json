@@ -158,5 +158,15 @@
     "menuId": "foreigner",
     "menuTitle": "外国人",
     "fieldId": "international"
+  },
+  {
+    "menuId": "road",
+    "menuTitle": "道路",
+    "fieldId": "infrastructure"
+  },
+  {
+    "menuId": "urban-planning",
+    "menuTitle": "都市計画",
+    "fieldId": "infrastructure"
   }
 ]

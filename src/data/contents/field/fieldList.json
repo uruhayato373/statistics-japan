@@ -58,5 +58,9 @@
   {
     "fieldId": "international",
     "fieldTitle": "国際"
+  },
+  {
+    "fieldId": "infrastructure",
+    "fieldTitle": "社会基盤施設"
   }
 ]

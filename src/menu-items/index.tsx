@@ -4,9 +4,9 @@ import { ChipProps } from '@mui/material/Chip'
 
 import { AntdIconProps } from '@ant-design/icons/lib/components/AntdIcon'
 
-import applications from './applications'
-import samplePage from './sample-page'
-import widget from './widget'
+// import doboku from './doboku'
+import page from './page'
+import social from './social'
 
 export interface MenuItem {
   id: string
@@ -41,7 +41,7 @@ export interface MenuItems {
 }
 
 const menuItems: MenuItems = {
-  items: [widget, applications, samplePage],
+  items: [social, page],
 }
 
 export default menuItems
