@@ -8,5 +8,10 @@
     "pageId": "industrial-water-volume",
     "pageTitle": "工業用水量",
     "menuId": "industrial-water"
+  },
+  {
+    "pageId": "total-amount-of-garbage-discharged",
+    "pageTitle": "ごみ総排出量",
+    "menuId": "garbage"
   }
 ]

@@ -95,6 +95,11 @@
     "fieldId": "energy"
   },
   {
+    "menuId": "garbage",
+    "menuTitle": "ごみ",
+    "fieldId": "energy"
+  },
+  {
     "menuId": "railway-air",
     "menuTitle": "鉄道・航空",
     "fieldId": "tourism"

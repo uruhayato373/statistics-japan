@@ -6,7 +6,15 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import BarChartNumberOfHousesByStructure from 'sections/construction/housing/BarChartNumberOfHousesByStructure'
+import BarChartNumberOfHousesByYearOfConstruction from 'sections/construction/housing/BarChartNumberOfHousesByYearOfConstruction'
 import DashboardTotalNumberOfHouses from 'sections/construction/housing/DashboardTotalNumberOfHouses'
+import PieChartNumberOfHomesOwned from 'sections/construction/housing/PieChartNumberOfHomesOwned'
+import TableNumberOfApartments from 'sections/construction/housing/TableNumberOfApartments'
+import TableNumberOfNewHousingUnitsStarted from 'sections/construction/housing/TableNumberOfNewHousingUnitsStarted'
+import TableNumberOfSingleFamilyHomes from 'sections/construction/housing/TableNumberOfSingleFamilyHomes'
+import TableNumberOfTenementHouses from 'sections/construction/housing/TableNumberOfTenementHouses'
+import TablePerHouse from 'sections/construction/housing/TablePerHouse'
 import TableTotalNumberOfHouses from 'sections/construction/housing/TableTotalNumberOfHouses'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -33,7 +41,55 @@ export default async function PrefectureView({ routerProps }: Props) {
               />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
+              <PieChartNumberOfHomesOwned
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <BarChartNumberOfHousesByStructure
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <BarChartNumberOfHousesByYearOfConstruction
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
               <TableTotalNumberOfHouses
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableNumberOfSingleFamilyHomes
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableNumberOfTenementHouses
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableNumberOfApartments
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TableNumberOfNewHousingUnitsStarted
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <TablePerHouse
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

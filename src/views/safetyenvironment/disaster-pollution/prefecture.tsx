@@ -7,6 +7,7 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardDisasterDamageAmount from 'sections/safetyenvironment/disaster-pollution/DashboardDisasterDamageAmount'
+import DashboardNumberOfDisasterAffectedHousingUnits from 'sections/safetyenvironment/disaster-pollution/DashboardNumberOfDisasterAffectedHousingUnits'
 import DashboardNumberOfPollutionComplaints from 'sections/safetyenvironment/disaster-pollution/DashboardNumberOfPollutionComplaints'
 import TableDisasterDamageAmount from 'sections/safetyenvironment/disaster-pollution/TableDisasterDamageAmount'
 import TableGreenhouseGasEmissions from 'sections/safetyenvironment/disaster-pollution/TableGreenhouseGasEmissions'
@@ -40,6 +41,12 @@ export default async function PrefectureView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfPollutionComplaints
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <DashboardNumberOfDisasterAffectedHousingUnits
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

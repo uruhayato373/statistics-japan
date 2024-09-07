@@ -251,6 +251,13 @@ const social: MenuGroup = {
           url: '/energy/industrial-water',
           breadcrumbs: false,
         },
+        {
+          id: 'garbage',
+          title: 'ごみ',
+          type: 'item',
+          url: '/energy/garbage',
+          breadcrumbs: false,
+        },
       ],
     },
     {
