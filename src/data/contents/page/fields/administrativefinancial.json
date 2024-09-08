@@ -3,5 +3,10 @@
     "pageId": "administrative-department-employees",
     "pageTitle": "一般行政部門職員数",
     "menuId": "staff"
+  },
+  {
+    "pageId": "financial-strength-index",
+    "pageTitle": "財政力指数",
+    "menuId": "finances"
   }
 ]

@@ -324,6 +324,13 @@ const social: MenuGroup = {
           url: '/administrativefinancial/staff',
           breadcrumbs: false,
         },
+        {
+          id: 'finances',
+          title: '財政',
+          type: 'item',
+          url: '/administrativefinancial/finances',
+          breadcrumbs: false,
+        },
       ],
     },
     {

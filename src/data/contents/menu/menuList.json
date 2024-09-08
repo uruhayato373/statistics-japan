@@ -130,6 +130,11 @@
     "fieldId": "administrativefinancial"
   },
   {
+    "menuId": "finances",
+    "menuTitle": "財政",
+    "fieldId": "administrativefinancial"
+  },
+  {
     "menuId": "traffic-accident",
     "menuTitle": "交通事故",
     "fieldId": "safetyenvironment"

@@ -11,9 +11,9 @@ interface Props {
 
 const defaultOptions: ApexOptions = {
   chart: {
-    type: 'bar',
+    // type: 'bar',
     height: 250,
-    width: '100%',
+    // width: '100%',
     stacked: true,
     toolbar: {
       show: false,
