@@ -29,6 +29,7 @@ export default function CardsReactRankingTable({
   height,
 }: Props) {
   const [selectedTimeCode, setSelectedTimeCode] = useState<string>()
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const { times } = document
   const sortedTimes = times.sort(
@@ -39,6 +40,17 @@ export default function CardsReactRankingTable({
     setSelectedTimeCode(sortedTimes[0]?.timeCode)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  useEffect(() => {
+    if (selectedTimeCode) {
+      setIsLoading(true)
+      const timer = setTimeout(() => {
+        setIsLoading(false)
+      }, 1000) // 1秒間 CircularProgress を表示
+
+      return () => clearTimeout(timer)
+    }
+  }, [selectedTimeCode])
 
   const handleTimeChange = (event: SelectChangeEvent<string>) => {
     const newTime = event.target.value
@@ -112,7 +124,13 @@ export default function CardsReactRankingTable({
         </FormControl>
       </Stack>
       <Box sx={{ p: 2, ...boxStyle }}>
-        <PrefectureRankingTable contents={contents} />
+        {isLoading ? (
+          <CircularProgressCards />
+        ) : (
+          <>
+            <PrefectureRankingTable contents={contents} />
+          </>
+        )}
       </Box>
     </MainCard>
   )

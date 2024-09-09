@@ -7,7 +7,7 @@ export default function CircularProgressCards() {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      height="600px"
+      height="400px"
     >
       <CircularProgress />
     </Box>

@@ -12,6 +12,7 @@ import Stack from '@mui/material/Stack'
 import Tooltip from '@mui/material/Tooltip'
 import Typography from '@mui/material/Typography'
 
+import CircularProgressCards from 'components/CircularProgressCards'
 import HighchartsMapChart from 'components/highcharts/HighchartsMapChart'
 import MainCard from 'components/MainCard'
 
@@ -35,6 +36,7 @@ export default function CardsHighchartsMapChart({
   height,
 }: Props) {
   const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const { times } = document
   const sortedTimes = times.sort(
@@ -45,6 +47,17 @@ export default function CardsHighchartsMapChart({
     setSelectedTimeCode(sortedTimes[0].timeCode)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  useEffect(() => {
+    if (selectedTimeCode) {
+      setIsLoading(true)
+      const timer = setTimeout(() => {
+        setIsLoading(false)
+      }, 1000) // 1秒間 CircularProgress を表示
+
+      return () => clearTimeout(timer)
+    }
+  }, [selectedTimeCode])
 
   const handleTimeChange = (event: SelectChangeEvent<string>) => {
     const newTime = event.target.value
@@ -73,9 +86,6 @@ export default function CardsHighchartsMapChart({
         </Typography>
         <Tooltip title="ランキングを見る">
           <IconButton
-            // component="a"
-            // href={url}
-            // target="_blank"
             rel="noopener noreferrer"
             size="small"
             sx={{
@@ -112,10 +122,16 @@ export default function CardsHighchartsMapChart({
         </FormControl>
       </Stack>
       <Box sx={{ p: 2, ...boxStyle }}>
-        <HighchartsMapChart options={formatOptions} />
-        <Typography variant="caption" color="text.secondary">
-          地図は『歴史的行政区域データセットβ版』（CODH作成）を利用
-        </Typography>
+        {isLoading ? (
+          <CircularProgressCards />
+        ) : (
+          <>
+            <HighchartsMapChart options={formatOptions} />
+            <Typography variant="caption" color="text.secondary">
+              地図は『歴史的行政区域データセットβ版』（CODH作成）を利用
+            </Typography>
+          </>
+        )}
       </Box>
     </MainCard>
   )
