@@ -13,6 +13,12 @@ export interface CardProps extends RouterProps {
   cardId: string
 }
 
+function camelToKebabCase(str: string): string {
+  return str
+    .replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`)
+    .replace(/^-/, '')
+}
+
 const handleProps = ({
   fieldId,
   menuId,
@@ -31,7 +37,10 @@ const handleProps = ({
   }
   return {
     routerProps,
-    cardProps: (cardId: string) => ({ ...routerProps, cardId }),
+    cardProps: (cardId: string) => ({
+      ...routerProps,
+      cardId: camelToKebabCase(cardId),
+    }),
     metaProps: async () => generateMetaProps(routerProps),
     breadcrumbsProps: async () => generateBreadcrumbsProps(routerProps),
   }

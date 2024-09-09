@@ -96,10 +96,7 @@ const formatValues = (values: ValueType[]) => {
 }
 
 // document
-async function processDocument(
-  cardProps: CardProps,
-  values: ValueType[]
-): Promise<DocumentType> {
+async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const { formatDocument } = handleDocument()
   const document = formatDocument(values)
 
@@ -115,7 +112,7 @@ export default async function TableNumberOfHospitalsByMedicalDepartment({
   const title = `${prefName}の${CARD_TITLE}`
   const cardProps = handleProps(routerProps).cardProps(CARD_ID)
   const values = await processValues(cardProps, prefCode)
-  const document = await processDocument(cardProps, values)
+  const document = await processDocument(values)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

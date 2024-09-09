@@ -82,16 +82,26 @@ interface Props {
 async function processValues(cardProps: CardProps, prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
-  await actionSaveValues(cardProps, values)
+  await actionSaveValues(cardProps, formatValues(values))
 
-  return values
+  return formatValues(values)
+}
+
+// format values
+function formatValues(values: ValueType[]): ValueType[] {
+  return values.map((d) => {
+    return {
+      ...d,
+      categoryName: d.categoryName.replace('（都道府県財政）', ''),
+      // 単位を億円に変換
+      value: Math.round(Number(d.value) / 100000),
+      unit: '億円',
+    }
+  })
 }
 
 // document
-async function processDocument(
-  cardProps: CardProps,
-  values: ValueType[]
-): Promise<DocumentType> {
+async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const { formatDocument } = handleDocument()
   const document = formatDocument(values)
 
@@ -111,8 +121,9 @@ export default async function ColumnChartTotalSettlementAmount({
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const cardProps = handleProps(routerProps).cardProps(CARD_ID)
+  console.log('cardProps', cardProps)
   const values = await processValues(cardProps, prefCode)
-  const document = await processDocument(cardProps, values)
+  const document = await processDocument(values)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

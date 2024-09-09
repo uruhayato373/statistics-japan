@@ -32,10 +32,7 @@ async function processValues(cardProps: CardProps) {
 }
 
 // document
-async function processDocument(
-  cardProps: CardProps,
-  values: ValueType[]
-): Promise<DocumentType> {
+async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const { formatDocument } = handleDocument()
   const document = formatDocument(values)
 
@@ -49,7 +46,7 @@ export default async function RankingTableNumberOfGeneralHouseholds({
   const title = `都道府県の${CARD_TITLE}`
   const cardProps = { ...routerProps, cardId: CARD_ID }
   const values = await processValues(cardProps)
-  const document = await processDocument(cardProps, values)
+  const document = await processDocument(values)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

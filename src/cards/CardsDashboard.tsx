@@ -41,22 +41,39 @@ const formatNumber = (
   })
 }
 
+// 小数点以下の桁数を取得
+function getDecimalPlaces(num: number): number {
+  if (Math.floor(num) === num) return 0
+  const decimalPart = num.toString().split('.')[1]
+  return decimalPart ? decimalPart.length : 0
+}
+
+// 配列内の最大の小数点以下の桁数を取得
+function getMaxDecimalPlaces(numbers: number[]): number {
+  return Math.max(...numbers.map(getDecimalPlaces))
+}
+
 export default function CardsDashboardSingle({
   title,
   document,
-  digit = 0,
+  digit,
 }: Props) {
   const contents = formatDashboard(document).single()
+
+  const formatDigit = digit
+    ? digit
+    : getMaxDecimalPlaces(document.values.map((d) => d.value))
+
   const { curTimeName, preTimeName, curValue, difference, rate, unit } =
     contents
 
   // 減少の場合はwarning、増加の場合はprimary
   const color = parseFloat(difference) < 0 ? 'warning' : 'primary'
 
-  const formattedCurValue = formatNumber(curValue, digit)
+  const formattedCurValue = formatNumber(curValue, formatDigit)
   const formattedDifference = formatNumber(
     Math.abs(parseFloat(difference)),
-    digit
+    formatDigit
   )
 
   const getDifferenceText = () => {
