@@ -1,10 +1,11 @@
 import { Suspense } from 'react'
 
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 import CircularProgressCards from 'components/CircularProgressCards'
 
 import { ApexOptions } from 'apexcharts'
 
-import CardsApexColumnChart from 'cards/CardsApexColumnChart'
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -15,6 +16,8 @@ import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '決算総額'
 const CARD_ID = 'ColumnChartTotalSettlementAmount'
+
+const PAGE_ID = 'total-settlement-amount'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
@@ -121,16 +124,20 @@ export default async function ColumnChartTotalSettlementAmount({
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const cardProps = handleProps(routerProps).cardProps(CARD_ID)
-  console.log('cardProps', cardProps)
+  cardProps.pageId = PAGE_ID
+
   const values = await processValues(cardProps, prefCode)
   const document = await processDocument(values)
 
+  const customActionButton = <LinkToPrefectureRank cardProps={cardProps} />
+
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsApexColumnChart
+      <CardsApexAxisChart
         title={title}
         document={document}
         options={APEX_OPTIONS}
+        actionButton={customActionButton}
       />
     </Suspense>
   )

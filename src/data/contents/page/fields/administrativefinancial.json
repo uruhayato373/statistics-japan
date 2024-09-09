@@ -8,5 +8,15 @@
     "pageId": "financial-strength-index",
     "pageTitle": "財政力指数",
     "menuId": "finances"
+  },
+  {
+    "pageId": "total-settlement-amount",
+    "pageTitle": "決算総額",
+    "menuId": "finances"
+  },
+  {
+    "pageId": "future-burden-ratio",
+    "pageTitle": "将来負担比率",
+    "menuId": "finances"
   }
 ]

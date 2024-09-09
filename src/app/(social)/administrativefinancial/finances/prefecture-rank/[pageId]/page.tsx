@@ -22,6 +22,18 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
         'views/administrativefinancial/finances/prefecture-rank/FinancialStrengthIndex'
       )
   ),
+  'total-settlement-amount': dynamic(
+    () =>
+      import(
+        'views/administrativefinancial/finances/prefecture-rank/TotalSettlementAmount'
+      )
+  ),
+  'future-burden-ratio': dynamic(
+    () =>
+      import(
+        'views/administrativefinancial/finances/prefecture-rank/FutureBurdenRatio'
+      )
+  ),
 }
 
 export async function generateStaticParams() {

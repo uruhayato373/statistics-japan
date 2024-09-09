@@ -103,10 +103,11 @@ const isObject = (item: any): boolean => {
   return item && typeof item === 'object' && !Array.isArray(item)
 }
 
-export default function ApexLineChart({ options }: Props) {
+export default function ApexAxisChart({ options }: Props) {
   const customOptions = useMemo<ApexOptions>(() => {
-    // defaultOptionsとoptionsを深くマージ
     const mergedOptions = deepMerge(defaultOptions, options)
+
+    console.log('mergedOptions:', mergedOptions)
 
     return {
       ...mergedOptions,

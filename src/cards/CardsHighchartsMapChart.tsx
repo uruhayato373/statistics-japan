@@ -5,13 +5,17 @@ import { useEffect, useState } from 'react'
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 import FormControl from '@mui/material/FormControl'
+import IconButton from '@mui/material/IconButton'
 import MenuItem from '@mui/material/MenuItem'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 import Stack from '@mui/material/Stack'
+import Tooltip from '@mui/material/Tooltip'
 import Typography from '@mui/material/Typography'
 
 import HighchartsMapChart from 'components/highcharts/HighchartsMapChart'
 import MainCard from 'components/MainCard'
+
+import ExportOutlined from '@ant-design/icons/ExportOutlined'
 
 import { DocumentType } from 'utils/document'
 import { TopoJSONData } from 'utils/geoshape'
@@ -67,6 +71,22 @@ export default function CardsHighchartsMapChart({
         <Typography variant="h5" color="text.primary">
           {title}
         </Typography>
+        <Tooltip title="ランキングを見る">
+          <IconButton
+            // component="a"
+            // href={url}
+            // target="_blank"
+            rel="noopener noreferrer"
+            size="small"
+            sx={{
+              border: '0.5px solid',
+              borderColor: 'grey.400',
+              '&:hover': { bgcolor: 'transparent' },
+            }}
+          >
+            <ExportOutlined />
+          </IconButton>
+        </Tooltip>
       </Stack>
       <Divider sx={{ mt: 1.5, mb: 1.5 }} />
       <Stack
