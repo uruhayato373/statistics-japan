@@ -11,8 +11,8 @@ const formatHighchartsMapChart = (
   const data = values
     .filter((f) => f.areaCode !== '00000')
     .map((d) => ({
-      areaCode: d.areaCode,
-      areaName: d.areaName,
+      id: d.areaCode,
+      name: d.areaName,
       value: d.value,
       unit: d.unit,
     }))
@@ -22,7 +22,7 @@ const formatHighchartsMapChart = (
     mapData: topojson,
     name: categories[0].categoryName,
     data,
-    joinBy: ['N03_001', 'areaName'],
+    joinBy: ['N03_001', 'name'],
   }
 
   return {

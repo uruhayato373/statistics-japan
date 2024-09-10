@@ -76,7 +76,7 @@ export default function SelectKind(): JSX.Element {
         {items.map((item) => (
           <Link
             key={item.kindId}
-            href={changeKindURL(item)}
+            href={changeKindURL(item.kindId)}
             passHref
             legacyBehavior
           >

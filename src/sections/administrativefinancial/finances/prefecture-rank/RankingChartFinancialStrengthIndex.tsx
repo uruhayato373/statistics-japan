@@ -7,16 +7,15 @@ import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectu
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import handleGeoshape from 'utils/geoshape'
 import { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '将来負担比率'
-const CARD_ID = 'MapChartFutureBurdenRatio'
+const CARD_TITLE = '財政力指数'
+const CARD_ID = 'RankingChartFinancialStrengthIndex'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
-  cdCat01: 'D2112',
+  cdCat01: 'D2101',
 }
 
 interface Props {
@@ -38,6 +37,7 @@ function formatValues(values: ValueType[]): ValueType[] {
     return {
       ...d,
       categoryName: d.categoryName.replace('（都道府県財政）', ''),
+      value: Math.round((d.value + Number.EPSILON) * 1000) / 1000,
     }
   })
 }
@@ -51,12 +51,11 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function MapChartFutureBurdenRatio({
+export default async function RankingChartFinancialStrengthIndex({
   routerProps,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`
   const cardProps = { ...routerProps, cardId: CARD_ID }
-  const topojson = await handleGeoshape('prefecture').readJson()
   const values = await processValues(cardProps)
   const document = await processDocument(values)
 
@@ -64,9 +63,7 @@ export default async function MapChartFutureBurdenRatio({
     <Suspense fallback={<CircularProgressCards />}>
       <CardsHighchartsPrefectureRankingChart
         title={title}
-        cardProps={cardProps}
         document={document}
-        topojson={topojson}
       />
     </Suspense>
   )

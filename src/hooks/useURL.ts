@@ -73,20 +73,20 @@ export default function useURL() {
   /**
    * 統計種別を変更した場合のURLを生成
    */
-  const changeKindURL = (newKind: KindType): string => {
+  const changeKindURL = (newKindId: string): string => {
     if (!currentRouterProps.fieldId) return ''
     const { fieldId, menuId } = currentRouterProps
     const pageId = handlePage().items(menuId)[0].pageId
 
-    switch (newKind.kindId) {
+    switch (newKindId) {
       case 'japan':
-        return `/${fieldId}/${menuId}/${newKind.kindId}`
+        return `/${fieldId}/${menuId}/${newKindId}`
       case 'prefecture-rank':
-        return `/${fieldId}/${menuId}/${newKind.kindId}/${pageId}`
+        return `/${fieldId}/${menuId}/${newKindId}/${pageId}`
       case 'prefecture':
-        return `/${fieldId}/${menuId}/${newKind.kindId}/${atomPrefecture.prefCode}`
+        return `/${fieldId}/${menuId}/${newKindId}/${atomPrefecture.prefCode}`
       case 'city':
-        return `/${fieldId}/${menuId}/${newKind.kindId}/${atomPrefecture.prefCode}/${atomCity.cityCode}`
+        return `/${fieldId}/${menuId}/${newKindId}/${atomPrefecture.prefCode}/${atomCity.cityCode}`
       default:
         return ''
     }

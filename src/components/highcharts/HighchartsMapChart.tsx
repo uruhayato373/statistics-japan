@@ -2,7 +2,12 @@
 
 import React from 'react'
 
-import Highcharts, { Options, SeriesMapOptions } from 'highcharts'
+import Highcharts, {
+  Options,
+  SeriesMapDataOptions,
+  SeriesMapOptions,
+  TooltipFormatterContextObject,
+} from 'highcharts'
 import HC_exportData from 'highcharts/modules/export-data'
 import HC_exporting from 'highcharts/modules/exporting'
 import HC_map from 'highcharts/modules/map'
@@ -18,15 +23,48 @@ interface Props {
   options: Options
 }
 
+interface ExtendedPoint extends Highcharts.Point {
+  value: number
+  areaName: string
+  unit: string
+}
+
+const isSeriesMapDataOptions = (data: unknown): data is SeriesMapDataOptions =>
+  typeof data === 'object' && data !== null && 'value' in data
+
+const getMaxDecimalPlaces = (values: number[]): number =>
+  values.reduce((maxDecimals, value) => {
+    const [, decimal] = value.toString().split('.')
+    return Math.max(maxDecimals, decimal?.length || 0)
+  }, 0)
+
+const extractValues = (data: SeriesMapOptions['data']): number[] =>
+  data.reduce((acc: number[], d) => {
+    if (isSeriesMapDataOptions(d) && typeof d.value === 'number') {
+      acc.push(d.value)
+    } else if (Array.isArray(d) && typeof d[1] === 'number') {
+      acc.push(d[1])
+    }
+    return acc
+  }, [])
+
+const createTooltipFormatter = (digits: number) =>
+  function (this: TooltipFormatterContextObject) {
+    const point = this.point as ExtendedPoint
+    const formattedValue = Highcharts.numberFormat(
+      point.value,
+      digits,
+      '.',
+      ','
+    )
+    return `${point.areaName}: ${formattedValue}${point.unit}`
+  }
+
 const defaultOptions: Options = {
-  title: {
-    text: '',
-  },
+  title: { text: '' },
   mapNavigation: {
     enabled: true,
-    buttonOptions: {
-      verticalAlign: 'bottom',
-    },
+    buttonOptions: { verticalAlign: 'bottom' },
     enableMouseWheelZoom: true,
     enableTouchZoom: true,
     enableDoubleClickZoom: true,
@@ -41,62 +79,31 @@ const defaultOptions: Options = {
       [1, '#D6E4FF'],
     ],
   },
-  legend: {
-    enabled: false,
-  },
-  credits: {
-    enabled: false,
-  },
+  legend: { enabled: false },
+  credits: { enabled: false },
+  chart: { animation: false },
+  mapView: { zoom: 5.2, center: [137.5, 38] },
   exporting: {
     enabled: true,
     buttons: {
       contextButton: {
-        menuItems: ['downloadPNG', 'downloadSVG'],
+        menuItems: ['DOWNLOAD PNG', 'DOWNLOAD SVG'],
       },
     },
   },
 }
 
 export default function HighchartsMapChart({ options }: Props) {
-  const updatedSeries: SeriesMapOptions[] =
-    (options.series as SeriesMapOptions[])?.map((series) => ({
-      ...series,
-      type: 'map',
-      states: {
-        hover: {
-          color: '#BADA55',
-        },
-      },
-      dataLabels: {
-        enabled: true,
-        format: '{point.name}',
-      },
-      animation: false,
-      borderColor: '#FFFFFF',
-      borderWidth: 0.5,
-    })) || []
+  const mapSeries = options.series as SeriesMapOptions[]
+  const values = mapSeries[0]?.data ? extractValues(mapSeries[0].data) : []
+  const digits = getMaxDecimalPlaces(values)
 
   const customOptions: Options = {
     ...defaultOptions,
-    chart: {
-      animation: false,
-    },
-    mapView: {
-      zoom: 5.2,
-      center: [137.5, 38],
-    },
+    ...options,
     tooltip: {
-      formatter: function (this: Highcharts.TooltipFormatterContextObject) {
-        const point = this.point as Highcharts.Point & {
-          value: number
-          areaName: string
-          unit: string
-        }
-        const formattedValue = Highcharts.numberFormat(point.value, 0, '.', ',')
-        return `${point.areaName}: ${formattedValue}${point.unit}`
-      },
+      formatter: createTooltipFormatter(digits),
     },
-    series: updatedSeries,
   }
 
   return (
