@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsReactRankingTable from 'cards/CardsReactRankingTable'
+import CardsReactPrefectureRankingTable from 'cards/CardsReactPrefectureRankingTable'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -53,7 +53,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function RankingTableTotalExpenditures({
+export default async function RankingTableTotalRevenueSettlement({
   routerProps,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`
@@ -63,7 +63,7 @@ export default async function RankingTableTotalExpenditures({
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactRankingTable title={title} document={document} />
+      <CardsReactPrefectureRankingTable title={title} document={document} />
     </Suspense>
   )
 }

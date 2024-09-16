@@ -6,7 +6,7 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartNumberOfGeneralHouseholds from 'sections/population/household/prefecture-rank/MapChartNumberOfGeneralHouseholds'
+import RankingChartNumberOfGeneralHouseholds from 'sections/population/household/prefecture-rank/RankingChartNumberOfGeneralHouseholds'
 import RankingTableNumberOfGeneralHouseholds from 'sections/population/household/prefecture-rank/RankingTableGeneralHousehold'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -26,7 +26,9 @@ export default async function GeneralHousehold({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartNumberOfGeneralHouseholds routerProps={routerProps} />
+              <RankingChartNumberOfGeneralHouseholds
+                routerProps={routerProps}
+              />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <RankingTableNumberOfGeneralHouseholds

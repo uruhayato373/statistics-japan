@@ -6,8 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartHabitableArea from 'sections/landweather/area/prefecture-rank/MapChartHabitableArea'
-import MapChartHabitableAreaPerTotalArea from 'sections/landweather/area/prefecture-rank/MapChartHabitableAreaPerTotalArea'
+import RankingChartHabitableArea from 'sections/landweather/area/prefecture-rank/RankingChartHabitableArea'
+import RankingChartHabitableAreaPerTotalArea from 'sections/landweather/area/prefecture-rank/RankingChartHabitableAreaPerTotalArea'
 import RankingTableHabitableArea from 'sections/landweather/area/prefecture-rank/RankingTableHabitableArea'
 import RankingTableHabitableAreaPerTotalArea from 'sections/landweather/area/prefecture-rank/RankingTableHabitableAreaPerTotalArea'
 import ScatterChartTotalAreaHabitableArea from 'sections/landweather/area/prefecture-rank/ScatterChartTotalAreaHabitableArea'
@@ -31,7 +31,7 @@ export default async function HabitableArea({ routerProps }: Props) {
             <Grid item xs={12} md={10}>
               <Grid container rowSpacing={4.5} columnSpacing={3}>
                 <Grid item xs={12} md={6} lg={6}>
-                  <MapChartHabitableArea routerProps={routerProps} />
+                  <RankingChartHabitableArea routerProps={routerProps} />
                 </Grid>
                 <Grid item xs={12} md={6} lg={6}>
                   <RankingTableHabitableArea routerProps={routerProps} />
@@ -46,7 +46,9 @@ export default async function HabitableArea({ routerProps }: Props) {
               <ScatterChartTotalAreaHabitableArea routerProps={routerProps} />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartHabitableAreaPerTotalArea routerProps={routerProps} />
+              <RankingChartHabitableAreaPerTotalArea
+                routerProps={routerProps}
+              />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <RankingTableHabitableAreaPerTotalArea

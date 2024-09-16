@@ -6,9 +6,9 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartDenselyPopulatedArea from 'sections/landweather/area/prefecture-rank/MapChartDenselyPopulatedArea'
-import MapChartDenselyPopulatedAreaPerHabitableArea from 'sections/landweather/area/prefecture-rank/MapChartDenselyPopulatedAreaPerHabitableArea'
-import MapChartDenselyPopulatedAreaPerTotalArea from 'sections/landweather/area/prefecture-rank/MapChartDenselyPopulatedAreaPerTotalArea'
+import RankingChartDenselyPopulatedArea from 'sections/landweather/area/prefecture-rank/RankingChartDenselyPopulatedArea'
+import RankingChartDenselyPopulatedAreaPerHabitableArea from 'sections/landweather/area/prefecture-rank/RankingChartDenselyPopulatedAreaPerHabitableArea'
+import RankingChartDenselyPopulatedAreaPerTotalArea from 'sections/landweather/area/prefecture-rank/RankingChartDenselyPopulatedAreaPerTotalArea'
 import RankingTableDenselyPopulatedArea from 'sections/landweather/area/prefecture-rank/RankingTableDenselyPopulatedArea'
 import RankingTableDenselyPopulatedAreaPerHabitableArea from 'sections/landweather/area/prefecture-rank/RankingTableDenselyPopulatedAreaPerHabitableArea'
 import RankingTableDenselyPopulatedAreaPerTotalArea from 'sections/landweather/area/prefecture-rank/RankingTableDenselyPopulatedAreaPerTotalArea'
@@ -32,7 +32,7 @@ export default async function HabitableArea({ routerProps }: Props) {
             <Grid item xs={12} md={10}>
               <Grid container rowSpacing={4.5} columnSpacing={3}>
                 <Grid item xs={12} md={6} lg={6}>
-                  <MapChartDenselyPopulatedArea routerProps={routerProps} />
+                  <RankingChartDenselyPopulatedArea routerProps={routerProps} />
                 </Grid>
                 <Grid item xs={12} md={6} lg={6}>
                   <RankingTableDenselyPopulatedArea routerProps={routerProps} />
@@ -40,7 +40,7 @@ export default async function HabitableArea({ routerProps }: Props) {
               </Grid>
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartDenselyPopulatedAreaPerTotalArea
+              <RankingChartDenselyPopulatedAreaPerTotalArea
                 routerProps={routerProps}
               />
             </Grid>
@@ -50,7 +50,7 @@ export default async function HabitableArea({ routerProps }: Props) {
               />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartDenselyPopulatedAreaPerHabitableArea
+              <RankingChartDenselyPopulatedAreaPerHabitableArea
                 routerProps={routerProps}
               />
             </Grid>

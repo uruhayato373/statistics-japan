@@ -4,9 +4,7 @@ import { ValueType } from 'utils/value'
 import {
   calcAverage,
   calcDeviationValue,
-  calcMedian,
   calcStandardDeviation,
-  calcVariance,
 } from './calcStatic'
 
 export type RankTableColumnType = {
@@ -25,12 +23,6 @@ export type RankTableDataType = ValueType & {
 export type ReactRankTableType = {
   columns: RankTableColumnType[]
   data: RankTableDataType[]
-  average: number
-  averageString: string
-  median: number
-  medianString: string
-  standardDeviation: number
-  variance: number
 }
 
 /**
@@ -71,9 +63,7 @@ const formatReactRankTable = (document: DocumentType): ReactRankTableType => {
   const filteredValues = values.filter((f) => f.areaCode !== '00000')
   const numbers = filteredValues.map((d) => d.value)
   const average = roundNumber(calcAverage(numbers), 1)
-  const median = roundNumber(calcMedian(numbers), 1)
   const standardDeviation = roundNumber(calcStandardDeviation(numbers), 1)
-  const variance = roundNumber(calcVariance(numbers), 1)
 
   // ソートしてランクを付与
   const sortedData = filteredValues
@@ -97,12 +87,6 @@ const formatReactRankTable = (document: DocumentType): ReactRankTableType => {
   return {
     columns,
     data,
-    average,
-    averageString: `${average.toLocaleString()} ${values[0].unit}`,
-    median,
-    medianString: `${median.toLocaleString()} ${values[0].unit}`,
-    standardDeviation,
-    variance,
   }
 }
 

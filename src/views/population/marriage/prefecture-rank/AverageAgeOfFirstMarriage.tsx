@@ -6,8 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartAverageAgeOfFirstMarriageHusband from 'sections/population/marriage/prefecture-rank/MapChartAverageAgeOfFirstMarriageHusband'
-import MapChartAverageAgeOfFirstMarriageWife from 'sections/population/marriage/prefecture-rank/MapChartAverageAgeOfFirstMarriageWife'
+import RankingChartAverageAgeOfFirstMarriageHusband from 'sections/population/marriage/prefecture-rank/RankingChartAverageAgeOfFirstMarriageHusband'
+import RankingChartAverageAgeOfFirstMarriageWife from 'sections/population/marriage/prefecture-rank/RankingChartAverageAgeOfFirstMarriageWife'
 import RankingTableAverageAgeOfFirstMarriageHusband from 'sections/population/marriage/prefecture-rank/RankingTableAverageAgeOfFirstMarriageHusband'
 import RankingTableAverageAgeOfFirstMarriageWife from 'sections/population/marriage/prefecture-rank/RankingTableAverageAgeOfFirstMarriageWife'
 import handleProps, { RouterProps } from 'utils/props'
@@ -28,7 +28,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartAverageAgeOfFirstMarriageHusband
+              <RankingChartAverageAgeOfFirstMarriageHusband
                 routerProps={routerProps}
               />
             </Grid>
@@ -38,7 +38,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
               />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartAverageAgeOfFirstMarriageWife
+              <RankingChartAverageAgeOfFirstMarriageWife
                 routerProps={routerProps}
               />
             </Grid>

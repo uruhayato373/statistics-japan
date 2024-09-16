@@ -6,7 +6,7 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartFutureBurdenRatio from 'sections/administrativefinancial/finances/prefecture-rank/MapChartFutureBurdenRatio'
+import RankingChartFutureBurdenRatio from 'sections/administrativefinancial/finances/prefecture-rank/RankingChartFutureBurdenRatio'
 import RankingTableFutureBurdenRatio from 'sections/administrativefinancial/finances/prefecture-rank/RankingTableFutureBurdenRatio'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -26,7 +26,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartFutureBurdenRatio routerProps={routerProps} />
+              <RankingChartFutureBurdenRatio routerProps={routerProps} />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <RankingTableFutureBurdenRatio routerProps={routerProps} />

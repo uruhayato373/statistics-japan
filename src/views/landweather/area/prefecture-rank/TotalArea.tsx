@@ -6,7 +6,7 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartTotalArea from 'sections/landweather/area/prefecture-rank/MapChartTotalArea'
+import RankingChartTotalArea from 'sections/landweather/area/prefecture-rank/RankingChartTotalArea'
 import RankingTableTotalArea from 'sections/landweather/area/prefecture-rank/RankingTableTotalArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -28,7 +28,7 @@ export default async function TotalArea({ routerProps }: Props) {
             <Grid item xs={12} md={10}>
               <Grid container rowSpacing={4.5} columnSpacing={3}>
                 <Grid item xs={12} md={6} lg={6}>
-                  <MapChartTotalArea routerProps={routerProps} />
+                  <RankingChartTotalArea routerProps={routerProps} />
                 </Grid>
                 <Grid item xs={12} md={6} lg={6}>
                   <RankingTableTotalArea routerProps={routerProps} />

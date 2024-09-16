@@ -6,7 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartGeneratedPowerAmount from 'sections/energy/electric-gas/prefecture-rank/MapChartGeneratedPowerAmount'
+import RankingChartGeneratedPowerAmount from 'sections/energy/electric-gas/prefecture-rank/RankingChartGeneratedPowerAmount'
+import RankingTableGeneratedPowerAmount from 'sections/energy/electric-gas/prefecture-rank/RankingTableGeneratedPowerAmount'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -24,8 +25,11 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={7}>
-              <MapChartGeneratedPowerAmount routerProps={routerProps} />
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingChartGeneratedPowerAmount routerProps={routerProps} />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingTableGeneratedPowerAmount routerProps={routerProps} />
             </Grid>
           </Grid>
         </Box>

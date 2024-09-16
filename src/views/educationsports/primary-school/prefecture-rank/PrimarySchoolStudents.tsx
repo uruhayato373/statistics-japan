@@ -6,7 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapPrimarySchoolStudents from 'sections/educationsports/primary-school/prefecture-rank/MapPrimarySchoolStudents'
+import RankingChartPrimarySchoolStudents from 'sections/educationsports/primary-school/prefecture-rank/RankingChartPrimarySchoolStudents'
+import RankingTablePrimarySchoolStudents from 'sections/educationsports/primary-school/prefecture-rank/RankingTablePrimarySchoolStudents'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -24,8 +25,11 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={7}>
-              <MapPrimarySchoolStudents routerProps={routerProps} />
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingChartPrimarySchoolStudents routerProps={routerProps} />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingTablePrimarySchoolStudents routerProps={routerProps} />
             </Grid>
           </Grid>
         </Box>

@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartFisheryOutputValue from 'sections/agriculture/fishing/prefecture-rank/MapChartFisheryOutputValue'
+import RankingChartFisheryOutputValue from 'sections/agriculture/fishing/prefecture-rank/RankingChartFisheryOutputValue'
 import RankingTableFisheryOutputValue from 'sections/agriculture/fishing/prefecture-rank/RankingTableAgriculturalOutput'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -26,7 +26,7 @@ export default async function AgriculturalOutput({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartFisheryOutputValue routerProps={routerProps} />
+              <RankingChartFisheryOutputValue routerProps={routerProps} />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <RankingTableFisheryOutputValue routerProps={routerProps} />

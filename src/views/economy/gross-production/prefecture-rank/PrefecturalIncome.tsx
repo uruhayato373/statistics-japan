@@ -6,8 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartPrefecturalIncome from 'sections/economy/gross-production/prefecture-rank/MapChartPrefecturalIncome'
-import MapChartPrefecturalIncomePerPopulation from 'sections/economy/gross-production/prefecture-rank/MapChartPrefecturalIncomePerPopulation'
+import RankingChartPrefecturalIncome from 'sections/economy/gross-production/prefecture-rank/RankingChartPrefecturalIncome'
+import RankingChartPrefecturalIncomePerPopulation from 'sections/economy/gross-production/prefecture-rank/RankingChartPrefecturalIncomePerPopulation'
 import RankingTablePrefecturalIncome from 'sections/economy/gross-production/prefecture-rank/RankingTablePrefecturalIncome'
 import RankingTablePrefecturalIncomePerPopulation from 'sections/economy/gross-production/prefecture-rank/RankingTablePrefecturalIncomePerPopulation'
 import handleProps, { RouterProps } from 'utils/props'
@@ -28,13 +28,13 @@ export default async function PrefectureRankView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartPrefecturalIncome routerProps={routerProps} />
+              <RankingChartPrefecturalIncome routerProps={routerProps} />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <RankingTablePrefecturalIncome routerProps={routerProps} />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartPrefecturalIncomePerPopulation
+              <RankingChartPrefecturalIncomePerPopulation
                 routerProps={routerProps}
               />
             </Grid>

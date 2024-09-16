@@ -6,7 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartNumberOfPoliceOfficers from 'sections/safetyenvironment/crime/prefecture-rank/MapChartNumberOfPoliceOfficers'
+import RankingChartNumberOfPoliceOfficers from 'sections/safetyenvironment/crime/prefecture-rank/RankingChartNumberOfPoliceOfficers'
+import RankingTableNumberOfPoliceOfficers from 'sections/safetyenvironment/crime/prefecture-rank/RankingTableNumberOfBirths'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -24,8 +25,11 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={7}>
-              <MapChartNumberOfPoliceOfficers routerProps={routerProps} />
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingChartNumberOfPoliceOfficers routerProps={routerProps} />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingTableNumberOfPoliceOfficers routerProps={routerProps} />
             </Grid>
           </Grid>
         </Box>

@@ -6,7 +6,7 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartSunnyDays from 'sections/landweather/weather/prefecture-rank/MapChartSunnyDays'
+import RankingChartSunnyDays from 'sections/landweather/weather/prefecture-rank/RankingChartSunnyDays'
 import RankingTableSunnyDays from 'sections/landweather/weather/prefecture-rank/RankingTableSunnyDays'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -26,10 +26,10 @@ export default async function SunnyDays({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={7}>
-              <MapChartSunnyDays routerProps={routerProps} />
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingChartSunnyDays routerProps={routerProps} />
             </Grid>
-            <Grid item xs={12} md={6} lg={5}>
+            <Grid item xs={12} md={6} lg={6}>
               <RankingTableSunnyDays routerProps={routerProps} />
             </Grid>
             {/* row 2 */}

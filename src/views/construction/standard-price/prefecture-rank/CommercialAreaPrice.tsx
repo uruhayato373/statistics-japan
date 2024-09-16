@@ -6,7 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapCommercialAreaPrice from 'sections/construction/standard-price/prefecture-rank/MapCommercialAreaPrice'
+import RankingChartCommercialAreaPrice from 'sections/construction/standard-price/prefecture-rank/RankingChartCommercialAreaPrice'
+import RankingTableCommercialAreaPrice from 'sections/construction/standard-price/prefecture-rank/RankingTableCommercialAreaPrice'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -24,8 +25,11 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={7}>
-              <MapCommercialAreaPrice routerProps={routerProps} />
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingChartCommercialAreaPrice routerProps={routerProps} />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingTableCommercialAreaPrice routerProps={routerProps} />
             </Grid>
           </Grid>
         </Box>

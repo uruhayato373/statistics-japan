@@ -6,7 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartTotalAmountOfGarbageDischarged from 'sections/energy/garbage/prefecture-rank/MapChartTotalAmountOfGarbageDischarged'
+import RankingChartTotalAmountOfGarbageDischarged from 'sections/energy/garbage/prefecture-rank/RankingChartTotalAmountOfGarbageDischarged'
+import RankingTableTotalAmountOfGarbageDischarged from 'sections/energy/garbage/prefecture-rank/RankingTableTotalAmountOfGarbageDischarged'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -24,8 +25,13 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={7}>
-              <MapChartTotalAmountOfGarbageDischarged
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingChartTotalAmountOfGarbageDischarged
+                routerProps={routerProps}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <RankingTableTotalAmountOfGarbageDischarged
                 routerProps={routerProps}
               />
             </Grid>

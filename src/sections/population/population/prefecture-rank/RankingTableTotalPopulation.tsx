@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsReactRankingTable from 'cards/CardsReactRankingTable'
+import CardsReactPrefectureRankingTable from 'cards/CardsReactPrefectureRankingTable'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -51,7 +51,7 @@ export default async function RankingTableTotalPopulation({
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactRankingTable title={title} document={document} />
+      <CardsReactPrefectureRankingTable title={title} document={document} />
     </Suspense>
   )
 }

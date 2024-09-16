@@ -41,7 +41,7 @@ interface Props {
   height?: string
 }
 
-export default function CardsHighchartsRankingChart({
+export default function CardsHighchartsPrefectureRankingChart({
   title,
   document,
   height,

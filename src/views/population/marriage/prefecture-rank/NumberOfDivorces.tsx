@@ -6,7 +6,7 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartNumberOfDivorces from 'sections/population/marriage/prefecture-rank/MapChartNumberOfDivorces'
+import RankingChartNumberOfDivorces from 'sections/population/marriage/prefecture-rank/RankingChartNumberOfDivorces'
 import RankingTableNumberOfDivorces from 'sections/population/marriage/prefecture-rank/RankingTableNumberOfDivorces'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -26,7 +26,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartNumberOfDivorces routerProps={routerProps} />
+              <RankingChartNumberOfDivorces routerProps={routerProps} />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <RankingTableNumberOfDivorces routerProps={routerProps} />

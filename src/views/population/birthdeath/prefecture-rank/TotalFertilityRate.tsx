@@ -6,7 +6,7 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import MapChartTotalFertilityRate from 'sections/population/birthdeath/prefecture-rank/MapChartTotalFertilityRate'
+import RankingChartTotalFertilityRate from 'sections/population/birthdeath/prefecture-rank/RankingChartTotalFertilityRate'
 import RankingTableTotalFertilityRate from 'sections/population/birthdeath/prefecture-rank/RankingTableTotalFertilityRate'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -26,7 +26,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={6}>
-              <MapChartTotalFertilityRate routerProps={routerProps} />
+              <RankingChartTotalFertilityRate routerProps={routerProps} />
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <RankingTableTotalFertilityRate routerProps={routerProps} />
