@@ -86,11 +86,6 @@ const defaultOptions: Options = {
   mapView: { zoom: 5.2, center: [137.5, 38] },
   exporting: {
     enabled: true,
-    // buttons: {
-    //   contextButton: {
-    //     menuItems: ['DOWNLOADPNG', 'DOWNLOAD SVG'],
-    //   },
-    // },
   },
 }
 
@@ -99,16 +94,18 @@ export default function HighchartsMapChart({ options }: Props) {
   const values = mapSeries[0]?.data ? extractValues(mapSeries[0].data) : []
   const digits = getMaxDecimalPlaces(values)
   const [minValue, maxValue] = getMinMaxValues(values)
-  console.log(minValue, maxValue)
+
+  const mergedColorAxis = {
+    ...defaultOptions.colorAxis,
+    ...(options.colorAxis as Highcharts.ColorAxisOptions),
+    min: minValue,
+    max: maxValue,
+  }
 
   const customOptions: Options = {
     ...defaultOptions,
     ...options,
-    colorAxis: {
-      ...defaultOptions.colorAxis,
-      min: minValue,
-      max: maxValue,
-    },
+    colorAxis: mergedColorAxis,
     tooltip: {
       formatter: createTooltipFormatter(digits),
     },
