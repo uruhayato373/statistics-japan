@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 
 import Highcharts, {
@@ -48,6 +46,10 @@ const extractValues = (data: SeriesMapOptions['data']): number[] =>
     return acc
   }, [])
 
+const getMinMaxValues = (values: number[]): [number, number] => {
+  return [Math.min(...values), Math.max(...values)]
+}
+
 const createTooltipFormatter = (digits: number) =>
   function (this: TooltipFormatterContextObject) {
     const point = this.point as ExtendedPoint
@@ -57,7 +59,7 @@ const createTooltipFormatter = (digits: number) =>
       '.',
       ','
     )
-    return `${point.areaName}: ${formattedValue}${point.unit}`
+    return `${point.name}: ${formattedValue}${point.unit}`
   }
 
 const defaultOptions: Options = {
@@ -72,11 +74,10 @@ const defaultOptions: Options = {
     mouseWheelSensitivity: 1.5,
   },
   colorAxis: {
-    min: 0,
     stops: [
       [0, '#FFFFFF'],
       [0.5, '#3366FF'],
-      [1, '#D6E4FF'],
+      [1, '#0000cd'],
     ],
   },
   legend: { enabled: false },
@@ -85,11 +86,11 @@ const defaultOptions: Options = {
   mapView: { zoom: 5.2, center: [137.5, 38] },
   exporting: {
     enabled: true,
-    buttons: {
-      contextButton: {
-        menuItems: ['DOWNLOAD PNG', 'DOWNLOAD SVG'],
-      },
-    },
+    // buttons: {
+    //   contextButton: {
+    //     menuItems: ['DOWNLOADPNG', 'DOWNLOAD SVG'],
+    //   },
+    // },
   },
 }
 
@@ -97,10 +98,17 @@ export default function HighchartsMapChart({ options }: Props) {
   const mapSeries = options.series as SeriesMapOptions[]
   const values = mapSeries[0]?.data ? extractValues(mapSeries[0].data) : []
   const digits = getMaxDecimalPlaces(values)
+  const [minValue, maxValue] = getMinMaxValues(values)
+  console.log(minValue, maxValue)
 
   const customOptions: Options = {
     ...defaultOptions,
     ...options,
+    colorAxis: {
+      ...defaultOptions.colorAxis,
+      min: minValue,
+      max: maxValue,
+    },
     tooltip: {
       formatter: createTooltipFormatter(digits),
     },
