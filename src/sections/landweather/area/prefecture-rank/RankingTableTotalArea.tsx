@@ -26,9 +26,21 @@ interface Props {
 async function processValues(cardProps: CardProps) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  await actionSaveValues(cardProps, values)
+  await actionSaveValues(cardProps, formatValues(values))
 
-  return values
+  return formatValues(values)
+}
+
+// format values
+function formatValues(values: ValueType[]): ValueType[] {
+  return values.map((d) => {
+    return {
+      ...d,
+      categoryName: d.categoryName.replace('（北方地域及び竹島を除く）', ''),
+      // 単位を半角のhaに変換
+      unit: 'ha',
+    }
+  })
 }
 
 // document

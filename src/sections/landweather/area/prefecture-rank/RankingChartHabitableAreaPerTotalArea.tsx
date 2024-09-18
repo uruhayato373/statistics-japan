@@ -35,9 +35,17 @@ async function processValues(cardProps: CardProps) {
     ESTAT_PARAMS_MOLECULE,
     ESTAT_PARAMS_DENOMINATOR
   )
-  await actionSaveValues(cardProps, values)
+  await actionSaveValues(cardProps, formatValues(values))
 
-  return values
+  return formatValues(values)
+}
+
+// format values
+function formatValues(values: ValueType[]) {
+  return values.map((d) => ({
+    ...d,
+    value: Number(d.value.toFixed(1)),
+  }))
 }
 
 // document

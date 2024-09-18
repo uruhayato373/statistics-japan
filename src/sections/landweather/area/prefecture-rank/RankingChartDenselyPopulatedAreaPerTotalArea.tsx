@@ -45,7 +45,7 @@ function formatValues(values: ValueType[]) {
   // 人口集中地区面積はkm2、総面積はhaなので、100倍する
   return values.map((d) => ({
     ...d,
-    value: d.value * 100,
+    value: Number((d.value * 100).toFixed(1)),
     unit: '%',
   }))
 }

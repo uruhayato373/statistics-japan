@@ -45,6 +45,7 @@ function formatValues(values: ValueType[]) {
   return values.map((d) => ({
     ...d,
     categoryName: '可住地面積の割合',
+    value: Number(d.value.toFixed(1)),
   }))
 }
 
