@@ -43,10 +43,12 @@ async function processValues(cardProps: CardProps) {
 // format values
 function formatValues(values: ValueType[]) {
   // 人口集中地区面積はkm2、総面積はhaなので、100倍する
+  // 単位をパーミルにするため、さらに10倍する
   return values.map((d) => ({
     ...d,
-    value: Number((d.value * 100).toFixed(1)),
-    unit: '%',
+    categoryName: '割合',
+    value: Number((d.value * 1000).toFixed(2)),
+    unit: '‰',
   }))
 }
 

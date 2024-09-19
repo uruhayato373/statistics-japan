@@ -13,6 +13,8 @@ import LinkToPrefecture from 'components/button/LinkToPrefecture'
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 
+import { Options } from 'highcharts'
+
 import { DocumentType } from 'utils/document'
 
 import SelectChartType from './SelectChartType'
@@ -39,12 +41,14 @@ interface Props {
   title: string
   document: DocumentType
   height?: string
+  options?: Options
 }
 
 export default function CardsHighchartsPrefectureRankingChart({
   title,
   document,
   height,
+  options,
 }: Props) {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [chartType, SelectChartTypeComponent] = SelectChartType()
@@ -99,7 +103,10 @@ export default function CardsHighchartsPrefectureRankingChart({
         ) : (
           <>
             {chartType === 'map' ? (
-              <PrefectureRankingMapChart document={filteredDocument} />
+              <PrefectureRankingMapChart
+                document={filteredDocument}
+                options={options}
+              />
             ) : (
               <PrefectureRankingBarChart document={filteredDocument} />
             )}

@@ -11,7 +11,7 @@ interface Props {
 
 export default function Average({ document }: Props) {
   const { categories, values } = document
-  const numbers = values.map((d) => d.value)
+  const numbers = values.map((d) => d.value).filter((f) => !isNaN(f))
   const average = calcAverage(numbers)
   const maxDecimalPlaces = getMaxDecimalPlaces(numbers)
   const unit = categories[0].categoryUnit

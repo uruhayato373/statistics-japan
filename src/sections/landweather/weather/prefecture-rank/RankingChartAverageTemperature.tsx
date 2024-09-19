@@ -2,6 +2,8 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
+import { Options } from 'highcharts'
+
 import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
 
 import { actionSaveValues } from 'actions/saveValues'
@@ -16,6 +18,24 @@ const CARD_ID = 'RankingChartAverageTemperature'
 const ESTAT_PARAMS = {
   statsDataId: '0000010102',
   cdCat01: 'B4101',
+}
+
+const OPTIONS: Options = {
+  colorAxis: {
+    stops: [
+      [0, '#FFFFC0'], // 薄い黄色（最低値）
+      [0.1, '#FFEDA0'], // やや濃い黄色
+      [0.3, '#FED976'], // 薄いオレンジ
+      [0.5, '#FEB24C'], // オレンジ
+      [0.7, '#FD8D3C'], // 濃いオレンジ
+      [0.9, '#FC4E2A'], // 明るい赤
+      [1, '#BD0026'], // 暗い赤（最高値）
+    ],
+    minColor: '#FFFFC0',
+    maxColor: '#BD0026',
+    startOnTick: false,
+    endOnTick: false,
+  },
 }
 
 interface Props {
@@ -53,6 +73,7 @@ export default async function RankingChartAverageTemperature({
       <CardsHighchartsPrefectureRankingChart
         title={title}
         document={document}
+        options={OPTIONS}
       />
     </Suspense>
   )

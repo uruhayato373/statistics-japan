@@ -47,7 +47,8 @@ const extractValues = (data: SeriesMapOptions['data']): number[] =>
   }, [])
 
 const getMinMaxValues = (values: number[]): [number, number] => {
-  return [Math.min(...values), Math.max(...values)]
+  const validValues = values.filter((value) => !isNaN(value))
+  return [Math.min(...validValues), Math.max(...validValues)]
 }
 
 const createTooltipFormatter = (digits: number) =>
@@ -79,6 +80,10 @@ const defaultOptions: Options = {
       [0.5, '#3366FF'],
       [1, '#0000cd'],
     ],
+    minColor: '#FFFFFF',
+    maxColor: '#0000cd',
+    startOnTick: false,
+    endOnTick: false,
   },
   legend: { enabled: false },
   credits: { enabled: false },

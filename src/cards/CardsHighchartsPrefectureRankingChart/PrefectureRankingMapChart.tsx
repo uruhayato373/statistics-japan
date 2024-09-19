@@ -14,13 +14,18 @@ import formatHighcharts from 'utils/highcharts'
 
 interface Props {
   document: DocumentType
+  options?: Options
 }
 
-export default function PrefectureRankingMapChart({ document }: Props) {
+export default function PrefectureRankingMapChart({
+  document,
+  options,
+}: Props) {
   const { geoShape } = useGeoshape()
   const mapChartOptions = formatHighcharts(document).mapChart(geoShape)
-  const options: Options = {
+  const formatOptions: Options = {
     ...mapChartOptions,
+    ...options,
   }
 
   return (
@@ -37,7 +42,7 @@ export default function PrefectureRankingMapChart({ document }: Props) {
         },
       }}
     >
-      <HighchartsMapChart options={options} />
+      <HighchartsMapChart options={formatOptions} />
     </Box>
   )
 }

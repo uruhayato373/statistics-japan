@@ -26,9 +26,18 @@ interface Props {
 async function processValues(cardProps: CardProps) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  await actionSaveValues(cardProps, values)
+  await actionSaveValues(cardProps, formatValues(values))
 
-  return values
+  return formatValues(values)
+}
+
+// format values
+function formatValues(values: ValueType[]) {
+  return values.map((d) => ({
+    ...d,
+    value: Number(d.value.toFixed(0)),
+    unit: 'km²',
+  }))
 }
 
 // document

@@ -26,13 +26,25 @@ export type ReactRankTableType = {
 }
 
 /**
+ * 数値の小数点以下の桁数を取得する
+ * @param {number} value - 対象の数値
+ * @returns {number} 小数点以下の桁数
+ */
+const getDecimalPlaces = (value: number): number => {
+  const match = value.toString().match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/)
+  return match
+    ? Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0))
+    : 0
+}
+
+/**
  * 数値を指定された小数点以下の桁数で丸める
  * @param {number} value - 丸める数値
- * @param {number | null} digit - 小数点以下の桁数（nullの場合は整数に丸める）
+ * @param {number} digit - 小数点以下の桁数
  * @returns {number} 丸められた数値
  */
-const roundNumber = (value: number, digit: number | null): number =>
-  digit === null ? Math.round(value) : Number(value.toFixed(digit))
+const roundNumber = (value: number, digit: number): number =>
+  Number(value.toFixed(digit))
 
 /**
  * ドキュメントデータをReact Ranking Tableフォーマットに変換する
@@ -60,17 +72,26 @@ const formatReactRankTable = (document: DocumentType): ReactRankTableType => {
     { header: '偏差値', footer: '偏差値', accessorKey: 'deviationValue' },
   ]
 
-  const filteredValues = values.filter((f) => f.areaCode !== '00000')
+  const filteredValues = values
+    .filter((f) => f.areaCode !== '00000')
+    .filter((f) => !isNaN(f.value))
   const numbers = filteredValues.map((d) => d.value)
-  const average = roundNumber(calcAverage(numbers), 1)
-  const standardDeviation = roundNumber(calcStandardDeviation(numbers), 1)
+
+  // 最大の小数点以下の桁数を取得
+  const maxDecimalPlaces = Math.max(...numbers.map(getDecimalPlaces))
+
+  const average = roundNumber(calcAverage(numbers), maxDecimalPlaces)
+  const standardDeviation = roundNumber(
+    calcStandardDeviation(numbers),
+    maxDecimalPlaces
+  )
 
   // ソートしてランクを付与
   const sortedData = filteredValues
     .map((item) => ({
       ...item,
       tableValue: item.value
-        ? `${item.value.toLocaleString()} ${item.unit}`
+        ? `${item.value.toFixed(maxDecimalPlaces)} ${item.unit}`
         : '-',
       deviationValue: roundNumber(
         calcDeviationValue(item.value, average, standardDeviation),

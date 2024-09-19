@@ -8,6 +8,7 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import RankingChartLowestTemperature from 'sections/landweather/weather/prefecture-rank/RankingChartLowestTemperature'
 import RankingTableLowestTemperature from 'sections/landweather/weather/prefecture-rank/RankingTableLowestTemperature'
+import SourceLowestTemperature from 'sections/landweather/weather/prefecture-rank/SourceLowestTemperature'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -30,6 +31,9 @@ export default async function RainyDays({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <RankingTableLowestTemperature routerProps={routerProps} />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <SourceLowestTemperature />
             </Grid>
             {/* row 2 */}
             {/* <Grid item xs={12} md={9}>
