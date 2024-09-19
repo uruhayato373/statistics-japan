@@ -91,7 +91,10 @@ const formatReactRankTable = (document: DocumentType): ReactRankTableType => {
     .map((item) => ({
       ...item,
       tableValue: item.value
-        ? `${item.value.toFixed(maxDecimalPlaces)} ${item.unit}`
+        ? `${item.value.toLocaleString('ja-JP', {
+            minimumFractionDigits: maxDecimalPlaces,
+            maximumFractionDigits: maxDecimalPlaces,
+          })} ${item.unit}`
         : '-',
       deviationValue: roundNumber(
         calcDeviationValue(item.value, average, standardDeviation),
