@@ -76,12 +76,14 @@ const defaultOptions: Options = {
   },
   colorAxis: {
     stops: [
-      [0, '#FFFFFF'],
-      [0.5, '#3366FF'],
-      [1, '#0000cd'],
+      [0, '#E6F2FF'], // かなり薄い青
+      [0.25, '#99C5FF'], // 薄い青
+      [0.5, '#4D94FF'], // 中間の青
+      [0.75, '#0062FF'], // 濃い青
+      [1, '#0041A8'], // かなり濃い青
     ],
-    minColor: '#FFFFFF',
-    maxColor: '#0000cd',
+    minColor: '#E6F2FF',
+    maxColor: '#0041A8',
     startOnTick: false,
     endOnTick: false,
   },
