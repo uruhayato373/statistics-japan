@@ -14,13 +14,14 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '将来負担比率'
-const CARD_ID = 'LineChartFutureBurdenRatio'
-const PAGE_ID = 'future-burden-ratio'
+const CARD_TITLE = '実質公債費比率'
+const CARD_ID = 'LineChartRealDebtServiceRatio'
+
+const PAGE_ID = 'real-debt-service-ratio'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
-  cdCat01: 'D2112',
+  cdCat01: 'D2111',
 }
 
 const APEX_OPTIONS: ApexOptions = {
@@ -31,7 +32,7 @@ const APEX_OPTIONS: ApexOptions = {
   annotations: {
     yaxis: [
       {
-        y: 400,
+        y: 25.0,
         borderColor: '#00E396',
         label: {
           borderColor: '#00E396',
@@ -42,11 +43,23 @@ const APEX_OPTIONS: ApexOptions = {
           text: '早期健全化基準',
         },
       },
+      {
+        y: 35.0,
+        borderColor: '#00E396',
+        label: {
+          borderColor: '#00E396',
+          style: {
+            color: '#fff',
+            background: '#00E396',
+          },
+          text: '財政再建基準',
+        },
+      },
     ],
   },
   yaxis: {
-    min: 100,
-    max: 450,
+    min: 0,
+    max: 40,
   },
 }
 
@@ -73,15 +86,18 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function LineChartFutureBurdenRatio({
+export default async function LineChartRealDebtServiceRatio({
   routerProps,
   prefecture,
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
-  const cardProps = handleProps(routerProps).cardProps(CARD_ID, PAGE_ID)
+  const cardProps = handleProps(routerProps).cardProps(CARD_ID)
+  cardProps.pageId = PAGE_ID
+
   const values = await processValues(cardProps, prefCode)
   const document = await processDocument(values)
+
   const customActionButton = <LinkToPrefectureRank cardProps={cardProps} />
 
   return (

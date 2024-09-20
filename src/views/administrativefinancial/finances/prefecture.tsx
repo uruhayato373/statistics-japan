@@ -15,6 +15,8 @@ import DashboardRealDebtServiceRatio from 'sections/administrativefinancial/fina
 import DashboardStandardFinancialDemandAmount from 'sections/administrativefinancial/finances/DashboardStandardFinancialDemandAmount'
 import DashboardStandardFinancialIncomeAmount from 'sections/administrativefinancial/finances/DashboardStandardFinancialIncomeAmount'
 import LineChartFutureBurdenRatio from 'sections/administrativefinancial/finances/LineChartFutureBurdenRatio'
+import LineChartRealDebtServiceRatio from 'sections/administrativefinancial/finances/LineChartRealDebtServiceRatio'
+import PieChartTotalRevenueSettlement from 'sections/administrativefinancial/finances/PieChartTotalRevenueSettlement'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -83,6 +85,18 @@ export default async function PrefectureView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={4}>
               <LineChartFutureBurdenRatio
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={6} lg={4}>
+              <LineChartRealDebtServiceRatio
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={6} lg={4}>
+              <PieChartTotalRevenueSettlement
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />

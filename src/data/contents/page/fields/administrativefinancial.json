@@ -18,5 +18,10 @@
     "pageId": "future-burden-ratio",
     "pageTitle": "将来負担比率",
     "menuId": "finances"
+  },
+  {
+    "pageId": "real-debt-service-ratio",
+    "pageTitle": "実質公債費比率",
+    "menuId": "finances"
   }
 ]

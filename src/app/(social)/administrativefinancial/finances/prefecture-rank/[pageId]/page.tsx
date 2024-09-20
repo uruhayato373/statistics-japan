@@ -34,6 +34,12 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
         'views/administrativefinancial/finances/prefecture-rank/FutureBurdenRatio'
       )
   ),
+  'real-debt-service-ratio': dynamic(
+    () =>
+      import(
+        'views/administrativefinancial/finances/prefecture-rank/RealDebtServiceRatio'
+      )
+  ),
 }
 
 export async function generateStaticParams() {

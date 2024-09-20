@@ -37,9 +37,10 @@ const handleProps = ({
   }
   return {
     routerProps,
-    cardProps: (cardId: string) => ({
+    cardProps: (cardId: string, pageId?: string) => ({
       ...routerProps,
       cardId: camelToKebabCase(cardId),
+      pageId: pageId,
     }),
     metaProps: async () => generateMetaProps(routerProps),
     breadcrumbsProps: async () => generateBreadcrumbsProps(routerProps),

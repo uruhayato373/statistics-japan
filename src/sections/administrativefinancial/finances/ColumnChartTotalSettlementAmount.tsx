@@ -16,7 +16,6 @@ import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '決算総額'
 const CARD_ID = 'ColumnChartTotalSettlementAmount'
-
 const PAGE_ID = 'total-settlement-amount'
 
 const ESTAT_PARAMS = {
@@ -123,12 +122,9 @@ export default async function ColumnChartTotalSettlementAmount({
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
-  const cardProps = handleProps(routerProps).cardProps(CARD_ID)
-  cardProps.pageId = PAGE_ID
-
+  const cardProps = handleProps(routerProps).cardProps(CARD_ID, PAGE_ID)
   const values = await processValues(cardProps, prefCode)
   const document = await processDocument(values)
-
   const customActionButton = <LinkToPrefectureRank cardProps={cardProps} />
 
   return (

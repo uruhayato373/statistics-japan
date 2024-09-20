@@ -51,8 +51,6 @@ export default function CardsApexPieChart({
   const formatOptions = formatApexcharts(document).PieChart(selectedTimeCode)
   const customOptions = { ...formatOptions, ...options }
 
-  console.log(customOptions)
-
   const boxStyle = height ? { height } : {}
 
   return (
