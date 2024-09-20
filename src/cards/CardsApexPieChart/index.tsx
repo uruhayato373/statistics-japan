@@ -1,22 +1,20 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
-import FormControl from '@mui/material/FormControl'
-import MenuItem from '@mui/material/MenuItem'
-import Select, { SelectChangeEvent } from '@mui/material/Select'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
 import ApexPieChart from 'components/apexcharts/ApexPieChart'
+import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 
 import { ApexOptions } from 'apexcharts'
 
 import formatApexcharts from 'utils/apexcharts'
 import { DocumentType } from 'utils/document'
+
+import SelectTime from './SelectTime'
 
 interface Props {
   title: string
@@ -31,25 +29,18 @@ export default function CardsApexPieChart({
   options,
   height,
 }: Props) {
-  const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
-
   const { times } = document
-  const sortedTimes = times.sort(
-    (a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)
-  )
+  const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 
-  useEffect(() => {
-    setSelectedTimeCode(sortedTimes[0].timeCode)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  if (!selectedTimeCode) return <CircularProgressCards />
 
-  const handleTimeChange = (event: SelectChangeEvent<string>) => {
-    const newTime = event.target.value
-    setSelectedTimeCode(newTime)
+  const filteredDocument = {
+    ...document,
+    values: document.values.filter((f) => f.timeCode === selectedTimeCode),
   }
 
-  const formatOptions = formatApexcharts(document).PieChart(selectedTimeCode)
-  const customOptions = { ...formatOptions, ...options }
+  const formatOptions = formatApexcharts(filteredDocument).PieChart()
+  const customOptions = { ...options, ...formatOptions }
 
   const boxStyle = height ? { height } : {}
 
@@ -72,21 +63,7 @@ export default function CardsApexPieChart({
         justifyContent="space-between"
         sx={{ pl: 2 }}
       >
-        <FormControl sx={{ minWidth: 80 }} size="small">
-          <Select
-            labelId="select-time-label"
-            id="select-time"
-            value={selectedTimeCode}
-            displayEmpty
-            onChange={handleTimeChange}
-          >
-            {sortedTimes.map((d) => (
-              <MenuItem key={d.timeCode} value={d.timeCode}>
-                {d.timeName}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>{' '}
+        <SelectTimeComponent />
       </Stack>
       <Box sx={{ p: 2, ...boxStyle }}>
         <ApexPieChart options={customOptions} />

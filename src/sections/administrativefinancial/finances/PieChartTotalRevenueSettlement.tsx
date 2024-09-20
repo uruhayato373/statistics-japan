@@ -36,11 +36,17 @@ const ESTAT_PARAMS = {
 
 // apexChartsのオプション
 const APEX_OPTIONS: ApexOptions = {
+  chart: {
+    height: 300,
+  },
   dataLabels: {
     dropShadow: {
       blur: 3,
       opacity: 0.8,
     },
+  },
+  legend: {
+    show: false,
   },
 }
 
@@ -53,9 +59,22 @@ interface Props {
 async function processValues(cardProps: CardProps, prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
-  await actionSaveValues(cardProps, values)
+  await actionSaveValues(cardProps, formatValues(values))
 
-  return values
+  return formatValues(values)
+}
+
+// format values
+function formatValues(values: ValueType[]): ValueType[] {
+  return values.map((d) => {
+    return {
+      ...d,
+      categoryName: d.categoryName.replace('（都道府県財政）', ''),
+      // 単位を億円に変換
+      value: Math.round(Number(d.value) / 100000),
+      unit: '億円',
+    }
+  })
 }
 
 // document
