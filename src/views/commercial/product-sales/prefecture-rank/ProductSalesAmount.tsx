@@ -6,6 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import CardsAdsResponsive from 'cards/CardsAdsResponsive'
+
 import RankingChartProductSalesAmount from 'sections/commercial/product-sales/prefecture-rank/RankingChartProductSalesAmount'
 import RankingTableProductSalesAmount from 'sections/commercial/product-sales/prefecture-rank/RankingTableProductSalesAmount'
 import handleProps, { RouterProps } from 'utils/props'
@@ -25,11 +27,18 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingChartProductSalesAmount routerProps={routerProps} />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingTableProductSalesAmount routerProps={routerProps} />
+            </Grid>
+            {/* row 2 */}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
             </Grid>
           </Grid>
         </Box>

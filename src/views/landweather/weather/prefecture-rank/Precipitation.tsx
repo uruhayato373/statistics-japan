@@ -6,6 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import CardsAdsResponsive from 'cards/CardsAdsResponsive'
+
 import RankingChartPrecipitation from 'sections/landweather/weather/prefecture-rank/RankingChartPrecipitation'
 import RankingChartPrecipitationPerRainyDays from 'sections/landweather/weather/prefecture-rank/RankingChartPrecipitationPerRainyDays'
 import RankingTablePrecipitation from 'sections/landweather/weather/prefecture-rank/RankingTablePrecipitation'
@@ -17,7 +19,7 @@ interface Props {
   routerProps: RouterProps
 }
 
-export default async function RainyDays({ routerProps }: Props) {
+export default async function Precipitation({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
@@ -27,26 +29,37 @@ export default async function RainyDays({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingChartPrecipitation routerProps={routerProps} />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingTablePrecipitation routerProps={routerProps} />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            {/* row 2 */}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            {/* row 3 */}
+            <Grid item xs={12} md={6}>
               <RankingChartPrecipitationPerRainyDays
                 routerProps={routerProps}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingTablePrecipitationPerRainyDays
                 routerProps={routerProps}
               />
             </Grid>
-            {/* row 2 */}
-            {/* <Grid item xs={12} md={9}>
-              {comparison}
-            </Grid> */}
+            {/* row 4 */}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
           </Grid>
         </Box>
       </Suspense>

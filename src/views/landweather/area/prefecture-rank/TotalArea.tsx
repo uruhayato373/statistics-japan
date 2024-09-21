@@ -24,27 +24,22 @@ export default async function TotalArea({ routerProps }: Props) {
     return (
       <Suspense fallback={<CircularProgressViews />}>
         <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 0.5 }}>
+        <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
+            {/* row 1 */}
             <Grid item xs={12} md={6}>
               <RankingChartTotalArea routerProps={routerProps} />
             </Grid>
             <Grid item xs={12} md={6}>
               <RankingTableTotalArea routerProps={routerProps} />
             </Grid>
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
             {/* row 2 */}
-            {/* <Grid item xs={12} md={9}>
-              {comparison}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
             </Grid>
-            <Grid item xs={12} md={3}>
-              <CardsAdsResponsive height={'300px'} />
-            </Grid> */}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
           </Grid>
         </Box>
       </Suspense>

@@ -14,9 +14,9 @@ export default function AdsSquare() {
   return (
     <ins
       className="adsbygoogle"
-      style={{ display: 'inline-block', width: '250px', height: '250px' }}
+      style={{ display: 'inline-block', width: '200px', height: '100px' }}
       data-ad-client="ca-pub-7995274743017484"
-      data-ad-slot="1514473550"
+      data-ad-slot="9312875747"
     />
   )
 }
