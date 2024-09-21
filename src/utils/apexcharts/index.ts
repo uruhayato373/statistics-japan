@@ -9,7 +9,7 @@ const formatApexcharts = (document: DocumentType) => {
   return {
     AxisTimeChart: (group: 'category' | 'area' = 'category') =>
       formatAxisTimeChart(document, group),
-    PieChart: (timeCode: string) => formatPieChart(document, timeCode),
+    PieChart: () => formatPieChart(document),
     BarChart: (timeCode: string) => formatBarChart(document, timeCode),
     PyramidChart: (timeCode: string) =>
       formatApexchartsPyramid(document, timeCode),

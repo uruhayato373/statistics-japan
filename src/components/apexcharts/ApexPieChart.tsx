@@ -11,34 +11,7 @@ interface Props {
 
 const defaultOptions: ApexOptions = {
   chart: {
-    type: 'donut',
-    zoom: {
-      enabled: false,
-    },
     height: 300,
-    toolbar: {
-      show: true,
-      tools: {
-        download: true,
-        selection: false,
-        zoom: false,
-        zoomin: false,
-        zoomout: false,
-        pan: false,
-        reset: false,
-      },
-      export: {
-        svg: {
-          filename: 'pie-chart-svg',
-        },
-        png: {
-          filename: 'pie-chart-png',
-        },
-        csv: {
-          filename: 'pie-chart-data',
-        },
-      },
-    },
   },
   dataLabels: {
     enabled: false,
@@ -73,6 +46,33 @@ export default function ApexPieChart({ options }: Props) {
       ...mergedOptions,
       chart: {
         ...mergedOptions.chart,
+        type: 'donut',
+        zoom: {
+          enabled: false,
+        },
+        toolbar: {
+          show: true,
+          tools: {
+            download: true,
+            selection: false,
+            zoom: false,
+            zoomin: false,
+            zoomout: false,
+            pan: false,
+            reset: false,
+          },
+          export: {
+            svg: {
+              filename: 'pie-chart-svg',
+            },
+            png: {
+              filename: 'pie-chart-png',
+            },
+            csv: {
+              filename: 'pie-chart-data',
+            },
+          },
+        },
       },
       tooltip: {
         y: {

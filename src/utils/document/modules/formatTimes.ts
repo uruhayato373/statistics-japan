@@ -2,7 +2,7 @@ import { ValueType } from 'utils/value'
 
 import { TimeType } from '../types/document'
 
-function formatTimes(values: ValueType[]): TimeType[] {
+export function formatTimes(values: ValueType[]): TimeType[] {
   const uniqueMap = new Map<string, TimeType>()
 
   values.forEach((value) => {

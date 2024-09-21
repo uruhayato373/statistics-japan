@@ -11,7 +11,7 @@ import { AreaType } from '../types/document'
  * @example
  * // 結果: [{ areaCode: '01000', areaName: '北海道' }, { areaCode: '02000', areaName: '青森県' }]
  */
-function formatAreas(values: ValueType[]): AreaType[] {
+export function formatAreas(values: ValueType[]): AreaType[] {
   const uniqueAreasMap = new Map<string, string>()
 
   values.forEach((value) => {
