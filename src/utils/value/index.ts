@@ -1,16 +1,12 @@
 import { CardProps } from 'utils/props'
 
-import { readValues } from './modules/readValues'
+import saveRanking from './modules/saveRanking'
 import saveValues from './modules/saveValues'
 import { ValueType } from './types/value'
 
 export type * from './types/value'
 
 interface HandleValuesResult {
-  readValues: (
-    cardProps: CardProps,
-    areaCode?: string
-  ) => Promise<ValueType[] | null>
   saveValues: (
     cardProps: CardProps,
     values: ValueType[]
@@ -18,13 +14,13 @@ interface HandleValuesResult {
     success: boolean
     message: string
   }>
+  saveRanking: (cardProps: CardProps, values: ValueType[]) => Promise<void>
 }
 
 const handleValue = (): HandleValuesResult => {
   return {
-    readValues: async (cardProps, areaCode) =>
-      await readValues(cardProps, areaCode),
     saveValues: async (cardProps, values) => saveValues(cardProps, values),
+    saveRanking: async (cardProps, values) => saveRanking(cardProps, values),
   }
 }
 
