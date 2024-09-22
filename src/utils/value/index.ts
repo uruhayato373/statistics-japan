@@ -1,7 +1,7 @@
 import { CardProps } from 'utils/props'
 
 import { readValues } from './modules/readValues'
-import { saveValues } from './modules/saveValues'
+import saveValues from './modules/saveValues'
 import { ValueType } from './types/value'
 
 export type * from './types/value'
