@@ -36,7 +36,7 @@ export default async function AgricultureJapan({ routerProps }: Props) {
                 prefecture={currentPrefecture}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <TableFisheryOutputValue
                 routerProps={routerProps}
                 prefecture={currentPrefecture}

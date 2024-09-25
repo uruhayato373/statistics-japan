@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <style>
+    .title { font: bold 36px sans-serif; }
+    .header { font: bold 24px sans-serif; fill: white; }
+    .cell { font: 18px sans-serif; }
+    .comment { font: 20px sans-serif; }
+  </style>
+  
+  <!-- 均一な青色の枠線 -->
+  <rect x="5" y="5" width="1190" height="620" fill="none" stroke="#4e79a7" stroke-width="10"/>
+  
+  <!-- 背景 -->
+  <rect x="10" y="10" width="1180" height="610" fill="#f0f0f0"/>
+  
+  <text x="600" y="55" text-anchor="middle" class="title">2024年 都道府県の出生数ランキング</text>
+  
+  <!-- ベスト5 テーブル -->
+  <g transform="translate(60, 95)">
+    <rect width="500" height="50" fill="#4e79a7"/>
+    <text x="250" y="32" text-anchor="middle" class="header">トップ5</text>
+    
+    <g transform="translate(0, 50)">
+      <rect width="60" height="40" fill="#76b7b2" stroke="white"/>
+      <rect x="60" width="240" height="40" fill="#76b7b2" stroke="white"/>
+      <rect x="300" width="200" height="40" fill="#76b7b2" stroke="white"/>
+      <text x="30" y="26" text-anchor="middle" class="cell">1</text>
+      <text x="180" y="26" text-anchor="middle" class="cell">東京都</text>
+      <text x="400" y="26" text-anchor="middle" class="cell">95,404 人</text>
+    </g>
+    
+    <g transform="translate(0, 90)">
+      <rect width="60" height="40" fill="#a4d4ae" stroke="white"/>
+      <rect x="60" width="240" height="40" fill="#a4d4ae" stroke="white"/>
+      <rect x="300" width="200" height="40" fill="#a4d4ae" stroke="white"/>
+      <text x="30" y="26" text-anchor="middle" class="cell">2</text>
+      <text x="180" y="26" text-anchor="middle" class="cell">大阪府</text>
+      <text x="400" y="26" text-anchor="middle" class="cell">59,780 人</text>
+    </g>
+    
+    <g transform="translate(0, 130)">
+      <rect width="60" height="40" fill="#d2e7aa" stroke="white"/>
+      <rect x="60" width="240" height="40" fill="#d2e7aa" stroke="white"/>
+      <rect x="300" width="200" height="40" fill="#d2e7aa" stroke="white"/>
+      <text x="30" y="26" text-anchor="middle" class="cell">3</text>
+      <text x="180" y="26" text-anchor="middle" class="cell">神奈川県</text>
+      <text x="400" y="26" text-anchor="middle" class="cell">58,836 人</text>
+    </g>
+    
+    <g transform="translate(0, 170)">
+      <rect width="60" height="40" fill="#e7f0d2" stroke="white"/>
+      <rect x="60" width="240" height="40" fill="#e7f0d2" stroke="white"/>
+      <rect x="300" width="200" height="40" fill="#e7f0d2" stroke="white"/>
+      <text x="30" y="26" text-anchor="middle" class="cell">4</text>
+      <text x="180" y="26" text-anchor="middle" class="cell">愛知県</text>
+      <text x="400" y="26" text-anchor="middle" class="cell">53,918 人</text>
+    </g>
+    
+    <g transform="translate(0, 210)">
+      <rect width="60" height="40" fill="#f0f7e7" stroke="white"/>
+      <rect x="60" width="240" height="40" fill="#f0f7e7" stroke="white"/>
+      <rect x="300" width="200" height="40" fill="#f0f7e7" stroke="white"/>
+      <text x="30" y="26" text-anchor="middle" class="cell">5</text>
+      <text x="180" y="26" text-anchor="middle" class="cell">埼玉県</text>
+      <text x="400" y="26" text-anchor="middle" class="cell">45,424 人</text>
+    </g>
+  </g>
+  
+  <!-- ワースト5 テーブル -->
+  <g transform="translate(640, 95)">
+    <rect width="500" height="50" fill="#e15759"/>
+    <text x="250" y="32" text-anchor="middle" class="header">ボトム5</text>
+    
+    <g transform="translate(0, 50)">
+      <rect width="60" height="40" fill="#f7b7a3" stroke="white"/>
+      <rect x="60" width="240" height="40" fill="#f7b7a3" stroke="white"/>
+      <rect x="300" width="200" height="40" fill="#f7b7a3" stroke="white"/>
+      <text x="30" y="26" text-anchor="middle" class="cell">47</text>
+      <text x="180" y="26" text-anchor="middle" class="cell">鳥取県</text>
+      <text x="400" y="26" text-anchor="middle" class="cell">3,708 人</text>
+    </g>
+    
+    <g transform="translate(0, 90)">
+      <rect width="60" height="40" fill="#fac3b5" stroke="white"/>
+      <rect x="60" width="240" height="40" fill="#fac3b5" stroke="white"/>
+      <rect x="300" width="200" height="40" fill="#fac3b5" stroke="white"/>
+      <text x="30" y="26" text-anchor="middle" class="cell">46</text>
+      <text x="180" y="26" text-anchor="middle" class="cell">高知県</text>
+      <text x="400" y="26" text-anchor="middle" class="cell">4,090 人</text>
+    </g>
+    
+    <g transform="translate(0, 130)">
+      <rect width="60" height="40" fill="#fdcfc7" stroke="white"/>
+      <rect x="60" width="240" height="40" fill="#fdcfc7" stroke="white"/>
+      <rect x="300" width="200" height="40" fill="#fdcfc7" stroke="white"/>
+      <text x="30" y="26" text-anchor="middle" class="cell">45</text>
+      <text x="180" y="26" text-anchor="middle" class="cell">秋田県</text>
+      <text x="400" y="26" text-anchor="middle" class="cell">4,335 人</text>
+    </g>
+    
+    <g transform="translate(0, 170)">
+      <rect width="60" height="40" fill="#fddbd5" stroke="white"/>
+      <rect x="60" width="240" height="40" fill="#fddbd5" stroke="white"/>
+      <rect x="300" width="200" height="40" fill="#fddbd5" stroke="white"/>
+      <text x="30" y="26" text-anchor="middle" class="cell">44</text>
+      <text x="180" y="26" text-anchor="middle" class="cell">徳島県</text>
+      <text x="400" y="26" text-anchor="middle" class="cell">4,337 人</text>
+    </g>
+    
+    <g transform="translate(0, 210)">
+      <rect width="60" height="40" fill="#fee7e3" stroke="white"/>
+      <rect x="60" width="240" height="40" fill="#fee7e3" stroke="white"/>
+      <rect x="300" width="200" height="40" fill="#fee7e3" stroke="white"/>
+      <text x="30" y="26" text-anchor="middle" class="cell">43</text>
+      <text x="180" y="26" text-anchor="middle" class="cell">島根県</text>
+      <text x="400" y="26" text-anchor="middle" class="cell">4,415 人</text>
+    </g>
+  </g>
+  
+  <!-- 分析コメント -->
+  <g transform="translate(60, 395)">
+    <text x="0" y="0" class="comment" style="font-weight: bold;">ランキング分析：</text>
+    <text x="0" y="35" class="comment">1. トップ5は全て大都市圏の都道府県で占められています。</text>
+    <text x="0" y="70" class="comment">2. 東京都は95,404人で1位となり、2位の大阪府の約1.6倍の出生数です。</text>
+    <text x="0" y="105" class="comment">3. ボトム5は主に人口が少ない地方県となっています。</text>
+    <text x="0" y="140" class="comment">4. トップとボトムの格差は大きく、東京都と鳥取県では約25.7倍の差があります。</text>
+    <text x="0" y="175" class="comment">5. 人口規模や経済活動の規模が出生数に大きく影響していると考えられます。</text>
+  </g>
+</svg>

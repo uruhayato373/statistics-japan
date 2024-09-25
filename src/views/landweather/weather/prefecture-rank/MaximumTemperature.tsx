@@ -6,6 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import CardsAdsResponsive from 'cards/CardsAdsResponsive'
+
 import RankingChartMaximumTemperature from 'sections/landweather/weather/prefecture-rank/RankingChartMaximumTemperature'
 import RankingTableMaximumTemperature from 'sections/landweather/weather/prefecture-rank/RankingTableMaximumTemperature'
 import SourceMaximumTemperature from 'sections/landweather/weather/prefecture-rank/SourceMaximumTemperature'
@@ -16,7 +18,7 @@ interface Props {
   routerProps: RouterProps
 }
 
-export default async function RainyDays({ routerProps }: Props) {
+export default async function MaximumTemperature({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
@@ -26,19 +28,23 @@ export default async function RainyDays({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingChartMaximumTemperature routerProps={routerProps} />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingTableMaximumTemperature routerProps={routerProps} />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            {/* row 2 */}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            {/* row 3 */}
+            <Grid item xs={12} md={6}>
               <SourceMaximumTemperature />
             </Grid>
-            {/* row 2 */}
-            {/* <Grid item xs={12} md={9}>
-              {comparison}
-            </Grid> */}
           </Grid>
         </Box>
       </Suspense>

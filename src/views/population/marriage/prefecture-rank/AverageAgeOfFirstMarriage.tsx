@@ -6,6 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import CardsAdsResponsive from 'cards/CardsAdsResponsive'
+
 import RankingChartAverageAgeOfFirstMarriageHusband from 'sections/population/marriage/prefecture-rank/RankingChartAverageAgeOfFirstMarriageHusband'
 import RankingChartAverageAgeOfFirstMarriageWife from 'sections/population/marriage/prefecture-rank/RankingChartAverageAgeOfFirstMarriageWife'
 import RankingTableAverageAgeOfFirstMarriageHusband from 'sections/population/marriage/prefecture-rank/RankingTableAverageAgeOfFirstMarriageHusband'
@@ -27,25 +29,40 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingChartAverageAgeOfFirstMarriageHusband
                 routerProps={routerProps}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingTableAverageAgeOfFirstMarriageHusband
                 routerProps={routerProps}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            {/* row 2 */}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            {/* row 3 */}
+            <Grid item xs={12} md={6}>
               <RankingChartAverageAgeOfFirstMarriageWife
                 routerProps={routerProps}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingTableAverageAgeOfFirstMarriageWife
                 routerProps={routerProps}
               />
+            </Grid>
+            {/* row 4 */}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
             </Grid>
           </Grid>
         </Box>

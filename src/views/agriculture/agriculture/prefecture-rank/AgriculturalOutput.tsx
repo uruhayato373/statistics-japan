@@ -6,6 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import CardsAdsResponsive from 'cards/CardsAdsResponsive'
+
 import RankingChartAgriculturalOutput from 'sections/agriculture/agriculture/prefecture-rank/RankingChartAgriculturalOutput'
 import RankingTableAgriculturalOutput from 'sections/agriculture/agriculture/prefecture-rank/RankingTableAgriculturalOutput'
 import handleProps, { RouterProps } from 'utils/props'
@@ -32,6 +34,12 @@ export default async function AgriculturalOutput({ routerProps }: Props) {
               <RankingTableAgriculturalOutput routerProps={routerProps} />
             </Grid>
             {/* row 2 */}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
           </Grid>
         </Box>
       </Suspense>

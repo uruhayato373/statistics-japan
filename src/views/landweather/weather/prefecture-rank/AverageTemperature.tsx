@@ -6,6 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import CardsAdsResponsive from 'cards/CardsAdsResponsive'
+
 import RankingChartAverageTemperature from 'sections/landweather/weather/prefecture-rank/RankingChartAverageTemperature'
 import RankingTableAverageTemperature from 'sections/landweather/weather/prefecture-rank/RankingTableAverageTemperature'
 import handleProps, { RouterProps } from 'utils/props'
@@ -25,16 +27,19 @@ export default async function RainyDays({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingChartAverageTemperature routerProps={routerProps} />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingTableAverageTemperature routerProps={routerProps} />
             </Grid>
             {/* row 2 */}
-            {/* <Grid item xs={12} md={9}>
-              {comparison}
-            </Grid> */}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
           </Grid>
         </Box>
       </Suspense>

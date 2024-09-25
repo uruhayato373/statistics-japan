@@ -6,6 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import CardsAdsDashboard from 'cards/CardsAdsDashboard'
+
 import DashboardAveHum from 'sections/landweather/weather/DashboardAveHum'
 import DashboardAverageTemperature from 'sections/landweather/weather/DashboardAverageTemperature'
 import DashboardLowestTemperature from 'sections/landweather/weather/DashboardLowestTemperature'
@@ -77,6 +79,9 @@ export default async function Prefecture({ routerProps }: Props) {
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <CardsAdsDashboard />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={6}>
               <LineChartTemplatures

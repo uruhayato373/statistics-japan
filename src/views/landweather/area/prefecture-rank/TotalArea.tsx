@@ -6,6 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import CardsAdsResponsive from 'cards/CardsAdsResponsive'
+
 import RankingChartTotalArea from 'sections/landweather/area/prefecture-rank/RankingChartTotalArea'
 import RankingTableTotalArea from 'sections/landweather/area/prefecture-rank/RankingTableTotalArea'
 import handleProps, { RouterProps } from 'utils/props'
@@ -22,29 +24,22 @@ export default async function TotalArea({ routerProps }: Props) {
     return (
       <Suspense fallback={<CircularProgressViews />}>
         <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 0.5 }}>
+        <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={10}>
-              <Grid container rowSpacing={4.5} columnSpacing={3}>
-                <Grid item xs={12} md={6} lg={6}>
-                  <RankingChartTotalArea routerProps={routerProps} />
-                </Grid>
-                <Grid item xs={12} md={6} lg={6}>
-                  <RankingTableTotalArea routerProps={routerProps} />
-                </Grid>
-              </Grid>
+            <Grid item xs={12} md={6}>
+              <RankingChartTotalArea routerProps={routerProps} />
             </Grid>
-            {/* <Grid item xs={12} md={2}>
-              <CardsAdsResponsive />
-            </Grid> */}
+            <Grid item xs={12} md={6}>
+              <RankingTableTotalArea routerProps={routerProps} />
+            </Grid>
             {/* row 2 */}
-            {/* <Grid item xs={12} md={9}>
-              {comparison}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
             </Grid>
-            <Grid item xs={12} md={3}>
-              <CardsAdsResponsive height={'300px'} />
-            </Grid> */}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
           </Grid>
         </Box>
       </Suspense>

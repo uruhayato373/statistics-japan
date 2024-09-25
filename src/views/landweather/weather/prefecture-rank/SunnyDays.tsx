@@ -26,10 +26,10 @@ export default async function SunnyDays({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingChartSunnyDays routerProps={routerProps} />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingTableSunnyDays routerProps={routerProps} />
             </Grid>
             {/* row 2 */}

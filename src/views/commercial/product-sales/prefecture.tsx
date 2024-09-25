@@ -56,25 +56,25 @@ export default async function PrefectureView({ routerProps }: Props) {
                 prefecture={currentPrefecture}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <TableProductSalesAmount
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <TableNumberOfCommercialEstablishments
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <TableNumberOfCommercialEmployees
                 routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <TableAmountOfProductOnHand
                 routerProps={routerProps}
                 prefecture={currentPrefecture}

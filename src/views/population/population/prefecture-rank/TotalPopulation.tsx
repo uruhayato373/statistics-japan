@@ -6,6 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import CardsAdsResponsive from 'cards/CardsAdsResponsive'
+
 import ComparisonChartTotalPopulation from 'sections/population/population/prefecture-rank/ComparisonChartTotalPopulation'
 import RankingChartTotalPopulation from 'sections/population/population/prefecture-rank/RankingChartTotalPopulation'
 import RankingTableTotalPopulation from 'sections/population/population/prefecture-rank/RankingTableTotalPopulation'
@@ -26,15 +28,22 @@ export default async function SunnyDays({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingChartTotalPopulation routerProps={routerProps} />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingTableTotalPopulation routerProps={routerProps} />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={9}>
               <ComparisonChartTotalPopulation routerProps={routerProps} />
+            </Grid>
+            {/* row 3 */}
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
             </Grid>
           </Grid>
         </Box>

@@ -32,7 +32,7 @@ export default async function PrefectureView({ routerProps }: Props) {
                 prefecture={currentPrefecture}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <TableRoadActualLength
                 routerProps={routerProps}
                 prefecture={currentPrefecture}

@@ -15,22 +15,13 @@ const CARD_ID = 'PieChartTotalRevenueSettlement'
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
   cdCat01: [
-    'D310101',
-    'D310102',
-    'D310103',
-    'D310104',
-    'D310105',
-    'D310106',
-    'D310107',
-    'D310108',
-    'D310109',
-    'D310110',
-    'D310111',
-    'D310112',
-    'D310113',
-    'D310114',
-    'D310115',
-    'D310116',
+    'D3101', //歳入決算総額
+    'D310101', //地方税
+    'D310102', //地方譲与税
+    'D310103', //地方交付税
+    'D310108', //国庫支出金
+    'D310115', //地方債
+    'D310116', //地方特例交付金
   ],
 }
 
@@ -48,6 +39,9 @@ const APEX_OPTIONS: ApexOptions = {
   legend: {
     show: false,
   },
+  legend: {
+    show: false,
+  },
 }
 
 interface Props {
@@ -59,22 +53,9 @@ interface Props {
 async function processValues(cardProps: CardProps, prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
-  await actionSaveValues(cardProps, formatValues(values))
+  await actionSaveValues(cardProps, values)
 
-  return formatValues(values)
-}
-
-// format values
-function formatValues(values: ValueType[]): ValueType[] {
-  return values.map((d) => {
-    return {
-      ...d,
-      categoryName: d.categoryName.replace('（都道府県財政）', ''),
-      // 単位を億円に変換
-      value: Math.round(Number(d.value) / 100000),
-      unit: '億円',
-    }
-  })
+  return values
 }
 
 // document

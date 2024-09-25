@@ -15,6 +15,30 @@ const defaultOptions: ApexOptions = {
     zoom: {
       enabled: false,
     },
+    height: 300,
+    toolbar: {
+      show: true,
+      tools: {
+        download: true,
+        selection: false,
+        zoom: false,
+        zoomin: false,
+        zoomout: false,
+        pan: false,
+        reset: false,
+      },
+      export: {
+        svg: {
+          filename: 'pie-chart-svg',
+        },
+        png: {
+          filename: 'pie-chart-png',
+        },
+        csv: {
+          filename: 'pie-chart-data',
+        },
+      },
+    },
   },
   dataLabels: {
     enabled: false,
@@ -48,30 +72,7 @@ export default function ApexPieChart({ options }: Props) {
     return {
       ...mergedOptions,
       chart: {
-        ...options.chart,
-        toolbar: {
-          show: true,
-          tools: {
-            download: true,
-            selection: false,
-            zoom: false,
-            zoomin: false,
-            zoomout: false,
-            pan: false,
-            reset: false,
-          },
-          export: {
-            svg: {
-              filename: 'pie-chart-svg',
-            },
-            png: {
-              filename: 'pie-chart-png',
-            },
-            csv: {
-              filename: 'pie-chart-data',
-            },
-          },
-        },
+        ...mergedOptions.chart,
       },
       tooltip: {
         y: {

@@ -6,6 +6,8 @@ import Box from '@mui/system/Box'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import CardsAdsResponsive from 'cards/CardsAdsResponsive'
+
 import RankingChartHabitableArea from 'sections/landweather/area/prefecture-rank/RankingChartHabitableArea'
 import RankingChartHabitableAreaPerTotalArea from 'sections/landweather/area/prefecture-rank/RankingChartHabitableAreaPerTotalArea'
 import RankingTableHabitableArea from 'sections/landweather/area/prefecture-rank/RankingTableHabitableArea'
@@ -28,46 +30,44 @@ export default async function HabitableArea({ routerProps }: Props) {
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
-            <Grid item xs={12} md={10}>
-              <Grid container rowSpacing={4.5} columnSpacing={3}>
-                <Grid item xs={12} md={6} lg={6}>
-                  <RankingChartHabitableArea routerProps={routerProps} />
-                </Grid>
-                <Grid item xs={12} md={6} lg={6}>
-                  <RankingTableHabitableArea routerProps={routerProps} />
-                </Grid>
-              </Grid>
+            <Grid item xs={12} md={6}>
+              <RankingChartHabitableArea routerProps={routerProps} />
             </Grid>
-            {/* <Grid item xs={12} md={2}>
-              <CardsAdsResponsive />
-            </Grid> */}
+            <Grid item xs={12} md={6}>
+              <RankingTableHabitableArea routerProps={routerProps} />
+            </Grid>
             {/* row 2 */}
-            <Grid item xs={12} md={9}>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            {/* row 3 */}
+            <Grid item xs={12} md={6}>
               <ScatterChartTotalAreaHabitableArea routerProps={routerProps} />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
+            {/* row 4 */}
+            <Grid item xs={12} md={6}>
               <RankingChartHabitableAreaPerTotalArea
                 routerProps={routerProps}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6}>
               <RankingTableHabitableAreaPerTotalArea
                 routerProps={routerProps}
               />
             </Grid>
-            {/* <Grid item xs={12} md={3}>
-              <CardsAdsResponsive height={'300px'} />
-            </Grid> */}
-
-            {/* <Grid item xs={12} md={12} lg={6}>
+            {/* row 5 */}
+            <Grid item xs={12} md={6}>
               <CardsAdsResponsive />
-            </Grid> */}
-            {/* <Grid item xs={12} md={6} lg={6}>
-              {perTotalAreaChart}
-            </Grid> */}
-            {/* <Grid item xs={12} md={6} lg={6}>
-              {perTotalAreaTable}
-            </Grid> */}
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <CardsAdsResponsive />
+            </Grid>
           </Grid>
         </Box>
       </Suspense>
