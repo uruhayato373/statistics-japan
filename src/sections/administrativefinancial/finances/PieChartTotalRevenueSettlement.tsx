@@ -39,9 +39,6 @@ const APEX_OPTIONS: ApexOptions = {
   legend: {
     show: false,
   },
-  legend: {
-    show: false,
-  },
 }
 
 interface Props {
