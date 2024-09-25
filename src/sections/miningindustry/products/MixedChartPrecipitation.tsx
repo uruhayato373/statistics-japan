@@ -2,7 +2,9 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import { ApexOptions } from 'apexcharts'
+
+import CardsApexLineChart from 'cards/CardsApexLineChart'
 
 import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -11,8 +13,8 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造品出荷額'
-const CARD_ID = 'TableProductShipmentAmount'
+const CARD_TITLE = '製造品出荷額等の推移'
+const CARD_ID = 'MixedChartPrecipitation'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -24,25 +26,40 @@ interface Props {
   prefecture: PrefectureType
 }
 
+const APEX_OPTIONS: ApexOptions = {
+  yaxis: [
+    {
+      seriesName: '製造品出荷額',
+      opposite: false,
+      show: true,
+      labels: {
+        show: true,
+      },
+      tooltip: {
+        enabled: false,
+      },
+    },
+    {
+      seriesName: '製造業付加価値額',
+      opposite: true,
+      show: true,
+      labels: {
+        show: true,
+      },
+      tooltip: {
+        enabled: false,
+      },
+    },
+  ],
+}
+
 // values
 async function processValues(cardProps: CardProps, prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
   await actionSaveValues(cardProps, values)
 
-  return formatValues(values)
-}
-
-// format values
-function formatValues(values: ValueType[]): ValueType[] {
-  return values.map((d) => {
-    return {
-      ...d,
-      // 単位を億円に変換
-      value: Math.round(Number(d.value) / 100),
-      unit: '億円',
-    }
-  })
+  return values
 }
 
 // document
@@ -50,11 +67,14 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const { formatDocument } = handleDocument()
   const document = formatDocument(values)
 
+  document.categories[0].type = 'line'
+  document.categories[1].type = 'column'
+
   return document
 }
 
 // コンポーネントの描画
-export default async function TableProductShipmentAmount({
+export default async function MixedChartPrecipitation({
   routerProps,
   prefecture,
 }: Props) {
@@ -66,7 +86,11 @@ export default async function TableProductShipmentAmount({
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
+      <CardsApexLineChart
+        title={title}
+        document={document}
+        options={APEX_OPTIONS}
+      />
     </Suspense>
   )
 }
