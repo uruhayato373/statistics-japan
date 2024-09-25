@@ -108,8 +108,8 @@ const saveSvgInstagram = async (
     await fs.mkdir(path.dirname(svgFilePath), { recursive: true })
 
     // SVGファイルを保存
-    await fs.writeFile(svgFilePath, svgString, 'utf-8')
-    console.log(`SVG file saved: ${svgFilePath}`)
+    // await fs.writeFile(svgFilePath, svgString, 'utf-8')
+    // console.log(`SVG file saved: ${svgFilePath}`)
 
     // SVGをPNGに変換
     await sharp(Buffer.from(svgString)).png().toFile(pngFilePath)

@@ -109,8 +109,8 @@ const saveSvgX = async (
     await fs.mkdir(path.dirname(svgFilePath), { recursive: true })
 
     // SVGファイルを保存
-    await fs.writeFile(svgFilePath, svgString, 'utf-8')
-    console.log(`SVG file saved: ${svgFilePath}`)
+    // await fs.writeFile(svgFilePath, svgString, 'utf-8')
+    // console.log(`SVG file saved: ${svgFilePath}`)
 
     // SVGを最適化されたPNGに直接変換
     await sharp(Buffer.from(svgString)).png({ quality: 90 }).toFile(pngFilePath)
