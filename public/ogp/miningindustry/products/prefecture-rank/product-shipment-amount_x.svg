@@ -1,0 +1,124 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+      <style>
+        .title { font: bold 40px sans-serif; }
+        .header { font: bold 32px sans-serif; fill: white; }
+        .cell { font: bold 26px sans-serif; fill: #333333; }
+        .number { font: bold 22px sans-serif; fill: #333333; }
+      </style>
+
+      <!-- 均一な青色の枠線 -->
+      <rect x="5" y="5" width="1190" height="620" fill="none" stroke="#4e79a7" stroke-width="10"/>
+
+      <!-- 背景 -->
+      <rect x="10" y="10" width="1180" height="610" fill="#f0f0f0"/>
+
+      <!-- タイトル（2行） -->
+      <text x="600" y="80" text-anchor="middle" class="title">2021年度 製造品出荷額等</text>
+      <text x="600" y="130" text-anchor="middle" class="title">都道府県ランキング</text>
+
+      <!-- ベスト5 テーブル -->
+      <g transform="translate(60, 180)">
+        <rect width="500" height="70" fill="#4e79a7"/>
+        <text x="250" y="48" text-anchor="middle" class="header">ベスト5</text>
+        
+      <g transform="translate(0, 70)">
+        <rect width="60" height="60" fill="#76b7b2" stroke="white"/>
+        <rect x="60" width="240" height="60" fill="#76b7b2" stroke="white"/>
+        <rect x="300" width="200" height="60" fill="#76b7b2" stroke="white"/>
+        <text x="30" y="40" text-anchor="middle" class="cell">1</text>
+        <text x="180" y="40" text-anchor="middle" class="cell">愛知県</text>
+        <text x="400" y="40" text-anchor="middle" class="number">478,946 億円</text>
+      </g>
+    
+      <g transform="translate(0, 130)">
+        <rect width="60" height="60" fill="#a4d4ae" stroke="white"/>
+        <rect x="60" width="240" height="60" fill="#a4d4ae" stroke="white"/>
+        <rect x="300" width="200" height="60" fill="#a4d4ae" stroke="white"/>
+        <text x="30" y="40" text-anchor="middle" class="cell">2</text>
+        <text x="180" y="40" text-anchor="middle" class="cell">大阪府</text>
+        <text x="400" y="40" text-anchor="middle" class="number">186,058 億円</text>
+      </g>
+    
+      <g transform="translate(0, 190)">
+        <rect width="60" height="60" fill="#d2e7aa" stroke="white"/>
+        <rect x="60" width="240" height="60" fill="#d2e7aa" stroke="white"/>
+        <rect x="300" width="200" height="60" fill="#d2e7aa" stroke="white"/>
+        <text x="30" y="40" text-anchor="middle" class="cell">3</text>
+        <text x="180" y="40" text-anchor="middle" class="cell">神奈川県</text>
+        <text x="400" y="40" text-anchor="middle" class="number">173,752 億円</text>
+      </g>
+    
+      <g transform="translate(0, 250)">
+        <rect width="60" height="60" fill="#e7f0d2" stroke="white"/>
+        <rect x="60" width="240" height="60" fill="#e7f0d2" stroke="white"/>
+        <rect x="300" width="200" height="60" fill="#e7f0d2" stroke="white"/>
+        <text x="30" y="40" text-anchor="middle" class="cell">4</text>
+        <text x="180" y="40" text-anchor="middle" class="cell">静岡県</text>
+        <text x="400" y="40" text-anchor="middle" class="number">172,905 億円</text>
+      </g>
+    
+      <g transform="translate(0, 310)">
+        <rect width="60" height="60" fill="#f0f7e7" stroke="white"/>
+        <rect x="60" width="240" height="60" fill="#f0f7e7" stroke="white"/>
+        <rect x="300" width="200" height="60" fill="#f0f7e7" stroke="white"/>
+        <text x="30" y="40" text-anchor="middle" class="cell">5</text>
+        <text x="180" y="40" text-anchor="middle" class="cell">兵庫県</text>
+        <text x="400" y="40" text-anchor="middle" class="number">165,023 億円</text>
+      </g>
+    
+      </g>
+
+      <!-- ワースト5 テーブル -->
+      <g transform="translate(640, 180)">
+        <rect width="500" height="70" fill="#e15759"/>
+        <text x="250" y="48" text-anchor="middle" class="header">ワースト5</text>
+        
+      <g transform="translate(0, 70)">
+        <rect width="60" height="60" fill="#f7b7a3" stroke="white"/>
+        <rect x="60" width="240" height="60" fill="#f7b7a3" stroke="white"/>
+        <rect x="300" width="200" height="60" fill="#f7b7a3" stroke="white"/>
+        <text x="30" y="40" text-anchor="middle" class="cell">47</text>
+        <text x="180" y="40" text-anchor="middle" class="cell">沖縄県</text>
+        <text x="400" y="40" text-anchor="middle" class="number">4,599 億円</text>
+      </g>
+    
+      <g transform="translate(0, 130)">
+        <rect width="60" height="60" fill="#fac3b5" stroke="white"/>
+        <rect x="60" width="240" height="60" fill="#fac3b5" stroke="white"/>
+        <rect x="300" width="200" height="60" fill="#fac3b5" stroke="white"/>
+        <text x="30" y="40" text-anchor="middle" class="cell">46</text>
+        <text x="180" y="40" text-anchor="middle" class="cell">高知県</text>
+        <text x="400" y="40" text-anchor="middle" class="number">6,015 億円</text>
+      </g>
+    
+      <g transform="translate(0, 190)">
+        <rect width="60" height="60" fill="#fdcfc7" stroke="white"/>
+        <rect x="60" width="240" height="60" fill="#fdcfc7" stroke="white"/>
+        <rect x="300" width="200" height="60" fill="#fdcfc7" stroke="white"/>
+        <text x="30" y="40" text-anchor="middle" class="cell">45</text>
+        <text x="180" y="40" text-anchor="middle" class="cell">鳥取県</text>
+        <text x="400" y="40" text-anchor="middle" class="number">8,441 億円</text>
+      </g>
+    
+      <g transform="translate(0, 250)">
+        <rect width="60" height="60" fill="#fddbd5" stroke="white"/>
+        <rect x="60" width="240" height="60" fill="#fddbd5" stroke="white"/>
+        <rect x="300" width="200" height="60" fill="#fddbd5" stroke="white"/>
+        <text x="30" y="40" text-anchor="middle" class="cell">44</text>
+        <text x="180" y="40" text-anchor="middle" class="cell">島根県</text>
+        <text x="400" y="40" text-anchor="middle" class="number">12,866 億円</text>
+      </g>
+    
+      <g transform="translate(0, 310)">
+        <rect width="60" height="60" fill="#fee7e3" stroke="white"/>
+        <rect x="60" width="240" height="60" fill="#fee7e3" stroke="white"/>
+        <rect x="300" width="200" height="60" fill="#fee7e3" stroke="white"/>
+        <text x="30" y="40" text-anchor="middle" class="cell">43</text>
+        <text x="180" y="40" text-anchor="middle" class="cell">秋田県</text>
+        <text x="400" y="40" text-anchor="middle" class="number">14,057 億円</text>
+      </g>
+    
+      </g>
+    </svg>
+  
