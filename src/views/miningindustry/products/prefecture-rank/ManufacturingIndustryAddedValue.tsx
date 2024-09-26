@@ -33,9 +33,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableManufacturingIndustryAddedValue
-                routerProps={routerProps}
-              />
+              <RankingTableManufacturingIndustryAddedValue />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={6}>

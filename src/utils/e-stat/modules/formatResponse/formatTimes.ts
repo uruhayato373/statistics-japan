@@ -11,7 +11,6 @@ const formatTimes = (response: EStatResponseType): TimeType[] => {
   }
 
   const times = timesObj.CLASS
-  console.log('times:', times)
 
   // オブジェクトか配列かをチェック
   if (Array.isArray(times)) {

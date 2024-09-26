@@ -16,10 +16,13 @@ export function formatValues(response: EStatResponseType): ValueType[] {
   const categories = formatCategories(response)
 
   return values.map((value) => {
+    const timeData = value['@time']
+      ? times.find((t) => t.timeCode === value['@time'].replace('100000', ''))
+      : { timeCode: null, timeName: null }
     return {
       ...categories.find((c) => c.categoryCode === value['@cat01']),
       ...areas.find((a) => a.areaCode === value['@area']),
-      ...times.find((t) => t.timeCode === value['@time'].replace('100000', '')),
+      ...timeData,
       unit: value['@unit'],
       value: Number(value['$']),
     }

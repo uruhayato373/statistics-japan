@@ -4,7 +4,7 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
 
-import { actionSaveValues } from 'actions/saveValues'
+import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { CardProps, RouterProps } from 'utils/props'
@@ -26,7 +26,7 @@ interface Props {
 async function processValues(cardProps: CardProps) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  await actionSaveValues(cardProps, formatValues(values))
+  await actionSavePrefectureRanking(CARD_TITLE, cardProps, formatValues(values))
 
   return formatValues(values)
 }

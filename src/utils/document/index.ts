@@ -1,6 +1,6 @@
 import { ValueType } from 'utils/value'
 
-import extractCommonTimes from './modules/extractCommonTimes'
+// import extractCommonTimes from './modules/extractCommonTimes'
 import formatAreas from './modules/formatAreas'
 import formatCategories from './modules/formatCategories'
 import formatTimes from './modules/formatTimes'
@@ -18,13 +18,14 @@ interface HandleDocumentResult {
 const handleDocument = (): HandleDocumentResult => {
   return {
     formatDocument(values, chartType = 'axis') {
+      console.log('values:', values)
       switch (chartType) {
         case 'pie':
           return {
             values,
             categories: formatCategories(values),
             areas: formatAreas(values),
-            times: extractCommonTimes(values),
+            times: formatTimes(values),
           }
         default:
           return {
