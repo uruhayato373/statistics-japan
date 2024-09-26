@@ -1,5 +1,6 @@
 'use server'
 
+import handlePNG from 'utils/png'
 import { CardProps } from 'utils/props'
 import calcRankingValues, {
   RankingValueType,
@@ -8,8 +9,6 @@ import { ValueType } from 'utils/value'
 
 import { saveOgpPrefectureRank } from './modules/ogpPrefectureRank'
 import saveRankingValues from './modules/rankingValues'
-import saveSvgInstagram from './modules/svgInstagram'
-import saveSvgX from './modules/svgX'
 
 export async function actionSavePrefectureRanking(
   title: string,
@@ -20,11 +19,9 @@ export async function actionSavePrefectureRanking(
   const rankingValues = formatRankingValues(cardProps, values)
   await saveRankingValues(cardProps, rankingValues)
 
-  // X用のSVGを生成・保存（1200x630）
-  await saveSvgX(title, cardProps, rankingValues)
-
-  // instagram用のSVGを生成・保存（1080x1080）
-  await saveSvgInstagram(title, cardProps, rankingValues)
+  // ベスト5・ワースト5のPNG画像を生成・保存
+  const { saveBestWorstPNG } = handlePNG()
+  await saveBestWorstPNG(title, cardProps, rankingValues)
 
   // D3.jsでコロプレス地図を生成・保存
   await saveOgpPrefectureRank(title, cardProps, rankingValues)
