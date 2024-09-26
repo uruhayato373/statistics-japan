@@ -80,8 +80,6 @@ export default function ApexBarChart({ options }: Props) {
     }
   }, [options])
 
-  console.log('customOptions:', customOptions)
-
   return (
     <ReactApexChart
       options={customOptions}

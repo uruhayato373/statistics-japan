@@ -38,8 +38,6 @@ interface Props {
 async function processValues(cardProps: CardProps, prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
-  // await actionSaveValues(cardProps, values)
-  // console.log(values)
 
   return values.map((d) => {
     return {

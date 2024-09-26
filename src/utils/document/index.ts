@@ -18,7 +18,6 @@ interface HandleDocumentResult {
 const handleDocument = (): HandleDocumentResult => {
   return {
     formatDocument(values, chartType = 'axis') {
-      console.log('values:', values)
       switch (chartType) {
         case 'pie':
           return {

@@ -4,7 +4,6 @@ import { EStatResponseType } from 'utils/e-stat/types/response'
 const formatTimes = (response: EStatResponseType): TimeType[] => {
   const classObj = response.GET_STATS_DATA.STATISTICAL_DATA.CLASS_INF.CLASS_OBJ
   const timesObj = classObj.find((obj) => obj['@id'] === 'time')
-  console.log('timesObj:', timesObj)
 
   if (!timesObj) {
     return [{ timeCode: null, timeName: null }]
