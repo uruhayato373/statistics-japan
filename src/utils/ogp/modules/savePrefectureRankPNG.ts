@@ -34,13 +34,13 @@ const generateFileName = (cardProps: CardProps) => {
   return filePath
 }
 
-export async function savePrefectureRankPNG(
+export default async function savePrefectureRankPNG(
   title: string,
   cardProps: CardProps,
   values: RankingValueType[]
 ) {
   // SVGを生成
-  const svgString = generatePrefectureRankSVG(title, cardProps, values)
+  const svgString = await generatePrefectureRankSVG(title, cardProps, values)
 
   // SVGをPNGに変換して保存
   const pngFilePath = generateFileName(cardProps)

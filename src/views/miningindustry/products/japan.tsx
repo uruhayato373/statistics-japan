@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import { actionSaveJapan } from 'actions/saveJapan'
 import DashboardNumberOfManufacturingEmployees from 'sections/miningindustry/products/DashboardNumberOfManufacturingEmployees'
 import DashboardNumberOfManufacturingEstablishments from 'sections/miningindustry/products/DashboardNumberOfManufacturingEstablishments'
 import DashboardProductShipmentAmount from 'sections/miningindustry/products/DashboardProductShipmentAmount'
@@ -20,6 +21,9 @@ interface Props {
 export default async function JapanView({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
+
+    const title = breadcrumbsProps.currentMenu.menuTitle
+    await actionSaveJapan(title, routerProps)
 
     const currentPrefecture = {
       prefCode: '00000',
