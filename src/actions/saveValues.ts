@@ -8,10 +8,7 @@ export async function actionSaveValues(
   values: ValueType[]
 ) {
   if (process.env.NODE_ENV === 'development') {
-    if (cardProps.kindId === 'prefecture-rank') {
-      const { saveValues, saveRanking } = handleValue()
-      saveValues(cardProps, values)
-      saveRanking(cardProps, values)
-    }
+    const { saveValues } = handleValue()
+    saveValues(cardProps, values)
   }
 }

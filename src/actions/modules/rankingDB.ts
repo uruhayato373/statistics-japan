@@ -19,7 +19,7 @@ export default async function saveRankingDB(
   const { fieldId, menuId, cardId } = cardProps
 
   try {
-    const tableName = `prefectureranking`
+    const tableName = `prefecture_ranking`
     console.log(`テーブル名: ${tableName}`)
 
     // テーブルが存在しない場合は作成

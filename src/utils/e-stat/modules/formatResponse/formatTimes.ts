@@ -3,13 +3,15 @@ import { EStatResponseType } from 'utils/e-stat/types/response'
 
 const formatTimes = (response: EStatResponseType): TimeType[] => {
   const classObj = response.GET_STATS_DATA.STATISTICAL_DATA.CLASS_INF.CLASS_OBJ
-  const times = classObj.find((obj) => obj['@id'] === 'time').CLASS
+  const timesObj = classObj.find((obj) => obj['@id'] === 'time')
+  console.log('timesObj:', timesObj)
 
-  if (!times) {
-    throw new Error(
-      '年次データが見つかりません。APIレスポンスを確認してください。'
-    )
+  if (!timesObj) {
+    return [{ timeCode: null, timeName: null }]
   }
+
+  const times = timesObj.CLASS
+  console.log('times:', times)
 
   // オブジェクトか配列かをチェック
   if (Array.isArray(times)) {

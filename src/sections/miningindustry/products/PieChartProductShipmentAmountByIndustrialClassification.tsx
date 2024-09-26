@@ -1,8 +1,6 @@
-import { Suspense } from 'react'
+import { ApexOptions } from 'apexcharts'
 
-import CircularProgressCards from 'components/CircularProgressCards'
-
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
 
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -10,12 +8,25 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造品出荷額'
-const CARD_ID = 'TableProductShipmentAmount'
+const CARD_TITLE = '製造品出荷額（産業中分類別）'
+const CARD_ID = 'PieChartProductShipmentAmountByIndustrialClassification'
 
 const ESTAT_PARAMS = {
-  statsDataId: '0000010103',
-  cdCat01: ['C3401', 'C3402', 'C3403', 'C3404'],
+  statsDataId: '0003448119',
+  cdCat01: ['22000000'],
+}
+
+// apexChartsのオプション
+const APEX_OPTIONS: ApexOptions = {
+  dataLabels: {
+    dropShadow: {
+      blur: 3,
+      opacity: 0.8,
+    },
+  },
+  legend: {
+    show: false,
+  },
 }
 
 interface Props {
@@ -28,20 +39,13 @@ async function processValues(cardProps: CardProps, prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
   // await actionSaveValues(cardProps, values)
+  // console.log(values)
 
-  return formatValues(values)
-}
-
-// format values
-function formatValues(values: ValueType[]): ValueType[] {
   return values.map((d) => {
     return {
       ...d,
-      // 単位を億円に変換
-      value: ['C3401', 'C3402'].includes(d.categoryCode)
-        ? Math.round(Number(d.value) / 100)
-        : d.value,
-      unit: ['C3401', 'C3402'].includes(d.categoryCode) ? '億円' : d.unit,
+      timeCode: '2019',
+      timeName: '2019年度',
     }
   })
 }
@@ -49,13 +53,12 @@ function formatValues(values: ValueType[]): ValueType[] {
 // document
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const { formatDocument } = handleDocument()
-  const document = formatDocument(values)
+  const document = formatDocument(values, 'pie')
 
   return document
 }
 
-// コンポーネントの描画
-export default async function TableProductShipmentAmount({
+export default async function PieChartProductShipmentAmountByIndustrialClassification({
   routerProps,
   prefecture,
 }: Props) {
@@ -66,8 +69,10 @@ export default async function TableProductShipmentAmount({
   const document = await processDocument(values)
 
   return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
-    </Suspense>
+    <CardsApexPieChart
+      title={title}
+      document={document}
+      options={APEX_OPTIONS}
+    />
   )
 }

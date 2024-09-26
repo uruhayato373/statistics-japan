@@ -20,6 +20,8 @@ export interface CategoryType {
   categoryName: string
   categoryUnit?: string
   type?: string
+  yAxis?: number
+  color?: string
 }
 
 /**

@@ -1,6 +1,5 @@
 import CardsDashboardSingle from 'cards/CardsDashboard'
 
-import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
@@ -24,7 +23,7 @@ interface Props {
 async function processValues(cardProps: CardProps, prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
-  await actionSaveValues(cardProps, values)
+  // await actionSaveValues(cardProps, values)
 
   return values
 }

@@ -10,6 +10,9 @@ import { actionSavePrefecture } from 'actions/savePrefecture'
 import DashboardNumberOfManufacturingEmployees from 'sections/miningindustry/products/DashboardNumberOfManufacturingEmployees'
 import DashboardNumberOfManufacturingEstablishments from 'sections/miningindustry/products/DashboardNumberOfManufacturingEstablishments'
 import DashboardProductShipmentAmount from 'sections/miningindustry/products/DashboardProductShipmentAmount'
+import LineChartNumberOfManufacturing from 'sections/miningindustry/products/LineChartNumberOfManufacturing'
+import MixedChartProductShipmentAmount from 'sections/miningindustry/products/MixedChartProductShipmentAmount'
+import PieChartProductShipmentAmountByIndustrialClassification from 'sections/miningindustry/products/PieChartProductShipmentAmountByIndustrialClassification'
 import TableProductShipmentAmount from 'sections/miningindustry/products/TableProductShipmentAmount'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -50,7 +53,25 @@ export default async function PrefectureView({ routerProps }: Props) {
                 prefecture={currentPrefecture}
               />
             </Grid>
-            <Grid item xs={12} md={5} lg={7}>
+            <Grid item xs={12} md={6} lg={6}>
+              <MixedChartProductShipmentAmount
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <LineChartNumberOfManufacturing
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={6}>
+              <PieChartProductShipmentAmountByIndustrialClassification
+                routerProps={routerProps}
+                prefecture={currentPrefecture}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} lg={8}>
               <TableProductShipmentAmount
                 routerProps={routerProps}
                 prefecture={currentPrefecture}

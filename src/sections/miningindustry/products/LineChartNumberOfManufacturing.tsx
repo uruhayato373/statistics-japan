@@ -13,12 +13,12 @@ import { PrefectureType } from 'utils/prefecture'
 import handleProps, { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造品出荷額等の推移'
-const CARD_ID = 'MixedChartPrecipitation'
+const CARD_TITLE = '製造業事業所数・従業者数の推移'
+const CARD_ID = 'LineChartNumberOfManufacturing'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C3401', 'C3402'],
+  cdCat01: ['C3403', 'C3404'],
 }
 
 interface Props {
@@ -29,7 +29,7 @@ interface Props {
 const APEX_OPTIONS: ApexOptions = {
   yaxis: [
     {
-      seriesName: '製造品出荷額',
+      seriesName: '製造業事業所数',
       opposite: false,
       show: true,
       labels: {
@@ -40,7 +40,7 @@ const APEX_OPTIONS: ApexOptions = {
       },
     },
     {
-      seriesName: '製造業付加価値額',
+      seriesName: '製造業従業者数',
       opposite: true,
       show: true,
       labels: {
@@ -68,13 +68,13 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const document = formatDocument(values)
 
   document.categories[0].type = 'line'
-  document.categories[1].type = 'column'
+  document.categories[1].type = 'line'
 
   return document
 }
 
 // コンポーネントの描画
-export default async function MixedChartPrecipitation({
+export default async function LineChartNumberOfManufacturing({
   routerProps,
   prefecture,
 }: Props) {
