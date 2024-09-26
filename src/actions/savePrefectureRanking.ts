@@ -8,6 +8,7 @@ import calcRankingValues, {
 import { ValueType } from 'utils/value'
 
 import { saveOgpPrefectureRank } from './modules/ogpPrefectureRank'
+import saveRankingDB from './modules/rankingDB'
 import saveRankingValues from './modules/rankingValues'
 
 export async function actionSavePrefectureRanking(
@@ -15,16 +16,21 @@ export async function actionSavePrefectureRanking(
   cardProps: CardProps,
   values: ValueType[]
 ) {
-  // ランキング用の値を計算・保存
   const rankingValues = formatRankingValues(cardProps, values)
-  await saveRankingValues(cardProps, rankingValues)
+  if (process.env.NODE_ENV === 'development') {
+    // ランキング用の値を計算・保存
+    await saveRankingValues(cardProps, rankingValues)
 
-  // ベスト5・ワースト5のPNG画像を生成・保存
-  const { saveBestWorstPNG } = handlePNG()
-  await saveBestWorstPNG(title, cardProps, rankingValues)
+    // ベスト5・ワースト5のPNG画像を生成・保存
+    const { saveBestWorstPNG } = handlePNG()
+    await saveBestWorstPNG(title, cardProps, rankingValues)
 
-  // D3.jsでコロプレス地図を生成・保存
-  await saveOgpPrefectureRank(title, cardProps, rankingValues)
+    // D3.jsでコロプレス地図を生成・保存
+    await saveOgpPrefectureRank(title, cardProps, rankingValues)
+  } else {
+    // supabaseにデータを保存
+    await saveRankingDB(cardProps, rankingValues)
+  }
 
   return
 }
