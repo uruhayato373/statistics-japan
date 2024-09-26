@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import { actionSavePrefecture } from 'actions/savePrefecture'
 import DashboardNumberOfManufacturingEmployees from 'sections/miningindustry/products/DashboardNumberOfManufacturingEmployees'
 import DashboardNumberOfManufacturingEstablishments from 'sections/miningindustry/products/DashboardNumberOfManufacturingEstablishments'
 import DashboardProductShipmentAmount from 'sections/miningindustry/products/DashboardProductShipmentAmount'
@@ -21,6 +22,9 @@ export default async function PrefectureView({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
     const { currentPrefecture } = breadcrumbsProps
+
+    const title = breadcrumbsProps.currentMenu.menuTitle
+    await actionSavePrefecture(title, routerProps)
 
     return (
       <Suspense fallback={<CircularProgressViews />}>

@@ -1,5 +1,6 @@
 'use server'
 
+import handleOGP from 'utils/ogp'
 import handlePNG from 'utils/png'
 import { CardProps } from 'utils/props'
 import calcRankingValues, {
@@ -7,7 +8,6 @@ import calcRankingValues, {
 } from 'utils/table/calcRankingValues'
 import { ValueType } from 'utils/value'
 
-import { saveOgpPrefectureRank } from './modules/ogpPrefectureRank'
 import saveRankingDB from './modules/rankingDB'
 import saveRankingValues from './modules/rankingValues'
 
@@ -21,12 +21,13 @@ export async function actionSavePrefectureRanking(
     // ランキング用の値を計算・保存
     await saveRankingValues(cardProps, rankingValues)
 
-    // ベスト5・ワースト5のPNG画像を生成・保存
+    // PNG画像を生成・保存
     const { saveBestWorstPNG } = handlePNG()
     await saveBestWorstPNG(title, cardProps, rankingValues)
 
-    // D3.jsでコロプレス地図を生成・保存
-    await saveOgpPrefectureRank(title, cardProps, rankingValues)
+    // OGP画像を生成・保存
+    const { savePrefectureRankOGP } = handleOGP()
+    await savePrefectureRankOGP(title, cardProps, rankingValues)
   } else {
     // supabaseにデータを保存
     await saveRankingDB(cardProps, rankingValues)

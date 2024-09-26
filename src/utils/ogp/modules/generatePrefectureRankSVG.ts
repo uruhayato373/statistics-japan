@@ -1,41 +1,13 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 
-import { writeFile } from 'fs/promises'
-import path from 'path'
-
 import * as d3 from 'd3'
 import { JSDOM } from 'jsdom'
-import sharp from 'sharp'
 import * as topojson from 'topojson-client'
 
 import geoShapeData from 'data/topojson/prefecture.json'
 import { CardProps } from 'utils/props'
 import { RankingValueType } from 'utils/table/calcRankingValues'
-
-export interface D3MapChartSeries {
-  areaCode: string
-  areaName: string
-  value: number
-  unit: string
-}
-
-// 保存先のファイル名を生成
-const generateFileName = (cardProps: CardProps, extension: string) => {
-  const { fieldId, menuId, cardId } = cardProps
-  const filename = `${cardId}.${extension}`
-  const filePath = path.join(
-    process.cwd(),
-    'public',
-    'ogp',
-    fieldId,
-    menuId,
-    'prefecture-rank',
-    filename
-  )
-
-  return filePath
-}
 
 const formatSeries = (values: RankingValueType[]) => {
   return values.map((d) => ({
@@ -46,7 +18,7 @@ const formatSeries = (values: RankingValueType[]) => {
   }))
 }
 
-export async function saveOgpPrefectureRank(
+export default async function generatePrefectureRankSVG(
   title: string,
   cardProps: CardProps,
   values: RankingValueType[]
@@ -157,14 +129,12 @@ export async function saveOgpPrefectureRank(
     .attr('fill', '#7f8c8d') // より洗練された薄いグレー
     .text('statistics-japan.com')
 
-  // SVGをファイルとして保存
-  const svgString = document.body.innerHTML
-  const svgFilePath = generateFileName(cardProps, 'svg')
-  await writeFile(svgFilePath, svgString)
+  // SVGを生成
+  // const svgString = document.body.innerHTML
 
-  // SVGをPNGに変換して保存
-  const pngFilePath = generateFileName(cardProps, 'png')
-  await sharp(Buffer.from(svgString)).png().toFile(pngFilePath)
+  // // SVGをPNGに変換して保存
+  // const pngFilePath = generateFileName(cardProps, 'png')
+  // await sharp(Buffer.from(svgString)).png().toFile(pngFilePath)
 
-  return svgFilePath
+  return document.body.innerHTML
 }
