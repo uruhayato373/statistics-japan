@@ -54,7 +54,7 @@ async function processValues(cardProps: CardProps, prefCode: string) {
 // document
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const { formatDocument } = handleDocument()
-  const document = formatDocument(values, 'pie')
+  const document = formatDocument(values, 'common')
 
   return document
 }

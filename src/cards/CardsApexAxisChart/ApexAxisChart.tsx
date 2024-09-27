@@ -107,6 +107,8 @@ export default function ApexAxisChart({ options }: Props) {
   const customOptions = useMemo<ApexOptions>(() => {
     const mergedOptions = deepMerge(defaultOptions, options)
 
+    console.log('mergedOptions:', mergedOptions)
+
     return {
       ...mergedOptions,
       yaxis: applyFormatterToYAxis(mergedOptions.yaxis),

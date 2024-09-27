@@ -12,28 +12,23 @@ export type * from './types/document'
 interface HandleDocumentResult {
   formatDocument: (
     values: ValueType[],
-    chartType?: 'axis' | 'pie'
+    timesType?: 'all' | 'common'
   ) => DocumentType
 }
 
 const handleDocument = (): HandleDocumentResult => {
   return {
-    formatDocument(values, chartType = 'axis') {
-      switch (chartType) {
-        case 'pie':
-          return {
-            values,
-            categories: formatCategories(values),
-            areas: formatAreas(values),
-            times: extractCommonTimes(values),
-          }
-        default:
-          return {
-            values,
-            categories: formatCategories(values),
-            areas: formatAreas(values),
-            times: formatTimes(values),
-          }
+    formatDocument(values, timesType = 'all') {
+      const times =
+        timesType === 'common'
+          ? extractCommonTimes(values)
+          : formatTimes(values)
+
+      return {
+        values,
+        categories: formatCategories(values),
+        areas: formatAreas(values),
+        times,
       }
     },
   }

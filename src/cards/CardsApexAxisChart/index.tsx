@@ -3,13 +3,15 @@ import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
-import ApexAxisChart from 'components/apexcharts/ApexAxisChart'
 import MainCard from 'components/MainCard'
 
 import { ApexOptions } from 'apexcharts'
 
 import formatApexcharts from 'utils/apexcharts'
+import deepMerge from 'utils/deepMerge'
 import { DocumentType } from 'utils/document'
+
+import ApexAxisChart from './ApexAxisChart'
 
 interface Props {
   title: string
@@ -27,10 +29,7 @@ export default async function CardsApexAxisChart({
   actionButton,
 }: Props) {
   const formatOptions = formatApexcharts(document).AxisTimeChart()
-  const customOptions = {
-    ...options,
-    series: formatOptions.series,
-  }
+  const customOptions = deepMerge(options, formatOptions)
 
   const boxStyle = height ? { height } : {}
 

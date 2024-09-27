@@ -9,6 +9,10 @@ const formatAxisTimeChart = (
   if (group === 'category') {
     const { categories, times, values } = document
     return {
+      xaxis: {
+        categories: times.map((time) => time.timeName),
+        type: 'category',
+      },
       series: categories.map((c) => {
         return {
           name: c.categoryName,

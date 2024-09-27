@@ -10,6 +10,9 @@ import CardsAdsResponsive from 'cards/CardsAdsResponsive'
 
 import RankingChartProductShipmentAmount from 'sections/miningindustry/products/prefecture-rank/RankingChartProductShipmentAmount'
 import RankingTableProductShipmentAmount from 'sections/miningindustry/products/prefecture-rank/RankingTableProductShipmentAmount'
+import ScatterChartProductShipmentAmountManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/ScatterChartProductShipmentAmountManufacturingEmployees'
+import ScatterChartProductShipmentAmountManufacturingEstablishments from 'sections/miningindustry/products/prefecture-rank/ScatterChartProductShipmentAmountManufacturingEstablishments'
+import ScatterChartProductShipmentAmountTotalPopulation from 'sections/miningindustry/products/prefecture-rank/ScatterChartProductShipmentAmountTotalPopulation'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -31,7 +34,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
               <RankingChartProductShipmentAmount routerProps={routerProps} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableProductShipmentAmount routerProps={routerProps} />
+              <RankingTableProductShipmentAmount />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={6}>
@@ -39,6 +42,16 @@ export default async function PrefectureRankView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} md={6}>
               <CardsAdsResponsive />
+            </Grid>
+            {/* row 3 */}
+            <Grid item xs={12} md={6} lg={4}>
+              <ScatterChartProductShipmentAmountManufacturingEstablishments />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <ScatterChartProductShipmentAmountManufacturingEmployees />
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <ScatterChartProductShipmentAmountTotalPopulation />
             </Grid>
           </Grid>
         </Box>

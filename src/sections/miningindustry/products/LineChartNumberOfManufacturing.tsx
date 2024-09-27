@@ -4,7 +4,7 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import { ApexOptions } from 'apexcharts'
 
-import CardsApexLineChart from 'cards/CardsApexLineChart'
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -30,6 +30,9 @@ const APEX_OPTIONS: ApexOptions = {
       show: true,
       labels: {
         show: true,
+        style: {
+          fontSize: '10px',
+        },
       },
       tooltip: {
         enabled: false,
@@ -41,6 +44,9 @@ const APEX_OPTIONS: ApexOptions = {
       show: true,
       labels: {
         show: true,
+        style: {
+          fontSize: '10px',
+        },
       },
       tooltip: {
         enabled: false,
@@ -79,7 +85,7 @@ export default async function LineChartNumberOfManufacturing({
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsApexLineChart
+      <CardsApexAxisChart
         title={title}
         document={document}
         options={APEX_OPTIONS}

@@ -9,7 +9,6 @@ import calcRankingValues, {
 import { ValueType } from 'utils/value'
 
 import saveRankingDB from './modules/rankingDB'
-import saveRankingValues from './modules/rankingValues'
 
 export async function actionSavePrefectureRanking(
   title: string,
@@ -18,9 +17,6 @@ export async function actionSavePrefectureRanking(
 ) {
   const rankingValues = formatRankingValues(cardProps, values)
   if (process.env.NODE_ENV === 'development') {
-    // ランキング用の値を計算・保存
-    await saveRankingValues(cardProps, rankingValues)
-
     // PNG画像を生成・保存
     const { saveBestWorstPNG } = handlePNG()
     await saveBestWorstPNG(title, cardProps, rankingValues)
