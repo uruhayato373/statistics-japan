@@ -11,7 +11,7 @@ import { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造業付加価値額'
-const CARD_ID = 'RankingChartManufacturingIndustryAddedValue'
+const CARD_ID = 'manufacturing-industry-added-value'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -26,9 +26,11 @@ interface Props {
 async function processValues(cardProps: CardProps) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  await actionSavePrefectureRanking(CARD_TITLE, cardProps, formatValues(values))
+  const formattedValues = formatValues(values)
 
-  return formatValues(values)
+  await actionSavePrefectureRanking(CARD_TITLE, cardProps, formattedValues)
+
+  return formattedValues
 }
 
 // format values

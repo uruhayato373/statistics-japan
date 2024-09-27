@@ -40,6 +40,7 @@ export default function CardsApexPieChart({
   }
 
   const formatOptions = formatApexcharts(filteredDocument).PieChart()
+
   const customOptions = { ...options, ...formatOptions }
 
   const boxStyle = height ? { height } : {}

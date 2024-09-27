@@ -26,9 +26,11 @@ interface Props {
 async function processValues(cardProps: CardProps) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  await actionSavePrefectureRanking(CARD_TITLE, cardProps, formatValues(values))
+  const formattedValues = formatValues(values)
 
-  return formatValues(values)
+  await actionSavePrefectureRanking(CARD_TITLE, cardProps, formattedValues)
+
+  return formattedValues
 }
 
 // format values

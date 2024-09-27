@@ -2,15 +2,12 @@ import { ApexOptions } from 'apexcharts'
 
 import CardsApexPieChart from 'cards/CardsApexPieChart'
 
-import { actionSaveJson } from 'actions/saveJson'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import handleProps, { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造品出荷額（産業中分類別）'
-const CARD_ID = 'PieChartProductShipmentAmountByIndustrialClassification'
 
 const ESTAT_PARAMS = {
   statsDataId: '0004003976',
@@ -31,12 +28,11 @@ const APEX_OPTIONS: ApexOptions = {
 }
 
 interface Props {
-  routerProps: RouterProps
   prefecture: PrefectureType
 }
 
 // values
-async function processValues(cardProps: CardProps, prefCode: string) {
+async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS }, 'cat02')
   const formattedValues = formatValues(values)
@@ -44,8 +40,6 @@ async function processValues(cardProps: CardProps, prefCode: string) {
     .filter((d) => d.areaCode === prefCode)
     .filter((d) => d.categoryCode !== '00')
     .sort((a, b) => b.value - a.value)
-
-  await actionSaveJson(filteredValues, 'values.json')
 
   return filteredValues
 }
@@ -81,13 +75,11 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 export default async function PieChartProductShipmentAmountByIndustrialClassification({
-  routerProps,
   prefecture,
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
-  const cardProps = handleProps(routerProps).cardProps(CARD_ID)
-  const values = await processValues(cardProps, prefCode)
+  const values = await processValues(prefCode)
   const document = await processDocument(values)
 
   return (

@@ -1,6 +1,7 @@
 import { ValueType } from 'utils/value'
 
 // import extractCommonTimes from './modules/extractCommonTimes'
+import extractCommonTimes from './modules/extractCommonTimes'
 import formatAreas from './modules/formatAreas'
 import formatCategories from './modules/formatCategories'
 import formatTimes from './modules/formatTimes'
@@ -24,7 +25,7 @@ const handleDocument = (): HandleDocumentResult => {
             values,
             categories: formatCategories(values),
             areas: formatAreas(values),
-            times: formatTimes(values),
+            times: extractCommonTimes(values),
           }
         default:
           return {
