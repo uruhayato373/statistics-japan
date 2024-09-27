@@ -1,6 +1,6 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
-import { CardProps } from 'utils/props'
+import { RouterProps } from 'utils/props'
 import { RankingValueType } from 'utils/table/calcRankingValues'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
@@ -13,10 +13,14 @@ if (!supabaseUrl || !supabaseAnonKey) {
 const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey)
 
 export default async function saveRankingDB(
-  cardProps: CardProps,
+  routerProps: RouterProps,
   values: RankingValueType[]
 ) {
-  const { fieldId, menuId, cardId } = cardProps
+  if (process.env.NODE_ENV === 'development') {
+    return
+  }
+
+  const { fieldId, menuId, pageId } = routerProps
 
   try {
     const tableName = `prefecture_ranking`
@@ -41,7 +45,7 @@ export default async function saveRankingDB(
     const extendedValues = values.map((value) => ({
       fieleid: fieldId,
       menuid: menuId,
-      cardid: cardId,
+      cardid: pageId,
       timecode: value.timeCode,
       areacode: value.areaCode,
       categorycode: value.categoryCode,

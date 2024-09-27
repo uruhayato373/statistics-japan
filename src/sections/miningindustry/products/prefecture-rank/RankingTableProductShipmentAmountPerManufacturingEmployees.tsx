@@ -2,23 +2,33 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
+import CardsReactPrefectureRankingTable from 'cards/CardsReactPrefectureRankingTable'
 
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造品出荷額'
+const CARD_TITLE = '製造品出荷額（従業者数当たり）'
 
-const ESTAT_PARAMS = {
+// 分子 製造品出荷額
+const ESTAT_PARAMS_MOLECULE = {
   statsDataId: '0000010103',
   cdCat01: 'C3401',
 }
 
+// 分母 製造業従業者数
+const ESTAT_PARAMS_DENOMINATOR = {
+  statsDataId: '0000010103',
+  cdCat01: 'C3404',
+}
+
 // values
 async function processValues() {
-  const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues(ESTAT_PARAMS)
+  const { fetchDivisionValues } = handleEstatAPI()
+  const values = await fetchDivisionValues(
+    ESTAT_PARAMS_MOLECULE,
+    ESTAT_PARAMS_DENOMINATOR
+  )
 
   return formatValues(values)
 }
@@ -28,9 +38,8 @@ function formatValues(values: ValueType[]): ValueType[] {
   return values.map((d) => {
     return {
       ...d,
-      // 単位を億円に変換
-      value: Math.round(Number(d.value) / 100),
-      unit: '億円',
+      value: Math.round(d.value * 100),
+      unit: '万円/人',
     }
   })
 }
@@ -44,17 +53,14 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function RankingChartProductShipmentAmountPerManufacturingEstablishments() {
+export default async function RankingTableProductShipmentAmountPerManufacturingEmployees() {
   const title = `都道府県の${CARD_TITLE}`
   const values = await processValues()
   const document = await processDocument(values)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsHighchartsPrefectureRankingChart
-        title={title}
-        document={document}
-      />
+      <CardsReactPrefectureRankingTable title={title} document={document} />
     </Suspense>
   )
 }

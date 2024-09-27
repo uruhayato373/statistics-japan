@@ -36,7 +36,18 @@ async function processValues() {
 
 // format values
 function formatValues(values: ValueType[]): ValueType[] {
-  return values.filter((f) => f.areaCode !== '00000')
+  return values
+    .filter((f) => f.areaCode !== '00000')
+    .map((d) => {
+      return {
+        ...d,
+        value:
+          d.categoryCode === 'C3401'
+            ? Math.round(Number(d.value) / 100)
+            : d.value,
+        unit: d.categoryCode === 'C3401' ? '億円' : d.unit,
+      }
+    })
 }
 
 // document

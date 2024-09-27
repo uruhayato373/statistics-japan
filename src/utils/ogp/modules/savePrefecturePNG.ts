@@ -42,6 +42,10 @@ export default async function savePrefecturePNG(
   title: string,
   routerProps: RouterProps
 ): Promise<void> {
+  if (process.env.NODE_ENV !== 'development') {
+    return
+  }
+
   const tasks = prefectures.map((prefecture) =>
     processPrefecture(title, prefecture, routerProps)
   )

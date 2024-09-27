@@ -9,7 +9,9 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 import CardsAdsResponsive from 'cards/CardsAdsResponsive'
 
 import RankingChartProductShipmentAmount from 'sections/miningindustry/products/prefecture-rank/RankingChartProductShipmentAmount'
+import RankingChartProductShipmentAmountPerManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingChartProductShipmentAmountPerManufacturingEmployees'
 import RankingTableProductShipmentAmount from 'sections/miningindustry/products/prefecture-rank/RankingTableProductShipmentAmount'
+import RankingTableProductShipmentAmountPerManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingTableProductShipmentAmountPerManufacturingEmployees'
 import ScatterChartProductShipmentAmountManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/ScatterChartProductShipmentAmountManufacturingEmployees'
 import ScatterChartProductShipmentAmountManufacturingEstablishments from 'sections/miningindustry/products/prefecture-rank/ScatterChartProductShipmentAmountManufacturingEstablishments'
 import ScatterChartProductShipmentAmountTotalPopulation from 'sections/miningindustry/products/prefecture-rank/ScatterChartProductShipmentAmountTotalPopulation'
@@ -48,10 +50,19 @@ export default async function PrefectureRankView({ routerProps }: Props) {
               <ScatterChartProductShipmentAmountManufacturingEstablishments />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <ScatterChartProductShipmentAmountManufacturingEmployees />
+              <ScatterChartProductShipmentAmountManufacturingEmployees
+                routerProps={routerProps}
+              />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
               <ScatterChartProductShipmentAmountTotalPopulation />
+            </Grid>
+            {/* row 4 */}
+            <Grid item xs={12} md={6}>
+              <RankingChartProductShipmentAmountPerManufacturingEmployees />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <RankingTableProductShipmentAmountPerManufacturingEmployees />
             </Grid>
           </Grid>
         </Box>

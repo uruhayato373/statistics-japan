@@ -1,8 +1,8 @@
-import { CardProps } from 'utils/props'
+import { RouterProps } from 'utils/props'
 import { RankingValueType } from 'utils/table/calcRankingValues'
 
-import generateFilePath from './modules/generateFilePath'
-import savePNG from './modules/savePNG'
+import generateFilePath from './generateFilePath'
+import savePNG from './savePNG'
 import generateChartInstagram from './svg/chartInstagram'
 import generateChartX from './svg/chartX'
 import generateTableInstagram from './svg/tableInstagram'
@@ -10,9 +10,13 @@ import generateTableX from './svg/tableX'
 
 const saveBestWorstPNG = async (
   title: string,
-  cardProps: CardProps,
+  routerProps: RouterProps,
   values: RankingValueType[]
 ) => {
+  if (process.env.NODE_ENV !== 'development') {
+    return
+  }
+
   const bestValues = values.slice(0, 5)
   const worstValues = values.slice(-5).reverse()
   const timeName = values[0].timeName
@@ -20,7 +24,7 @@ const saveBestWorstPNG = async (
 
   // X用のPNG（表形式）を生成・保存（1200x630）
   const svgTableX = generateTableX(svgTitle, bestValues, worstValues)
-  await savePNG(svgTableX, generateFilePath(cardProps, 'tableX.png'))
+  await savePNG(svgTableX, generateFilePath(routerProps, 'tableX.png'))
 
   // Instagram用のPNG（表形式）を生成・保存（1080x1080）
   const svgTableInstagram = generateTableInstagram(
@@ -30,12 +34,12 @@ const saveBestWorstPNG = async (
   )
   await savePNG(
     svgTableInstagram,
-    generateFilePath(cardProps, 'tableInstagram.png')
+    generateFilePath(routerProps, 'tableInstagram.png')
   )
 
   // X用のPNG（棒グラフ形式）を生成・保存（1200x630）
   const svgChartX = generateChartX(svgTitle, bestValues, worstValues)
-  await savePNG(svgChartX, generateFilePath(cardProps, 'chartX.png'))
+  await savePNG(svgChartX, generateFilePath(routerProps, 'chartX.png'))
 
   // Instagram用のPNG（棒グラフ形式）を生成・保存（1080x1080）
   const svgChartInstagram = generateChartInstagram(
@@ -45,8 +49,10 @@ const saveBestWorstPNG = async (
   )
   await savePNG(
     svgChartInstagram,
-    generateFilePath(cardProps, 'chartInstagram.png')
+    generateFilePath(routerProps, 'chartInstagram.png')
   )
+
+  return
 }
 
 export default saveBestWorstPNG

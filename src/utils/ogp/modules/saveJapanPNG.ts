@@ -30,6 +30,9 @@ export default async function saveJapanPNG(
   title: string,
   routerProps: RouterProps
 ) {
+  if (process.env.NODE_ENV !== 'development') {
+    return
+  }
   // SVGを生成
   const svgString = await generateJapanSVG(title)
 

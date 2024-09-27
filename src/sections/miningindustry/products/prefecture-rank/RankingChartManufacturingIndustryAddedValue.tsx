@@ -7,11 +7,12 @@ import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectu
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { CardProps, RouterProps } from 'utils/props'
+import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造業付加価値額'
-const CARD_ID = 'manufacturing-industry-added-value'
+
+const PAGE_ID = 'manufacturing-industry-added-value'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -23,12 +24,10 @@ interface Props {
 }
 
 // values
-async function processValues(cardProps: CardProps) {
+async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
   const formattedValues = formatValues(values)
-
-  await actionSavePrefectureRanking(CARD_TITLE, cardProps, formattedValues)
 
   return formattedValues
 }
@@ -53,14 +52,28 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
+// server action
+async function serverAction(routerProps: RouterProps, values: ValueType[]) {
+  const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
+    await actionSavePrefectureRanking(CARD_TITLE, routerProps, values)
+
+  await Promise.all([
+    saveBestWorstPNG(),
+    savePrefectureRankOGP(),
+    saveRankingDB(),
+  ])
+}
+
 // コンポーネントの描画
 export default async function RankingChartManufacturingIndustryAddedValue({
   routerProps,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`
-  const cardProps = { ...routerProps, cardId: CARD_ID }
-  const values = await processValues(cardProps)
+  // const cardProps = { ...routerProps, pageId:  PAGE_ID }
+  const values = await processValues()
   const document = await processDocument(values)
+
+  await serverAction({ ...routerProps, pageId: PAGE_ID }, values)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

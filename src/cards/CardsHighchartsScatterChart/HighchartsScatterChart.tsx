@@ -35,6 +35,9 @@ const defaultOptions: Options = {
   credits: {
     enabled: false,
   },
+  exporting: {
+    enabled: false,
+  },
 }
 
 function formatNumber(num: number): string {
@@ -72,7 +75,6 @@ export default function HighchartsScatterChart({ categories, series }: Props) {
   }, [])
 
   const trendLineSeries = series.flatMap((s) => s.data || [])
-  // const correlationCoefficient = calcCorrelationCoefficient(trendLineSeries)
 
   const updatedSeries = series.map((s) => ({
     ...s,
@@ -111,6 +113,9 @@ export default function HighchartsScatterChart({ categories, series }: Props) {
     xAxis: {
       title: {
         text: categories[0].categoryName,
+        style: {
+          fontSize: '12px',
+        },
       },
       labels: {
         enabled: false,
@@ -121,6 +126,9 @@ export default function HighchartsScatterChart({ categories, series }: Props) {
     yAxis: {
       title: {
         text: categories[1].categoryName,
+        style: {
+          fontSize: '12px',
+        },
       },
       labels: {
         enabled: false,

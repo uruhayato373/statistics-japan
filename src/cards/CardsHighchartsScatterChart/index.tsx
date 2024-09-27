@@ -31,7 +31,6 @@ export default function CardsHighchartsScatterChart({
   height,
 }: Props) {
   const { times } = document
-
   const latestTime = times.sort(
     (a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)
   )[0]

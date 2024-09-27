@@ -2,7 +2,7 @@
 
 import handleOGP from 'utils/ogp'
 import handlePNG from 'utils/png'
-import { CardProps } from 'utils/props'
+import { RouterProps } from 'utils/props'
 import calcRankingValues, {
   RankingValueType,
 } from 'utils/table/calcRankingValues'
@@ -12,30 +12,35 @@ import saveRankingDB from './modules/rankingDB'
 
 export async function actionSavePrefectureRanking(
   title: string,
-  cardProps: CardProps,
+  routerProps: RouterProps,
   values: ValueType[]
 ) {
-  const rankingValues = formatRankingValues(cardProps, values)
-  if (process.env.NODE_ENV === 'development') {
-    // PNG画像を生成・保存
-    const { saveBestWorstPNG } = handlePNG()
-    await saveBestWorstPNG(title, cardProps, rankingValues)
+  const rankingValues = formatRankingValues(values)
 
+  return {
     // OGP画像を生成・保存
-    const { savePrefectureRankOGP } = handleOGP()
-    await savePrefectureRankOGP(title, cardProps, rankingValues)
-  } else {
+    savePrefectureRankOGP: async () => {
+      const { savePrefectureRankOGP } = handleOGP()
+      await savePrefectureRankOGP(title, routerProps, rankingValues)
+    },
     // supabaseにデータを保存
-    await saveRankingDB(cardProps, rankingValues)
+    saveRankingDB: async () => {
+      await saveRankingDB(routerProps, rankingValues)
+    },
+    // ベスト5・ワースト5の画像を生成・保存
+    saveBestWorstPNG: async () => {
+      const { saveBestWorstPNG } = handlePNG()
+      await saveBestWorstPNG(title, routerProps, rankingValues)
+    },
+    // 相関図の画像を生成・保存
+    saveCorrelationPNG: async () => {
+      const { saveCorrelationPNG } = handlePNG()
+      await saveCorrelationPNG(title, routerProps, rankingValues)
+    },
   }
-
-  return
 }
 
-function formatRankingValues(
-  cardProps: CardProps,
-  values: ValueType[]
-): RankingValueType[] {
+function formatRankingValues(values: ValueType[]): RankingValueType[] {
   const filteredValues = values
     .filter((f) => f.areaCode !== '00000')
     .sort((a, b) => {
@@ -50,10 +55,5 @@ function formatRankingValues(
     (f) => f.timeCode === latestTimeCode
   )
 
-  return calcRankingValues(latestValues).map((d) => {
-    return {
-      ...d,
-      categoryCode: cardProps.cardId,
-    }
-  })
+  return calcRankingValues(latestValues)
 }

@@ -23,11 +23,9 @@ interface Props {
 }
 
 // values
-async function processValues(cardProps: CardProps) {
+async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-
-  await actionSavePrefectureRanking(CARD_TITLE, cardProps, values)
 
   return values
 }
@@ -40,14 +38,28 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
+// server action
+async function serverAction(cardProps: CardProps, values: ValueType[]) {
+  const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
+    await actionSavePrefectureRanking(CARD_TITLE, cardProps, values)
+
+  await Promise.all([
+    saveBestWorstPNG(),
+    savePrefectureRankOGP(),
+    saveRankingDB(),
+  ])
+}
+
 // コンポーネントの描画
 export default async function RankingChartNumberOfManufacturingEstablishments({
   routerProps,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`
   const cardProps = { ...routerProps, cardId: CARD_ID }
-  const values = await processValues(cardProps)
+  const values = await processValues()
   const document = await processDocument(values)
+
+  await serverAction(cardProps, values)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

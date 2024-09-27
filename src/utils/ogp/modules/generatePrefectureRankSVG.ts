@@ -6,7 +6,6 @@ import { JSDOM } from 'jsdom'
 import * as topojson from 'topojson-client'
 
 import geoShapeData from 'data/topojson/prefecture.json'
-import { CardProps } from 'utils/props'
 import { RankingValueType } from 'utils/table/calcRankingValues'
 
 const formatSeries = (values: RankingValueType[]) => {
@@ -20,7 +19,6 @@ const formatSeries = (values: RankingValueType[]) => {
 
 export default async function generatePrefectureRankSVG(
   title: string,
-  cardProps: CardProps,
   values: RankingValueType[]
 ) {
   // seriesを整形
@@ -128,13 +126,6 @@ export default async function generatePrefectureRankSVG(
     .attr('font-size', '40px')
     .attr('fill', '#7f8c8d') // より洗練された薄いグレー
     .text('statistics-japan.com')
-
-  // SVGを生成
-  // const svgString = document.body.innerHTML
-
-  // // SVGをPNGに変換して保存
-  // const pngFilePath = generateFileName(cardProps, 'png')
-  // await sharp(Buffer.from(svgString)).png().toFile(pngFilePath)
 
   return document.body.innerHTML
 }

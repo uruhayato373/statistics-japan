@@ -1,10 +1,10 @@
 import path from 'path'
 
-import { CardProps } from 'utils/props'
+import { RouterProps } from 'utils/props'
 
 // 保存先のファイル名を生成
-const generateFilePath = (cardProps: CardProps, fileName: string) => {
-  const { fieldId, menuId, cardId } = cardProps
+const generateFilePath = (cardProps: RouterProps, fileName: string) => {
+  const { fieldId, menuId, pageId } = cardProps
   const filePath = path.join(
     process.cwd(),
     'local',
@@ -12,7 +12,7 @@ const generateFilePath = (cardProps: CardProps, fileName: string) => {
     fieldId,
     menuId,
     'prefecture-rank',
-    cardId,
+    pageId,
     fileName
   )
 
