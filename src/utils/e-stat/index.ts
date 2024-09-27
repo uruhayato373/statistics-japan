@@ -5,12 +5,17 @@ import { calculateRatioValues } from './modules/calculateValues/ratioValues'
 import { fetchEstatAPI } from './modules/fetchAPI'
 import { formatValues } from './modules/formatResponse/formatValues'
 import type { EstatParamsType } from './types/params'
+import { EStatResponseType } from './types/response'
 
 export type * from './types/params'
 
 interface HandleEstatAPIResult {
-  fetchValues: (
+  fetchResponses: (
     estatParams: EstatParamsType | EstatParamsType[]
+  ) => Promise<EStatResponseType | EStatResponseType[]>
+  fetchValues: (
+    estatParams: EstatParamsType | EstatParamsType[],
+    categoryKey?: string
   ) => Promise<ValueType[]>
   fetchDivisionValues: (
     moleculeParams: EstatParamsType,
@@ -25,16 +30,30 @@ interface HandleEstatAPIResult {
 const handleEstatAPI = (): HandleEstatAPIResult => {
   return {
     /**
-     * valuesを取得して返却する
+     * responseをそのまま返却する
      */
-    fetchValues: async (estatParams) => {
+    fetchResponses: async (estatParams) => {
       if (Array.isArray(estatParams)) {
         const responses = await Promise.all(estatParams.map(fetchEstatAPI))
-        const valuesArray = responses.map((response) => formatValues(response))
+        return responses
+      } else {
+        const response = await fetchEstatAPI(estatParams)
+        return response
+      }
+    },
+    /**
+     * valuesを取得して返却する
+     */
+    fetchValues: async (estatParams, categoryKey = 'cat01') => {
+      if (Array.isArray(estatParams)) {
+        const responses = await Promise.all(estatParams.map(fetchEstatAPI))
+        const valuesArray = responses.map((response) =>
+          formatValues(response, categoryKey)
+        )
         return valuesArray.flat()
       } else {
         const response = await fetchEstatAPI(estatParams)
-        const values = formatValues(response)
+        const values = formatValues(response, categoryKey)
         return values
       }
     },

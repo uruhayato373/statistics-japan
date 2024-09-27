@@ -1,5 +1,4 @@
 import regionsData from 'data/prefecture/regions.json'
-// import handleResasAPI from 'utils/resas'
 import prefectures from 'data/prefecture/resasPrefList.json'
 
 /**
@@ -42,9 +41,9 @@ export interface RegionPrefectureType {
  */
 const handlePrefecture = () => {
   return {
-    fetchItems: async () => await fetchItems(),
-    findItem: async (prefCode: string) => await findItem(prefCode),
-    fetchRegions: async () => await fetchRegions(),
+    fetchItems: () => fetchItems(),
+    findItem: (prefCode: string) => findItem(prefCode),
+    fetchRegions: () => fetchRegions(),
   }
 }
 
@@ -56,7 +55,7 @@ export default handlePrefecture
  * @returns {Promise<PrefectureType[]>} 整形された都道府県データの配列
  * @throws {Error} データ取得中にエラーが発生した場合
  */
-const fetchItems = async (): Promise<PrefectureType[]> => {
+const fetchItems = (): PrefectureType[] => {
   try {
     // const resasParams = { url: 'api/v1/prefectures' }
     // const { fetchAPI } = handleResasAPI<ResasPrefectureType[]>(resasParams)
@@ -81,11 +80,9 @@ const fetchItems = async (): Promise<PrefectureType[]> => {
  * @returns {Promise<PrefectureType | undefined>} 一致する都道府県データ、または undefined
  * @throws {Error} 検索中にエラーが発生した場合
  */
-const findItem = async (
-  prefCode: string
-): Promise<PrefectureType | undefined> => {
+const findItem = (prefCode: string): PrefectureType | undefined => {
   try {
-    const prefectures = await fetchItems()
+    const prefectures = fetchItems()
     return prefectures.find((f) => f.prefCode === prefCode)
   } catch (error) {
     console.error('都道府県の検索中にエラーが発生しました:', error)
@@ -99,9 +96,9 @@ const findItem = async (
  * @returns {Promise<RegionPrefectureType[]>} 地方ごとの都道府県データの配列
  * @throws {Error} データ取得中にエラーが発生した場合
  */
-const fetchRegions = async (): Promise<RegionPrefectureType[]> => {
+const fetchRegions = (): RegionPrefectureType[] => {
   try {
-    const prefectures = await fetchItems()
+    const prefectures = fetchItems()
     const prefectureMap = new Map(prefectures.map((p) => [p.prefName, p]))
 
     // regionsDataを基に、各地方の都道府県データを構築

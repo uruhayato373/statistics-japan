@@ -10,7 +10,13 @@ import { EStatResponseType } from 'utils/e-stat/types/response'
  */
 const formatAreas = (response: EStatResponseType): AreaType[] => {
   const classObj = response.GET_STATS_DATA.STATISTICAL_DATA.CLASS_INF.CLASS_OBJ
-  const areas = classObj.find((obj) => obj['@id'] === 'area').CLASS
+  const areaObj = classObj.find((obj) => obj['@id'] === 'area')
+
+  if (!areaObj) {
+    return [{ areaCode: null, areaName: null }]
+  }
+
+  const areas = areaObj.CLASS
 
   if (!areas) {
     throw new Error(
