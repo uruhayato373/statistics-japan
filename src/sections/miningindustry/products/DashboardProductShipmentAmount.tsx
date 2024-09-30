@@ -1,8 +1,7 @@
-import CardsDashboardSingle from 'cards/CardsDashboard'
-
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
+import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造品出荷額等'
@@ -14,6 +13,11 @@ const ESTAT_PARAMS = {
 
 interface Props {
   prefecture: PrefectureType
+  routerProps?: RouterProps
+  children: (props: {
+    title: string
+    document: DocumentType
+  }) => React.ReactNode
 }
 
 // values
@@ -47,11 +51,12 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 // コンポーネントの描画
 export default async function DashboardProductShipmentAmount({
   prefecture,
+  children,
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
 
-  return <CardsDashboardSingle title={title} document={document} />
+  return <> {children({ title, document })}</>
 }

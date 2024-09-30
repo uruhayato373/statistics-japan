@@ -1,5 +1,5 @@
 import { HttpsProxyAgent } from 'https-proxy-agent'
-import fetch, {
+import nodeFetch, {
   Response as NodeFetchResponse,
   RequestInit as NodeFetchRequestInit,
 } from 'node-fetch'
@@ -12,7 +12,7 @@ import paramsSerializer from './paramsSerializer'
 const API_KEY = process.env.ESTAT_API_APPID
 const BASE_URL = 'https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData'
 const PROXY_URL = process.env.HTTP_PROXY
-const agent = PROXY_URL ? new HttpsProxyAgent(PROXY_URL) : undefined
+const IS_DEVELOPMENT = process.env.NODE_ENV === 'development'
 
 const MAX_RETRIES = 3
 const INITIAL_RETRY_DELAY = 1000
@@ -22,14 +22,43 @@ function isValidEStatResponse(data: unknown): data is EStatResponseType {
   return data && typeof data === 'object' && 'GET_STATS_DATA' in data
 }
 
+type CustomResponse = NodeFetchResponse | Response
+type CustomRequestInit = NodeFetchRequestInit & RequestInit
+
+type FetchFunction = (
+  url: string,
+  init?: CustomRequestInit
+) => Promise<CustomResponse>
+
+const createFetchWithAgent = (
+  agent: HttpsProxyAgent<string>
+): FetchFunction => {
+  return (url: string, init?: CustomRequestInit) =>
+    nodeFetch(url, { ...init, agent } as NodeFetchRequestInit)
+}
+
+const getFetchFunction = (): FetchFunction => {
+  if (IS_DEVELOPMENT) {
+    console.log('Development環境: node-fetchを使用します')
+    return PROXY_URL
+      ? createFetchWithAgent(new HttpsProxyAgent<string>(PROXY_URL))
+      : nodeFetch
+  } else {
+    console.log('Production環境: グローバルfetchを使用します')
+    return fetch as unknown as FetchFunction
+  }
+}
+
+const customFetch = getFetchFunction()
+
 async function fetchWithRetry(
   url: string,
-  options: NodeFetchRequestInit,
+  options: CustomRequestInit,
   retries = MAX_RETRIES,
   delay = INITIAL_RETRY_DELAY
-): Promise<NodeFetchResponse> {
+): Promise<CustomResponse> {
   try {
-    const response = await fetch(url, options)
+    const response = await customFetch(url, options)
     if (!response.ok) {
       if (
         response.status === 429 ||
@@ -63,7 +92,8 @@ async function fetchWithRetry(
 }
 
 export async function fetchEstatAPI(
-  params: Omit<EstatParamsType, 'appId'>
+  params: Omit<EstatParamsType, 'appId'>,
+  revalidate?: number
 ): Promise<EStatResponseType> {
   const queryParams: EstatParamsType = {
     appId: API_KEY!,
@@ -78,11 +108,16 @@ export async function fetchEstatAPI(
   const url = `${BASE_URL}?${paramsSerializer(queryParams)}`
 
   try {
-    const response = await fetchWithRetry(url, {
+    const options: CustomRequestInit = {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
-      agent,
-    } as NodeFetchRequestInit)
+    }
+
+    if (!IS_DEVELOPMENT && revalidate !== undefined) {
+      ;(options as RequestInit).next = { revalidate }
+    }
+
+    const response = await fetchWithRetry(url, options)
 
     const data = await response.json()
 

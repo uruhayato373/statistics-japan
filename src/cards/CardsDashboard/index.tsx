@@ -53,11 +53,7 @@ function getMaxDecimalPlaces(numbers: number[]): number {
   return Math.max(...numbers.map(getDecimalPlaces))
 }
 
-export default function CardsDashboardSingle({
-  title,
-  document,
-  digit,
-}: Props) {
+export default function CardsDashboard({ title, document, digit }: Props) {
   const contents = formatDashboard(document).single()
 
   const formatDigit = digit
