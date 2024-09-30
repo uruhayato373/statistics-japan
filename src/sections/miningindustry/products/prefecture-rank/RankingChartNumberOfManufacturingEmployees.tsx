@@ -38,8 +38,6 @@ export default async function RankingChartNumberOfManufacturingEmployees() {
   const values = await processValues()
   const document = await processDocument(values)
 
-  // await serverAction(cardProps, values)
-
   return (
     <Suspense fallback={<CircularProgressCards />}>
       <CardsHighchartsPrefectureRankingChart
