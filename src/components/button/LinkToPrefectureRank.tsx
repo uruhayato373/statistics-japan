@@ -5,14 +5,14 @@ import Tooltip from '@mui/material/Tooltip'
 
 import ExportOutlined from '@ant-design/icons/ExportOutlined'
 
-import { CardProps } from 'utils/props'
+import useURL from 'hooks/useURL'
 
 interface Props {
-  cardProps: CardProps
+  pageId: string
 }
 
-export default function LinkToPrefectureRank({ cardProps }: Props) {
-  const { fieldId, menuId, pageId } = cardProps
+export default function LinkToPrefectureRank({ pageId }: Props) {
+  const { fieldId, menuId } = useURL()
   const url = `/${fieldId}/${menuId}/prefecture-rank/${pageId}`
 
   return (

@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 import CircularProgressCards from 'components/CircularProgressCards'
 
 import { ApexOptions } from 'apexcharts'
@@ -13,7 +14,7 @@ import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '実質公債費比率'
 
-// const PAGE_ID = 'real-debt-service-ratio'
+const PAGE_ID = 'real-debt-service-ratio'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
@@ -85,11 +86,9 @@ export default async function LineChartRealDebtServiceRatio({
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
-
   const values = await processValues(prefCode)
   const document = await processDocument(values)
-
-  // const customActionButton = <LinkToPrefectureRank cardProps={cardProps} />
+  const customActionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
@@ -97,7 +96,7 @@ export default async function LineChartRealDebtServiceRatio({
         title={title}
         document={document}
         options={APEX_OPTIONS}
-        // actionButton={customActionButton}
+        actionButton={customActionButton}
       />
     </Suspense>
   )

@@ -1,12 +1,12 @@
-import { Suspense } from 'react'
-
-import CircularProgressCards from 'components/CircularProgressCards'
-
+import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
+import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造品出荷額等'
+
+const PAGE_ID = 'product-shipment-amount'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -14,6 +14,7 @@ const ESTAT_PARAMS = {
 }
 
 interface Props {
+  routerProps?: RouterProps
   children: (props: {
     title: string
     document: DocumentType
@@ -50,28 +51,29 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // server action
-// async function serverAction(cardProps: CardProps, values: ValueType[]) {
-//   const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
-//     await actionSavePrefectureRanking(CARD_TITLE, cardProps, values)
+async function serverAction(routerProps: RouterProps, values: ValueType[]) {
+  const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
+    await actionSavePrefectureRanking(CARD_TITLE, routerProps, values)
 
-//   await Promise.all([
-//     saveBestWorstPNG(),
-//     savePrefectureRankOGP(),
-//     saveRankingDB(),
-//   ])
-// }
+  await Promise.all([
+    saveBestWorstPNG(),
+    savePrefectureRankOGP(),
+    saveRankingDB(),
+  ])
+}
 
 // コンポーネントの描画
 export default async function RankingProductShipmentAmount({
+  routerProps,
   children,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`
   const values = await processValues()
   const document = await processDocument(values)
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      {children({ title, document })}
-    </Suspense>
-  )
+  if (routerProps) {
+    await serverAction({ ...routerProps, pageId: PAGE_ID }, values)
+  }
+
+  return <> {children({ title, document })}</>
 }

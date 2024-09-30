@@ -10,11 +10,10 @@ import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import handleProps from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '将来負担比率'
-const CARD_ID = 'LineChartFutureBurdenRatio'
+
 const PAGE_ID = 'future-burden-ratio'
 
 const ESTAT_PARAMS = {
@@ -71,15 +70,14 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 
 // コンポーネントの描画
 export default async function LineChartFutureBurdenRatio({
-  routerProps,
   prefecture,
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
-  const cardProps = handleProps(routerProps).cardProps(CARD_ID, PAGE_ID)
+
   const values = await processValues(prefCode)
   const document = await processDocument(values)
-  const customActionButton = <LinkToPrefectureRank cardProps={cardProps} />
+  const customActionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

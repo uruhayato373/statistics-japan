@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
@@ -77,45 +77,47 @@ export default function CardsReactPrefectureRankingTable({
   const boxStyle = height ? { height } : {}
 
   return (
-    <MainCard sx={{ mt: 1 }} content={false}>
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        sx={{ p: 2, pb: 0 }}
-      >
-        <Typography variant="h5" color="text.primary">
-          {title}
-        </Typography>
-        <CSVExport data={csvData} headers={headers} filename={filename} />
-      </Stack>
-      <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        sx={{ pl: 2 }}
-      >
-        <SelectTimeComponent />
-      </Stack>
-      <Box sx={{ p: 2, ...boxStyle }}>
-        {isLoading ? (
-          <CircularProgressCards />
-        ) : (
-          <>
-            <PrefectureRankingTable document={filteredDocument} />
-            <Divider sx={{ mt: 2, mb: 2 }} />
-            <Grid container spacing={3}>
-              <Grid item xs={12} lg={6}>
-                <Average document={filteredDocument} />
+    <Suspense fallback={<CircularProgressCards />}>
+      <MainCard sx={{ mt: 1 }} content={false}>
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+          sx={{ p: 2, pb: 0 }}
+        >
+          <Typography variant="h5" color="text.primary">
+            {title}
+          </Typography>
+          <CSVExport data={csvData} headers={headers} filename={filename} />
+        </Stack>
+        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+          sx={{ pl: 2 }}
+        >
+          <SelectTimeComponent />
+        </Stack>
+        <Box sx={{ p: 2, ...boxStyle }}>
+          {isLoading ? (
+            <CircularProgressCards />
+          ) : (
+            <>
+              <PrefectureRankingTable document={filteredDocument} />
+              <Divider sx={{ mt: 2, mb: 2 }} />
+              <Grid container spacing={3}>
+                <Grid item xs={12} lg={6}>
+                  <Average document={filteredDocument} />
+                </Grid>
+                <Grid item xs={12} lg={6}>
+                  <Median document={filteredDocument} />
+                </Grid>
               </Grid>
-              <Grid item xs={12} lg={6}>
-                <Median document={filteredDocument} />
-              </Grid>
-            </Grid>
-          </>
-        )}
-      </Box>
-    </MainCard>
+            </>
+          )}
+        </Box>
+      </MainCard>
+    </Suspense>
   )
 }

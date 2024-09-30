@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 
 import dynamic from 'next/dynamic'
 
@@ -75,45 +75,47 @@ export default function CardsHighchartsPrefectureRankingChart({
   const boxStyle = height ? { height } : {}
 
   return (
-    <MainCard sx={{ mt: 1 }} content={false}>
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        sx={{ p: 2, pb: 0 }}
-      >
-        <Typography variant="h5" color="text.primary">
-          {title}
-        </Typography>
-        <LinkToPrefecture />
-      </Stack>
-      <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        sx={{ pl: 2 }}
-      >
-        <SelectTimeComponent />
-        <SelectChartTypeComponent />
-      </Stack>
-      <Box sx={{ p: 2, ...boxStyle }}>
-        {isLoading ? (
-          <CircularProgressCards />
-        ) : (
-          <>
-            {chartType === 'map' ? (
-              <PrefectureRankingMapChart
-                document={filteredDocument}
-                options={options}
-              />
-            ) : (
-              <PrefectureRankingBarChart document={filteredDocument} />
-            )}
-            <SourceCODH />
-          </>
-        )}
-      </Box>
-    </MainCard>
+    <Suspense fallback={<CircularProgressCards />}>
+      <MainCard sx={{ mt: 1 }} content={false}>
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+          sx={{ p: 2, pb: 0 }}
+        >
+          <Typography variant="h5" color="text.primary">
+            {title}
+          </Typography>
+          <LinkToPrefecture />
+        </Stack>
+        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+          sx={{ pl: 2 }}
+        >
+          <SelectTimeComponent />
+          <SelectChartTypeComponent />
+        </Stack>
+        <Box sx={{ p: 2, ...boxStyle }}>
+          {isLoading ? (
+            <CircularProgressCards />
+          ) : (
+            <>
+              {chartType === 'map' ? (
+                <PrefectureRankingMapChart
+                  document={filteredDocument}
+                  options={options}
+                />
+              ) : (
+                <PrefectureRankingBarChart document={filteredDocument} />
+              )}
+              <SourceCODH />
+            </>
+          )}
+        </Box>
+      </MainCard>
+    </Suspense>
   )
 }

@@ -17,6 +17,8 @@ const saveBestWorstPNG = async (
     return
   }
 
+  console.log(routerProps)
+
   const bestValues = values.slice(0, 5)
   const worstValues = values.slice(-5).reverse()
   const timeName = values[0].timeName
