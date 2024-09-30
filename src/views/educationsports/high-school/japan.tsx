@@ -17,14 +17,14 @@ interface Props {
   routerProps: RouterProps
 }
 
+const currentPrefecture = {
+  prefCode: '00000',
+  prefName: '日本',
+}
+
 export default async function JapanView({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-
-    const currentPrefecture = {
-      prefCode: '00000',
-      prefName: '日本',
-    }
 
     return (
       <Suspense fallback={<CircularProgressViews />}>
