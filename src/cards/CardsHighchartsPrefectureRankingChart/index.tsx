@@ -1,6 +1,6 @@
 'use client'
 
-import { Suspense, useEffect, useState } from 'react'
+import { Suspense } from 'react'
 
 import dynamic from 'next/dynamic'
 
@@ -15,6 +15,7 @@ import MainCard from 'components/MainCard'
 
 import { Options } from 'highcharts'
 
+import { useLoadingState } from 'hooks/useLoadingState'
 import { DocumentType } from 'utils/document'
 
 import SelectChartType from './SelectChartType'
@@ -50,22 +51,12 @@ export default function CardsHighchartsPrefectureRankingChart({
   height,
   options,
 }: Props) {
-  const [isLoading, setIsLoading] = useState<boolean>(false)
   const [chartType, SelectChartTypeComponent] = SelectChartType()
 
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 
-  useEffect(() => {
-    if (selectedTimeCode) {
-      setIsLoading(true)
-      const timer = setTimeout(() => {
-        setIsLoading(false)
-      }, 1000)
-
-      return () => clearTimeout(timer)
-    }
-  }, [selectedTimeCode])
+  const isLoading = useLoadingState(selectedTimeCode)
 
   const filteredDocument = {
     ...document,
