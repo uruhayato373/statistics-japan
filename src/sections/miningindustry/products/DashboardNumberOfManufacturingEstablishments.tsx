@@ -38,7 +38,6 @@ export default async function DashboardNumberOfManufacturingEstablishments({
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
-
   const values = await processValues(prefCode)
   const document = await processDocument(values)
 

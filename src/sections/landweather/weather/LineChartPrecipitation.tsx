@@ -6,15 +6,12 @@ import { ApexOptions } from 'apexcharts'
 
 import CardsApexLineChart from 'cards/CardsApexLineChart'
 
-import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import handleProps, { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '降水量の推移'
-const CARD_ID = 'LineChartPrecipitation'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010102',
@@ -57,7 +54,6 @@ async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
 
-
   return values
 }
 
@@ -73,13 +69,9 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function LineChartPrecipitation({
-  routerProps,
-  prefecture,
-}: Props) {
+export default async function LineChartPrecipitation({ prefecture }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
-
   const values = await processValues(prefCode)
   const document = await processDocument(values)
 
