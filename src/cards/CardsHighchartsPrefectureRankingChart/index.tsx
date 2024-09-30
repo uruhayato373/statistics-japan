@@ -1,6 +1,6 @@
 'use client'
 
-import { Suspense } from 'react'
+import { ReactElement, Suspense } from 'react'
 
 import dynamic from 'next/dynamic'
 
@@ -61,8 +61,16 @@ const Header = ({ title }: { title: string }) => (
   </Stack>
 )
 
-// controls
-const Controls = ({ SelectTimeComponent, SelectChartTypeComponent }) => (
+// control
+interface ControlsProps {
+  SelectTimeComponent: () => ReactElement
+  SelectChartTypeComponent: () => ReactElement
+}
+
+const Control = ({
+  SelectTimeComponent,
+  SelectChartTypeComponent,
+}: ControlsProps) => (
   <Stack
     direction="row"
     alignItems="center"
@@ -72,6 +80,27 @@ const Controls = ({ SelectTimeComponent, SelectChartTypeComponent }) => (
     <SelectTimeComponent />
     <SelectChartTypeComponent />
   </Stack>
+)
+
+// content
+interface ContentProps {
+  chartType: string
+  filteredDocument: DocumentType
+  options?: Options
+}
+
+const Content = ({ chartType, filteredDocument, options }: ContentProps) => (
+  <>
+    {chartType === 'map' ? (
+      <PrefectureRankingMapChart
+        document={filteredDocument}
+        options={options}
+      />
+    ) : (
+      <PrefectureRankingBarChart document={filteredDocument} />
+    )}
+    <SourceCODH />
+  </>
 )
 
 export default function CardsHighchartsPrefectureRankingChart({
@@ -95,7 +124,7 @@ export default function CardsHighchartsPrefectureRankingChart({
       <MainCard sx={{ mt: 1 }} content={false}>
         <Header title={title} />
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-        <Controls
+        <Control
           SelectTimeComponent={SelectTimeComponent}
           SelectChartTypeComponent={SelectChartTypeComponent}
         />
@@ -103,17 +132,11 @@ export default function CardsHighchartsPrefectureRankingChart({
           {isLoading ? (
             <CircularProgressCards />
           ) : (
-            <>
-              {chartType === 'map' ? (
-                <PrefectureRankingMapChart
-                  document={filteredDocument}
-                  options={options}
-                />
-              ) : (
-                <PrefectureRankingBarChart document={filteredDocument} />
-              )}
-              <SourceCODH />
-            </>
+            <Content
+              chartType={chartType}
+              filteredDocument={filteredDocument}
+              options={options}
+            />
           )}
         </Box>
       </MainCard>
