@@ -58,7 +58,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
-export default async function ScatterChartProductShipmentAmountManufacturingEstablishments() {
+export default async function ScatterProductShipmentAmountManufacturingEstablishments() {
   const values = await processValues()
   const document = await processDocument(values)
 

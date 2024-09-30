@@ -7,21 +7,26 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import CardsAdsResponsive from 'cards/CardsAdsResponsive'
-import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
-import CardsReactPrefectureRankingTable from 'cards/CardsReactPrefectureRankingTable'
 
-import RankingChartProductShipmentAmountPerManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingChartProductShipmentAmountPerManufacturingEmployees'
 import RankingProductShipmentAmount from 'sections/miningindustry/products/prefecture-rank/RankingProductShipmentAmount'
-import RankingTableProductShipmentAmountPerManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingTableProductShipmentAmountPerManufacturingEmployees'
-import ScatterChartProductShipmentAmountManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/ScatterChartProductShipmentAmountManufacturingEmployees'
-import ScatterChartProductShipmentAmountManufacturingEstablishments from 'sections/miningindustry/products/prefecture-rank/ScatterChartProductShipmentAmountManufacturingEstablishments'
-import ScatterChartProductShipmentAmountTotalPopulation from 'sections/miningindustry/products/prefecture-rank/ScatterChartProductShipmentAmountTotalPopulation'
+import RankingProductShipmentAmountPerManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingProductShipmentAmountPerManufacturingEmployees'
+import ScatterProductShipmentAmountManufacturingEmployees from 'sections/miningindustry/scatter/ScatterProductShipmentAmountManufacturingEmployees'
+import ScatterProductShipmentAmountManufacturingEstablishments from 'sections/miningindustry/scatter/ScatterProductShipmentAmountManufacturingEstablishments'
+import ScatterProductShipmentAmountTotalPopulation from 'sections/miningindustry/scatter/ScatterProductShipmentAmountTotalPopulation'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
+import GridItem from 'views-grid/GridItem'
+import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
 interface Props {
   routerProps: RouterProps
 }
+
+const ScatterCharts = [
+  ScatterProductShipmentAmountManufacturingEstablishments,
+  ScatterProductShipmentAmountManufacturingEmployees,
+  ScatterProductShipmentAmountTotalPopulation,
+]
 
 export default async function PrefectureRankView({ routerProps }: Props) {
   try {
@@ -32,43 +37,30 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} md={6}>
-              <RankingProductShipmentAmount routerProps={routerProps}>
-                {(props) => (
-                  <CardsHighchartsPrefectureRankingChart {...props} />
-                )}
-              </RankingProductShipmentAmount>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <RankingProductShipmentAmount>
-                {(props) => <CardsReactPrefectureRankingTable {...props} />}
-              </RankingProductShipmentAmount>
-            </Grid>
-            {/* row 2 */}
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-            {/* row 3 */}
-            <Grid item xs={12} md={6} lg={4}>
-              <ScatterChartProductShipmentAmountManufacturingEstablishments />
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              <ScatterChartProductShipmentAmountManufacturingEmployees />
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              <ScatterChartProductShipmentAmountTotalPopulation />
-            </Grid>
-            {/* row 4 */}
-            <Grid item xs={12} md={6}>
-              <RankingChartProductShipmentAmountPerManufacturingEmployees />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <RankingTableProductShipmentAmountPerManufacturingEmployees />
-            </Grid>
+            {/* 製造品出荷額 */}
+            <PrefectureRankingCards
+              RankingComponent={RankingProductShipmentAmount}
+              routerProps={routerProps}
+            />
+            {/* Adsense */}
+            {[0, 1].map((index) => (
+              <GridItem key={`ads-${index}`} xs={12} md={6}>
+                <CardsAdsResponsive />
+              </GridItem>
+            ))}
+            {/* 相関関係 */}
+            {ScatterCharts.map((Chart, index) => (
+              <GridItem key={`scatter-${index}`} xs={12} md={6} lg={4}>
+                <Chart />
+              </GridItem>
+            ))}
+            {/* 製造品出荷額（従業員1人当たり */}
+            <PrefectureRankingCards
+              RankingComponent={
+                RankingProductShipmentAmountPerManufacturingEmployees
+              }
+              routerProps={routerProps}
+            />
           </Grid>
         </Box>
       </Suspense>
