@@ -1,5 +1,3 @@
-import CardsDashboardSingle from 'cards/CardsDashboard'
-
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
@@ -14,6 +12,10 @@ const ESTAT_PARAMS = {
 
 interface Props {
   prefecture: PrefectureType
+  children: (props: {
+    title: string
+    document: DocumentType
+  }) => React.ReactNode
 }
 
 // values
@@ -35,11 +37,12 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 // コンポーネントの描画
 export default async function DashboardNumberOfManufacturingEstablishments({
   prefecture,
+  children,
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
 
-  return <CardsDashboardSingle title={title} document={document} />
+  return <> {children({ title, document })}</>
 }

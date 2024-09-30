@@ -9,9 +9,9 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 import CardsDashboard from 'cards/CardsDashboard'
 
 import { actionSavePrefecture } from 'actions/savePrefecture'
-import DashboardNumberOfManufacturingEmployees from 'sections/miningindustry/products/DashboardNumberOfManufacturingEmployees'
-import DashboardNumberOfManufacturingEstablishments from 'sections/miningindustry/products/DashboardNumberOfManufacturingEstablishments'
-import DashboardProductShipmentAmount from 'sections/miningindustry/products/DashboardProductShipmentAmount'
+import DashboardNumberOfManufacturingEmployees from 'sections/miningindustry/products/dashboard/DashboardNumberOfManufacturingEmployees'
+import DashboardNumberOfManufacturingEstablishments from 'sections/miningindustry/products/dashboard/DashboardNumberOfManufacturingEstablishments'
+import DashboardProductShipmentAmount from 'sections/miningindustry/products/dashboard/DashboardProductShipmentAmount'
 import LineChartNumberOfManufacturing from 'sections/miningindustry/products/LineChartNumberOfManufacturing'
 import MixedChartProductShipmentAmount from 'sections/miningindustry/products/MixedChartProductShipmentAmount'
 import PieChartProductShipmentAmountByIndustrialClassification from 'sections/miningindustry/products/PieChartProductShipmentAmountByIndustrialClassification'
@@ -45,12 +45,16 @@ export default async function PrefectureView({ routerProps }: Props) {
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfManufacturingEstablishments
                 prefecture={currentPrefecture}
-              />
+              >
+                {(props) => <CardsDashboard {...props} />}
+              </DashboardNumberOfManufacturingEstablishments>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfManufacturingEmployees
                 prefecture={currentPrefecture}
-              />
+              >
+                {(props) => <CardsDashboard {...props} />}
+              </DashboardNumberOfManufacturingEmployees>
             </Grid>
             <Grid item xs={12} md={6} lg={6}>
               <MixedChartProductShipmentAmount prefecture={currentPrefecture} />

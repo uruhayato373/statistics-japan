@@ -9,9 +9,7 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 import CardsDashboard from 'cards/CardsDashboard'
 
 import { actionSaveJapan } from 'actions/saveJapan'
-import DashboardNumberOfManufacturingEmployees from 'sections/miningindustry/products/DashboardNumberOfManufacturingEmployees'
-import DashboardNumberOfManufacturingEstablishments from 'sections/miningindustry/products/DashboardNumberOfManufacturingEstablishments'
-import DashboardProductShipmentAmount from 'sections/miningindustry/products/DashboardProductShipmentAmount'
+import DashboardProductShipmentAmount from 'sections/miningindustry/products/dashboard/DashboardProductShipmentAmount'
 import TableProductShipmentAmount from 'sections/miningindustry/products/TableProductShipmentAmount'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -42,16 +40,6 @@ export default async function JapanView({ routerProps }: Props) {
               <DashboardProductShipmentAmount prefecture={currentPrefecture}>
                 {(props) => <CardsDashboard {...props} />}
               </DashboardProductShipmentAmount>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfManufacturingEstablishments
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfManufacturingEmployees
-                prefecture={currentPrefecture}
-              />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
               <TableProductShipmentAmount prefecture={currentPrefecture} />
