@@ -61,6 +61,19 @@ const Header = ({ title }: { title: string }) => (
   </Stack>
 )
 
+// controls
+const Controls = ({ SelectTimeComponent, SelectChartTypeComponent }) => (
+  <Stack
+    direction="row"
+    alignItems="center"
+    justifyContent="space-between"
+    sx={{ pl: 2 }}
+  >
+    <SelectTimeComponent />
+    <SelectChartTypeComponent />
+  </Stack>
+)
+
 export default function CardsHighchartsPrefectureRankingChart({
   title,
   document,
@@ -82,15 +95,10 @@ export default function CardsHighchartsPrefectureRankingChart({
       <MainCard sx={{ mt: 1 }} content={false}>
         <Header title={title} />
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ pl: 2 }}
-        >
-          <SelectTimeComponent />
-          <SelectChartTypeComponent />
-        </Stack>
+        <Controls
+          SelectTimeComponent={SelectTimeComponent}
+          SelectChartTypeComponent={SelectChartTypeComponent}
+        />
         <Box sx={{ p: 2, ...boxStyle }}>
           {isLoading ? (
             <CircularProgressCards />
