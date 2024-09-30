@@ -7,7 +7,6 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import DashboardNumberOfTrafficAccidentCasualties from 'sections/safetyenvironment/traffic-accident/DashboardNumberOfTrafficAccidentCasualties'
-import DashboardNumberOfTrafficAccidentInjuries from 'sections/safetyenvironment/traffic-accident/DashboardNumberOfTrafficAccidentInjuries'
 import DashboardNumberOfTrafficAccidents from 'sections/safetyenvironment/traffic-accident/DashboardNumberOfTrafficAccidents'
 import DashboardTrafficAccidentFatalities from 'sections/safetyenvironment/traffic-accident/DashboardTrafficAccidentFatalities'
 import TableTrafficAccident from 'sections/safetyenvironment/traffic-accident/TableTrafficAccident'
@@ -40,11 +39,6 @@ export default async function JapanView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfTrafficAccidentCasualties
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfTrafficAccidentInjuries
                 prefecture={currentPrefecture}
               />
             </Grid>

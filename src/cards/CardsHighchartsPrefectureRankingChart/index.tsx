@@ -16,6 +16,7 @@ import MainCard from 'components/MainCard'
 import { Options } from 'highcharts'
 
 import { useLoadingState } from 'hooks/useLoadingState'
+import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
 import { DocumentType } from 'utils/document'
 
 import SelectChartType from './SelectChartType'
@@ -45,6 +46,21 @@ interface Props {
   options?: Options
 }
 
+// header
+const Header = ({ title }: { title: string }) => (
+  <Stack
+    direction="row"
+    alignItems="center"
+    justifyContent="space-between"
+    sx={{ p: 2, pb: 0 }}
+  >
+    <Typography variant="h5" color="text.primary">
+      {title}
+    </Typography>
+    <LinkToPrefecture />
+  </Stack>
+)
+
 export default function CardsHighchartsPrefectureRankingChart({
   title,
   document,
@@ -57,28 +73,14 @@ export default function CardsHighchartsPrefectureRankingChart({
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 
   const isLoading = useLoadingState(selectedTimeCode)
-
-  const filteredDocument = {
-    ...document,
-    values: document.values.filter((f) => f.timeCode === selectedTimeCode),
-  }
+  const filteredDocument = useTimeFilteredDocument(document, selectedTimeCode)
 
   const boxStyle = height ? { height } : {}
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
       <MainCard sx={{ mt: 1 }} content={false}>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ p: 2, pb: 0 }}
-        >
-          <Typography variant="h5" color="text.primary">
-            {title}
-          </Typography>
-          <LinkToPrefecture />
-        </Stack>
+        <Header title={title} />
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
         <Stack
           direction="row"
