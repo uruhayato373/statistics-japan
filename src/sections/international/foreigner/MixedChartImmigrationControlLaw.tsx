@@ -9,7 +9,6 @@ import CardsApexLineChart from 'cards/CardsApexLineChart'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '出入国管理法・難民認定法送致件数・人員'

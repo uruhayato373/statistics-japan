@@ -10,7 +10,7 @@ import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import handleProps, { RouterProps } from 'utils/props'
+import handleProps from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '将来負担比率'

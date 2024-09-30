@@ -5,7 +5,6 @@ import CardsApexPieChart from 'cards/CardsApexPieChart'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '父子世帯数（父親の年齢別）'

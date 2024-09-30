@@ -7,7 +7,6 @@ import CardsApexColumnChart from 'cards/CardsApexColumnChart'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '農業就業人口の推移'

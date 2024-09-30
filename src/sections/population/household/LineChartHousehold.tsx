@@ -7,7 +7,6 @@ import CardsApexLineChart from 'cards/CardsApexLineChart'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '形態別世帯数の推移'

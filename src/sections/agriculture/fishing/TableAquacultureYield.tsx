@@ -3,11 +3,9 @@ import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '養殖収穫量'
-
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -35,10 +33,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function TableAquacultureYield({
-
-  prefecture,
-}: Props) {
+export default async function TableAquacultureYield({ prefecture }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
 

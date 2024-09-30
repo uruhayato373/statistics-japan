@@ -7,7 +7,6 @@ import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '自動車損害賠償責任保険'

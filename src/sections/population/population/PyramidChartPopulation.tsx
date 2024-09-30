@@ -7,7 +7,6 @@ import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '総人口の推移'

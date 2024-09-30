@@ -15,7 +15,6 @@ const ESTAT_PARAMS = {
   cdCat01: 'H1100',
 }
 
-
 // values
 async function processValues() {
   const { fetchValues } = handleEstatAPI()
