@@ -4,15 +4,12 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import handleProps, { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '気温・湿度のデータ'
-const CARD_ID = 'TableTemplatures'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010102',
@@ -28,7 +25,6 @@ async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
 
-
   return values
 }
 
@@ -41,13 +37,9 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function TableTemplatures({
-  routerProps,
-  prefecture,
-}: Props) {
+export default async function TableTemplatures({ prefecture }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
-
   const values = await processValues(prefCode)
   const document = await processDocument(values)
 
