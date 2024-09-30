@@ -40,7 +40,6 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 export default async function TableLaborForcePopulation({ prefecture }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
-
   const values = await processValues(prefCode)
   const document = await processDocument(values)
 
