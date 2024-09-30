@@ -1,6 +1,5 @@
 import { Suspense } from 'react'
 
-import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 import CircularProgressCards from 'components/CircularProgressCards'
 
 import { ApexOptions } from 'apexcharts'
@@ -10,12 +9,11 @@ import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '実質公債費比率'
 
-const PAGE_ID = 'real-debt-service-ratio'
+// const PAGE_ID = 'real-debt-service-ratio'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
@@ -83,18 +81,15 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 
 // コンポーネントの描画
 export default async function LineChartRealDebtServiceRatio({
-  routerProps,
   prefecture,
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
 
-  cardProps.pageId = PAGE_ID
-
   const values = await processValues(prefCode)
   const document = await processDocument(values)
 
-  const customActionButton = <LinkToPrefectureRank cardProps={cardProps} />
+  // const customActionButton = <LinkToPrefectureRank cardProps={cardProps} />
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
@@ -102,7 +97,7 @@ export default async function LineChartRealDebtServiceRatio({
         title={title}
         document={document}
         options={APEX_OPTIONS}
-        actionButton={customActionButton}
+        // actionButton={customActionButton}
       />
     </Suspense>
   )
