@@ -7,10 +7,11 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import CardsAdsResponsive from 'cards/CardsAdsResponsive'
+import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
+import CardsReactPrefectureRankingTable from 'cards/CardsReactPrefectureRankingTable'
 
-import RankingChartProductShipmentAmount from 'sections/miningindustry/products/prefecture-rank/RankingChartProductShipmentAmount'
 import RankingChartProductShipmentAmountPerManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingChartProductShipmentAmountPerManufacturingEmployees'
-import RankingTableProductShipmentAmount from 'sections/miningindustry/products/prefecture-rank/RankingTableProductShipmentAmount'
+import RankingProductShipmentAmount from 'sections/miningindustry/products/prefecture-rank/RankingProductShipmentAmount'
 import RankingTableProductShipmentAmountPerManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingTableProductShipmentAmountPerManufacturingEmployees'
 import ScatterChartProductShipmentAmountManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/ScatterChartProductShipmentAmountManufacturingEmployees'
 import ScatterChartProductShipmentAmountManufacturingEstablishments from 'sections/miningindustry/products/prefecture-rank/ScatterChartProductShipmentAmountManufacturingEstablishments'
@@ -33,10 +34,16 @@ export default async function PrefectureRankView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6}>
-              <RankingChartProductShipmentAmount routerProps={routerProps} />
+              <RankingProductShipmentAmount>
+                {(props) => (
+                  <CardsHighchartsPrefectureRankingChart {...props} />
+                )}
+              </RankingProductShipmentAmount>
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableProductShipmentAmount />
+              <RankingProductShipmentAmount>
+                {(props) => <CardsReactPrefectureRankingTable {...props} />}
+              </RankingProductShipmentAmount>
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={6}>
@@ -50,9 +57,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
               <ScatterChartProductShipmentAmountManufacturingEstablishments />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <ScatterChartProductShipmentAmountManufacturingEmployees
-                routerProps={routerProps}
-              />
+              <ScatterChartProductShipmentAmountManufacturingEmployees />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
               <ScatterChartProductShipmentAmountTotalPopulation />

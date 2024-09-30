@@ -28,10 +28,10 @@ export default async function PrefectureRankView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6}>
-              <RankingChartNumberOfTrafficAccidents routerProps={routerProps} />
+              <RankingChartNumberOfTrafficAccidents />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableNumberOfTrafficAccidents routerProps={routerProps} />
+              <RankingTableNumberOfTrafficAccidents />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={6}>

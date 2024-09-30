@@ -30,14 +30,10 @@ export default async function PrefectureRankView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6}>
-              <RankingChartAverageAgeOfFirstMarriageHusband
-                routerProps={routerProps}
-              />
+              <RankingChartAverageAgeOfFirstMarriageHusband />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableAverageAgeOfFirstMarriageHusband
-                routerProps={routerProps}
-              />
+              <RankingTableAverageAgeOfFirstMarriageHusband />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={6}>
@@ -48,14 +44,10 @@ export default async function PrefectureRankView({ routerProps }: Props) {
             </Grid>
             {/* row 3 */}
             <Grid item xs={12} md={6}>
-              <RankingChartAverageAgeOfFirstMarriageWife
-                routerProps={routerProps}
-              />
+              <RankingChartAverageAgeOfFirstMarriageWife />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableAverageAgeOfFirstMarriageWife
-                routerProps={routerProps}
-              />
+              <RankingTableAverageAgeOfFirstMarriageWife />
             </Grid>
             {/* row 4 */}
             <Grid item xs={12} md={6}>

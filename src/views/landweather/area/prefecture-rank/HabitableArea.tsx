@@ -31,10 +31,10 @@ export default async function HabitableArea({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6}>
-              <RankingChartHabitableArea routerProps={routerProps} />
+              <RankingChartHabitableArea />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableHabitableArea routerProps={routerProps} />
+              <RankingTableHabitableArea />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={6}>
@@ -45,21 +45,17 @@ export default async function HabitableArea({ routerProps }: Props) {
             </Grid>
             {/* row 3 */}
             <Grid item xs={12} md={6}>
-              <ScatterChartTotalAreaHabitableArea routerProps={routerProps} />
+              <ScatterChartTotalAreaHabitableArea />
             </Grid>
             <Grid item xs={12} md={6}>
               <CardsAdsResponsive />
             </Grid>
             {/* row 4 */}
             <Grid item xs={12} md={6}>
-              <RankingChartHabitableAreaPerTotalArea
-                routerProps={routerProps}
-              />
+              <RankingChartHabitableAreaPerTotalArea />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableHabitableAreaPerTotalArea
-                routerProps={routerProps}
-              />
+              <RankingTableHabitableAreaPerTotalArea />
             </Grid>
             {/* row 5 */}
             <Grid item xs={12} md={6}>

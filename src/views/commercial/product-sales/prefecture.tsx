@@ -33,52 +33,36 @@ export default async function PrefectureView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardProductSalesAmount
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardProductSalesAmount prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfCommercialEstablishments
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfCommercialEmployees
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAmountOfProductOnHand
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardAmountOfProductOnHand prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableProductSalesAmount
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableProductSalesAmount prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableNumberOfCommercialEstablishments
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableNumberOfCommercialEmployees
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableAmountOfProductOnHand
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableAmountOfProductOnHand prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

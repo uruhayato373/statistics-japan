@@ -35,64 +35,42 @@ export default async function PrefectureView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardConstructionCompanies
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardConstructionCompanies prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardValueOfCompletedConstructionWorkByPrimeContractors
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardValueOfCompletedConstructionWorkBySubcontractors
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
-              <MixedChartPublicWorksContract
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <MixedChartPublicWorksContract prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
-              <MixedChartConstructionStarts
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <MixedChartConstructionStarts prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableConstructionCompanies
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableConstructionCompanies prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableConstructionStarts
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableConstructionStarts prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableValueOfCompletedConstructionWorkByPrimeContractors
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableValueOfCompletedConstructionWorkBySubcontractors
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TablePublicWorksContract
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TablePublicWorksContract prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

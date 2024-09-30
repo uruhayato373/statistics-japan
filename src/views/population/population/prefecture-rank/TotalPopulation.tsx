@@ -29,14 +29,14 @@ export default async function SunnyDays({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6}>
-              <RankingChartTotalPopulation routerProps={routerProps} />
+              <RankingChartTotalPopulation />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableTotalPopulation routerProps={routerProps} />
+              <RankingTableTotalPopulation />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={9}>
-              <ComparisonChartTotalPopulation routerProps={routerProps} />
+              <ComparisonChartTotalPopulation />
             </Grid>
             {/* row 3 */}
             <Grid item xs={12} md={6}>

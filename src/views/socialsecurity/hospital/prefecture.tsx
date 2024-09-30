@@ -39,88 +39,56 @@ export default async function PrefectureView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfHospitals
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardNumberOfHospitals prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfHospitalBeds
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardNumberOfHospitalBeds prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfHospitalsWithEmergencyMedicalCareSystem
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <BarChartNumberOfHospitalsByBedSize
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableNumberOfHospitals
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableNumberOfHospitals prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableNumberOfHospitalBeds
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableNumberOfHospitalBeds prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableNumberOfHospitalsByMedicalDepartment
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableNumberOfHospitalsWithEmergencyMedicalCareSystem
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableNursingCareHealthFacilityForTheElderly
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableNursingCareMedicalFacility
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableNursingCareMedicalFacility prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableNumberOfDoctors
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableNumberOfDoctors prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableNumberOfPharmacists
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableNumberOfPharmacists prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableNumberOfNurses
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableNumberOfNurses prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableNumberOfPeopleSued
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableNumberOfPeopleSued prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

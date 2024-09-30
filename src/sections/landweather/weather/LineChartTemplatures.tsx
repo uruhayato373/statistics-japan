@@ -20,15 +20,14 @@ const ESTAT_PARAMS = {
 }
 
 interface Props {
-  routerProps: RouterProps
   prefecture: PrefectureType
 }
 
 // values
-async function processValues(cardProps: CardProps, prefCode: string) {
+async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  await actionSaveValues(cardProps, formatValues(values))
+
 
   return formatValues(values).filter((f) => f.areaCode === prefCode)
 }
@@ -58,8 +57,8 @@ export default async function LineChartTemplatures({
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
-  const cardProps = handleProps(routerProps).cardProps(CARD_ID)
-  const values = await processValues(cardProps, prefCode)
+
+  const values = await processValues(prefCode)
   const document = await processDocument(values)
 
   return (

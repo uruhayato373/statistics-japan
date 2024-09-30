@@ -30,10 +30,10 @@ export default async function Precipitation({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6}>
-              <RankingChartPrecipitation routerProps={routerProps} />
+              <RankingChartPrecipitation />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTablePrecipitation routerProps={routerProps} />
+              <RankingTablePrecipitation />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={6}>
@@ -44,14 +44,10 @@ export default async function Precipitation({ routerProps }: Props) {
             </Grid>
             {/* row 3 */}
             <Grid item xs={12} md={6}>
-              <RankingChartPrecipitationPerRainyDays
-                routerProps={routerProps}
-              />
+              <RankingChartPrecipitationPerRainyDays />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTablePrecipitationPerRainyDays
-                routerProps={routerProps}
-              />
+              <RankingTablePrecipitationPerRainyDays />
             </Grid>
             {/* row 4 */}
             <Grid item xs={12} md={6}>

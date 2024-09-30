@@ -36,61 +36,47 @@ export default async function PrefectureView({ routerProps }: Props) {
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfTrafficAccidents
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfTrafficAccidentCasualties
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfTrafficAccidentInjuries
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardTrafficAccidentFatalities
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <LineChartNumberOfTrafficAccidentCasualties
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableTrafficAccident
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableTrafficAccident prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableVoluntaryCarInsurance
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableVoluntaryCarInsurance prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableAutomobileLiabilityInsurance
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableNumberOfDrivingLicenseHolders
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableNumberOfPeopleTakingCoursesForTheElderly
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>

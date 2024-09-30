@@ -29,19 +29,16 @@ export default async function PrefectureView({ routerProps }: Props) {
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardTotalAmountOfGarbageDischarged
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardEmissionsPerPersonPerDay
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
               <BarChartTotalAmountOfGarbageDischarged
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>

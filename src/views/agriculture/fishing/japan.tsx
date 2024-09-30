@@ -31,16 +31,10 @@ export default async function AgricultureJapan({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardFisheryOutputValue
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardFisheryOutputValue prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableFisheryOutputValue
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableFisheryOutputValue prefecture={currentPrefecture} />
             </Grid>{' '}
           </Grid>
         </Box>

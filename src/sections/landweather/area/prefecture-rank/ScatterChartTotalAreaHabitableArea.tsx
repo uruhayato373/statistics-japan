@@ -4,13 +4,10 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import CardsHighchartsScatterChart from 'cards/CardsHighchartsScatterChart'
 
-import { actionSaveValues } from 'actions/saveValues'
 import handleDocument from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { RouterProps } from 'utils/props'
 
 const CARD_TITLE = '可住地面積の割合'
-const CARD_ID = 'ScatterChartTotalAreaHabitableArea'
 
 const ESTAT_PARAMS_MOLECULE = {
   statsDataId: '0000010102',
@@ -20,10 +17,6 @@ const ESTAT_PARAMS_MOLECULE = {
 const ESTAT_PARAMS_DENOMINATOR = {
   statsDataId: '0000010102',
   cdCat01: 'B1101',
-}
-
-interface Props {
-  routerProps: RouterProps
 }
 
 // valuesの取得と整形
@@ -46,18 +39,9 @@ async function fetchValues() {
   return formatValues
 }
 
-export default async function ScatterChartTotalAreaHabitableArea({
-  routerProps,
-}: Props) {
+export default async function ScatterChartTotalAreaHabitableArea() {
   const title = `都道府県の${CARD_TITLE}`
-
-  const saveProps = { ...routerProps, cardId: CARD_ID }
-
   const values = await fetchValues()
-  if (process.env.NODE_ENV === 'development') {
-    await actionSaveValues(saveProps, values)
-  }
-
   const document = handleDocument().formatDocument(values)
 
   return (

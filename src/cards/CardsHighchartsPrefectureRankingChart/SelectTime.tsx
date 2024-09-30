@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { ReactElement, useEffect, useState } from 'react'
 
 import FormControl from '@mui/material/FormControl'
 import MenuItem from '@mui/material/MenuItem'
@@ -12,7 +12,9 @@ interface Props {
   times: TimeType[]
 }
 
-export default function SelectTime({ times }: Props) {
+export default function SelectTime({
+  times,
+}: Props): [string, () => ReactElement] {
   const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
 
   const sortedTimes = times.sort(

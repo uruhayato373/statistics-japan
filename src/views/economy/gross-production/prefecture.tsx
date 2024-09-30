@@ -34,51 +34,31 @@ export default async function PrefectureView({ routerProps }: Props) {
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardGrossPrefecturalProduct
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardPrefecturalIncome
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardPrefecturalIncome prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={4}>
               <ColumnChartGrossPrefecturalProduct
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
-              <MixedChartPrefecturalIncome
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <MixedChartPrefecturalIncome prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={5}>
-              <PieChartGrossPrefecturalProduct
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <PieChartGrossPrefecturalProduct prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={5}>
-              <PieChartPrefecturalIncome
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <PieChartPrefecturalIncome prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
-              <TableGrossPrefecturalProduct
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableGrossPrefecturalProduct prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
-              <TablePrefecturalIncome
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TablePrefecturalIncome prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

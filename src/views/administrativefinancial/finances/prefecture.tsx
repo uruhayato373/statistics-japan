@@ -36,70 +36,43 @@ export default async function PrefectureView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardCurrentAccountRatio
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardCurrentAccountRatio prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardFinancialStrengthIndex
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardFinancialStrengthIndex prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardFutureBurdenRatio
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardFutureBurdenRatio prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardRealBalanceRatio
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardRealBalanceRatio prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardRealDebtServiceRatio
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardRealDebtServiceRatio prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardStandardFinancialDemandAmount
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardStandardFinancialIncomeAmount
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={4}>
               <ColumnChartTotalSettlementAmount
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={4}>
-              <LineChartFutureBurdenRatio
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <LineChartFutureBurdenRatio prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={4}>
-              <LineChartRealDebtServiceRatio
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <LineChartRealDebtServiceRatio prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={4}>
-              <PieChartTotalRevenueSettlement
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <PieChartTotalRevenueSettlement prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

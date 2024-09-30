@@ -32,10 +32,10 @@ export default async function HabitableArea({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6}>
-              <RankingChartDenselyPopulatedArea routerProps={routerProps} />
+              <RankingChartDenselyPopulatedArea />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableDenselyPopulatedArea routerProps={routerProps} />
+              <RankingTableDenselyPopulatedArea />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={6}>
@@ -46,14 +46,10 @@ export default async function HabitableArea({ routerProps }: Props) {
             </Grid>
             {/* row 3 */}
             <Grid item xs={12} md={6}>
-              <RankingChartDenselyPopulatedAreaPerTotalArea
-                routerProps={routerProps}
-              />
+              <RankingChartDenselyPopulatedAreaPerTotalArea />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableDenselyPopulatedAreaPerTotalArea
-                routerProps={routerProps}
-              />
+              <RankingTableDenselyPopulatedAreaPerTotalArea />
             </Grid>
             {/* row 4 */}
             <Grid item xs={12} md={6}>
@@ -64,14 +60,10 @@ export default async function HabitableArea({ routerProps }: Props) {
             </Grid>
             {/* row 5 */}
             <Grid item xs={12} md={6}>
-              <RankingChartDenselyPopulatedAreaPerHabitableArea
-                routerProps={routerProps}
-              />
+              <RankingChartDenselyPopulatedAreaPerHabitableArea />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableDenselyPopulatedAreaPerHabitableArea
-                routerProps={routerProps}
-              />
+              <RankingTableDenselyPopulatedAreaPerHabitableArea />
             </Grid>
             {/* row 6 */}
             <Grid item xs={12} md={6}>

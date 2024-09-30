@@ -2,11 +2,10 @@
 
 import dynamic from 'next/dynamic'
 
-import { actionSaveValues } from 'actions/saveValues'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
-import handleProps, { CardProps, RouterProps } from 'utils/props'
+import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CardsReactTimeTable = dynamic(() => import('cards/CardsReactTimeTable'), {
@@ -14,7 +13,6 @@ const CardsReactTimeTable = dynamic(() => import('cards/CardsReactTimeTable'), {
 })
 
 const CARD_TITLE = '農業就業人口（販売農家）'
-const CARD_ID = 'TableAgricultureEmploymentPopulation'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -22,15 +20,13 @@ const ESTAT_PARAMS = {
 }
 
 interface Props {
-  routerProps: RouterProps
   prefecture: PrefectureType
 }
 
 // values
-async function processValues(cardProps: CardProps, prefCode: string) {
+async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
-  await actionSaveValues(cardProps, values)
 
   return values
 }
@@ -45,13 +41,11 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 
 // コンポーネントの描画
 export default async function TableAgricultureEmploymentPopulation({
-  routerProps,
   prefecture,
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
-  const cardProps = handleProps(routerProps).cardProps(CARD_ID)
-  const values = await processValues(cardProps, prefCode)
+  const values = await processValues(prefCode)
   const document = await processDocument(values)
 
   return <CardsReactTimeTable title={title} document={document} />

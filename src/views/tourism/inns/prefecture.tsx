@@ -28,15 +28,11 @@ export default async function PrefectureView({ routerProps }: Props) {
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfOperatingFacilities
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
-              <TableBusinessFacilities
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableBusinessFacilities prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

@@ -40,88 +40,58 @@ export default async function AgriculturePrefecture({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAgriculturalOutput
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardAgriculturalOutput prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardAgricultureEmploymentPopulation
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfFarmers
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardNumberOfFarmers prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardCultivatedLandArea
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardCultivatedLandArea prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardAgriculturalLandConversionArea
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardAbandonedCultivatedLand
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={5}>
-              <LineChartNumberOfFarmers
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <LineChartNumberOfFarmers prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={5}>
               <ColumnChartAgricultureEmploymentPopulation
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={5}>
-              <PieChartNumberOfFarmers
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <PieChartNumberOfFarmers prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={5}>
               <PieChartPercentageOfFullTimeFarmers
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableAgricultureEmploymentPopulation
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>{' '}
             <Grid item xs={12} md={6}>
-              <TableNumberOfFarmers
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableNumberOfFarmers prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableCultivatedLandArea
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableCultivatedLandArea prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableFarmersIncome
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableFarmersIncome prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
               <SourceAnnotation />

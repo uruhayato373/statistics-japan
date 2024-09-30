@@ -35,55 +35,38 @@ export default async function PrefectureView({ routerProps }: Props) {
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardFoodSelfSufficiencyRate
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <LineChartNumberOfDeaths
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <LineChartNumberOfDeaths prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
               <ColumnChartNumberOfDeathsDueToLifestyleRelatedDiseases
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <ColumnChartNumberOfDeathsDueToMalignantTumors
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableHealthyLifeExpectancy
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableHealthyLifeExpectancy prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableNumberOfPeopleUndergoingHealthCheckups
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TablePregnancy
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TablePregnancy prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableTestInspection
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableTestInspection prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableNumberOfPeopleUndergoingCancerScreening
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>

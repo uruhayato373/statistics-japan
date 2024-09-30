@@ -69,7 +69,6 @@ export default async function RankingChartManufacturingIndustryAddedValue({
   routerProps,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`
-  // const cardProps = { ...routerProps, pageId:  PAGE_ID }
   const values = await processValues()
   const document = await processDocument(values)
 

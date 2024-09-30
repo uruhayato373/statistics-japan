@@ -28,10 +28,10 @@ export default async function Laborforce({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6}>
-              <RankingChartNonLaborForcePopulation routerProps={routerProps} />
+              <RankingChartNonLaborForcePopulation />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableNonLaborForcePopulation routerProps={routerProps} />
+              <RankingTableNonLaborForcePopulation />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={6}>

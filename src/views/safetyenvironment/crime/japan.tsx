@@ -30,10 +30,7 @@ export default async function JapanView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfPoliceOfficers
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardNumberOfPoliceOfficers prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

@@ -34,58 +34,39 @@ export default async function PrefectureView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardDisasterDamageAmount
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardDisasterDamageAmount prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfPollutionComplaints
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfDisasterAffectedHousingUnits
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableDisasterDamageAmount
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableDisasterDamageAmount prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableNumberOfPollutionComplaints
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableNumberOfFacilitiesGeneratingSootAndSmoke
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableGreenhouseGasEmissions
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableGreenhouseGasEmissions prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TablePrivateLifeInsurance
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TablePrivateLifeInsurance prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TablePostalLifeInsurance
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TablePostalLifeInsurance prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

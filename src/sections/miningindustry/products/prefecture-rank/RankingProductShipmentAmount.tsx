@@ -2,16 +2,11 @@ import { Suspense } from 'react'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 
-import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
-
-import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造品出荷額等'
-const CARD_ID = 'product-shipment-amount'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -19,7 +14,10 @@ const ESTAT_PARAMS = {
 }
 
 interface Props {
-  routerProps: RouterProps
+  children: (props: {
+    title: string
+    document: DocumentType
+  }) => React.ReactNode
 }
 
 // values
@@ -52,34 +50,28 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // server action
-async function serverAction(cardProps: CardProps, values: ValueType[]) {
-  const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
-    await actionSavePrefectureRanking(CARD_TITLE, cardProps, values)
+// async function serverAction(cardProps: CardProps, values: ValueType[]) {
+//   const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
+//     await actionSavePrefectureRanking(CARD_TITLE, cardProps, values)
 
-  await Promise.all([
-    saveBestWorstPNG(),
-    savePrefectureRankOGP(),
-    saveRankingDB(),
-  ])
-}
+//   await Promise.all([
+//     saveBestWorstPNG(),
+//     savePrefectureRankOGP(),
+//     saveRankingDB(),
+//   ])
+// }
 
 // コンポーネントの描画
-export default async function RankingChartProductShipmentAmount({
-  routerProps,
+export default async function RankingProductShipmentAmount({
+  children,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`
-  const cardProps = { ...routerProps, cardId: CARD_ID }
   const values = await processValues()
   const document = await processDocument(values)
 
-  await serverAction(cardProps, values)
-
   return (
     <Suspense fallback={<CircularProgressCards />}>
-      <CardsHighchartsPrefectureRankingChart
-        title={title}
-        document={document}
-      />
+      {children({ title, document })}
     </Suspense>
   )
 }

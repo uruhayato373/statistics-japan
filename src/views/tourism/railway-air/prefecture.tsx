@@ -35,64 +35,42 @@ export default async function PrefectureView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardJRCargoShipmentVolume
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardJRCargoShipmentVolume prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardJRTransportationPersonnel
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardPrivateRailwayTransportationPersonnel
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAirTransportPersonnel
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardAirTransportPersonnel prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardPassengerShipTransportPersonnel
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
-              <MixedChartJapanRailwayTransport
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <MixedChartJapanRailwayTransport prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
-              <MixedChartAirTransport
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <MixedChartAirTransport prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
               <MixedChartPassengerShipTransportation
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
-              <LineChartPassengerTransport
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <LineChartPassengerTransport prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
-              <TableBusinessOperator
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableBusinessOperator prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

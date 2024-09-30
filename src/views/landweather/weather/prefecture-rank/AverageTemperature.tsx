@@ -28,10 +28,10 @@ export default async function RainyDays({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6}>
-              <RankingChartAverageTemperature routerProps={routerProps} />
+              <RankingChartAverageTemperature />
             </Grid>
             <Grid item xs={12} md={6}>
-              <RankingTableAverageTemperature routerProps={routerProps} />
+              <RankingTableAverageTemperature />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={6}>

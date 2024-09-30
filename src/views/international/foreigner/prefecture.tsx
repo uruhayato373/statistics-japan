@@ -29,28 +29,16 @@ export default async function PrefectureView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardForeignPopulation
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardForeignPopulation prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <MixedChartImmigrationControlLaw
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <MixedChartImmigrationControlLaw prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableForeignPopulation
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableForeignPopulation prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableForeignerSuspectCase
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableForeignerSuspectCase prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

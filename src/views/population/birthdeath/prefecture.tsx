@@ -35,64 +35,36 @@ export default async function PrefectureView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardBirth
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardBirth prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfDeaths
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardNumberOfDeaths prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardTotalFertilityRate
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardTotalFertilityRate prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={5} lg={5}>
-              <PyramidChartNumberOfDeaths
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <PyramidChartNumberOfDeaths prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={5}>
               <PieChartNumberOfBirthsByMothersAge
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={8}>
-              <LineChartNumberOfStillbirths
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <LineChartNumberOfStillbirths prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableBirth
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableBirth prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableDeath
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableDeath prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableNumberOfNeonatalDeaths
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableNumberOfNeonatalDeaths prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <TableMortalityRate
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableMortalityRate prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

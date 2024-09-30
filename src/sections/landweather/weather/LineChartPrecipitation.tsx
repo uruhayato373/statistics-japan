@@ -22,7 +22,6 @@ const ESTAT_PARAMS = {
 }
 
 interface Props {
-  routerProps: RouterProps
   prefecture: PrefectureType
 }
 
@@ -54,10 +53,10 @@ const APEX_OPTIONS: ApexOptions = {
 }
 
 // values
-async function processValues(cardProps: CardProps, prefCode: string) {
+async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
-  await actionSaveValues(cardProps, values)
+
 
   return values
 }
@@ -80,8 +79,8 @@ export default async function LineChartPrecipitation({
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
-  const cardProps = handleProps(routerProps).cardProps(CARD_ID)
-  const values = await processValues(cardProps, prefCode)
+
+  const values = await processValues(prefCode)
   const document = await processDocument(values)
 
   return (

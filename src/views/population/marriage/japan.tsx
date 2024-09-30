@@ -39,64 +39,40 @@ export default async function JapanView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfMarriages
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardNumberOfMarriages prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfDivorces
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardNumberOfDivorces prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardAverageAgeOfFirstMarriageHusband
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardAverageAgeOfFirstMarriageWife
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6}>
-              <LineChartUnmarriedPopulation
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <LineChartUnmarriedPopulation prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={5} lg={5}>
-              <PyramidChartMaritalPopulation
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <PyramidChartMaritalPopulation prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={5} lg={5}>
-              <PyramidChartUnmarriedPopulation
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <PyramidChartUnmarriedPopulation prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={5} lg={5}>
-              <PyramidChartSeparatedPopulation
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <PyramidChartSeparatedPopulation prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={5} lg={5}>
               <PyramidChartBereavementPopulation
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
-              <TableMarriage
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableMarriage prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

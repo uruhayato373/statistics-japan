@@ -36,50 +36,29 @@ export default async function TotalAreaJapan({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={6} lg={3}>
-              <DashboardTotalArea
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardTotalArea prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={3}>
-              <DashboardHabitableArea
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardHabitableArea prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={3}>
-              <DashboardForestArea
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardForestArea prefecture={currentPrefecture} />
             </Grid>
             {/* <Grid item xs={12} sm={6} md={6} lg={3}>
               <CardsAdsResponsive height={'150px'} />
             </Grid> */}
             {/* row 2 */}
             <Grid item xs={12} sm={12} md={12} lg={7}>
-              <AreaChartTotalArea
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <AreaChartTotalArea prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={5}>
-              <PieChartHabitableArea
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <PieChartHabitableArea prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={6}>
-              <TableTotalArea
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableTotalArea prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={6}>
-              <TableParkArea
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableParkArea prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

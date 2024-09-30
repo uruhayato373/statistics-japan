@@ -36,39 +36,27 @@ export default async function TotalPopulationJapan({ routerProps }: Props) {
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfGeneralHouseholds
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfNuclearFamilyHouseholds
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfSingleHouseholds
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={6}>
-              <LineChartHousehold
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <LineChartHousehold prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={6}>
-              <MixedChartGeneralHousehold
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <MixedChartGeneralHousehold prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
-              <TableHousehold
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableHousehold prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

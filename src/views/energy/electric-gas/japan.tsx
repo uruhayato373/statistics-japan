@@ -35,40 +35,24 @@ export default async function JapanView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardCityGasSalesVolume
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardCityGasSalesVolume prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardElectricityDemand
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardElectricityDemand prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardGasolineSalesVolume
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardGasolineSalesVolume prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardGeneratedPowerAmount
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardGeneratedPowerAmount prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardElectricityConsumptionForElectricLights
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
-              <TableCityGas
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableCityGas prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

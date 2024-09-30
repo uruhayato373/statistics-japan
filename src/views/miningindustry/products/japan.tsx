@@ -37,28 +37,20 @@ export default async function JapanView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardProductShipmentAmount
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardProductShipmentAmount prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfManufacturingEstablishments
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNumberOfManufacturingEmployees
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
-              <TableProductShipmentAmount
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableProductShipmentAmount prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

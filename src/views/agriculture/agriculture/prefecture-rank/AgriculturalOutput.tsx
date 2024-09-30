@@ -28,10 +28,10 @@ export default async function AgriculturalOutput({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} md={6} lg={7}>
-              <RankingChartAgriculturalOutput routerProps={routerProps} />
+              <RankingChartAgriculturalOutput />
             </Grid>
             <Grid item xs={12} md={6} lg={5}>
-              <RankingTableAgriculturalOutput routerProps={routerProps} />
+              <RankingTableAgriculturalOutput />
             </Grid>
             {/* row 2 */}
             <Grid item xs={12} md={6}>

@@ -4,22 +4,15 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
 
-import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { CardProps, RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造業従業者数'
-const CARD_ID = 'number-of-manufacturing-employees'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
   cdCat01: 'C3404',
-}
-
-interface Props {
-  routerProps: RouterProps
 }
 
 // values
@@ -38,28 +31,14 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
-// server action
-async function serverAction(cardProps: CardProps, values: ValueType[]) {
-  const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
-    await actionSavePrefectureRanking(CARD_TITLE, cardProps, values)
-
-  await Promise.all([
-    saveBestWorstPNG(),
-    savePrefectureRankOGP(),
-    saveRankingDB(),
-  ])
-}
-
 // コンポーネントの描画
-export default async function RankingChartNumberOfManufacturingEmployees({
-  routerProps,
-}: Props) {
+export default async function RankingChartNumberOfManufacturingEmployees() {
   const title = `都道府県の${CARD_TITLE}`
-  const cardProps = { ...routerProps, cardId: CARD_ID }
+
   const values = await processValues()
   const document = await processDocument(values)
 
-  await serverAction(cardProps, values)
+  // await serverAction(cardProps, values)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

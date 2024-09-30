@@ -31,40 +31,28 @@ export default async function PrefectureView({ routerProps }: Props) {
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardConsumerPriceIndex
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <DashboardConsumerPriceIndex prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardConsumerPriceIndexChangeRate
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>{' '}
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardConsumerPriceRegionalDifferenceIndex
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardNationalPriceRegionalDifferenceIndex
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
-              <TableConsumerPriceIndex
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableConsumerPriceIndex prefecture={currentPrefecture} />
             </Grid>
             <Grid item xs={12} md={5} lg={7}>
-              <TableDepositBalance
-                routerProps={routerProps}
-                prefecture={currentPrefecture}
-              />
+              <TableDepositBalance prefecture={currentPrefecture} />
             </Grid>
           </Grid>
         </Box>

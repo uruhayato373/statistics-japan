@@ -31,7 +31,6 @@ export default async function JapanView({ routerProps }: Props) {
             {/* row 1 */}
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardTotalAmountOfGarbageDischarged
-                routerProps={routerProps}
                 prefecture={currentPrefecture}
               />
             </Grid>
