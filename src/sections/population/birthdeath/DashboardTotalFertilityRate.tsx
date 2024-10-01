@@ -42,5 +42,5 @@ export default async function DashboardTotalFertilityRate({
   const values = await processValues(prefCode)
   const document = await processDocument(values)
 
-  return <CardsDashboardSingle title={title} document={document} digit={1} />
+  return <CardsDashboardSingle title={title} document={document} />
 }
