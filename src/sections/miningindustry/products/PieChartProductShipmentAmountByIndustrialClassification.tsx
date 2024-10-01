@@ -1,3 +1,5 @@
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
+
 import { ApexOptions } from 'apexcharts'
 
 import CardsApexPieChart from 'cards/CardsApexPieChart'
@@ -14,7 +16,8 @@ const ESTAT_PARAMS = {
   cdCat01: ['202101170010'],
 }
 
-// apexChartsのオプション
+const PAGE_ID = 'product-shipment-amount'
+
 const APEX_OPTIONS: ApexOptions = {
   dataLabels: {
     dropShadow: {
@@ -81,12 +84,14 @@ export default async function PieChartProductShipmentAmountByIndustrialClassific
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
   return (
     <CardsApexPieChart
       title={title}
       document={document}
       options={APEX_OPTIONS}
+      actionButton={actionButton}
     />
   )
 }

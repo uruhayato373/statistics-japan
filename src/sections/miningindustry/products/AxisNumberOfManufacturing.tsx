@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 import CircularProgressCards from 'components/CircularProgressCards'
 
 import { ApexOptions } from 'apexcharts'
@@ -17,6 +18,8 @@ const ESTAT_PARAMS = {
   statsDataId: '0000010103',
   cdCat01: ['C3403', 'C3404'],
 }
+
+const PAGE_ID = 'number-of-manufacturing-establishments'
 
 interface Props {
   prefecture: PrefectureType
@@ -80,6 +83,7 @@ export default async function AxisNumberOfManufacturing({ prefecture }: Props) {
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
@@ -87,6 +91,7 @@ export default async function AxisNumberOfManufacturing({ prefecture }: Props) {
         title={title}
         document={document}
         options={APEX_OPTIONS}
+        actionButton={actionButton}
       />
     </Suspense>
   )

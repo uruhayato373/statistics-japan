@@ -21,6 +21,7 @@ interface Props {
   document: DocumentType
   options?: ApexOptions
   height?: string
+  actionButton?: React.ReactNode
 }
 
 export default function CardsApexPieChart({
@@ -28,6 +29,7 @@ export default function CardsApexPieChart({
   document,
   options,
   height,
+  actionButton,
 }: Props) {
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
@@ -55,6 +57,11 @@ export default function CardsApexPieChart({
         <Typography variant="h5" color="text.primary">
           {title}
         </Typography>
+        {actionButton && (
+          <Stack direction="row" spacing={1}>
+            {actionButton}
+          </Stack>
+        )}
       </Stack>
       <Divider sx={{ mt: 1.5, mb: 1.5 }} />
       <Stack
