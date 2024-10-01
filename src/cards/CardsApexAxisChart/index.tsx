@@ -1,8 +1,11 @@
+import { Suspense } from 'react'
+
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
+import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 
 import { ApexOptions } from 'apexcharts'
@@ -34,26 +37,28 @@ export default async function CardsApexAxisChart({
   const boxStyle = height ? { height } : {}
 
   return (
-    <MainCard content={false}>
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        sx={{ p: 2, pb: 0 }}
-      >
-        <Typography variant="h5" color="text.primary">
-          {title}
-        </Typography>
-        {actionButton && (
-          <Stack direction="row" spacing={1}>
-            {actionButton}
-          </Stack>
-        )}
-      </Stack>
-      <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-      <Box sx={{ p: 2, ...boxStyle }}>
-        <ApexAxisChart options={customOptions} />
-      </Box>
-    </MainCard>
+    <Suspense fallback={<CircularProgressCards />}>
+      <MainCard content={false}>
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+          sx={{ p: 2, pb: 0 }}
+        >
+          <Typography variant="h5" color="text.primary">
+            {title}
+          </Typography>
+          {actionButton && (
+            <Stack direction="row" spacing={1}>
+              {actionButton}
+            </Stack>
+          )}
+        </Stack>
+        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
+        <Box sx={{ p: 2, ...boxStyle }}>
+          <ApexAxisChart options={customOptions} />
+        </Box>
+      </MainCard>
+    </Suspense>
   )
 }

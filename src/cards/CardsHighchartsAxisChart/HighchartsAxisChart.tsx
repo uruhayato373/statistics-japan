@@ -39,20 +39,13 @@ export default function HighchartsAxisChart({ options }: Props) {
       text: undefined,
     },
     legend: {
-      enabled: false,
+      enabled: true,
     },
     credits: {
       enabled: false,
     },
     exporting: {
-      enabled: true,
-      buttons: {
-        contextButton: {
-          align: 'right',
-          x: -10,
-          y: -18,
-        },
-      },
+      enabled: false,
     },
   }
 

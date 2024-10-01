@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 import CircularProgressCards from 'components/CircularProgressCards'
 
 import { Options } from 'highcharts'
@@ -17,6 +18,8 @@ const ESTAT_PARAMS = {
   statsDataId: '0000010103',
   cdCat01: ['C3401', 'C3402'],
 }
+
+const PAGE_ID = 'product-shipment-amount'
 
 interface Props {
   prefecture: PrefectureType
@@ -99,18 +102,12 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function MixedChartProductShipmentAmount({
-  prefecture,
-}: Props) {
+export default async function AxisProductShipmentAmount({ prefecture }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
-  // const customActionButton = (
-  //   <LinkToPrefectureRank
-  //     cardProps={{ ...cardProps, pageId: 'product-shipment-amount' }}
-  //   />
-  // )
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
@@ -118,8 +115,7 @@ export default async function MixedChartProductShipmentAmount({
         title={title}
         document={document}
         options={OPTIONS}
-        // height={'400px'}
-        // actionButton={customActionButton}
+        actionButton={actionButton}
       />
     </Suspense>
   )

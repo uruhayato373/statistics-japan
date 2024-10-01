@@ -1,3 +1,5 @@
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
+
 import { CardsDashboardProps } from 'cards/CardsDashboard'
 
 import handleDocument, { DocumentType } from 'utils/document'
@@ -12,6 +14,8 @@ const ESTAT_PARAMS = {
   cdCat01: 'C3403',
 }
 
+const PAGE_ID = 'number-of-manufacturing-establishments'
+
 interface Props {
   prefecture: PrefectureType
   children: (props: CardsDashboardProps) => React.ReactNode
@@ -20,9 +24,10 @@ interface Props {
 // values
 async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
+  const values = await fetchValues(ESTAT_PARAMS)
+  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return values
+  return filteredValues
 }
 
 // document
@@ -42,6 +47,7 @@ export default async function DashboardNumberOfManufacturingEstablishments({
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return <> {children({ title, document })}</>
+  return <> {children({ title, document, actionButton })}</>
 }

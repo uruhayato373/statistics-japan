@@ -9,11 +9,11 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 import CardsDashboard from 'cards/CardsDashboard'
 
 import { actionSavePrefecture } from 'actions/savePrefecture'
+import AxisNumberOfManufacturing from 'sections/miningindustry/products/AxisNumberOfManufacturing'
+import AxisProductShipmentAmount from 'sections/miningindustry/products/AxisProductShipmentAmount'
 import DashboardNumberOfManufacturingEmployees from 'sections/miningindustry/products/dashboard/DashboardNumberOfManufacturingEmployees'
 import DashboardNumberOfManufacturingEstablishments from 'sections/miningindustry/products/dashboard/DashboardNumberOfManufacturingEstablishments'
 import DashboardProductShipmentAmount from 'sections/miningindustry/products/dashboard/DashboardProductShipmentAmount'
-import LineChartNumberOfManufacturing from 'sections/miningindustry/products/LineChartNumberOfManufacturing'
-import MixedChartProductShipmentAmount from 'sections/miningindustry/products/MixedChartProductShipmentAmount'
 import PieChartProductShipmentAmountByIndustrialClassification from 'sections/miningindustry/products/PieChartProductShipmentAmountByIndustrialClassification'
 import TableProductShipmentAmount from 'sections/miningindustry/products/TableProductShipmentAmount'
 import handleProps, { RouterProps } from 'utils/props'
@@ -36,11 +36,11 @@ const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 // chart items
 const chartItems = [
   {
-    Component: MixedChartProductShipmentAmount,
+    Component: AxisProductShipmentAmount,
     gridProps: { xs: 12, md: 6, lg: 6 },
   },
   {
-    Component: LineChartNumberOfManufacturing,
+    Component: AxisNumberOfManufacturing,
     gridProps: { xs: 12, md: 6, lg: 6 },
   },
   {

@@ -75,9 +75,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function LineChartNumberOfManufacturing({
-  prefecture,
-}: Props) {
+export default async function AxisNumberOfManufacturing({ prefecture }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
