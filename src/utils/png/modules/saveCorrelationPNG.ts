@@ -21,7 +21,7 @@ const saveCorrelationPNG = async (
 
   const test = areas.map((d) => {
     const areaValues = values.filter((v) => v.areaCode === d.areaCode)
-    console.log(areaValues)
+
     return {
       x: areaValues[0].value,
       y: areaValues[1].value,

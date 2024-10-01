@@ -18,10 +18,44 @@ import PieChartProductShipmentAmountByIndustrialClassification from 'sections/mi
 import TableProductShipmentAmount from 'sections/miningindustry/products/TableProductShipmentAmount'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
+import GridItem from 'views-grid/GridItem'
 
 interface Props {
   routerProps: RouterProps
 }
+
+// dashboard items
+const dashboardItems = [
+  { Component: DashboardProductShipmentAmount },
+  { Component: DashboardNumberOfManufacturingEstablishments },
+  { Component: DashboardNumberOfManufacturingEmployees },
+]
+
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
+
+// chart items
+const chartItems = [
+  {
+    Component: MixedChartProductShipmentAmount,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Component: LineChartNumberOfManufacturing,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Component: PieChartProductShipmentAmountByIndustrialClassification,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
+
+// table items
+const tableItems = [
+  {
+    Component: TableProductShipmentAmount,
+    gridProps: { xs: 12, md: 6, lg: 8 },
+  },
+]
 
 export default async function PrefectureView({ routerProps }: Props) {
   try {
@@ -36,40 +70,26 @@ export default async function PrefectureView({ routerProps }: Props) {
         <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardProductShipmentAmount prefecture={currentPrefecture}>
-                {(props) => <CardsDashboard {...props} />}
-              </DashboardProductShipmentAmount>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfManufacturingEstablishments
-                prefecture={currentPrefecture}
-              >
-                {(props) => <CardsDashboard {...props} />}
-              </DashboardNumberOfManufacturingEstablishments>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfManufacturingEmployees
-                prefecture={currentPrefecture}
-              >
-                {(props) => <CardsDashboard {...props} />}
-              </DashboardNumberOfManufacturingEmployees>
-            </Grid>
-            <Grid item xs={12} md={6} lg={6}>
-              <MixedChartProductShipmentAmount prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6} lg={6}>
-              <LineChartNumberOfManufacturing prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6} lg={6}>
-              <PieChartProductShipmentAmountByIndustrialClassification
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={6} lg={8}>
-              <TableProductShipmentAmount prefecture={currentPrefecture} />
-            </Grid>
+            {/* dashboard items */}
+            {dashboardItems.map(({ Component }, index) => (
+              <GridItem key={index} {...dashboardGridProps}>
+                <Component prefecture={currentPrefecture}>
+                  {(props) => <CardsDashboard {...props} />}
+                </Component>
+              </GridItem>
+            ))}
+            {/* chart items */}
+            {chartItems.map(({ Component, gridProps }, index) => (
+              <GridItem key={index} {...gridProps}>
+                <Component prefecture={currentPrefecture} />
+              </GridItem>
+            ))}
+            {/* table items */}
+            {tableItems.map(({ Component, gridProps }, index) => (
+              <GridItem key={index} {...gridProps}>
+                <Component prefecture={currentPrefecture} />
+              </GridItem>
+            ))}
           </Grid>
         </Box>
       </Suspense>

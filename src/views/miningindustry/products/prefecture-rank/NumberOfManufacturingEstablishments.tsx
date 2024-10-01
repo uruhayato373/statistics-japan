@@ -8,10 +8,11 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import CardsAdsResponsive from 'cards/CardsAdsResponsive'
 
-import RankingChartNumberOfManufacturingEstablishments from 'sections/miningindustry/products/prefecture-rank/RankingChartNumberOfManufacturingEstablishments'
-import RankingTableNumberOfManufacturingEstablishments from 'sections/miningindustry/products/prefecture-rank/RankingTableNumberOfManufacturingEstablishments'
+import RankingNumberOfManufacturingEstablishments from 'sections/miningindustry/products/prefecture-rank/RankingNumberOfManufacturingEstablishments'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
+import GridItem from 'views-grid/GridItem'
+import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
 interface Props {
   routerProps: RouterProps
@@ -26,20 +27,17 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} md={6}>
-              <RankingChartNumberOfManufacturingEstablishments />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <RankingTableNumberOfManufacturingEstablishments />
-            </Grid>
-            {/* row 2 */}
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
+            {/* 製造業事業所数 */}
+            <PrefectureRankingCards
+              RankingComponent={RankingNumberOfManufacturingEstablishments}
+              routerProps={routerProps}
+            />
+            {/* Adsense */}
+            {[0, 1].map((index) => (
+              <GridItem key={`ads-${index}`} xs={12} md={6}>
+                <CardsAdsResponsive />
+              </GridItem>
+            ))}
           </Grid>
         </Box>
       </Suspense>

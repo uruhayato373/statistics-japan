@@ -1,14 +1,51 @@
 import { DocumentType } from 'utils/document'
+import { ValueType } from 'utils/value'
 
-import formatDashboardSingle from './modules/single'
+import calculateDifference from './modules/calculateDifference'
+import calculateRate from './modules/calculateRate'
 
-export type * from './modules/single'
+export interface DashboardValueType extends ValueType {
+  difference: number
+  rate: number
+}
 
-const formatDashboard = (document: DocumentType) => {
-  return {
-    single: ({ digit }: { digit?: number } = {}) =>
-      formatDashboardSingle({ ...document, digit }),
+const validateDocument = (document: DocumentType): void => {
+  if (document.categories.length !== 1) {
+    throw new Error(`予期しないカテゴリ数です: ${document.categories.length}`)
+  }
+  if (document.areas.length !== 1) {
+    throw new Error(`予期しない地域数です: ${document.areas.length}`)
   }
 }
 
-export default formatDashboard
+const formatDashboardValues = (
+  document: DocumentType
+): DashboardValueType[] => {
+  validateDocument(document)
+
+  const { times, values } = document
+
+  const result = times.reduce<DashboardValueType[]>((acc, time) => {
+    const value = values.find((v) => v.timeCode === time.timeCode)
+    if (!value) return acc
+
+    const previousValue = acc[acc.length - 1]?.value
+    const difference = calculateDifference(value.value, previousValue)
+    const rate =
+      previousValue !== undefined
+        ? calculateRate(value.value, previousValue)
+        : 0
+
+    acc.push({
+      ...value,
+      difference,
+      rate,
+    })
+
+    return acc
+  }, [])
+
+  return result.sort((a, b) => b.timeCode.localeCompare(a.timeCode))
+}
+
+export default formatDashboardValues

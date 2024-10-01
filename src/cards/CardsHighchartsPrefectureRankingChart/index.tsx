@@ -39,7 +39,7 @@ const PrefectureRankingBarChart = dynamic(
   }
 )
 
-interface Props {
+export interface CardsHighchartsPrefectureRankingChartProps {
   title: string
   document: DocumentType
   height?: string
@@ -108,7 +108,7 @@ export default function CardsHighchartsPrefectureRankingChart({
   document,
   height,
   options,
-}: Props) {
+}: CardsHighchartsPrefectureRankingChartProps) {
   const [chartType, SelectChartTypeComponent] = SelectChartType()
 
   const { times } = document

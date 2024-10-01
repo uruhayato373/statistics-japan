@@ -1,8 +1,4 @@
-import { Suspense } from 'react'
-
-import CircularProgressCards from 'components/CircularProgressCards'
-
-import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
+import { CardsHighchartsPrefectureRankingChartProps } from 'cards/CardsHighchartsPrefectureRankingChart'
 
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -10,38 +6,28 @@ import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造業付加価値額'
-
-const PAGE_ID = 'manufacturing-industry-added-value'
+const CARD_TITLE = '製造業従業者数'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: 'C3402',
+  cdCat01: 'C3404',
 }
 
+const PAGE_ID = 'number-of-manufacturing-employees'
+
 interface Props {
-  routerProps: RouterProps
+  routerProps?: RouterProps
+  children: (
+    props: CardsHighchartsPrefectureRankingChartProps
+  ) => React.ReactNode
 }
 
 // values
 async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  const formattedValues = formatValues(values)
 
-  return formattedValues
-}
-
-// format values
-function formatValues(values: ValueType[]): ValueType[] {
-  return values.map((d) => {
-    return {
-      ...d,
-      // 単位を億円に変換
-      value: Math.round(Number(d.value) / 100),
-      unit: '億円',
-    }
-  })
+  return values
 }
 
 // document
@@ -65,21 +51,17 @@ async function serverAction(routerProps: RouterProps, values: ValueType[]) {
 }
 
 // コンポーネントの描画
-export default async function RankingChartManufacturingIndustryAddedValue({
+export default async function RankingChartNumberOfManufacturingEmployees({
   routerProps,
+  children,
 }: Props) {
   const title = `都道府県の${CARD_TITLE}`
   const values = await processValues()
   const document = await processDocument(values)
 
-  await serverAction({ ...routerProps, pageId: PAGE_ID }, values)
+  if (routerProps) {
+    await serverAction({ ...routerProps, pageId: PAGE_ID }, values)
+  }
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsHighchartsPrefectureRankingChart
-        title={title}
-        document={document}
-      />
-    </Suspense>
-  )
+  return <> {children({ title, document })}</>
 }

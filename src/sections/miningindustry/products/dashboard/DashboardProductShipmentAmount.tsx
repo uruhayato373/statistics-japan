@@ -1,3 +1,7 @@
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
+
+import { CardsDashboardProps } from 'cards/CardsDashboard'
+
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { PrefectureType } from 'utils/prefecture'
@@ -10,12 +14,11 @@ const ESTAT_PARAMS = {
   cdCat01: 'C3401',
 }
 
+const PAGE_ID = 'product-shipment-amount'
+
 interface Props {
   prefecture: PrefectureType
-  children: (props: {
-    title: string
-    document: DocumentType
-  }) => React.ReactNode
+  children: (props: CardsDashboardProps) => React.ReactNode
 }
 
 // values
@@ -55,6 +58,7 @@ export default async function DashboardProductShipmentAmount({
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return <> {children({ title, document })}</>
+  return <> {children({ title, document, actionButton })}</>
 }

@@ -4,7 +4,6 @@ import { RouterProps } from 'utils/props'
 
 // 保存先のファイル名を生成
 const generateFilePath = (routerProps: RouterProps, fileName: string) => {
-  // console.log(routerProps)
   const { fieldId, menuId, pageId } = routerProps
   const filePath = path.join(
     process.cwd(),

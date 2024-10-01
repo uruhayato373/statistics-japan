@@ -11,8 +11,6 @@ const savePNG = async (svgString: string, filePath: string) => {
 
     // SVGを最適化されたPNGに直接変換
     await sharp(Buffer.from(svgString)).png({ quality: 90 }).toFile(filePath)
-
-    // console.log(`Optimized PNG file saved: ${filePath}`)
   } catch (error) {
     console.error('Error saving SVG and optimized PNG:', error)
   }

@@ -6,14 +6,14 @@ import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造品出荷額等'
+const CARD_TITLE = '製造業事業所数'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: 'C3401',
+  cdCat01: 'C3403',
 }
 
-const PAGE_ID = 'product-shipment-amount'
+const PAGE_ID = 'number-of-manufacturing-establishments'
 
 interface Props {
   routerProps?: RouterProps
@@ -26,21 +26,8 @@ interface Props {
 async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  const formattedValues = formatValues(values)
 
-  return formattedValues
-}
-
-// format values
-function formatValues(values: ValueType[]): ValueType[] {
-  return values.map((d) => {
-    return {
-      ...d,
-      // 単位を億円に変換
-      value: Math.round(Number(d.value) / 100),
-      unit: '億円',
-    }
-  })
+  return values
 }
 
 // document
@@ -64,7 +51,7 @@ async function serverAction(routerProps: RouterProps, values: ValueType[]) {
 }
 
 // コンポーネントの描画
-export default async function RankingProductShipmentAmount({
+export default async function RankingNumberOfManufacturingEstablishments({
   routerProps,
   children,
 }: Props) {

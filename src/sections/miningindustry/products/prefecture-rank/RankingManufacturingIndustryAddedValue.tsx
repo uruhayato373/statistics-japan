@@ -6,14 +6,14 @@ import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造品出荷額等'
+const CARD_TITLE = '製造業付加価値額'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: 'C3401',
+  cdCat01: 'C3402',
 }
 
-const PAGE_ID = 'product-shipment-amount'
+const PAGE_ID = 'manufacturing-industry-added-value'
 
 interface Props {
   routerProps?: RouterProps
@@ -64,7 +64,7 @@ async function serverAction(routerProps: RouterProps, values: ValueType[]) {
 }
 
 // コンポーネントの描画
-export default async function RankingProductShipmentAmount({
+export default async function RankingManufacturingIndustryAddedValue({
   routerProps,
   children,
 }: Props) {

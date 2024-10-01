@@ -8,10 +8,11 @@ import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import CardsAdsResponsive from 'cards/CardsAdsResponsive'
 
-import RankingChartNumberOfManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingChartNumberOfManufacturingEmployees'
-import RankingTableNumberOfManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingTableNumberOfManufacturingEmployees'
+import RankingNumberOfManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingNumberOfManufacturingEmployees'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
+import GridItem from 'views-grid/GridItem'
+import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
 interface Props {
   routerProps: RouterProps
@@ -26,20 +27,17 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} md={6}>
-              <RankingChartNumberOfManufacturingEmployees />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <RankingTableNumberOfManufacturingEmployees />
-            </Grid>
-            {/* row 2 */}
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
+            {/* 製造業従業員数 */}
+            <PrefectureRankingCards
+              RankingComponent={RankingNumberOfManufacturingEmployees}
+              routerProps={routerProps}
+            />
+            {/* Adsense */}
+            {[0, 1].map((index) => (
+              <GridItem key={`ads-${index}`} xs={12} md={6}>
+                <CardsAdsResponsive />
+              </GridItem>
+            ))}
           </Grid>
         </Box>
       </Suspense>
