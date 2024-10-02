@@ -6,12 +6,13 @@ import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
 import MainCard from 'components/MainCard'
-import ReactTable from 'components/table/ReactTable'
 import { CSVExport } from 'components/third-party/react-table'
 import SimpleBar from 'components/third-party/SimpleBar'
 
 import { DocumentType } from 'utils/document'
 import formatTable from 'utils/table'
+
+import ReactTable from './ReactTable'
 
 type Props = {
   title: string
