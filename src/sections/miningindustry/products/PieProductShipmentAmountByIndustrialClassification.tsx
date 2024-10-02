@@ -77,7 +77,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
-export default async function PieChartProductShipmentAmountByIndustrialClassification({
+export default async function PieProductShipmentAmountByIndustrialClassification({
   prefecture,
 }: Props) {
   const { prefCode, prefName } = prefecture

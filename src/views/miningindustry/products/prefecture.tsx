@@ -14,7 +14,7 @@ import AxisProductShipmentAmount from 'sections/miningindustry/products/AxisProd
 import DashboardNumberOfManufacturingEmployees from 'sections/miningindustry/products/dashboard/DashboardNumberOfManufacturingEmployees'
 import DashboardNumberOfManufacturingEstablishments from 'sections/miningindustry/products/dashboard/DashboardNumberOfManufacturingEstablishments'
 import DashboardProductShipmentAmount from 'sections/miningindustry/products/dashboard/DashboardProductShipmentAmount'
-import PieChartProductShipmentAmountByIndustrialClassification from 'sections/miningindustry/products/PieChartProductShipmentAmountByIndustrialClassification'
+import PieProductShipmentAmountByIndustrialClassification from 'sections/miningindustry/products/PieProductShipmentAmountByIndustrialClassification'
 import TableProductShipmentAmount from 'sections/miningindustry/products/TableProductShipmentAmount'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
@@ -44,7 +44,7 @@ const chartItems = [
     gridProps: { xs: 12, md: 6, lg: 6 },
   },
   {
-    Component: PieChartProductShipmentAmountByIndustrialClassification,
+    Component: PieProductShipmentAmountByIndustrialClassification,
     gridProps: { xs: 12, md: 6, lg: 6 },
   },
 ]

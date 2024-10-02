@@ -5,7 +5,6 @@ import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
-import ApexPieChart from 'components/apexcharts/ApexPieChart'
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 
@@ -14,6 +13,7 @@ import { ApexOptions } from 'apexcharts'
 import formatApexcharts from 'utils/apexcharts'
 import { DocumentType } from 'utils/document'
 
+import ApexPieChart from './ApexPieChart'
 import SelectTime from './SelectTime'
 
 interface Props {
@@ -44,7 +44,11 @@ export default function CardsApexPieChart({
   const formatOptions = formatApexcharts(filteredDocument).PieChart()
   const customOptions = { ...options, ...formatOptions }
 
-  const boxStyle = height ? { height } : {}
+  const defaultHeight = '200px'
+  const boxStyle = {
+    height: height || defaultHeight,
+    overflow: 'hidden',
+  }
 
   return (
     <MainCard content={false}>

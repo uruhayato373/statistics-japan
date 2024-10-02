@@ -31,7 +31,11 @@ export default function CardsHighchartsAxisChart({
   const formatOptions = formatHighcharts(document).AxisTimeChart()
   const customOptions = deepMerge(options, formatOptions)
 
-  const boxStyle = height ? { height } : {}
+  const defaultHeight = '300px'
+  const boxStyle = {
+    height: height || defaultHeight,
+    overflow: 'hidden',
+  }
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

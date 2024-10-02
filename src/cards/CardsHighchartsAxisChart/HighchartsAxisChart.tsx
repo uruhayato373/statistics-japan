@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 
 import Highcharts, { Options } from 'highcharts'
 import HC_exportData from 'highcharts/modules/export-data'
@@ -11,7 +11,6 @@ if (typeof Highcharts === 'object') {
   HC_exporting(Highcharts)
   HC_exportData(Highcharts)
 
-  // グローバル言語設定
   Highcharts.setOptions({
     lang: {
       thousandsSep: ',',
@@ -24,16 +23,35 @@ interface Props {
 }
 
 export default function HighchartsAxisChart({ options }: Props) {
+  const chartRef = useRef<HighchartsReact.RefObject>(null)
+  const [chartHeight, setChartHeight] = useState(300)
+
+  useEffect(() => {
+    const updateChartHeight = () => {
+      if (chartRef.current && chartRef.current.container.current) {
+        const containerWidth = chartRef.current.container.current.offsetWidth
+        const aspectRatio = 16 / 9
+        const newHeight = containerWidth / aspectRatio
+        setChartHeight(newHeight)
+      }
+    }
+
+    updateChartHeight()
+    window.addEventListener('resize', updateChartHeight)
+
+    return () => {
+      window.removeEventListener('resize', updateChartHeight)
+    }
+  }, [])
+
   const customOptions: Options = {
     ...options,
-    /*
-     * 全Chart共通の設定
-     */
     chart: {
+      ...options.chart,
       zooming: {
         type: 'xy',
       },
-      height: options.chart?.height || 300,
+      height: chartHeight,
     },
     title: {
       text: undefined,
@@ -53,7 +71,7 @@ export default function HighchartsAxisChart({ options }: Props) {
     <HighchartsReact
       highcharts={Highcharts}
       options={customOptions}
-      height="100%"
+      ref={chartRef}
     />
   )
 }
