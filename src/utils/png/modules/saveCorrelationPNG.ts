@@ -22,7 +22,7 @@ const saveCorrelationPNG = async (
   const contents = formatD3charts(document).scatterChart()
 
   const svgTableX = generateScatterPlot(title, contents)
-  await savePNG(svgTableX, generateFilePath(routerProps, 'test.png'))
+  await savePNG(svgTableX, generateFilePath(routerProps, `${title}.png`))
 
   return
 }

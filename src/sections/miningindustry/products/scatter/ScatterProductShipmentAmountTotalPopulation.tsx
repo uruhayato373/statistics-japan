@@ -4,11 +4,13 @@ import CircularProgressCards from 'components/CircularProgressCards'
 
 import CardsHighchartsScatterChart from 'cards/CardsHighchartsScatterChart'
 
+import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
+import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '総人口との相関関係'
+const CARD_TITLE = '総人口と製造品出荷額等'
 
 // x軸 総人口
 const ESTAT_PARAMS_MOLECULE = {
@@ -22,6 +24,10 @@ const ESTAT_PARAMS_DENOMINATOR = {
   cdCat01: 'C3401',
 }
 
+interface Props {
+  routerProps: RouterProps
+}
+
 // values
 async function processValues() {
   const values = await handleEstatAPI().fetchValues([
@@ -29,25 +35,23 @@ async function processValues() {
     ESTAT_PARAMS_DENOMINATOR,
   ])
 
-  const formattedValues = formatValues(values)
+  const filteredValues = values.filter((f) => f.areaCode !== '00000')
 
-  return formattedValues
+  return formatValues(filteredValues)
 }
 
 // format values
 function formatValues(values: ValueType[]): ValueType[] {
-  return values
-    .filter((f) => f.areaCode !== '00000')
-    .map((d) => {
-      return {
-        ...d,
-        value:
-          d.categoryCode === 'C3401'
-            ? Math.round(Number(d.value) / 100)
-            : d.value,
-        unit: d.categoryCode === 'C3401' ? '億円' : d.unit,
-      }
-    })
+  return values.map((d) => {
+    return {
+      ...d,
+      value:
+        d.categoryCode === 'C3401'
+          ? Math.round(Number(d.value) / 100)
+          : d.value,
+      unit: d.categoryCode === 'C3401' ? '億円' : d.unit,
+    }
+  })
 }
 
 // document
@@ -58,9 +62,26 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
-export default async function ScatterProductShipmentAmountTotalPopulation() {
+// server action
+async function serverAction(routerProps: RouterProps, values: ValueType[]) {
+  const { saveCorrelationPNG } = await actionSavePrefectureRanking(
+    CARD_TITLE,
+    routerProps,
+    values
+  )
+
+  await saveCorrelationPNG()
+}
+
+export default async function ScatterProductShipmentAmountTotalPopulation({
+  routerProps,
+}: Props) {
   const values = await processValues()
   const document = await processDocument(values)
+
+  if (routerProps) {
+    await serverAction(routerProps, values)
+  }
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

@@ -10,7 +10,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造業従業者数との相関関係'
+const CARD_TITLE = '製造業従業者数と製造品出荷額等'
 
 // x軸 製造業従業者数
 const ESTAT_PARAMS_MOLECULE = {
@@ -45,9 +45,11 @@ function formatValues(values: ValueType[]): ValueType[] {
   return values.map((d) => {
     return {
       ...d,
-      // 単位を億円に変換
-      value: Math.round(Number(d.value) / 100),
-      unit: '億円',
+      value:
+        d.categoryCode === 'C3401'
+          ? Math.round(Number(d.value) / 100)
+          : d.value,
+      unit: d.categoryCode === 'C3401' ? '億円' : d.unit,
     }
   })
 }
