@@ -1,22 +1,24 @@
 'use client'
 
-import Box from '@mui/material/Box'
-import Divider from '@mui/material/Divider'
-import Stack from '@mui/material/Stack'
-import Typography from '@mui/material/Typography'
+import { Suspense } from 'react'
+
+import { Box, Divider } from '@mui/material'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
+import SelectTime from 'components/SelectTime'
 
 import { ApexOptions } from 'apexcharts'
 
+import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
 import formatApexcharts from 'utils/apexcharts'
 import { DocumentType } from 'utils/document'
 
-import ApexPieChart from './ApexPieChart'
-import SelectTime from './SelectTime'
+import ApexPieChart from './Chart'
+import Control from './Control'
+import Header from './Header'
 
-interface Props {
+export interface CardsApexPieChartProps {
   title: string
   document: DocumentType
   options?: ApexOptions
@@ -24,61 +26,37 @@ interface Props {
   actionButton?: React.ReactNode
 }
 
+const DEFAULT_HEIGHT = '200px'
+
+const Content = ({ options, height }) => (
+  <Box sx={{ p: 2, height: height || DEFAULT_HEIGHT, overflow: 'hidden' }}>
+    <ApexPieChart options={options} />
+  </Box>
+)
+
 export default function CardsApexPieChart({
   title,
   document,
   options,
-  height,
+  height = DEFAULT_HEIGHT,
   actionButton,
-}: Props) {
+}: CardsApexPieChartProps) {
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 
-  if (!selectedTimeCode) return <CircularProgressCards />
-
-  const filteredDocument = {
-    ...document,
-    values: document.values.filter((f) => f.timeCode === selectedTimeCode),
-  }
+  const filteredDocument = useTimeFilteredDocument(document, selectedTimeCode)
 
   const formatOptions = formatApexcharts(filteredDocument).PieChart()
   const customOptions = { ...options, ...formatOptions }
 
-  const defaultHeight = '200px'
-  const boxStyle = {
-    height: height || defaultHeight,
-    overflow: 'hidden',
-  }
-
   return (
-    <MainCard content={false}>
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        sx={{ p: 2, pb: 0 }}
-      >
-        <Typography variant="h5" color="text.primary">
-          {title}
-        </Typography>
-        {actionButton && (
-          <Stack direction="row" spacing={1}>
-            {actionButton}
-          </Stack>
-        )}
-      </Stack>
-      <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        sx={{ pl: 2 }}
-      >
-        <SelectTimeComponent />
-      </Stack>
-      <Box sx={{ p: 2, ...boxStyle }}>
-        <ApexPieChart options={customOptions} />
-      </Box>
-    </MainCard>
+    <Suspense fallback={<CircularProgressCards />}>
+      <MainCard content={false}>
+        <Header title={title} actionButton={actionButton} />
+        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
+        <Control SelectTimeComponent={SelectTimeComponent} />
+        <Content options={customOptions} height={height} />
+      </MainCard>
+    </Suspense>
   )
 }

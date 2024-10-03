@@ -2,7 +2,7 @@ import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 
 import { ApexOptions } from 'apexcharts'
 
-import CardsApexPieChart from 'cards/CardsApexPieChart'
+import { CardsApexPieChartProps } from 'cards/CardsApexPieChart'
 
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -18,7 +18,12 @@ const ESTAT_PARAMS = {
 
 const PAGE_ID = 'product-shipment-amount'
 
-const APEX_OPTIONS: ApexOptions = {
+interface Props {
+  prefecture: PrefectureType
+  children: (props: CardsApexPieChartProps) => React.ReactNode
+}
+
+const OPTIONS: ApexOptions = {
   dataLabels: {
     dropShadow: {
       blur: 3,
@@ -79,19 +84,14 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 
 export default async function PieProductShipmentAmountByIndustrialClassification({
   prefecture,
+  children,
 }: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const options = OPTIONS
   const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return (
-    <CardsApexPieChart
-      title={title}
-      document={document}
-      options={APEX_OPTIONS}
-      actionButton={actionButton}
-    />
-  )
+  return <> {children({ title, document, options, actionButton })}</>
 }

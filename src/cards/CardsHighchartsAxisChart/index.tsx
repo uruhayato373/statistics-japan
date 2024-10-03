@@ -1,19 +1,22 @@
 import { Suspense } from 'react'
 
-import { Stack, Box, Divider, Typography } from '@mui/material'
+import { Box, Divider } from '@mui/material'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
+import CSVExport from 'components/third-party/react-table/CSVExport'
 
 import { Options } from 'highcharts'
 
+import formatCSV from 'utils/csv'
 import deepMerge from 'utils/deepMerge'
 import { DocumentType } from 'utils/document'
 import formatHighcharts from 'utils/highcharts'
 
-import HighchartsAxisChart from './HighchartsAxisChart'
+import HighchartsAxisChart from './Chart'
+import Header from './Header'
 
-interface Props {
+interface CardsHighchartsAxisChartProps {
   title?: string
   document: DocumentType
   options?: Options
@@ -21,44 +24,40 @@ interface Props {
   actionButton?: React.ReactNode
 }
 
+const DEFAULT_HEIGHT = '300px'
+
+const Content = ({ options, height }) => (
+  <Box sx={{ p: 2, height: height || DEFAULT_HEIGHT, overflow: 'hidden' }}>
+    <HighchartsAxisChart options={options} />
+  </Box>
+)
+
 export default function CardsHighchartsAxisChart({
   title,
   document,
   options,
   height,
   actionButton,
-}: Props) {
+}: CardsHighchartsAxisChartProps) {
   const formatOptions = formatHighcharts(document).AxisTimeChart()
   const customOptions = deepMerge(options, formatOptions)
 
-  const defaultHeight = '300px'
-  const boxStyle = {
-    height: height || defaultHeight,
-    overflow: 'hidden',
-  }
+  const filename = `${title}.csv`
+  const { headers, data } = formatCSV(document).AxisChart()
+  const csvButton = (
+    <CSVExport data={data} headers={headers} filename={filename} />
+  )
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
       <MainCard content={false}>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ p: 2, pb: 0 }}
-        >
-          <Typography variant="h5" color="text.primary">
-            {title}
-          </Typography>
-          {actionButton && (
-            <Stack direction="row" spacing={1}>
-              {actionButton}
-            </Stack>
-          )}
-        </Stack>
+        <Header
+          title={title}
+          csvButton={csvButton}
+          actionButton={actionButton}
+        />
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-        <Box sx={{ p: 2, ...boxStyle }}>
-          <HighchartsAxisChart options={customOptions} />
-        </Box>
+        <Content options={customOptions} height={height} />
       </MainCard>
     </Suspense>
   )

@@ -6,7 +6,11 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
 import CardsDashboard from 'cards/CardsDashboard'
+import CardsHighchartsAxisChart from 'cards/CardsHighchartsAxisChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
 import { actionSavePrefecture } from 'actions/savePrefecture'
 import AxisNumberOfManufacturing from 'sections/miningindustry/products/AxisNumberOfManufacturing'
@@ -36,15 +40,18 @@ const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 // chart items
 const chartItems = [
   {
-    Component: AxisProductShipmentAmount,
+    Section: AxisProductShipmentAmount,
+    Card: CardsHighchartsAxisChart,
     gridProps: { xs: 12, md: 6, lg: 6 },
   },
   {
-    Component: AxisNumberOfManufacturing,
+    Section: AxisNumberOfManufacturing,
+    Card: CardsApexAxisChart,
     gridProps: { xs: 12, md: 6, lg: 6 },
   },
   {
-    Component: PieProductShipmentAmountByIndustrialClassification,
+    Section: PieProductShipmentAmountByIndustrialClassification,
+    Card: CardsApexPieChart,
     gridProps: { xs: 12, md: 6, lg: 6 },
   },
 ]
@@ -52,8 +59,9 @@ const chartItems = [
 // table items
 const tableItems = [
   {
-    Component: TableProductShipmentAmount,
-    gridProps: { xs: 12, md: 6, lg: 8 },
+    Section: TableProductShipmentAmount,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
   },
 ]
 
@@ -79,15 +87,19 @@ export default async function PrefectureView({ routerProps }: Props) {
               </GridItem>
             ))}
             {/* chart items */}
-            {chartItems.map(({ Component, gridProps }, index) => (
-              <GridItem key={index} {...gridProps}>
-                <Component prefecture={currentPrefecture} />
+            {chartItems.map(({ Section, Card, gridProps }, index) => (
+              <GridItem key={`chart-${index}`} {...gridProps}>
+                <Section prefecture={currentPrefecture}>
+                  {(props) => <Card {...props} />}
+                </Section>
               </GridItem>
             ))}
             {/* table items */}
-            {tableItems.map(({ Component, gridProps }, index) => (
-              <GridItem key={index} {...gridProps}>
-                <Component prefecture={currentPrefecture} />
+            {tableItems.map(({ Section, Card, gridProps }, index) => (
+              <GridItem key={`chart-${index}`} {...gridProps}>
+                <Section prefecture={currentPrefecture}>
+                  {(props) => <Card {...props} />}
+                </Section>
               </GridItem>
             ))}
           </Grid>

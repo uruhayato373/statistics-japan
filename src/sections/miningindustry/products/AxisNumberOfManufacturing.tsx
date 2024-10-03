@@ -1,11 +1,8 @@
-import { Suspense } from 'react'
-
 import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
-import CircularProgressCards from 'components/CircularProgressCards'
 
 import { ApexOptions } from 'apexcharts'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import { CardsApexAxisChartProps } from 'cards/CardsApexAxisChart'
 
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -23,9 +20,10 @@ const PAGE_ID = 'number-of-manufacturing-establishments'
 
 interface Props {
   prefecture: PrefectureType
+  children: (props: CardsApexAxisChartProps) => React.ReactNode
 }
 
-const APEX_OPTIONS: ApexOptions = {
+const OPTIONS: ApexOptions = {
   yaxis: [
     {
       seriesName: '製造業事業所数',
@@ -78,21 +76,16 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function AxisNumberOfManufacturing({ prefecture }: Props) {
+export default async function AxisNumberOfManufacturing({
+  prefecture,
+  children,
+}: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const options = OPTIONS
   const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsApexAxisChart
-        title={title}
-        document={document}
-        options={APEX_OPTIONS}
-        actionButton={actionButton}
-      />
-    </Suspense>
-  )
+  return <> {children({ title, document, options, actionButton })}</>
 }

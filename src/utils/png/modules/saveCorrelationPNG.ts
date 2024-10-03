@@ -18,7 +18,6 @@ const saveCorrelationPNG = async (
 
   const { formatDocument } = handleDocument()
   const document = formatDocument(values, 'common')
-
   const contents = formatD3charts(document).scatterChart()
 
   const svgTableX = generateScatterPlot(title, contents)

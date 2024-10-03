@@ -1,7 +1,6 @@
-'use client'
-
 import React from 'react'
 
+import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
@@ -10,9 +9,11 @@ import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 
+import SimpleBar from 'components/third-party/SimpleBar'
+
 import {
-  flexRender,
   useReactTable,
+  flexRender,
   getCoreRowModel,
 } from '@tanstack/react-table'
 
@@ -27,7 +28,7 @@ type Props = {
 }
 
 const tableContainerStyles = {
-  maxHeight: 350,
+  maxHeight: 300,
   overflow: 'auto',
   '& .MuiTableHead-root': {
     position: 'sticky',
@@ -35,8 +36,8 @@ const tableContainerStyles = {
     zIndex: 1,
   },
   '&::-webkit-scrollbar': {
-    width: '8px',
-    height: '8px',
+    width: '6px',
+    height: '6px',
   },
   '&::-webkit-scrollbar-track': {
     background: '#f1f1f1',
@@ -53,21 +54,27 @@ const tableContainerStyles = {
 
 const tableStyles = {
   '& .MuiTableCell-root': {
-    fontSize: '0.75rem',
-    padding: '6px 16px',
+    fontSize: '0.65rem',
+    padding: '6px 8px',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    maxWidth: '200px',
+    maxWidth: '150px',
+    lineHeight: '1.3',
   },
   '& .MuiTableCell-head': {
     fontWeight: 'bold',
     backgroundColor: '#f5f5f5',
     textAlign: 'center',
   },
+  '& .MuiTableRow-root': {
+    '&:nth-of-type(even)': {
+      backgroundColor: '#fafafa',
+    },
+  },
 }
 
-export default function ReactTable({ columns, data }: Props) {
+const ReactTimeTable = ({ columns, data }: Props) => {
   const table = useReactTable({
     data,
     columns,
@@ -114,13 +121,18 @@ export default function ReactTable({ columns, data }: Props) {
       ))}
     </TableBody>
   )
-
   return (
-    <TableContainer component={Paper} sx={tableContainerStyles}>
-      <Table size="small" stickyHeader sx={tableStyles}>
-        {renderTableHeader()}
-        {renderTableBody()}
-      </Table>
-    </TableContainer>
+    <Box sx={{ width: '100%' }}>
+      <SimpleBar sx={{ maxHeight: '100%', width: '100%' }}>
+        <TableContainer component={Paper} sx={tableContainerStyles}>
+          <Table size="small" stickyHeader sx={tableStyles}>
+            {renderTableHeader()}
+            {renderTableBody()}
+          </Table>
+        </TableContainer>
+      </SimpleBar>
+    </Box>
   )
 }
+
+export default ReactTimeTable

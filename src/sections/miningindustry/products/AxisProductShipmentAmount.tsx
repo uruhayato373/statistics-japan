@@ -1,11 +1,8 @@
-import { Suspense } from 'react'
-
 import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
-import CircularProgressCards from 'components/CircularProgressCards'
 
 import { Options } from 'highcharts'
 
-import CardsHighchartsAxisChart from 'cards/CardsHighchartsAxisChart'
+import { CardsHighchartsAxisChartProps } from 'cards/CardsHighchartsAxisChart'
 
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -23,6 +20,7 @@ const PAGE_ID = 'product-shipment-amount'
 
 interface Props {
   prefecture: PrefectureType
+  children: (props: CardsHighchartsAxisChartProps) => React.ReactNode
 }
 
 const OPTIONS: Options = {
@@ -102,21 +100,16 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function AxisProductShipmentAmount({ prefecture }: Props) {
+export default async function AxisProductShipmentAmount({
+  prefecture,
+  children,
+}: Props) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const options = OPTIONS
   const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsHighchartsAxisChart
-        title={title}
-        document={document}
-        options={OPTIONS}
-        actionButton={actionButton}
-      />
-    </Suspense>
-  )
+  return <> {children({ title, document, options, actionButton })}</>
 }

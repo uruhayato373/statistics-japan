@@ -19,8 +19,9 @@ import { useLoadingState } from 'hooks/useLoadingState'
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
 import { DocumentType } from 'utils/document'
 
+import SelectTime from '../../components/SelectTime'
+
 import SelectChartType from './SelectChartType'
-import SelectTime from './SelectTime'
 import SourceCODH from './SourceCODH'
 
 const PrefectureRankingMapChart = dynamic(
