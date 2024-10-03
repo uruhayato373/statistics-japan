@@ -1,5 +1,6 @@
 import { RouterProps } from 'utils/props'
 import { RankingValueType } from 'utils/table/calcRankingValues'
+import { ValueType } from 'utils/value'
 
 import saveBestWorstPNG from './modules/saveBestWorstPNG'
 import saveCorrelationPNG from './modules/saveCorrelationPNG'
@@ -14,7 +15,7 @@ const handlePNG = () => {
     saveCorrelationPNG: async (
       title: string,
       routerProps: RouterProps,
-      values: RankingValueType[]
+      values: ValueType[]
     ) => await saveCorrelationPNG(title, routerProps, values),
   }
 }

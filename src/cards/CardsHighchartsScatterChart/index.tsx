@@ -9,10 +9,10 @@ import Typography from '@mui/material/Typography'
 
 import MainCard from 'components/MainCard'
 
+import calcCorrelationCoefficient from 'utils/calcCorrelationCoefficient'
 import { DocumentType } from 'utils/document'
 import formatHighcharts from 'utils/highcharts'
 
-import calcCorrelationCoefficient from './calcCorrelationCoefficient'
 import HighchartsScatterChart from './HighchartsScatterChart'
 
 interface Props {

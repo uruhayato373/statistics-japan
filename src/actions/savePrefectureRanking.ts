@@ -35,7 +35,7 @@ export async function actionSavePrefectureRanking(
     // 相関図の画像を生成・保存
     saveCorrelationPNG: async () => {
       const { saveCorrelationPNG } = handlePNG()
-      await saveCorrelationPNG(title, routerProps, rankingValues)
+      await saveCorrelationPNG(title, routerProps, values)
     },
   }
 }

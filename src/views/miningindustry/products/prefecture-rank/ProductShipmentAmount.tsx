@@ -51,7 +51,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
             {/* 相関関係 */}
             {ScatterCharts.map((Chart, index) => (
               <GridItem key={`scatter-${index}`} xs={12} md={6} lg={4}>
-                <Chart />
+                <Chart routerProps={routerProps} />
               </GridItem>
             ))}
             {/* 製造品出荷額（従業員1人当たり */}
