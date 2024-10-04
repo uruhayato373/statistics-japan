@@ -4,40 +4,58 @@ import { TimeType } from '../types/document'
 
 import formatCategories from './formatCategories'
 
+interface CategoryTimeMap {
+  timeCodeSet: Set<string>
+  timeCodeMap: Map<string, string>
+}
+
+function createCategoryTimeMap(categoryValues: ValueType[]): CategoryTimeMap {
+  const timeCodeSet = new Set<string>()
+  const timeCodeMap = new Map<string, string>()
+
+  categoryValues.forEach((item) => {
+    timeCodeSet.add(item.timeCode)
+    timeCodeMap.set(item.timeCode, item.timeName)
+  })
+
+  return { timeCodeSet, timeCodeMap }
+}
+
+function findCommonTimeCodes(categoryTimeMaps: CategoryTimeMap[]): string[] {
+  const [firstMap, ...restMaps] = categoryTimeMaps
+  return Array.from(firstMap.timeCodeSet).filter((timeCode) =>
+    restMaps.every((map) => map.timeCodeSet.has(timeCode))
+  )
+}
+
+function createCommonTime(
+  timeCode: string,
+  categoryTimeMaps: CategoryTimeMap[]
+): TimeType {
+  const timeNames = categoryTimeMaps.map((map) => map.timeCodeMap.get(timeCode))
+  const uniqueTimeNames = Array.from(new Set(timeNames))
+  const timeName =
+    uniqueTimeNames.length === 1
+      ? uniqueTimeNames[0]
+      : uniqueTimeNames.join(' / ')
+  return { timeCode, timeName: timeName as string }
+}
+
 function extractCommonTimes(values: ValueType[]): TimeType[] {
   const categories = formatCategories(values)
 
-  // 各カテゴリのtimeCodeとtimeNameを抽出
   const categoryTimeMaps = categories.map((category) => {
     const categoryValues = values.filter(
       (v) => v.categoryCode === category.categoryCode
     )
-    const timeCodeSet = new Set(categoryValues.map((item) => item.timeCode))
-    const timeCodeMap = new Map(
-      categoryValues.map((item) => [item.timeCode, item.timeName])
-    )
-    return { timeCodeSet, timeCodeMap }
+    return createCategoryTimeMap(categoryValues)
   })
 
-  // 全てのカテゴリに共通するtimeCodeを見つける
-  const commonTimeCodes = Array.from(categoryTimeMaps[0].timeCodeSet).filter(
-    (timeCode) => categoryTimeMaps.every((map) => map.timeCodeSet.has(timeCode))
+  const commonTimeCodes = findCommonTimeCodes(categoryTimeMaps)
+
+  return commonTimeCodes.map((timeCode) =>
+    createCommonTime(timeCode, categoryTimeMaps)
   )
-
-  // 共通のtimeCodeに対応するTimeTypeオブジェクトを作成
-  const commonTimes: TimeType[] = commonTimeCodes.map((timeCode) => {
-    const timeNames = categoryTimeMaps.map((map) =>
-      map.timeCodeMap.get(timeCode)
-    )
-    const uniqueTimeNames = Array.from(new Set(timeNames))
-    const timeName =
-      uniqueTimeNames.length === 1
-        ? uniqueTimeNames[0]
-        : uniqueTimeNames.join(' / ')
-    return { timeCode, timeName: timeName as string }
-  })
-
-  return commonTimes
 }
 
 export default extractCommonTimes
