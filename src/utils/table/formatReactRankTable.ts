@@ -1,5 +1,6 @@
 import { DocumentType } from 'utils/document'
 import { ValueType } from 'utils/value'
+import getMaxDecimalPlaces from 'utils/value/modules/getMaxDecimalPlaces'
 
 import {
   calcAverage,
@@ -25,24 +26,6 @@ export type ReactRankTableType = {
   data: RankTableDataType[]
 }
 
-/**
- * 数値の小数点以下の桁数を取得する
- * @param {number} value - 対象の数値
- * @returns {number} 小数点以下の桁数
- */
-const getDecimalPlaces = (value: number): number => {
-  const match = value.toString().match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/)
-  return match
-    ? Math.max(0, (match[1] ? match[1].length : 0) - (match[2] ? +match[2] : 0))
-    : 0
-}
-
-/**
- * 数値を指定された小数点以下の桁数で丸める
- * @param {number} value - 丸める数値
- * @param {number} digit - 小数点以下の桁数
- * @returns {number} 丸められた数値
- */
 const roundNumber = (value: number, digit: number): number =>
   Number(value.toFixed(digit))
 
@@ -78,7 +61,7 @@ const formatReactRankTable = (document: DocumentType): ReactRankTableType => {
   const numbers = filteredValues.map((d) => d.value)
 
   // 最大の小数点以下の桁数を取得
-  const maxDecimalPlaces = Math.max(...numbers.map(getDecimalPlaces))
+  const maxDecimalPlaces = getMaxDecimalPlaces(numbers)
 
   const average = roundNumber(calcAverage(numbers), maxDecimalPlaces)
   const standardDeviation = roundNumber(
