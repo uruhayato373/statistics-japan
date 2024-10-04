@@ -1,6 +1,5 @@
 import { CardsHighchartsPrefectureRankingChartProps } from 'cards/CardsHighchartsPrefectureRankingChart'
 
-import { actionSaveJson } from 'actions/saveJson'
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -48,8 +47,6 @@ function formatValues(values: ValueType[]): ValueType[] {
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const { formatRankingDocument } = handleDocument(values)
   const document = formatRankingDocument()
-
-  await actionSaveJson(document, 'document.json')
 
   return document
 }

@@ -34,7 +34,6 @@ async function processValues() {
     ESTAT_PARAMS_MOLECULE,
     ESTAT_PARAMS_DENOMINATOR,
   ])
-
   const filteredValues = values.filter((f) => f.areaCode !== '00000')
 
   return formatValues(filteredValues)

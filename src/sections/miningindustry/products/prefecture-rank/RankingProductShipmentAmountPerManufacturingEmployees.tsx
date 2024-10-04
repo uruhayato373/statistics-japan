@@ -6,7 +6,7 @@ import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造品出荷額（従業者数当たり）'
 
-const PAGE_ID = 'product-shipment-amount'
+const PAGE_ID = 'product-shipment-amount-per-manufacturing-employees'
 
 // 分子 製造品出荷額
 const ESTAT_PARAMS_MOLECULE = {
@@ -35,8 +35,9 @@ async function processValues() {
     ESTAT_PARAMS_MOLECULE,
     ESTAT_PARAMS_DENOMINATOR
   )
+  const filterdValues = values.filter((f) => f.areaCode !== '00000')
 
-  return formatValues(values)
+  return formatValues(filterdValues)
 }
 
 // format values
@@ -52,8 +53,8 @@ function formatValues(values: ValueType[]): ValueType[] {
 
 // document
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
-  const { formatDocument } = handleDocument(values)
-  const document = formatDocument()
+  const { formatRankingDocument } = handleDocument(values)
+  const document = formatRankingDocument()
 
   return document
 }

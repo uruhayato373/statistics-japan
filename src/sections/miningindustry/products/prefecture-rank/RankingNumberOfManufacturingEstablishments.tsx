@@ -26,14 +26,15 @@ interface Props {
 async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
+  const filterdValues = values.filter((f) => f.areaCode !== '00000')
 
-  return values
+  return filterdValues
 }
 
 // document
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
-  const { formatDocument } = handleDocument(values)
-  const document = formatDocument()
+  const { formatRankingDocument } = handleDocument(values)
+  const document = formatRankingDocument()
 
   return document
 }
