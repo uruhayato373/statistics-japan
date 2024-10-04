@@ -76,8 +76,8 @@ function formatValues(values: ValueType[]) {
 
 // document
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
-  const { formatDocument } = handleDocument()
-  const document = formatDocument(values, 'common')
+  const { formatDocument } = handleDocument(values, 'common')
+  const document = formatDocument()
 
   return document
 }

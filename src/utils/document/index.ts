@@ -1,22 +1,19 @@
 import { ValueType } from 'utils/value'
 
-import formatDocument from './modules/formatDocument'
+import compileDocumentData from './modules/formatDocument'
 import { DocumentType } from './types/document'
 
-export type * from './types/document'
+export * from './types/document'
 
-interface HandleDocumentResult {
-  formatDocument: (
-    values: ValueType[],
-    timesType?: 'all' | 'common'
-  ) => DocumentType
+interface DocumentHandler {
+  formatDocument: () => DocumentType
 }
 
-const handleDocument = (): HandleDocumentResult => {
-  return {
-    formatDocument: (values, timesType = 'all') =>
-      formatDocument(values, timesType),
-  }
-}
+const createDocumentHandler = (
+  values: ValueType[],
+  timesType = 'all'
+): DocumentHandler => ({
+  formatDocument: () => compileDocumentData(values, timesType),
+})
 
-export default handleDocument
+export default createDocumentHandler

@@ -59,8 +59,8 @@ async function processValues(prefCode: string) {
 
 // document
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
-  const { formatDocument } = handleDocument()
-  const document = formatDocument(values)
+  const { formatDocument } = handleDocument(values)
+  const document = formatDocument()
 
   document.categories[0].type = 'column'
   document.categories[1].type = 'line'

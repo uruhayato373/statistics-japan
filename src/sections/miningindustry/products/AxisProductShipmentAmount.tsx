@@ -83,8 +83,8 @@ function formatValues(values: ValueType[]): ValueType[] {
 
 // document
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
-  const { formatDocument } = handleDocument()
-  const document = formatDocument(values)
+  const { formatDocument } = handleDocument(values)
+  const document = formatDocument()
 
   // 製造品出荷額
   document.categories[0].type = 'column'

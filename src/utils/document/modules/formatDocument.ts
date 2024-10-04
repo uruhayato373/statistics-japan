@@ -7,7 +7,7 @@ import formatAreas from './formatAreas'
 import formatCategories from './formatCategories'
 import formatTimes from './formatTimes'
 
-const formatDocument = (
+const compileDocumentData = (
   values: ValueType[],
   timesType: 'all' | 'common' = 'all'
 ): DocumentType => {
@@ -21,4 +21,4 @@ const formatDocument = (
   }
 }
 
-export default formatDocument
+export default compileDocumentData

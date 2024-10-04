@@ -92,8 +92,8 @@ const formatValues = (values: ValueType[]) => {
 
 // document
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
-  const { formatDocument } = handleDocument()
-  const document = formatDocument(values)
+  const { formatDocument } = handleDocument(values)
+  const document = formatDocument()
 
   return document
 }
