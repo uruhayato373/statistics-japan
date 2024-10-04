@@ -1,21 +1,21 @@
 'use server'
 
+import { DocumentType } from 'utils/document'
 import handleOGP from 'utils/ogp'
 import handlePNG from 'utils/png'
 import { RouterProps } from 'utils/props'
 import calcRankingValues, {
   RankingValueType,
 } from 'utils/table/calcRankingValues'
-import { ValueType } from 'utils/value'
 
 import saveRankingDB from './modules/rankingDB'
 
 export async function actionSavePrefectureRanking(
   title: string,
   routerProps: RouterProps,
-  values: ValueType[]
+  document: DocumentType
 ) {
-  const rankingValues = formatRankingValues(values)
+  const rankingValues = formatRankingValues(document)
 
   return {
     // OGP画像を生成・保存
@@ -35,25 +35,18 @@ export async function actionSavePrefectureRanking(
     // 相関図の画像を生成・保存
     saveCorrelationPNG: async () => {
       const { saveCorrelationPNG } = handlePNG()
-      await saveCorrelationPNG(title, routerProps, values)
+      await saveCorrelationPNG(title, routerProps, document)
     },
   }
 }
 
-function formatRankingValues(values: ValueType[]): RankingValueType[] {
-  const filteredValues = values
-    .filter((f) => f.areaCode !== '00000')
-    .sort((a, b) => {
-      const timeA = parseInt(a.timeCode, 10)
-      const timeB = parseInt(b.timeCode, 10)
-      return timeB - timeA
-    })
+function formatRankingValues(document: DocumentType): RankingValueType[] {
+  const { times, values } = document
+  const latestTime = times.sort(
+    (a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)
+  )[0]
 
-  const latestTimeCode = filteredValues[0].timeCode
-
-  const latestValues = filteredValues.filter(
-    (f) => f.timeCode === latestTimeCode
-  )
+  const latestValues = values.filter((f) => f.timeCode === latestTime.timeCode)
 
   return calcRankingValues(latestValues)
 }

@@ -63,11 +63,11 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // server action
-async function serverAction(routerProps: RouterProps, values: ValueType[]) {
+async function serverAction(routerProps: RouterProps, document: DocumentType) {
   const { saveCorrelationPNG } = await actionSavePrefectureRanking(
     CARD_TITLE,
     routerProps,
-    values
+    document
   )
 
   await saveCorrelationPNG()
@@ -80,7 +80,7 @@ export default async function ScatterProductShipmentAmountTotalPopulation({
   const document = await processDocument(values)
 
   if (routerProps) {
-    await serverAction(routerProps, values)
+    await serverAction(routerProps, document)
   }
 
   return (

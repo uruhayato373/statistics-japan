@@ -52,9 +52,9 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // server action
-async function serverAction(routerProps: RouterProps, values: ValueType[]) {
+async function serverAction(routerProps: RouterProps, document: DocumentType) {
   const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
-    await actionSavePrefectureRanking(CARD_TITLE, routerProps, values)
+    await actionSavePrefectureRanking(CARD_TITLE, routerProps, document)
 
   await Promise.all([
     saveBestWorstPNG(),
@@ -73,7 +73,7 @@ export default async function RankingManufacturingIndustryAddedValue({
   const document = await processDocument(values)
 
   if (routerProps) {
-    await serverAction({ ...routerProps, pageId: PAGE_ID }, values)
+    await serverAction({ ...routerProps, pageId: PAGE_ID }, document)
   }
 
   return <> {children({ title, document })}</>
