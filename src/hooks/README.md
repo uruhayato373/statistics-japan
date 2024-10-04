@@ -1,3 +1,0 @@
-api routeのurlを生成するだけとする
-
-useSWRはここでは使わない

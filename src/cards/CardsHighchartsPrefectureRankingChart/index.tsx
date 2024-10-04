@@ -31,7 +31,7 @@ export interface CardsHighchartsPrefectureRankingChartProps {
 export default function CardsHighchartsPrefectureRankingChart({
   title,
   document,
-  height,
+  height = '450px',
   options,
 }: CardsHighchartsPrefectureRankingChartProps) {
   const [chartType, SelectChartTypeComponent] = SelectChartType()
@@ -42,8 +42,6 @@ export default function CardsHighchartsPrefectureRankingChart({
   const isLoading = useLoadingState(selectedTimeCode)
   const filteredDocument = useTimeFilteredDocument(document, selectedTimeCode)
 
-  const boxStyle = height ? { height } : {}
-
   return (
     <Suspense fallback={<CircularProgressCards />}>
       <MainCard sx={{ mt: 1 }} content={false}>
@@ -53,7 +51,7 @@ export default function CardsHighchartsPrefectureRankingChart({
           SelectTimeComponent={SelectTimeComponent}
           SelectChartTypeComponent={SelectChartTypeComponent}
         />
-        <Box sx={{ p: 2, ...boxStyle }}>
+        <Box sx={{ p: 2, height }}>
           {isLoading ? (
             <CircularProgressCards />
           ) : (

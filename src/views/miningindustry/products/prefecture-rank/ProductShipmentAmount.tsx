@@ -1,12 +1,12 @@
 import { Suspense } from 'react'
 
 import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 import Box from '@mui/system/Box'
 
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import CardsAdsResponsive from 'cards/CardsAdsResponsive'
 import CardsHighchartsScatterChart from 'cards/CardsHighchartsScatterChart'
 
 import RankingProductShipmentAmount from 'sections/miningindustry/products/prefecture-rank/RankingProductShipmentAmount'
@@ -53,12 +53,15 @@ export default async function PrefectureRankView({ routerProps }: Props) {
               routerProps={routerProps}
             />
             {/* Adsense */}
-            {[0, 1].map((index) => (
+            {/* {[0, 1].map((index) => (
               <GridItem key={`ads-${index}`} xs={12} md={6}>
                 <CardsAdsResponsive />
               </GridItem>
-            ))}
+            ))} */}
             {/* 相関関係 */}
+            <GridItem xs={12}>
+              <Typography variant="h4">相関係数</Typography>
+            </GridItem>
             {ScatterCharts.map(({ Section, Card }, index) => (
               <GridItem key={`scatter-${index}`} xs={12} md={6} lg={4}>
                 <Section routerProps={routerProps}>
@@ -67,6 +70,9 @@ export default async function PrefectureRankView({ routerProps }: Props) {
               </GridItem>
             ))}
             {/* 製造品出荷額（従業員1人当たり */}
+            <GridItem xs={12}>
+              <Typography variant="h4">製造業従業者数1人当たり</Typography>
+            </GridItem>
             <PrefectureRankingCards
               RankingComponent={
                 RankingProductShipmentAmountPerManufacturingEmployees

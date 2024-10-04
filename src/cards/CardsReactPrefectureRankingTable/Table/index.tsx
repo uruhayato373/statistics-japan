@@ -1,7 +1,6 @@
 import React from 'react'
 
-import Divider from '@mui/material/Divider'
-import Grid from '@mui/material/Grid'
+import { Box, Grid } from '@mui/material'
 
 import { RankingDocumentType } from 'utils/document'
 
@@ -13,7 +12,9 @@ interface PrefectureRankingContentProps {
   document: RankingDocumentType
 }
 
-const StatisticsGrid = ({ document }: { document: RankingDocumentType }) => (
+const StatisticsGrid: React.FC<{ document: RankingDocumentType }> = ({
+  document,
+}) => (
   <Grid container spacing={3}>
     <Grid item xs={12} lg={6}>
       <Average document={document} />
@@ -24,14 +25,17 @@ const StatisticsGrid = ({ document }: { document: RankingDocumentType }) => (
   </Grid>
 )
 
-const Table: React.FC<PrefectureRankingContentProps> = ({ document }) => {
+const PrefectureRankingContent: React.FC<PrefectureRankingContentProps> = ({
+  document,
+}) => {
   return (
-    <>
+    <Box>
       <PrefectureRankingTable document={document} />
-      <Divider sx={{ mt: 2, mb: 2 }} />
-      <StatisticsGrid document={document} />
-    </>
+      <Box sx={{ mt: 2 }}>
+        <StatisticsGrid document={document} />
+      </Box>
+    </Box>
   )
 }
 
-export default Table
+export default PrefectureRankingContent

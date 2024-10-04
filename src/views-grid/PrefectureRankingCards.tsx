@@ -1,7 +1,7 @@
 import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
 import CardsReactPrefectureRankingTable from 'cards/CardsReactPrefectureRankingTable'
 
-import { DocumentType } from 'utils/document'
+import { RankingDocumentType } from 'utils/document'
 import { RouterProps } from 'utils/props'
 
 import GridItem from './GridItem'
@@ -9,7 +9,7 @@ interface RankingComponentProps {
   routerProps?: RouterProps
   children: (props: {
     title: string
-    document: DocumentType
+    document: RankingDocumentType
   }) => React.ReactNode
 }
 

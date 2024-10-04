@@ -24,13 +24,10 @@ import {
 
 import { DocumentType } from 'utils/document'
 import formatTable from 'utils/table'
+import formatNumberJapanese from 'utils/value/modules/formatNumberJapanese'
 
 interface Props {
   document: DocumentType
-}
-
-const formatNumber = (value: number, digit: number = 1) => {
-  return Number(value).toFixed(digit)
 }
 
 const useTableData = (document: DocumentType) => {
@@ -42,7 +39,7 @@ const useTableData = (document: DocumentType) => {
       if (['deviationValue'].includes(column.accessorKey)) {
         return {
           ...column,
-          cell: ({ getValue }) => formatNumber(getValue()),
+          cell: ({ getValue }) => formatNumberJapanese(getValue()),
         }
       }
       return column
@@ -143,7 +140,7 @@ export default function PrefectureRankingTable({ document }: Props) {
       <TableContainer
         component={Paper}
         sx={{
-          maxHeight: 350,
+          maxHeight: 300,
           overflow: 'auto',
           '&::-webkit-scrollbar': {
             width: '8px',

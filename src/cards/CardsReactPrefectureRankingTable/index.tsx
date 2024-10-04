@@ -36,7 +36,7 @@ const useCSVData = (document: RankingDocumentType, title?: string) => {
 export default function CardsReactPrefectureRankingTable({
   title,
   document,
-  height,
+  height = '450px',
 }: Props) {
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
@@ -52,7 +52,7 @@ export default function CardsReactPrefectureRankingTable({
     [data, headers, filename]
   )
 
-  const boxStyle = height ? { height } : {}
+  if (!selectedTimeCode) return null
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
@@ -60,7 +60,7 @@ export default function CardsReactPrefectureRankingTable({
         <Header title={title} csvButton={csvButton} />
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
         <Control SelectTimeComponent={SelectTimeComponent} />
-        <Box sx={{ p: 2, ...boxStyle }}>
+        <Box sx={{ p: 2, overflow: 'auto', height: height }}>
           {isLoading ? (
             <CircularProgressCards />
           ) : (

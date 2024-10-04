@@ -1,18 +1,16 @@
 import { ValueType } from 'utils/value'
 
+import { calcAverage } from './calcAverage'
 import {
-  calcAverage,
   calcDeviationValue,
   calcStandardDeviation,
-} from './calcStatic'
+} from './calcStandardDeviation'
+import roundToDecimalPlaces from './roundToDecimalPlaces'
 
 export type RankingValueType = ValueType & {
   deviationValue: number
   rank: number
 }
-
-const roundNumber = (value: number, digit: number): number =>
-  Number(value.toFixed(digit))
 
 const calcRankingValues = (values: ValueType[]): RankingValueType[] => {
   const filteredValues = values
@@ -20,14 +18,17 @@ const calcRankingValues = (values: ValueType[]): RankingValueType[] => {
     .filter((f) => !isNaN(f.value))
   const numbers = filteredValues.map((d) => d.value)
 
-  const average = roundNumber(calcAverage(numbers), 0)
-  const standardDeviation = roundNumber(calcStandardDeviation(numbers), 0)
+  const average = roundToDecimalPlaces(calcAverage(numbers), 0)
+  const standardDeviation = roundToDecimalPlaces(
+    calcStandardDeviation(numbers),
+    0
+  )
 
   // ソートしてランクを付与
   const sortedData = filteredValues
     .map((item) => ({
       ...item,
-      deviationValue: roundNumber(
+      deviationValue: roundToDecimalPlaces(
         calcDeviationValue(item.value, average, standardDeviation),
         1
       ),
