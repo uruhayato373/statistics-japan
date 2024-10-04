@@ -6,7 +6,7 @@ import {
   calcAverage,
   calcDeviationValue,
   calcStandardDeviation,
-} from './calcStatic'
+} from '../value/modules/calcStatic'
 
 export type RankTableColumnType = {
   header: string
@@ -25,9 +25,6 @@ export type ReactRankTableType = {
   columns: RankTableColumnType[]
   data: RankTableDataType[]
 }
-
-const roundNumber = (value: number, digit: number): number =>
-  Number(value.toFixed(digit))
 
 /**
  * ドキュメントデータをReact Ranking Tableフォーマットに変換する
@@ -63,11 +60,8 @@ const formatReactRankTable = (document: DocumentType): ReactRankTableType => {
   // 最大の小数点以下の桁数を取得
   const maxDecimalPlaces = getMaxDecimalPlaces(numbers)
 
-  const average = roundNumber(calcAverage(numbers), maxDecimalPlaces)
-  const standardDeviation = roundNumber(
-    calcStandardDeviation(numbers),
-    maxDecimalPlaces
-  )
+  const average = calcAverage(numbers)
+  const standardDeviation = calcStandardDeviation(numbers)
 
   // ソートしてランクを付与
   const sortedData = filteredValues
@@ -79,9 +73,10 @@ const formatReactRankTable = (document: DocumentType): ReactRankTableType => {
             maximumFractionDigits: maxDecimalPlaces,
           })} ${item.unit}`
         : '-',
-      deviationValue: roundNumber(
-        calcDeviationValue(item.value, average, standardDeviation),
-        1
+      deviationValue: calcDeviationValue(
+        item.value,
+        average,
+        standardDeviation
       ),
     }))
     .sort((a, b) => b.value - a.value) // 降順にソート

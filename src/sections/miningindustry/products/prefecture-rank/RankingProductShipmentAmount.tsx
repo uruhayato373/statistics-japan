@@ -1,5 +1,6 @@
 import { CardsHighchartsPrefectureRankingChartProps } from 'cards/CardsHighchartsPrefectureRankingChart'
 
+import { actionSaveJson } from 'actions/saveJson'
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -26,9 +27,9 @@ interface Props {
 async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  const formattedValues = formatValues(values)
+  const filterdValues = values.filter((f) => f.areaCode !== '00000')
 
-  return formattedValues
+  return formatValues(filterdValues)
 }
 
 // format values
@@ -45,8 +46,10 @@ function formatValues(values: ValueType[]): ValueType[] {
 
 // document
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
-  const { formatDocument } = handleDocument(values)
-  const document = formatDocument()
+  const { formatRankingDocument } = handleDocument(values)
+  const document = formatRankingDocument()
+
+  await actionSaveJson(document, 'document.json')
 
   return document
 }

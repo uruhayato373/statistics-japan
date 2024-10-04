@@ -1,19 +1,24 @@
 import { ValueType } from 'utils/value'
 
-import compileDocumentData from './modules/formatDocument'
-import { DocumentType } from './types/document'
+import compileDocument from './modules/compileDocument'
+import compileRankingDocument from './modules/compileRankingDocument'
+import { DocumentType, RankingDocumentType } from './types/document'
 
 export * from './types/document'
 
 interface DocumentHandler {
   formatDocument: () => DocumentType
+  formatRankingDocument: () => RankingDocumentType
 }
 
-const createDocumentHandler = (
+const handleDocument = (
   values: ValueType[],
   timesType = 'all'
-): DocumentHandler => ({
-  formatDocument: () => compileDocumentData(values, timesType),
-})
+): DocumentHandler => {
+  return {
+    formatDocument: () => compileDocument(values, timesType),
+    formatRankingDocument: () => compileRankingDocument(values, timesType),
+  }
+}
 
-export default createDocumentHandler
+export default handleDocument

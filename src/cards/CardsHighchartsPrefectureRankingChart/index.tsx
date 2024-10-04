@@ -117,6 +117,7 @@ export default function CardsHighchartsPrefectureRankingChart({
 
   const isLoading = useLoadingState(selectedTimeCode)
   const filteredDocument = useTimeFilteredDocument(document, selectedTimeCode)
+  console.log('document', document)
 
   const boxStyle = height ? { height } : {}
 
