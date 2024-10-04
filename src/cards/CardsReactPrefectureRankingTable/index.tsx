@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
+import SelectTime from 'components/SelectTime'
 import { CSVExport } from 'components/third-party/react-table'
 
 import { DocumentType } from 'utils/document'
@@ -17,7 +18,6 @@ import formatTable from 'utils/table'
 import Average from './Average'
 import Median from './Median'
 import PrefectureRankingTable from './PrefectureRankingTable'
-import SelectTime from './SelectTime'
 
 interface Props {
   title?: string

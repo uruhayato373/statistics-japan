@@ -6,7 +6,7 @@ import handlePNG from 'utils/png'
 import { RouterProps } from 'utils/props'
 import calcRankingValues, {
   RankingValueType,
-} from 'utils/table/calcRankingValues'
+} from 'utils/value/modules/calcRankingValues'
 
 import saveRankingDB from './modules/rankingDB'
 

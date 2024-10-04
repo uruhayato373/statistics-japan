@@ -1,5 +1,5 @@
 import { RouterProps } from 'utils/props'
-import { RankingValueType } from 'utils/table/calcRankingValues'
+import { RankingValueType } from 'utils/value/modules/calcRankingValues'
 
 import saveJapanPNG from './modules/saveJapanPNG'
 import savePrefecturePNG from './modules/savePrefecturePNG'

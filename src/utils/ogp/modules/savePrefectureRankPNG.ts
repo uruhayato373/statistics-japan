@@ -3,7 +3,7 @@ import path from 'path'
 import sharp from 'sharp'
 
 import { RouterProps } from 'utils/props'
-import { RankingValueType } from 'utils/table/calcRankingValues'
+import { RankingValueType } from 'utils/value/modules/calcRankingValues'
 
 import generatePrefectureRankSVG from './generatePrefectureRankSVG'
 

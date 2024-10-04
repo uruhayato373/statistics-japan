@@ -1,7 +1,7 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
 import { RouterProps } from 'utils/props'
-import { RankingValueType } from 'utils/table/calcRankingValues'
+import { RankingValueType } from 'utils/value/modules/calcRankingValues'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY

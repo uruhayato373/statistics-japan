@@ -6,7 +6,7 @@ import { JSDOM } from 'jsdom'
 import * as topojson from 'topojson-client'
 
 import geoShapeData from 'data/topojson/prefecture.json'
-import { RankingValueType } from 'utils/table/calcRankingValues'
+import { RankingValueType } from 'utils/value/modules/calcRankingValues'
 
 const formatSeries = (values: RankingValueType[]) => {
   return values.map((d) => ({

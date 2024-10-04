@@ -4,7 +4,7 @@ import {
   calcAverage,
   calcDeviationValue,
   calcStandardDeviation,
-} from './calcStatic'
+} from '../../table/calcStatic'
 
 export type RankingValueType = ValueType & {
   deviationValue: number

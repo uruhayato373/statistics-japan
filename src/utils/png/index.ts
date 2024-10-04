@@ -1,6 +1,6 @@
 import { DocumentType } from 'utils/document'
 import { RouterProps } from 'utils/props'
-import { RankingValueType } from 'utils/table/calcRankingValues'
+import { RankingValueType } from 'utils/value/modules/calcRankingValues'
 
 import saveBestWorstPNG from './modules/saveBestWorstPNG'
 import saveCorrelationPNG from './modules/saveCorrelationPNG'

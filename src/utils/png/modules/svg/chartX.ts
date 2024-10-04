@@ -1,4 +1,4 @@
-import { RankingValueType } from 'utils/table/calcRankingValues'
+import { RankingValueType } from 'utils/value/modules/calcRankingValues'
 
 const generateChartX = (
   title: string,
