@@ -1,12 +1,6 @@
-import { DocumentType } from 'utils/document'
+import { RankingDocumentType } from 'utils/document'
 import { ValueType } from 'utils/value'
-import getMaxDecimalPlaces from 'utils/value/modules/getMaxDecimalPlaces'
-
-import {
-  calcAverage,
-  calcDeviationValue,
-  calcStandardDeviation,
-} from '../value/modules/calcStatic'
+import formatNumberJapanese from 'utils/value/modules/formatNumberJapanese'
 
 export type RankTableColumnType = {
   header: string
@@ -26,12 +20,9 @@ export type ReactRankTableType = {
   data: RankTableDataType[]
 }
 
-/**
- * ドキュメントデータをReact Ranking Tableフォーマットに変換する
- * @param {DocumentType} document - 変換元のドキュメントデータ
- * @returns {ReactRankTableType} React Table用のデータ構造
- */
-const formatReactRankTable = (document: DocumentType): ReactRankTableType => {
+const formatReactRankTable = (
+  document: RankingDocumentType
+): ReactRankTableType => {
   const { categories, values } = document
   const { categoryName } = categories[0]
 
@@ -52,43 +43,20 @@ const formatReactRankTable = (document: DocumentType): ReactRankTableType => {
     { header: '偏差値', footer: '偏差値', accessorKey: 'deviationValue' },
   ]
 
-  const filteredValues = values
-    .filter((f) => f.areaCode !== '00000')
-    .filter((f) => !isNaN(f.value))
-  const numbers = filteredValues.map((d) => d.value)
+  const filteredValues = values.filter((f) => !isNaN(f.value))
 
-  // 最大の小数点以下の桁数を取得
-  const maxDecimalPlaces = getMaxDecimalPlaces(numbers)
-
-  const average = calcAverage(numbers)
-  const standardDeviation = calcStandardDeviation(numbers)
-
-  // ソートしてランクを付与
   const sortedData = filteredValues
     .map((item) => ({
       ...item,
       tableValue: item.value
-        ? `${item.value.toLocaleString('ja-JP', {
-            minimumFractionDigits: maxDecimalPlaces,
-            maximumFractionDigits: maxDecimalPlaces,
-          })} ${item.unit}`
+        ? `${formatNumberJapanese(item.value)} ${item.unit}`
         : '-',
-      deviationValue: calcDeviationValue(
-        item.value,
-        average,
-        standardDeviation
-      ),
     }))
     .sort((a, b) => b.value - a.value) // 降順にソート
 
-  const data: RankTableDataType[] = sortedData.map((item, index) => ({
-    ...item,
-    rank: index + 1,
-  }))
-
   return {
     columns,
-    data,
+    data: sortedData,
   }
 }
 

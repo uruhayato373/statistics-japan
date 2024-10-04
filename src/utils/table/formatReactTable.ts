@@ -1,83 +1,79 @@
 import { DocumentType } from 'utils/document'
+import formatNumberJapanese from 'utils/value/modules/formatNumberJapanese'
 
-export type TimeTableColumnType = {
+export interface TimeTableColumn {
   header: string
   footer: string
   accessorKey: string
 }
 
-export type TimeTableDataType = {
+export interface TimeTableData {
   timeName: string
   [key: string]: string
 }
 
-export type ReactTimeTableType = {
-  columns: TimeTableColumnType[]
-  data: TimeTableDataType[]
+export interface ReactTimeTable {
+  columns: TimeTableColumn[]
+  data: TimeTableData[]
 }
 
-/**
- * 数値を指定された単位付きでフォーマットする
- * @param {number | undefined} value - フォーマットする数値
- * @param {string} unit - 付加する単位
- * @returns {string} フォーマットされた文字列
- */
-const formatNumber = (
-  value: number | null | undefined,
-  unit: string
-): string => {
-  if (value === null || value === undefined) return ''
-  if (isNaN(value)) return 'N/A'
+const sortTimesByCodeDescending = (times: DocumentType['times']) =>
+  [...times].sort((a, b) => b.timeCode.localeCompare(a.timeCode))
 
-  const formattedValue = value.toLocaleString('ja-JP', {
-    minimumFractionDigits: (value.toString().split('.')[1] || '').length,
-    maximumFractionDigits: 20,
-  })
-  return `${formattedValue} ${unit}`.trim()
-}
+const createColumns = (
+  categories: DocumentType['categories']
+): TimeTableColumn[] => [
+  {
+    header: '年度',
+    footer: '年度',
+    accessorKey: 'timeName',
+  },
+  ...categories.map((category) => ({
+    header: category.categoryName,
+    footer: category.categoryName,
+    accessorKey: category.categoryCode,
+  })),
+]
 
-/**
- * ドキュメントデータをReact Tableフォーマットに変換する
- * @param {DocumentType} document - 変換元のドキュメントデータ
- * @returns {{columns: any[], data: any[]}} React Table用のデータ構造
- */
-const formatReactTable = (document: DocumentType) => {
-  const { categories, times, values } = document
-
-  // timesをtimeCodeで降順にソート
-  const sortedTimes = [...times].sort((a, b) =>
-    b.timeCode.localeCompare(a.timeCode)
+const findMatchedValue = (
+  values: DocumentType['values'],
+  timeCode: string,
+  categoryCode: string
+) =>
+  values.find(
+    (value) =>
+      value.timeCode === timeCode && value.categoryCode === categoryCode
   )
 
-  const columns = [
-    {
-      header: '年度',
-      footer: '年度',
-      accessorKey: 'timeName',
-    },
-    ...categories.map((d) => ({
-      header: d.categoryName,
-      footer: d.categoryName,
-      accessorKey: d.categoryCode,
-    })),
-  ]
-
-  const data = sortedTimes.map((d) => ({
-    timeName: d.timeName,
+const createTableData = (
+  sortedTimes: DocumentType['times'],
+  categories: DocumentType['categories'],
+  values: DocumentType['values']
+): TimeTableData[] =>
+  sortedTimes.map((time) => ({
+    timeName: time.timeName,
     ...Object.fromEntries(
       categories.map((category) => {
-        const matchedValue = values.find(
-          (f) =>
-            f.timeCode === d.timeCode &&
-            f.categoryCode === category.categoryCode
+        const matchedValue = findMatchedValue(
+          values,
+          time.timeCode,
+          category.categoryCode
         )
+
         return [
           category.categoryCode,
-          formatNumber(matchedValue?.value, matchedValue?.unit || ''),
+          `${formatNumberJapanese(matchedValue?.value)} ${matchedValue?.unit || ''}`,
         ]
       })
     ),
   }))
+
+const formatReactTable = (document: DocumentType): ReactTimeTable => {
+  const { categories, times, values } = document
+
+  const sortedTimes = sortTimesByCodeDescending(times)
+  const columns = createColumns(categories)
+  const data = createTableData(sortedTimes, categories, values)
 
   return { columns, data }
 }

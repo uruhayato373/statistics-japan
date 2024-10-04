@@ -16,7 +16,7 @@ import formatHighcharts from 'utils/highcharts'
 import HighchartsAxisChart from './Chart'
 import Header from './Header'
 
-interface CardsHighchartsAxisChartProps {
+export interface CardsHighchartsAxisChartProps {
   title?: string
   document: DocumentType
   options?: Options

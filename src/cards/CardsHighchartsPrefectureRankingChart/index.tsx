@@ -1,15 +1,10 @@
 'use client'
 
-import { ReactElement, Suspense } from 'react'
-
-import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
 
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
-import Stack from '@mui/material/Stack'
-import Typography from '@mui/material/Typography'
 
-import LinkToPrefecture from 'components/button/LinkToPrefecture'
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 
@@ -21,24 +16,10 @@ import { DocumentType } from 'utils/document'
 
 import SelectTime from '../../components/SelectTime'
 
+import Chart from './Chart'
+import Control from './Control'
+import Header from './Header'
 import SelectChartType from './SelectChartType'
-import SourceCODH from './SourceCODH'
-
-const PrefectureRankingMapChart = dynamic(
-  () => import('./PrefectureRankingMapChart'),
-  {
-    loading: () => <CircularProgressCards />,
-    ssr: false,
-  }
-)
-
-const PrefectureRankingBarChart = dynamic(
-  () => import('./PrefectureRankingBarChart'),
-  {
-    loading: () => <CircularProgressCards />,
-    ssr: false,
-  }
-)
 
 export interface CardsHighchartsPrefectureRankingChartProps {
   title: string
@@ -46,63 +27,6 @@ export interface CardsHighchartsPrefectureRankingChartProps {
   height?: string
   options?: Options
 }
-
-// header
-const Header = ({ title }: { title: string }) => (
-  <Stack
-    direction="row"
-    alignItems="center"
-    justifyContent="space-between"
-    sx={{ p: 2, pb: 0 }}
-  >
-    <Typography variant="h5" color="text.primary">
-      {title}
-    </Typography>
-    <LinkToPrefecture />
-  </Stack>
-)
-
-// control
-interface ControlsProps {
-  SelectTimeComponent: () => ReactElement
-  SelectChartTypeComponent: () => ReactElement
-}
-
-const Control = ({
-  SelectTimeComponent,
-  SelectChartTypeComponent,
-}: ControlsProps) => (
-  <Stack
-    direction="row"
-    alignItems="center"
-    justifyContent="space-between"
-    sx={{ pl: 2 }}
-  >
-    <SelectTimeComponent />
-    <SelectChartTypeComponent />
-  </Stack>
-)
-
-// content
-interface ContentProps {
-  chartType: string
-  filteredDocument: DocumentType
-  options?: Options
-}
-
-const Content = ({ chartType, filteredDocument, options }: ContentProps) => (
-  <>
-    {chartType === 'map' ? (
-      <PrefectureRankingMapChart
-        document={filteredDocument}
-        options={options}
-      />
-    ) : (
-      <PrefectureRankingBarChart document={filteredDocument} />
-    )}
-    <SourceCODH />
-  </>
-)
 
 export default function CardsHighchartsPrefectureRankingChart({
   title,
@@ -117,7 +41,6 @@ export default function CardsHighchartsPrefectureRankingChart({
 
   const isLoading = useLoadingState(selectedTimeCode)
   const filteredDocument = useTimeFilteredDocument(document, selectedTimeCode)
-  console.log('document', document)
 
   const boxStyle = height ? { height } : {}
 
@@ -134,7 +57,7 @@ export default function CardsHighchartsPrefectureRankingChart({
           {isLoading ? (
             <CircularProgressCards />
           ) : (
-            <Content
+            <Chart
               chartType={chartType}
               filteredDocument={filteredDocument}
               options={options}

@@ -1,5 +1,5 @@
 'use client'
-import { Suspense, useEffect, useState } from 'react'
+import { Suspense } from 'react'
 
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
@@ -12,6 +12,8 @@ import MainCard from 'components/MainCard'
 import SelectTime from 'components/SelectTime'
 import { CSVExport } from 'components/third-party/react-table'
 
+import { useLoadingState } from 'hooks/useLoadingState'
+import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
 import { DocumentType } from 'utils/document'
 import formatTable from 'utils/table'
 
@@ -30,28 +32,11 @@ export default function CardsReactPrefectureRankingTable({
   document,
   height,
 }: Props) {
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 
-  useEffect(() => {
-    if (selectedTimeCode) {
-      setIsLoading(true)
-      const timer = setTimeout(() => {
-        setIsLoading(false)
-      }, 1000)
-
-      return () => clearTimeout(timer)
-    }
-  }, [selectedTimeCode])
-
-  if (!selectedTimeCode) return <CircularProgressCards />
-
-  const filteredDocument = {
-    ...document,
-    values: document.values.filter((f) => f.timeCode === selectedTimeCode),
-  }
+  const isLoading = useLoadingState(selectedTimeCode)
+  const filteredDocument = useTimeFilteredDocument(document, selectedTimeCode)
 
   const contents = formatTable(filteredDocument).reactRankTable()
   const { columns, data } = contents

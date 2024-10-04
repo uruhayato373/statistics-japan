@@ -7,6 +7,7 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import CardsAdsResponsive from 'cards/CardsAdsResponsive'
+import CardsHighchartsScatterChart from 'cards/CardsHighchartsScatterChart'
 
 import RankingProductShipmentAmount from 'sections/miningindustry/products/prefecture-rank/RankingProductShipmentAmount'
 import RankingProductShipmentAmountPerManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingProductShipmentAmountPerManufacturingEmployees'
@@ -23,9 +24,18 @@ interface Props {
 }
 
 const ScatterCharts = [
-  ScatterProductShipmentAmountManufacturingEstablishments,
-  ScatterProductShipmentAmountManufacturingEmployees,
-  ScatterProductShipmentAmountTotalPopulation,
+  {
+    Section: ScatterProductShipmentAmountManufacturingEstablishments,
+    Card: CardsHighchartsScatterChart,
+  },
+  {
+    Section: ScatterProductShipmentAmountManufacturingEmployees,
+    Card: CardsHighchartsScatterChart,
+  },
+  {
+    Section: ScatterProductShipmentAmountTotalPopulation,
+    Card: CardsHighchartsScatterChart,
+  },
 ]
 
 export default async function PrefectureRankView({ routerProps }: Props) {
@@ -49,9 +59,11 @@ export default async function PrefectureRankView({ routerProps }: Props) {
               </GridItem>
             ))}
             {/* 相関関係 */}
-            {ScatterCharts.map((Chart, index) => (
+            {ScatterCharts.map(({ Section, Card }, index) => (
               <GridItem key={`scatter-${index}`} xs={12} md={6} lg={4}>
-                <Chart routerProps={routerProps} />
+                <Section routerProps={routerProps}>
+                  {(props) => <Card {...props} />}
+                </Section>
               </GridItem>
             ))}
             {/* 製造品出荷額（従業員1人当たり */}

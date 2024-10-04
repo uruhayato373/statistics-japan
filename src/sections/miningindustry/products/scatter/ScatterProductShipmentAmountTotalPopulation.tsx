@@ -1,8 +1,4 @@
-import { Suspense } from 'react'
-
-import CircularProgressCards from 'components/CircularProgressCards'
-
-import CardsHighchartsScatterChart from 'cards/CardsHighchartsScatterChart'
+import { CardsHighchartsScatterChartProps } from 'cards/CardsHighchartsScatterChart'
 
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -26,6 +22,7 @@ const ESTAT_PARAMS_DENOMINATOR = {
 
 interface Props {
   routerProps: RouterProps
+  children: (props: CardsHighchartsScatterChartProps) => React.ReactNode
 }
 
 // values
@@ -55,8 +52,8 @@ function formatValues(values: ValueType[]): ValueType[] {
 
 // document
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
-  const { formatDocument } = handleDocument(values, 'common')
-  const document = formatDocument()
+  const { formatLatestDocument } = handleDocument(values, 'common')
+  const document = formatLatestDocument()
 
   return document
 }
@@ -74,7 +71,9 @@ async function serverAction(routerProps: RouterProps, document: DocumentType) {
 
 export default async function ScatterProductShipmentAmountTotalPopulation({
   routerProps,
+  children,
 }: Props) {
+  const title = CARD_TITLE
   const values = await processValues()
   const document = await processDocument(values)
 
@@ -82,9 +81,5 @@ export default async function ScatterProductShipmentAmountTotalPopulation({
     await serverAction(routerProps, document)
   }
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsHighchartsScatterChart title={CARD_TITLE} document={document} />
-    </Suspense>
-  )
+  return <> {children({ title, document })}</>
 }

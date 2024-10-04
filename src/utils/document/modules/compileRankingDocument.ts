@@ -1,7 +1,7 @@
 import { ValueType } from 'utils/value'
 import calcRankingValues from 'utils/value/modules/calcRankingValues'
 
-import { RankingDocumentType, TimesType } from '../types/document'
+import { RankingDocumentType } from '../types/document'
 
 import extractCommonTimes from './extractCommonTimes'
 import formatAreas from './formatAreas'
@@ -33,7 +33,7 @@ const calculateFormattedValues = (
 
 const compileRankingDocument = (
   values: ValueType[],
-  timesType: TimesType = 'all'
+  timesType: 'all' | 'common' = 'all'
 ): RankingDocumentType => {
   const times =
     timesType === 'common' ? extractCommonTimes(values) : formatTimes(values)

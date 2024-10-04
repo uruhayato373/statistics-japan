@@ -48,3 +48,5 @@ export interface RankingDocumentType {
   areas: AreaType[]
   values: RankingValueType[]
 }
+
+export type TimesKindType = 'all' | 'common'
