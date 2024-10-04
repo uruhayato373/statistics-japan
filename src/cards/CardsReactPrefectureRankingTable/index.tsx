@@ -1,11 +1,9 @@
 'use client'
-import { Suspense } from 'react'
+
+import { Suspense, useMemo } from 'react'
 
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
-import Grid from '@mui/material/Grid'
-import Stack from '@mui/material/Stack'
-import Typography from '@mui/material/Typography'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
@@ -14,17 +12,25 @@ import { CSVExport } from 'components/third-party/react-table'
 
 import { useLoadingState } from 'hooks/useLoadingState'
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
-import { DocumentType } from 'utils/document'
-import formatTable from 'utils/table'
+import formatCSV from 'utils/csv'
+import { RankingDocumentType } from 'utils/document'
 
-import Average from './Average'
-import Median from './Median'
-import PrefectureRankingTable from './PrefectureRankingTable'
+import Control from './Control'
+import Header from './Header'
+import Table from './Table'
 
 interface Props {
   title?: string
-  document: DocumentType
+  document: RankingDocumentType
   height?: string
+}
+
+const useCSVData = (document: RankingDocumentType, title?: string) => {
+  return useMemo(() => {
+    const { headers, data } = formatCSV(document).RankingTable()
+    const filename = `${title}.csv`
+    return { headers, data, filename }
+  }, [document, title])
 }
 
 export default function CardsReactPrefectureRankingTable({
@@ -36,70 +42,29 @@ export default function CardsReactPrefectureRankingTable({
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 
   const isLoading = useLoadingState(selectedTimeCode)
-  const filteredDocument = useTimeFilteredDocument(document, selectedTimeCode)
-
-  const contents = formatTable(filteredDocument).reactRankTable()
-  const { columns, data } = contents
-
-  const headers = columns.map((column) => {
-    return {
-      label: column.footer,
-      key: column.accessorKey as string,
-    }
-  })
-
-  const csvData = data.map((d) => {
-    return {
-      rank: d.rank.toString(),
-      areaName: d.areaName,
-      tableValue: d.tableValue,
-      deviationValue: d.deviationValue.toString(),
-    }
-  })
-
-  const filename = `${title}.csv`
+  const filteredDocument = useTimeFilteredDocument(
+    document,
+    selectedTimeCode
+  ) as RankingDocumentType
+  const { headers, data, filename } = useCSVData(document, title)
+  const csvButton = useMemo(
+    () => <CSVExport data={data} headers={headers} filename={filename} />,
+    [data, headers, filename]
+  )
 
   const boxStyle = height ? { height } : {}
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
       <MainCard sx={{ mt: 1 }} content={false}>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ p: 2, pb: 0 }}
-        >
-          <Typography variant="h5" color="text.primary">
-            {title}
-          </Typography>
-          <CSVExport data={csvData} headers={headers} filename={filename} />
-        </Stack>
+        <Header title={title} csvButton={csvButton} />
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ pl: 2 }}
-        >
-          <SelectTimeComponent />
-        </Stack>
+        <Control SelectTimeComponent={SelectTimeComponent} />
         <Box sx={{ p: 2, ...boxStyle }}>
           {isLoading ? (
             <CircularProgressCards />
           ) : (
-            <>
-              <PrefectureRankingTable document={filteredDocument} />
-              <Divider sx={{ mt: 2, mb: 2 }} />
-              <Grid container spacing={3}>
-                <Grid item xs={12} lg={6}>
-                  <Average document={filteredDocument} />
-                </Grid>
-                <Grid item xs={12} lg={6}>
-                  <Median document={filteredDocument} />
-                </Grid>
-              </Grid>
-            </>
+            <Table document={filteredDocument} />
           )}
         </Box>
       </MainCard>

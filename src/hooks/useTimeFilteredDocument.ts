@@ -1,9 +1,9 @@
 import { useMemo } from 'react'
 
-import { DocumentType } from 'utils/document'
+import { DocumentType, RankingDocumentType } from 'utils/document'
 
 export function useTimeFilteredDocument(
-  document: DocumentType,
+  document: DocumentType | RankingDocumentType,
   selectedTimeCode: string
 ) {
   return useMemo(

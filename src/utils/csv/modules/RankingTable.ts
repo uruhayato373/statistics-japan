@@ -1,39 +1,41 @@
-import { DocumentType } from 'utils/document'
+import { RankingDocumentType } from 'utils/document'
+import formatNumberJapanese from 'utils/value/modules/formatNumberJapanese'
 
-const formatRankingTable = (document: DocumentType) => {
-  const { categories, times, values } = document
+interface HeaderType {
+  label: string
+  key: string
+}
 
-  const headers = [
-    { label: '年度', key: 'timeName' },
-    ...categories.map((category) => ({
-      label: category.categoryName,
-      key: category.categoryCode,
-    })),
-  ]
+interface DataType {
+  [key: string]: string
+}
 
-  const data = times.map((time) => {
-    const filteredValues = values.filter(
-      (value) => value.timeCode === time.timeCode
-    )
+const HEADERS: HeaderType[] = [
+  { label: '順位', key: 'rank' },
+  { label: '都道府県', key: 'areaName' },
+  { label: '値', key: 'value' },
+  { label: '単位', key: 'unit' },
+  { label: '偏差値', key: 'deviationValue' },
+]
+
+const formatRankingTable = (document: RankingDocumentType) => {
+  const { areas, values } = document
+
+  const valueMap = new Map(values.map((value) => [value.areaCode, value]))
+
+  const data: DataType[] = areas.map((area) => {
+    const areaValues = valueMap.get(area.areaCode)
 
     return {
-      timeName: time.timeName,
-      ...categories.reduce((acc, category) => {
-        const filteredValue = filteredValues.find(
-          (value) => value.categoryCode === category.categoryCode
-        )
-
-        return {
-          ...acc,
-          [category.categoryCode]: filteredValue
-            ? `${filteredValue.value}${filteredValue.unit}`
-            : '',
-        }
-      }, {}),
+      rank: String(areaValues?.rank) ?? '',
+      areaName: area.areaName,
+      value: formatNumberJapanese(areaValues?.value) ?? '',
+      unit: areaValues?.unit ?? '',
+      deviationValue: String(areaValues?.deviationValue) ?? '',
     }
   })
 
-  return { headers, data }
+  return { headers: HEADERS, data }
 }
 
 export default formatRankingTable

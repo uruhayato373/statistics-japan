@@ -1,5 +1,7 @@
 import { ValueType } from 'utils/value'
-import calcRankingValues from 'utils/value/modules/calcRankingValues'
+import calcRankingValues, {
+  RankingValueType,
+} from 'utils/value/modules/calcRankingValues'
 
 import { RankingDocumentType } from '../types/document'
 
@@ -18,7 +20,7 @@ const calculateFormattedValues = (
   values: ValueType[],
   times: { timeCode: string }[],
   categories: { categoryCode: string }[]
-) => {
+): RankingValueType[] => {
   return times.flatMap((time) => {
     const timeValues = getTimeValues(values, time.timeCode)
     return categories.flatMap((category) => {
