@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { usePathname } from 'next/navigation'
 
-import { kind, prefecture, city } from 'atoms'
-import { CityType } from 'utils/city'
+import { kind, prefecture } from 'atoms'
 import { KindType } from 'utils/kind'
 import { handlePage } from 'utils/page'
 import { PrefectureType } from 'utils/prefecture'
@@ -17,7 +16,6 @@ import { useAtom } from 'jotai'
 export default function useURL() {
   const [atomKind] = useAtom<KindType>(kind)
   const [atomPrefecture] = useAtom<PrefectureType>(prefecture)
-  const [atomCity] = useAtom<CityType>(city)
 
   const pathname = usePathname()
 
@@ -85,8 +83,6 @@ export default function useURL() {
         return `/${fieldId}/${menuId}/${newKindId}/${pageId}`
       case 'prefecture':
         return `/${fieldId}/${menuId}/${newKindId}/${atomPrefecture.prefCode}`
-      case 'city':
-        return `/${fieldId}/${menuId}/${newKindId}/${atomPrefecture.prefCode}/${atomCity.cityCode}`
       default:
         return ''
     }
@@ -114,12 +110,10 @@ export default function useURL() {
    * 都道府県を変更した場合のURLを生成
    */
   const changePrefURL = (newCode: string): string => {
-    const { fieldId, menuId, kindId, cityCode } = currentRouterProps
+    const { fieldId, menuId, kindId } = currentRouterProps
     switch (kindId) {
       case 'prefecture':
         return `/${fieldId}/${menuId}/${kindId}/${newCode}`
-      case 'city':
-        return `/${fieldId}/${menuId}/${kindId}/${newCode}/${cityCode}`
     }
   }
 
