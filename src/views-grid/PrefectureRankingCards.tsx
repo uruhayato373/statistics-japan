@@ -1,39 +1,30 @@
 import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
 import CardsReactPrefectureRankingTable from 'cards/CardsReactPrefectureRankingTable'
 
-import { RankingDocumentType } from 'utils/document'
+import { RankingSectionsPropsType } from 'types/sections'
 import { RouterProps } from 'utils/props'
 
 import GridItem from './GridItem'
-interface RankingComponentProps {
-  routerProps?: RouterProps
-  children: (props: {
-    title: string
-    document: RankingDocumentType
-  }) => React.ReactNode
-}
-
-type RankingComponentType = React.ComponentType<RankingComponentProps>
 
 interface RankingChartProps {
-  RankingComponent: RankingComponentType
+  Section: React.ComponentType<RankingSectionsPropsType>
   routerProps: RouterProps
 }
 
 const PrefectureRankingCards: React.FC<RankingChartProps> = ({
-  RankingComponent,
+  Section,
   routerProps,
 }) => (
   <>
     <GridItem xs={12} md={6}>
-      <RankingComponent routerProps={routerProps}>
+      <Section routerProps={routerProps}>
         {(props) => <CardsHighchartsPrefectureRankingChart {...props} />}
-      </RankingComponent>
+      </Section>
     </GridItem>
     <GridItem xs={12} md={6}>
-      <RankingComponent routerProps={routerProps}>
+      <Section routerProps={routerProps}>
         {(props) => <CardsReactPrefectureRankingTable {...props} />}
-      </RankingComponent>
+      </Section>
     </GridItem>
   </>
 )

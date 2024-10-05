@@ -8,11 +8,9 @@ import Divider from '@mui/material/Divider'
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 
-import { Options } from 'highcharts'
-
 import { useLoadingState } from 'hooks/useLoadingState'
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
-import { DocumentType } from 'utils/document'
+import { CardsHighchartsPrefectureRankingChartProps } from 'types/cards'
 
 import SelectTime from '../../components/SelectTime'
 
@@ -20,13 +18,6 @@ import Chart from './Chart'
 import Control from './Control'
 import Header from './Header'
 import SelectChartType from './SelectChartType'
-
-export interface CardsHighchartsPrefectureRankingChartProps {
-  title: string
-  document: DocumentType
-  height?: string
-  options?: Options
-}
 
 export default function CardsHighchartsPrefectureRankingChart({
   title,

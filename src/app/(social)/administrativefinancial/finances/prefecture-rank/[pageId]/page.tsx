@@ -22,10 +22,16 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
         'views/administrativefinancial/finances/prefecture-rank/FinancialStrengthIndex'
       )
   ),
-  'total-settlement-amount': dynamic(
+  'total-revenue-settlement': dynamic(
     () =>
       import(
-        'views/administrativefinancial/finances/prefecture-rank/TotalSettlementAmount'
+        'views/administrativefinancial/finances/prefecture-rank/TotalRevenueSettlement'
+      )
+  ),
+  'total-expenditures': dynamic(
+    () =>
+      import(
+        'views/administrativefinancial/finances/prefecture-rank/TotalExpenditures'
       )
   ),
   'future-burden-ratio': dynamic(
@@ -38,6 +44,18 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
     () =>
       import(
         'views/administrativefinancial/finances/prefecture-rank/RealDebtServiceRatio'
+      )
+  ),
+  'current-account-ratio': dynamic(
+    () =>
+      import(
+        'views/administrativefinancial/finances/prefecture-rank/CurrentAccountRatio'
+      )
+  ),
+  'current-amount-of-local-bonds': dynamic(
+    () =>
+      import(
+        'views/administrativefinancial/finances/prefecture-rank/CurrentAmountOfLocalBonds'
       )
   ),
 }

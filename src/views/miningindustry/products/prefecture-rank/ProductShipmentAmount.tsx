@@ -45,7 +45,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Grid container rowSpacing={4.5} columnSpacing={3}>
           {/* 製造品出荷額 */}
           <PrefectureRankingCards
-            RankingComponent={RankingProductShipmentAmount}
+            Section={RankingProductShipmentAmount}
             routerProps={routerProps}
           />
           {/* Adsense */}
@@ -70,9 +70,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
             <Typography variant="h4">製造業従業者数1人当たり</Typography>
           </GridItem>
           <PrefectureRankingCards
-            RankingComponent={
-              RankingProductShipmentAmountPerManufacturingEmployees
-            }
+            Section={RankingProductShipmentAmountPerManufacturingEmployees}
             routerProps={routerProps}
           />
         </Grid>

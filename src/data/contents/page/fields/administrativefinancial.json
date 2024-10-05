@@ -10,8 +10,13 @@
     "menuId": "finances"
   },
   {
-    "pageId": "total-settlement-amount",
-    "pageTitle": "決算総額",
+    "pageId": "total-revenue-settlement",
+    "pageTitle": "歳入決算総額",
+    "menuId": "finances"
+  },
+  {
+    "pageId": "total-expenditures",
+    "pageTitle": "歳出決算総額",
     "menuId": "finances"
   },
   {
@@ -22,6 +27,16 @@
   {
     "pageId": "real-debt-service-ratio",
     "pageTitle": "実質公債費比率",
+    "menuId": "finances"
+  },
+  {
+    "pageId": "current-account-ratio",
+    "pageTitle": "経常収支比率",
+    "menuId": "finances"
+  },
+  {
+    "pageId": "current-amount-of-local-bonds",
+    "pageTitle": "地方債現在高",
     "menuId": "finances"
   }
 ]

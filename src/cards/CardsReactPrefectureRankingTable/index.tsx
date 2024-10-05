@@ -12,18 +12,13 @@ import { CSVExport } from 'components/third-party/react-table'
 
 import { useLoadingState } from 'hooks/useLoadingState'
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
+import { CardsPropsType } from 'types/cards'
 import formatCSV from 'utils/csv'
 import { RankingDocumentType } from 'utils/document'
 
 import Control from './Control'
 import Header from './Header'
 import Table from './Table'
-
-interface Props {
-  title?: string
-  document: RankingDocumentType
-  height?: string
-}
 
 const useCSVData = (document: RankingDocumentType, title?: string) => {
   return useMemo(() => {
@@ -37,7 +32,7 @@ export default function CardsReactPrefectureRankingTable({
   title,
   document,
   height = '450px',
-}: Props) {
+}: CardsPropsType) {
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 

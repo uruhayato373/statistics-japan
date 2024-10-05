@@ -5,7 +5,7 @@ import Box from '@mui/system/Box'
 
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import RankingRealDebtServiceRatio from 'sections/administrativefinancial/finances/prefecture-rank/RankingRealDebtServiceRatio'
+import RankingCurrentAmountOfLocalBonds from 'sections/administrativefinancial/finances/prefecture-rank/RankingCurrentAmountOfLocalBonds'
 import { RouterProps } from 'utils/props'
 import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 import ViewsHeader from 'views-grid/ViewsHeader'
@@ -20,9 +20,9 @@ export default async function PrefectureRankView({ routerProps }: Props) {
       <ViewsHeader routerProps={routerProps} />
       <Box sx={{ mt: 2.5 }}>
         <Grid container rowSpacing={4.5} columnSpacing={3}>
-          {/* 実質公債費比率 */}
+          {/* 地方債現在高 */}
           <PrefectureRankingCards
-            Section={RankingRealDebtServiceRatio}
+            Section={RankingCurrentAmountOfLocalBonds}
             routerProps={routerProps}
           />
         </Grid>

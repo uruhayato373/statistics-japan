@@ -3,49 +3,30 @@ import { Suspense } from 'react'
 import Grid from '@mui/material/Grid'
 import Box from '@mui/system/Box'
 
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import CardsAdsResponsive from 'cards/CardsAdsResponsive'
-
-import RankingChartFutureBurdenRatio from 'sections/administrativefinancial/finances/prefecture-rank/RankingChartFutureBurdenRatio'
-import RankingTableFutureBurdenRatio from 'sections/administrativefinancial/finances/prefecture-rank/RankingTableFutureBurdenRatio'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+import RankingFutureBurdenRatio from 'sections/administrativefinancial/finances/prefecture-rank/RankingFutureBurdenRatio'
+import { RouterProps } from 'utils/props'
+import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
+import ViewsHeader from 'views-grid/ViewsHeader'
 
 interface Props {
   routerProps: RouterProps
 }
 
 export default async function PrefectureRankView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} md={6}>
-              <RankingChartFutureBurdenRatio />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <RankingTableFutureBurdenRatio />
-            </Grid>
-            {/* row 2 */}
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+  return (
+    <Suspense fallback={<CircularProgressViews />}>
+      <ViewsHeader routerProps={routerProps} />
+      <Box sx={{ mt: 2.5 }}>
+        <Grid container rowSpacing={4.5} columnSpacing={3}>
+          {/* 将来負担比率 */}
+          <PrefectureRankingCards
+            Section={RankingFutureBurdenRatio}
+            routerProps={routerProps}
+          />
+        </Grid>
+      </Box>
+    </Suspense>
+  )
 }
