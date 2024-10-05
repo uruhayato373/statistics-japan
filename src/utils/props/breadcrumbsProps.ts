@@ -1,4 +1,3 @@
-import { CityType, handleCity } from 'utils/city'
 import { FieldType, handleField } from 'utils/field'
 import { KindType, handleKind } from 'utils/kind'
 import { MenuType, handleMenu } from 'utils/menu'
@@ -23,8 +22,6 @@ export type BreadcrumbsPropsType = {
   currentPage?: PageType
   prefectures?: PrefectureType[]
   currentPrefecture?: PrefectureType
-  cities?: CityType[]
-  currentCity?: CityType
   pageTitle: string
 }
 
@@ -40,7 +37,6 @@ const generateBreadcrumbsProps = async ({
   kindId,
   pageId,
   prefCode,
-  cityCode,
 }: RouterProps): Promise<BreadcrumbsPropsType> => {
   try {
     // フィールドのデータ取得
@@ -60,8 +56,7 @@ const generateBreadcrumbsProps = async ({
     const currentPage = handlePage().findItem(pageId)
 
     // 都道府県と市区町村のデータ取得
-    const [prefectures, currentPrefecture, cities, currentCity] =
-      await fetchLocationData(prefCode, cityCode)
+    const [prefectures, currentPrefecture] = await fetchLocationData(prefCode)
 
     // ページタイトルの生成
     const pageTitle = generatePageTitle({
@@ -69,7 +64,6 @@ const generateBreadcrumbsProps = async ({
       kind: currentKind,
       page: currentPage,
       prefecture: currentPrefecture,
-      city: currentCity,
     })
 
     return {
@@ -83,8 +77,6 @@ const generateBreadcrumbsProps = async ({
       currentPage,
       prefectures,
       currentPrefecture,
-      cities,
-      currentCity,
       pageTitle,
     }
   } catch (error) {
@@ -102,18 +94,10 @@ export default generateBreadcrumbsProps
  * @returns 都道府県と市区町村のデータ
  */
 async function fetchLocationData(
-  prefCode?: string,
-  cityCode?: string
-): Promise<
-  [
-    PrefectureType[] | undefined,
-    PrefectureType | undefined,
-    CityType[] | undefined,
-    CityType | undefined,
-  ]
-> {
+  prefCode?: string
+): Promise<[PrefectureType[] | undefined, PrefectureType | undefined]> {
   if (!prefCode) {
-    return [undefined, undefined, undefined, undefined]
+    return [undefined, undefined]
   }
 
   try {
@@ -126,20 +110,7 @@ async function fetchLocationData(
       throw new Error(`コード ${prefCode} の都道府県が見つかりません`)
     }
 
-    if (!cityCode) {
-      return [prefectures, currentPrefecture, undefined, undefined]
-    }
-
-    const [cities, currentCity] = await Promise.all([
-      handleCity().fetchItems(prefCode),
-      handleCity().findItem(cityCode),
-    ])
-
-    if (!currentCity) {
-      throw new Error(`コード ${cityCode} の市区町村が見つかりません`)
-    }
-
-    return [prefectures, currentPrefecture, cities, currentCity]
+    return [prefectures, currentPrefecture]
   } catch (error) {
     console.error(
       '都道府県・市区町村データの取得中にエラーが発生しました:',

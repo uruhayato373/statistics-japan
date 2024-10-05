@@ -2,9 +2,7 @@ import { Suspense } from 'react'
 
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
 
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
@@ -13,7 +11,6 @@ import CardsDashboard from 'cards/CardsDashboard'
 import CardsHighchartsAxisChart from 'cards/CardsHighchartsAxisChart'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import { actionSaveJapan } from 'actions/saveJapan'
 import AxisNumberOfManufacturing from 'sections/miningindustry/products/AxisNumberOfManufacturing'
 import AxisProductShipmentAmount from 'sections/miningindustry/products/AxisProductShipmentAmount'
 import DashboardNumberOfManufacturingEmployees from 'sections/miningindustry/products/dashboard/DashboardNumberOfManufacturingEmployees'
@@ -21,9 +18,9 @@ import DashboardNumberOfManufacturingEstablishments from 'sections/miningindustr
 import DashboardProductShipmentAmount from 'sections/miningindustry/products/dashboard/DashboardProductShipmentAmount'
 import PieProductShipmentAmountByIndustrialClassification from 'sections/miningindustry/products/PieProductShipmentAmountByIndustrialClassification'
 import TableProductShipmentAmount from 'sections/miningindustry/products/TableProductShipmentAmount'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+import { RouterProps } from 'utils/props'
 import GridItem from 'views-grid/GridItem'
+import ViewsHeader from 'views-grid/ViewsHeader'
 
 interface Props {
   routerProps: RouterProps
@@ -67,53 +64,42 @@ const tableItems = [
 ]
 
 export default async function JapanView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const currentPrefecture = {
-      prefCode: '00000',
-      prefName: '日本',
-    }
-    const title = breadcrumbsProps.pageTitle
-    await actionSaveJapan(title, routerProps)
-
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Grid item sx={{ mt: 1 }}>
-          <Typography variant="h2">{title}</Typography>
-        </Grid>
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* dashboard items */}
-            {dashboardItems.map(({ Component }, index) => (
-              <GridItem key={index} {...dashboardGridProps}>
-                <Component prefecture={currentPrefecture}>
-                  {(props) => <CardsDashboard {...props} />}
-                </Component>
-              </GridItem>
-            ))}
-            {/* chart items */}
-            {chartItems.map(({ Section, Card, gridProps }, index) => (
-              <GridItem key={`chart-${index}`} {...gridProps}>
-                <Section prefecture={currentPrefecture}>
-                  {(props) => <Card {...props} />}
-                </Section>
-              </GridItem>
-            ))}
-            {/* table items */}
-            {tableItems.map(({ Section, Card, gridProps }, index) => (
-              <GridItem key={`chart-${index}`} {...gridProps}>
-                <Section prefecture={currentPrefecture}>
-                  {(props) => <Card {...props} />}
-                </Section>
-              </GridItem>
-            ))}
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
+  const currentPrefecture = {
+    prefCode: '00000',
+    prefName: '日本',
   }
+
+  return (
+    <Suspense fallback={<CircularProgressViews />}>
+      <ViewsHeader routerProps={routerProps} />
+      <Box sx={{ mt: 2.5 }}>
+        <Grid container rowSpacing={4.5} columnSpacing={3}>
+          {/* dashboard items */}
+          {dashboardItems.map(({ Component }, index) => (
+            <GridItem key={index} {...dashboardGridProps}>
+              <Component prefecture={currentPrefecture}>
+                {(props) => <CardsDashboard {...props} />}
+              </Component>
+            </GridItem>
+          ))}
+          {/* chart items */}
+          {chartItems.map(({ Section, Card, gridProps }, index) => (
+            <GridItem key={`chart-${index}`} {...gridProps}>
+              <Section prefecture={currentPrefecture}>
+                {(props) => <Card {...props} />}
+              </Section>
+            </GridItem>
+          ))}
+          {/* table items */}
+          {tableItems.map(({ Section, Card, gridProps }, index) => (
+            <GridItem key={`chart-${index}`} {...gridProps}>
+              <Section prefecture={currentPrefecture}>
+                {(props) => <Card {...props} />}
+              </Section>
+            </GridItem>
+          ))}
+        </Grid>
+      </Box>
+    </Suspense>
+  )
 }

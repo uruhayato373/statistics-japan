@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/system/Box'
 
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
 import CardsHighchartsScatterChart from 'cards/CardsHighchartsScatterChart'
@@ -14,10 +13,10 @@ import RankingProductShipmentAmountPerManufacturingEmployees from 'sections/mini
 import ScatterProductShipmentAmountManufacturingEmployees from 'sections/miningindustry/products/scatter/ScatterProductShipmentAmountManufacturingEmployees'
 import ScatterProductShipmentAmountManufacturingEstablishments from 'sections/miningindustry/products/scatter/ScatterProductShipmentAmountManufacturingEstablishments'
 import ScatterProductShipmentAmountTotalPopulation from 'sections/miningindustry/products/scatter/ScatterProductShipmentAmountTotalPopulation'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+import { RouterProps } from 'utils/props'
 import GridItem from 'views-grid/GridItem'
 import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
+import ViewsHeader from 'views-grid/ViewsHeader'
 
 interface Props {
   routerProps: RouterProps
@@ -39,55 +38,45 @@ const ScatterCharts = [
 ]
 
 export default async function PrefectureRankView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const title = breadcrumbsProps.pageTitle
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Grid item sx={{ mt: 1 }}>
-          <Typography variant="h2">{title}</Typography>
-        </Grid>
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* 製造品出荷額 */}
-            <PrefectureRankingCards
-              RankingComponent={RankingProductShipmentAmount}
-              routerProps={routerProps}
-            />
-            {/* Adsense */}
-            {/* {[0, 1].map((index) => (
+  return (
+    <Suspense fallback={<CircularProgressViews />}>
+      <ViewsHeader routerProps={routerProps} />
+      <Box sx={{ mt: 2.5 }}>
+        <Grid container rowSpacing={4.5} columnSpacing={3}>
+          {/* 製造品出荷額 */}
+          <PrefectureRankingCards
+            RankingComponent={RankingProductShipmentAmount}
+            routerProps={routerProps}
+          />
+          {/* Adsense */}
+          {/* {[0, 1].map((index) => (
               <GridItem key={`ads-${index}`} xs={12} md={6}>
                 <CardsAdsResponsive />
               </GridItem>
             ))} */}
-            {/* 相関関係 */}
-            <GridItem xs={12}>
-              <Typography variant="h4">相関係数</Typography>
+          {/* 相関関係 */}
+          <GridItem xs={12}>
+            <Typography variant="h4">相関係数</Typography>
+          </GridItem>
+          {ScatterCharts.map(({ Section, Card }, index) => (
+            <GridItem key={`scatter-${index}`} xs={12} md={6} lg={4}>
+              <Section routerProps={routerProps}>
+                {(props) => <Card {...props} />}
+              </Section>
             </GridItem>
-            {ScatterCharts.map(({ Section, Card }, index) => (
-              <GridItem key={`scatter-${index}`} xs={12} md={6} lg={4}>
-                <Section routerProps={routerProps}>
-                  {(props) => <Card {...props} />}
-                </Section>
-              </GridItem>
-            ))}
-            {/* 製造品出荷額（従業員1人当たり */}
-            <GridItem xs={12}>
-              <Typography variant="h4">製造業従業者数1人当たり</Typography>
-            </GridItem>
-            <PrefectureRankingCards
-              RankingComponent={
-                RankingProductShipmentAmountPerManufacturingEmployees
-              }
-              routerProps={routerProps}
-            />
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+          ))}
+          {/* 製造品出荷額（従業員1人当たり */}
+          <GridItem xs={12}>
+            <Typography variant="h4">製造業従業者数1人当たり</Typography>
+          </GridItem>
+          <PrefectureRankingCards
+            RankingComponent={
+              RankingProductShipmentAmountPerManufacturingEmployees
+            }
+            routerProps={routerProps}
+          />
+        </Grid>
+      </Box>
+    </Suspense>
+  )
 }

@@ -60,12 +60,6 @@ RESAS-APIを利用する。プロキシ環境下ではアクセスできない�
 
 [prefList.json](/src/utils/prefecture/prefList.json)
 
-### cityCode : 市区町村コード
-
-RESAS-APIを利用する。プロキシ環境下ではアクセスできない場合があるので、ローカルに保存した。
-
-[cityList.json](/src/utils/city/cityList.json)
-
 ## appディレクトリの責務
 
 ### Metadataの生成

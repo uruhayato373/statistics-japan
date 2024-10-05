@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 
-import { handleCity } from 'utils/city'
 import { handleKind } from 'utils/kind'
 import { handleMenu } from 'utils/menu'
 import { handlePage } from 'utils/page'
@@ -16,7 +15,6 @@ const generateMetaProps = async ({
   kindId,
   pageId,
   prefCode,
-  cityCode,
 }: RouterProps): Promise<Metadata> => {
   const currentMenu = handleMenu().findItem(menuId)
   const currentKind = handleKind().findItem(kindId)
@@ -24,15 +22,12 @@ const generateMetaProps = async ({
   const currentPrefecture = prefCode
     ? await handlePrefecture().findItem(prefCode)
     : null
-  const currentCity =
-    prefCode && cityCode ? await handleCity().findItem(cityCode) : null
 
   const title = generatePageTitle({
     menu: currentMenu,
     kind: currentKind,
     page: currentPage,
     prefecture: currentPrefecture,
-    city: currentCity,
   })
 
   let description = ''
