@@ -41,10 +41,13 @@ const ScatterCharts = [
 export default async function PrefectureRankView({ routerProps }: Props) {
   try {
     const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-
+    const title = breadcrumbsProps.pageTitle
     return (
       <Suspense fallback={<CircularProgressViews />}>
         <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
+        <Grid item sx={{ mt: 1 }}>
+          <Typography variant="h2">{title}</Typography>
+        </Grid>
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* 製造品出荷額 */}

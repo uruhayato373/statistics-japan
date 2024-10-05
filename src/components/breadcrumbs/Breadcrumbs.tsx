@@ -313,21 +313,21 @@ function Breadcrumbs({
             alignItems={rightAlign ? 'center' : 'flex-start'}
             spacing={1}
           >
-            {title && !titleBottom && (
+            {/* {title && !titleBottom && (
               <Grid item>
                 <Typography variant="h2">
                   {custom ? breadcrumbsProps.pageTitle : item?.title}
                 </Typography>
               </Grid>
-            )}
+            )} */}
             <Grid item>{tempContent}</Grid>
-            {title && titleBottom && (
+            {/* {title && titleBottom && (
               <Grid item sx={{ mt: card === false ? 0.25 : 1 }}>
                 <Typography variant="h2">
                   {custom ? breadcrumbsProps.pageTitle : item?.title}
                 </Typography>
               </Grid>
-            )}
+            )} */}
           </Grid>
           {card === false && divider !== false && <Divider sx={{ mt: 2 }} />}
         </MainCard>
