@@ -57,11 +57,6 @@ export default handlePrefecture
  */
 const fetchItems = (): PrefectureType[] => {
   try {
-    // const resasParams = { url: 'api/v1/prefectures' }
-    // const { fetchAPI } = handleResasAPI<ResasPrefectureType[]>(resasParams)
-
-    // const prefectures = await fetchAPI()
-
     // APIから取得したデータを内部形式に変換
     return prefectures.map((d) => ({
       prefCode: String(d.prefCode).padStart(2, '0') + '000',

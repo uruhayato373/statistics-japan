@@ -2,10 +2,12 @@ import { Suspense } from 'react'
 
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
+import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
+import SelectPrefecture from 'components/SelectPrefecture'
 
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import CardsApexPieChart from 'cards/CardsApexPieChart'
@@ -77,9 +79,15 @@ export default async function PrefectureView({ routerProps }: Props) {
     return (
       <Suspense fallback={<CircularProgressViews />}>
         <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Grid item sx={{ mt: 1 }}>
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+          sx={{ mt: 1, mb: 2.5 }}
+        >
           <Typography variant="h2">{title}</Typography>
-        </Grid>
+          <SelectPrefecture />
+        </Stack>
         <Box sx={{ mt: 2.5 }}>
           <Grid container rowSpacing={4.5} columnSpacing={3}>
             {/* dashboard items */}
