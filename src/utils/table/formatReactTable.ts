@@ -49,7 +49,7 @@ const createTableData = (
   sortedTimes: DocumentType['times'],
   categories: DocumentType['categories'],
   values: DocumentType['values']
-): TimeTableData[] =>
+): TimeTableDataType[] =>
   sortedTimes.map((time) => ({
     timeName: time.timeName,
     ...Object.fromEntries(
@@ -68,7 +68,7 @@ const createTableData = (
     ),
   }))
 
-const formatReactTable = (document: DocumentType): ReactTimeTable => {
+const formatReactTable = (document: DocumentType): ReactTimeTableType => {
   const { categories, times, values } = document
 
   const sortedTimes = sortTimesByCodeDescending(times)
