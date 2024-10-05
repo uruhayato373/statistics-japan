@@ -1,20 +1,20 @@
 import { DocumentType } from 'utils/document'
 import formatNumberJapanese from 'utils/value/modules/formatNumberJapanese'
 
-export interface TimeTableColumn {
+export interface TimeTableColumnType {
   header: string
   footer: string
   accessorKey: string
 }
 
-export interface TimeTableData {
+export interface TimeTableDataType {
   timeName: string
   [key: string]: string
 }
 
-export interface ReactTimeTable {
-  columns: TimeTableColumn[]
-  data: TimeTableData[]
+export interface ReactTimeTableType {
+  columns: TimeTableColumnType[]
+  data: TimeTableDataType[]
 }
 
 const sortTimesByCodeDescending = (times: DocumentType['times']) =>
@@ -22,7 +22,7 @@ const sortTimesByCodeDescending = (times: DocumentType['times']) =>
 
 const createColumns = (
   categories: DocumentType['categories']
-): TimeTableColumn[] => [
+): TimeTableColumnType[] => [
   {
     header: '年度',
     footer: '年度',
