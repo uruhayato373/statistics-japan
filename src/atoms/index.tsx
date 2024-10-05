@@ -1,4 +1,3 @@
-import { CityType } from 'utils/city'
 import { TimeType } from 'utils/document'
 import { KindType } from 'utils/kind'
 import { PrefectureType } from 'utils/prefecture'
@@ -19,16 +18,6 @@ export const kind = atom<KindType>({
 export const prefecture = atom<PrefectureType>({
   prefCode: '28000',
   prefName: '兵庫県',
-})
-
-/**
- * 選択中の市区町村
- */
-export const city = atom<CityType>({
-  prefCode: '28000',
-  cityCode: '28100',
-  cityName: '神戸市',
-  bigCityFlag: '2',
 })
 
 /**
