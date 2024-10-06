@@ -1,4 +1,3 @@
-import fs from 'fs/promises'
 import path from 'path'
 
 import sharp from 'sharp'
@@ -6,6 +5,7 @@ import sharp from 'sharp'
 import { RouterProps } from 'utils/props'
 import { RankingValueType } from 'utils/value/modules/calcRankingValues'
 
+import ensureDirectoryExists from './ensureDirectoryExists'
 import generatePrefectureRankSVG from './generatePrefectureRankSVG'
 
 export interface D3MapChartSeries {
@@ -30,16 +30,6 @@ const generateFileName = (routerProps: RouterProps) => {
   )
 
   return filePath
-}
-
-async function ensureDirectoryExists(filePath: string) {
-  const directory = path.dirname(filePath)
-  try {
-    await fs.access(directory)
-  } catch (error) {
-    // Directory doesn't exist, so create it
-    await fs.mkdir(directory, { recursive: true })
-  }
 }
 
 export default async function savePrefectureRankPNG(

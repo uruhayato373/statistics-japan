@@ -6,6 +6,7 @@ import prefectures from 'data/prefecture/prefList.json'
 import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 
+import ensureDirectoryExists from './ensureDirectoryExists'
 import generatePrefectureSVG from './generatePrefectureSVG'
 
 async function generatePNGFromSVG(
@@ -35,6 +36,7 @@ async function processPrefecture(
 ): Promise<void> {
   const svgString = generatePrefectureSVG(title, prefecture)
   const pngFilePath = createFilePath(routerProps, `${prefecture.prefCode}.png`)
+  await ensureDirectoryExists(pngFilePath)
   await generatePNGFromSVG(svgString, pngFilePath)
 }
 

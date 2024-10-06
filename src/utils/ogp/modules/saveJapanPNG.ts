@@ -4,6 +4,7 @@ import sharp from 'sharp'
 
 import { RouterProps } from 'utils/props'
 
+import ensureDirectoryExists from './ensureDirectoryExists'
 import generateJapanSVG from './generateJapanSVG'
 
 export interface D3MapChartSeries {
@@ -38,6 +39,7 @@ export default async function saveJapanPNG(
 
   // SVGをPNGに変換して保存
   const pngFilePath = createFilePath(routerProps)
+  await ensureDirectoryExists(pngFilePath)
   await sharp(Buffer.from(svgString)).png().toFile(pngFilePath)
 
   return
