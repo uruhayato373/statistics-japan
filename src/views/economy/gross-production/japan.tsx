@@ -6,8 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardGrossPrefecturalProduct from 'sections/economy/gross-production/DashboardGrossPrefecturalProduct'
-import TableGrossPrefecturalProduct from 'sections/economy/gross-production/TableGrossPrefecturalProduct'
+import DashboardGrossPrefecturalProduct from 'sections/economy/gross-production/dashboard/DashboardGrossPrefecturalProduct'
+import TableGrossPrefecturalProduct from 'sections/economy/gross-production/table/TableGrossPrefecturalProduct'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 

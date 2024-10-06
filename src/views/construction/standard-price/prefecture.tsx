@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import TableStandardPrice from 'sections/construction/standard-price/TableStandardPrice'
+import TableStandardPrice from 'sections/construction/standard-price/table/TableStandardPrice'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 

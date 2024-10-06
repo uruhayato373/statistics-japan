@@ -6,8 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardActualIncome from 'sections/economy/household-budget/DashboardActualIncome'
-import TableIncome from 'sections/economy/household-budget/TableIncome'
+import DashboardActualIncome from 'sections/economy/household-budget/dashboard/DashboardActualIncome'
+import TableIncome from 'sections/economy/household-budget/table/TableIncome'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 

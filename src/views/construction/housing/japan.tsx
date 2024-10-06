@@ -6,8 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardTotalNumberOfHouses from 'sections/construction/housing/DashboardTotalNumberOfHouses'
-import TableTotalNumberOfHouses from 'sections/construction/housing/TableTotalNumberOfHouses'
+import DashboardTotalNumberOfHouses from 'sections/construction/housing/dashboard/DashboardTotalNumberOfHouses'
+import TableTotalNumberOfHouses from 'sections/construction/housing/table/TableTotalNumberOfHouses'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
