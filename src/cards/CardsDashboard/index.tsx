@@ -7,23 +7,17 @@ import Typography from '@mui/material/Typography'
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 
+import { CardsPropsType } from 'types/cards'
 import formatDashboard from 'utils/dashboard'
-import { DocumentType } from 'utils/document'
 
 import DifferenceText from './DifferenceText'
 import ValueDisplay from './ValueDisplay'
-
-export interface CardsDashboardProps {
-  title: string
-  document: DocumentType
-  actionButton?: React.ReactNode
-}
 
 export default function CardsDashboard({
   title,
   document,
   actionButton,
-}: CardsDashboardProps) {
+}: CardsPropsType) {
   const formatValues = formatDashboard(document)
   const [latest, previous] = formatValues
 

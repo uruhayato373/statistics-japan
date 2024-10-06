@@ -1,13 +1,13 @@
 import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
 import CardsReactPrefectureRankingTable from 'cards/CardsReactPrefectureRankingTable'
 
-import { RankingSectionsPropsType } from 'types/sections'
+import { SectionsPropsType } from 'types/sections'
 import { RouterProps } from 'utils/props'
 
 import GridItem from './GridItem'
 
 interface RankingChartProps {
-  Section: React.ComponentType<RankingSectionsPropsType>
+  Section: React.ComponentType<SectionsPropsType>
   routerProps: RouterProps
 }
 

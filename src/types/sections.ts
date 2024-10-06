@@ -5,11 +5,11 @@ import { CardsReactTimeTableProps } from 'cards/CardsReactTimeTable'
 
 import { RouterProps } from 'utils/props'
 
-import { CardsHighchartsPropsType, CardsPropsType } from './cards'
+import { CardsPropsType, CardsPropsType } from './cards'
 
 type AllCardPropsType =
   | CardsPropsType
-  | CardsHighchartsPropsType
+  | CardsPropsType
   | CardsDashboardProps
   | CardsApexAxisChartProps
   | CardsApexPieChartProps

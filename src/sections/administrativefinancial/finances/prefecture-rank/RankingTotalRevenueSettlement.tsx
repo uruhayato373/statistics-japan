@@ -1,5 +1,5 @@
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
-import { RankingSectionsPropsType } from 'types/sections'
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { RankingDocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
@@ -65,7 +65,7 @@ async function serverAction(
 export default async function RankingTotalRevenueSettlement({
   routerProps,
   children,
-}: RankingSectionsPropsType) {
+}: SectionsPropsType) {
   const title = `都道府県の${CARD_TITLE}`
   const values = await processValues()
   const document = await processDocument(values)

@@ -1,6 +1,6 @@
 import { ApexOptions } from 'apexcharts'
 
-import { ApexSectionsPropsType } from 'types/sections'
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
@@ -53,7 +53,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 export default async function PiePercentageOfFullTimeFarmers({
   prefecture,
   children,
-}: ApexSectionsPropsType) {
+}: SectionsPropsType) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)

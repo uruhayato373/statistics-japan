@@ -1,4 +1,4 @@
-import { CardsHighchartsPrefectureRankingChartProps } from 'cards/CardsHighchartsPrefectureRankingChart'
+import { CardsHighchartsPropsType } from 'cards/CardsHighchartsPrefectureRankingChart'
 
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -17,9 +17,7 @@ const PAGE_ID = 'product-shipment-amount'
 
 interface Props {
   routerProps?: RouterProps
-  children: (
-    props: CardsHighchartsPrefectureRankingChartProps
-  ) => React.ReactNode
+  children: (props: CardsHighchartsPropsType) => React.ReactNode
 }
 
 // values

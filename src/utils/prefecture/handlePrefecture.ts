@@ -44,7 +44,7 @@ const handlePrefecture = () => {
   return {
     fetchItems: () => fetchItems(),
     findItem: (prefCode: string) => findItem(prefCode),
-    findPrefecture: (args: string | RouterProps) => findPrefecture(args),
+    getPrefecture: (routerProps: RouterProps) => getPrefecture(routerProps),
     fetchRegions: () => fetchRegions(),
   }
 }
@@ -87,30 +87,19 @@ const findItem = (prefCode: string): PrefectureType | undefined => {
   }
 }
 
-const findPrefecture = (
-  args: string | RouterProps
+const getPrefecture = (
+  routerProps: RouterProps
 ): PrefectureType | undefined => {
-  // stringの場合の処理
-  if (typeof args === 'string') {
+  const { kindId, prefCode } = routerProps
+  if (kindId === 'prefecture') {
     const prefectures = fetchItems()
-    return prefectures.find((f) => f.prefCode === args)
-  }
-  // RouterProps の場合の処理
-  else {
-    const { kindId, prefCode } = args
-    if (kindId === 'prefecture') {
-      const prefectures = fetchItems()
-      return prefectures.find((f) => f.prefCode === prefCode)
-    } else {
-      return {
-        prefCode: '00000',
-        prefName: '日本',
-      }
+    return prefectures.find((f) => f.prefCode === prefCode)
+  } else {
+    return {
+      prefCode: '00000',
+      prefName: '日本',
     }
   }
-
-  // 適切な PrefectureType が見つからない場合は undefined を返します
-  return undefined
 }
 
 /**

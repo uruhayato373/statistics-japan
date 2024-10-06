@@ -8,23 +8,13 @@ import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 import SelectTime from 'components/SelectTime'
 
-import { ApexOptions } from 'apexcharts'
-
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
+import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
-import { DocumentType } from 'utils/document'
 
 import ApexPieChart from './Chart'
 import Control from './Control'
 import Header from './Header'
-
-export interface CardsApexPieChartProps {
-  title: string
-  document: DocumentType
-  options?: ApexOptions
-  height?: string
-  actionButton?: React.ReactNode
-}
 
 const DEFAULT_HEIGHT = '200px'
 
@@ -40,7 +30,7 @@ export default function CardsApexPieChart({
   options,
   height = DEFAULT_HEIGHT,
   actionButton,
-}: CardsApexPieChartProps) {
+}: CardsPropsType) {
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 

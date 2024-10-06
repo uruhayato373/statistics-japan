@@ -13,7 +13,6 @@ import DashboardRealDebtServiceRatio from 'sections/administrativefinancial/fina
 import DashboardStandardFinancialDemandAmount from 'sections/administrativefinancial/finances/dashboard/DashboardStandardFinancialDemandAmount'
 import DashboardStandardFinancialIncomeAmount from 'sections/administrativefinancial/finances/dashboard/DashboardStandardFinancialIncomeAmount'
 import PieTotalRevenueSettlement from 'sections/administrativefinancial/finances/PieTotalRevenueSettlement'
-import { handlePrefecture } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 import GridItem from 'views-grid/GridItem'
 import MainView from 'views-grid/MainView'
@@ -60,14 +59,12 @@ const chartItems = [
 ]
 
 export default async function PrefectureView({ routerProps }: Props) {
-  const currentPrefecture = handlePrefecture().findItem(routerProps.prefCode)
-
   return (
     <MainView routerProps={routerProps}>
       {/* dashboard items */}
       {dashboardItems.map(({ Component }, index) => (
         <GridItem key={index} {...dashboardGridProps}>
-          <Component prefecture={currentPrefecture}>
+          <Component routerProps={routerProps}>
             {(props) => <CardsDashboard {...props} />}
           </Component>
         </GridItem>
@@ -75,7 +72,7 @@ export default async function PrefectureView({ routerProps }: Props) {
       {/* chart items */}
       {chartItems.map(({ Section, Card, gridProps }, index) => (
         <GridItem key={`chart-${index}`} {...gridProps}>
-          <Section prefecture={currentPrefecture}>
+          <Section routerProps={routerProps}>
             {(props) => <Card {...props} />}
           </Section>
         </GridItem>

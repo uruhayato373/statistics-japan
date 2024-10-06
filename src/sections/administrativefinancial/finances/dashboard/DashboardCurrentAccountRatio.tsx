@@ -37,7 +37,7 @@ export default async function DashboardCurrentAccountRatio({
   routerProps,
   children,
 }: SectionsPropsType) {
-  const { prefCode, prefName } = handlePrefecture().findPrefecture(routerProps)
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)

@@ -10,7 +10,7 @@ import MainCard from 'components/MainCard'
 
 import { useLoadingState } from 'hooks/useLoadingState'
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
-import { CardsHighchartsPrefectureRankingChartProps } from 'types/cards'
+import { CardsHighchartsPropsType } from 'types/cards'
 
 import SelectTime from '../../components/SelectTime'
 
@@ -24,7 +24,7 @@ export default function CardsHighchartsPrefectureRankingChart({
   document,
   height = '450px',
   options,
-}: CardsHighchartsPrefectureRankingChartProps) {
+}: CardsHighchartsPropsType) {
   const [chartType, SelectChartTypeComponent] = SelectChartType()
 
   const { times } = document
