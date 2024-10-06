@@ -6,8 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardRoadActualLength from 'sections/infrastructure/road/DashboardRoadActualLength'
-import TableRoadActualLength from 'sections/infrastructure/road/TableRoadActualLength'
+import DashboardRoadActualLength from 'sections/infrastructure/road/dashboard/DashboardRoadActualLength'
+import TableRoadActualLength from 'sections/infrastructure/road/table/TableRoadActualLength'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 

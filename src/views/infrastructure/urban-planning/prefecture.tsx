@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardUrbanPlanningArea from 'sections/infrastructure/urban-planning/DashboardUrbanPlanningArea'
+import DashboardUrbanPlanningArea from 'sections/infrastructure/urban-planning/dashboard/DashboardUrbanPlanningArea'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 

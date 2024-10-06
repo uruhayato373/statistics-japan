@@ -6,8 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardForeignPopulation from 'sections/international/foreigner/DashboardForeignPopulation'
-import TableForeignPopulation from 'sections/international/foreigner/TableForeignPopulation'
+import DashboardForeignPopulation from 'sections/international/foreigner/dashboard/DashboardForeignPopulation'
+import TableForeignPopulation from 'sections/international/foreigner/table/TableForeignPopulation'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 

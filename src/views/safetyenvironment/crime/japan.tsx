@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardNumberOfPoliceOfficers from 'sections/safetyenvironment/crime/DashboardNumberOfPoliceOfficers'
+import DashboardNumberOfPoliceOfficers from 'sections/safetyenvironment/crime/dashboard/DashboardNumberOfPoliceOfficers'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 

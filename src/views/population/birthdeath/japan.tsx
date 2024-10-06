@@ -6,8 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardBirth from 'sections/population/birthdeath/DashboardBirth'
-import TableBirth from 'sections/population/birthdeath/TableBirth'
+import DashboardBirth from 'sections/population/birthdeath/dashboard/DashboardBirth'
+import TableBirth from 'sections/population/birthdeath/table/TableBirth'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 

@@ -6,8 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardIndustrialWaterVolume from 'sections/energy/industrial-water/DashboardIndustrialWaterVolume'
-import TableIndustrialWaterVolume from 'sections/energy/industrial-water/TableIndustrialWaterVolume'
+import DashboardIndustrialWaterVolume from 'sections/energy/industrial-water/dashboard/DashboardIndustrialWaterVolume'
+import TableIndustrialWaterVolume from 'sections/energy/industrial-water/table/TableIndustrialWaterVolume'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
