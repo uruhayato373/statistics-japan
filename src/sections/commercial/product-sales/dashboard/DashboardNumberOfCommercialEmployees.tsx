@@ -1,20 +1,19 @@
-import CardsDashboardSingle from 'cards/CardsDashboard'
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '商品手持額'
+const CARD_TITLE = '商業従業者数'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: 'C3505',
+  cdCat01: 'C3503',
 }
 
-interface Props {
-  prefecture: PrefectureType
-}
+const PAGE_ID = 'number-of-commercial-employees'
 
 // values
 async function processValues(prefCode: string) {
@@ -33,13 +32,15 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function DashboardAmountOfProductOnHand({
-  prefecture,
-}: Props) {
-  const { prefCode, prefName } = prefecture
+export default async function DashboardNumberOfCommercialEmployees({
+  routerProps,
+  children,
+}: SectionsPropsType) {
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return <CardsDashboardSingle title={title} document={document} />
+  return <> {children({ title, document, actionButton })}</>
 }

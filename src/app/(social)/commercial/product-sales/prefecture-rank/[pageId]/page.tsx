@@ -16,10 +16,28 @@ const KIND_ID = 'prefecture-rank'
 
 // 動的インポートとコンポーネントマッピング
 const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
-  'product-sales': dynamic(
+  'product-sales-amount': dynamic(
     () =>
       import(
         'views/commercial/product-sales/prefecture-rank/ProductSalesAmount'
+      )
+  ),
+  'amount-of-product-on-hand': dynamic(
+    () =>
+      import(
+        'views/commercial/product-sales/prefecture-rank/AmountOfProductOnHand'
+      )
+  ),
+  'number-of-commercial-employees': dynamic(
+    () =>
+      import(
+        'views/commercial/product-sales/prefecture-rank/NumberOfCommercialEmployees'
+      )
+  ),
+  'number-of-commercial-establishments': dynamic(
+    () =>
+      import(
+        'views/commercial/product-sales/prefecture-rank/NumberOfCommercialEstablishments'
       )
   ),
 }

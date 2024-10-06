@@ -1,7 +1,22 @@
 [
   {
-    "pageId": "product-sales",
+    "pageId": "product-sales-amount",
     "pageTitle": "商品販売額",
+    "menuId": "product-sales"
+  },
+  {
+    "pageId": "amount-of-product-on-hand",
+    "pageTitle": "商品手持額",
+    "menuId": "product-sales"
+  },
+  {
+    "pageId": "number-of-commercial-employees",
+    "pageTitle": "商業従業者数",
+    "menuId": "product-sales"
+  },
+  {
+    "pageId": "number-of-commercial-establishments",
+    "pageTitle": "商業事業所数",
     "menuId": "product-sales"
   }
 ]

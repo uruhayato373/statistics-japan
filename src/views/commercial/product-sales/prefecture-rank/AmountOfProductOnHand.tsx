@@ -1,16 +1,16 @@
-import DashboardProductSalesAmount from 'sections/commercial/product-sales/dashboard/DashboardProductSalesAmount'
+import RankingAmountOfProductOnHand from 'sections/commercial/product-sales/prefecture-rank/RankingAmountOfProductOnHand'
 import { ViewsPropsType } from 'types/views'
 import MainView from 'views-grid/MainView'
 import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
-export default async function ProductSalesAmount({
+export default async function AmountOfProductOnHand({
   routerProps,
 }: ViewsPropsType) {
   return (
     <MainView routerProps={routerProps}>
-      {/* 商品販売額 */}
+      {/* 商品手持額 */}
       <PrefectureRankingCards
-        Section={DashboardProductSalesAmount}
+        Section={RankingAmountOfProductOnHand}
         routerProps={routerProps}
       />
     </MainView>

@@ -1,24 +1,19 @@
-import { Suspense } from 'react'
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 
-import CircularProgressCards from 'components/CircularProgressCards'
-
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '商品販売額'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C3501', 'C350101', 'C350102'],
+  cdCat01: 'C3501',
 }
 
-interface Props {
-  prefecture: PrefectureType
-}
+const PAGE_ID = 'product-sales-amount'
 
 // values
 async function processValues(prefCode: string) {
@@ -37,16 +32,15 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function TableProductSalesAmount({ prefecture }: Props) {
-  const { prefCode, prefName } = prefecture
+export default async function DashboardProductSalesAmount({
+  routerProps,
+  children,
+}: SectionsPropsType) {
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
-
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
-    </Suspense>
-  )
+  return <> {children({ title, document, actionButton })}</>
 }
