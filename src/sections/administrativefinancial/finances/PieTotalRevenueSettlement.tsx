@@ -1,10 +1,10 @@
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
+
 import { ApexOptions } from 'apexcharts'
 
-import CardsApexPieChart from 'cards/CardsApexPieChart'
-
+import { ApexSectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '歳入決算総額の内訳'
@@ -22,8 +22,10 @@ const ESTAT_PARAMS = {
   ],
 }
 
+const PAGE_ID = 'total-revenue-settlement'
+
 // apexChartsのオプション
-const APEX_OPTIONS: ApexOptions = {
+const OPTIONS: ApexOptions = {
   chart: {
     height: 300,
   },
@@ -38,16 +40,13 @@ const APEX_OPTIONS: ApexOptions = {
   },
 }
 
-interface Props {
-  prefecture: PrefectureType
-}
-
 // values
 async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
+  const values = await fetchValues(ESTAT_PARAMS)
+  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return values
+  return filteredValues
 }
 
 // document
@@ -59,19 +58,16 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function PieChartTotalRevenueSettlement({
+export default async function PieTotalRevenueSettlement({
   prefecture,
-}: Props) {
+  children,
+}: ApexSectionsPropsType) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const options = OPTIONS
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return (
-    <CardsApexPieChart
-      title={title}
-      document={document}
-      options={APEX_OPTIONS}
-    />
-  )
+  return <> {children({ title, document, options, actionButton })}</>
 }

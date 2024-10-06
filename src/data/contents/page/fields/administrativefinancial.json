@@ -38,5 +38,20 @@
     "pageId": "current-amount-of-local-bonds",
     "pageTitle": "地方債現在高",
     "menuId": "finances"
+  },
+  {
+    "pageId": "real-balance-ratio",
+    "pageTitle": "実質収支比率",
+    "menuId": "finances"
+  },
+  {
+    "pageId": "standard-financial-income-amount",
+    "pageTitle": "基準財政収入額",
+    "menuId": "finances"
+  },
+  {
+    "pageId": "standard-financial-demand-amount",
+    "pageTitle": "基準財政需要額",
+    "menuId": "finances"
   }
 ]

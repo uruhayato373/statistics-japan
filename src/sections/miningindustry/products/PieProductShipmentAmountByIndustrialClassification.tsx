@@ -2,11 +2,9 @@ import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 
 import { ApexOptions } from 'apexcharts'
 
-import { CardsApexPieChartProps } from 'cards/CardsApexPieChart'
-
+import { ApexSectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造品出荷額（産業中分類別）'
@@ -18,11 +16,6 @@ const ESTAT_PARAMS = {
 
 const PAGE_ID = 'product-shipment-amount'
 
-interface Props {
-  prefecture: PrefectureType
-  children: (props: CardsApexPieChartProps) => React.ReactNode
-}
-
 const OPTIONS: ApexOptions = {
   dataLabels: {
     dropShadow: {
@@ -33,10 +26,6 @@ const OPTIONS: ApexOptions = {
   legend: {
     show: false,
   },
-}
-
-interface Props {
-  prefecture: PrefectureType
 }
 
 // values
@@ -85,7 +74,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 export default async function PieProductShipmentAmountByIndustrialClassification({
   prefecture,
   children,
-}: Props) {
+}: ApexSectionsPropsType) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)

@@ -58,6 +58,24 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
         'views/administrativefinancial/finances/prefecture-rank/CurrentAmountOfLocalBonds'
       )
   ),
+  'real-balance-ratio': dynamic(
+    () =>
+      import(
+        'views/administrativefinancial/finances/prefecture-rank/RealBalanceRatio'
+      )
+  ),
+  'standard-financial-income-amount': dynamic(
+    () =>
+      import(
+        'views/administrativefinancial/finances/prefecture-rank/StandardFinancialIncomeAmount'
+      )
+  ),
+  'standard-financial-demand-amount': dynamic(
+    () =>
+      import(
+        'views/administrativefinancial/finances/prefecture-rank/StandardFinancialDemandAmount'
+      )
+  ),
 }
 
 export async function generateStaticParams() {

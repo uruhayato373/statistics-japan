@@ -1,15 +1,10 @@
-import { Suspense } from 'react'
-
 import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
-import CircularProgressCards from 'components/CircularProgressCards'
 
 import { ApexOptions } from 'apexcharts'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-
+import { ApexSectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '決算総額'
@@ -21,9 +16,8 @@ const ESTAT_PARAMS = {
   cdCat01: ['D3101', 'D3103'],
 }
 
-const APEX_OPTIONS: ApexOptions = {
+const OPTIONS: ApexOptions = {
   chart: {
-    height: 250,
     stacked: false,
     toolbar: {
       show: false,
@@ -73,16 +67,13 @@ const APEX_OPTIONS: ApexOptions = {
   },
 }
 
-interface Props {
-  prefecture: PrefectureType
-}
-
 // values
 async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
+  const values = await fetchValues(ESTAT_PARAMS)
+  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return formatValues(values)
+  return formatValues(filteredValues)
 }
 
 // format values
@@ -112,23 +103,16 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function ColumnChartTotalSettlementAmount({
+export default async function AxisTotalSettlementAmount({
   prefecture,
-}: Props) {
+  children,
+}: ApexSectionsPropsType) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
-  const customActionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
+  const options = OPTIONS
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsApexAxisChart
-        title={title}
-        document={document}
-        options={APEX_OPTIONS}
-        actionButton={customActionButton}
-      />
-    </Suspense>
-  )
+  return <> {children({ title, document, options, actionButton })}</>
 }

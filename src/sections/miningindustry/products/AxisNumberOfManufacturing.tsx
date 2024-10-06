@@ -2,11 +2,9 @@ import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 
 import { ApexOptions } from 'apexcharts'
 
-import { CardsApexAxisChartProps } from 'cards/CardsApexAxisChart'
-
+import { ApexSectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造業事業所数・従業者数の推移'
@@ -17,11 +15,6 @@ const ESTAT_PARAMS = {
 }
 
 const PAGE_ID = 'number-of-manufacturing-establishments'
-
-interface Props {
-  prefecture: PrefectureType
-  children: (props: CardsApexAxisChartProps) => React.ReactNode
-}
 
 const OPTIONS: ApexOptions = {
   yaxis: [
@@ -59,9 +52,10 @@ const OPTIONS: ApexOptions = {
 // values
 async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
+  const values = await fetchValues(ESTAT_PARAMS)
+  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return values
+  return filteredValues
 }
 
 // document
@@ -79,7 +73,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 export default async function AxisNumberOfManufacturing({
   prefecture,
   children,
-}: Props) {
+}: ApexSectionsPropsType) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
