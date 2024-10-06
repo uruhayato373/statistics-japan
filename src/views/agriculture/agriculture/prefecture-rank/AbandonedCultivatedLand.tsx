@@ -1,16 +1,16 @@
-import RankingAgriculturalOutput from 'sections/agriculture/agriculture/prefecture-rank/RankingAgriculturalOutput'
+import RankingAbandonedCultivatedLand from 'sections/agriculture/agriculture/prefecture-rank/RankingAbandonedCultivatedLand'
 import { ViewsPropsType } from 'types/views'
 import MainView from 'views-grid/MainView'
 import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
-export default async function AgriculturalOutput({
+export default async function AbandonedCultivatedLand({
   routerProps,
 }: ViewsPropsType) {
   return (
     <MainView routerProps={routerProps}>
-      {/* 農業産出額 */}
+      {/* 耕作放棄地面積 */}
       <PrefectureRankingCards
-        Section={RankingAgriculturalOutput}
+        Section={RankingAbandonedCultivatedLand}
         routerProps={routerProps}
       />
     </MainView>

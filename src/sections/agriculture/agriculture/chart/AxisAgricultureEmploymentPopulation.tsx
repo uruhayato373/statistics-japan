@@ -1,12 +1,8 @@
-import { Suspense } from 'react'
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 
-import CircularProgressCards from 'components/CircularProgressCards'
-
-import CardsApexColumnChart from 'cards/CardsApexColumnChart'
-
+import { ApexSectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '農業就業人口の推移'
@@ -16,16 +12,15 @@ const ESTAT_PARAMS = {
   cdCat01: ['C310411', 'C310412'],
 }
 
-interface Props {
-  prefecture: PrefectureType
-}
+const PAGE_ID = 'agriculture-employment-population'
 
 // values
 async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
+  const values = await fetchValues(ESTAT_PARAMS)
+  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return values
+  return filteredValues
 }
 
 // document
@@ -33,26 +28,22 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const { formatDocument } = handleDocument(values)
   const document = formatDocument()
 
-  document.categories = document.categories.map((d) => ({
-    ...d,
-    type: 'column',
-  }))
+  document.categories[0].type = 'column'
+  document.categories[1].type = 'column'
 
   return document
 }
 
 // コンポーネントの描画
-export default async function ColumnChartAgricultureEmploymentPopulation({
+export default async function AxisAgricultureEmploymentPopulation({
   prefecture,
-}: Props) {
+  children,
+}: ApexSectionsPropsType) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsApexColumnChart title={title} document={document} />
-    </Suspense>
-  )
+  return <> {children({ title, document, actionButton })}</>
 }

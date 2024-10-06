@@ -1,16 +1,16 @@
-import RankingAgriculturalOutput from 'sections/agriculture/agriculture/prefecture-rank/RankingAgriculturalOutput'
+import RankingAgricultureEmploymentPopulation from 'sections/agriculture/agriculture/prefecture-rank/RankingAgricultureEmploymentPopulation'
 import { ViewsPropsType } from 'types/views'
 import MainView from 'views-grid/MainView'
 import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
-export default async function AgriculturalOutput({
+export default async function AgricultureEmploymentPopulation({
   routerProps,
 }: ViewsPropsType) {
   return (
     <MainView routerProps={routerProps}>
-      {/* 農業産出額 */}
+      {/* 農業就業人口 */}
       <PrefectureRankingCards
-        Section={RankingAgriculturalOutput}
+        Section={RankingAgricultureEmploymentPopulation}
         routerProps={routerProps}
       />
     </MainView>
