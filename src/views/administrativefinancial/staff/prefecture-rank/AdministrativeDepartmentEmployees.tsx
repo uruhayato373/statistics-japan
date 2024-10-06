@@ -1,51 +1,20 @@
-import { Suspense } from 'react'
-
-import Grid from '@mui/material/Grid'
-import Box from '@mui/system/Box'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
-import CardsAdsResponsive from 'cards/CardsAdsResponsive'
-
-import RankingChartAdministrativeDepartmentEmployees from 'sections/administrativefinancial/staff/prefecture-rank/RankingChartAdministrativeDepartmentEmployees'
-import RankingTableAdministrativeDepartmentEmployees from 'sections/administrativefinancial/staff/prefecture-rank/RankingTableAdministrativeDepartmentEmployees'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+import RankingAdministrativeDepartmentEmployees from 'sections/administrativefinancial/staff/prefecture-rank/RankingAdministrativeDepartmentEmployees'
+import { RouterProps } from 'utils/props'
+import MainView from 'views-grid/MainView'
+import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
 interface Props {
   routerProps: RouterProps
 }
 
 export default async function PrefectureRankView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} md={6}>
-              <RankingChartAdministrativeDepartmentEmployees />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <RankingTableAdministrativeDepartmentEmployees />
-            </Grid>
-            {/* row 2 */}
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+  return (
+    <MainView routerProps={routerProps}>
+      {/* 一般行政部門職員数 */}
+      <PrefectureRankingCards
+        Section={RankingAdministrativeDepartmentEmployees}
+        routerProps={routerProps}
+      />
+    </MainView>
+  )
 }

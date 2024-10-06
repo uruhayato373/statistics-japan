@@ -1,8 +1,6 @@
-import { CardsReactTimeTableProps } from 'cards/CardsReactTimeTable'
-
+import { TableSectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造品出荷額'
@@ -10,11 +8,6 @@ const CARD_TITLE = '製造品出荷額'
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
   cdCat01: ['C3401', 'C3402', 'C3403', 'C3404'],
-}
-
-interface Props {
-  prefecture: PrefectureType
-  children: (props: CardsReactTimeTableProps) => React.ReactNode
 }
 
 // values
@@ -51,7 +44,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 export default async function TableProductShipmentAmount({
   prefecture,
   children,
-}: Props) {
+}: TableSectionsPropsType) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)

@@ -1,12 +1,6 @@
-import { Suspense } from 'react'
-
-import CircularProgressCards from 'components/CircularProgressCards'
-
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
+import { TableSectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '一般行政部門職員数'
@@ -14,10 +8,6 @@ const CARD_TITLE = '一般行政部門職員数'
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
   cdCat01: 'D1201',
-}
-
-interface Props {
-  prefecture: PrefectureType
 }
 
 // values
@@ -39,15 +29,12 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 // コンポーネントの描画
 export default async function TableAdministrativeDepartmentEmployees({
   prefecture,
-}: Props) {
+  children,
+}: TableSectionsPropsType) {
   const { prefCode, prefName } = prefecture
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
-    </Suspense>
-  )
+  return <> {children({ title, document })}</>
 }

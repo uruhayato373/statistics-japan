@@ -1,6 +1,7 @@
 import { CardsApexAxisChartProps } from 'cards/CardsApexAxisChart'
 import { CardsApexPieChartProps } from 'cards/CardsApexPieChart'
 import { CardsDashboardProps } from 'cards/CardsDashboard'
+import { CardsReactTimeTableProps } from 'cards/CardsReactTimeTable'
 
 import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
@@ -24,4 +25,9 @@ export interface ApexSectionsPropsType {
   children: (
     props: CardsApexAxisChartProps | CardsApexPieChartProps
   ) => React.ReactNode
+}
+
+export interface TableSectionsPropsType {
+  prefecture: PrefectureType
+  children: (props: CardsReactTimeTableProps) => React.ReactNode
 }

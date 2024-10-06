@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid'
 
 interface GridItemProps {
   xs?: number
+  sm?: number
   md?: number
   lg?: number
   children: ReactNode
