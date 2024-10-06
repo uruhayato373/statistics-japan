@@ -6,9 +6,8 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import BarChartTotalAmountOfGarbageDischarged from 'sections/energy/garbage/BarChartTotalAmountOfGarbageDischarged'
-import DashboardEmissionsPerPersonPerDay from 'sections/energy/garbage/DashboardEmissionsPerPersonPerDay'
-import DashboardTotalAmountOfGarbageDischarged from 'sections/energy/garbage/DashboardTotalAmountOfGarbageDischarged'
+import DashboardEmissionsPerPersonPerDay from 'sections/energy/garbage/dashboard/DashboardEmissionsPerPersonPerDay'
+import DashboardTotalAmountOfGarbageDischarged from 'sections/energy/garbage/dashboard/DashboardTotalAmountOfGarbageDischarged'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -34,11 +33,6 @@ export default async function PrefectureView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <DashboardEmissionsPerPersonPerDay
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={6} lg={6}>
-              <BarChartTotalAmountOfGarbageDischarged
                 prefecture={currentPrefecture}
               />
             </Grid>

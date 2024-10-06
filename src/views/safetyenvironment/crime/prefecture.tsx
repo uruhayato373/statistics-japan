@@ -6,17 +6,16 @@ import Grid from '@mui/material/Grid'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import DashboardNumberOfPoliceOfficers from 'sections/safetyenvironment/crime/DashboardNumberOfPoliceOfficers'
+import DashboardNumberOfPoliceOfficers from 'sections/safetyenvironment/crime/dashboard/DashboardNumberOfPoliceOfficers'
 import MixedChartProstitutionOffender from 'sections/safetyenvironment/crime/MixedChartProstitutionOffender'
 import MixedChartSpecialLawOffender from 'sections/safetyenvironment/crime/MixedChartSpecialLawOffender'
-import MixedChartStimulantDrugCrackdown from 'sections/safetyenvironment/crime/MixedChartStimulantDrugCrackdown'
-import TableCrimePreventionVolunteer from 'sections/safetyenvironment/crime/TableCrimePreventionVolunteer'
-import TableIncident from 'sections/safetyenvironment/crime/TableIncident'
-import TableNumberOfCriminalOffensesCleared from 'sections/safetyenvironment/crime/TableNumberOfCriminalOffensesCleared'
-import TableNumberOfPeopleArrestedForCriminalLawCrimes from 'sections/safetyenvironment/crime/TableNumberOfPeopleArrestedForCriminalLawCrimes'
-import TableNumberOfPeopleArrestedForJuvenileCriminalLawOffenses from 'sections/safetyenvironment/crime/TableNumberOfPeopleArrestedForJuvenileCriminalLawOffenses'
-import TableNumberOfRecognizedCriminalLawOffenses from 'sections/safetyenvironment/crime/TableNumberOfRecognizedCriminalLawOffenses'
-import TableRoadTrafficLawViolation from 'sections/safetyenvironment/crime/TableRoadTrafficLawViolation'
+import TableCrimePreventionVolunteer from 'sections/safetyenvironment/crime/table/TableCrimePreventionVolunteer'
+import TableIncident from 'sections/safetyenvironment/crime/table/TableIncident'
+import TableNumberOfCriminalOffensesCleared from 'sections/safetyenvironment/crime/table/TableNumberOfCriminalOffensesCleared'
+import TableNumberOfPeopleArrestedForCriminalLawCrimes from 'sections/safetyenvironment/crime/table/TableNumberOfPeopleArrestedForCriminalLawCrimes'
+import TableNumberOfPeopleArrestedForJuvenileCriminalLawOffenses from 'sections/safetyenvironment/crime/table/TableNumberOfPeopleArrestedForJuvenileCriminalLawOffenses'
+import TableNumberOfRecognizedCriminalLawOffenses from 'sections/safetyenvironment/crime/table/TableNumberOfRecognizedCriminalLawOffenses'
+import TableRoadTrafficLawViolation from 'sections/safetyenvironment/crime/table/TableRoadTrafficLawViolation'
 import handleProps, { RouterProps } from 'utils/props'
 import Error500 from 'views/maintenance/500'
 
@@ -43,11 +42,6 @@ export default async function PrefectureView({ routerProps }: Props) {
             </Grid>
             <Grid item xs={12} md={6}>
               <MixedChartProstitutionOffender prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <MixedChartStimulantDrugCrackdown
-                prefecture={currentPrefecture}
-              />
             </Grid>
             <Grid item xs={12} md={6}>
               <TableNumberOfRecognizedCriminalLawOffenses
