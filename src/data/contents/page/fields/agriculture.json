@@ -5,8 +5,48 @@
     "menuId": "agriculture"
   },
   {
+    "pageId": "abandoned-cultivated-land",
+    "pageTitle": "耕作放棄地面積",
+    "menuId": "agriculture"
+  },
+  {
+    "pageId": "agricultural-land-conversion-area",
+    "pageTitle": "農地転用面積",
+    "menuId": "agriculture"
+  },
+  {
+    "pageId": "agriculture-employment-population",
+    "pageTitle": "農業就業人口",
+    "menuId": "agriculture"
+  },
+  {
+    "pageId": "cultivated-land-area",
+    "pageTitle": "耕地面積",
+    "menuId": "agriculture"
+  },
+  {
+    "pageId": "number-of-farmers",
+    "pageTitle": "農家数",
+    "menuId": "agriculture"
+  },
+  {
     "pageId": "fishery-output-value",
     "pageTitle": "漁業産出額",
+    "menuId": "fishing"
+  },
+  {
+    "pageId": "aquaculture-yield",
+    "pageTitle": "養殖収穫量",
+    "menuId": "fishing"
+  },
+  {
+    "pageId": "catch-amount",
+    "pageTitle": "漁獲量",
+    "menuId": "fishing"
+  },
+  {
+    "pageId": "number-of-fishermen-employed",
+    "pageTitle": "漁業就業者数",
     "menuId": "fishing"
   }
 ]

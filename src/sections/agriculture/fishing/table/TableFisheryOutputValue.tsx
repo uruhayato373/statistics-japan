@@ -1,19 +1,14 @@
-import CardsDashboardSingle from 'cards/CardsDashboard'
-
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '養殖収穫量'
+const CARD_TITLE = '漁業産出額'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: 'C3122',
-}
-
-interface Props {
-  prefecture: PrefectureType
+  cdCat01: ['C3120', 'C312001', 'C312002', 'C312003', 'C31201'],
 }
 
 // values
@@ -33,11 +28,14 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function DashboardAquacultureYield({ prefecture }: Props) {
-  const { prefCode, prefName } = prefecture
+export default async function TableFisheryOutputValue({
+  routerProps,
+  children,
+}: SectionsPropsType) {
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
 
-  return <CardsDashboardSingle title={title} document={document} />
+  return <> {children({ title, document })}</>
 }

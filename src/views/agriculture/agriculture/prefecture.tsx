@@ -1,107 +1,115 @@
-import { Suspense } from 'react'
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
+import CardsDashboard from 'cards/CardsDashboard'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
-import ColumnChartAgricultureEmploymentPopulation from 'sections/agriculture/agriculture/ColumnChartAgricultureEmploymentPopulation'
+import AxisAgricultureEmploymentPopulation from 'sections/agriculture/agriculture/chart/AxisAgricultureEmploymentPopulation'
+import AxisNumberOfFarmers from 'sections/agriculture/agriculture/chart/AxisNumberOfFarmers'
+import PieNumberOfFarmers from 'sections/agriculture/agriculture/chart/PieNumberOfFarmers'
+import PiePercentageOfFullTimeFarmers from 'sections/agriculture/agriculture/chart/PiePercentageOfFullTimeFarmers'
 import DashboardAbandonedCultivatedLand from 'sections/agriculture/agriculture/dashboard/DashboardAbandonedCultivatedLand'
 import DashboardAgriculturalLandConversionArea from 'sections/agriculture/agriculture/dashboard/DashboardAgriculturalLandConversionArea'
 import DashboardAgriculturalOutput from 'sections/agriculture/agriculture/dashboard/DashboardAgriculturalOutput'
 import DashboardAgricultureEmploymentPopulation from 'sections/agriculture/agriculture/dashboard/DashboardAgricultureEmploymentPopulation'
 import DashboardCultivatedLandArea from 'sections/agriculture/agriculture/dashboard/DashboardCultivatedLandArea'
 import DashboardNumberOfFarmers from 'sections/agriculture/agriculture/dashboard/DashboardNumberOfFarmers'
-import LineChartNumberOfFarmers from 'sections/agriculture/agriculture/LineChartNumberOfFarmers'
-import PieChartNumberOfFarmers from 'sections/agriculture/agriculture/PieChartNumberOfFarmers'
-import PieChartPercentageOfFullTimeFarmers from 'sections/agriculture/agriculture/PieChartPercentageOfFullTimeFarmers'
-import SourceAnnotation from 'sections/agriculture/agriculture/SourceAnnotation'
 import TableAgricultureEmploymentPopulation from 'sections/agriculture/agriculture/table/TableAgricultureEmploymentPopulation'
 import TableCultivatedLandArea from 'sections/agriculture/agriculture/table/TableCultivatedLandArea'
 import TableFarmersIncome from 'sections/agriculture/agriculture/table/TableFarmersIncome'
 import TableNumberOfFarmers from 'sections/agriculture/agriculture/table/TableNumberOfFarmers'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+import { ViewsPropsType } from 'types/views'
+import GridItem from 'views-grid/GridItem'
+import MainView from 'views-grid/MainView'
 
-interface Props {
-  routerProps: RouterProps
-}
+// dashboard items
+const dashboardItems = [
+  { Component: DashboardAbandonedCultivatedLand },
+  { Component: DashboardAgriculturalLandConversionArea },
+  { Component: DashboardAgriculturalOutput },
+  { Component: DashboardAgricultureEmploymentPopulation },
+  { Component: DashboardCultivatedLandArea },
+  { Component: DashboardNumberOfFarmers },
+]
 
-export default async function AgriculturePrefecture({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const { currentPrefecture } = breadcrumbsProps
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAgriculturalOutput prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAgricultureEmploymentPopulation
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfFarmers prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardCultivatedLandArea prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAgriculturalLandConversionArea
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAbandonedCultivatedLand
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={5}>
-              <LineChartNumberOfFarmers prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={5}>
-              <ColumnChartAgricultureEmploymentPopulation
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={5}>
-              <PieChartNumberOfFarmers prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={5}>
-              <PieChartPercentageOfFullTimeFarmers
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableAgricultureEmploymentPopulation
-                prefecture={currentPrefecture}
-              />
-            </Grid>{' '}
-            <Grid item xs={12} md={6}>
-              <TableNumberOfFarmers prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableCultivatedLandArea prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableFarmersIncome prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <SourceAnnotation />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+// chart items
+const chartItems = [
+  {
+    Section: AxisAgricultureEmploymentPopulation,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
+  },
+  {
+    Section: AxisNumberOfFarmers,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
+  },
+  {
+    Section: PieNumberOfFarmers,
+    Card: CardsApexPieChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
+  },
+  {
+    Section: PiePercentageOfFullTimeFarmers,
+    Card: CardsApexPieChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
+  },
+]
+
+// table items
+const tableItems = [
+  {
+    Section: TableAgricultureEmploymentPopulation,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableCultivatedLandArea,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableFarmersIncome,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableNumberOfFarmers,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
+
+export default async function AgriculturePrefecture({
+  routerProps,
+}: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* chart items */}
+      {chartItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
+  )
 }

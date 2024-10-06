@@ -13,13 +13,9 @@ import DashboardRealDebtServiceRatio from 'sections/administrativefinancial/fina
 import DashboardStandardFinancialDemandAmount from 'sections/administrativefinancial/finances/dashboard/DashboardStandardFinancialDemandAmount'
 import DashboardStandardFinancialIncomeAmount from 'sections/administrativefinancial/finances/dashboard/DashboardStandardFinancialIncomeAmount'
 import PieTotalRevenueSettlement from 'sections/administrativefinancial/finances/PieTotalRevenueSettlement'
-import { RouterProps } from 'utils/props'
+import { ViewsPropsType } from 'types/views'
 import GridItem from 'views-grid/GridItem'
 import MainView from 'views-grid/MainView'
-
-interface Props {
-  routerProps: RouterProps
-}
 
 // dashboard items
 const dashboardItems = [
@@ -58,7 +54,7 @@ const chartItems = [
   },
 ]
 
-export default async function PrefectureView({ routerProps }: Props) {
+export default async function PrefectureView({ routerProps }: ViewsPropsType) {
   return (
     <MainView routerProps={routerProps}>
       {/* dashboard items */}

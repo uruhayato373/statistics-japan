@@ -1,65 +1,67 @@
-import { Suspense } from 'react'
+import CardsDashboard from 'cards/CardsDashboard'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
+import DashboardAquacultureYield from 'sections/agriculture/fishing/dashboard/DashboardAquacultureYield'
+import DashboardCatchAmount from 'sections/agriculture/fishing/dashboard/DashboardCatchAmount'
+import DashboardFisheryOutputValue from 'sections/agriculture/fishing/dashboard/DashboardFisheryOutputValue'
+import DashboardNumberOfFishermenEmployed from 'sections/agriculture/fishing/dashboard/DashboardNumberOfFishermenEmployed'
+import TableAquacultureYield from 'sections/agriculture/fishing/table/TableAquacultureYield'
+import TableCatchAmount from 'sections/agriculture/fishing/table/TableCatchAmount'
+import TableFisheryOutputValue from 'sections/agriculture/fishing/table/TableFisheryOutputValue'
+import { ViewsPropsType } from 'types/views'
+import GridItem from 'views-grid/GridItem'
+import MainView from 'views-grid/MainView'
 
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
+// dashboard items
+const dashboardItems = [
+  { Component: DashboardFisheryOutputValue },
+  { Component: DashboardCatchAmount },
+  { Component: DashboardAquacultureYield },
+  { Component: DashboardNumberOfFishermenEmployed },
+]
 
-import DashboardAquacultureYield from 'sections/agriculture/fishing/DashboardAquacultureYield'
-import DashboardCatchAmount from 'sections/agriculture/fishing/DashboardCatchAmount'
-import DashboardFisheryOutputValue from 'sections/agriculture/fishing/DashboardFisheryOutputValue'
-import DashboardNumberOfFishermenEmployed from 'sections/agriculture/fishing/DashboardNumberOfFishermenEmployed'
-import TableAquacultureYield from 'sections/agriculture/fishing/TableAquacultureYield'
-import TableCatchAmount from 'sections/agriculture/fishing/TableCatchAmount'
-import TableFisheryOutputValue from 'sections/agriculture/fishing/TableFisheryOutputValue'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
-interface Props {
-  routerProps: RouterProps
-}
+// table items
+const tableItems = [
+  {
+    Section: TableFisheryOutputValue,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableCatchAmount,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableAquacultureYield,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
 
-export default async function FishingPrefecture({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const { currentPrefecture } = breadcrumbsProps
-
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardFisheryOutputValue prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardCatchAmount prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAquacultureYield prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfFishermenEmployed
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableFisheryOutputValue prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableCatchAmount prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableAquacultureYield prefecture={currentPrefecture} />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+export default async function FishingPrefecture({
+  routerProps,
+}: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
+  )
 }

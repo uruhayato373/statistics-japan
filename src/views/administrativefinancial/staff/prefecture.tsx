@@ -3,13 +3,9 @@ import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
 import DashboardAdministrativeDepartmentEmployees from 'sections/administrativefinancial/staff/dashboard/DashboardAdministrativeDepartmentEmployees'
 import TableAdministrativeDepartmentEmployees from 'sections/administrativefinancial/staff/TableAdministrativeDepartmentEmployees'
-import { RouterProps } from 'utils/props'
+import { ViewsPropsType } from 'types/views'
 import GridItem from 'views-grid/GridItem'
 import MainView from 'views-grid/MainView'
-
-interface Props {
-  routerProps: RouterProps
-}
 
 // dashboard items
 const dashboardItems = [
@@ -27,7 +23,7 @@ const tableItems = [
   },
 ]
 
-export default async function PrefectureView({ routerProps }: Props) {
+export default async function PrefectureView({ routerProps }: ViewsPropsType) {
   return (
     <MainView routerProps={routerProps}>
       {/* dashboard items */}

@@ -20,6 +20,32 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
     () =>
       import('views/agriculture/agriculture/prefecture-rank/AgriculturalOutput')
   ),
+  'abandoned-cultivated-land': dynamic(
+    () =>
+      import(
+        'views/agriculture/agriculture/prefecture-rank/AbandonedCultivatedLand'
+      )
+  ),
+  'agricultural-land-conversion-area': dynamic(
+    () =>
+      import(
+        'views/agriculture/agriculture/prefecture-rank/AgriculturalLandConversionArea'
+      )
+  ),
+  'agriculture-employment-population': dynamic(
+    () =>
+      import(
+        'views/agriculture/agriculture/prefecture-rank/AgricultureEmploymentPopulation'
+      )
+  ),
+  'cultivated-land-area': dynamic(
+    () =>
+      import('views/agriculture/agriculture/prefecture-rank/CultivatedLandArea')
+  ),
+  'number-of-farmers': dynamic(
+    () =>
+      import('views/agriculture/agriculture/prefecture-rank/NumberOfFarmers')
+  ),
 }
 
 export async function generateStaticParams() {

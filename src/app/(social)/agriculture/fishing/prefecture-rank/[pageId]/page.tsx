@@ -19,6 +19,18 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'fishery-output-value': dynamic(
     () => import('views/agriculture/fishing/prefecture-rank/FisheryOutputValue')
   ),
+  'aquaculture-yield': dynamic(
+    () => import('views/agriculture/fishing/prefecture-rank/AquacultureYield')
+  ),
+  'catch-amount': dynamic(
+    () => import('views/agriculture/fishing/prefecture-rank/CatchAmount')
+  ),
+  'number-of-fishermen-employed': dynamic(
+    () =>
+      import(
+        'views/agriculture/fishing/prefecture-rank/NumberOfFishermenEmployed'
+      )
+  ),
 }
 
 export async function generateStaticParams() {
