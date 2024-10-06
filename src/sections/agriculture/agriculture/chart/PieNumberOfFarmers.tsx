@@ -5,6 +5,7 @@ import { ApexOptions } from 'apexcharts'
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '農家数（規模別）'
@@ -69,10 +70,10 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 export default async function PieNumberOfFarmers({
-  prefecture,
+  routerProps,
   children,
 }: SectionsPropsType) {
-  const { prefCode, prefName } = prefecture
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)

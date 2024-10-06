@@ -3,7 +3,6 @@ import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
 import DashboardAdministrativeDepartmentEmployees from 'sections/administrativefinancial/staff/dashboard/DashboardAdministrativeDepartmentEmployees'
 import TableAdministrativeDepartmentEmployees from 'sections/administrativefinancial/staff/TableAdministrativeDepartmentEmployees'
-import { handlePrefecture } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 import GridItem from 'views-grid/GridItem'
 import MainView from 'views-grid/MainView'
@@ -29,14 +28,12 @@ const tableItems = [
 ]
 
 export default async function PrefectureView({ routerProps }: Props) {
-  const currentPrefecture = handlePrefecture().findItem(routerProps.prefCode)
-
   return (
     <MainView routerProps={routerProps}>
       {/* dashboard items */}
       {dashboardItems.map(({ Component }, index) => (
         <GridItem key={index} {...dashboardGridProps}>
-          <Component prefecture={currentPrefecture}>
+          <Component routerProps={routerProps}>
             {(props) => <CardsDashboard {...props} />}
           </Component>
         </GridItem>
@@ -44,7 +41,7 @@ export default async function PrefectureView({ routerProps }: Props) {
       {/* table items */}
       {tableItems.map(({ Section, Card, gridProps }, index) => (
         <GridItem key={`chart-${index}`} {...gridProps}>
-          <Section prefecture={currentPrefecture}>
+          <Section routerProps={routerProps}>
             {(props) => <Card {...props} />}
           </Section>
         </GridItem>

@@ -5,7 +5,7 @@ import { Stack, Box, Divider, Typography } from '@mui/material'
 
 import MainCard from 'components/MainCard'
 
-import { CardsPropsType } from 'types/cards'
+import { CardsHighchartsPropsType } from 'types/cards'
 import formatHighcharts from 'utils/highcharts'
 
 import HighchartsComparisonChart from './HighchartsComparisonChart'
@@ -16,7 +16,7 @@ export default function CardsHighchartsComparisonChart({
   document,
   options,
   height,
-}: CardsPropsType) {
+}: CardsHighchartsPropsType) {
   const [selectedPrefCodes, SelectPrefCodesComponent] = SelectPrefCodes()
 
   const filteredDocument = useMemo(() => {

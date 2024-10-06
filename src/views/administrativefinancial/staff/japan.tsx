@@ -28,17 +28,12 @@ const tableItems = [
 ]
 
 export default async function JapanView({ routerProps }: Props) {
-  const currentPrefecture = {
-    prefCode: '00000',
-    prefName: '日本',
-  }
-
   return (
     <MainView routerProps={routerProps}>
       {/* dashboard items */}
       {dashboardItems.map(({ Component }, index) => (
         <GridItem key={index} {...dashboardGridProps}>
-          <Component prefecture={currentPrefecture}>
+          <Component routerProps={routerProps}>
             {(props) => <CardsDashboard {...props} />}
           </Component>
         </GridItem>
@@ -46,7 +41,7 @@ export default async function JapanView({ routerProps }: Props) {
       {/* table items */}
       {tableItems.map(({ Section, Card, gridProps }, index) => (
         <GridItem key={`chart-${index}`} {...gridProps}>
-          <Section prefecture={currentPrefecture}>
+          <Section routerProps={routerProps}>
             {(props) => <Card {...props} />}
           </Section>
         </GridItem>
