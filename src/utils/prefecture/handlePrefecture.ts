@@ -1,5 +1,6 @@
 import regionsData from 'data/prefecture/regions.json'
 import prefectures from 'data/prefecture/resasPrefList.json'
+import { RouterProps } from 'utils/props'
 
 /**
  * RESAS APIから取得する都道府県データの型
@@ -43,6 +44,7 @@ const handlePrefecture = () => {
   return {
     fetchItems: () => fetchItems(),
     findItem: (prefCode: string) => findItem(prefCode),
+    findPrefecture: (args: string | RouterProps) => findPrefecture(args),
     fetchRegions: () => fetchRegions(),
   }
 }
@@ -83,6 +85,32 @@ const findItem = (prefCode: string): PrefectureType | undefined => {
     console.error('都道府県の検索中にエラーが発生しました:', error)
     throw error
   }
+}
+
+const findPrefecture = (
+  args: string | RouterProps
+): PrefectureType | undefined => {
+  // stringの場合の処理
+  if (typeof args === 'string') {
+    const prefectures = fetchItems()
+    return prefectures.find((f) => f.prefCode === args)
+  }
+  // RouterProps の場合の処理
+  else {
+    const { kindId, prefCode } = args
+    if (kindId === 'prefecture') {
+      const prefectures = fetchItems()
+      return prefectures.find((f) => f.prefCode === prefCode)
+    } else {
+      return {
+        prefCode: '00000',
+        prefName: '日本',
+      }
+    }
+  }
+
+  // 適切な PrefectureType が見つからない場合は undefined を返します
+  return undefined
 }
 
 /**
