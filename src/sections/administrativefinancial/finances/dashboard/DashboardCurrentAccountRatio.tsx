@@ -1,6 +1,6 @@
 import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 
-import { DashboardSectionsPropsType } from 'types/sections'
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { handlePrefecture } from 'utils/prefecture'
@@ -36,7 +36,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 export default async function DashboardCurrentAccountRatio({
   routerProps,
   children,
-}: DashboardSectionsPropsType) {
+}: SectionsPropsType) {
   const { prefCode, prefName } = handlePrefecture().findPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)

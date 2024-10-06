@@ -3,31 +3,19 @@ import { CardsApexPieChartProps } from 'cards/CardsApexPieChart'
 import { CardsDashboardProps } from 'cards/CardsDashboard'
 import { CardsReactTimeTableProps } from 'cards/CardsReactTimeTable'
 
-import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 
 import { CardsHighchartsPropsType, CardsPropsType } from './cards'
 
-export interface RankingSectionsPropsType {
+type AllCardPropsType =
+  | CardsPropsType
+  | CardsHighchartsPropsType
+  | CardsDashboardProps
+  | CardsApexAxisChartProps
+  | CardsApexPieChartProps
+  | CardsReactTimeTableProps
+
+export interface SectionsPropsType {
   routerProps?: RouterProps
-  children: (
-    props: CardsPropsType | CardsHighchartsPropsType
-  ) => React.ReactNode
-}
-
-export interface DashboardSectionsPropsType {
-  prefecture: PrefectureType
-  children: (props: CardsDashboardProps) => React.ReactNode
-}
-
-export interface ApexSectionsPropsType {
-  prefecture: PrefectureType
-  children: (
-    props: CardsApexAxisChartProps | CardsApexPieChartProps
-  ) => React.ReactNode
-}
-
-export interface TableSectionsPropsType {
-  prefecture: PrefectureType
-  children: (props: CardsReactTimeTableProps) => React.ReactNode
+  children: (props: AllCardPropsType) => React.ReactNode
 }
