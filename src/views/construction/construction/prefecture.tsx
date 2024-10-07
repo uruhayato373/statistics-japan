@@ -1,13 +1,9 @@
-import { Suspense } from 'react'
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsDashboard from 'cards/CardsDashboard'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
-import MixedChartConstructionStarts from 'sections/construction/construction/chart/MixedChartConstructionStarts'
-import MixedChartPublicWorksContract from 'sections/construction/construction/chart/MixedChartPublicWorksContract'
+import AxisConstructionStarts from 'sections/construction/construction/chart/AxisConstructionStarts'
+import AxisPublicWorksContract from 'sections/construction/construction/chart/AxisPublicWorksContract'
 import DashboardConstructionCompanies from 'sections/construction/construction/dashboard/DashboardConstructionCompanies'
 import DashboardValueOfCompletedConstructionWorkByPrimeContractors from 'sections/construction/construction/dashboard/DashboardValueOfCompletedConstructionWorkByPrimeContractors'
 import DashboardValueOfCompletedConstructionWorkBySubcontractors from 'sections/construction/construction/dashboard/DashboardValueOfCompletedConstructionWorkBySubcontractors'
@@ -16,68 +12,89 @@ import TableConstructionStarts from 'sections/construction/construction/table/Ta
 import TablePublicWorksContract from 'sections/construction/construction/table/TablePublicWorksContract'
 import TableValueOfCompletedConstructionWorkByPrimeContractors from 'sections/construction/construction/table/TableValueOfCompletedConstructionWorkByPrimeContractors'
 import TableValueOfCompletedConstructionWorkBySubcontractors from 'sections/construction/construction/table/TableValueOfCompletedConstructionWorkBySubcontractors'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+import { ViewsPropsType } from 'types/views'
+import GridItem from 'views-grid/GridItem'
+import MainView from 'views-grid/MainView'
 
-interface Props {
-  routerProps: RouterProps
-}
+// dashboard items
+const dashboardItems = [
+  { Component: DashboardConstructionCompanies },
+  { Component: DashboardValueOfCompletedConstructionWorkByPrimeContractors },
+  { Component: DashboardValueOfCompletedConstructionWorkBySubcontractors },
+]
 
-export default async function PrefectureView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const { currentPrefecture } = breadcrumbsProps
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardConstructionCompanies prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardValueOfCompletedConstructionWorkByPrimeContractors
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardValueOfCompletedConstructionWorkBySubcontractors
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={6} lg={6}>
-              <MixedChartPublicWorksContract prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={6} lg={6}>
-              <MixedChartConstructionStarts prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableConstructionCompanies prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableConstructionStarts prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableValueOfCompletedConstructionWorkByPrimeContractors
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableValueOfCompletedConstructionWorkBySubcontractors
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TablePublicWorksContract prefecture={currentPrefecture} />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+// chart items
+const chartItems = [
+  {
+    Section: AxisConstructionStarts,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: AxisPublicWorksContract,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+]
+
+// table items
+const tableItems = [
+  {
+    Section: TableConstructionCompanies,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableConstructionStarts,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableValueOfCompletedConstructionWorkByPrimeContractors,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableValueOfCompletedConstructionWorkBySubcontractors,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TablePublicWorksContract,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
+
+export default async function PrefectureView({ routerProps }: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* chart items */}
+      {chartItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
+  )
 }

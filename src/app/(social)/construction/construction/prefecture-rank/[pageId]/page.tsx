@@ -22,6 +22,18 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
         'views/construction/construction/prefecture-rank/ConstructionCompanies'
       )
   ),
+  'value-of-completed-construction-work-by-prime-contractors': dynamic(
+    () =>
+      import(
+        'views/construction/construction/prefecture-rank/ValueOfCompletedConstructionWorkByPrimeContractors'
+      )
+  ),
+  'value-of-completed-construction-work-by-subcontractors': dynamic(
+    () =>
+      import(
+        'views/construction/construction/prefecture-rank/ValueOfCompletedConstructionWorkBySubcontractors'
+      )
+  ),
 }
 
 export async function generateStaticParams() {

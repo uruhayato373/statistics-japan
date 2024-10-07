@@ -1,10 +1,9 @@
 import { ApexOptions } from 'apexcharts'
 
-import CardsApexPieChart from 'cards/CardsApexPieChart'
-
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '持ち家の割合'
@@ -15,7 +14,7 @@ const ESTAT_PARAMS = {
 }
 
 // apexChartsのオプション
-const APEX_OPTIONS: ApexOptions = {
+const OPTIONS: ApexOptions = {
   dataLabels: {
     dropShadow: {
       blur: 3,
@@ -24,16 +23,13 @@ const APEX_OPTIONS: ApexOptions = {
   },
 }
 
-interface Props {
-  prefecture: PrefectureType
-}
-
 // values
 async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
+  const values = await fetchValues(ESTAT_PARAMS)
+  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return values
+  return filteredValues
 }
 
 // document
@@ -45,19 +41,15 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function PieChartNumberOfHomesOwned({
-  prefecture,
-}: Props) {
-  const { prefCode, prefName } = prefecture
+export default async function PieNumberOfHomesOwned({
+  routerProps,
+  children,
+}: SectionsPropsType) {
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const options = OPTIONS
 
-  return (
-    <CardsApexPieChart
-      title={title}
-      document={document}
-      options={APEX_OPTIONS}
-    />
-  )
+  return <> {children({ title, document, options })}</>
 }

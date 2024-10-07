@@ -1,12 +1,7 @@
-import { Suspense } from 'react'
-
-import CircularProgressCards from 'components/CircularProgressCards'
-
-import CardsApexBarChart from 'cards/CardsApexBarChart'
-
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '建築年次別住宅数'
@@ -25,16 +20,13 @@ const ESTAT_PARAMS = {
   ],
 }
 
-interface Props {
-  prefecture: PrefectureType
-}
-
 // values
 async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
+  const values = await fetchValues(ESTAT_PARAMS)
+  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return values
+  return filteredValues
 }
 
 // document
@@ -42,22 +34,21 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const { formatDocument } = handleDocument(values)
   const document = formatDocument()
 
-  return document
+  return {
+    ...document,
+    categories: document.categories.map((d) => ({ ...d, type: 'column' })),
+  }
 }
 
 // コンポーネントの描画
-export default async function BarChartNumberOfHousesByYearOfConstruction({
-  prefecture,
-}: Props) {
-  const { prefCode, prefName } = prefecture
+export default async function AxisNumberOfHousesByYearOfConstruction({
+  routerProps,
+  children,
+}: SectionsPropsType) {
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
-
   const values = await processValues(prefCode)
   const document = await processDocument(values)
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsApexBarChart title={title} document={document} />
-    </Suspense>
-  )
+  return <> {children({ title, document })}</>
 }

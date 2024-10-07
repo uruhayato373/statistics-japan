@@ -1,27 +1,22 @@
-import { Suspense } from 'react'
-
-import CircularProgressCards from 'components/CircularProgressCards'
-
 import { ApexOptions } from 'apexcharts'
 
-import CardsApexLineChart from 'cards/CardsApexLineChart'
-
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '着工建築物'
+const CARD_TITLE = '公共事業請負工事'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
-  cdCat01: ['C3301', 'C3302'],
+  cdCat01: ['C3307', 'C3308'],
 }
 
-const APEX_OPTIONS: ApexOptions = {
+const OPTIONS: ApexOptions = {
   yaxis: [
     {
-      seriesName: '着工建築物数',
+      seriesName: '契約件数',
       opposite: false,
       show: true,
       labels: {
@@ -32,7 +27,7 @@ const APEX_OPTIONS: ApexOptions = {
       },
     },
     {
-      seriesName: '着工建築物床面積',
+      seriesName: '請負金額',
       opposite: true,
       show: true,
       labels: {
@@ -45,16 +40,13 @@ const APEX_OPTIONS: ApexOptions = {
   ],
 }
 
-interface Props {
-  prefecture: PrefectureType
-}
-
 // values
 async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
+  const values = await fetchValues(ESTAT_PARAMS)
+  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return values
+  return filteredValues
 }
 
 // document
@@ -69,22 +61,15 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function MixedChartConstructionStarts({
-  prefecture,
-}: Props) {
-  const { prefCode, prefName } = prefecture
+export default async function AxisPublicWorksContract({
+  routerProps,
+  children,
+}: SectionsPropsType) {
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
-
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const options = OPTIONS
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsApexLineChart
-        title={title}
-        document={document}
-        options={APEX_OPTIONS}
-      />
-    </Suspense>
-  )
+  return <> {children({ title, document, options })}</>
 }

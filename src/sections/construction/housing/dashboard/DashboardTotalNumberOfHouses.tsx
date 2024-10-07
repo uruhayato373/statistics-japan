@@ -1,8 +1,9 @@
-import CardsDashboardSingle from 'cards/CardsDashboard'
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '総住宅数'
@@ -12,9 +13,7 @@ const ESTAT_PARAMS = {
   cdCat01: 'H1100',
 }
 
-interface Props {
-  prefecture: PrefectureType
-}
+const PAGE_ID = 'total-number-of-houses'
 
 // values
 async function processValues(prefCode: string) {
@@ -34,12 +33,14 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 
 // コンポーネントの描画
 export default async function DashboardTotalNumberOfHouses({
-  prefecture,
-}: Props) {
-  const { prefCode, prefName } = prefecture
+  routerProps,
+  children,
+}: SectionsPropsType) {
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return <CardsDashboardSingle title={title} document={document} />
+  return <> {children({ title, document, actionButton })}</>
 }
