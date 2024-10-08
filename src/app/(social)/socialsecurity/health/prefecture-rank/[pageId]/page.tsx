@@ -19,7 +19,7 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'healthy-life-expectancy': dynamic(
     () =>
       import(
-        'views/socialsecurity/health/prefecture-rank/HealthyLifeExpectancy'
+        'views/socialsecurity/health/prefecture-rank/HealthyLifeExpectancyMan'
       )
   ),
 }

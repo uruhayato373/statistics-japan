@@ -1,10 +1,8 @@
 import { Options } from 'highcharts'
 
-import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { RankingDocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '最低気温'
@@ -50,21 +48,6 @@ async function processDocument(
   const document = formatRankingDocument()
 
   return document
-}
-
-// server action
-async function serverAction(
-  routerProps: RouterProps,
-  document: RankingDocumentType
-) {
-  const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
-    await actionSavePrefectureRanking(CARD_TITLE, routerProps, document)
-
-  await Promise.all([
-    saveBestWorstPNG(),
-    savePrefectureRankOGP(),
-    saveRankingDB(),
-  ])
 }
 
 // コンポーネントの描画

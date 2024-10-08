@@ -1,8 +1,8 @@
-import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
+import SectionsWrapper from 'components/sections/SectionsWrapper'
+
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造品出荷額（従業者数当たり）'
@@ -52,29 +52,19 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
-// server action
-async function serverAction(routerProps: RouterProps, document: DocumentType) {
-  const { saveBestWorstPNG, saveRankingDB } = await actionSavePrefectureRanking(
-    CARD_TITLE,
-    routerProps,
-    document
-  )
-
-  await Promise.all([saveBestWorstPNG(), saveRankingDB()])
-}
-
 // コンポーネントの描画
 export default async function RankingProductShipmentAmountPerManufacturingEmployees({
   routerProps,
   children,
 }: SectionsPropsType) {
-  const title = `都道府県の${CARD_TITLE}`
-  const values = await processValues()
-  const document = await processDocument(values)
-
-  if (routerProps) {
-    await serverAction({ ...routerProps, pageId: PAGE_ID }, document)
-  }
-
-  return <> {children({ title, document })}</>
+  return (
+    <SectionsWrapper
+      routerProps={{ ...routerProps, pageId: PAGE_ID }}
+      cardTitle={CARD_TITLE}
+      processValues={processValues}
+      processDocument={processDocument}
+    >
+      {children}
+    </SectionsWrapper>
+  )
 }

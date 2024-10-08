@@ -1,3 +1,5 @@
+import SectionsWrapper from 'components/sections/SectionsWrapper'
+
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -34,13 +36,14 @@ export default async function RankingNumberOfTrafficAccidentInjuries({
   routerProps,
   children,
 }: SectionsPropsType) {
-  const title = `都道府県の${CARD_TITLE}`
-  const values = await processValues()
-  const document = await processDocument(values)
-
-  if (routerProps) {
-    await serverAction({ ...routerProps, pageId: PAGE_ID }, document)
-  }
-
-  return <> {children({ title, document })}</>
+  return (
+    <SectionsWrapper
+      routerProps={{ ...routerProps, pageId: PAGE_ID }}
+      cardTitle={CARD_TITLE}
+      processValues={processValues}
+      processDocument={processDocument}
+    >
+      {children}
+    </SectionsWrapper>
+  )
 }

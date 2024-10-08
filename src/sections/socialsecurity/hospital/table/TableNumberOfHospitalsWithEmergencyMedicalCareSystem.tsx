@@ -1,7 +1,8 @@
+import SectionsWrapper from 'components/sections/SectionsWrapper'
+
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '救急医療体制病院数'
@@ -33,10 +34,14 @@ export default async function TableNumberOfHospitalsWithEmergencyMedicalCareSyst
   routerProps,
   children,
 }: SectionsPropsType) {
-  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
-  const title = `${prefName}の${CARD_TITLE}`
-  const values = await processValues(prefCode)
-  const document = await processDocument(values)
-
-  return <> {children({ title, document })}</>
+  return (
+    <SectionsWrapper
+      routerProps={routerProps}
+      cardTitle={CARD_TITLE}
+      processValues={processValues}
+      processDocument={processDocument}
+    >
+      {children}
+    </SectionsWrapper>
+  )
 }

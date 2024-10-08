@@ -1,8 +1,8 @@
-import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
+import SectionsWrapper from 'components/sections/SectionsWrapper'
+
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { RankingDocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '電灯使用電力量'
@@ -33,33 +33,19 @@ async function processDocument(
   return document
 }
 
-// server action
-async function serverAction(
-  routerProps: RouterProps,
-  document: RankingDocumentType
-) {
-  const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
-    await actionSavePrefectureRanking(CARD_TITLE, routerProps, document)
-
-  await Promise.all([
-    saveBestWorstPNG(),
-    savePrefectureRankOGP(),
-    saveRankingDB(),
-  ])
-}
-
 // コンポーネントの描画
 export default async function RankingElectricityConsumptionForElectricLights({
   routerProps,
   children,
 }: SectionsPropsType) {
-  const title = `都道府県の${CARD_TITLE}`
-  const values = await processValues()
-  const document = await processDocument(values)
-
-  if (routerProps) {
-    await serverAction({ ...routerProps, pageId: PAGE_ID }, document)
-  }
-
-  return <> {children({ title, document })}</>
+  return (
+    <SectionsWrapper
+      routerProps={{ ...routerProps, pageId: PAGE_ID }}
+      cardTitle={CARD_TITLE}
+      processValues={processValues}
+      processDocument={processDocument}
+    >
+      {children}
+    </SectionsWrapper>
+  )
 }

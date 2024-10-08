@@ -1,11 +1,11 @@
 import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
+import SectionsWrapper from 'components/sections/SectionsWrapper'
 
 import { ApexOptions } from 'apexcharts'
 
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '県内所得の内訳'
@@ -57,16 +57,22 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
+const linkButton = <LinkToPrefectureRank pageId={PAGE_ID} />
+
 export default async function PieChartPrefecturalIncome({
   routerProps,
   children,
 }: SectionsPropsType) {
-  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
-  const title = `${prefName}の${CARD_TITLE}`
-  const values = await processValues(prefCode)
-  const document = await processDocument(values)
-  const options = OPTIONS
-  const linkButton = <LinkToPrefectureRank pageId={PAGE_ID} />
-
-  return <> {children({ title, document, options, linkButton })}</>
+  return (
+    <SectionsWrapper
+      routerProps={routerProps}
+      cardTitle={CARD_TITLE}
+      processValues={processValues}
+      processDocument={processDocument}
+      options={OPTIONS}
+      linkButton={linkButton}
+    >
+      {children}
+    </SectionsWrapper>
+  )
 }

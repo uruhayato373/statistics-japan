@@ -22,12 +22,12 @@ const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
   'number-of-divorces': dynamic(
     () => import('views/population/marriage/prefecture-rank/NumberOfDivorces')
   ),
-  'average-age-of-first-marriage': dynamic(
-    () =>
-      import(
-        'views/population/marriage/prefecture-rank/AverageAgeOfFirstMarriage'
-      )
-  ),
+  // 'average-age-of-first-marriage': dynamic(
+  //   () =>
+  //     import(
+  //       'views/population/marriage/prefecture-rank/AverageAgeOfFirstMarriage'
+  //     )
+  // ),
 }
 
 export async function generateStaticParams() {
