@@ -15,14 +15,11 @@ import MainCard from 'components/MainCard'
 
 import { ApexOptions } from 'apexcharts'
 
+import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
-import { DocumentType } from 'utils/document'
 
-interface Props {
-  title: string
-  document: DocumentType
+type Props = Omit<CardsPropsType, 'options'> & {
   options?: ApexOptions
-  height?: string
 }
 
 export default function CardsApexPyramidChart({
