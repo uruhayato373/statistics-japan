@@ -8,7 +8,6 @@ frontend:
       commands:
         - npm run build
         - echo "ESTAT_API_APPID=$ESTAT_API_APPID" >> .env
-        - echo "RESAS_API_KEY=$RESAS_API_KEY" >> .env
         - echo "GA_ID=$GA_ID" >> .env
   artifacts:
     baseDirectory: .next
