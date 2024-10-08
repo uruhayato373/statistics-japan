@@ -1,7 +1,5 @@
 import React from 'react'
 
-import SectionsWrapper from 'components/sections/SectionsWrapper'
-
 import { ApexOptions } from 'apexcharts'
 import { Options } from 'highcharts'
 

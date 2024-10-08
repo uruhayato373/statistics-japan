@@ -1,4 +1,7 @@
 'use client'
+
+import React from 'react'
+
 import { useTheme } from '@mui/material/styles'
 
 import PropTypes from 'prop-types'
@@ -10,13 +13,13 @@ export default function LogoMain({ reverse }) {
 
   return (
     <svg
-      width="300"
-      height="35"
-      viewBox="0 0 300 35"
+      width="280"
+      height="40"
+      viewBox="0 0 280 40"
       xmlns="http://www.w3.org/2000/svg"
     >
       {/* Logo part */}
-      <g transform="translate(0, -2) scale(0.115)">
+      <g transform="translate(0, 2) scale(0.11)">
         <path
           fill={theme.palette.primary.dark}
           d="M 161.097656 121.511719 L 161.097656 270.199219 C 167.503906 271.402344 174.113281 272.035156 180.863281 272.035156 C 187.621094 272.035156 194.230469 271.410156 200.632812 270.226562 L 200.632812 121.511719 L 161.097656 121.511719 "
@@ -37,8 +40,8 @@ export default function LogoMain({ reverse }) {
 
       {/* Text part */}
       <text
-        x="50"
-        y="24"
+        x="55"
+        y="27"
         fontFamily="'Noto Sans JP', 'Hiragino Sans', 'Meiryo', sans-serif"
         fontSize="16"
         fontWeight="bold"

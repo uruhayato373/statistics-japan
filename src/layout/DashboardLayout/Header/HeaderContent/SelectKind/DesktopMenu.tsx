@@ -2,7 +2,7 @@ import React from 'react'
 
 import Link from 'next/link'
 
-import { ButtonGroup, Button } from '@mui/material'
+import { Box, Button, Divider } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 
 import { KindType } from 'utils/kind'
@@ -23,43 +23,43 @@ export const DesktopMenu: React.FC<Props> = ({
   const theme = useTheme()
 
   return (
-    <ButtonGroup
-      variant="outlined"
-      aria-label="outlined button group for selecting statistics type"
-      sx={{ flexWrap: 'wrap', justifyContent: 'center' }}
+    <Box
+      sx={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+      }}
     >
-      {items.map((item) => (
-        <Link
-          key={item.kindId}
-          href={changeKindURL(item.kindId)}
-          passHref
-          legacyBehavior
-        >
-          <Button
-            component="a"
-            onClick={() => onSelect(item)}
-            sx={{
-              backgroundColor:
-                selectedItem?.kindId === item.kindId
-                  ? theme.palette.primary.light
-                  : 'inherit',
-              color:
-                selectedItem?.kindId === item.kindId
-                  ? theme.palette.primary.contrastText
-                  : theme.palette.primary.main,
-              '&:hover': {
-                backgroundColor:
+      {items.map((item, index) => (
+        <React.Fragment key={item.kindId}>
+          {index > 0 && (
+            <Divider orientation="vertical" flexItem sx={{ mx: 1 }} />
+          )}
+          <Link href={changeKindURL(item.kindId)} passHref legacyBehavior>
+            <Button
+              component="a"
+              onClick={() => onSelect(item)}
+              sx={{
+                color:
                   selectedItem?.kindId === item.kindId
                     ? theme.palette.primary.main
-                    : theme.palette.action.hover,
-              },
-              margin: '4px',
-            }}
-          >
-            {item.kindTitle}
-          </Button>
-        </Link>
+                    : theme.palette.text.primary,
+                fontWeight:
+                  selectedItem?.kindId === item.kindId ? 'bold' : 'normal',
+                textTransform: 'none',
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                  color: theme.palette.primary.main,
+                },
+                padding: '4px 8px',
+              }}
+            >
+              {item.kindTitle}
+            </Button>
+          </Link>
+        </React.Fragment>
       ))}
-    </ButtonGroup>
+    </Box>
   )
 }
