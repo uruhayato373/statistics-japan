@@ -1,9 +1,9 @@
 import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
+import SectionsWrapper from 'components/sections/MainSections'
 
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '総面積'
@@ -31,16 +31,23 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
+// action button
+const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
+
 // コンポーネントの描画
 export default async function DashboardTotalArea({
   routerProps,
   children,
 }: SectionsPropsType) {
-  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
-  const title = `${prefName}の${CARD_TITLE}`
-  const values = await processValues(prefCode)
-  const document = await processDocument(values)
-  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
-
-  return <> {children({ title, document, actionButton })}</>
+  return (
+    <SectionsWrapper
+      routerProps={routerProps}
+      cardTitle={CARD_TITLE}
+      processValues={processValues}
+      processDocument={processDocument}
+      actionButton={actionButton}
+    >
+      {children}
+    </SectionsWrapper>
+  )
 }

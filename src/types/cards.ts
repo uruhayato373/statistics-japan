@@ -1,19 +1,12 @@
 import { ApexOptions } from 'apexcharts'
 import { Options } from 'highcharts'
 
-import { RankingDocumentType } from 'utils/document'
+import { DocumentType, RankingDocumentType } from 'utils/document'
 
 export interface CardsPropsType {
   title: string
-  document: RankingDocumentType
+  document: DocumentType | RankingDocumentType
   height?: string
+  options?: Options | ApexOptions
   actionButton?: React.ReactNode
-}
-
-export interface CardsHighchartsPropsType extends CardsPropsType {
-  options: Options
-}
-
-export interface CardsApexchartsPropsType extends CardsPropsType {
-  options: ApexOptions
 }
