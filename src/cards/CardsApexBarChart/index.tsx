@@ -17,17 +17,14 @@ import { ApexOptions } from 'apexcharts'
 
 import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
-
-type Props = Omit<CardsPropsType, 'options'> & {
-  options?: ApexOptions
-}
+import { DocumentType } from 'utils/document'
 
 export default function CardsApexBarChart({
   title,
   document,
   options,
   height,
-}: Props) {
+}: CardsPropsType<DocumentType, ApexOptions>) {
   const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
 
   const { times } = document

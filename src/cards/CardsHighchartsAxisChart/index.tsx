@@ -6,9 +6,12 @@ import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 import CSVExport from 'components/third-party/react-table/CSVExport'
 
+import { Options } from 'highcharts'
+
 import { CardsPropsType } from 'types/cards'
 import formatCSV from 'utils/csv'
 import deepMerge from 'utils/deepMerge'
+import { DocumentType } from 'utils/document'
 import formatHighcharts from 'utils/highcharts'
 
 import HighchartsAxisChart from './Chart'
@@ -28,7 +31,7 @@ export default function CardsHighchartsAxisChart({
   options,
   height,
   linkButton,
-}: CardsPropsType) {
+}: CardsPropsType<DocumentType, Options>) {
   const formatOptions = formatHighcharts(document).AxisTimeChart()
   const customOptions = deepMerge(options, formatOptions)
 

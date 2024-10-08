@@ -13,6 +13,7 @@ import { Options } from 'highcharts'
 import { useLoadingState } from 'hooks/useLoadingState'
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
 import { CardsPropsType } from 'types/cards'
+import { RankingDocumentType } from 'utils/document'
 
 import SelectTime from '../../components/SelectTime'
 
@@ -21,16 +22,12 @@ import Control from './Control'
 import Header from './Header'
 import SelectChartType from './SelectChartType'
 
-type Props = Omit<CardsPropsType, 'options'> & {
-  options?: Options
-}
-
 export default function CardsHighchartsPrefectureRankingChart({
   title,
   document,
   height = '450px',
   options,
-}: Props) {
+}: CardsPropsType<RankingDocumentType, Options>) {
   const [chartType, SelectChartTypeComponent] = SelectChartType()
 
   const { times } = document

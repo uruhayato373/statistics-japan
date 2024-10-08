@@ -20,10 +20,6 @@ import Control from './Control'
 import Header from './Header'
 import Table from './Table'
 
-type Props = Omit<CardsPropsType, 'document'> & {
-  document?: RankingDocumentType
-}
-
 const useCSVData = (document: RankingDocumentType, title?: string) => {
   return useMemo(() => {
     const { headers, data } = formatCSV(document).RankingTable()
@@ -36,7 +32,7 @@ export default function CardsReactPrefectureRankingTable({
   title,
   document,
   height = '450px',
-}: Props) {
+}: CardsPropsType<RankingDocumentType>) {
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 

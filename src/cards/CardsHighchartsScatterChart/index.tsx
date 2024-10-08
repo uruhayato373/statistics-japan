@@ -18,10 +18,6 @@ import Chart, { ScatterSeriesType } from './Chart'
 import CorrelationCoefficient from './CorrelationCoefficient'
 import Header from './Header'
 
-type Props = Omit<CardsPropsType, 'options'> & {
-  options?: Options
-}
-
 const useChartData = (document: DocumentType) => {
   return useMemo(() => {
     const categories = document.categories
@@ -39,7 +35,7 @@ export default function CardsHighchartsScatterChart({
   title,
   document,
   height,
-}: Props) {
+}: CardsPropsType<DocumentType, Options>) {
   const { categories, series, correlationCoefficient } = useChartData(document)
 
   return (
