@@ -1,8 +1,6 @@
-import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造業従業者数'
@@ -29,18 +27,6 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const document = formatRankingDocument()
 
   return document
-}
-
-// server action
-async function serverAction(routerProps: RouterProps, document: DocumentType) {
-  const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
-    await actionSavePrefectureRanking(CARD_TITLE, routerProps, document)
-
-  await Promise.all([
-    saveBestWorstPNG(),
-    savePrefectureRankOGP(),
-    saveRankingDB(),
-  ])
 }
 
 // コンポーネントの描画
