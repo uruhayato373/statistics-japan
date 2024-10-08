@@ -1,6 +1,9 @@
 import SimpleLayout from 'layout/SimpleLayout'
 import Landing from 'views/landing'
 
+const BASE_URL =
+  process.env.NEXT_PUBLIC_BASE_URL || 'https://statistics-japan.com'
+
 // メタデータ生成関数
 export function generateMetadata() {
   return {
@@ -14,10 +17,10 @@ export function generateMetadata() {
     openGraph: {
       title: `統計で見る都道府県`,
       type: 'website',
-      url: 'https://statistics-japan.com',
+      url: BASE_URL,
       images: [
         {
-          url: 'https://statistics-japan.com/ogp/opengraph-image.png',
+          url: `${BASE_URL}/ogp/opengraph-image.png`,
           width: 1200,
           height: 630,
         },

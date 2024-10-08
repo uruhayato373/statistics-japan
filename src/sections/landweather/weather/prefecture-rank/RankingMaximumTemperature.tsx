@@ -1,3 +1,5 @@
+import SectionsWrapper from 'components/sections/SectionsWrapper'
+
 import { Options } from 'highcharts'
 
 import { SectionsPropsType } from 'types/sections'
@@ -56,14 +58,15 @@ export default async function RankingMaximumTemperature({
   routerProps,
   children,
 }: SectionsPropsType) {
-  const title = `都道府県の${CARD_TITLE}`
-  const values = await processValues()
-  const document = await processDocument(values)
-  const options = OPTIONS
-
-  if (routerProps) {
-    await serverAction({ ...routerProps, pageId: PAGE_ID }, document)
-  }
-
-  return <> {children({ title, document, options })}</>
+  return (
+    <SectionsWrapper
+      routerProps={{ ...routerProps, pageId: PAGE_ID }}
+      cardTitle={CARD_TITLE}
+      processValues={processValues}
+      processDocument={processDocument}
+      options={OPTIONS}
+    >
+      {children}
+    </SectionsWrapper>
+  )
 }
