@@ -6,6 +6,8 @@ import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 import CSVExport from 'components/third-party/react-table/CSVExport'
 
+import { ApexOptions } from 'apexcharts'
+
 import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
 import formatCSV from 'utils/csv'
@@ -15,6 +17,10 @@ import ApexAxisChart from './Chart'
 import Header from './Header'
 
 const DEFAULT_HEIGHT = '300px'
+
+type Props = Omit<CardsPropsType, 'options'> & {
+  options?: ApexOptions
+}
 
 const Content = ({ options, height }) => (
   <Box sx={{ p: 2, height: height || DEFAULT_HEIGHT, overflow: 'hidden' }}>
@@ -28,7 +34,7 @@ export default async function CardsApexAxisChart({
   options,
   height,
   linkButton,
-}: CardsPropsType) {
+}: Props) {
   const formatOptions = formatApexcharts(document).AxisTimeChart()
   const customOptions = deepMerge(options, formatOptions)
 
