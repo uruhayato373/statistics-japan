@@ -7,7 +7,9 @@ import Divider from '@mui/material/Divider'
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 
-import { CardsHighchartsPropsType } from 'types/cards'
+import { Options } from 'highcharts'
+
+import { CardsPropsType } from 'types/cards'
 import calcCorrelationCoefficient from 'utils/calcCorrelationCoefficient'
 import { DocumentType } from 'utils/document'
 import formatHighcharts from 'utils/highcharts'
@@ -15,6 +17,10 @@ import formatHighcharts from 'utils/highcharts'
 import Chart, { ScatterSeriesType } from './Chart'
 import CorrelationCoefficient from './CorrelationCoefficient'
 import Header from './Header'
+
+type Props = Omit<CardsPropsType, 'options'> & {
+  options?: Options
+}
 
 const useChartData = (document: DocumentType) => {
   return useMemo(() => {
@@ -33,7 +39,7 @@ export default function CardsHighchartsScatterChart({
   title,
   document,
   height,
-}: CardsHighchartsPropsType) {
+}: Props) {
   const { categories, series, correlationCoefficient } = useChartData(document)
 
   return (

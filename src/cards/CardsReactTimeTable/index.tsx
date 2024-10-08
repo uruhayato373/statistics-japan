@@ -8,22 +8,16 @@ import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 import { CSVExport } from 'components/third-party/react-table'
 
-import { DocumentType } from 'utils/document'
+import { CardsPropsType } from 'types/cards'
 import formatTable from 'utils/table'
 
 import Header from './Header'
 import ReactTimeTable from './Table'
 
-export interface CardsReactTimeTableProps {
-  title: string
-  document: DocumentType
-  height?: string
-}
-
 export default function CardsReactTimeTable({
   title,
   document,
-}: CardsReactTimeTableProps) {
+}: CardsPropsType) {
   const { columns, data } = formatTable(document).reactTable()
 
   const headers = columns.map((column) => ({
