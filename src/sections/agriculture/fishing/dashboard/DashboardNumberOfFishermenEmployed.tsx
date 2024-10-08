@@ -41,7 +41,7 @@ export default async function DashboardNumberOfFishermenEmployed({
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)
-  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
+  const linkButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return <> {children({ title, document, actionButton })}</>
+  return <> {children({ title, document, linkButton })}</>
 }

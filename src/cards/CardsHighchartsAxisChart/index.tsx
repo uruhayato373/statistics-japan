@@ -27,7 +27,7 @@ export default function CardsHighchartsAxisChart({
   document,
   options,
   height,
-  actionButton,
+  linkButton,
 }: CardsHighchartsPropsType) {
   const formatOptions = formatHighcharts(document).AxisTimeChart()
   const customOptions = deepMerge(options, formatOptions)
@@ -41,11 +41,7 @@ export default function CardsHighchartsAxisChart({
   return (
     <Suspense fallback={<CircularProgressCards />}>
       <MainCard content={false}>
-        <Header
-          title={title}
-          csvButton={csvButton}
-          actionButton={actionButton}
-        />
+        <Header title={title} csvButton={csvButton} linkButton={linkButton} />
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
         <Content options={customOptions} height={height} />
       </MainCard>

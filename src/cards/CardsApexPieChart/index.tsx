@@ -29,7 +29,7 @@ export default function CardsApexPieChart({
   document,
   options,
   height = DEFAULT_HEIGHT,
-  actionButton,
+  linkButton,
 }: CardsApexchartsPropsType) {
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
@@ -42,7 +42,7 @@ export default function CardsApexPieChart({
   return (
     <Suspense fallback={<CircularProgressCards />}>
       <MainCard content={false}>
-        <Header title={title} actionButton={actionButton} />
+        <Header title={title} linkButton={linkButton} />
         <Divider sx={{ mt: 1.5, mb: 1.5 }} />
         <Control SelectTimeComponent={SelectTimeComponent} />
         <Content options={customOptions} height={height} />

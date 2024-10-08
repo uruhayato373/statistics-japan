@@ -68,7 +68,7 @@ export default async function PieTotalRevenueSettlement({
   const values = await processValues(prefCode)
   const document = await processDocument(values)
   const options = OPTIONS
-  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
+  const linkButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return <> {children({ title, document, options, actionButton })}</>
+  return <> {children({ title, document, options, linkButton })}</>
 }

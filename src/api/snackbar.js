@@ -21,7 +21,7 @@ const initialState = {
   },
   transition: 'Fade',
   close: false,
-  actionButton: false,
+  linkButton: false,
   maxStack: 3,
   dense: false,
   iconVariant: 'usedefault',
@@ -51,7 +51,7 @@ export function openSnackbar(snackbar) {
     alert,
     transition,
     close,
-    actionButton,
+    linkButton,
   } = snackbar
 
   mutate(
@@ -70,7 +70,7 @@ export function openSnackbar(snackbar) {
         },
         transition: transition || initialState.transition,
         close: close || initialState.close,
-        actionButton: actionButton || initialState.actionButton,
+        linkButton: linkButton || initialState.linkButton,
       }
     },
     false

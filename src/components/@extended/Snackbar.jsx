@@ -98,7 +98,7 @@ export default function Snackbar() {
             color={snackbar.alert.color}
             action={
               <>
-                {snackbar.actionButton !== false && (
+                {snackbar.linkButton !== false && (
                   <Button
                     color={snackbar.alert.color}
                     size="small"

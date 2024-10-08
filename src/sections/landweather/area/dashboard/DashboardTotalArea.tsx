@@ -1,5 +1,5 @@
 import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
-import SectionsWrapper from 'components/sections/MainSections'
+import SectionsWrapper from 'components/sections/SectionsWrapper'
 
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
@@ -14,6 +14,7 @@ const ESTAT_PARAMS = {
 }
 
 const PAGE_ID = 'total-area'
+
 // values
 async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
@@ -32,7 +33,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // action button
-const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
+const linkButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
 // コンポーネントの描画
 export default async function DashboardTotalArea({
@@ -45,7 +46,7 @@ export default async function DashboardTotalArea({
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}
-      actionButton={actionButton}
+      linkButton={linkButton}
     >
       {children}
     </SectionsWrapper>

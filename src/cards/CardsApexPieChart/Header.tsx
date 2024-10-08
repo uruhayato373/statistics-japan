@@ -1,7 +1,7 @@
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
-const Header = ({ title, actionButton }) => (
+const Header = ({ title, linkButton }) => (
   <Stack
     direction="row"
     alignItems="center"
@@ -11,9 +11,9 @@ const Header = ({ title, actionButton }) => (
     <Typography variant="h5" color="text.primary">
       {title}
     </Typography>
-    {actionButton && (
+    {linkButton && (
       <Stack direction="row" spacing={1}>
-        {actionButton}
+        {linkButton}
       </Stack>
     )}
   </Stack>

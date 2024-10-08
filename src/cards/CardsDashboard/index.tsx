@@ -16,7 +16,7 @@ import ValueDisplay from './ValueDisplay'
 export default function CardsDashboard({
   title,
   document,
-  actionButton,
+  linkButton,
 }: CardsPropsType) {
   const formatValues = formatDashboard(document)
   const [latest, previous] = formatValues
@@ -33,9 +33,9 @@ export default function CardsDashboard({
           <Typography variant="h6" color="text.secondary">
             {title}
           </Typography>
-          {actionButton && (
+          {linkButton && (
             <Stack direction="row" spacing={1}>
-              {actionButton}
+              {linkButton}
             </Stack>
           )}
         </Stack>

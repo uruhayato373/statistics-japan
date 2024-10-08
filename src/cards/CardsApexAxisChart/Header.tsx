@@ -3,10 +3,10 @@ import { Stack, Typography } from '@mui/material'
 interface HeaderProps {
   title: string
   csvButton: React.ReactNode
-  actionButton?: React.ReactNode
+  linkButton?: React.ReactNode
 }
 
-const Header = ({ title, csvButton, actionButton }: HeaderProps) => (
+const Header = ({ title, csvButton, linkButton }: HeaderProps) => (
   <Stack
     direction="row"
     alignItems="center"
@@ -18,7 +18,7 @@ const Header = ({ title, csvButton, actionButton }: HeaderProps) => (
     </Typography>
     <Stack direction="row" spacing={1} alignItems="center">
       {csvButton}
-      {actionButton}
+      {linkButton}
     </Stack>
   </Stack>
 )

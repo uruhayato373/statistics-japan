@@ -1,6 +1,6 @@
 'use server'
 
-import { DocumentType } from 'utils/document'
+import { RankingDocumentType } from 'utils/document'
 import handleOGP from 'utils/ogp'
 import handlePNG from 'utils/png'
 import { RouterProps } from 'utils/props'
@@ -13,7 +13,7 @@ import saveRankingDB from './modules/rankingDB'
 export async function actionSavePrefectureRanking(
   title: string,
   routerProps: RouterProps,
-  document: DocumentType
+  document: RankingDocumentType
 ) {
   const rankingValues = formatRankingValues(document)
 
@@ -40,7 +40,9 @@ export async function actionSavePrefectureRanking(
   }
 }
 
-function formatRankingValues(document: DocumentType): RankingValueType[] {
+function formatRankingValues(
+  document: RankingDocumentType
+): RankingValueType[] {
   const { times, values } = document
   const latestTime = times.sort(
     (a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)

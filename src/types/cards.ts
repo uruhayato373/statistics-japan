@@ -8,5 +8,5 @@ export interface CardsPropsType {
   document: DocumentType | RankingDocumentType
   height?: string
   options?: Options | ApexOptions
-  actionButton?: React.ReactNode
+  linkButton?: React.ReactNode
 }
