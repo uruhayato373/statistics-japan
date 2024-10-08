@@ -1,83 +1,92 @@
-import { Suspense } from 'react'
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsDashboard from 'cards/CardsDashboard'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
+import AxisAirTransport from 'sections/tourism/railway-air/chart/AxisAirTransport'
+import AxisJapanRailwayTransport from 'sections/tourism/railway-air/chart/AxisJapanRailwayTransport'
+import AxisPassengerShipTransportation from 'sections/tourism/railway-air/chart/AxisPassengerShipTransportation'
+import AxisPassengerTransport from 'sections/tourism/railway-air/chart/AxisPassengerTransport'
+import DashboardAirTransportPersonnel from 'sections/tourism/railway-air/dashboard/DashboardAirTransportPersonnel'
+import DashboardJRCargoShipmentVolume from 'sections/tourism/railway-air/dashboard/DashboardJRCargoShipmentVolume'
+import DashboardJRTransportationPersonnel from 'sections/tourism/railway-air/dashboard/DashboardJRTransportationPersonnel'
+import DashboardPassengerShipTransportPersonnel from 'sections/tourism/railway-air/dashboard/DashboardPassengerShipTransportPersonnel'
+import DashboardPrivateRailwayTransportationPersonnel from 'sections/tourism/railway-air/dashboard/DashboardPrivateRailwayTransportationPersonnel'
+import TableBusinessOperator from 'sections/tourism/railway-air/table/TableBusinessOperator'
+import { ViewsPropsType } from 'types/views'
+import GridItem from 'views-grid/GridItem'
+import MainView from 'views-grid/MainView'
 
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
+// dashboard items
+const dashboardItems = [
+  { Component: DashboardJRCargoShipmentVolume },
+  { Component: DashboardJRTransportationPersonnel },
+  { Component: DashboardPrivateRailwayTransportationPersonnel },
+  { Component: DashboardAirTransportPersonnel },
+  { Component: DashboardPassengerShipTransportPersonnel },
+]
 
-import DashboardAirTransportPersonnel from 'sections/tourism/railway-air/DashboardAirTransportPersonnel'
-import DashboardJRCargoShipmentVolume from 'sections/tourism/railway-air/DashboardJRCargoShipmentVolume'
-import DashboardJRTransportationPersonnel from 'sections/tourism/railway-air/DashboardJRTransportationPersonnel'
-import DashboardPassengerShipTransportPersonnel from 'sections/tourism/railway-air/DashboardPassengerShipTransportPersonnel'
-import DashboardPrivateRailwayTransportationPersonnel from 'sections/tourism/railway-air/DashboardPrivateRailwayTransportationPersonnel'
-import LineChartPassengerTransport from 'sections/tourism/railway-air/LineChartPassengerTransport'
-import MixedChartAirTransport from 'sections/tourism/railway-air/MixedChartAirTransport'
-import MixedChartJapanRailwayTransport from 'sections/tourism/railway-air/MixedChartJapanRailwayTransport'
-import MixedChartPassengerShipTransportation from 'sections/tourism/railway-air/MixedChartPassengerShipTransportation'
-import TableBusinessOperator from 'sections/tourism/railway-air/TableBusinessOperator'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
-interface Props {
-  routerProps: RouterProps
-}
+// chart items
+const chartItems = [
+  {
+    Section: AxisAirTransport,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: AxisJapanRailwayTransport,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: AxisPassengerShipTransportation,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: AxisPassengerTransport,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+]
 
-export default async function PrefectureView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const { currentPrefecture } = breadcrumbsProps
+// table items
+const tableItems = [
+  {
+    Section: TableBusinessOperator,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
 
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardJRCargoShipmentVolume prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardJRTransportationPersonnel
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardPrivateRailwayTransportationPersonnel
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAirTransportPersonnel prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardPassengerShipTransportPersonnel
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={6} lg={6}>
-              <MixedChartJapanRailwayTransport prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={6} lg={6}>
-              <MixedChartAirTransport prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={6} lg={6}>
-              <MixedChartPassengerShipTransportation
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={6} lg={6}>
-              <LineChartPassengerTransport prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={6} lg={6}>
-              <TableBusinessOperator prefecture={currentPrefecture} />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+export default async function PrefectureView({ routerProps }: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* chart items */}
+      {chartItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
+  )
 }

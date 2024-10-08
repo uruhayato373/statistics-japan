@@ -1,42 +1,18 @@
-import { Suspense } from 'react'
+import RankingResidentialAreaPrice from 'sections/construction/standard-price/prefecture-rank/RankingResidentialAreaPrice'
+import { ViewsPropsType } from 'types/views'
+import MainView from 'views-grid/MainView'
+import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
-import Grid from '@mui/material/Grid'
-import Box from '@mui/system/Box'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
-import RankingChartResidentialAreaPrice from 'sections/construction/standard-price/prefecture-rank/RankingChartResidentialAreaPrice'
-import RankingTableResidentialAreaPrice from 'sections/construction/standard-price/prefecture-rank/RankingTableResidentialAreaPrice'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
-
-interface Props {
-  routerProps: RouterProps
-}
-
-export default async function PrefectureRankView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} md={6}>
-              <RankingChartResidentialAreaPrice />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <RankingTableResidentialAreaPrice />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+export default async function ResidentialAreaPrice({
+  routerProps,
+}: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* 住宅地価格 */}
+      <PrefectureRankingCards
+        Section={RankingResidentialAreaPrice}
+        routerProps={routerProps}
+      />
+    </MainView>
+  )
 }

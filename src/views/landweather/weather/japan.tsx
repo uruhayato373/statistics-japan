@@ -1,37 +1,87 @@
-import { Suspense } from 'react'
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsDashboard from 'cards/CardsDashboard'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
+import AxisPrecipitation from 'sections/landweather/weather/chart/AxisPrecipitation'
+import AxisTemplatures from 'sections/landweather/weather/chart/AxisTemplatures'
+import DashboardAverageTemperature from 'sections/landweather/weather/dashboard/DashboardAverageTemperature'
+import DashboardLowestTemperature from 'sections/landweather/weather/dashboard/DashboardLowestTemperature'
+import DashboardMaximumTemperature from 'sections/landweather/weather/dashboard/DashboardMaximumTemperature'
+import DashboardPrecipitation from 'sections/landweather/weather/dashboard/DashboardPrecipitation'
+import DashboardRainyDays from 'sections/landweather/weather/dashboard/DashboardRainyDays'
+import TableDays from 'sections/landweather/weather/table/TableDays'
+import TableTemplatures from 'sections/landweather/weather/table/TableTemplatures'
+import { ViewsPropsType } from 'types/views'
+import GridItem from 'views-grid/GridItem'
+import MainView from 'views-grid/MainView'
 
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
+// dashboard items
+const dashboardItems = [
+  { Component: DashboardRainyDays },
+  { Component: DashboardPrecipitation },
+  { Component: DashboardMaximumTemperature },
+  { Component: DashboardLowestTemperature },
+  { Component: DashboardAverageTemperature },
+  { Component: DashboardMaximumTemperature },
+]
 
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
-interface Props {
-  routerProps: RouterProps
-}
+// chart items
+const chartItems = [
+  {
+    Section: AxisPrecipitation,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: AxisTemplatures,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+]
 
-export default async function Japan({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
+// table items
+const tableItems = [
+  {
+    Section: TableTemplatures,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableDays,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
 
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            {/* <Grid item xs={12} sm={6} md={4} lg={3}>
-            <DashboardPrecipitation routerProps={routerProps} />
-          </Grid> */}
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+export default async function Japan({ routerProps }: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* chart items */}
+      {chartItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
+  )
 }

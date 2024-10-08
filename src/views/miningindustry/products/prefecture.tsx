@@ -1,10 +1,3 @@
-import { Suspense } from 'react'
-
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import CardsApexPieChart from 'cards/CardsApexPieChart'
 import CardsDashboard from 'cards/CardsDashboard'
@@ -18,14 +11,9 @@ import DashboardNumberOfManufacturingEmployees from 'sections/miningindustry/pro
 import DashboardNumberOfManufacturingEstablishments from 'sections/miningindustry/products/dashboard/DashboardNumberOfManufacturingEstablishments'
 import DashboardProductShipmentAmount from 'sections/miningindustry/products/dashboard/DashboardProductShipmentAmount'
 import TableProductShipmentAmount from 'sections/miningindustry/products/table/TableProductShipmentAmount'
-import { handlePrefecture } from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
+import { ViewsPropsType } from 'types/views'
 import GridItem from 'views-grid/GridItem'
-import ViewsHeader from 'views-grid/ViewsHeader'
-
-interface Props {
-  routerProps: RouterProps
-}
+import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [
@@ -64,40 +52,33 @@ const tableItems = [
   },
 ]
 
-export default async function PrefectureView({ routerProps }: Props) {
-  const currentPrefecture = handlePrefecture().findItem(routerProps.prefCode)
-
+export default async function PrefectureView({ routerProps }: ViewsPropsType) {
   return (
-    <Suspense fallback={<CircularProgressViews />}>
-      <ViewsHeader routerProps={routerProps} />
-      <Box sx={{ mt: 2.5 }}>
-        <Grid container rowSpacing={4.5} columnSpacing={3}>
-          {/* dashboard items */}
-          {dashboardItems.map(({ Component }, index) => (
-            <GridItem key={index} {...dashboardGridProps}>
-              <Component prefecture={currentPrefecture}>
-                {(props) => <CardsDashboard {...props} />}
-              </Component>
-            </GridItem>
-          ))}
-          {/* chart items */}
-          {chartItems.map(({ Section, Card, gridProps }, index) => (
-            <GridItem key={`chart-${index}`} {...gridProps}>
-              <Section prefecture={currentPrefecture}>
-                {(props) => <Card {...props} />}
-              </Section>
-            </GridItem>
-          ))}
-          {/* table items */}
-          {tableItems.map(({ Section, Card, gridProps }, index) => (
-            <GridItem key={`chart-${index}`} {...gridProps}>
-              <Section prefecture={currentPrefecture}>
-                {(props) => <Card {...props} />}
-              </Section>
-            </GridItem>
-          ))}
-        </Grid>
-      </Box>
-    </Suspense>
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* chart items */}
+      {chartItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
   )
 }

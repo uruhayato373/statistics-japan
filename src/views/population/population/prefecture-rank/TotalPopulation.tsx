@@ -1,56 +1,16 @@
-import { Suspense } from 'react'
+import RankingTotalPopulation from 'sections/population/population/prefecture-rank/RankingTotalPopulation'
+import { ViewsPropsType } from 'types/views'
+import MainView from 'views-grid/MainView'
+import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
-import Grid from '@mui/material/Grid'
-import Box from '@mui/system/Box'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
-import CardsAdsResponsive from 'cards/CardsAdsResponsive'
-
-import ComparisonChartTotalPopulation from 'sections/population/population/prefecture-rank/ComparisonChartTotalPopulation'
-import RankingChartTotalPopulation from 'sections/population/population/prefecture-rank/RankingChartTotalPopulation'
-import RankingTableTotalPopulation from 'sections/population/population/prefecture-rank/RankingTableTotalPopulation'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
-
-interface Props {
-  routerProps: RouterProps
-}
-
-export default async function SunnyDays({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} md={6}>
-              <RankingChartTotalPopulation />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <RankingTableTotalPopulation />
-            </Grid>
-            {/* row 2 */}
-            <Grid item xs={12} md={9}>
-              <ComparisonChartTotalPopulation />
-            </Grid>
-            {/* row 3 */}
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+export default async function TotalPopulation({ routerProps }: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* 総人口 */}
+      <PrefectureRankingCards
+        Section={RankingTotalPopulation}
+        routerProps={routerProps}
+      />
+    </MainView>
+  )
 }

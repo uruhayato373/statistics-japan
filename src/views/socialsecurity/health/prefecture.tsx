@@ -1,81 +1,100 @@
-import { Suspense } from 'react'
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsDashboard from 'cards/CardsDashboard'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
+import AxisNumberOfDeaths from 'sections/socialsecurity/health/chart/AxisNumberOfDeaths'
+import AxisNumberOfDeathsDueToLifestyleRelatedDiseases from 'sections/socialsecurity/health/chart/AxisNumberOfDeathsDueToLifestyleRelatedDiseases'
+import AxisNumberOfDeathsDueToMalignantTumors from 'sections/socialsecurity/health/chart/AxisNumberOfDeathsDueToMalignantTumors'
+import DashboardFoodSelfSufficiencyRate from 'sections/socialsecurity/health/dashboard/DashboardFoodSelfSufficiencyRate'
+import TableHealthyLifeExpectancy from 'sections/socialsecurity/health/table/TableHealthyLifeExpectancy'
+import TableNumberOfPeopleUndergoingCancerScreening from 'sections/socialsecurity/health/table/TableNumberOfPeopleUndergoingCancerScreening'
+import TableNumberOfPeopleUndergoingHealthCheckups from 'sections/socialsecurity/health/table/TableNumberOfPeopleUndergoingHealthCheckups'
+import TablePregnancy from 'sections/socialsecurity/health/table/TablePregnancy'
+import TableTestInspection from 'sections/socialsecurity/health/table/TableTestInspection'
+import { ViewsPropsType } from 'types/views'
+import GridItem from 'views-grid/GridItem'
+import MainView from 'views-grid/MainView'
 
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
+// dashboard items
+const dashboardItems = [{ Component: DashboardFoodSelfSufficiencyRate }]
 
-import ColumnChartNumberOfDeathsDueToLifestyleRelatedDiseases from 'sections/socialsecurity/health/ColumnChartNumberOfDeathsDueToLifestyleRelatedDiseases'
-import ColumnChartNumberOfDeathsDueToMalignantTumors from 'sections/socialsecurity/health/ColumnChartNumberOfDeathsDueToMalignantTumors'
-import DashboardFoodSelfSufficiencyRate from 'sections/socialsecurity/health/DashboardFoodSelfSufficiencyRate'
-import LineChartNumberOfDeaths from 'sections/socialsecurity/health/LineChartNumberOfDeaths'
-import TableHealthyLifeExpectancy from 'sections/socialsecurity/health/TableHealthyLifeExpectancy'
-import TableNumberOfPeopleUndergoingCancerScreening from 'sections/socialsecurity/health/TableNumberOfPeopleUndergoingCancerScreening'
-import TableNumberOfPeopleUndergoingHealthCheckups from 'sections/socialsecurity/health/TableNumberOfPeopleUndergoingHealthCheckups'
-import TablePregnancy from 'sections/socialsecurity/health/TablePregnancy'
-import TableTestInspection from 'sections/socialsecurity/health/TableTestInspection'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
-interface Props {
-  routerProps: RouterProps
-}
+// chart items
+const chartItems = [
+  {
+    Section: AxisNumberOfDeaths,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: AxisNumberOfDeathsDueToLifestyleRelatedDiseases,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: AxisNumberOfDeathsDueToMalignantTumors,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+]
 
-export default async function PrefectureView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const { currentPrefecture } = breadcrumbsProps
+// table items
+const tableItems = [
+  {
+    Section: TableHealthyLifeExpectancy,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableNumberOfPeopleUndergoingCancerScreening,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableNumberOfPeopleUndergoingHealthCheckups,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TablePregnancy,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableTestInspection,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
 
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardFoodSelfSufficiencyRate
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <LineChartNumberOfDeaths prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <ColumnChartNumberOfDeathsDueToLifestyleRelatedDiseases
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <ColumnChartNumberOfDeathsDueToMalignantTumors
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableHealthyLifeExpectancy prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableNumberOfPeopleUndergoingHealthCheckups
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TablePregnancy prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableTestInspection prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableNumberOfPeopleUndergoingCancerScreening
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+export default async function PrefectureView({ routerProps }: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* chart items */}
+      {chartItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
+  )
 }

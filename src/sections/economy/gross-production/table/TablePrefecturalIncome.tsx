@@ -1,12 +1,9 @@
-import { Suspense } from 'react'
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 
-import CircularProgressCards from 'components/CircularProgressCards'
-
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '県民所得'
@@ -16,16 +13,15 @@ const ESTAT_PARAMS = {
   cdCat01: ['C1221', 'C1222', 'C1223', 'C1224'],
 }
 
-interface Props {
-  prefecture: PrefectureType
-}
+const PAGE_ID = 'prefectural-income'
 
 // values
 async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
+  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return formatValues(values).filter((f) => f.areaCode === prefCode)
+  return formatValues(filteredValues)
 }
 
 // format values
@@ -48,16 +44,15 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function TablePrefecturalIncome({ prefecture }: Props) {
-  const { prefCode, prefName } = prefecture
+export default async function TablePrefecturalIncome({
+  routerProps,
+  children,
+}: SectionsPropsType) {
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
-
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <CardsReactTimeTable title={title} document={document} />
-    </Suspense>
-  )
+  return <> {children({ title, document, actionButton })}</>
 }

@@ -5,6 +5,7 @@ import { ApexOptions } from 'apexcharts'
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造業事業所数・従業者数の推移'
@@ -71,10 +72,10 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 
 // コンポーネントの描画
 export default async function AxisNumberOfManufacturing({
-  prefecture,
+  routerProps,
   children,
 }: SectionsPropsType) {
-  const { prefCode, prefName } = prefecture
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)

@@ -1,51 +1,18 @@
-import { Suspense } from 'react'
+import RankingPrimarySchoolStudents from 'sections/educationsports/primary-school/prefecture-rank/RankingPrimarySchoolStudents'
+import { ViewsPropsType } from 'types/views'
+import MainView from 'views-grid/MainView'
+import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
-import Grid from '@mui/material/Grid'
-import Box from '@mui/system/Box'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
-import CardsAdsResponsive from 'cards/CardsAdsResponsive'
-
-import RankingChartPrimarySchoolStudents from 'sections/educationsports/primary-school/prefecture-rank/RankingChartPrimarySchoolStudents'
-import RankingTablePrimarySchoolStudents from 'sections/educationsports/primary-school/prefecture-rank/RankingTablePrimarySchoolStudents'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
-
-interface Props {
-  routerProps: RouterProps
-}
-
-export default async function PrefectureRankView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} md={6}>
-              <RankingChartPrimarySchoolStudents />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <RankingTablePrimarySchoolStudents />
-            </Grid>
-            {/* row 2 */}
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+export default async function PrimarySchoolStudents({
+  routerProps,
+}: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* 小学児童数 */}
+      <PrefectureRankingCards
+        Section={RankingPrimarySchoolStudents}
+        routerProps={routerProps}
+      />
+    </MainView>
+  )
 }

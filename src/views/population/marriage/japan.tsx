@@ -1,85 +1,97 @@
-import { Suspense } from 'react'
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
+import CardsDashboard from 'cards/CardsDashboard'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
-import LineChartUnmarriedPopulation from 'sections/population/marriage/chart/LineChartUnmarriedPopulation'
-import PyramidChartBereavementPopulation from 'sections/population/marriage/chart/PyramidChartBereavementPopulation'
-import PyramidChartMaritalPopulation from 'sections/population/marriage/chart/PyramidChartMaritalPopulation'
-import PyramidChartSeparatedPopulation from 'sections/population/marriage/chart/PyramidChartSeparatedPopulation'
-import PyramidChartUnmarriedPopulation from 'sections/population/marriage/chart/PyramidChartUnmarriedPopulation'
+import AxisUnmarriedPopulation from 'sections/population/marriage/chart/AxisUnmarriedPopulation'
+import PyramidBereavementPopulation from 'sections/population/marriage/chart/PyramidBereavementPopulation'
+import PyramidMaritalPopulation from 'sections/population/marriage/chart/PyramidMaritalPopulation'
+import PyramidSeparatedPopulation from 'sections/population/marriage/chart/PyramidSeparatedPopulation'
+import PyramidUnmarriedPopulation from 'sections/population/marriage/chart/PyramidUnmarriedPopulation'
 import DashboardAverageAgeOfFirstMarriageHusband from 'sections/population/marriage/dashboard/DashboardAverageAgeOfFirstMarriageHusband'
 import DashboardAverageAgeOfFirstMarriageWife from 'sections/population/marriage/dashboard/DashboardAverageAgeOfFirstMarriageWife'
 import DashboardNumberOfDivorces from 'sections/population/marriage/dashboard/DashboardNumberOfDivorces'
 import DashboardNumberOfMarriages from 'sections/population/marriage/dashboard/DashboardNumberOfMarriages'
 import TableMarriage from 'sections/population/marriage/table/TableMarriage'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+import { ViewsPropsType } from 'types/views'
+import GridItem from 'views-grid/GridItem'
+import MainView from 'views-grid/MainView'
 
-interface Props {
-  routerProps: RouterProps
-}
+// dashboard items
+const dashboardItems = [
+  { Component: DashboardNumberOfMarriages },
+  { Component: DashboardNumberOfDivorces },
+  { Component: DashboardAverageAgeOfFirstMarriageHusband },
+  { Component: DashboardAverageAgeOfFirstMarriageWife },
+]
 
-export default async function JapanView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
-    const currentPrefecture = {
-      prefCode: '00000',
-      prefName: '日本',
-    }
+// chart items
+const chartItems = [
+  {
+    Section: AxisUnmarriedPopulation,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: PyramidBereavementPopulation,
+    Card: CardsApexPyramidChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: PyramidMaritalPopulation,
+    Card: CardsApexPyramidChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: PyramidSeparatedPopulation,
+    Card: CardsApexPyramidChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: PyramidUnmarriedPopulation,
+    Card: CardsApexPyramidChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+]
 
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfMarriages prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfDivorces prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAverageAgeOfFirstMarriageHusband
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAverageAgeOfFirstMarriageWife
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={6} lg={6}>
-              <LineChartUnmarriedPopulation prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={5} lg={5}>
-              <PyramidChartMaritalPopulation prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={5} lg={5}>
-              <PyramidChartUnmarriedPopulation prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={5} lg={5}>
-              <PyramidChartSeparatedPopulation prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={5} lg={5}>
-              <PyramidChartBereavementPopulation
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={5} lg={7}>
-              <TableMarriage prefecture={currentPrefecture} />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+// table items
+const tableItems = [
+  {
+    Section: TableMarriage,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
+
+export default async function JapanView({ routerProps }: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* chart items */}
+      {chartItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
+  )
 }

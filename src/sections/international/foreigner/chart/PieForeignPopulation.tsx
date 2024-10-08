@@ -1,10 +1,11 @@
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
+
 import { ApexOptions } from 'apexcharts'
 
-import CardsApexPieChart from 'cards/CardsApexPieChart'
-
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '外国人人口の内訳'
@@ -14,8 +15,10 @@ const ESTAT_PARAMS = {
   cdCat01: ['A1701', 'A1702', 'A1703', 'A1706', 'A1707'],
 }
 
+const PAGE_ID = 'foreign-population'
+
 // apexChartsのオプション
-const APEX_OPTIONS: ApexOptions = {
+const OPTIONS: ApexOptions = {
   dataLabels: {
     dropShadow: {
       blur: 3,
@@ -24,16 +27,13 @@ const APEX_OPTIONS: ApexOptions = {
   },
 }
 
-interface Props {
-  prefecture: PrefectureType
-}
-
 // values
 async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
+  const values = await fetchValues(ESTAT_PARAMS)
+  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return values
+  return filteredValues
 }
 
 // document
@@ -44,18 +44,16 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
-export default async function PieForeignPopulation({ prefecture }: Props) {
-  const { prefCode, prefName } = prefecture
+export default async function PieForeignPopulation({
+  routerProps,
+  children,
+}: SectionsPropsType) {
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
-
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const options = OPTIONS
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return (
-    <CardsApexPieChart
-      title={title}
-      document={document}
-      options={APEX_OPTIONS}
-    />
-  )
+  return <> {children({ title, document, options, actionButton })}</>
 }

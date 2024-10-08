@@ -1,69 +1,95 @@
-import { Suspense } from 'react'
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
+import CardsDashboard from 'cards/CardsDashboard'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
-import LineChartHousehold from 'sections/population/household/chart/LineChartHousehold'
-import MixedChartGeneralHousehold from 'sections/population/household/chart/MixedChartGeneralHousehold'
+import AxisNumberOfStillbirths from 'sections/population/birthdeath/chart/AxisNumberOfStillbirths'
+import AxisHousehold from 'sections/population/household/chart/AxisHousehold'
+import PieNumberOfSingleFatherHouseholdsByFathersAge from 'sections/population/household/chart/PieNumberOfSingleFatherHouseholdsByFathersAge'
+import PieNumberOfSingleMotherHouseholdsByMothersAge from 'sections/population/household/chart/PieNumberOfSingleMotherHouseholdsByMothersAge'
 import DashboardNumberOfGeneralHouseholds from 'sections/population/household/dashboard/DashboardNumberOfGeneralHouseholds'
 import DashboardNumberOfNuclearFamilyHouseholds from 'sections/population/household/dashboard/DashboardNumberOfNuclearFamilyHouseholds'
+import DashboardNumberOfSingleFatherHouseholds from 'sections/population/household/dashboard/DashboardNumberOfSingleFatherHouseholds'
 import DashboardNumberOfSingleHouseholds from 'sections/population/household/dashboard/DashboardNumberOfSingleHouseholds'
+import DashboardNumberOfSingleMotherHouseholds from 'sections/population/household/dashboard/DashboardNumberOfSingleMotherHouseholds'
 import TableHousehold from 'sections/population/household/table/TableHousehold'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+import { ViewsPropsType } from 'types/views'
+import GridItem from 'views-grid/GridItem'
+import MainView from 'views-grid/MainView'
 
-interface Props {
-  routerProps: RouterProps
-}
+// dashboard items
+const dashboardItems = [
+  { Component: DashboardNumberOfGeneralHouseholds },
+  { Component: DashboardNumberOfNuclearFamilyHouseholds },
+  { Component: DashboardNumberOfSingleFatherHouseholds },
+  { Component: DashboardNumberOfSingleHouseholds },
+  { Component: DashboardNumberOfSingleMotherHouseholds },
+]
 
-export default async function TotalPopulationJapan({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
-    const currentPrefecture = {
-      prefCode: '00000',
-      prefName: '日本',
-    }
+// chart items
+const chartItems = [
+  {
+    Section: AxisNumberOfStillbirths,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: AxisHousehold,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: PieNumberOfSingleFatherHouseholdsByFathersAge,
+    Card: CardsApexPieChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: PieNumberOfSingleMotherHouseholdsByMothersAge,
+    Card: CardsApexPieChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+]
 
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfGeneralHouseholds
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfNuclearFamilyHouseholds
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfSingleHouseholds
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={6}>
-              <LineChartHousehold prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={6}>
-              <MixedChartGeneralHousehold prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={5} lg={7}>
-              <TableHousehold prefecture={currentPrefecture} />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+// table items
+const tableItems = [
+  {
+    Section: TableHousehold,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
+
+export default async function TotalPopulationJapan({
+  routerProps,
+}: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* chart items */}
+      {chartItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
+  )
 }

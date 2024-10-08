@@ -1,63 +1,59 @@
-import { Suspense } from 'react'
+import CardsDashboard from 'cards/CardsDashboard'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
+import DashboardConsumerPriceIndex from 'sections/economy/consumer-price-index/dashboard/DashboardConsumerPriceIndex'
+import DashboardConsumerPriceIndexChangeRate from 'sections/economy/consumer-price-index/dashboard/DashboardConsumerPriceIndexChangeRate'
 import DashboardConsumerPriceRegionalDifferenceIndex from 'sections/economy/consumer-price-index/dashboard/DashboardConsumerPriceRegionalDifferenceIndex'
 import DashboardNationalPriceRegionalDifferenceIndex from 'sections/economy/consumer-price-index/dashboard/DashboardNationalPriceRegionalDifferenceIndex'
 import TableConsumerPriceIndex from 'sections/economy/consumer-price-index/table/TableConsumerPriceIndex'
 import TableDepositBalance from 'sections/economy/consumer-price-index/table/TableDepositBalance'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+import { ViewsPropsType } from 'types/views'
+import GridItem from 'views-grid/GridItem'
+import MainView from 'views-grid/MainView'
 
-interface Props {
-  routerProps: RouterProps
-}
+// dashboard items
+const dashboardItems = [
+  { Component: DashboardConsumerPriceIndex },
+  { Component: DashboardConsumerPriceIndexChangeRate },
+  { Component: DashboardConsumerPriceRegionalDifferenceIndex },
+  { Component: DashboardNationalPriceRegionalDifferenceIndex },
+]
 
-export default async function PrefectureView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const { currentPrefecture } = breadcrumbsProps
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            {/* <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardConsumerPriceIndex prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardConsumerPriceIndexChangeRate
-                prefecture={currentPrefecture}
-              />
-            </Grid>{' '} */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardConsumerPriceRegionalDifferenceIndex
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNationalPriceRegionalDifferenceIndex
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={5} lg={7}>
-              <TableConsumerPriceIndex prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={5} lg={7}>
-              <TableDepositBalance prefecture={currentPrefecture} />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+// table items
+const tableItems = [
+  {
+    Section: TableConsumerPriceIndex,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableDepositBalance,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
+
+export default async function PrefectureView({ routerProps }: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
+  )
 }

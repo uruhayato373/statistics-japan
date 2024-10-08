@@ -1,14 +1,12 @@
-import { Suspense } from 'react'
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
+import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
+import CardsDashboard from 'cards/CardsDashboard'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
-import LineChartNumberOfStillbirths from 'sections/population/birthdeath/chart/LineChartNumberOfStillbirths'
-import PieChartNumberOfBirthsByMothersAge from 'sections/population/birthdeath/chart/PieChartNumberOfBirthsByMothersAge'
-import PyramidChartNumberOfDeaths from 'sections/population/birthdeath/chart/PyramidChartNumberOfDeaths'
+import AxisNumberOfStillbirths from 'sections/population/birthdeath/chart/AxisNumberOfStillbirths'
+import PieNumberOfBirthsByMothersAge from 'sections/population/birthdeath/chart/PieNumberOfBirthsByMothersAge'
+import PyramidNumberOfDeaths from 'sections/population/birthdeath/chart/PyramidNumberOfDeaths'
 import DashboardBirth from 'sections/population/birthdeath/dashboard/DashboardBirth'
 import DashboardNumberOfDeaths from 'sections/population/birthdeath/dashboard/DashboardNumberOfDeaths'
 import DashboardTotalFertilityRate from 'sections/population/birthdeath/dashboard/DashboardTotalFertilityRate'
@@ -16,62 +14,89 @@ import TableBirth from 'sections/population/birthdeath/table/TableBirth'
 import TableDeath from 'sections/population/birthdeath/table/TableDeath'
 import TableMortalityRate from 'sections/population/birthdeath/table/TableMortalityRate'
 import TableNumberOfNeonatalDeaths from 'sections/population/birthdeath/table/TableNumberOfNeonatalDeaths'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+import { ViewsPropsType } from 'types/views'
+import GridItem from 'views-grid/GridItem'
+import MainView from 'views-grid/MainView'
 
-interface Props {
-  routerProps: RouterProps
-}
+// dashboard items
+const dashboardItems = [
+  { Component: DashboardBirth },
+  { Component: DashboardNumberOfDeaths },
+  { Component: DashboardTotalFertilityRate },
+]
 
-export default async function PrefectureView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const { currentPrefecture } = breadcrumbsProps
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardBirth prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardNumberOfDeaths prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardTotalFertilityRate prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={5} lg={5}>
-              <PyramidChartNumberOfDeaths prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={5}>
-              <PieChartNumberOfBirthsByMothersAge
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={8}>
-              <LineChartNumberOfStillbirths prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableBirth prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableDeath prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableNumberOfNeonatalDeaths prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableMortalityRate prefecture={currentPrefecture} />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+// chart items
+const chartItems = [
+  {
+    Section: AxisNumberOfStillbirths,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: PieNumberOfBirthsByMothersAge,
+    Card: CardsApexPieChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: PyramidNumberOfDeaths,
+    Card: CardsApexPyramidChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+]
+
+// table items
+const tableItems = [
+  {
+    Section: TableBirth,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableDeath,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableNumberOfNeonatalDeaths,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableMortalityRate,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
+
+export default async function PrefectureView({ routerProps }: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* chart items */}
+      {chartItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
+  )
 }

@@ -1,51 +1,18 @@
-import { Suspense } from 'react'
+import RankingConsumerPriceIndex from 'sections/economy/consumer-price-index/prefecture-rank/RankingConsumerPriceIndex'
+import { ViewsPropsType } from 'types/views'
+import MainView from 'views-grid/MainView'
+import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
-import Grid from '@mui/material/Grid'
-import Box from '@mui/system/Box'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
-import CardsAdsResponsive from 'cards/CardsAdsResponsive'
-
-import RankingChartConsumerPriceIndex from 'sections/economy/consumer-price-index/prefecture-rank/RankingChartConsumerPriceIndex'
-import RankingTableConsumerPriceIndex from 'sections/economy/consumer-price-index/prefecture-rank/RankingTableConsumerPriceIndex'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
-
-interface Props {
-  routerProps: RouterProps
-}
-
-export default async function PrefectureRankView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} md={6}>
-              <RankingChartConsumerPriceIndex />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <RankingTableConsumerPriceIndex />
-            </Grid>
-            {/* row 2 */}
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <CardsAdsResponsive />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+export default async function ConsumerPriceIndex({
+  routerProps,
+}: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* 消費者物価指数 */}
+      <PrefectureRankingCards
+        Section={RankingConsumerPriceIndex}
+        routerProps={routerProps}
+      />
+    </MainView>
+  )
 }

@@ -1,88 +1,87 @@
-import { Suspense } from 'react'
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsDashboard from 'cards/CardsDashboard'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
-import CardsAdsDashboard from 'cards/CardsAdsDashboard'
-
-import LineChartPrecipitation from 'sections/landweather/weather/chart/LineChartPrecipitation'
-import LineChartTemplatures from 'sections/landweather/weather/chart/LineChartTemplatures'
-import DashboardAveHum from 'sections/landweather/weather/dashboard/DashboardAveHum'
+import AxisPrecipitation from 'sections/landweather/weather/chart/AxisPrecipitation'
+import AxisTemplatures from 'sections/landweather/weather/chart/AxisTemplatures'
 import DashboardAverageTemperature from 'sections/landweather/weather/dashboard/DashboardAverageTemperature'
 import DashboardLowestTemperature from 'sections/landweather/weather/dashboard/DashboardLowestTemperature'
 import DashboardMaximumTemperature from 'sections/landweather/weather/dashboard/DashboardMaximumTemperature'
 import DashboardPrecipitation from 'sections/landweather/weather/dashboard/DashboardPrecipitation'
 import DashboardRainyDays from 'sections/landweather/weather/dashboard/DashboardRainyDays'
-import DashboardSunshineHours from 'sections/landweather/weather/dashboard/DashboardSunshineHours'
-import SourceAnnotationWeather from 'sections/landweather/weather/SourceAnnotationWeather'
 import TableDays from 'sections/landweather/weather/table/TableDays'
 import TableTemplatures from 'sections/landweather/weather/table/TableTemplatures'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+import { ViewsPropsType } from 'types/views'
+import GridItem from 'views-grid/GridItem'
+import MainView from 'views-grid/MainView'
 
-interface Props {
-  routerProps: RouterProps
-}
+// dashboard items
+const dashboardItems = [
+  { Component: DashboardRainyDays },
+  { Component: DashboardPrecipitation },
+  { Component: DashboardMaximumTemperature },
+  { Component: DashboardLowestTemperature },
+  { Component: DashboardAverageTemperature },
+  { Component: DashboardMaximumTemperature },
+]
 
-export default async function Prefecture({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const { currentPrefecture } = breadcrumbsProps
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardSunshineHours prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardRainyDays prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardPrecipitation prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardMaximumTemperature prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardLowestTemperature prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAverageTemperature prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardAveHum prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <CardsAdsDashboard />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={6}>
-              <LineChartTemplatures prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={6}>
-              <LineChartPrecipitation prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={6}>
-              <TableTemplatures prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={6}>
-              <TableDays prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={6}>
-              <SourceAnnotationWeather />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+// chart items
+const chartItems = [
+  {
+    Section: AxisPrecipitation,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+  {
+    Section: AxisTemplatures,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+  },
+]
+
+// table items
+const tableItems = [
+  {
+    Section: TableTemplatures,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableDays,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
+
+export default async function Prefecture({ routerProps }: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* chart items */}
+      {chartItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
+  )
 }

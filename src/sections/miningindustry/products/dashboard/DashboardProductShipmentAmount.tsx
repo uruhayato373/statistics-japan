@@ -1,10 +1,9 @@
 import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
 
-import { CardsDashboardProps } from 'cards/CardsDashboard'
-
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造品出荷額等'
@@ -15,11 +14,6 @@ const ESTAT_PARAMS = {
 }
 
 const PAGE_ID = 'product-shipment-amount'
-
-interface Props {
-  prefecture: PrefectureType
-  children: (props: CardsDashboardProps) => React.ReactNode
-}
 
 // values
 async function processValues(prefCode: string) {
@@ -52,10 +46,10 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 
 // コンポーネントの描画
 export default async function DashboardProductShipmentAmount({
-  prefecture,
+  routerProps,
   children,
-}: Props) {
-  const { prefCode, prefName } = prefecture
+}: SectionsPropsType) {
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
   const document = await processDocument(values)

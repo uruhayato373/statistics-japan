@@ -22,15 +22,9 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Grid container rowSpacing={4.5} columnSpacing={3}>
           {/* 製造業従業員数 */}
           <PrefectureRankingCards
-            RankingComponent={RankingManufacturingIndustryAddedValue}
+            Section={RankingManufacturingIndustryAddedValue}
             routerProps={routerProps}
           />
-          {/* Adsense */}
-          {/* {[0, 1].map((index) => (
-            <GridItem key={`ads-${index}`} xs={12} md={6}>
-              <CardsAdsResponsive />
-            </GridItem>
-          ))} */}
         </Grid>
       </Box>
     </Suspense>

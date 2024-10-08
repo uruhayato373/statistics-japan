@@ -1,69 +1,88 @@
-import { Suspense } from 'react'
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsDashboard from 'cards/CardsDashboard'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-
-import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
-import CircularProgressViews from 'components/progress/CircularProgressViews'
-
-import LineChartAverageAnnualIncome from 'sections/economy/household-budget/chart/LineChartAverageAnnualIncome'
-import LineChartGiniCoefficientOfAnnualIncome from 'sections/economy/household-budget/chart/LineChartGiniCoefficientOfAnnualIncome'
+import AxisAverageAnnualIncome from 'sections/economy/household-budget/chart/AxisAverageAnnualIncome'
+import AxisGiniCoefficientOfAnnualIncome from 'sections/economy/household-budget/chart/AxisGiniCoefficientOfAnnualIncome'
 import DashboardActualExpenditure from 'sections/economy/household-budget/dashboard/DashboardActualExpenditure'
 import DashboardActualIncome from 'sections/economy/household-budget/dashboard/DashboardActualIncome'
 import DashboardConsumptionExpenditure from 'sections/economy/household-budget/dashboard/DashboardConsumptionExpenditure'
 import TableActualExpenditure from 'sections/economy/household-budget/table/TableActualExpenditure'
 import TableConsumptionExpenditure from 'sections/economy/household-budget/table/TableConsumptionExpenditure'
 import TableIncome from 'sections/economy/household-budget/table/TableIncome'
-import handleProps, { RouterProps } from 'utils/props'
-import Error500 from 'views/maintenance/500'
+import { ViewsPropsType } from 'types/views'
+import GridItem from 'views-grid/GridItem'
+import MainView from 'views-grid/MainView'
 
-interface Props {
-  routerProps: RouterProps
-}
+// dashboard items
+const dashboardItems = [
+  { Component: DashboardActualIncome },
+  { Component: DashboardConsumptionExpenditure },
+  { Component: DashboardActualExpenditure },
+]
 
-export default async function PrefectureView({ routerProps }: Props) {
-  try {
-    const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-    const { currentPrefecture } = breadcrumbsProps
+const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
-    return (
-      <Suspense fallback={<CircularProgressViews />}>
-        <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
-        <Box sx={{ mt: 2.5 }}>
-          <Grid container rowSpacing={4.5} columnSpacing={3}>
-            {/* row 1 */}
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardActualIncome prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardConsumptionExpenditure prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <DashboardActualExpenditure prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <LineChartAverageAnnualIncome prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <LineChartGiniCoefficientOfAnnualIncome
-                prefecture={currentPrefecture}
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableIncome prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableConsumptionExpenditure prefecture={currentPrefecture} />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <TableActualExpenditure prefecture={currentPrefecture} />
-            </Grid>
-          </Grid>
-        </Box>
-      </Suspense>
-    )
-  } catch (error) {
-    console.error('エラーが発生しました:', error)
-    return <Error500 />
-  }
+// chart items
+const chartItems = [
+  {
+    Section: AxisAverageAnnualIncome,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
+  },
+  {
+    Section: AxisGiniCoefficientOfAnnualIncome,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
+  },
+]
+
+// table items
+const tableItems = [
+  {
+    Section: TableIncome,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableConsumptionExpenditure,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+  {
+    Section: TableActualExpenditure,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
+]
+
+export default async function PrefectureView({ routerProps }: ViewsPropsType) {
+  return (
+    <MainView routerProps={routerProps}>
+      {/* dashboard items */}
+      {dashboardItems.map(({ Component }, index) => (
+        <GridItem key={index} {...dashboardGridProps}>
+          <Component routerProps={routerProps}>
+            {(props) => <CardsDashboard {...props} />}
+          </Component>
+        </GridItem>
+      ))}
+      {/* chart items */}
+      {chartItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+      {/* table items */}
+      {tableItems.map(({ Section, Card, gridProps }, index) => (
+        <GridItem key={`chart-${index}`} {...gridProps}>
+          <Section routerProps={routerProps}>
+            {(props) => <Card {...props} />}
+          </Section>
+        </GridItem>
+      ))}
+    </MainView>
+  )
 }

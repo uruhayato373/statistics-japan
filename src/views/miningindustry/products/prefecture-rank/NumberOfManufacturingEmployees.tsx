@@ -22,7 +22,7 @@ export default async function PrefectureRankView({ routerProps }: Props) {
         <Grid container rowSpacing={4.5} columnSpacing={3}>
           {/* 製造業従業員数 */}
           <PrefectureRankingCards
-            RankingComponent={RankingNumberOfManufacturingEmployees}
+            Section={RankingNumberOfManufacturingEmployees}
             routerProps={routerProps}
           />
           {/* Adsense */}

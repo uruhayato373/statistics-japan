@@ -1,4 +1,5 @@
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
@@ -18,14 +19,6 @@ const ESTAT_PARAMS_MOLECULE = {
 const ESTAT_PARAMS_DENOMINATOR = {
   statsDataId: '0000010103',
   cdCat01: 'C3404',
-}
-
-interface Props {
-  routerProps?: RouterProps
-  children: (props: {
-    title: string
-    document: DocumentType
-  }) => React.ReactNode
 }
 
 // values
@@ -74,7 +67,7 @@ async function serverAction(routerProps: RouterProps, document: DocumentType) {
 export default async function RankingProductShipmentAmountPerManufacturingEmployees({
   routerProps,
   children,
-}: Props) {
+}: SectionsPropsType) {
   const title = `都道府県の${CARD_TITLE}`
   const values = await processValues()
   const document = await processDocument(values)

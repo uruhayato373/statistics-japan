@@ -1,6 +1,5 @@
-import { CardsHighchartsPropsType } from 'cards/CardsHighchartsPrefectureRankingChart'
-
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { RouterProps } from 'utils/props'
@@ -14,11 +13,6 @@ const ESTAT_PARAMS = {
 }
 
 const PAGE_ID = 'product-shipment-amount'
-
-interface Props {
-  routerProps?: RouterProps
-  children: (props: CardsHighchartsPropsType) => React.ReactNode
-}
 
 // values
 async function processValues() {
@@ -65,7 +59,7 @@ async function serverAction(routerProps: RouterProps, document: DocumentType) {
 export default async function RankingProductShipmentAmount({
   routerProps,
   children,
-}: Props) {
+}: SectionsPropsType) {
   const title = `都道府県の${CARD_TITLE}`
   const values = await processValues()
   const document = await processDocument(values)

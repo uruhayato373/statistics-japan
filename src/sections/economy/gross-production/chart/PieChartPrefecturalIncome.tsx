@@ -1,10 +1,11 @@
+import LinkToPrefectureRank from 'components/button/LinkToPrefectureRank'
+
 import { ApexOptions } from 'apexcharts'
 
-import CardsApexPieChart from 'cards/CardsApexPieChart'
-
+import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { PrefectureType } from 'utils/prefecture'
+import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '県内所得の内訳'
@@ -14,8 +15,10 @@ const ESTAT_PARAMS = {
   cdCat01: ['C1222', 'C1223', 'C1224'],
 }
 
+const PAGE_ID = 'prefectural-income'
+
 // apexChartsのオプション
-const APEX_OPTIONS: ApexOptions = {
+const OPTIONS: ApexOptions = {
   dataLabels: {
     dropShadow: {
       blur: 3,
@@ -25,10 +28,6 @@ const APEX_OPTIONS: ApexOptions = {
   legend: {
     show: false,
   },
-}
-
-interface Props {
-  prefecture: PrefectureType
 }
 
 // values
@@ -58,18 +57,16 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
-export default async function PieChartPrefecturalIncome({ prefecture }: Props) {
-  const { prefCode, prefName } = prefecture
+export default async function PieChartPrefecturalIncome({
+  routerProps,
+  children,
+}: SectionsPropsType) {
+  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
-
   const values = await processValues(prefCode)
   const document = await processDocument(values)
+  const options = OPTIONS
+  const actionButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 
-  return (
-    <CardsApexPieChart
-      title={title}
-      document={document}
-      options={APEX_OPTIONS}
-    />
-  )
+  return <> {children({ title, document, options, actionButton })}</>
 }
