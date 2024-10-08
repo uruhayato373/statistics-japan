@@ -8,6 +8,8 @@ import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 import SelectTime from 'components/SelectTime'
 
+import { ApexOptions } from 'apexcharts'
+
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
 import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
@@ -17,6 +19,10 @@ import Control from './Control'
 import Header from './Header'
 
 const DEFAULT_HEIGHT = '200px'
+
+type Props = Omit<CardsPropsType, 'options'> & {
+  options?: ApexOptions
+}
 
 const Content = ({ options, height }) => (
   <Box sx={{ p: 2, height: height || DEFAULT_HEIGHT, overflow: 'hidden' }}>
@@ -30,7 +36,7 @@ export default function CardsApexPieChart({
   options,
   height = DEFAULT_HEIGHT,
   linkButton,
-}: CardsPropsType) {
+}: Props) {
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 
