@@ -4,27 +4,22 @@ import { ApexOptions } from 'apexcharts'
 import { Options } from 'highcharts'
 
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
+import { CardsPropsType } from 'types/cards'
 import { SectionsPropsType } from 'types/sections'
 import { DocumentType, RankingDocumentType } from 'utils/document'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-type ConditionalDocumentType<T extends RouterProps> =
-  T['kindId'] extends 'prefecture-rank' ? RankingDocumentType : DocumentType
-
-interface MainSectionsPropsType<T extends RouterProps>
-  extends SectionsPropsType {
+interface MainSectionsPropsType<
+  T extends DocumentType | RankingDocumentType =
+    | DocumentType
+    | RankingDocumentType,
+  U extends Options | ApexOptions = Options | ApexOptions,
+> extends SectionsPropsType {
   cardTitle: string
   processValues: (prefCode?: string) => Promise<ValueType[]>
-  processDocument: (values: ValueType[]) => Promise<ConditionalDocumentType<T>>
-  options?: Options | ApexOptions
-  linkButton?: React.ReactNode
-}
-
-interface ChildrenProps<T extends RouterProps> {
-  title: string
-  document: ConditionalDocumentType<T>
-  options?: Options | ApexOptions
+  processDocument: (values: ValueType[]) => Promise<T>
+  options?: U
   linkButton?: React.ReactNode
 }
 
@@ -43,7 +38,7 @@ async function serverAction(
   ])
 }
 
-async function SectionsWrapper<T extends RouterProps>({
+async function SectionsWrapper({
   routerProps,
   children,
   cardTitle,
@@ -51,7 +46,7 @@ async function SectionsWrapper<T extends RouterProps>({
   processDocument,
   options,
   linkButton,
-}: MainSectionsPropsType<T>) {
+}: MainSectionsPropsType) {
   const { prefCode, kindId } = routerProps
   let values: ValueType[]
 
@@ -73,7 +68,7 @@ async function SectionsWrapper<T extends RouterProps>({
     await serverAction(routerProps, cardTitle, document as RankingDocumentType)
   }
 
-  const childProps: ChildrenProps<T> = {
+  const childProps: CardsPropsType = {
     title: cardTitle,
     document,
     options,
