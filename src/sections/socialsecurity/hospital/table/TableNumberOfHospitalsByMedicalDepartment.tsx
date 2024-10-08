@@ -66,9 +66,10 @@ const ESTAT_PARAMS = {
 // values
 async function processValues(prefCode: string) {
   const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues({ ...ESTAT_PARAMS, cdArea: prefCode })
+  const values = await fetchValues(ESTAT_PARAMS)
+  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return formatValues(values)
+  return formatValues(filteredValues)
 }
 
 // format values
