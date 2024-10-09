@@ -15,7 +15,7 @@ interface MainSectionsPropsType<
     | DocumentType
     | RankingDocumentType,
   U extends Options | ApexOptions = Options | ApexOptions,
-> extends SectionsPropsType {
+> extends SectionsPropsType<T, U> {
   cardTitle: string
   processValues: (prefCode?: string) => Promise<ValueType[]>
   processDocument: (values: ValueType[]) => Promise<T>
