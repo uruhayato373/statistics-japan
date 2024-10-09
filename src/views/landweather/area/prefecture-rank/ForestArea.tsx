@@ -1,7 +1,8 @@
+import MainView from 'components/views//MainView'
+import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
+
 import RankingForestArea from 'sections/landweather/area/prefecture-rank/RankingForestArea'
 import { ViewsPropsType } from 'types/views'
-import MainView from 'views-grid/MainView'
-import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
 export default async function ForestArea({ routerProps }: ViewsPropsType) {
   return (

@@ -1,7 +1,8 @@
+import MainView from 'components/views//MainView'
+import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
+
 import RankingAmountOfProductOnHand from 'sections/commercial/product-sales/prefecture-rank/RankingAmountOfProductOnHand'
 import { ViewsPropsType } from 'types/views'
-import MainView from 'views-grid/MainView'
-import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
 export default async function AmountOfProductOnHand({
   routerProps,

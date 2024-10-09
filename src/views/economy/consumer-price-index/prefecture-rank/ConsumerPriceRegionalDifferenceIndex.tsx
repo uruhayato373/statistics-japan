@@ -1,7 +1,8 @@
+import MainView from 'components/views//MainView'
+import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
+
 import RankingConsumerPriceRegionalDifferenceIndex from 'sections/economy/consumer-price-index/prefecture-rank/RankingConsumerPriceRegionalDifferenceIndex'
 import { ViewsPropsType } from 'types/views'
-import MainView from 'views-grid/MainView'
-import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
 export default async function ConsumerPriceRegionalDifferenceIndex({
   routerProps,

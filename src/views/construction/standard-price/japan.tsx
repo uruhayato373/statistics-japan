@@ -1,9 +1,10 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
 import TableStandardPrice from 'sections/construction/standard-price/table/TableStandardPrice'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // table items
 const tableItems = [

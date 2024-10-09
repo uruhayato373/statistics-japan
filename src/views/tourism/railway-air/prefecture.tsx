@@ -1,3 +1,6 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import CardsDashboard from 'cards/CardsDashboard'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
@@ -13,8 +16,6 @@ import DashboardPassengerShipTransportPersonnel from 'sections/tourism/railway-a
 import DashboardPrivateRailwayTransportationPersonnel from 'sections/tourism/railway-air/dashboard/DashboardPrivateRailwayTransportationPersonnel'
 import TableBusinessOperator from 'sections/tourism/railway-air/table/TableBusinessOperator'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [

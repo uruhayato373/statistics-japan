@@ -1,3 +1,6 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import CardsApexPieChart from 'cards/CardsApexPieChart'
 import CardsDashboard from 'cards/CardsDashboard'
@@ -14,8 +17,6 @@ import TableNumberOfTenementHouses from 'sections/construction/housing/table/Tab
 import TablePerHouse from 'sections/construction/housing/table/TablePerHouse'
 // import TableTotalNumberOfHouses from 'sections/construction/housing/table/TableTotalNumberOfHouses'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [{ Component: DashboardTotalNumberOfHouses }]

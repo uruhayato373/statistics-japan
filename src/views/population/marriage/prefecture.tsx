@@ -1,3 +1,6 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
 import CardsDashboard from 'cards/CardsDashboard'
@@ -14,8 +17,6 @@ import DashboardNumberOfDivorces from 'sections/population/marriage/dashboard/Da
 import DashboardNumberOfMarriages from 'sections/population/marriage/dashboard/DashboardNumberOfMarriages'
 import TableMarriage from 'sections/population/marriage/table/TableMarriage'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [

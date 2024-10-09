@@ -1,3 +1,6 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsDashboard from 'cards/CardsDashboard'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
@@ -9,8 +12,6 @@ import TableAquacultureYield from 'sections/agriculture/fishing/table/TableAquac
 import TableCatchAmount from 'sections/agriculture/fishing/table/TableCatchAmount'
 import TableFisheryOutputValue from 'sections/agriculture/fishing/table/TableFisheryOutputValue'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [

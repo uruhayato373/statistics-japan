@@ -1,7 +1,8 @@
+import MainView from 'components/views//MainView'
+import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
+
 import RankingResidentialAreaPrice from 'sections/construction/standard-price/prefecture-rank/RankingResidentialAreaPrice'
 import { ViewsPropsType } from 'types/views'
-import MainView from 'views-grid/MainView'
-import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
 export default async function ResidentialAreaPrice({
   routerProps,

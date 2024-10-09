@@ -1,11 +1,12 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsDashboard from 'cards/CardsDashboard'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
 import DashboardRoadActualLength from 'sections/infrastructure/road/dashboard/DashboardRoadActualLength'
 import TableRoadActualLength from 'sections/infrastructure/road/table/TableRoadActualLength'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [{ Component: DashboardRoadActualLength }]

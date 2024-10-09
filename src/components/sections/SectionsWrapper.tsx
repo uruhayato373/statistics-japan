@@ -1,27 +1,11 @@
 import React from 'react'
 
-import { ApexOptions } from 'apexcharts'
-import { Options } from 'highcharts'
-
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import { CardsPropsType } from 'types/cards'
-import { SectionsPropsType } from 'types/sections'
-import { DocumentType, RankingDocumentType } from 'utils/document'
+import { SectionsWrapperPropsType } from 'types/sections'
+import { RankingDocumentType } from 'utils/document'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
-
-interface MainSectionsPropsType<
-  T extends DocumentType | RankingDocumentType =
-    | DocumentType
-    | RankingDocumentType,
-  U extends Options | ApexOptions = Options | ApexOptions,
-> extends SectionsPropsType<T, U> {
-  cardTitle: string
-  processValues: (prefCode?: string) => Promise<ValueType[]>
-  processDocument: (values: ValueType[]) => Promise<T>
-  options?: U
-  linkButton?: React.ReactNode
-}
 
 async function serverAction(
   routerProps: RouterProps,
@@ -46,7 +30,7 @@ async function SectionsWrapper({
   processDocument,
   options,
   linkButton,
-}: MainSectionsPropsType) {
+}: SectionsWrapperPropsType) {
   const { prefCode, kindId } = routerProps
   let values: ValueType[]
 

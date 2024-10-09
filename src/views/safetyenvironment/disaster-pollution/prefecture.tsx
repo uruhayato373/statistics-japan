@@ -1,3 +1,6 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsDashboard from 'cards/CardsDashboard'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
@@ -11,8 +14,6 @@ import TableNumberOfPollutionComplaints from 'sections/safetyenvironment/disaste
 import TablePostalLifeInsurance from 'sections/safetyenvironment/disaster-pollution/table/TablePostalLifeInsurance'
 import TablePrivateLifeInsurance from 'sections/safetyenvironment/disaster-pollution/table/TablePrivateLifeInsurance'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [

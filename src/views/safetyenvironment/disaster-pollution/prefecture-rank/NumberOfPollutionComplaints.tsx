@@ -1,7 +1,8 @@
+import MainView from 'components/views//MainView'
+import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
+
 import RankingNumberOfPollutionComplaints from 'sections/safetyenvironment/disaster-pollution/prefecture-rank/RankingNumberOfPollutionComplaints'
 import { ViewsPropsType } from 'types/views'
-import MainView from 'views-grid/MainView'
-import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
 export default async function NumberOfPollutionComplaints({
   routerProps,

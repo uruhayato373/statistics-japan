@@ -4,11 +4,11 @@ import Grid from '@mui/material/Grid'
 import Box from '@mui/system/Box'
 
 import CircularProgressViews from 'components/progress/CircularProgressViews'
+import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
+import ViewsHeader from 'components/views/ViewsHeader'
 
 import RankingNumberOfManufacturingEstablishments from 'sections/miningindustry/products/prefecture-rank/RankingNumberOfManufacturingEstablishments'
 import { RouterProps } from 'utils/props'
-import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
-import ViewsHeader from 'views-grid/ViewsHeader'
 
 interface Props {
   routerProps: RouterProps

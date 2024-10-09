@@ -1,7 +1,8 @@
+import MainView from 'components/views//MainView'
+import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
+
 import RankingJuniorHighSchoolTeachers from 'sections/educationsports/junior-high-school/prefecture-rank/RankingJuniorHighSchoolTeachers'
 import { ViewsPropsType } from 'types/views'
-import MainView from 'views-grid/MainView'
-import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
 
 export default async function JuniorHighSchoolTeachers({
   routerProps,

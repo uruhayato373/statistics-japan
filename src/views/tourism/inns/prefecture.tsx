@@ -1,11 +1,12 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsDashboard from 'cards/CardsDashboard'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
 import DashboardNumberOfOperatingFacilities from 'sections/tourism/inns/dashboard/DashboardNumberOfOperatingFacilities'
 import TableBusinessFacilities from 'sections/tourism/inns/table/TableInns'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [{ Component: DashboardNumberOfOperatingFacilities }]

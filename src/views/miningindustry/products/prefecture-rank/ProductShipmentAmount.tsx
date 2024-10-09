@@ -7,6 +7,9 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/system/Box'
 
 import CircularProgressViews from 'components/progress/CircularProgressViews'
+import GridItem from 'components/views/GridItem'
+import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
+import ViewsHeader from 'components/views/ViewsHeader'
 
 import CardsHighchartsScatterChart from 'cards/CardsHighchartsScatterChart'
 
@@ -16,9 +19,6 @@ import ScatterProductShipmentAmountManufacturingEmployees from 'sections/miningi
 import ScatterProductShipmentAmountManufacturingEstablishments from 'sections/miningindustry/products/scatter/ScatterProductShipmentAmountManufacturingEstablishments'
 import ScatterProductShipmentAmountTotalPopulation from 'sections/miningindustry/products/scatter/ScatterProductShipmentAmountTotalPopulation'
 import { RouterProps } from 'utils/props'
-import GridItem from 'views-grid/GridItem'
-import PrefectureRankingCards from 'views-grid/PrefectureRankingCards'
-import ViewsHeader from 'views-grid/ViewsHeader'
 
 interface Props {
   routerProps: RouterProps

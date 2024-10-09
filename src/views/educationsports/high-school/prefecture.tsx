@@ -1,3 +1,6 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsDashboard from 'cards/CardsDashboard'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
@@ -6,8 +9,6 @@ import DashboardHighSchoolStudents from 'sections/educationsports/high-school/da
 import DashboardHighSchoolTeachers from 'sections/educationsports/high-school/dashboard/DashboardHighSchoolTeachers'
 import TableHighSchool from 'sections/educationsports/high-school/table/TableHighSchool'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [

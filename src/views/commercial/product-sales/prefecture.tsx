@@ -1,3 +1,6 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsDashboard from 'cards/CardsDashboard'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
@@ -10,8 +13,6 @@ import TableNumberOfCommercialEmployees from 'sections/commercial/product-sales/
 import TableNumberOfCommercialEstablishments from 'sections/commercial/product-sales/table/TableNumberOfCommercialEstablishments'
 import TableProductSalesAmount from 'sections/commercial/product-sales/table/TableProductSalesAmount'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [

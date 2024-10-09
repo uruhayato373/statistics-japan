@@ -1,3 +1,6 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import CardsApexPieChart from 'cards/CardsApexPieChart'
 import CardsDashboard from 'cards/CardsDashboard'
@@ -18,8 +21,6 @@ import TableCultivatedLandArea from 'sections/agriculture/agriculture/table/Tabl
 import TableFarmersIncome from 'sections/agriculture/agriculture/table/TableFarmersIncome'
 import TableNumberOfFarmers from 'sections/agriculture/agriculture/table/TableNumberOfFarmers'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [

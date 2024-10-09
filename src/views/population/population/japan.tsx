@@ -1,3 +1,6 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
 import CardsDashboard from 'cards/CardsDashboard'
@@ -12,8 +15,6 @@ import DashboardMedianAge from 'sections/population/population/dashboard/Dashboa
 import DashboardTotalPopulation from 'sections/population/population/dashboard/DashboardTotalPopulation'
 import TablePopulation from 'sections/population/population/table/TablePopulation'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [

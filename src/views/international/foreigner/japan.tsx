@@ -1,3 +1,6 @@
+import MainView from 'components/views//MainView'
+import GridItem from 'components/views/GridItem'
+
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import CardsApexPieChart from 'cards/CardsApexPieChart'
 import CardsDashboard from 'cards/CardsDashboard'
@@ -9,8 +12,6 @@ import DashboardForeignPopulation from 'sections/international/foreigner/dashboa
 import TableForeignerSuspectCase from 'sections/international/foreigner/table/TableForeignerSuspectCase'
 import TableForeignPopulation from 'sections/international/foreigner/table/TableForeignPopulation'
 import { ViewsPropsType } from 'types/views'
-import GridItem from 'views-grid/GridItem'
-import MainView from 'views-grid/MainView'
 
 // dashboard items
 const dashboardItems = [{ Component: DashboardForeignPopulation }]
