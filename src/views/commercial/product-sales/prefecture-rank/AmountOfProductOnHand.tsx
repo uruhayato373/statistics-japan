@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingAmountOfProductOnHand from 'sections/commercial/product-sales/prefecture-rank/RankingAmountOfProductOnHand'
@@ -8,12 +8,12 @@ export default async function AmountOfProductOnHand({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 商品手持額 */}
       <PrefectureRankingCards
         Section={RankingAmountOfProductOnHand}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

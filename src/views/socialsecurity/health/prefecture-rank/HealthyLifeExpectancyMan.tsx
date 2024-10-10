@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingHealthyLifeExpectancyMan from 'sections/socialsecurity/health/prefecture-rank/RankingHealthyLifeExpectancyMan'
@@ -8,12 +8,12 @@ export default async function HealthyLifeExpectancyMan({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 健康寿命（男性） */}
       <PrefectureRankingCards
         Section={RankingHealthyLifeExpectancyMan}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

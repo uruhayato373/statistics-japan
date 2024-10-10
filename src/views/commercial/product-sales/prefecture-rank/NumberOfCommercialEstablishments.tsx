@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingNumberOfCommercialEstablishments from 'sections/commercial/product-sales/prefecture-rank/RankingNumberOfCommercialEstablishments'
@@ -8,12 +8,12 @@ export default async function NumberOfCommercialEstablishments({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 商業事業所数 */}
       <PrefectureRankingCards
         Section={RankingNumberOfCommercialEstablishments}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

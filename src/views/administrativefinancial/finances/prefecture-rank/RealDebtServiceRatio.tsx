@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingRealDebtServiceRatio from 'sections/administrativefinancial/finances/prefecture-rank/RankingRealDebtServiceRatio'
@@ -10,12 +10,12 @@ interface Props {
 
 export default async function PrefectureRankView({ routerProps }: Props) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 実質公債費比率 */}
       <PrefectureRankingCards
         Section={RankingRealDebtServiceRatio}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

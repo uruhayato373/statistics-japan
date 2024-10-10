@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingNumberOfFireStations from 'sections/safetyenvironment/fire/prefecture-rank/RankingNumberOfFireStations'
@@ -8,12 +8,12 @@ export default async function NumberOfFireStations({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 消防本部・署数 */}
       <PrefectureRankingCards
         Section={RankingNumberOfFireStations}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

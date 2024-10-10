@@ -1,8 +1,9 @@
-import MainView from 'components/views//MainView'
-import GridItem from 'components/views/GridItem'
+import ViewsWrapper from 'components/views//ViewsWrapper'
+import ChartItems from 'components/views/ChartItems'
+import DashboardItems from 'components/views/DashboardItems'
+import TableItems from 'components/views/TableItems'
 
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsDashboard from 'cards/CardsDashboard'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
 import AxisAirTransport from 'sections/tourism/railway-air/chart/AxisAirTransport'
@@ -25,8 +26,6 @@ const dashboardItems = [
   { Component: DashboardAirTransportPersonnel },
   { Component: DashboardPassengerShipTransportPersonnel },
 ]
-
-const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
 // chart items
 const chartItems = [
@@ -63,31 +62,10 @@ const tableItems = [
 
 export default async function PrefectureView({ routerProps }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
-      {/* dashboard items */}
-      {dashboardItems.map(({ Component }, index) => (
-        <GridItem key={index} {...dashboardGridProps}>
-          <Component routerProps={routerProps}>
-            {(props) => <CardsDashboard {...props} />}
-          </Component>
-        </GridItem>
-      ))}
-      {/* chart items */}
-      {chartItems.map(({ Section, Card, gridProps }, index) => (
-        <GridItem key={`chart-${index}`} {...gridProps}>
-          <Section routerProps={routerProps}>
-            {(props) => <Card {...props} />}
-          </Section>
-        </GridItem>
-      ))}
-      {/* table items */}
-      {tableItems.map(({ Section, Card, gridProps }, index) => (
-        <GridItem key={`chart-${index}`} {...gridProps}>
-          <Section routerProps={routerProps}>
-            {(props) => <Card {...props} />}
-          </Section>
-        </GridItem>
-      ))}
-    </MainView>
+    <ViewsWrapper routerProps={routerProps}>
+      <DashboardItems routerProps={routerProps} items={dashboardItems} />
+      <ChartItems routerProps={routerProps} items={chartItems} />
+      <TableItems routerProps={routerProps} items={tableItems} />
+    </ViewsWrapper>
   )
 }

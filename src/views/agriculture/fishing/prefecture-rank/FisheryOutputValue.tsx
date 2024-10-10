@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingFisheryOutputValue from 'sections/agriculture/fishing/prefecture-rank/RankingFisheryOutputValue'
@@ -8,12 +8,12 @@ export default async function FisheryOutputValue({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 漁業産出額 */}
       <PrefectureRankingCards
         Section={RankingFisheryOutputValue}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

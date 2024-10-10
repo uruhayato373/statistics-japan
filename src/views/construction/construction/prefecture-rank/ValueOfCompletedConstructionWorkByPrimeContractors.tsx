@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingValueOfCompletedConstructionWorkByPrimeContractors from 'sections/construction/construction/prefecture-rank/RankingValueOfCompletedConstructionWorkByPrimeContractors'
@@ -8,12 +8,12 @@ export default async function ValueOfCompletedConstructionWorkByPrimeContractors
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 元請完成工事高 */}
       <PrefectureRankingCards
         Section={RankingValueOfCompletedConstructionWorkByPrimeContractors}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

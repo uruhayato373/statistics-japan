@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingGasolineSalesVolume from 'sections/energy/electric-gas/prefecture-rank/RankingGasolineSalesVolume'
@@ -8,12 +8,12 @@ export default async function GasolineSalesVolume({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* ガソリン販売量 */}
       <PrefectureRankingCards
         Section={RankingGasolineSalesVolume}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

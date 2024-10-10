@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingTotalNumberOfHouses from 'sections/construction/housing/prefecture-rank/RankingTotalNumberOfHouses'
@@ -8,12 +8,12 @@ export default async function TotalNumberOfHouses({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 総住宅数 */}
       <PrefectureRankingCards
         Section={RankingTotalNumberOfHouses}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

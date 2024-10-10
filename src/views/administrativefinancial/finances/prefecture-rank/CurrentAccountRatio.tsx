@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingCurrentAccountRatio from 'sections/administrativefinancial/finances/prefecture-rank/RankingCurrentAccountRatio'
@@ -10,12 +10,12 @@ interface Props {
 
 export default async function PrefectureRankView({ routerProps }: Props) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 経常収支比率 */}
       <PrefectureRankingCards
         Section={RankingCurrentAccountRatio}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

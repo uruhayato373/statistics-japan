@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingConsumerPriceRegionalDifferenceIndex from 'sections/economy/consumer-price-index/prefecture-rank/RankingConsumerPriceRegionalDifferenceIndex'
@@ -8,12 +8,12 @@ export default async function ConsumerPriceRegionalDifferenceIndex({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 消費者物価地域差指数 */}
       <PrefectureRankingCards
         Section={RankingConsumerPriceRegionalDifferenceIndex}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

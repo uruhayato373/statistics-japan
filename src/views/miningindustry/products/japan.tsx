@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
@@ -54,10 +54,10 @@ const tableItems = [
 
 export default async function JapanView({ routerProps }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       <DashboardItems routerProps={routerProps} items={dashboardItems} />
       <ChartItems routerProps={routerProps} items={chartItems} />
       <TableItems routerProps={routerProps} items={tableItems} />
-    </MainView>
+    </ViewsWrapper>
   )
 }

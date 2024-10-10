@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingMaximumTemperature from 'sections/landweather/weather/prefecture-rank/RankingMaximumTemperature'
@@ -8,12 +8,12 @@ export default async function MaximumTemperature({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 最高気温 */}
       <PrefectureRankingCards
         Section={RankingMaximumTemperature}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingForeignPopulation from 'sections/international/foreigner/prefecture-rank/RankingForeignPopulation'
@@ -8,12 +8,12 @@ export default async function ForeignPopulation({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 外国人人口 */}
       <PrefectureRankingCards
         Section={RankingForeignPopulation}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

@@ -14,7 +14,7 @@ interface Props {
   children: React.ReactNode
 }
 
-const MainView = ({ routerProps, children }: Props) => {
+const ViewsWrapper = ({ routerProps, children }: Props) => {
   return (
     <Suspense fallback={<CircularProgressViews />}>
       <ViewsHeader routerProps={routerProps} />
@@ -27,4 +27,4 @@ const MainView = ({ routerProps, children }: Props) => {
   )
 }
 
-export default MainView
+export default ViewsWrapper

@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingNumberOfSingleHouseholds from 'sections/population/household/prefecture-rank/RankingNumberOfSingleHouseholds'
@@ -8,12 +8,12 @@ export default async function NumberOfSingleHouseholds({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 単独世帯数 */}
       <PrefectureRankingCards
         Section={RankingNumberOfSingleHouseholds}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

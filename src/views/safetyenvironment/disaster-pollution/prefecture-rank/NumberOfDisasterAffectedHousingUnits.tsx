@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingNumberOfDisasterAffectedHousingUnits from 'sections/safetyenvironment/disaster-pollution/prefecture-rank/RankingNumberOfDisasterAffectedHousingUnits'
@@ -8,12 +8,12 @@ export default async function NumberOfDisasterAffectedHousingUnits({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 災害住宅戸数 */}
       <PrefectureRankingCards
         Section={RankingNumberOfDisasterAffectedHousingUnits}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

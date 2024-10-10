@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingNumberOfTrafficAccidents from 'sections/safetyenvironment/traffic-accident/prefecture-rank/RankingNumberOfTrafficAccidents'
@@ -8,12 +8,12 @@ export default async function NumberOfTrafficAccidents({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 交通事故件数 */}
       <PrefectureRankingCards
         Section={RankingNumberOfTrafficAccidents}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

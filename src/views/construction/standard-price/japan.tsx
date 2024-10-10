@@ -1,5 +1,5 @@
-import MainView from 'components/views//MainView'
-import GridItem from 'components/views/GridItem'
+import ViewsWrapper from 'components/views//ViewsWrapper'
+import TableItems from 'components/views/TableItems'
 
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
@@ -17,15 +17,8 @@ const tableItems = [
 
 export default async function JapanView({ routerProps }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
-      {/* table items */}
-      {tableItems.map(({ Section, Card, gridProps }, index) => (
-        <GridItem key={`chart-${index}`} {...gridProps}>
-          <Section routerProps={routerProps}>
-            {(props) => <Card {...props} />}
-          </Section>
-        </GridItem>
-      ))}
-    </MainView>
+    <ViewsWrapper routerProps={routerProps}>
+      <TableItems routerProps={routerProps} items={tableItems} />
+    </ViewsWrapper>
   )
 }

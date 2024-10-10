@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingActualExpenditure from 'sections/economy/household-budget/prefecture-rank/RankingActualExpenditure'
@@ -8,12 +8,12 @@ export default async function ActualExpenditure({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 実支出 */}
       <PrefectureRankingCards
         Section={RankingActualExpenditure}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

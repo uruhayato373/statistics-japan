@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingLaborForcePopulation from 'sections/laborwage/laborforce/prefecture-rank/RankingLaborForcePopulation'
@@ -8,12 +8,12 @@ export default async function LaborForcePopulation({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 労働力人口 */}
       <PrefectureRankingCards
         Section={RankingLaborForcePopulation}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

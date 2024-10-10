@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingGeneratedPowerAmount from 'sections/energy/electric-gas/prefecture-rank/RankingGeneratedPowerAmount'
@@ -8,12 +8,12 @@ export default async function GeneratedPowerAmount({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 発電電力量 */}
       <PrefectureRankingCards
         Section={RankingGeneratedPowerAmount}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

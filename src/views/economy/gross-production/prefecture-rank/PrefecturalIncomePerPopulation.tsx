@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingPrefecturalIncomePerPopulation from 'sections/economy/gross-production/prefecture-rank/RankingPrefecturalIncomePerPopulation'
@@ -8,12 +8,12 @@ export default async function PrefecturalIncomePerPopulation({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 1人当たり県民所得 */}
       <PrefectureRankingCards
         Section={RankingPrefecturalIncomePerPopulation}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

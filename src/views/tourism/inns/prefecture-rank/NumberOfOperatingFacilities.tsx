@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingNumberOfOperatingFacilities from 'sections/tourism/inns/prefecture-rank/RankingNumberOfOperatingFacilities'
@@ -8,12 +8,12 @@ export default async function NumberOfOperatingFacilities({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 旅館等営業施設数 */}
       <PrefectureRankingCards
         Section={RankingNumberOfOperatingFacilities}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

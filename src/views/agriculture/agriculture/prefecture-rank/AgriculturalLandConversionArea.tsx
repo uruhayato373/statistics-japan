@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingAgriculturalLandConversionArea from 'sections/agriculture/agriculture/prefecture-rank/RankingAgriculturalLandConversionArea'
@@ -8,12 +8,12 @@ export default async function AgriculturalLandConversionArea({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 農地転用面積 */}
       <PrefectureRankingCards
         Section={RankingAgriculturalLandConversionArea}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingJRTransportationPersonnel from 'sections/tourism/railway-air/prefecture-rank/RankingJRTransportationPersonnel'
@@ -8,12 +8,12 @@ export default async function JRTransportationPersonnel({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* JR輸送人員 */}
       <PrefectureRankingCards
         Section={RankingJRTransportationPersonnel}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }

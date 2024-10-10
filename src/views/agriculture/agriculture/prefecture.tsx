@@ -1,9 +1,10 @@
-import MainView from 'components/views//MainView'
-import GridItem from 'components/views/GridItem'
+import ViewsWrapper from 'components/views//ViewsWrapper'
+import ChartItems from 'components/views/ChartItems'
+import DashboardItems from 'components/views/DashboardItems'
+import TableItems from 'components/views/TableItems'
 
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import CardsApexPieChart from 'cards/CardsApexPieChart'
-import CardsDashboard from 'cards/CardsDashboard'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
 import AxisAgricultureEmploymentPopulation from 'sections/agriculture/agriculture/chart/AxisAgricultureEmploymentPopulation'
@@ -31,8 +32,6 @@ const dashboardItems = [
   { Component: DashboardCultivatedLandArea },
   { Component: DashboardNumberOfFarmers },
 ]
-
-const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
 // chart items
 const chartItems = [
@@ -86,31 +85,10 @@ export default async function AgriculturePrefecture({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
-      {/* dashboard items */}
-      {dashboardItems.map(({ Component }, index) => (
-        <GridItem key={index} {...dashboardGridProps}>
-          <Component routerProps={routerProps}>
-            {(props) => <CardsDashboard {...props} />}
-          </Component>
-        </GridItem>
-      ))}
-      {/* chart items */}
-      {chartItems.map(({ Section, Card, gridProps }, index) => (
-        <GridItem key={`chart-${index}`} {...gridProps}>
-          <Section routerProps={routerProps}>
-            {(props) => <Card {...props} />}
-          </Section>
-        </GridItem>
-      ))}
-      {/* table items */}
-      {tableItems.map(({ Section, Card, gridProps }, index) => (
-        <GridItem key={`chart-${index}`} {...gridProps}>
-          <Section routerProps={routerProps}>
-            {(props) => <Card {...props} />}
-          </Section>
-        </GridItem>
-      ))}
-    </MainView>
+    <ViewsWrapper routerProps={routerProps}>
+      <DashboardItems routerProps={routerProps} items={dashboardItems} />
+      <ChartItems routerProps={routerProps} items={chartItems} />
+      <TableItems routerProps={routerProps} items={tableItems} />
+    </ViewsWrapper>
   )
 }

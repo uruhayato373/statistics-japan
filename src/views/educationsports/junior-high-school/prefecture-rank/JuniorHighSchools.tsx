@@ -1,4 +1,4 @@
-import MainView from 'components/views//MainView'
+import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingJuniorHighSchools from 'sections/educationsports/junior-high-school/prefecture-rank/RankingJuniorHighSchools'
@@ -8,12 +8,12 @@ export default async function JuniorHighSchools({
   routerProps,
 }: ViewsPropsType) {
   return (
-    <MainView routerProps={routerProps}>
+    <ViewsWrapper routerProps={routerProps}>
       {/* 中学校数 */}
       <PrefectureRankingCards
         Section={RankingJuniorHighSchools}
         routerProps={routerProps}
       />
-    </MainView>
+    </ViewsWrapper>
   )
 }
