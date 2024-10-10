@@ -1,4 +1,4 @@
-import { ValueType } from 'utils/value/modules/calcRankingValues'
+import { ValueType } from 'utils/value'
 
 const generateTableX = (
   title: string,

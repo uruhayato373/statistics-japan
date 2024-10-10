@@ -1,5 +1,5 @@
 import { RouterProps } from 'utils/props'
-import { ValueType } from 'utils/value/modules/calcRankingValues'
+import { ValueType } from 'utils/value'
 
 import generateFilePath from './generateFilePath'
 import savePNG from './savePNG'

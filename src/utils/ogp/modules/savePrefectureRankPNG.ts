@@ -3,7 +3,7 @@ import path from 'path'
 import sharp from 'sharp'
 
 import { RouterProps } from 'utils/props'
-import { ValueType } from 'utils/value/modules/calcRankingValues'
+import { ValueType } from 'utils/value'
 
 import ensureDirectoryExists from './ensureDirectoryExists'
 import generatePrefectureRankSVG from './generatePrefectureRankSVG'
