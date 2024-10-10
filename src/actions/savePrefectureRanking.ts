@@ -7,7 +7,7 @@ import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 import calcRankingValues from 'utils/value/modules/calcRankingValues'
 
-import saveRankingDB from './modules/rankingDB'
+// import saveRankingDB from './modules/rankingDB'
 
 export async function actionSavePrefectureRanking(
   title: string,
@@ -23,9 +23,9 @@ export async function actionSavePrefectureRanking(
       await savePrefectureRankOGP(title, routerProps, rankingValues)
     },
     // supabaseにデータを保存
-    saveRankingDB: async () => {
-      await saveRankingDB(routerProps, rankingValues)
-    },
+    // saveRankingDB: async () => {
+    //   await saveRankingDB(routerProps, rankingValues)
+    // },
     // ベスト5・ワースト5の画像を生成・保存
     saveBestWorstPNG: async () => {
       const { saveBestWorstPNG } = handlePNG()
