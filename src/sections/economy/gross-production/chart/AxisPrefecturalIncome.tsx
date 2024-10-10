@@ -81,7 +81,7 @@ const linkButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 export default async function AxisPrefecturalIncome({
   routerProps,
   children,
-}: SectionsPropsType) {
+}: SectionsPropsType<Options>) {
   return (
     <SectionsWrapper
       routerProps={routerProps}

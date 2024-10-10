@@ -62,7 +62,7 @@ const linkButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 export default async function PieChartPrefecturalIncome({
   routerProps,
   children,
-}: SectionsPropsType) {
+}: SectionsPropsType<Options>) {
   return (
     <SectionsWrapper
       routerProps={routerProps}

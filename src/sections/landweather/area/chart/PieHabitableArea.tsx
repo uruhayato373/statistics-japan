@@ -50,7 +50,7 @@ const linkButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 export default async function PieHabitableArea({
   routerProps,
   children,
-}: SectionsPropsType) {
+}: SectionsPropsType<Options>) {
   return (
     <SectionsWrapper
       routerProps={routerProps}
