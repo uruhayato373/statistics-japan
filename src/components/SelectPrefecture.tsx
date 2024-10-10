@@ -6,11 +6,18 @@ import FormControl from '@mui/material/FormControl'
 import MenuItem from '@mui/material/MenuItem'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 
-import { handlePrefecture } from 'utils/prefecture'
+import { prefecture } from 'atoms'
+import { handlePrefecture, PrefectureType } from 'utils/prefecture'
+
+import { useAtom } from 'jotai'
 
 export default function SelectPrefecture(): ReactElement {
   const prefectures = handlePrefecture().fetchItems()
-  const [selectedPrefCode, setSelectedPrefCode] = useState<string>('')
+
+  const [atomPrefecture] = useAtom<PrefectureType>(prefecture)
+  const [selectedPrefCode, setSelectedPrefCode] = useState<string>(
+    atomPrefecture.prefCode
+  )
 
   const handleTimeChange = (event: SelectChangeEvent<string>) => {
     const newTime = event.target.value
