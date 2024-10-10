@@ -1,9 +1,10 @@
 import MainView from 'components/views//MainView'
+import ChartItems from 'components/views/ChartItems'
+import DashboardItems from 'components/views/DashboardItems'
 import GridItem from 'components/views/GridItem'
 
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import CardsApexPieChart from 'cards/CardsApexPieChart'
-import CardsDashboard from 'cards/CardsDashboard'
 import CardsHighchartsAxisChart from 'cards/CardsHighchartsAxisChart'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
@@ -22,8 +23,6 @@ const dashboardItems = [
   { Component: DashboardNumberOfManufacturingEstablishments },
   { Component: DashboardNumberOfManufacturingEmployees },
 ]
-
-const dashboardGridProps = { xs: 12, sm: 6, md: 4, lg: 3 }
 
 // chart items
 const chartItems = [
@@ -56,22 +55,8 @@ const tableItems = [
 export default async function JapanView({ routerProps }: ViewsPropsType) {
   return (
     <MainView routerProps={routerProps}>
-      {/* dashboard items */}
-      {dashboardItems.map(({ Component }, index) => (
-        <GridItem key={index} {...dashboardGridProps}>
-          <Component routerProps={routerProps}>
-            {(props) => <CardsDashboard {...props} />}
-          </Component>
-        </GridItem>
-      ))}
-      {/* chart items */}
-      {chartItems.map(({ Section, Card, gridProps }, index) => (
-        <GridItem key={`chart-${index}`} {...gridProps}>
-          <Section routerProps={routerProps}>
-            {(props) => <Card {...props} />}
-          </Section>
-        </GridItem>
-      ))}
+      <DashboardItems routerProps={routerProps} items={dashboardItems} />
+      <ChartItems routerProps={routerProps} items={chartItems} />
       {/* table items */}
       {tableItems.map(({ Section, Card, gridProps }, index) => (
         <GridItem key={`chart-${index}`} {...gridProps}>
