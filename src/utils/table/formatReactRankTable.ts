@@ -10,8 +10,8 @@ export type RankTableColumnType = {
 }
 
 export type RankTableDataType = ValueType & {
-  deviationValue: number
-  rank: number
+  deviationValue?: number
+  rank?: number
   tableValue: string
 }
 
