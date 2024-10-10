@@ -55,7 +55,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 export default async function RankingAverageTemperature({
   routerProps,
   children,
-}: SectionsPropsType) {
+}: SectionsPropsType<Options>) {
   return (
     <SectionsWrapper
       routerProps={{ ...routerProps, pageId: PAGE_ID }}
