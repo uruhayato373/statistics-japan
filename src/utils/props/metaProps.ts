@@ -9,6 +9,8 @@ import generatePageTitle from './generateTitle'
 
 import { RouterProps } from '.'
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
+
 const generateMetaProps = async ({
   fieldId,
   menuId,
@@ -31,8 +33,8 @@ const generateMetaProps = async ({
   })
 
   let description = ''
-  let url = 'https://statistics-japan.com/'
-  let ogImageUrl = `https://statistics-japan.com/ogp/${fieldId}/${menuId}`
+  let url = BASE_URL
+  let ogImageUrl = `${BASE_URL}/ogp/${fieldId}/${menuId}`
   switch (kindId) {
     case 'japan':
       url += `${fieldId}/${menuId}/japan`

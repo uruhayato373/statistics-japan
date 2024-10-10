@@ -4,7 +4,7 @@ import { handleMenu } from 'utils/menu'
 import { handlePage } from 'utils/page'
 import { handlePrefecture } from 'utils/prefecture'
 
-const BASE_URL = 'https://statistics-japan.com'
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 
 /**
  * サイトマップを生成する非同期関数

@@ -1,8 +1,7 @@
 import SimpleLayout from 'layout/SimpleLayout'
 import Landing from 'views/landing'
 
-const BASE_URL =
-  process.env.NEXT_PUBLIC_BASE_URL || 'https://statistics-japan.com'
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 
 // メタデータ生成関数
 export function generateMetadata() {
