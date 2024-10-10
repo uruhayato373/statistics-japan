@@ -15,13 +15,13 @@ async function serverAction(
   cardTitle: string,
   document: DocumentType
 ) {
-  const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
+  const { saveBestWorstPNG, savePrefectureRankOGP } =
     await actionSavePrefectureRanking(cardTitle, routerProps, document)
 
   await Promise.all([
     saveBestWorstPNG(),
     savePrefectureRankOGP(),
-    saveRankingDB(),
+    // saveRankingDB(),
   ])
 }
 
