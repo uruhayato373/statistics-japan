@@ -1,7 +1,5 @@
 import { ValueType } from 'utils/value'
-import calcRankingValues, {
-  ValueType,
-} from 'utils/value/modules/calcRankingValues'
+import calcRankingValues from 'utils/value/modules/calcRankingValues'
 
 import { DocumentType } from '../types/document'
 

@@ -4,9 +4,8 @@ import { DocumentType } from 'utils/document'
 import handleOGP from 'utils/ogp'
 import handlePNG from 'utils/png'
 import { RouterProps } from 'utils/props'
-import calcRankingValues, {
-  ValueType,
-} from 'utils/value/modules/calcRankingValues'
+import { ValueType } from 'utils/value'
+import calcRankingValues from 'utils/value/modules/calcRankingValues'
 
 import saveRankingDB from './modules/rankingDB'
 
