@@ -1,7 +1,7 @@
 import MainView from 'components/views//MainView'
 import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
-import GridItem from 'components/views/GridItem'
+import TableItems from 'components/views/TableItems'
 
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import CardsApexPieChart from 'cards/CardsApexPieChart'
@@ -57,14 +57,7 @@ export default async function JapanView({ routerProps }: ViewsPropsType) {
     <MainView routerProps={routerProps}>
       <DashboardItems routerProps={routerProps} items={dashboardItems} />
       <ChartItems routerProps={routerProps} items={chartItems} />
-      {/* table items */}
-      {tableItems.map(({ Section, Card, gridProps }, index) => (
-        <GridItem key={`chart-${index}`} {...gridProps}>
-          <Section routerProps={routerProps}>
-            {(props) => <Card {...props} />}
-          </Section>
-        </GridItem>
-      ))}
+      <TableItems routerProps={routerProps} items={tableItems} />
     </MainView>
   )
 }
