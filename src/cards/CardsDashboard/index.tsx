@@ -9,7 +9,6 @@ import MainCard from 'components/MainCard'
 
 import { CardsPropsType } from 'types/cards'
 import formatDashboard from 'utils/dashboard'
-import { DocumentType } from 'utils/document'
 
 import DifferenceText from './DifferenceText'
 import ValueDisplay from './ValueDisplay'
@@ -18,7 +17,7 @@ export default function CardsDashboard({
   title,
   document,
   linkButton,
-}: CardsPropsType<DocumentType>) {
+}: CardsPropsType) {
   const formatValues = formatDashboard(document)
   const [latest, previous] = formatValues
 

@@ -8,7 +8,6 @@ import MainCard from 'components/MainCard'
 import { Options } from 'highcharts'
 
 import { CardsPropsType } from 'types/cards'
-import { DocumentType } from 'utils/document'
 import formatHighcharts from 'utils/highcharts'
 
 import HighchartsComparisonChart from './HighchartsComparisonChart'
@@ -19,7 +18,7 @@ export default function CardsHighchartsComparisonChart({
   document,
   options,
   height,
-}: CardsPropsType<DocumentType, Options>) {
+}: CardsPropsType<Options>) {
   const [selectedPrefCodes, SelectPrefCodesComponent] = SelectPrefCodes()
 
   const filteredDocument = useMemo(() => {

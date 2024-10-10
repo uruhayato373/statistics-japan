@@ -32,7 +32,7 @@ export default function CardsReactPrefectureRankingTable({
   title,
   document,
   height = '450px',
-}: CardsPropsType<DocumentType>) {
+}: CardsPropsType) {
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 

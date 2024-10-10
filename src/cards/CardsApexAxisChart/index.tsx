@@ -12,7 +12,6 @@ import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
 import formatCSV from 'utils/csv'
 import deepMerge from 'utils/deepMerge'
-import { DocumentType } from 'utils/document'
 
 import ApexAxisChart from './Chart'
 import Header from './Header'
@@ -31,7 +30,7 @@ export default async function CardsApexAxisChart({
   options,
   height,
   linkButton,
-}: CardsPropsType<DocumentType, ApexOptions>) {
+}: CardsPropsType<ApexOptions>) {
   const formatOptions = formatApexcharts(document).AxisTimeChart()
   const customOptions = deepMerge(options, formatOptions)
 

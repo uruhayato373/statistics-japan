@@ -11,7 +11,6 @@ import { Options } from 'highcharts'
 import { CardsPropsType } from 'types/cards'
 import formatCSV from 'utils/csv'
 import deepMerge from 'utils/deepMerge'
-import { DocumentType } from 'utils/document'
 import formatHighcharts from 'utils/highcharts'
 
 import HighchartsAxisChart from './Chart'
@@ -31,7 +30,7 @@ export default function CardsHighchartsAxisChart({
   options,
   height,
   linkButton,
-}: CardsPropsType<DocumentType, Options>) {
+}: CardsPropsType<Options>) {
   const formatOptions = formatHighcharts(document).AxisTimeChart()
   const customOptions = deepMerge(options, formatOptions)
 

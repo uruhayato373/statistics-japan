@@ -4,7 +4,6 @@ import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectu
 import CardsReactPrefectureRankingTable from 'cards/CardsReactPrefectureRankingTable'
 
 import { CardsPropsType } from 'types/cards'
-import { DocumentType } from 'utils/document'
 
 import GridItem from './GridItem'
 
@@ -12,14 +11,14 @@ const PrefectureRankingCards = ({ Section, routerProps }) => (
   <>
     <GridItem xs={12} md={6}>
       <Section routerProps={routerProps}>
-        {(props: CardsPropsType<DocumentType, Options>) => (
+        {(props: CardsPropsType<Options>) => (
           <CardsHighchartsPrefectureRankingChart {...props} />
         )}
       </Section>
     </GridItem>
     <GridItem xs={12} md={6}>
       <Section routerProps={routerProps}>
-        {(props: CardsPropsType<DocumentType, Options>) => (
+        {(props: CardsPropsType) => (
           <CardsReactPrefectureRankingTable {...props} />
         )}
       </Section>

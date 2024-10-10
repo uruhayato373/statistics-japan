@@ -9,7 +9,6 @@ import MainCard from 'components/MainCard'
 import { CSVExport } from 'components/third-party/react-table'
 
 import { CardsPropsType } from 'types/cards'
-import { DocumentType } from 'utils/document'
 import formatTable from 'utils/table'
 
 import Header from './Header'
@@ -18,7 +17,7 @@ import ReactTimeTable from './Table'
 export default function CardsReactTimeTable({
   title,
   document,
-}: CardsPropsType<DocumentType>) {
+}: CardsPropsType) {
   const { columns, data } = formatTable(document).reactTable()
 
   const headers = columns.map((column) => ({

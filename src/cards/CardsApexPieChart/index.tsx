@@ -13,7 +13,6 @@ import { ApexOptions } from 'apexcharts'
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
 import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
-import { DocumentType } from 'utils/document'
 
 import ApexPieChart from './Chart'
 import Control from './Control'
@@ -33,7 +32,7 @@ export default function CardsApexPieChart({
   options,
   height = DEFAULT_HEIGHT,
   linkButton,
-}: CardsPropsType<DocumentType, ApexOptions>) {
+}: CardsPropsType<ApexOptions>) {
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 

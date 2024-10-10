@@ -35,7 +35,7 @@ export default function CardsHighchartsScatterChart({
   title,
   document,
   height,
-}: CardsPropsType<DocumentType, Options>) {
+}: CardsPropsType<Options>) {
   const { categories, series, correlationCoefficient } = useChartData(document)
 
   return (
