@@ -3,7 +3,7 @@ import { ValueType } from 'utils/value'
 import compileDocument from './modules/compileDocument'
 import compileLatestDocument from './modules/compileLatestDocument'
 import compileRankingDocument from './modules/compileRankingDocument'
-import { DocumentType, DocumentType } from './types/document'
+import { DocumentType } from './types/document'
 
 export * from './types/document'
 
