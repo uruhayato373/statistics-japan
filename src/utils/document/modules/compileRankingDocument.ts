@@ -1,9 +1,9 @@
 import { ValueType } from 'utils/value'
 import calcRankingValues, {
-  RankingValueType,
+  ValueType,
 } from 'utils/value/modules/calcRankingValues'
 
-import { RankingDocumentType } from '../types/document'
+import { DocumentType } from '../types/document'
 
 import extractCommonTimes from './extractCommonTimes'
 import formatAreas from './formatAreas'
@@ -20,7 +20,7 @@ const calculateFormattedValues = (
   values: ValueType[],
   times: { timeCode: string }[],
   categories: { categoryCode: string }[]
-): RankingValueType[] => {
+): ValueType[] => {
   return times.flatMap((time) => {
     const timeValues = getTimeValues(values, time.timeCode)
     return categories.flatMap((category) => {
@@ -36,7 +36,7 @@ const calculateFormattedValues = (
 const compileRankingDocument = (
   values: ValueType[],
   timesType: 'all' | 'common' = 'all'
-): RankingDocumentType => {
+): DocumentType => {
   const times =
     timesType === 'common' ? extractCommonTimes(values) : formatTimes(values)
   const categories = formatCategories(values)

@@ -1,5 +1,5 @@
 import { RouterProps } from 'utils/props'
-import { RankingValueType } from 'utils/value/modules/calcRankingValues'
+import { ValueType } from 'utils/value/modules/calcRankingValues'
 
 import saveJapanPNG from './modules/saveJapanPNG'
 import savePrefecturePNG from './modules/savePrefecturePNG'
@@ -10,7 +10,7 @@ const handleOGP = () => {
     savePrefectureRankOGP: async (
       title: string,
       routerProps: RouterProps,
-      values: RankingValueType[]
+      values: ValueType[]
     ) => await savePrefectureRankPNG(title, routerProps, values),
     savePrefectureOGP: async (title: string, routerProps: RouterProps) =>
       await savePrefecturePNG(title, routerProps),

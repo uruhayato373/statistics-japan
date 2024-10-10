@@ -6,9 +6,9 @@ import { JSDOM } from 'jsdom'
 import * as topojson from 'topojson-client'
 
 import geoShapeData from 'data/topojson/prefecture.json'
-import { RankingValueType } from 'utils/value/modules/calcRankingValues'
+import { ValueType } from 'utils/value/modules/calcRankingValues'
 
-const formatSeries = (values: RankingValueType[]) => {
+const formatSeries = (values: ValueType[]) => {
   return values.map((d) => ({
     areaCode: d.areaCode,
     areaName: d.areaName,
@@ -19,7 +19,7 @@ const formatSeries = (values: RankingValueType[]) => {
 
 export default async function generatePrefectureRankSVG(
   title: string,
-  values: RankingValueType[]
+  values: ValueType[]
 ) {
   // seriesを整形
   const series = formatSeries(values)

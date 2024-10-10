@@ -1,9 +1,9 @@
-import { RankingValueType } from 'utils/value/modules/calcRankingValues'
+import { ValueType } from 'utils/value/modules/calcRankingValues'
 
 const generateTableInstagram = (
   title: string,
-  bestValues: RankingValueType[],
-  worstValues: RankingValueType[]
+  bestValues: ValueType[],
+  worstValues: ValueType[]
 ) => {
   // 色の配列
   const bestColors = ['#76b7b2', '#a4d4ae', '#d2e7aa', '#e7f0d2', '#f0f7e7']
@@ -11,7 +11,7 @@ const generateTableInstagram = (
 
   // テーブル行を生成する関数
   const generateRows = (
-    data: RankingValueType[],
+    data: ValueType[],
     colors: string[],
     isWorst: boolean
   ) => {

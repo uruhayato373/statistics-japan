@@ -3,7 +3,7 @@ import path from 'path'
 import sharp from 'sharp'
 
 import { RouterProps } from 'utils/props'
-import { RankingValueType } from 'utils/value/modules/calcRankingValues'
+import { ValueType } from 'utils/value/modules/calcRankingValues'
 
 import ensureDirectoryExists from './ensureDirectoryExists'
 import generatePrefectureRankSVG from './generatePrefectureRankSVG'
@@ -35,7 +35,7 @@ const generateFileName = (routerProps: RouterProps) => {
 export default async function savePrefectureRankPNG(
   title: string,
   routerProps: RouterProps,
-  values: RankingValueType[]
+  values: ValueType[]
 ) {
   if (process.env.NODE_ENV !== 'development') {
     return

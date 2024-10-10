@@ -1,16 +1,19 @@
 import React from 'react'
 
+import { ApexOptions } from 'apexcharts'
+import { Options } from 'highcharts'
+
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
 import { CardsPropsType } from 'types/cards'
 import { SectionsWrapperPropsType } from 'types/sections'
-import { RankingDocumentType } from 'utils/document'
+import { DocumentType } from 'utils/document'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 async function serverAction(
   routerProps: RouterProps,
   cardTitle: string,
-  document: RankingDocumentType
+  document: DocumentType
 ) {
   const { saveBestWorstPNG, savePrefectureRankOGP, saveRankingDB } =
     await actionSavePrefectureRanking(cardTitle, routerProps, document)
@@ -22,7 +25,7 @@ async function serverAction(
   ])
 }
 
-async function SectionsWrapper({
+async function SectionsWrapper<T extends Options | ApexOptions = ApexOptions>({
   routerProps,
   children,
   cardTitle,
@@ -30,7 +33,7 @@ async function SectionsWrapper({
   processDocument,
   options,
   linkButton,
-}: SectionsWrapperPropsType) {
+}: SectionsWrapperPropsType<T>) {
   const { prefCode, kindId } = routerProps
   let values: ValueType[]
 
@@ -48,15 +51,15 @@ async function SectionsWrapper({
 
   const document = await processDocument(values)
 
-  if (kindId === 'prefecture-rank') {
-    await serverAction(routerProps, cardTitle, document as RankingDocumentType)
-  }
-
-  const childProps: CardsPropsType = {
+  const childProps: CardsPropsType<T> = {
     title: cardTitle,
     document,
     options,
     linkButton,
+  }
+
+  if (kindId === 'prefecture-rank') {
+    await serverAction(routerProps, cardTitle, document)
   }
 
   return <>{children(childProps)}</>

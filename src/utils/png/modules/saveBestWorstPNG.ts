@@ -1,5 +1,5 @@
 import { RouterProps } from 'utils/props'
-import { RankingValueType } from 'utils/value/modules/calcRankingValues'
+import { ValueType } from 'utils/value/modules/calcRankingValues'
 
 import generateFilePath from './generateFilePath'
 import savePNG from './savePNG'
@@ -11,7 +11,7 @@ import generateTableX from './svg/tableX'
 const saveBestWorstPNG = async (
   title: string,
   routerProps: RouterProps,
-  values: RankingValueType[]
+  values: ValueType[]
 ) => {
   if (process.env.NODE_ENV !== 'development') {
     return

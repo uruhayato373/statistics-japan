@@ -14,13 +14,13 @@ import { useLoadingState } from 'hooks/useLoadingState'
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
 import { CardsPropsType } from 'types/cards'
 import formatCSV from 'utils/csv'
-import { RankingDocumentType } from 'utils/document'
+import { DocumentType } from 'utils/document'
 
 import Control from './Control'
 import Header from './Header'
 import Table from './Table'
 
-const useCSVData = (document: RankingDocumentType, title?: string) => {
+const useCSVData = (document: DocumentType, title?: string) => {
   return useMemo(() => {
     const { headers, data } = formatCSV(document).RankingTable()
     const filename = `${title}.csv`
@@ -32,7 +32,7 @@ export default function CardsReactPrefectureRankingTable({
   title,
   document,
   height = '450px',
-}: CardsPropsType<RankingDocumentType>) {
+}: CardsPropsType<DocumentType>) {
   const { times } = document
   const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 
@@ -40,7 +40,7 @@ export default function CardsReactPrefectureRankingTable({
   const filteredDocument = useTimeFilteredDocument(
     document,
     selectedTimeCode
-  ) as RankingDocumentType
+  ) as DocumentType
   const { headers, data, filename } = useCSVData(document, title)
   const csvButton = useMemo(
     () => <CSVExport data={data} headers={headers} filename={filename} />,

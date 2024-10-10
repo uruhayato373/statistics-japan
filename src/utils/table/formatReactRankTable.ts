@@ -1,4 +1,4 @@
-import { RankingDocumentType } from 'utils/document'
+import { DocumentType } from 'utils/document'
 import { ValueType } from 'utils/value'
 import formatNumberJapanese from 'utils/value/modules/formatNumberJapanese'
 
@@ -20,9 +20,7 @@ export type ReactRankTableType = {
   data: RankTableDataType[]
 }
 
-const formatReactRankTable = (
-  document: RankingDocumentType
-): ReactRankTableType => {
+const formatReactRankTable = (document: DocumentType): ReactRankTableType => {
   const { categories, values } = document
   const { categoryName } = categories[0]
 

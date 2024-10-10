@@ -1,9 +1,9 @@
-import { RankingValueType } from 'utils/value/modules/calcRankingValues'
+import { ValueType } from 'utils/value/modules/calcRankingValues'
 
 const generateTableX = (
   title: string,
-  bestValues: RankingValueType[],
-  worstValues: RankingValueType[]
+  bestValues: ValueType[],
+  worstValues: ValueType[]
 ) => {
   // 色の配列
   const bestColors = ['#1abc9c', '#16a085', '#27ae60', '#2ecc71', '#3498db']
@@ -15,7 +15,7 @@ const generateTableX = (
 
   // グラフバーを生成する関数
   const generateBars = (
-    data: RankingValueType[],
+    data: ValueType[],
     colors: string[],
     yOffset: number
   ) => {

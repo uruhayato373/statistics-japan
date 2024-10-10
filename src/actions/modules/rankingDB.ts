@@ -1,7 +1,7 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
 import { RouterProps } from 'utils/props'
-import { RankingValueType } from 'utils/value/modules/calcRankingValues'
+import { ValueType } from 'utils/value/modules/calcRankingValues'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -14,7 +14,7 @@ const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey)
 
 export default async function saveRankingDB(
   routerProps: RouterProps,
-  values: RankingValueType[]
+  values: ValueType[]
 ) {
   if (process.env.NODE_ENV === 'development') {
     return

@@ -1,32 +1,27 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
+import { Options } from 'highcharts'
 
 import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
 import CardsReactPrefectureRankingTable from 'cards/CardsReactPrefectureRankingTable'
 
-import { SectionsPropsType } from 'types/sections'
-import { RouterProps } from 'utils/props'
+import { CardsPropsType } from 'types/cards'
+import { DocumentType } from 'utils/document'
 
 import GridItem from './GridItem'
 
-interface RankingChartProps {
-  Section: React.ComponentType<SectionsPropsType>
-  routerProps: RouterProps
-}
-
-const PrefectureRankingCards: React.FC<RankingChartProps> = ({
-  Section,
-  routerProps,
-}) => (
+const PrefectureRankingCards = ({ Section, routerProps }) => (
   <>
     <GridItem xs={12} md={6}>
       <Section routerProps={routerProps}>
-        {(props) => <CardsHighchartsPrefectureRankingChart {...props} />}
+        {(props: CardsPropsType<DocumentType, Options>) => (
+          <CardsHighchartsPrefectureRankingChart {...props} />
+        )}
       </Section>
     </GridItem>
     <GridItem xs={12} md={6}>
       <Section routerProps={routerProps}>
-        {(props) => <CardsReactPrefectureRankingTable {...props} />}
+        {(props: CardsPropsType<DocumentType, Options>) => (
+          <CardsReactPrefectureRankingTable {...props} />
+        )}
       </Section>
     </GridItem>
   </>

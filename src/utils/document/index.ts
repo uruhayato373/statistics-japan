@@ -3,14 +3,14 @@ import { ValueType } from 'utils/value'
 import compileDocument from './modules/compileDocument'
 import compileLatestDocument from './modules/compileLatestDocument'
 import compileRankingDocument from './modules/compileRankingDocument'
-import { DocumentType, RankingDocumentType } from './types/document'
+import { DocumentType, DocumentType } from './types/document'
 
 export * from './types/document'
 
 interface DocumentHandler {
   formatDocument: () => DocumentType
   formatLatestDocument: () => DocumentType
-  formatRankingDocument: () => RankingDocumentType
+  formatRankingDocument: () => DocumentType
 }
 
 const handleDocument = (

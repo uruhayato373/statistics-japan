@@ -7,12 +7,7 @@ import {
 } from './calcStandardDeviation'
 import roundToDecimalPlaces from './roundToDecimalPlaces'
 
-export type RankingValueType = ValueType & {
-  deviationValue: number
-  rank: number
-}
-
-const calcRankingValues = (values: ValueType[]): RankingValueType[] => {
+const calcRankingValues = (values: ValueType[]): ValueType[] => {
   const filteredValues = values
     .filter((f) => f.areaCode !== '00000')
     .filter((f) => !isNaN(f.value))

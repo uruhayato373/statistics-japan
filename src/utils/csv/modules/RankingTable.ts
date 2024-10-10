@@ -1,4 +1,4 @@
-import { RankingDocumentType } from 'utils/document'
+import { DocumentType } from 'utils/document'
 import formatNumberJapanese from 'utils/value/modules/formatNumberJapanese'
 
 interface HeaderType {
@@ -18,7 +18,7 @@ const HEADERS: HeaderType[] = [
   { label: '偏差値', key: 'deviationValue' },
 ]
 
-const formatRankingTable = (document: RankingDocumentType) => {
+const formatRankingTable = (document: DocumentType) => {
   const { areas, values } = document
 
   const valueMap = new Map(values.map((value) => [value.areaCode, value]))

@@ -17,6 +17,8 @@ export interface ValueType {
   categoryCode: string
   categoryName: string
   categoryUnit?: string
-  unit: string
   value: number
+  unit?: string
+  deviationValue?: number
+  rank?: number
 }

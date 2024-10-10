@@ -2,19 +2,17 @@ import React from 'react'
 
 import { Box, Grid } from '@mui/material'
 
-import { RankingDocumentType } from 'utils/document'
+import { DocumentType } from 'utils/document'
 
 import Average from './Average'
 import Median from './Median'
 import PrefectureRankingTable from './PrefectureRankingTable'
 
 interface PrefectureRankingContentProps {
-  document: RankingDocumentType
+  document: DocumentType
 }
 
-const StatisticsGrid: React.FC<{ document: RankingDocumentType }> = ({
-  document,
-}) => (
+const StatisticsGrid: React.FC<{ document: DocumentType }> = ({ document }) => (
   <Grid container spacing={3}>
     <Grid item xs={12} lg={6}>
       <Average document={document} />
@@ -30,7 +28,7 @@ const PrefectureRankingContent: React.FC<PrefectureRankingContentProps> = ({
 }) => {
   return (
     <Box>
-      <PrefectureRankingTable document={document} />
+      <PrefectureRankingTable document={document as DocumentType} />
       <Box sx={{ mt: 2 }}>
         <StatisticsGrid document={document} />
       </Box>

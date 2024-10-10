@@ -1,5 +1,4 @@
 import { ValueType } from 'utils/value'
-import { RankingValueType } from 'utils/value/modules/calcRankingValues'
 
 /**
  * 統計値の年次
@@ -40,13 +39,6 @@ export interface DocumentType {
   categories: CategoryType[]
   areas: AreaType[]
   values: ValueType[]
-}
-
-export interface RankingDocumentType {
-  times: TimeType[]
-  categories: CategoryType[]
-  areas: AreaType[]
-  values: RankingValueType[]
 }
 
 export type TimesKindType = 'all' | 'common'

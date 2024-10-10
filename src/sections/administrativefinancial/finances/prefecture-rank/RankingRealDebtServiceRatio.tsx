@@ -1,7 +1,7 @@
 import SectionsWrapper from 'components/sections/SectionsWrapper'
 
 import { SectionsPropsType } from 'types/sections'
-import handleDocument, { RankingDocumentType } from 'utils/document'
+import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
@@ -34,9 +34,7 @@ function formatValues(values: ValueType[]): ValueType[] {
 }
 
 // document
-async function processDocument(
-  values: ValueType[]
-): Promise<RankingDocumentType> {
+async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const { formatRankingDocument } = handleDocument(values)
   const document = formatRankingDocument()
 
