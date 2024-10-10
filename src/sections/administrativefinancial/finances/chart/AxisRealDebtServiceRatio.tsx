@@ -79,7 +79,7 @@ const linkButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 export default async function AxisRealDebtServiceRatio({
   routerProps,
   children,
-}: SectionsPropsType<Options>) {
+}: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
       routerProps={routerProps}

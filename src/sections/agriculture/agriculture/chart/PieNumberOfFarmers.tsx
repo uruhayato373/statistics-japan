@@ -74,7 +74,7 @@ const linkButton = <LinkToPrefectureRank pageId={PAGE_ID} />
 export default async function PieNumberOfFarmers({
   routerProps,
   children,
-}: SectionsPropsType<Options>) {
+}: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
       routerProps={routerProps}

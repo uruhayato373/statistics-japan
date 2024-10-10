@@ -1,9 +1,10 @@
+import SectionsWrapper from 'components/sections/SectionsWrapper'
+
 import { ApexOptions } from 'apexcharts'
 
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '降水量の推移'
@@ -64,12 +65,16 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 export default async function AxisPrecipitation({
   routerProps,
   children,
-}: SectionsPropsType) {
-  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
-  const title = `${prefName}の${CARD_TITLE}`
-  const values = await processValues(prefCode)
-  const document = await processDocument(values)
-  const options = OPTIONS
-
-  return <> {children({ title, document, options })}</>
+}: SectionsPropsType<ApexOptions>) {
+  return (
+    <SectionsWrapper
+      routerProps={routerProps}
+      cardTitle={CARD_TITLE}
+      processValues={processValues}
+      processDocument={processDocument}
+      options={OPTIONS}
+    >
+      {children}
+    </SectionsWrapper>
+  )
 }

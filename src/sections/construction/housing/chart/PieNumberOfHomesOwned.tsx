@@ -44,7 +44,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 export default async function PieNumberOfHomesOwned({
   routerProps,
   children,
-}: SectionsPropsType) {
+}: SectionsPropsType<ApexOptions>) {
   const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
   const title = `${prefName}の${CARD_TITLE}`
   const values = await processValues(prefCode)
