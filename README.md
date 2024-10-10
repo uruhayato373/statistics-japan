@@ -43,11 +43,12 @@
 .envファイルを作成して、下記の環境変数を追加
 
 ```bash
+# URL
+NEXT_PUBLIC_BASE_URL='https://statistics-japan.com'
+
 # e-Stat APIのAPP ID
 ESTAT_API_APPID=''
 
-# RESAS APIのAPIキー
-RESAS_API_KEY=''
 
 # PROXY設定　必要な場合のみ記載
 HTTP_PROXY='http://{IPアドレス}:{ポート番号}'

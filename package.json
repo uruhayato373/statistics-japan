@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 8081",
-    "build": "next build",
+    "build": "NEXT_CACHE_DIR=.next/cache next build",
     "start": "next start",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",

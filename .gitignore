@@ -35,3 +35,6 @@ yarn-error.log*
 
 # local
 /local/
+
+# cache
+.next/cache
