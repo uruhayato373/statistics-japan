@@ -5,7 +5,7 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '公園面積のデータ'
+const CARD_TITLE = '公園面積'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010102',
@@ -18,7 +18,17 @@ async function processValues(prefCode: string) {
   const values = await fetchValues(ESTAT_PARAMS)
   const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return filteredValues
+  return formatValues(filteredValues)
+}
+
+// format values
+function formatValues(values: ValueType[]): ValueType[] {
+  return values.map((d) => {
+    return {
+      ...d,
+      unit: 'ha',
+    }
+  })
 }
 
 // document

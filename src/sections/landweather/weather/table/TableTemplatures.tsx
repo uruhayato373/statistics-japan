@@ -18,7 +18,17 @@ async function processValues(prefCode: string) {
   const values = await fetchValues(ESTAT_PARAMS)
   const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return filteredValues
+  return formatValues(filteredValues)
+}
+
+// format values
+function formatValues(values: ValueType[]) {
+  return values.map((d) => ({
+    ...d,
+    categoryName: d.categoryName
+      .replace('（日最高気温の月平均の最高値）', '')
+      .replace('（日最低気温の月平均の最低値）', ''),
+  }))
 }
 
 // document

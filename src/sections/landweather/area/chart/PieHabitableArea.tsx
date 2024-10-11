@@ -15,16 +15,6 @@ const ESTAT_PARAMS = {
   cdCat01: ['B1103', 'B1105'],
 }
 
-// apexChartsのオプション
-const OPTIONS: ApexOptions = {
-  dataLabels: {
-    dropShadow: {
-      blur: 3,
-      opacity: 0.8,
-    },
-  },
-}
-
 const PAGE_ID = 'habitable-area'
 
 // values
@@ -33,7 +23,15 @@ async function processValues(prefCode: string) {
   const values = await fetchValues(ESTAT_PARAMS)
   const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return filteredValues
+  return formatValues(filteredValues)
+}
+
+// format values
+function formatValues(values: ValueType[]) {
+  return values.map((d) => ({
+    ...d,
+    unit: 'ha',
+  }))
 }
 
 // document
@@ -57,7 +55,7 @@ export default async function PieHabitableArea({
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}
-      options={OPTIONS}
+      // options={OPTIONS}
       linkButton={linkButton}
     >
       {children}

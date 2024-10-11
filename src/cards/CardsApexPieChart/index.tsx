@@ -18,7 +18,7 @@ import ApexPieChart from './Chart'
 import Control from './Control'
 import Header from './Header'
 
-const DEFAULT_HEIGHT = '200px'
+const DEFAULT_HEIGHT = '265px'
 
 const Content = ({ options, height }) => (
   <Box sx={{ p: 2, height: height || DEFAULT_HEIGHT, overflow: 'hidden' }}>
@@ -40,6 +40,8 @@ export default function CardsApexPieChart({
 
   const formatOptions = formatApexcharts(filteredDocument).PieChart()
   const customOptions = { ...options, ...formatOptions }
+
+  // await actionSaveJson(customOptions, 'customOptions.json')
 
   return (
     <Suspense fallback={<CircularProgressCards />}>

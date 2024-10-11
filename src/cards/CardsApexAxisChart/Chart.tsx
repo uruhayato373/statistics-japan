@@ -20,7 +20,17 @@ interface CustomDataPoint {
 const applyFormatterToYAxis = (
   yaxis: ApexYAxis | ApexYAxis[] | undefined
 ): ApexYAxis | ApexYAxis[] | undefined => {
-  if (!yaxis) return undefined
+  if (!yaxis)
+    return {
+      opposite: false,
+      show: true,
+      labels: {
+        show: true,
+      },
+      tooltip: {
+        enabled: false,
+      },
+    }
 
   const applyFormatter = (axis: ApexYAxis): ApexYAxis => ({
     ...axis,

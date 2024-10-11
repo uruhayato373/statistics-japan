@@ -55,6 +55,7 @@ function formatValues(values: ValueType[]) {
   return values.map((d) => ({
     ...d,
     categoryName: d.categoryName.replace('（北方地域及び竹島を除く）', ''),
+    unit: 'ha',
   }))
 }
 

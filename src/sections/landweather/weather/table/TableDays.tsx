@@ -5,7 +5,7 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '降水日数のデータ'
+const CARD_TITLE = '降水日数'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010102',
@@ -18,7 +18,15 @@ async function processValues(prefCode: string) {
   const values = await fetchValues(ESTAT_PARAMS)
   const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return filteredValues
+  return formatValues(filteredValues)
+}
+
+// format values
+function formatValues(values: ValueType[]) {
+  return values.map((d) => ({
+    ...d,
+    categoryName: d.categoryName.replace('（年間）', ''),
+  }))
 }
 
 // document

@@ -5,7 +5,7 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '総面積のデータ'
+const CARD_TITLE = '総面積'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010102',
@@ -26,6 +26,7 @@ function formatValues(values: ValueType[]) {
   return values.map((d) => ({
     ...d,
     categoryName: d.categoryName.replace('（北方地域及び竹島を除く）', ''),
+    unit: 'ha',
   }))
 }
 
