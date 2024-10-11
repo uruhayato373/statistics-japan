@@ -127,7 +127,6 @@ export async function fetchEstatAPI(
 
     return data
   } catch (error) {
-    console.error('e-Statデータの取得中にエラーが発生しました:', error)
     throw new Error(
       'e-Statデータの取得に失敗しました。詳細はコンソールを確認してください。'
     )
