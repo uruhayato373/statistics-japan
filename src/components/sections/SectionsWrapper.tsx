@@ -4,6 +4,7 @@ import { ApexOptions } from 'apexcharts'
 import { Options } from 'highcharts'
 
 import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
+import actionSaveValues from 'actions/saveValues'
 import { CardsPropsType } from 'types/cards'
 import { SectionsWrapperPropsType } from 'types/sections'
 import { DocumentType } from 'utils/document'
@@ -48,6 +49,8 @@ async function SectionsWrapper<T extends Options | ApexOptions = ApexOptions>({
       values = await processValues()
       break
   }
+
+  await actionSaveValues(routerProps, values)
 
   const document = await processDocument(values)
 

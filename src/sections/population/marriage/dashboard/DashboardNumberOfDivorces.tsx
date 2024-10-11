@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '離婚件数'
+const CARD_ID = 'dashboard-number-of-divorces'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
@@ -36,7 +37,7 @@ export default async function DashboardNumberOfDivorces({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

@@ -8,6 +8,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '一般世帯数の推移'
+const CARD_ID = 'axis-general-household'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
@@ -68,7 +69,7 @@ export default async function AxisGeneralHousehold({
 }: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

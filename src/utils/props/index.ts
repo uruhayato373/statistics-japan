@@ -6,11 +6,8 @@ export interface RouterProps {
   menuId: string
   kindId: string
   pageId?: string
+  cardId?: string
   prefCode?: string
-  cityCode?: string
-}
-export interface CardProps extends RouterProps {
-  cardId: string
 }
 
 function camelToKebabCase(str: string): string {
@@ -25,7 +22,6 @@ const handleProps = ({
   kindId,
   pageId,
   prefCode,
-  cityCode,
 }: RouterProps) => {
   const routerProps = {
     fieldId,
@@ -33,7 +29,6 @@ const handleProps = ({
     kindId,
     pageId: pageId,
     prefCode: prefCode,
-    cityCode: cityCode,
   }
   return {
     routerProps,

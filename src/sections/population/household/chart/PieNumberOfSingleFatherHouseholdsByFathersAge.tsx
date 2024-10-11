@@ -8,6 +8,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '父子世帯数（父親の年齢別）'
+const CARD_ID = 'pie-number-of-single-father-households-by-fathers-age'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
@@ -48,7 +49,7 @@ export default async function PieNumberOfSingleFatherHouseholdsByFathersAge({
 }: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

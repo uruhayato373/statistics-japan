@@ -8,6 +8,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '総面積の推移'
+const CARD_ID = 'axis-total-area'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010102',
@@ -77,7 +78,7 @@ export default async function AxisChartTotalArea({
 }: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

@@ -7,6 +7,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '降水日数'
+const CARD_ID = 'dashboard-rainy-days'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010102',
@@ -41,7 +42,7 @@ export default async function DashboardRainyDays({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

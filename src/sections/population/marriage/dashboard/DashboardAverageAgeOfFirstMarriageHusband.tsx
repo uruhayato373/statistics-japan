@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '平均初婚年齢（夫）'
+const CARD_ID = 'dashboard-average-age-of-first-marriage-husband'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
@@ -36,7 +37,7 @@ export default async function DashboardAverageAgeOfFirstMarriageHusband({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

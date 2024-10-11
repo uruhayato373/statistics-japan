@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '昼夜間人口比率'
+const CARD_ID = 'dashboard-day-time-population-ratio'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
@@ -36,7 +37,7 @@ export default async function DashboardDayTimePopulationRatio({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

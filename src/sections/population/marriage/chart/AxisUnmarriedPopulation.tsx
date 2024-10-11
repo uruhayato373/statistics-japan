@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '未婚人口'
+const CARD_ID = 'axis-unmarried-population'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
@@ -36,7 +37,7 @@ export default async function AxisUnmarriedPopulation({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

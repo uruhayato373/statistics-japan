@@ -91,18 +91,24 @@ async function fetchWithRetry(
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function normalizeParams(params: Record<string, any>): Record<string, string> {
+  return Object.fromEntries(
+    Object.entries(params).map(([key, value]) => [
+      key,
+      Array.isArray(value) ? value.join(',') : value,
+    ])
+  )
+}
+
 export async function fetchEstatAPI(
   params: Omit<EstatParamsType, 'appId'>,
   revalidate?: number
 ): Promise<EStatResponseType> {
+  const normalizedParams = normalizeParams(params)
   const queryParams: EstatParamsType = {
     appId: API_KEY!,
-    ...Object.fromEntries(
-      Object.entries(params).map(([key, value]) => [
-        key,
-        Array.isArray(value) ? value.join(',') : value,
-      ])
-    ),
+    ...normalizedParams,
   } as EstatParamsType
 
   const url = `${BASE_URL}?${paramsSerializer(queryParams)}`
@@ -124,6 +130,9 @@ export async function fetchEstatAPI(
     if (!isValidEStatResponse(data)) {
       throw new Error('e-Stat APIからの応答形式が無効です')
     }
+
+    // jsonファイルに保存
+    // await actionSaveEstatResponse(paramsSerializer(normalizedParams), data)
 
     return data
   } catch (error) {

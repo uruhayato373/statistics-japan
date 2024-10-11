@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '気温・湿度のデータ'
+const CARD_ID = 'table-templatures'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010102',
@@ -46,7 +47,7 @@ export default async function TableTemplatures({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

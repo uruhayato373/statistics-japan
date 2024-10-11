@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '老年人口'
+const CARD_ID = 'ranking-old-population'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
@@ -38,7 +39,7 @@ export default async function RankingOldPopulation({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={{ ...routerProps, pageId: PAGE_ID }}
+      routerProps={{ ...routerProps, pageId: PAGE_ID, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}
