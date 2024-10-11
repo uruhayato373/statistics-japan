@@ -21,7 +21,17 @@ async function processValues(prefCode: string) {
   const values = await fetchValues(ESTAT_PARAMS)
   const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return filteredValues
+  return formatValues(filteredValues)
+}
+
+// format values
+function formatValues(values: ValueType[]): ValueType[] {
+  return values.map((d) => {
+    return {
+      ...d,
+      unit: 'km\u00B2',
+    }
+  })
 }
 
 // document

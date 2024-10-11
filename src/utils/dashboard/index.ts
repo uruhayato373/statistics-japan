@@ -1,5 +1,6 @@
 import { DocumentType } from 'utils/document'
 import { ValueType } from 'utils/value'
+import getMaxDecimalPlaces from 'utils/value/modules/getMaxDecimalPlaces'
 
 import calculateDifference from './modules/calculateDifference'
 import calculateRate from './modules/calculateRate'
@@ -24,13 +25,18 @@ const formatDashboardValues = (
   validateDocument(document)
 
   const { times, values } = document
+  const maxDecimalPlaces = getMaxDecimalPlaces(values.map((v) => v.value))
 
   const result = times.reduce<DashboardValueType[]>((acc, time) => {
     const value = values.find((v) => v.timeCode === time.timeCode)
     if (!value) return acc
 
     const previousValue = acc[acc.length - 1]?.value
-    const difference = calculateDifference(value.value, previousValue)
+    const difference = calculateDifference(
+      value.value,
+      previousValue,
+      maxDecimalPlaces
+    )
     const rate =
       previousValue !== undefined
         ? calculateRate(value.value, previousValue)

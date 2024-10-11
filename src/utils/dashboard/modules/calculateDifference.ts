@@ -1,8 +1,10 @@
 const calculateDifference = (
   currentValue: number,
-  previousValue?: number
+  previousValue?: number,
+  decimalPlaces?: number
 ): number => {
-  return previousValue !== undefined ? currentValue - previousValue : 0
+  const difference = currentValue - previousValue
+  return Number(difference.toFixed(decimalPlaces))
 }
 
 export default calculateDifference
