@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '一戸住宅数'
+const CARD_ID = 'table-number-of-single-family-homes'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010108',
@@ -36,7 +37,7 @@ export default async function TableNumberOfSingleFamilyHomes({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

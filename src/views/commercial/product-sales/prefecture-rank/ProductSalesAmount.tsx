@@ -1,7 +1,7 @@
 import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
-import DashboardProductSalesAmount from 'sections/commercial/product-sales/dashboard/DashboardProductSalesAmount'
+import RankingProductSalesAmount from 'sections/commercial/product-sales/prefecture-rank/RankingProductSalesAmount'
 import { ViewsPropsType } from 'types/views'
 
 export default async function ProductSalesAmount({
@@ -11,7 +11,7 @@ export default async function ProductSalesAmount({
     <ViewsWrapper routerProps={routerProps}>
       {/* 商品販売額 */}
       <PrefectureRankingCards
-        Section={DashboardProductSalesAmount}
+        Section={RankingProductSalesAmount}
         routerProps={routerProps}
       />
     </ViewsWrapper>

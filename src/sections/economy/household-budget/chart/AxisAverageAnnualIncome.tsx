@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '年間収入平均'
+const CARD_ID = 'axis-average-annual-income'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010112',
@@ -36,7 +37,7 @@ export default async function AxisAverageAnnualIncome({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

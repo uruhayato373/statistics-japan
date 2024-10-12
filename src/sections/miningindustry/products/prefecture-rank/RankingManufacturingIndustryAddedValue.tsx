@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造業付加価値額'
+const CARD_ID = 'ranking-manufacturing-industry-added-value'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -50,7 +51,7 @@ export default async function RankingManufacturingIndustryAddedValue({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={{ ...routerProps, pageId: PAGE_ID }}
+      routerProps={{ ...routerProps, pageId: PAGE_ID, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

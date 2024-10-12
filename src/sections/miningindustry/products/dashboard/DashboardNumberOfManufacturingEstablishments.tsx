@@ -7,6 +7,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造業事業所数'
+const CARD_ID = 'dashboard-number-of-manufacturing-employees'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -41,7 +42,7 @@ export default async function DashboardNumberOfManufacturingEstablishments({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

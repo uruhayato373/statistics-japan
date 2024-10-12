@@ -8,6 +8,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '公共事業請負工事'
+const CARD_ID = 'axis-public-works-contract'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -68,7 +69,7 @@ export default async function AxisPublicWorksContract({
 }: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

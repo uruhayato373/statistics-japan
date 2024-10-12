@@ -7,6 +7,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '消費者物価指数変化率'
+const CARD_ID = 'dashboard-consumer-price-index-change-rate'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -41,7 +42,7 @@ export default async function DashboardConsumerPriceIndexChangeRate({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

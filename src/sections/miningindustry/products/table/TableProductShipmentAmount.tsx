@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造品出荷額'
+const CARD_ID = 'table-product-shipment-amount'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -50,7 +51,7 @@ export default async function TableProductShipmentAmount({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

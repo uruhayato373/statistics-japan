@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造品出荷額（従業者数当たり）'
+const CARD_ID = 'ranking-product-shipment-amount-per-manufacturing-employees'
 
 const PAGE_ID = 'product-shipment-amount-per-manufacturing-employees'
 
@@ -59,7 +60,7 @@ export default async function RankingProductShipmentAmountPerManufacturingEmploy
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={{ ...routerProps, pageId: PAGE_ID }}
+      routerProps={{ ...routerProps, pageId: PAGE_ID, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

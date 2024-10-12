@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '総人口と製造品出荷額等'
+const CARD_ID = 'scatter-product-shipment-amount-total-population'
 
 // x軸 総人口
 const ESTAT_PARAMS_MOLECULE = {
@@ -58,7 +59,7 @@ export default async function ScatterProductShipmentAmountTotalPopulation({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

@@ -9,6 +9,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造業事業所数・従業者数の推移'
+const CARD_ID = 'axis-number-of-manufacturing'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -79,7 +80,7 @@ export default async function AxisNumberOfManufacturing({
 }: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

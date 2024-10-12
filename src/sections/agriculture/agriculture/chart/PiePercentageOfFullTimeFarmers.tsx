@@ -8,6 +8,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '専業農家の割合'
+const CARD_ID = 'pie-percentage-of-full-time-farmers'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -58,7 +59,7 @@ export default async function PiePercentageOfFullTimeFarmers({
 }: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

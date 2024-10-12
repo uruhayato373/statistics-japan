@@ -9,6 +9,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '製造品出荷額（産業中分類別）'
+const CARD_ID = 'pie-product-shipment-amount'
 
 const ESTAT_PARAMS = {
   statsDataId: '0004003976',
@@ -80,7 +81,7 @@ export default async function PieProductShipmentAmountByIndustrialClassification
 }: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

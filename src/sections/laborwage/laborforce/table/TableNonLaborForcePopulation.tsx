@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '非労働力人口'
+const CARD_ID = 'table-non-labor-force-population'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010106',
@@ -36,7 +37,7 @@ export default async function TableNonLaborForcePopulation({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '農家総所得'
+const CARD_ID = 'table-farmers-income'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010112',
@@ -36,7 +37,7 @@ export default async function TableFarmersIncome({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

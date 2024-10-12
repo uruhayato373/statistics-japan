@@ -41,6 +41,9 @@ export default function CardsReactPrefectureRankingTable({
     document,
     selectedTimeCode
   ) as DocumentType
+
+  console.log('filteredDocument', filteredDocument)
+
   const { headers, data, filename } = useCSVData(document, title)
   const csvButton = useMemo(
     () => <CSVExport data={data} headers={headers} filename={filename} />,

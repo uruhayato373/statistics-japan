@@ -1,12 +1,14 @@
+import SectionsWrapper from 'components/sections/SectionsWrapper'
+
 import { ApexOptions } from 'apexcharts'
 
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
-import { handlePrefecture } from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '持ち家の割合'
+const CARD_ID = 'pie-number-of-homes-owned'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010108',
@@ -45,11 +47,15 @@ export default async function PieNumberOfHomesOwned({
   routerProps,
   children,
 }: SectionsPropsType<ApexOptions>) {
-  const { prefCode, prefName } = handlePrefecture().getPrefecture(routerProps)
-  const title = `${prefName}の${CARD_TITLE}`
-  const values = await processValues(prefCode)
-  const document = await processDocument(values)
-  const options = OPTIONS
-
-  return <> {children({ title, document, options })}</>
+  return (
+    <SectionsWrapper
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
+      cardTitle={CARD_TITLE}
+      processValues={processValues}
+      processDocument={processDocument}
+      options={OPTIONS}
+    >
+      {children}
+    </SectionsWrapper>
+  )
 }
