@@ -9,7 +9,8 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey)
 
 export default async function loadValues(
-  routerProps: RouterProps
+  routerProps: RouterProps,
+  prefCode: string
 ): Promise<ValueType[] | null> {
   if (process.env.NODE_ENV !== 'development') {
     return null
@@ -40,7 +41,7 @@ export default async function loadValues(
     // JSONをパース
     const values: ValueType[] = JSON.parse(text)
 
-    return values
+    return values.filter((f) => f.areaCode === prefCode)
   } catch (error) {
     console.error('データの読み込みに失敗しました:', error)
     return null
