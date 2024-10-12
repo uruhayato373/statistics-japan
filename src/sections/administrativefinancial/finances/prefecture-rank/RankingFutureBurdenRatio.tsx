@@ -19,9 +19,8 @@ const PAGE_ID = 'current-account-ratio'
 async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  const filterdValues = values.filter((f) => f.areaCode !== '00000')
 
-  return formatValues(filterdValues)
+  return formatValues(values)
 }
 
 // format values

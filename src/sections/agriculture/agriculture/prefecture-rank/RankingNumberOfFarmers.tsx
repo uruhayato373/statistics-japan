@@ -18,9 +18,8 @@ const PAGE_ID = 'number-of-farmers'
 async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  const filterdValues = values.filter((f) => f.areaCode !== '00000')
 
-  return filterdValues
+  return values
 }
 
 // document

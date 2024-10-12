@@ -70,12 +70,11 @@ const OPTIONS: ApexOptions = {
 }
 
 // values
-async function processValues(prefCode: string) {
+async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return formatValues(filteredValues)
+  return formatValues(values)
 }
 
 // format values

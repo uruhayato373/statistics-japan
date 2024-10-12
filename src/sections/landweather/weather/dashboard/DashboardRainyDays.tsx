@@ -17,12 +17,11 @@ const ESTAT_PARAMS = {
 const PAGE_ID = 'rainy-days'
 
 // values
-async function processValues(prefCode: string) {
+async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
-  const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  return filteredValues
+  return values
 }
 
 // document
