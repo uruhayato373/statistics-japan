@@ -9,6 +9,7 @@ import { CardsPropsType } from 'types/cards'
 import { SectionsWrapperPropsType } from 'types/sections'
 import { DocumentType } from 'utils/document'
 import { RouterProps } from 'utils/props'
+import handleSupabase from 'utils/supabase'
 import { ValueType } from 'utils/value'
 
 async function serverAction(
@@ -36,6 +37,9 @@ async function SectionsWrapper<T extends Options | ApexOptions = ApexOptions>({
   linkButton,
 }: SectionsWrapperPropsType<T>) {
   const { prefCode, kindId } = routerProps
+  const isDevelopment = process.env.NODE_ENV === 'development'
+
+  const { loadValues } = handleSupabase()
   let values: ValueType[]
 
   switch (kindId) {
@@ -43,7 +47,14 @@ async function SectionsWrapper<T extends Options | ApexOptions = ApexOptions>({
       values = await processValues('00000')
       break
     case 'prefecture':
-      values = await processValues(prefCode)
+      if (isDevelopment) {
+        values = await processValues(prefCode)
+      } else {
+        values = (await loadValues(routerProps)).filter(
+          (f) => f.areaCode === prefCode
+        )
+      }
+
       break
     default:
       values = await processValues()
