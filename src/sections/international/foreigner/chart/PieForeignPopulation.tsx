@@ -9,6 +9,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '外国人人口の内訳'
+const CARD_ID = 'pie-foreign-population'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
@@ -52,7 +53,7 @@ export default async function PieForeignPopulation({
 }: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

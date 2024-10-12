@@ -7,6 +7,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '基準財政収入額'
+const CARD_ID = 'dashboard-standard-financial-demand-amount'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
@@ -53,7 +54,7 @@ export default async function DashboardStandardFinancialIncomeAmount({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

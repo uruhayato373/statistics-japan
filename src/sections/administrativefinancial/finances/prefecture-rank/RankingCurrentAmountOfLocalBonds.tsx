@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '地方債現在高'
+const CARD_ID = 'ranking-current-amount-of-local-bonds'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
@@ -48,7 +49,7 @@ export default async function RankingCurrentAmountOfLocalBonds({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={{ ...routerProps, pageId: PAGE_ID }}
+      routerProps={{ ...routerProps, pageId: PAGE_ID, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

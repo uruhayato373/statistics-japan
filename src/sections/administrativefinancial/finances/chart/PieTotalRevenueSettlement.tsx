@@ -9,6 +9,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '歳入決算総額の内訳'
+const CARD_ID = 'pie-total-revenue-settlement'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
@@ -67,7 +68,7 @@ export default async function PieTotalRevenueSettlement({
 }: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

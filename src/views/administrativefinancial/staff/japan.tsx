@@ -5,7 +5,7 @@ import TableItems from 'components/views/TableItems'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
 import DashboardAdministrativeDepartmentEmployees from 'sections/administrativefinancial/staff/dashboard/DashboardAdministrativeDepartmentEmployees'
-import TableAdministrativeDepartmentEmployees from 'sections/administrativefinancial/staff/TableAdministrativeDepartmentEmployees'
+import TableAdministrativeDepartmentEmployees from 'sections/administrativefinancial/staff/table/TableAdministrativeDepartmentEmployees'
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

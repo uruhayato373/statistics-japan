@@ -9,6 +9,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '将来負担比率'
+const CARD_ID = 'axis-future-burden-ratio'
 
 const PAGE_ID = 'future-burden-ratio'
 
@@ -70,7 +71,7 @@ export default async function AxisFutureBurdenRatio({
 }: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

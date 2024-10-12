@@ -7,6 +7,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '一般行政部門職員数'
+const CARD_ID = 'dashboard-administrative-department-employees'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
@@ -41,7 +42,7 @@ export default async function DashboardAdministrativeDepartmentEmployees({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

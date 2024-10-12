@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '試験検査'
+const CARD_ID = 'table-test-inspection'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010109',
@@ -36,7 +37,7 @@ export default async function TableTestInspection({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

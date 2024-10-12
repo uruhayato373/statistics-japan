@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '消防機関出動'
+const CARD_ID = 'table-fire-engine-dispatched'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010111',
@@ -36,7 +37,7 @@ export default async function TableFireEngineDispatched({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

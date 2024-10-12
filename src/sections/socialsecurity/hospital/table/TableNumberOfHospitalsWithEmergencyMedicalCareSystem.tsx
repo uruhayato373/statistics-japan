@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '救急医療体制病院数'
+const CARD_ID = 'table-number-of-hospitals-with-emergency-medical-care-system'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010109',
@@ -36,7 +37,7 @@ export default async function TableNumberOfHospitalsWithEmergencyMedicalCareSyst
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

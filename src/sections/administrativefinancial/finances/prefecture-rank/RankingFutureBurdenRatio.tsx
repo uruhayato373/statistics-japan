@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '将来負担比率'
+const CARD_ID = 'ranking-future-burden-ratio'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
@@ -48,7 +49,7 @@ export default async function RankingFutureBurdenRatio({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={{ ...routerProps, pageId: PAGE_ID }}
+      routerProps={{ ...routerProps, pageId: PAGE_ID, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

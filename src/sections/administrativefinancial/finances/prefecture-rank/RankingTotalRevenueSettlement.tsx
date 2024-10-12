@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '歳入決算総額'
+const CARD_ID = 'ranking-total-revenue-settlement'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
@@ -51,7 +52,7 @@ export default async function RankingTotalRevenueSettlement({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={{ ...routerProps, pageId: PAGE_ID }}
+      routerProps={{ ...routerProps, pageId: PAGE_ID, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

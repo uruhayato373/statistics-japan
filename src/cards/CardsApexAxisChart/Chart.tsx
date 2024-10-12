@@ -103,7 +103,16 @@ export default function ApexAxisChart({ options }: Props) {
               dataPointIndex
             ] as CustomDataPoint
             const unit = data.unit || ''
-            return `${value.toLocaleString()} ${unit}`
+            // 値が null または undefined の場合の処理を追加
+            if (value == null) {
+              return `N/A ${unit}`
+            }
+            try {
+              return `${value.toLocaleString()} ${unit}`
+            } catch (error) {
+              console.error('Error formatting tooltip value:', error)
+              return `${value} ${unit}` // フォーマットに失敗した場合は元の値を返す
+            }
           },
         },
       },

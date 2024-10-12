@@ -7,6 +7,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '実質公債費比率'
+const CARD_ID = 'dashboard-real-debt-service-ratio'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
@@ -41,7 +42,7 @@ export default async function DashboardRealDebtServiceRatio({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

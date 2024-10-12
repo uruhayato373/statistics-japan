@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = 'JR貨物発送量'
+const CARD_ID = 'dashboard-jr-cargo-shipment-volume'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -36,7 +37,7 @@ export default async function DashboardJRCargoShipmentVolume({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

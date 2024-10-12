@@ -9,6 +9,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '決算総額'
+const CARD_ID = 'axis-total-settlement-amount'
 
 const PAGE_ID = 'total-settlement-amount'
 
@@ -112,7 +113,7 @@ export default async function AxisTotalSettlementAmount({
 }: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

@@ -7,6 +7,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '電力需要量'
+const CARD_ID = 'dashboard-electricity-demand'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010108',
@@ -41,7 +42,7 @@ export default async function DashboardElectricityDemand({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

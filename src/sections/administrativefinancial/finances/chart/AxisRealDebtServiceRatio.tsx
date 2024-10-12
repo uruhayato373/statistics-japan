@@ -9,6 +9,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '実質公債費比率'
+const CARD_ID = 'axis-real-debt-service-ratio'
 
 const PAGE_ID = 'real-debt-service-ratio'
 
@@ -82,7 +83,7 @@ export default async function AxisRealDebtServiceRatio({
 }: SectionsPropsType<ApexOptions>) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

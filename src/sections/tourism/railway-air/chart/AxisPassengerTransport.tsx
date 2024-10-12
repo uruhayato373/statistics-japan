@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '旅客輸送'
+const CARD_ID = 'axis-passenger-ship-transportation'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010103',
@@ -36,7 +37,7 @@ export default async function AxisPassengerTransport({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={routerProps}
+      routerProps={{ ...routerProps, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

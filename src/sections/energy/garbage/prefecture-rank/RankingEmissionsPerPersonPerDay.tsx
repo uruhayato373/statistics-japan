@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '一人一日当たり排出量'
+const CARD_ID = 'ranking-emissions-per-person-per-day'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010108',
@@ -38,7 +39,7 @@ export default async function RankingEmissionsPerPersonPerDay({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={{ ...routerProps, pageId: PAGE_ID }}
+      routerProps={{ ...routerProps, pageId: PAGE_ID, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}

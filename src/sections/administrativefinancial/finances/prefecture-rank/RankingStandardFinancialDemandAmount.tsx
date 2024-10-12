@@ -6,6 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '基準財政需要額'
+const CARD_ID = 'ranking-standard-financial-demand-amount'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010104',
@@ -38,7 +39,7 @@ export default async function RankingStandardFinancialDemandAmount({
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={{ ...routerProps, pageId: PAGE_ID }}
+      routerProps={{ ...routerProps, pageId: PAGE_ID, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}
