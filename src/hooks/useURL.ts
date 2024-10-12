@@ -25,13 +25,11 @@ export default function useURL() {
     kindId: null,
     pageId: null,
     prefCode: null,
-    cityCode: null,
   })
 
   useEffect(() => {
     // pathnameからrouterPropsを取得する
-    const [, fieldId, menuId, kindId, prefCodeOrPageId, cityCode] =
-      pathname.split('/')
+    const [, fieldId, menuId, kindId, prefCodeOrPageId] = pathname.split('/')
 
     // prefecture-rankの場合はpageId、それ以外の場合はprefCode
     const {
@@ -46,7 +44,6 @@ export default function useURL() {
       kindId: kindId,
       pageId: pageId || null,
       prefCode: prefCode || null,
-      cityCode: cityCode || null,
     })
   }, [pathname])
 
@@ -125,19 +122,10 @@ export default function useURL() {
     return `/${fieldId}/${menuId}/prefecture-rank/${newId}`
   }
 
-  /**
-   * 市区町村を変更した場合のURLを生成
-   */
-  const changeCityURL = (newCode: string): string => {
-    const { fieldId, menuId, kindId, prefCode } = currentRouterProps
-    return `/${fieldId}/${menuId}/${kindId}/${prefCode}/${newCode}`
-  }
-
   return {
     ...currentRouterProps,
     changeKindURL,
     changePrefURL,
-    changeCityURL,
     changePageURL,
     changeMenuURL,
     navURL,
