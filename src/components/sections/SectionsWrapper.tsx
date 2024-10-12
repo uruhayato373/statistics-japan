@@ -50,7 +50,7 @@ async function SectionsWrapper<T extends Options | ApexOptions = ApexOptions>({
       if (isDevelopment) {
         values = await processValues(prefCode)
       } else {
-        values = await loadValues(routerProps)
+        values = await loadValues(routerProps, prefCode)
       }
 
       break
