@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import { Suspense } from 'react'
 
 import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
@@ -13,32 +13,33 @@ import formatDashboard from 'utils/dashboard'
 import DifferenceText from './DifferenceText'
 import ValueDisplay from './ValueDisplay'
 
-export default function CardsDashboard({
-  title,
-  document,
-  linkButton,
-}: CardsPropsType) {
-  const formatValues = formatDashboard(document)
-  const [latest, previous] = formatValues
+function CardHeader({ title, linkButton }) {
+  return (
+    <Stack
+      direction="row"
+      alignItems="center"
+      justifyContent="space-between"
+      sx={{ pb: 1 }}
+    >
+      <Typography variant="h6" color="text.secondary">
+        {title}
+      </Typography>
+      {linkButton && (
+        <Stack direction="row" spacing={1}>
+          {linkButton}
+        </Stack>
+      )}
+    </Stack>
+  )
+}
+
+async function CardsDashboard({ title, document, linkButton }: CardsPropsType) {
+  const [latest, previous] = formatDashboard(document)
 
   return (
     <Suspense fallback={<CircularProgressCards />}>
       <MainCard contentSX={{ p: 2.25 }}>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ pb: 1 }}
-        >
-          <Typography variant="h6" color="text.secondary">
-            {title}
-          </Typography>
-          {linkButton && (
-            <Stack direction="row" spacing={1}>
-              {linkButton}
-            </Stack>
-          )}
-        </Stack>
+        <CardHeader title={title} linkButton={linkButton} />
         <ValueDisplay
           value={latest.value}
           unit={latest.unit}
@@ -57,3 +58,5 @@ export default function CardsDashboard({
     </Suspense>
   )
 }
+
+export default CardsDashboard

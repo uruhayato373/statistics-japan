@@ -11,6 +11,9 @@ import Prefecture from 'views/educationsports/junior-high-school/prefecture'
 // SSGとしてレンダリング
 export const dynamic = 'force-static'
 
+// 生成時間の上限を設定
+export const revalidate = 180
+
 // 定数
 const FIELD_ID = 'educationsports'
 const MENU_ID = 'junior-high-school'
