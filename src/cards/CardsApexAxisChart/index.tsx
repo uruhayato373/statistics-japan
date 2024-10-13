@@ -8,7 +8,6 @@ import CSVExport from 'components/third-party/react-table/CSVExport'
 
 import { ApexOptions } from 'apexcharts'
 
-import { actionSaveJson } from 'actions/saveJson'
 import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
 import formatCSV from 'utils/csv'
@@ -33,12 +32,9 @@ export default async function CardsApexAxisChart({
   linkButton,
 }: CardsPropsType<ApexOptions>) {
   const formatOptions = formatApexcharts(document).AxisTimeChart()
-  await actionSaveJson(formatOptions, `formatOptions.json`)
   const customOptions = options
     ? deepMerge(options, formatOptions)
     : formatOptions
-
-  await actionSaveJson(customOptions, `customOptions.json`)
 
   const filename = `${title}.csv`
   const { headers, data } = formatCSV(document).AxisChart()
