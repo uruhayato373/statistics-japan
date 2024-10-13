@@ -1,5 +1,7 @@
 import { Suspense } from 'react'
 
+import dynamic from 'next/dynamic'
+
 import { Box, Divider } from '@mui/material'
 
 import CircularProgressCards from 'components/CircularProgressCards'
@@ -13,12 +15,19 @@ import formatApexcharts from 'utils/apexcharts'
 import formatCSV from 'utils/csv'
 import deepMerge from 'utils/deepMerge'
 
-import ApexAxisChart from './Chart'
 import Header from './Header'
+
+// ApexAxisChartをSSRを無効にして動的にインポート
+const ApexAxisChart = dynamic(() => import('./Chart'), { ssr: false })
 
 const DEFAULT_HEIGHT = '300px'
 
-const Content = ({ options, height }) => (
+interface ContentProps {
+  options: ApexOptions
+  height?: string
+}
+
+const Content = ({ options, height }: ContentProps) => (
   <Box sx={{ p: 2, height: height || DEFAULT_HEIGHT, overflow: 'hidden' }}>
     <ApexAxisChart options={options} />
   </Box>
@@ -31,24 +40,26 @@ export default async function CardsApexAxisChart({
   height,
   linkButton,
 }: CardsPropsType<ApexOptions>) {
-  const formatOptions = formatApexcharts(document).AxisTimeChart()
+  // 非同期処理を行う
+  const formatOptions = await formatApexcharts(document).AxisTimeChart()
   const customOptions = options
     ? deepMerge(options, formatOptions)
     : formatOptions
 
+  const { headers, data } = await formatCSV(document).AxisChart()
   const filename = `${title}.csv`
-  const { headers, data } = formatCSV(document).AxisChart()
+
   const csvButton = (
     <CSVExport data={data} headers={headers} filename={filename} />
   )
 
   return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <MainCard content={false}>
-        <Header title={title} csvButton={csvButton} linkButton={linkButton} />
-        <Divider sx={{ mt: 1.5, mb: 1.5 }} />
+    <MainCard content={false}>
+      <Header title={title} csvButton={csvButton} linkButton={linkButton} />
+      <Divider sx={{ mt: 1.5, mb: 1.5 }} />
+      <Suspense fallback={<CircularProgressCards />}>
         <Content options={customOptions} height={height} />
-      </MainCard>
-    </Suspense>
+      </Suspense>
+    </MainCard>
   )
 }

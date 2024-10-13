@@ -1,4 +1,6 @@
-import { Suspense } from 'react'
+import { Suspense, useMemo } from 'react'
+
+import dynamic from 'next/dynamic'
 
 import { Box, Divider } from '@mui/material'
 
@@ -13,12 +15,22 @@ import formatCSV from 'utils/csv'
 import deepMerge from 'utils/deepMerge'
 import formatHighcharts from 'utils/highcharts'
 
-import HighchartsAxisChart from './Chart'
 import Header from './Header'
+
+// 動的インポートを使用してHighchartsAxisChartを遅延ロード
+const HighchartsAxisChart = dynamic(() => import('./Chart'), {
+  loading: () => <CircularProgressCards />,
+  ssr: false, // サーバーサイドレンダリングを無効化
+})
 
 const DEFAULT_HEIGHT = '300px'
 
-const Content = ({ options, height }) => (
+interface ContentProps {
+  options: Options
+  height?: string
+}
+
+const Content = ({ options, height }: ContentProps) => (
   <Box sx={{ p: 2, height: height || DEFAULT_HEIGHT, overflow: 'hidden' }}>
     <HighchartsAxisChart options={options} />
   </Box>
@@ -31,13 +43,26 @@ export default function CardsHighchartsAxisChart({
   height,
   linkButton,
 }: CardsPropsType<Options>) {
-  const formatOptions = formatHighcharts(document).AxisTimeChart()
-  const customOptions = deepMerge(options, formatOptions)
+  const customOptions = useMemo(() => {
+    const formatOptions = formatHighcharts(document).AxisTimeChart()
+    return deepMerge(options, formatOptions)
+  }, [document, options])
 
-  const filename = `${title}.csv`
-  const { headers, data } = formatCSV(document).AxisChart()
-  const csvButton = (
-    <CSVExport data={data} headers={headers} filename={filename} />
+  const csvData = useMemo(() => {
+    const filename = `${title}.csv`
+    const { headers, data } = formatCSV(document).AxisChart()
+    return { filename, headers, data }
+  }, [document, title])
+
+  const csvButton = useMemo(
+    () => (
+      <CSVExport
+        data={csvData.data}
+        headers={csvData.headers}
+        filename={csvData.filename}
+      />
+    ),
+    [csvData]
   )
 
   return (
