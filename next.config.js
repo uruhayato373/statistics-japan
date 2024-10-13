@@ -33,7 +33,6 @@ const nextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['@mui/material', '@mui/icons-material'],
     staticPageGenerationTimeout: 180,
-    // serverComponentsExternalPackages: ['https-proxy-agent'],
   },
   webpack: (config, { isServer }) => {
     config.module.rules.push({
@@ -75,21 +74,6 @@ const nextConfig = {
   },
   // 本番環境でのみソースマップを無効化
   productionBrowserSourceMaps: false,
-}
-
-// gzipの圧縮レベルを最大に設定
-const CompressionPlugin = require('compression-webpack-plugin')
-if (process.env.NODE_ENV === 'production') {
-  nextConfig.webpack = (config, options) => {
-    config.plugins.push(
-      new CompressionPlugin({
-        test: /\.(js|css|html|svg)$/,
-        algorithm: 'gzip',
-        compressionOptions: { level: 9 },
-      })
-    )
-    return config
-  }
 }
 
 module.exports = withBundleAnalyzer(nextConfig)
