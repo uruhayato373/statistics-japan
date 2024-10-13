@@ -31,12 +31,11 @@ const OPTIONS: ApexOptions = {
 }
 
 // values
-async function processValues(prefCode: string) {
+async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues({ ...ESTAT_PARAMS }, 'cat02')
   const formattedValues = formatValues(values)
   const filteredValues = formattedValues
-    .filter((d) => d.areaCode === prefCode)
     .filter((d) => d.categoryCode !== '00')
     .sort((a, b) => b.value - a.value)
 

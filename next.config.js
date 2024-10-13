@@ -25,9 +25,8 @@ const nextConfig = {
   },
   experimental: {
     // appDir: true,
-    // workerThreads: true,
-    // cpus: 4,
-    serverComponentsExternalPackages: ['https-proxy-agent'],
+    staticPageGenerationTimeout: 120,
+    // serverComponentsExternalPackages: ['https-proxy-agent'],
   },
   webpack(config) {
     config.module.rules.push({
