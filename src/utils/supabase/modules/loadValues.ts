@@ -1,6 +1,5 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
-import { actionSaveJson } from 'actions/saveJson'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
@@ -28,7 +27,6 @@ export default async function loadValues(
 
   try {
     const fileName = `${fieldId}/${menuId}/${cardId}.json`
-    console.log(`ファイル名: ${fileName}`)
 
     // ファイルのダウンロード
     const { data: fileData, error: fileError } = await supabase.storage
@@ -37,33 +35,23 @@ export default async function loadValues(
 
     if (fileError) {
       console.error('Supabaseエラー詳細:', fileError)
+      console.error(`エラーが発生したファイル名: ${fileName}`)
       throw new Error(
         `ファイルのダウンロードに失敗しました: ${fileError.message}`
       )
     }
 
-    if (!fileData) {
-      console.log('ダウンロードしたデータが空です')
-      return null
-    }
-
-    console.log(`ファイルサイズ: ${fileData.size} bytes`)
-
     if (fileData.size > MAX_FILE_SIZE) {
+      console.error(`ファイルサイズ超過のファイル名: ${fileName}`)
       throw new Error(`ファイルサイズが大きすぎます: ${fileData.size} bytes`)
     }
 
     // Blobからテキストを読み込む
     const text = await fileData.text()
-    console.log('ファイルの内容:', text.substring(0, 100) + '...') // 最初の100文字のみログ出力
 
     // JSONをパース
     const values: ValueType[] = JSON.parse(text)
 
-    // 読み込んだデータを保存（デバッグ用）
-    await actionSaveJson(values, `${routerProps.cardId}_loadValues.json`)
-
-    console.log(`${values.length}個の値を正常に読み込みました`)
     return values
   } catch (error) {
     console.error('データの読み込みに失敗しました:', error)

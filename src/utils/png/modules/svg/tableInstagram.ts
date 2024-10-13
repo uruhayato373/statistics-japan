@@ -1,4 +1,5 @@
 import { ValueType } from 'utils/value'
+import formatNumberJapanese from 'utils/value/modules/formatNumberJapanese'
 
 const generateTableInstagram = (
   title: string,
@@ -24,7 +25,7 @@ const generateTableInstagram = (
         <rect x="600" width="300" height="60" fill="${colors[index]}" stroke="white"/>
         <text x="40" y="40" text-anchor="middle" class="cell">${isWorst ? 47 - index : item.rank}</text>
         <text x="340" y="40" text-anchor="middle" class="cell">${item.areaName}</text>
-        <text x="750" y="40" text-anchor="middle" class="number">${item.value.toLocaleString()} ${item.unit}</text>
+        <text x="750" y="40" text-anchor="middle" class="number">${formatNumberJapanese(item.value)} ${item.unit}</text>
       </g>
     `
       )

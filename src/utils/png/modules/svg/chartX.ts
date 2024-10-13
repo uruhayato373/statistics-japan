@@ -1,4 +1,5 @@
 import { ValueType } from 'utils/value'
+import formatNumberJapanese from 'utils/value/modules/formatNumberJapanese'
 
 const generateChartX = (
   title: string,
@@ -24,7 +25,7 @@ const generateChartX = (
         <rect x="${90 * index}" y="${y}" width="70" height="${height}" fill="${colors[index]}"/>
         <text x="${90 * index + 35}" y="375" text-anchor="middle" class="label">${item.areaName}</text>
         <text x="${barRight}" y="${y - 30}" text-anchor="end" class="unit">${item.unit}</text>
-        <text x="${barRight}" y="${y - 10}" text-anchor="end" class="value">${item.value.toLocaleString()}</text>
+        <text x="${barRight}" y="${y - 10}" text-anchor="end" class="value">${formatNumberJapanese(item.value)}</text>
       `
       })
       .join('')

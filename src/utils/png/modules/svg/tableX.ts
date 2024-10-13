@@ -1,4 +1,5 @@
 import { ValueType } from 'utils/value'
+import formatNumberJapanese from 'utils/value/modules/formatNumberJapanese'
 
 const generateTableX = (
   title: string,
@@ -24,7 +25,7 @@ const generateTableX = (
         <rect x="300" width="200" height="60" fill="${colors[index]}" stroke="white"/>
         <text x="30" y="40" text-anchor="middle" class="cell">${isWorst ? 47 - index : item.rank}</text>
         <text x="180" y="40" text-anchor="middle" class="cell">${item.areaName}</text>
-        <text x="400" y="40" text-anchor="middle" class="number">${item.value.toLocaleString()} ${item.unit}</text>
+        <text x="400" y="40" text-anchor="middle" class="number">${formatNumberJapanese(item.value)} ${item.unit}</text>
       </g>
     `
       )

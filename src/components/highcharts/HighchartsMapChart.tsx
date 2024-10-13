@@ -11,6 +11,8 @@ import HC_exporting from 'highcharts/modules/exporting'
 import HC_map from 'highcharts/modules/map'
 import HighchartsReact from 'highcharts-react-official'
 
+import getMaxDecimalPlaces from 'utils/value/modules/getMaxDecimalPlaces'
+
 if (typeof Highcharts === 'object') {
   HC_map(Highcharts)
   HC_exporting(Highcharts)
@@ -29,12 +31,6 @@ interface ExtendedPoint extends Highcharts.Point {
 
 const isSeriesMapDataOptions = (data: unknown): data is SeriesMapDataOptions =>
   typeof data === 'object' && data !== null && 'value' in data
-
-const getMaxDecimalPlaces = (values: number[]): number =>
-  values.reduce((maxDecimals, value) => {
-    const [, decimal] = value.toString().split('.')
-    return Math.max(maxDecimals, decimal?.length || 0)
-  }, 0)
 
 const extractValues = (data: SeriesMapOptions['data']): number[] =>
   data.reduce((acc: number[], d) => {
