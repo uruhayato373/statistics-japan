@@ -16,7 +16,7 @@ import TableNumberOfNewHousingUnitsStarted from 'sections/construction/housing/t
 import TableNumberOfSingleFamilyHomes from 'sections/construction/housing/table/TableNumberOfSingleFamilyHomes'
 import TableNumberOfTenementHouses from 'sections/construction/housing/table/TableNumberOfTenementHouses'
 import TablePerHouse from 'sections/construction/housing/table/TablePerHouse'
-// import TableTotalNumberOfHouses from 'sections/construction/housing/table/TableTotalNumberOfHouses'
+import TableTotalNumberOfHouses from 'sections/construction/housing/table/TableTotalNumberOfHouses'
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items
@@ -43,11 +43,11 @@ const chartItems = [
 
 // table items
 const tableItems = [
-  // {
-  //   Section: TableTotalNumberOfHouses,
-  //   Card: CardsReactTimeTable,
-  //   gridProps: { xs: 12, md: 6, lg: 6 },
-  // },
+  {
+    Section: TableTotalNumberOfHouses,
+    Card: CardsReactTimeTable,
+    gridProps: { xs: 12, md: 6, lg: 6 },
+  },
   {
     Section: TableNumberOfSingleFamilyHomes,
     Card: CardsReactTimeTable,

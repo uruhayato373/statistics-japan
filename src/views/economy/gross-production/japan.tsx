@@ -4,13 +4,13 @@ import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
 import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsApexPieChart from 'cards/CardsApexPieChart'
+// import CardsApexPieChart from 'cards/CardsApexPieChart'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
 import AxisGrossPrefecturalProduct from 'sections/economy/gross-production/chart/AxisGrossPrefecturalProduct'
 import AxisPrefecturalIncome from 'sections/economy/gross-production/chart/AxisPrefecturalIncome'
-import PieChartPrefecturalIncome from 'sections/economy/gross-production/chart/PieChartPrefecturalIncome'
-import PieGrossPrefecturalProduct from 'sections/economy/gross-production/chart/PieGrossPrefecturalProduct'
+// import PieChartPrefecturalIncome from 'sections/economy/gross-production/chart/PieChartPrefecturalIncome'
+// import PieGrossPrefecturalProduct from 'sections/economy/gross-production/chart/PieGrossPrefecturalProduct'
 import DashboardGrossPrefecturalProduct from 'sections/economy/gross-production/dashboard/DashboardGrossPrefecturalProduct'
 import DashboardPrefecturalIncome from 'sections/economy/gross-production/dashboard/DashboardPrefecturalIncome'
 import TableGrossPrefecturalProduct from 'sections/economy/gross-production/table/TableGrossPrefecturalProduct'
@@ -35,16 +35,16 @@ const chartItems = [
     Card: CardsApexAxisChart,
     gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
   },
-  {
-    Section: PieChartPrefecturalIncome,
-    Card: CardsApexPieChart,
-    gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
-  },
-  {
-    Section: PieGrossPrefecturalProduct,
-    Card: CardsApexPieChart,
-    gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
-  },
+  // {
+  //   Section: PieChartPrefecturalIncome,
+  //   Card: CardsApexPieChart,
+  //   gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
+  // },
+  // {
+  //   Section: PieGrossPrefecturalProduct,
+  //   Card: CardsApexPieChart,
+  //   gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
+  // },
 ]
 
 // table items
