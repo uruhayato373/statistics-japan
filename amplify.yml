@@ -8,6 +8,12 @@ frontend:
       commands:
         - npm run build
         - echo "ESTAT_API_APPID=$ESTAT_API_APPID" >> .env
+        - echo "NEXT_PUBLIC_SUPABASE_URL=$NEXT_PUBLIC_SUPABASE_URL" >> .env
+        - echo "SUPABASE_SERVICE_ROLE_KEY=$SUPABASE_SERVICE_ROLE_KEY" >> .env
+        - echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=$NEXT_PUBLIC_SUPABASE_ANON_KEY" >> .env
+        - echo "NEXT_PUBLIC_BASE_URL=$NEXT_PUBLIC_BASE_URL" >> .env
+        - echo "USE_PROXY=$USE_PROXY" >> .env
+        - echo "USE_ESTAT_API=$USE_PROXY" >> .env
         - echo "GA_ID=$GA_ID" >> .env
   artifacts:
     baseDirectory: .next

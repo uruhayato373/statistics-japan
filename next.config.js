@@ -25,6 +25,8 @@ const nextConfig = {
   },
   experimental: {
     // appDir: true,
+    workerThreads: true,
+    cpus: 4,
     serverComponentsExternalPackages: ['https-proxy-agent'],
   },
   webpack(config) {
