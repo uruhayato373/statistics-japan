@@ -20,14 +20,15 @@ export default async function loadValues(
 ): Promise<ValueType[] | null> {
   const { fieldId, menuId, cardId } = routerProps
 
+  const fileName = `${fieldId}/${menuId}/${cardId}.json`
+
   if (!cardId) {
     console.log('cardIdが指定されていません')
+    console.error(`エラーが発生したファイル名: ${fileName}`)
     return null
   }
 
   try {
-    const fileName = `${fieldId}/${menuId}/${cardId}.json`
-
     // ファイルのダウンロード
     const { data: fileData, error: fileError } = await supabase.storage
       .from(BUCKET_NAME)
