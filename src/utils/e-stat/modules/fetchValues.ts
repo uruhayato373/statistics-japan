@@ -7,7 +7,7 @@ import { formatValues } from './formatResponse/formatValues'
  * valuesを取得して返却する
  */
 const fetchValues = async (
-  estatParams: EstatParamsType,
+  estatParams: EstatParamsType | EstatParamsType[],
   categoryKey: string = 'cat01'
 ) => {
   if (Array.isArray(estatParams)) {
