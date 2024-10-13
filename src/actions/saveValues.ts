@@ -32,7 +32,7 @@ export default async function actionSaveValues(
 
     // JSONをStringifyして保存
     const { data, error } = await supabase.storage
-      .from('response')
+      .from('values')
       .upload(fileName, JSON.stringify(values), {
         contentType: 'application/json',
         upsert: true, // 既存ファイルを上書き

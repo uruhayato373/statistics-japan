@@ -49,6 +49,8 @@ NEXT_PUBLIC_BASE_URL='https://statistics-japan.com'
 # e-Stat APIのAPP ID
 ESTAT_API_APPID=''
 
+# e-Stat APIを使う場合はtrue
+USE_ESTAT_API='true'
 
 # PROXY設定　必要な場合のみ記載
 HTTP_PROXY='http://{IPアドレス}:{ポート番号}'
