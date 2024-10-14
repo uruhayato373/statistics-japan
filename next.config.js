@@ -37,10 +37,10 @@ const nextConfig = {
       },
     })
 
-    if (!isServer && process.env.NODE_ENV === 'production') {
-      // Tree shakingを強化
-      config.optimization.usedExports = true
-    }
+    // if (!isServer && process.env.NODE_ENV === 'production') {
+    //   // Tree shakingを強化
+    //   config.optimization.usedExports = true
+    // }
     return config
   },
   // 静的アセットの最適化
