@@ -1,9 +1,9 @@
 'use server'
 
 import { DocumentType } from 'utils/document'
-import handleOGP from 'utils/ogp'
 import handlePNG from 'utils/png'
 import { RouterProps } from 'utils/props'
+import handleSupabase from 'utils/supabase'
 import { ValueType } from 'utils/value'
 import calcRankingValues from 'utils/value/modules/calcRankingValues'
 
@@ -19,7 +19,8 @@ export async function actionSavePrefectureRanking(
   return {
     // OGP画像を生成・保存
     savePrefectureRankOGP: async () => {
-      const { savePrefectureRankOGP } = handleOGP()
+      // const { savePrefectureRankOGP } = handleOGP()
+      const { savePrefectureRankOGP } = handleSupabase()
       await savePrefectureRankOGP(title, routerProps, rankingValues)
     },
     // supabaseにデータを保存
