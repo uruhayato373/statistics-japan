@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // output: 'export',
   modularizeImports: {
     '@mui/material': {
       transform: '@mui/material/{{member}}',
@@ -18,10 +19,14 @@ const nextConfig = {
     ],
     domains: ['localhost'],
   },
+  env: {
+    ESTAT_API_APPID: process.env.ESTAT_API_APPID,
+    ESTAT_API_KEY: process.env.ESTAT_API_KEY,
+  },
   experimental: {
-    optimizeCss: true, // CSSを最適化
-    optimizePackageImports: ['@mui/material', '@mui/icons-material'],
+    // appDir: true,
     staticPageGenerationTimeout: 180,
+    // serverComponentsExternalPackages: ['https-proxy-agent'],
   },
   webpack(config) {
     config.module.rules.push({
@@ -33,11 +38,6 @@ const nextConfig = {
     })
 
     return config
-  },
-  // 静的アセットの最適化
-  images: {
-    minimumCacheTTL: 60,
-    formats: ['image/webp'],
   },
 }
 
