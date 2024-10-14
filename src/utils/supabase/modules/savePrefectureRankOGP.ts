@@ -49,22 +49,7 @@ export default async function savePrefectureRankOGP(
       return
     }
 
-    console.log('File uploaded successfully:', data.path)
-
-    // アップロードされたファイルの公開URLを取得
-    const {
-      data: { publicUrl },
-      error: urlError,
-    } = supabase.storage.from('ogp-images').getPublicUrl(fileName)
-
-    if (urlError) {
-      console.error('Error getting public URL:', urlError)
-      return
-    }
-
-    console.log('Public URL:', publicUrl)
-
-    return publicUrl
+    return data
   } catch (error) {
     console.error('Error in savePrefectureRankPNG:', error)
   }
