@@ -18,15 +18,10 @@ const nextConfig = {
     ],
     domains: ['localhost'],
   },
-  // env: {
-  //   ESTAT_API_APPID: process.env.ESTAT_API_APPID,
-  //   ESTAT_API_KEY: process.env.ESTAT_API_KEY,
-  // },
   experimental: {
     optimizeCss: true, // CSSを最適化
     optimizePackageImports: ['@mui/material', '@mui/icons-material'],
     staticPageGenerationTimeout: 180,
-    // serverComponentsExternalPackages: ['https-proxy-agent'],
   },
   webpack(config) {
     config.module.rules.push({
@@ -37,10 +32,6 @@ const nextConfig = {
       },
     })
 
-    // if (!isServer && process.env.NODE_ENV === 'production') {
-    //   // Tree shakingを強化
-    //   config.optimization.usedExports = true
-    // }
     return config
   },
   // 静的アセットの最適化
