@@ -26,10 +26,10 @@ export default function RootLayout({ children }) {
     <html lang="ja">
       <head>
         {/* Google Search Console スクリプト */}
-        <script
+        {/* <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        ></script>
+        ></script> */}
         {/* Google Analytics スクリプト */}
         <script
           dangerouslySetInnerHTML={{
@@ -44,11 +44,11 @@ export default function RootLayout({ children }) {
           }}
         ></script>
         {/* Google AdSense スクリプト */}
-        <script
+        {/* <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7995274743017484"
           crossOrigin="anonymous"
-        ></script>
+        ></script> */}
       </head>
       <Suspense fallback={<></>}>
         <Analytics />
