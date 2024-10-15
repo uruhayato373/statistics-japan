@@ -4,8 +4,7 @@ import Typography from '@mui/material/Typography'
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import SelectPrefecture from 'components/SelectPrefecture'
 
-import { actionSaveJapan } from 'actions/saveJapan'
-import { actionSavePrefecture } from 'actions/savePrefecture'
+import handleOGP from 'utils/ogp'
 import handleProps, { RouterProps } from 'utils/props'
 
 interface Props {
@@ -14,14 +13,11 @@ interface Props {
 
 const ViewsHeader = async ({ routerProps }: Props) => {
   const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
+
+  // OGP画像の保存
   const menuTitle = breadcrumbsProps.currentMenu.menuTitle
-
-  if (routerProps.kindId === 'prefecture') {
-    await actionSavePrefecture(menuTitle, routerProps)
-  }
-
-  if (routerProps.kindId === 'japan') {
-    await actionSaveJapan(menuTitle, routerProps)
+  if (routerProps.kindId !== 'prefecture-rank') {
+    await handleOGP(menuTitle, routerProps).saveLocal()
   }
 
   return (

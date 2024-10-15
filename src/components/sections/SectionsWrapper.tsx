@@ -3,31 +3,22 @@ import React from 'react'
 import { ApexOptions } from 'apexcharts'
 import { Options } from 'highcharts'
 
-import { actionSavePrefectureRanking } from 'actions/savePrefectureRanking'
-import actionSaveValues from 'actions/saveValues'
 import { CardsPropsType } from 'types/cards'
 import { SectionsWrapperPropsType } from 'types/sections'
 import { DocumentType } from 'utils/document'
+import handleOGP from 'utils/ogp'
 import { RouterProps } from 'utils/props'
-import handleSupabase from 'utils/supabase'
 import { ValueType } from 'utils/value'
 
-const isDevelopment = process.env.NODE_ENV === 'development'
-const isEstat = process.env.USE_ESTAT_API === 'true'
-
 async function serverAction(
+  title: string,
   routerProps: RouterProps,
-  cardTitle: string,
   document: DocumentType
 ) {
-  const { saveBestWorstPNG, savePrefectureRankOGP } =
-    await actionSavePrefectureRanking(cardTitle, routerProps, document)
-
-  await Promise.all([
-    saveBestWorstPNG(),
-    savePrefectureRankOGP(),
-    // saveRankingDB(),
-  ])
+  // OGP画像の保存
+  if (routerProps.kindId !== 'prefecture-rank') {
+    await handleOGP(title, routerProps, document).saveLocal()
+  }
 }
 
 function filterValues(
@@ -55,13 +46,14 @@ async function SectionsWrapper<T extends Options | ApexOptions = ApexOptions>({
   linkButton,
 }: SectionsWrapperPropsType<T>) {
   const { prefCode, kindId } = routerProps
-  const { loadValues } = handleSupabase()
+  // const { loadValues } = handleSupabase()
 
-  const values = isEstat ? await processValues() : await loadValues(routerProps)
+  // const values = isEstat ? await processValues() : await loadValues(routerProps)
+  const values = await processValues()
 
-  if (isDevelopment) {
-    await actionSaveValues(routerProps, values)
-  }
+  // if (isDevelopment) {
+  //   await actionSaveValues(routerProps, values)
+  // }
 
   const filteredValues = filterValues(values, kindId, prefCode)
   const document = await processDocument(filteredValues)
@@ -73,9 +65,8 @@ async function SectionsWrapper<T extends Options | ApexOptions = ApexOptions>({
     linkButton,
   }
 
-  if (kindId === 'prefecture-rank') {
-    await serverAction(routerProps, cardTitle, document)
-  }
+  // server action
+  await serverAction(cardTitle, routerProps, document)
 
   return <>{children(childProps)}</>
 }
