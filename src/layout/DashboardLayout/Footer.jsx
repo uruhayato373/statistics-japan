@@ -11,7 +11,7 @@ export default function Footer() {
       sx={{ p: '24px 16px 0px', mt: 'auto' }}
     >
       <Typography variant="caption">
-        &copy; 2024 Statistics-Japan All rights reserved
+        &copy; 2024 stats47.jp All rights reserved
       </Typography>
       <Stack
         spacing={1.5}

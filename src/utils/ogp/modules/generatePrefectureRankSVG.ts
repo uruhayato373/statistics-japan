@@ -6,7 +6,10 @@ import { JSDOM } from 'jsdom'
 import * as topojson from 'topojson-client'
 
 import geoShapeData from 'data/topojson/prefecture.json'
+import getEnvVariable from 'utils/getEnvVariable'
 import { ValueType } from 'utils/value'
+
+const BASE_URL = getEnvVariable('NEXT_PUBLIC_BASE_URL')
 
 const formatSeries = (values: ValueType[]) => {
   return values.map((d) => ({
@@ -125,7 +128,7 @@ export default async function generatePrefectureRankSVG(
     .attr('y', height - 70)
     .attr('font-size', '40px')
     .attr('fill', '#7f8c8d') // より洗練された薄いグレー
-    .text('statistics-japan.com')
+    .text(BASE_URL)
 
   return document.body.innerHTML
 }

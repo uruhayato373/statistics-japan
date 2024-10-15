@@ -7,6 +7,7 @@ import { CardsPropsType } from 'types/cards'
 import { SectionsWrapperPropsType } from 'types/sections'
 import { DocumentType } from 'utils/document'
 import handleOGP from 'utils/ogp'
+import handlePNG from 'utils/png'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
@@ -16,8 +17,9 @@ async function serverAction(
   document: DocumentType
 ) {
   // OGP画像の保存
-  if (routerProps.kindId !== 'prefecture-rank') {
+  if (routerProps.kindId === 'prefecture-rank') {
     await handleOGP(title, routerProps, document).saveLocal()
+    await handlePNG(title, routerProps, document).saveBestWorstPNG()
   }
 }
 

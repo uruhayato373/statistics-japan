@@ -27,7 +27,7 @@ export default function FooterBlock() {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <Typography variant="subtitle2" color="secondary">
-                © statistics-japan.com
+                © stats47.jp
               </Typography>
             </Grid>
           </Grid>

@@ -47,7 +47,7 @@ async function ensureDirectoryExists(filePath: string) {
 // japan
 async function saveJapan(title: string, routerProps: RouterProps) {
   const svgString = generateJapanSVG(title)
-  const pngFilePath = generateFileName(routerProps)
+  const pngFilePath = generateFileName({ ...routerProps, prefCode: '00000' })
   await ensureDirectoryExists(pngFilePath)
   await sharp(Buffer.from(svgString)).png().toFile(pngFilePath)
 }
@@ -58,7 +58,10 @@ async function savePrefecture(title: string, routerProps: RouterProps) {
 
   const savePrefecturePromises = prefectures.map(async (prefecture) => {
     const svgString = generatePrefectureSVG(title, prefecture)
-    const pngFilePath = generateFileName(routerProps)
+    const pngFilePath = generateFileName({
+      ...routerProps,
+      prefCode: prefecture.prefCode,
+    })
     await ensureDirectoryExists(pngFilePath)
     await sharp(Buffer.from(svgString)).png().toFile(pngFilePath)
   })

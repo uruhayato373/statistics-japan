@@ -6,7 +6,10 @@ import { JSDOM } from 'jsdom'
 import * as topojson from 'topojson-client'
 
 import geoShapeData from 'data/topojson/prefecture.json'
+import getEnvVariable from 'utils/getEnvVariable'
 import { PrefectureType } from 'utils/prefecture'
+
+const BASE_URL = getEnvVariable('NEXT_PUBLIC_BASE_URL')
 
 export default function generatePrefectureSVG(
   title: string,
@@ -105,7 +108,7 @@ export default function generatePrefectureSVG(
     .attr('y', height - 70)
     .attr('font-size', '40px')
     .attr('fill', '#7f8c8d')
-    .text('statistics-japan.com')
+    .text(BASE_URL)
 
   // SVGを文字列として返却
   return document.body.innerHTML
