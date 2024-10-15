@@ -18,7 +18,7 @@ async function serverAction(
 ) {
   // OGP画像の保存
   if (routerProps.kindId === 'prefecture-rank') {
-    await handleOGP(title, routerProps, document).saveLocal()
+    await handleOGP(title, routerProps, document).saveSupabase()
     await handlePNG(title, routerProps, document).saveBestWorstPNG()
   }
 }
