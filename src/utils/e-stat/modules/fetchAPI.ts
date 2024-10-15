@@ -14,9 +14,9 @@ const BASE_URL = 'https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData'
 const PROXY_URL = process.env.HTTP_PROXY
 const IS_DEVELOPMENT = process.env.NODE_ENV === 'development'
 
-const MAX_RETRIES = 3
-const INITIAL_RETRY_DELAY = 1000
-const MAX_RETRY_DELAY = 10000
+const MAX_RETRIES = 5
+const INITIAL_RETRY_DELAY = 2000
+const MAX_RETRY_DELAY = 20000
 
 function isValidEStatResponse(data: unknown): data is EStatResponseType {
   return data && typeof data === 'object' && 'GET_STATS_DATA' in data
