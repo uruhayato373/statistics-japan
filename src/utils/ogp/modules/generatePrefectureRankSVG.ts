@@ -24,7 +24,7 @@ export default async function generatePrefectureRankSVG(
   title: string,
   values: ValueType[]
 ) {
-  // seriesを整形
+  // シリーズを整形
   const series = formatSeries(values)
 
   // JSDOMを使用して仮想DOMを作成
@@ -41,14 +41,21 @@ export default async function generatePrefectureRankSVG(
     .attr('height', height)
     .attr('xmlns', 'http://www.w3.org/2000/svg')
 
-  // 背景色を変更
+  // Google Fontsを使用するためのスタイルを追加
+  svg.append('defs').html(`
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+      </style>
+    `)
+
+  // 背景色を設定
   svg
     .append('rect')
     .attr('width', width)
     .attr('height', height)
-    .attr('fill', '#f0f4f8') // 薄い青みがかったグレー
+    .attr('fill', '#f0f4f8')
 
-  // 枠線を追加（色をより洗練されたものに変更）
+  // 枠線を追加
   svg
     .append('rect')
     .attr('x', 5)
@@ -56,10 +63,10 @@ export default async function generatePrefectureRankSVG(
     .attr('width', width - 10)
     .attr('height', height - 10)
     .attr('fill', 'none')
-    .attr('stroke', '#3273dc') // より落ち着いた青色
+    .attr('stroke', '#3273dc')
     .attr('stroke-width', 20)
 
-  // 地図用のグループを作成し、右寄りかつ下方に配置
+  // 地図用のグループを作成
   const mapWidth = 800
   const mapHeight = 700
   const mapGroup = svg
@@ -80,7 +87,7 @@ export default async function generatePrefectureRankSVG(
 
   const geojson = topojson.feature(geoShapeData, geoShapeData.objects.pref)
 
-  // カラースケールの設定（より洗練されたグラデーションに変更）
+  // カラースケールの設定
   const maxValue = d3.max(series, (d) => d.value) || 0
   const colorScale = d3
     .scaleSequential()
@@ -102,7 +109,7 @@ export default async function generatePrefectureRankSVG(
     .attr('stroke', '#ffffff')
     .attr('stroke-width', 0.5)
 
-  // タイトルを追加（右下に移動し、行間を空ける）
+  // タイトルを追加
   const titleGroup = svg.append('g').attr('transform', 'translate(100, 150)')
 
   titleGroup
@@ -110,7 +117,8 @@ export default async function generatePrefectureRankSVG(
     .attr('y', 0)
     .attr('font-size', '70px')
     .attr('font-weight', 'bold')
-    .attr('fill', '#2c3e50') // より深みのある色
+    .attr('fill', '#2c3e50')
+    .attr('font-family', '"Noto Sans JP", sans-serif')
     .text(title)
 
   titleGroup
@@ -118,16 +126,18 @@ export default async function generatePrefectureRankSVG(
     .attr('y', 100)
     .attr('font-size', '70px')
     .attr('font-weight', 'bold')
-    .attr('fill', '#2c3e50') // より深みのある色
+    .attr('fill', '#2c3e50')
+    .attr('font-family', '"Noto Sans JP", sans-serif')
     .text('都道府県ランキング')
 
-  // 左下にウォーターマークを追加
+  // ウォーターマークを追加
   svg
     .append('text')
     .attr('x', 100)
     .attr('y', height - 70)
     .attr('font-size', '40px')
-    .attr('fill', '#7f8c8d') // より洗練された薄いグレー
+    .attr('fill', '#7f8c8d')
+    .attr('font-family', '"Noto Sans JP", sans-serif')
     .text(BASE_URL)
 
   return document.body.innerHTML
