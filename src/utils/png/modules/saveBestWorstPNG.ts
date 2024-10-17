@@ -1,3 +1,4 @@
+import { actionSaveJson } from 'actions/saveJson'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
@@ -25,6 +26,9 @@ const saveBestWorstPNG = async (
   const worstValues = values.slice(-5).reverse()
   const timeName = values[0].timeName
   const svgTitle = `${timeName} ${title}`
+
+  console.log(values)
+  await actionSaveJson(values, 'values.json')
 
   // X用のPNG（表形式）を生成・保存（1200x630）
   const svgTableX = generateTableX(svgTitle, bestValues, worstValues)
