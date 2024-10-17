@@ -11,14 +11,21 @@ import handlePNG from 'utils/png'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
+const SAVE_OGP = process.env.SAVE_OGP
+
 async function serverAction(
   title: string,
   routerProps: RouterProps,
   document: DocumentType
 ) {
   // OGP画像の保存
+  if (SAVE_OGP === 'true') {
+    if (routerProps.kindId === 'prefecture-rank') {
+      await handleOGP(title, routerProps, document).saveSupabase()
+    }
+  }
+
   if (routerProps.kindId === 'prefecture-rank') {
-    await handleOGP(title, routerProps, document).saveSupabase()
     await handlePNG(title, routerProps, document).saveBestWorstPNG()
   }
 }

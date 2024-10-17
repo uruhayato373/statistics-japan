@@ -29,6 +29,13 @@ export default function generatePrefectureSVG(
     .attr('height', height)
     .attr('xmlns', 'http://www.w3.org/2000/svg')
 
+  // Google Fontsを使用するためのスタイルを追加
+  svg.append('defs').html(`
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+    </style>
+  `)
+
   // 背景色を設定
   svg
     .append('rect')
@@ -91,6 +98,7 @@ export default function generatePrefectureSVG(
     .attr('font-size', '70px')
     .attr('font-weight', 'bold')
     .attr('fill', '#2c3e50')
+    .attr('font-family', "'Noto Sans JP', sans-serif")
     .text(`${prefecture.prefName}の`)
 
   titleGroup
@@ -99,6 +107,7 @@ export default function generatePrefectureSVG(
     .attr('font-size', '70px')
     .attr('font-weight', 'bold')
     .attr('fill', '#2c3e50')
+    .attr('font-family', "'Noto Sans JP', sans-serif")
     .text(title)
 
   // 左下にウォーターマークを追加
@@ -108,6 +117,7 @@ export default function generatePrefectureSVG(
     .attr('y', height - 70)
     .attr('font-size', '40px')
     .attr('fill', '#7f8c8d')
+    .attr('font-family', "'Noto Sans JP', sans-serif")
     .text(BASE_URL)
 
   // SVGを文字列として返却

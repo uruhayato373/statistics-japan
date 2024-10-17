@@ -11,13 +11,17 @@ interface Props {
   routerProps: RouterProps
 }
 
+const SAVE_OGP = process.env.SAVE_OGP
+
 const ViewsHeader = async ({ routerProps }: Props) => {
   const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
   // OGP画像の保存
-  const menuTitle = breadcrumbsProps.currentMenu.menuTitle
-  if (routerProps.kindId !== 'prefecture-rank') {
-    await handleOGP(menuTitle, routerProps).saveLocal()
+  if (SAVE_OGP === 'true') {
+    const menuTitle = breadcrumbsProps.currentMenu.menuTitle
+    if (routerProps.kindId !== 'prefecture-rank') {
+      await handleOGP(menuTitle, routerProps).saveSupabase()
+    }
   }
 
   return (
