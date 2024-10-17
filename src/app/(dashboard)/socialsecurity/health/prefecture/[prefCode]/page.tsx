@@ -23,7 +23,7 @@ interface Params {
 
 // 静的に生成するパスを指定
 export async function generateStaticParams() {
-  const prefectures = await handlePrefecture().fetchItems()
+  const prefectures = handlePrefecture().fetchItems()
 
   return prefectures.map((p) => ({
     prefCode: p.prefCode,
