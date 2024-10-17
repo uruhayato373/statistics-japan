@@ -4,11 +4,12 @@ import { Metadata } from 'next'
 
 import Loader from 'components/Loader'
 
+import { handlePrefecture } from 'utils/prefecture'
 import handleProps from 'utils/props'
 import Prefecture from 'views/educationsports/junior-high-school/prefecture'
 
 // SSGとしてレンダリング
-// export const dynamic = 'force-static'
+export const dynamic = 'force-static'
 
 // 生成時間の上限を設定
 export const revalidate = 180
@@ -24,13 +25,13 @@ interface Params {
 }
 
 // 静的に生成するパスを指定
-// export async function generateStaticParams() {
-//   const prefectures = await handlePrefecture().fetchItems()
+export async function generateStaticParams() {
+  const prefectures = await handlePrefecture().fetchItems()
 
-//   return prefectures.map((p) => ({
-//     prefCode: p.prefCode,
-//   }))
-// }
+  return prefectures.map((p) => ({
+    prefCode: p.prefCode,
+  }))
+}
 
 // 共通のhandlePropsを取得
 const getProps = (prefCode: string) =>
