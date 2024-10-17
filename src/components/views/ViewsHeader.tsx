@@ -2,6 +2,7 @@ import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
+import SelectPage from 'components/SelectPage'
 import SelectPrefecture from 'components/SelectPrefecture'
 
 import handleOGP from 'utils/ogp'
@@ -24,6 +25,19 @@ const ViewsHeader = async ({ routerProps }: Props) => {
     }
   }
 
+  const { kindId } = routerProps
+
+  const renderSelector = () => {
+    switch (kindId) {
+      case 'prefecture':
+        return <SelectPrefecture />
+      case 'prefecture-rank':
+        return <SelectPage />
+      default:
+        return null
+    }
+  }
+
   return (
     <>
       <Breadcrumbs custom icon breadcrumbsProps={breadcrumbsProps} />
@@ -34,7 +48,7 @@ const ViewsHeader = async ({ routerProps }: Props) => {
         sx={{ mt: 1, mb: 2.5 }}
       >
         <Typography variant="h2">{breadcrumbsProps.pageTitle}</Typography>
-        <SelectPrefecture />
+        {renderSelector()}
       </Stack>
     </>
   )

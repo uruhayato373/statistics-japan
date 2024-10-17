@@ -12,21 +12,27 @@ import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const SAVE_OGP = process.env.SAVE_OGP
+const SAVE_PNG = process.env.SAVE_PNG
 
 async function serverAction(
   title: string,
   routerProps: RouterProps,
   document: DocumentType
 ) {
-  // OGP画像の保存
   if (SAVE_OGP === 'true') {
     if (routerProps.kindId === 'prefecture-rank') {
       await handleOGP(title, routerProps, document).saveSupabase()
     }
   }
 
-  if (routerProps.kindId === 'prefecture-rank') {
-    await handlePNG(title, routerProps, document).saveBestWorstPNG()
+  if (SAVE_PNG === 'true') {
+    if (routerProps.cardId.includes('ranking')) {
+      await handlePNG(title, routerProps, document).saveBestWorstPNG()
+    }
+
+    if (routerProps.cardId.includes('scatter')) {
+      await handlePNG(title, routerProps, document).saveCorrelationPNG()
+    }
   }
 }
 
@@ -55,14 +61,8 @@ async function SectionsWrapper<T extends Options | ApexOptions = ApexOptions>({
   linkButton,
 }: SectionsWrapperPropsType<T>) {
   const { prefCode, kindId } = routerProps
-  // const { loadValues } = handleSupabase()
 
-  // const values = isEstat ? await processValues() : await loadValues(routerProps)
   const values = await processValues()
-
-  // if (isDevelopment) {
-  //   await actionSaveValues(routerProps, values)
-  // }
 
   const filteredValues = filterValues(values, kindId, prefCode)
   const document = await processDocument(filteredValues)
