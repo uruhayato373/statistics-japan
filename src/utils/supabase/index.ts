@@ -2,26 +2,26 @@ import { createClient } from '@supabase/supabase-js'
 
 import getEnvVariable from 'utils/getEnvVariable'
 import { RouterProps } from 'utils/props'
+import { ValueType } from 'utils/value'
 
 import loadValues from './modules/loadValues'
 import saveOGP from './modules/saveOGP'
+import saveValues from './modules/saveValues'
 
 const supabaseUrl = getEnvVariable('NEXT_PUBLIC_SUPABASE_URL')
 const supabaseAnonKey = getEnvVariable('NEXT_PUBLIC_SUPABASE_ANON_KEY')
 const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
-const generateFileName = (routerProps: RouterProps) => {
-  const { fieldId, menuId, kindId, pageId, prefCode } = routerProps
-  const fileName = prefCode ? `${prefCode}.png` : `${pageId}.png`
-  return `${fieldId}/${menuId}/${kindId}/${fileName}`
-}
-
 const handleSupabase = (routerProps: RouterProps) => {
-  const fileName = generateFileName(routerProps)
   return {
-    loadValues,
-    saveOGP: async (pngBuffer: Buffer): Promise<void> => {
-      await saveOGP(supabase, fileName, pngBuffer)
+    loadValues: async () => {
+      return await loadValues(supabase, routerProps)
+    },
+    saveValues: async (values: ValueType[]) => {
+      await saveValues(supabase, routerProps, values)
+    },
+    saveOGP: async (pngBuffer: Buffer) => {
+      await saveOGP(supabase, routerProps, pngBuffer)
     },
   }
 }

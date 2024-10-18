@@ -1,34 +1,40 @@
-import { createClient, SupabaseClient } from '@supabase/supabase-js'
+import { SupabaseClient } from '@supabase/supabase-js'
 
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Supabase環境変数が設定されていません')
-}
-
-const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey)
-
 const BUCKET_NAME = 'values'
-const MAX_FILE_SIZE = 50 * 1024 * 1024 // 50MB
 
 export default async function loadValues(
+  supabase: SupabaseClient,
   routerProps: RouterProps
 ): Promise<ValueType[] | null> {
   const { fieldId, menuId, cardId } = routerProps
-
   const fileName = `${fieldId}/${menuId}/${cardId}.json`
 
   if (!cardId) {
-    console.log('cardIdが指定されていません')
-    console.error(`エラーが発生したファイル名: ${fileName}`)
+    console.error(`cardIdが指定されていません。ファイル名: ${fileName}`)
     return null
   }
 
   try {
+    // ファイルの存在確認
+    const { data: fileExists, error: existsError } = await supabase.storage
+      .from(BUCKET_NAME)
+      .list(fileName.split('/').slice(0, -1).join('/'))
+
+    if (existsError) {
+      console.error('ファイルの存在確認に失敗しました:', existsError)
+      throw new Error(
+        `ファイルの存在確認に失敗しました: ${existsError.message}`
+      )
+    }
+
+    if (!fileExists.some((file) => file.name === fileName.split('/').pop())) {
+      console.error(`ファイルが存在しません: ${fileName}`)
+      return null
+    }
+
     // ファイルのダウンロード
     const { data: fileData, error: fileError } = await supabase.storage
       .from(BUCKET_NAME)
@@ -38,20 +44,22 @@ export default async function loadValues(
       console.error('Supabaseエラー詳細:', fileError)
       console.error(`エラーが発生したファイル名: ${fileName}`)
       throw new Error(
-        `ファイルのダウンロードに失敗しました: ${fileError.message}`
+        `ファイルのダウンロードに失敗しました: ${fileError.message || JSON.stringify(fileError)}`
       )
     }
 
-    if (fileData.size > MAX_FILE_SIZE) {
-      console.error(`ファイルサイズ超過のファイル名: ${fileName}`)
-      throw new Error(`ファイルサイズが大きすぎます: ${fileData.size} bytes`)
+    if (!fileData) {
+      console.error('ダウンロードされたデータが空です')
+      return null
     }
 
     // Blobからテキストを読み込む
     const text = await fileData.text()
+    console.log(`ダウンロードされたデータの長さ: ${text.length} バイト`)
 
     // JSONをパース
     const values: ValueType[] = JSON.parse(text)
+    console.log(`パースされたデータの項目数: ${values.length}`)
 
     return values
   } catch (error) {

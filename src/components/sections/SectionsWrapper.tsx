@@ -3,16 +3,19 @@ import React from 'react'
 import { ApexOptions } from 'apexcharts'
 import { Options } from 'highcharts'
 
+import { actionSaveJson } from 'actions/saveJson'
 import { CardsPropsType } from 'types/cards'
 import { SectionsWrapperPropsType } from 'types/sections'
 import { DocumentType } from 'utils/document'
 import handleOGP from 'utils/ogp'
 import handlePNG from 'utils/png'
 import { RouterProps } from 'utils/props'
+import handleSupabase from 'utils/supabase'
 import { ValueType } from 'utils/value'
 
 const SAVE_OGP = process.env.SAVE_OGP
 const SAVE_PNG = process.env.SAVE_PNG
+const USE_ESTAT_API = process.env.USE_ESTAT_API
 
 async function serverAction(
   title: string,
@@ -62,7 +65,21 @@ async function SectionsWrapper<T extends Options | ApexOptions = ApexOptions>({
 }: SectionsWrapperPropsType<T>) {
   const { prefCode, kindId } = routerProps
 
-  const values = await processValues()
+  let values: ValueType[] = []
+  if (USE_ESTAT_API === 'true') {
+    values = await processValues()
+    // await handleSupabase(routerProps).saveValues(values)
+  } else {
+    console.log('use supabase')
+    values = await handleSupabase(routerProps).loadValues()
+  }
+
+  await actionSaveJson(values, `${cardTitle}.json`)
+
+  if (!values) {
+    console.error('データの読み込みに失敗しました')
+    return <div>データの読み込みに失敗しました。再読み込みしてください。</div>
+  }
 
   const filteredValues = filterValues(values, kindId, prefCode)
   const document = await processDocument(filteredValues)

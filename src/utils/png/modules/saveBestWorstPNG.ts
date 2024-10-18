@@ -27,7 +27,6 @@ const saveBestWorstPNG = async (
   const timeName = values[0].timeName
   const svgTitle = `${timeName} ${title}`
 
-  console.log(values)
   await actionSaveJson(values, 'values.json')
 
   // X用のPNG（表形式）を生成・保存（1200x630）
