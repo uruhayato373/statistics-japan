@@ -58,10 +58,5 @@
     "pageId": "number-of-divorces",
     "pageTitle": "離婚件数",
     "menuId": "marriage"
-  },
-  {
-    "pageId": "average-age-of-first-marriage",
-    "pageTitle": "平均初婚年齢",
-    "menuId": "marriage"
   }
 ]
