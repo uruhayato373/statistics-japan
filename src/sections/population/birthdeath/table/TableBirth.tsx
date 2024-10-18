@@ -6,7 +6,7 @@ import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
 const CARD_TITLE = '出生数'
-const CARD_ID = 'dashboard-birth'
+const CARD_ID = 'table-birth'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
