@@ -10,7 +10,10 @@
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint-staged": "lint-staged",
-    "prepare": "husky"
+    "prepare": "husky",
+    "analyze": "ANALYZE=true next build",
+    "analyze:server": "ANALYZE=true NODE_ENV=production next build",
+    "analyze:browser": "ANALYZE=true NODE_ENV=production next build"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
@@ -45,6 +48,7 @@
     "@next/third-parties": "^15.0.0-canary.120",
     "@react-pdf/renderer": "^3.3.8",
     "@supabase/supabase-js": "^2.45.3",
+    "@svgdotjs/svg.js": "^3.2.4",
     "@tanstack/match-sorter-utils": "^8.11.8",
     "@tanstack/react-query": "^5.25.0",
     "@tanstack/react-table": "^8.13.2",
@@ -125,6 +129,7 @@
     "simplebar-react": "^3.2.4",
     "slick-carousel": "^1.8.1",
     "stylis-plugin-rtl": "^2.1.1",
+    "svgdom": "^0.1.19",
     "swr": "^2.2.5",
     "topojson-client": "^3.1.0",
     "use-places-autocomplete": "^4.0.1",

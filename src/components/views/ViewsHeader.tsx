@@ -21,7 +21,7 @@ const ViewsHeader = async ({ routerProps }: Props) => {
   if (SAVE_OGP === 'true') {
     const menuTitle = breadcrumbsProps.currentMenu.menuTitle
     if (routerProps.kindId !== 'prefecture-rank') {
-      await handleOGP(menuTitle, routerProps).saveSupabase()
+      await handleOGP(menuTitle, routerProps).saveLocal()
     }
   }
 

@@ -23,7 +23,7 @@ async function serverAction(
 ) {
   if (SAVE_OGP === 'true') {
     if (routerProps.kindId === 'prefecture-rank') {
-      await handleOGP(title, routerProps, document).saveSupabase()
+      await handleOGP(title, routerProps, document).saveLocal()
     }
   }
 

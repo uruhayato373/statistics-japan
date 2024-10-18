@@ -4,24 +4,41 @@ frontend:
     preBuild:
       commands:
         - npm ci
+        # 環境変数を一度に設定
+        - |
+          cat << EOF >> .env
+          ESTAT_API_APPID=$ESTAT_API_APPID
+          NEXT_PUBLIC_SUPABASE_URL=$NEXT_PUBLIC_SUPABASE_URL
+          SUPABASE_SERVICE_ROLE_KEY=$SUPABASE_SERVICE_ROLE_KEY
+          NEXT_PUBLIC_SUPABASE_ANON_KEY=$NEXT_PUBLIC_SUPABASE_ANON_KEY
+          NEXT_PUBLIC_BASE_URL=$NEXT_PUBLIC_BASE_URL
+          USE_PROXY=$USE_PROXY
+          USE_ESTAT_API=$USE_ESTAT_API
+          GA_ID=$GA_ID
+          S3_REGION=$S3_REGION
+          S3_ACCESS_KEY_ID=$S3_ACCESS_KEY_ID
+          S3_SECRET_ACCESS_KEY=$S3_SECRET_ACCESS_KEY
+          EOF
     build:
       commands:
         - npm run build
-        - echo "ESTAT_API_APPID=$ESTAT_API_APPID" >> .env
-        - echo "NEXT_PUBLIC_SUPABASE_URL=$NEXT_PUBLIC_SUPABASE_URL" >> .env
-        - echo "SUPABASE_SERVICE_ROLE_KEY=$SUPABASE_SERVICE_ROLE_KEY" >> .env
-        - echo "NEXT_PUBLIC_SUPABASE_ANON_KEY=$NEXT_PUBLIC_SUPABASE_ANON_KEY" >> .env
-        - echo "NEXT_PUBLIC_BASE_URL=$NEXT_PUBLIC_BASE_URL" >> .env
-        - echo "USE_PROXY=$USE_PROXY" >> .env
-        - echo "USE_ESTAT_API=$USE_ESTAT_API" >> .env
-        - echo "GA_ID=$GA_ID" >> .env
-        - echo "S3_REGION=$S3_REGION" >> .env
-        - echo "S3_ACCESS_KEY_ID=$S3_ACCESS_KEY_ID" >> .env
-        - echo "S3_SECRET_ACCESS_KEY=$S3_SECRET_ACCESS_KEY" >> .env
+
   artifacts:
     baseDirectory: .next
     files:
       - '**/*'
+    exclude:
+      - '**/*.map'
+      - '**/node_modules/**'
+      - '**/cache/**'
+      - '**/test/**'
+      - '**/docs/**'
   cache:
     paths:
       - node_modules/**/*
+      - .next/cache/**/*
+  customHeaders:
+    - pattern: '**/*'
+      headers:
+        - key: 'Cache-Control'
+          value: 'public, max-age=31536000, immutable'
