@@ -7,19 +7,15 @@ import {
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
+import generateFileName from './generateFileName'
+
 const BUCKET_NAME = 'stats47-values' // S3バケット名を指定
 
 export default async function loadValues(
   s3Client: S3Client,
   routerProps: RouterProps
 ): Promise<ValueType[] | null> {
-  const { fieldId, menuId, cardId } = routerProps
-  const fileName = `${fieldId}/${menuId}/${cardId}.json`
-
-  if (!cardId) {
-    console.error(`cardIdが指定されていません。ファイル名: ${fileName}`)
-    return null
-  }
+  const fileName = generateFileName(routerProps)
 
   try {
     // ファイルの存在確認
