@@ -1,19 +1,18 @@
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
-import { handlePrefecture } from 'utils/prefecture'
 import handleProps from 'utils/props'
 
 // SSGとしてレンダリング
-export const generateStaticParams = async () => {
-  const prefectures = handlePrefecture().fetchItems()
+// export const generateStaticParams = async () => {
+//   const prefectures = handlePrefecture().fetchItems()
 
-  return prefectures.map((p) => ({
-    prefCode: p.prefCode,
-  }))
-}
+//   return prefectures.map((p) => ({
+//     prefCode: p.prefCode,
+//   }))
+// }
 
-export const dynamicParams = false
+// export const dynamicParams = false
 
 // 定数
 const FIELD_ID = 'administrativefinancial'
