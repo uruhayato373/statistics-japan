@@ -1,9 +1,5 @@
-import { Suspense } from 'react'
-
 import { Metadata } from 'next'
 // import dynamic from 'next/dynamic'
-
-import Loader from 'components/Loader'
 
 import handleProps from 'utils/props'
 
@@ -13,7 +9,9 @@ const MENU_ID = 'weather'
 const KIND_ID = 'japan'
 
 // 動的インポート
-// const Japan = dynamic(() => import('views/landweather/weather/japan'))
+// const Japan = dynamic(() => import('views/landweather/weather/japan'), {
+//   suspense: true,
+// })
 
 // 共通のhandleProps呼び出し
 const getProps = () =>
@@ -23,14 +21,14 @@ const getProps = () =>
     kindId: KIND_ID,
   })
 
-// メタデータ生成関数
-export async function generateMetadata(): Promise<Metadata> {
+export const generateMetadata = async (): Promise<Metadata> => {
   const { metaProps } = getProps()
   return metaProps()
 }
 
 const Page = () => {
-  return <Suspense fallback={<Loader />}>{/* <Japan /> */}</Suspense>
+  // const { routerProps } = getProps()
+  // return <Japan routerProps={routerProps} />
 }
 
 export default Page
