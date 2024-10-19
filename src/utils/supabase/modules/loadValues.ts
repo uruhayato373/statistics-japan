@@ -18,7 +18,6 @@ export default async function loadValues(
   }
 
   try {
-    // ファイルの存在確認
     const { data: fileExists, error: existsError } = await supabase.storage
       .from(BUCKET_NAME)
       .list(fileName.split('/').slice(0, -1).join('/'))
