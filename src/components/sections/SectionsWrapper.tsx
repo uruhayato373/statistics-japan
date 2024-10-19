@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { actionSaveJson } from 'actions/saveJson'
 import { SectionsWrapperPropsType } from 'types/sections'
 import { DocumentType } from 'utils/document'
 import { RouterProps } from 'utils/props'
@@ -16,16 +17,19 @@ async function serverAction(
 ) {
   if (SAVE_OGP && routerProps.kindId === 'prefecture-rank') {
     const handleOGP = (await import('utils/ogp')).default
-    await handleOGP(title, routerProps, document).saveLocal()
+    await handleOGP(title, routerProps, document).saveAWS()
   }
 
   if (SAVE_PNG) {
     const handlePNG = (await import('utils/png')).default
     if (routerProps.cardId.includes('ranking')) {
-      await handlePNG(title, routerProps, document).saveBestWorstPNG()
+      await handlePNG(title, routerProps, document).saveRankingPNG()
     }
     if (routerProps.cardId.includes('scatter')) {
       await handlePNG(title, routerProps, document).saveCorrelationPNG()
+    }
+    if (routerProps.cardId.includes('axis') && routerProps.kindId === 'japan') {
+      await handlePNG(title, routerProps, document).saveJapanPNG()
     }
   }
 }
@@ -64,6 +68,8 @@ async function SectionsWrapper({
 
   const filteredValues = filterValues(values, kindId, prefCode)
   const document = await processDocument(filteredValues)
+
+  await actionSaveJson(document, `${cardTitle}.json`)
 
   await serverAction(cardTitle, routerProps, document)
 

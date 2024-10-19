@@ -8,7 +8,7 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造業事業所数・従業者数の推移'
+const CARD_TITLE = '製造業事業所数・従業者数'
 const CARD_ID = 'axis-number-of-manufacturing'
 
 const ESTAT_PARAMS = {

@@ -3,8 +3,8 @@ import { DocumentType } from 'utils/document'
 import { RouterProps } from 'utils/props'
 
 import generateFilePath from './generateFilePath'
+import generateScatterPlot from './ranking/ScatterPlot'
 import savePNG from './savePNG'
-import generateScatterPlot from './svg/ScatterPlot'
 
 const saveCorrelationPNG = async (
   title: string,

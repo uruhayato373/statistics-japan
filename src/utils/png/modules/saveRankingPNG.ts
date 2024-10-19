@@ -1,15 +1,16 @@
-import { actionSaveJson } from 'actions/saveJson'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 import generateFilePath from './generateFilePath'
+import generateChartInstagram from './ranking/chartInstagram'
+import generateChartX from './ranking/chartX'
+import generateMapInstagram from './ranking/mapInstagram'
+import generateTableInstagram from './ranking/tableInstagram'
+import generateTableTickTok from './ranking/tableTickTok'
+import generateTableX from './ranking/tableX'
 import savePNG from './savePNG'
-import generateChartInstagram from './svg/chartInstagram'
-import generateChartX from './svg/chartX'
-import generateTableInstagram from './svg/tableInstagram'
-import generateTableX from './svg/tableX'
 
-const saveBestWorstPNG = async (
+const saveRankingPNG = async (
   title: string,
   routerProps: RouterProps,
   values: ValueType[]
@@ -26,8 +27,6 @@ const saveBestWorstPNG = async (
   const worstValues = values.slice(-5).reverse()
   const timeName = values[0].timeName
   const svgTitle = `${timeName} ${title}`
-
-  await actionSaveJson(values, 'values.json')
 
   // X用のPNG（表形式）を生成・保存（1200x630）
   const svgTableX = generateTableX(svgTitle, bestValues, worstValues)
@@ -59,7 +58,21 @@ const saveBestWorstPNG = async (
     generateFilePath(routerProps, 'chartInstagram.png')
   )
 
+  // TickTok用のPNG（表形式）を生成・保存（1080x1920）
+  const svgTableTickTok = generateTableTickTok(svgTitle, values)
+  await savePNG(
+    svgTableTickTok,
+    generateFilePath(routerProps, 'tableTickTok.png')
+  )
+
+  // Instagram用のPNG（地図形式）を生成・保存（1080x1080）
+  const svgMapInstagram = generateMapInstagram(svgTitle, values)
+  await savePNG(
+    svgMapInstagram,
+    generateFilePath(routerProps, 'mapInstagram.png')
+  )
+
   return
 }
 
-export default saveBestWorstPNG
+export default saveRankingPNG

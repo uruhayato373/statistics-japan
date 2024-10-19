@@ -8,7 +8,7 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造品出荷額等の推移'
+const CARD_TITLE = '製造品出荷額等'
 const CARD_ID = 'axis-product-shipment-amount'
 
 const ESTAT_PARAMS = {

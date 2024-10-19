@@ -24,11 +24,12 @@ const generateTableX = (
       .map((item, index) => {
         const width = (item.value / maxValue) * 550 // グラフの最大幅を調整
         const y = yOffset + index * 70
+        const formattedValue = formatNumberJapanese(item.value)
         return `
         <rect x="220" y="${y}" width="${width}" height="50" fill="${colors[index]}"/>
         <text x="210" y="${y + 30}" text-anchor="end" class="label">${item.areaName}</text>
-        <text x="${220 + width + 10}" y="${y + 30}" class="value">${formatNumberJapanese(item.value)}</text>
-        <text x="${220 + width + 10}" y="${y + 30}" dx="${formatNumberJapanese(item.value)}" class="unit">${item.unit}</text>
+        <text x="${220 + width + 10}" y="${y + 30}" class="value">${formattedValue}</text>
+        <text x="${220 + width + 10}" y="${y + 30}" dx="${formattedValue.length * 10}" class="unit">${item.unit}</text>
       `
       })
       .join('')

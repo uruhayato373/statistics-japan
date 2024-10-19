@@ -3,6 +3,7 @@ import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 import calcRankingValues from 'utils/value/modules/calcRankingValues'
 
+import saveAWS from './modules/saveAWS'
 import saveLocal from './modules/saveLocal'
 import saveSupabase from './modules/saveSupabase'
 
@@ -26,6 +27,7 @@ const handleOGP = (
   return {
     saveSupabase: async () => await saveSupabase(title, routerProps, values),
     saveLocal: async () => await saveLocal(title, routerProps, values),
+    saveAWS: async () => await saveAWS(title, routerProps, values),
   }
 }
 

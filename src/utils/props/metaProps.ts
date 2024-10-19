@@ -10,6 +10,7 @@ import generatePageTitle from './generateTitle'
 import { RouterProps } from '.'
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
+const S3_URL = 's3://stats47-ogp'
 
 const generateMetaProps = async ({
   fieldId,
@@ -22,7 +23,7 @@ const generateMetaProps = async ({
   const currentKind = handleKind().findItem(kindId)
   const currentPage = handlePage().findItem(pageId)
   const currentPrefecture = prefCode
-    ? await handlePrefecture().findItem(prefCode)
+    ? handlePrefecture().findItem(prefCode)
     : null
 
   const title = generatePageTitle({
@@ -34,7 +35,7 @@ const generateMetaProps = async ({
 
   let description = ''
   let url = BASE_URL
-  let ogImageUrl = `${BASE_URL}/ogp/${fieldId}/${menuId}`
+  let ogImageUrl = `${S3_URL}/${fieldId}/${menuId}`
   switch (kindId) {
     case 'japan':
       url += `${fieldId}/${menuId}/japan`

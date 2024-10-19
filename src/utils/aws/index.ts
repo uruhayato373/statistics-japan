@@ -4,6 +4,7 @@ import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 import loadValues from './modules/loadValues'
+import saveOGP from './modules/saveOGP'
 import saveValues from './modules/saveValues'
 
 // 環境変数から認証情報を取得
@@ -31,6 +32,9 @@ const handleAWS = (routerProps: RouterProps) => {
     },
     saveValues: async (values: ValueType[]) => {
       await saveValues(s3Client, routerProps, values)
+    },
+    saveOGP: async (pngBuffer: Buffer) => {
+      await saveOGP(s3Client, routerProps, pngBuffer)
     },
   }
 }

@@ -7,7 +7,8 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 export function generateMetadata() {
   return {
     title: `統計で見る都道府県`,
-    description: 'test',
+    description:
+      '都道府県に関する様々な統計をビジュアライズ化します。あなたの街の統計を見てみましょう。',
     authors: [{ name: 'uruhayato373', url: 'https://github.com/uruhayato373' }],
     // metadataBase: new URL(url),
     alternates: {
@@ -19,7 +20,7 @@ export function generateMetadata() {
       url: BASE_URL,
       images: [
         {
-          url: `${BASE_URL}/ogp/opengraph-image.png`,
+          url: 's3://stats47-ogp/ogp.png',
           width: 1200,
           height: 630,
         },

@@ -3,8 +3,9 @@ import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 import calcRankingValues from 'utils/value/modules/calcRankingValues'
 
-import saveBestWorstPNG from './modules/saveBestWorstPNG'
 import saveCorrelationPNG from './modules/saveCorrelationPNG'
+import saveJapanPNG from './modules/saveJapanPNG'
+import saveRankingPNG from './modules/saveRankingPNG'
 
 function formatRankingValues(document: DocumentType): ValueType[] {
   const { times, values } = document
@@ -22,12 +23,17 @@ const handlePNG = (
   routerProps: RouterProps,
   document: DocumentType
 ) => {
-  const values = formatRankingValues(document)
+  // 遅延評価のために、値を計算する関数を定義
+  const getValues = () => formatRankingValues(document)
+
   return {
-    saveBestWorstPNG: async () =>
-      await saveBestWorstPNG(title, routerProps, values),
+    saveRankingPNG: async () => {
+      const values = getValues() // ここで実際に計算を行う
+      await saveRankingPNG(title, routerProps, values)
+    },
     saveCorrelationPNG: async () =>
       await saveCorrelationPNG(title, routerProps, document),
+    saveJapanPNG: async () => await saveJapanPNG(title, routerProps, document),
   }
 }
 
