@@ -65,6 +65,7 @@
     "react-timer-hook": "^3.0.7",
     "sharp": "^0.33.4",
     "simplebar-react": "^3.2.4",
+    "slick-carousel": "^1.8.1",
     "swr": "^2.2.5",
     "topojson-client": "^3.1.0",
     "yup": "^1.4.0"
