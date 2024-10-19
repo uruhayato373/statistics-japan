@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { SectionsWrapperPropsType } from 'types/sections'
 import { DocumentType } from 'utils/document'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
@@ -48,7 +49,7 @@ async function SectionsWrapper({
   processDocument,
   options,
   linkButton,
-}) {
+}: SectionsWrapperPropsType) {
   const { prefCode, kindId } = routerProps
 
   let values: ValueType[] = []

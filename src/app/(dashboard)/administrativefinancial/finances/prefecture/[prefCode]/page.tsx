@@ -1,15 +1,19 @@
-import { Suspense } from 'react'
-
 import { Metadata } from 'next'
-
-import Loader from 'components/Loader'
+import dynamic from 'next/dynamic'
 
 import { handlePrefecture } from 'utils/prefecture'
 import handleProps from 'utils/props'
-import Prefecture from 'views/administrativefinancial/finances/prefecture'
 
 // SSGとしてレンダリング
-export const dynamic = 'force-static'
+export const generateStaticParams = async () => {
+  const prefectures = handlePrefecture().fetchItems()
+
+  return prefectures.map((p) => ({
+    prefCode: p.prefCode,
+  }))
+}
+
+export const dynamicParams = false
 
 // 定数
 const FIELD_ID = 'administrativefinancial'
@@ -21,14 +25,14 @@ interface Params {
   prefCode: string
 }
 
-// 静的に生成するパスを指定
-export async function generateStaticParams() {
-  const prefectures = handlePrefecture().fetchItems()
-
-  return prefectures.map((p) => ({
-    prefCode: p.prefCode,
-  }))
-}
+// 動的インポート
+const Prefecture = dynamic(
+  () => import('views/administrativefinancial/finances/prefecture'),
+  {
+    loading: () => <div>Loading...</div>,
+    ssr: false,
+  }
+)
 
 // 共通のhandlePropsを取得
 const getProps = (prefCode: string) =>
@@ -55,11 +59,7 @@ const Page = ({ params }: { params: Params }) => {
   const { prefCode } = params
   const { routerProps } = getProps(prefCode)
 
-  return (
-    <Suspense fallback={<Loader />}>
-      <Prefecture routerProps={routerProps} />
-    </Suspense>
-  )
+  return <Prefecture routerProps={routerProps} />
 }
 
 export default Page
