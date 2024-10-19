@@ -1,5 +1,8 @@
+import getEnvVariable from 'utils/getEnvVariable'
 import { ValueType } from 'utils/value'
 import formatNumberJapanese from 'utils/value/modules/formatNumberJapanese'
+
+const BASE_URL = getEnvVariable('NEXT_PUBLIC_BASE_URL')
 
 const generateTableInstagram = (
   title: string,
@@ -39,6 +42,7 @@ const generateTableInstagram = (
     .header { font: bold 32px sans-serif; fill: white; }
     .cell { font: bold 26px sans-serif; fill: #333333; }
     .number { font: bold 24px sans-serif; fill: #333333; }
+    .watermark { font: 24px sans-serif; fill: rgba(149, 165, 166, 0.5); }
   </style>
 
   <!-- 均一な青色の枠線 -->
@@ -64,6 +68,9 @@ const generateTableInstagram = (
     <text x="450" y="45" text-anchor="middle" class="header">ワースト5</text>
     ${generateRows(worstValues, worstColors, true)}
   </g>
+
+  <!-- ウォーターマーク -->
+  <text x="1060" y="1060" text-anchor="end" class="watermark">${BASE_URL}</text>
 </svg>
   `
 }

@@ -20,7 +20,7 @@ export function generateMetadata() {
       url: BASE_URL,
       images: [
         {
-          url: 's3://stats47-ogp/ogp.png',
+          url: 'https://stats47-ogp.s3.ap-northeast-1.amazonaws.com/ogp.png',
           width: 1200,
           height: 630,
         },

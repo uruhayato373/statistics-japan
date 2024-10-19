@@ -1,5 +1,8 @@
+import getEnvVariable from 'utils/getEnvVariable'
 import { ValueType } from 'utils/value'
 import formatNumberJapanese from 'utils/value/modules/formatNumberJapanese'
+
+const BASE_URL = getEnvVariable('NEXT_PUBLIC_BASE_URL')
 
 const generateChartX = (
   title: string,
@@ -40,6 +43,7 @@ const generateChartX = (
         .label { font-size: 14px; font-weight: bold; fill: #2c3e50; }
         .value { font-size: 16px; font-weight: bold; fill: #34495e; }
         .unit { font-size: 10px; fill: #7f8c8d; }
+        .watermark { font-size: 24px; fill: rgba(149, 165, 166, 0.5); }
       </style>
 
       <rect width="100%" height="100%" fill="#ecf0f1"/>
@@ -62,6 +66,9 @@ const generateChartX = (
       <g transform="translate(645, 180)">
         ${generateBars(worstValues, worstColors)}
       </g>
+
+      <!-- ウォーターマーク -->
+      <text x="1180" y="610" text-anchor="end" class="watermark">${BASE_URL}</text>
     </svg>
   `
 }
