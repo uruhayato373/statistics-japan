@@ -10,7 +10,7 @@ import generatePageTitle from './generateTitle'
 import { RouterProps } from '.'
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
-const S3_URL = 'https://stats47-ogp.s3.ap-northeast-1.amazonaws.com/'
+const S3_URL = 'https://stats47-ogp.s3.ap-northeast-1.amazonaws.com'
 
 const generateMetaProps = async ({
   fieldId,
