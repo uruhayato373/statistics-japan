@@ -18,7 +18,23 @@ async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
 
-  return values
+  return formatValues(values)
+}
+
+// format values
+function formatValues(values: ValueType[]): ValueType[] {
+  return values.map((d) => {
+    return {
+      ...d,
+      categoryName: d.categoryName
+        .replace('商品手持額（卸売業＋小売業）', '総数')
+        .replace('卸売業商品手持額', '卸売業')
+        .replace('小売業商品手持額', '小売業'),
+      // 単位を億円に変換
+      value: Math.round(Number(d.value) / 100),
+      unit: '億円',
+    }
+  })
 }
 
 // document

@@ -12,9 +12,9 @@ const PROPS = {
   kindId: 'prefecture',
 }
 
-const USE_SSG = getEnvVariable('USE_SSG')
+const USE_SSG = getEnvVariable('USE_SSG') === 'true'
 
-// Dynamic Routesの型定義
+// 型定義
 interface Params {
   prefCode: string
 }
@@ -22,9 +22,7 @@ interface Params {
 // 動的インポート
 const Prefecture = dynamic(
   () => import('views/tourism/railway-air/prefecture'),
-  {
-    suspense: true,
-  }
+  { suspense: true }
 )
 
 // メタデータの生成
@@ -40,7 +38,7 @@ export async function generateMetadata({
 
 // 条件付きSSG
 export const generateStaticParams = async () => {
-  if (USE_SSG === 'true') {
+  if (USE_SSG) {
     const prefectures = handlePrefecture().fetchItems()
     return prefectures.map((p) => ({
       prefCode: p.prefCode,
@@ -50,7 +48,7 @@ export const generateStaticParams = async () => {
 }
 
 // SSGがtrueの場合のみ動的ルートを無効化
-export const dynamicParams = USE_SSG !== 'true'
+export const dynamicParams = !USE_SSG
 
 // ページコンポーネント
 const Page = ({ params }: { params: Params }) => {

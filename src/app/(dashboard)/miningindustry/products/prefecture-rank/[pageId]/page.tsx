@@ -1,58 +1,32 @@
-import { ComponentType, Suspense } from 'react'
+import { ComponentType } from 'react'
 
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
-
-import Loader from 'components/Loader'
 
 import { handlePage } from 'utils/page'
 import handleProps, { RouterProps } from 'utils/props'
 import Error404 from 'views/maintenance/404'
 
 // 定数
-const FIELD_ID = 'miningindustry'
-const MENU_ID = 'products'
-const KIND_ID = 'prefecture-rank'
-
-// 動的インポートとコンポーネントマッピング
-const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
-  'product-shipment-amount': dynamic(
-    () =>
-      import(
-        'views/miningindustry/products/prefecture-rank/ProductShipmentAmount'
-      )
-  ),
-  'manufacturing-industry-added-value': dynamic(
-    () =>
-      import(
-        'views/miningindustry/products/prefecture-rank/ManufacturingIndustryAddedValue'
-      )
-  ),
-  'number-of-manufacturing-establishments': dynamic(
-    () =>
-      import(
-        'views/miningindustry/products/prefecture-rank/NumberOfManufacturingEstablishments'
-      )
-  ),
-  'number-of-manufacturing-employees': dynamic(
-    () =>
-      import(
-        'views/miningindustry/products/prefecture-rank/NumberOfManufacturingEmployees'
-      )
-  ),
+const PROPS = {
+  fieldId: 'miningindustry',
+  menuId: 'products',
+  kindId: 'prefecture-rank',
 }
 
-export async function generateStaticParams() {
-  const pages = handlePage().items(MENU_ID)
-
-  return pages.map((p) => ({
-    pageId: p.pageId,
-  }))
-}
+// コンポーネント名の配列
+const COMPONENT_NAMES = [
+  'product-shipment-amount',
+  'manufacturing-industry-added-value',
+  'number-of-manufacturing-establishments',
+  'number-of-manufacturing-employees',
+] as const
 
 // 型定義
+type ComponentName = (typeof COMPONENT_NAMES)[number]
+
 interface PageParams {
-  pageId: string
+  pageId: ComponentName
 }
 
 interface Props {
@@ -63,14 +37,41 @@ interface ComponentProps {
   routerProps: RouterProps
 }
 
+// ユーティリティ関数: ケバブケースをパスカルケースに変換
+const toPascalCase = (str: string) =>
+  str
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join('')
+
+// 動的インポートを生成する関数
+const createDynamicImport = (
+  name: ComponentName
+): ComponentType<ComponentProps> =>
+  dynamic(
+    () =>
+      import(
+        `views/${PROPS.fieldId}/${PROPS.menuId}/${PROPS.kindId}/${toPascalCase(name)}`
+      ),
+    { suspense: true }
+  )
+
+// 動的インポートとコンポーネントマッピング
+const COMPONENTS: Record<
+  ComponentName,
+  ComponentType<ComponentProps>
+> = Object.fromEntries(
+  COMPONENT_NAMES.map((name) => [name, createDynamicImport(name)])
+) as Record<ComponentName, ComponentType<ComponentProps>>
+
+// 静的パラメータ生成
+export async function generateStaticParams() {
+  const pages = handlePage().items(PROPS.menuId)
+  return pages.map((p) => ({ pageId: p.pageId as ComponentName }))
+}
+
 // 共通のprops生成関数
-const getProps = (pageId: string) =>
-  handleProps({
-    fieldId: FIELD_ID,
-    menuId: MENU_ID,
-    kindId: KIND_ID,
-    pageId,
-  })
+const getProps = (pageId: string) => handleProps({ ...PROPS, pageId })
 
 // メタデータ生成関数
 export async function generateMetadata({
@@ -91,11 +92,7 @@ const Page: React.FC<Props> = ({ params }: Props) => {
     return <Error404 />
   }
 
-  return (
-    <Suspense fallback={<Loader />}>
-      <Component routerProps={routerProps} />
-    </Suspense>
-  )
+  return <Component routerProps={routerProps} />
 }
 
 export default Page

@@ -131,9 +131,6 @@ export async function fetchEstatAPI(
       throw new Error('e-Stat APIからの応答形式が無効です')
     }
 
-    // jsonファイルに保存
-    // await actionSaveEstatResponse(paramsSerializer(normalizedParams), data)
-
     return data
   } catch (error) {
     throw new Error(

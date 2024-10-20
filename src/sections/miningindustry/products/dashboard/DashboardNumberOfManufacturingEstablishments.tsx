@@ -21,7 +21,17 @@ async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
 
-  return values
+  return formatValues(values)
+}
+
+// format values
+function formatValues(values: ValueType[]): ValueType[] {
+  return values.map((d) => {
+    return {
+      ...d,
+      unit: '所',
+    }
+  })
 }
 
 // document

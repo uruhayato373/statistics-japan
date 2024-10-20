@@ -1,6 +1,5 @@
 import SectionsWrapper from 'components/sections/SectionsWrapper'
 
-import { actionSaveJson } from 'actions/saveJson'
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -19,8 +18,6 @@ async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
 
-  await actionSaveJson(values, 'values.json')
-
   return formatValues(values)
 }
 
@@ -29,6 +26,10 @@ function formatValues(values: ValueType[]): ValueType[] {
   return values.map((d) => {
     return {
       ...d,
+      categoryName: d.categoryName
+        .replace('商業年間商品販売額（卸売業＋小売業）', '総数')
+        .replace('卸売業年間商品販売額', '卸売業')
+        .replace('小売業年間商品販売額', '小売業'),
       // 単位を億円に変換
       value: Math.round(Number(d.value) / 100),
       unit: '億円',

@@ -18,7 +18,20 @@ async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
 
-  return values
+  return formatValues(values)
+}
+
+// format values
+function formatValues(values: ValueType[]): ValueType[] {
+  return values.map((d) => {
+    return {
+      ...d,
+      categoryName: d.categoryName
+        .replace('商業従業者数（卸売業＋小売業）', '総数')
+        .replace('卸売業従業者数', '卸売業')
+        .replace('小売業従業者数', '小売業'),
+    }
+  })
 }
 
 // document
