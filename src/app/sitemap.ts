@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 import { handleMenu } from 'utils/menu'
 import { handlePage } from 'utils/page'
-import { handlePrefecture } from 'utils/prefecture'
+import handlePrefecture from 'utils/prefecture'
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 

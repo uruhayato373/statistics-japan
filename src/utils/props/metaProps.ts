@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { handleKind } from 'utils/kind'
 import { handleMenu } from 'utils/menu'
 import { handlePage } from 'utils/page'
-import { handlePrefecture } from 'utils/prefecture'
+import handlePrefecture from 'utils/prefecture'
 
 import generatePageTitle from './generateTitle'
 

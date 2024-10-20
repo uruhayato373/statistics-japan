@@ -1,35 +1,27 @@
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
+import getEnvVariable from 'utils/getEnvVariable'
+import handlePrefecture from 'utils/prefecture'
 import handleProps from 'utils/props'
-
-// SSGとしてレンダリング
-// export const generateStaticParams = async () => {
-//   const prefectures = handlePrefecture().fetchItems()
-
-//   return prefectures.map((p) => ({
-//     prefCode: p.prefCode,
-//   }))
-// }
-
-// export const dynamicParams = false
 
 // 定数
 const FIELD_ID = 'administrativefinancial'
 const MENU_ID = 'finances'
 const KIND_ID = 'prefecture'
 
-// Dynamic Routesの型定義
+const USE_SSG = getEnvVariable('USE_SSG')
+
+// 動的ルートの型定義
 interface Params {
   prefCode: string
 }
 
-// 動的インポート
+// 動的インポート（suspense: trueを追加）
 const Prefecture = dynamic(
   () => import('views/administrativefinancial/finances/prefecture'),
   {
-    loading: () => <div>Loading...</div>,
-    ssr: false,
+    suspense: true,
   }
 )
 
@@ -42,7 +34,7 @@ const getProps = (prefCode: string) =>
     prefCode,
   })
 
-// メタ情報を生成
+// メタデータの生成
 export async function generateMetadata({
   params,
 }: {
@@ -52,6 +44,20 @@ export async function generateMetadata({
   const { metaProps } = getProps(prefCode)
   return metaProps()
 }
+
+// 条件付きSSG
+export const generateStaticParams = async () => {
+  if (USE_SSG === 'true') {
+    const prefectures = handlePrefecture().fetchItems()
+    return prefectures.map((p) => ({
+      prefCode: p.prefCode,
+    }))
+  }
+  return []
+}
+
+// SSGがtrueの場合のみ動的ルートを無効化
+export const dynamicParams = USE_SSG !== 'true'
 
 // ページコンポーネント
 const Page = ({ params }: { params: Params }) => {

@@ -10,7 +10,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select'
 
 import { prefecture } from 'atoms'
 import useURL from 'hooks/useURL'
-import { handlePrefecture, PrefectureType } from 'utils/prefecture'
+import handlePrefecture, { PrefectureType } from 'utils/prefecture'
 
 import { useAtom } from 'jotai'
 

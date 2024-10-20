@@ -5,7 +5,6 @@ import calcRankingValues from 'utils/value/modules/calcRankingValues'
 
 import saveAWS from './modules/saveAWS'
 import saveLocal from './modules/saveLocal'
-import saveSupabase from './modules/saveSupabase'
 
 function formatRankingValues(document: DocumentType): ValueType[] {
   const { times, values } = document
@@ -25,7 +24,6 @@ const handleOGP = (
 ) => {
   const values = document ? formatRankingValues(document) : undefined
   return {
-    saveSupabase: async () => await saveSupabase(title, routerProps, values),
     saveLocal: async () => await saveLocal(title, routerProps, values),
     saveAWS: async () => await saveAWS(title, routerProps, values),
   }

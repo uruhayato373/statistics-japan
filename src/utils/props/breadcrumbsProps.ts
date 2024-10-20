@@ -2,7 +2,7 @@ import { FieldType, handleField } from 'utils/field'
 import { KindType, handleKind } from 'utils/kind'
 import { MenuType, handleMenu } from 'utils/menu'
 import { handlePage, PageType } from 'utils/page'
-import { PrefectureType, handlePrefecture } from 'utils/prefecture'
+import handlePrefecture, { PrefectureType } from 'utils/prefecture'
 
 import generatePageTitle from './generateTitle'
 

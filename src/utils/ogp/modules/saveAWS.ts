@@ -1,7 +1,7 @@
 import sharp from 'sharp'
 
 import handleAWS from 'utils/aws'
-import { handlePrefecture } from 'utils/prefecture'
+import handlePrefecture from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 

@@ -1,6 +1,6 @@
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 
-import { handlePrefecture } from 'utils/prefecture'
+import handlePrefecture from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 

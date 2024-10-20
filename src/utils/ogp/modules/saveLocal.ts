@@ -3,7 +3,7 @@ import path from 'path'
 
 import sharp from 'sharp'
 
-import { handlePrefecture } from 'utils/prefecture'
+import handlePrefecture from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
