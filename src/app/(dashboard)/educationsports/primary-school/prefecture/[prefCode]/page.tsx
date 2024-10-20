@@ -1,67 +1,66 @@
-import { Suspense } from 'react'
-
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 
-import Loader from 'components/Loader'
-
+import getEnvVariable from 'utils/getEnvVariable'
+import handlePrefecture from 'utils/prefecture'
 import handleProps from 'utils/props'
-import Prefecture from 'views/educationsports/primary-school/prefecture'
 
-// SSGとしてレンダリング
-// export const dynamic = 'force-static'
+// 定数
+const PROPS = {
+  fieldId: 'educationsports',
+  menuId: 'primary-school',
+  kindId: 'prefecture',
+}
+
+const USE_SSG = getEnvVariable('USE_SSG')
 
 // 生成時間の上限を設定
 export const revalidate = 180
 
-// 定数
-const FIELD_ID = 'educationsports'
-const MENU_ID = 'primary-school'
-const KIND_ID = 'prefecture'
-
-// Dynamic Routesの型定義
+// 動的ルートの型定義
 interface Params {
   prefCode: string
 }
 
-// 静的に生成するパスを指定
-// export async function generateStaticParams() {
-//   const prefectures = handlePrefecture().fetchItems()
+// 動的インポート
+const Prefecture = dynamic(
+  () => import('views/educationsports/primary-school/prefecture'),
+  {
+    suspense: true,
+  }
+)
 
-//   return prefectures.map((p) => ({
-//     prefCode: p.prefCode,
-//   }))
-// }
-
-// 共通のhandlePropsを取得
-const getProps = (prefCode: string) =>
-  handleProps({
-    fieldId: FIELD_ID,
-    menuId: MENU_ID,
-    kindId: KIND_ID,
-    prefCode,
-  })
-
-// メタ情報を生成
+// メタデータの生成
 export async function generateMetadata({
   params,
 }: {
   params: Params
 }): Promise<Metadata> {
   const { prefCode } = params
-  const { metaProps } = getProps(prefCode)
+  const { metaProps } = handleProps({ ...PROPS, prefCode })
   return metaProps()
 }
+
+// 条件付きSSG
+export const generateStaticParams = async () => {
+  if (USE_SSG === 'true') {
+    const prefectures = handlePrefecture().fetchItems()
+    return prefectures.map((p) => ({
+      prefCode: p.prefCode,
+    }))
+  }
+  return []
+}
+
+// SSGがtrueの場合のみ動的ルートを無効化
+export const dynamicParams = USE_SSG !== 'true'
 
 // ページコンポーネント
 const Page = ({ params }: { params: Params }) => {
   const { prefCode } = params
-  const { routerProps } = getProps(prefCode)
+  const { routerProps } = handleProps({ ...PROPS, prefCode })
 
-  return (
-    <Suspense fallback={<Loader />}>
-      <Prefecture routerProps={routerProps} />
-    </Suspense>
-  )
+  return <Prefecture routerProps={routerProps} />
 }
 
 export default Page

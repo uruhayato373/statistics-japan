@@ -6,9 +6,11 @@ import handlePrefecture from 'utils/prefecture'
 import handleProps from 'utils/props'
 
 // 定数
-const FIELD_ID = 'administrativefinancial'
-const MENU_ID = 'finances'
-const KIND_ID = 'prefecture'
+const PROPS = {
+  fieldId: 'administrativefinancial',
+  menuId: 'finances',
+  kindId: 'prefecture',
+}
 
 const USE_SSG = getEnvVariable('USE_SSG')
 
@@ -17,22 +19,13 @@ interface Params {
   prefCode: string
 }
 
-// 動的インポート（suspense: trueを追加）
+// 動的インポート
 const Prefecture = dynamic(
   () => import('views/administrativefinancial/finances/prefecture'),
   {
     suspense: true,
   }
 )
-
-// 共通のhandlePropsを取得
-const getProps = (prefCode: string) =>
-  handleProps({
-    fieldId: FIELD_ID,
-    menuId: MENU_ID,
-    kindId: KIND_ID,
-    prefCode,
-  })
 
 // メタデータの生成
 export async function generateMetadata({
@@ -41,7 +34,7 @@ export async function generateMetadata({
   params: Params
 }): Promise<Metadata> {
   const { prefCode } = params
-  const { metaProps } = getProps(prefCode)
+  const { metaProps } = handleProps({ ...PROPS, prefCode })
   return metaProps()
 }
 
@@ -62,7 +55,7 @@ export const dynamicParams = USE_SSG !== 'true'
 // ページコンポーネント
 const Page = ({ params }: { params: Params }) => {
   const { prefCode } = params
-  const { routerProps } = getProps(prefCode)
+  const { routerProps } = handleProps({ ...PROPS, prefCode })
 
   return <Prefecture routerProps={routerProps} />
 }
