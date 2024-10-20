@@ -1,40 +1,27 @@
-import { ComponentType, Suspense } from 'react'
+import { ComponentType } from 'react'
 
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
-
-import Loader from 'components/Loader'
 
 import { handlePage } from 'utils/page'
 import handleProps, { RouterProps } from 'utils/props'
 import Error404 from 'views/maintenance/404'
 
 // 定数
-const FIELD_ID = 'administrativefinancial'
-const MENU_ID = 'staff'
-const KIND_ID = 'prefecture-rank'
-
-// 動的インポートとコンポーネントマッピング
-const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
-  'administrative-department-employees': dynamic(
-    () =>
-      import(
-        'views/administrativefinancial/staff/prefecture-rank/AdministrativeDepartmentEmployees'
-      )
-  ),
+const PROPS = {
+  fieldId: 'administrativefinancial',
+  menuId: 'staff',
+  kindId: 'prefecture-rank',
 }
 
-export async function generateStaticParams() {
-  const pages = handlePage().items(MENU_ID)
-
-  return pages.map((p) => ({
-    pageId: p.pageId,
-  }))
-}
+// コンポーネント名の配列
+const COMPONENT_NAMES = ['administrative-department-employees']
 
 // 型定義
+type ComponentName = (typeof COMPONENT_NAMES)[number]
+
 interface PageParams {
-  pageId: string
+  pageId: ComponentName
 }
 
 interface Props {
@@ -45,14 +32,37 @@ interface ComponentProps {
   routerProps: RouterProps
 }
 
-// 共通のprops生成関数
-const getProps = (pageId: string) =>
-  handleProps({
-    fieldId: FIELD_ID,
-    menuId: MENU_ID,
-    kindId: KIND_ID,
-    pageId,
-  })
+// ユーティリティ関数: ケバブケースをパスカルケースに変換
+const toPascalCase = (str: string) =>
+  str
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join('')
+
+// 動的インポートを生成する関数
+const createDynamicImport = (
+  name: ComponentName
+): ComponentType<ComponentProps> =>
+  dynamic(
+    () =>
+      import(
+        `views/${PROPS.fieldId}/${PROPS.menuId}/${PROPS.kindId}/${toPascalCase(name)}`
+      )
+  ) as ComponentType<ComponentProps>
+
+// 動的インポートとコンポーネントマッピング
+const COMPONENTS: Record<
+  ComponentName,
+  ComponentType<ComponentProps>
+> = Object.fromEntries(
+  COMPONENT_NAMES.map((name) => [name, createDynamicImport(name)])
+) as Record<ComponentName, ComponentType<ComponentProps>>
+
+// 静的パラメータ生成
+export async function generateStaticParams() {
+  const pages = handlePage().items(PROPS.menuId)
+  return pages.map((p) => ({ pageId: p.pageId as ComponentName }))
+}
 
 // メタデータ生成関数
 export async function generateMetadata({
@@ -60,24 +70,20 @@ export async function generateMetadata({
 }: {
   params: PageParams
 }): Promise<Metadata> {
-  const { metaProps } = getProps(params.pageId)
+  const { metaProps } = handleProps({ ...PROPS, pageId: params.pageId })
   return metaProps()
 }
 
 // メインページコンポーネント
 const Page: React.FC<Props> = ({ params }: Props) => {
-  const { routerProps } = getProps(params.pageId)
+  const { routerProps } = handleProps({ ...PROPS, pageId: params.pageId })
   const Component = COMPONENTS[params.pageId]
 
   if (!Component) {
     return <Error404 />
   }
 
-  return (
-    <Suspense fallback={<Loader />}>
-      <Component routerProps={routerProps} />
-    </Suspense>
-  )
+  return <Component routerProps={routerProps} />
 }
 
 export default Page
