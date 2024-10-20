@@ -13,49 +13,63 @@ import formatDashboard from 'utils/dashboard'
 import DifferenceText from './DifferenceText'
 import ValueDisplay from './ValueDisplay'
 
-function CardHeader({ title, linkButton }) {
-  return (
-    <Stack
-      direction="row"
-      alignItems="center"
-      justifyContent="space-between"
-      sx={{ pb: 1 }}
-    >
-      <Typography variant="h6" color="text.secondary">
-        {title}
-      </Typography>
-      {linkButton && (
-        <Stack direction="row" spacing={1}>
-          {linkButton}
-        </Stack>
-      )}
-    </Stack>
-  )
+interface CardHeaderProps {
+  title: string
+  linkButton?: React.ReactNode
 }
 
-async function CardsDashboard({ title, document, linkButton }: CardsPropsType) {
+const CardHeader: React.FC<CardHeaderProps> = ({ title, linkButton }) => (
+  <Stack
+    direction="row"
+    alignItems="center"
+    justifyContent="space-between"
+    sx={{ pb: 1 }}
+  >
+    <Typography variant="h6" color="text.secondary">
+      {title}
+    </Typography>
+    {linkButton && (
+      <Stack direction="row" spacing={1}>
+        {linkButton}
+      </Stack>
+    )}
+  </Stack>
+)
+
+interface CardContentProps {
+  latest: ReturnType<typeof formatDashboard>[0]
+  previous: ReturnType<typeof formatDashboard>[1]
+}
+
+const CardContent: React.FC<CardContentProps> = ({ latest, previous }) => (
+  <>
+    <ValueDisplay value={latest.value} unit={latest.unit} rate={latest.rate} />
+    <Typography variant="caption" color="text.secondary">
+      {latest.timeName}
+    </Typography>
+    <Box sx={{ pt: 2.25 }}>
+      <Typography variant="caption" color="text.secondary">
+        {previous.timeName}から
+        <DifferenceText difference={latest.difference} unit={latest.unit} />
+      </Typography>
+    </Box>
+  </>
+)
+
+const CardsDashboard: React.FC<CardsPropsType> = async ({
+  title,
+  document,
+  linkButton,
+}) => {
   const [latest, previous] = formatDashboard(document)
 
   return (
-    <Suspense fallback={<CircularProgressCards />}>
-      <MainCard contentSX={{ p: 2.25 }}>
-        <CardHeader title={title} linkButton={linkButton} />
-        <ValueDisplay
-          value={latest.value}
-          unit={latest.unit}
-          rate={latest.rate}
-        />
-        <Typography variant="caption" color="text.secondary">
-          {latest.timeName}
-        </Typography>
-        <Box sx={{ pt: 2.25 }}>
-          <Typography variant="caption" color="text.secondary">
-            {previous.timeName}から
-            <DifferenceText difference={latest.difference} unit={latest.unit} />
-          </Typography>
-        </Box>
-      </MainCard>
-    </Suspense>
+    <MainCard contentSX={{ p: 2.25 }}>
+      <CardHeader title={title} linkButton={linkButton} />
+      <Suspense fallback={<CircularProgressCards />}>
+        <CardContent latest={latest} previous={previous} />
+      </Suspense>
+    </MainCard>
   )
 }
 
