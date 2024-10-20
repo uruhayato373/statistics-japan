@@ -1,94 +1,38 @@
-import { ComponentType, Suspense } from 'react'
+import { ComponentType } from 'react'
 
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
-
-import Loader from 'components/Loader'
 
 import { handlePage } from 'utils/page'
 import handleProps, { RouterProps } from 'utils/props'
 import Error404 from 'views/maintenance/404'
 
 // 定数
-const FIELD_ID = 'administrativefinancial'
-const MENU_ID = 'finances'
-const KIND_ID = 'prefecture-rank'
-
-// 動的インポートとコンポーネントマッピング
-const COMPONENTS: Record<string, ComponentType<ComponentProps>> = {
-  'financial-strength-index': dynamic(
-    () =>
-      import(
-        'views/administrativefinancial/finances/prefecture-rank/FinancialStrengthIndex'
-      )
-  ),
-  'total-revenue-settlement': dynamic(
-    () =>
-      import(
-        'views/administrativefinancial/finances/prefecture-rank/TotalRevenueSettlement'
-      )
-  ),
-  'total-expenditures': dynamic(
-    () =>
-      import(
-        'views/administrativefinancial/finances/prefecture-rank/TotalExpenditures'
-      )
-  ),
-  'future-burden-ratio': dynamic(
-    () =>
-      import(
-        'views/administrativefinancial/finances/prefecture-rank/FutureBurdenRatio'
-      )
-  ),
-  'real-debt-service-ratio': dynamic(
-    () =>
-      import(
-        'views/administrativefinancial/finances/prefecture-rank/RealDebtServiceRatio'
-      )
-  ),
-  'current-account-ratio': dynamic(
-    () =>
-      import(
-        'views/administrativefinancial/finances/prefecture-rank/CurrentAccountRatio'
-      )
-  ),
-  'current-amount-of-local-bonds': dynamic(
-    () =>
-      import(
-        'views/administrativefinancial/finances/prefecture-rank/CurrentAmountOfLocalBonds'
-      )
-  ),
-  'real-balance-ratio': dynamic(
-    () =>
-      import(
-        'views/administrativefinancial/finances/prefecture-rank/RealBalanceRatio'
-      )
-  ),
-  'standard-financial-income-amount': dynamic(
-    () =>
-      import(
-        'views/administrativefinancial/finances/prefecture-rank/StandardFinancialIncomeAmount'
-      )
-  ),
-  'standard-financial-demand-amount': dynamic(
-    () =>
-      import(
-        'views/administrativefinancial/finances/prefecture-rank/StandardFinancialDemandAmount'
-      )
-  ),
+const PROPS = {
+  fieldId: 'administrativefinancial',
+  menuId: 'finances',
+  kindId: 'prefecture-rank',
 }
 
-export async function generateStaticParams() {
-  const pages = handlePage().items(MENU_ID)
-
-  return pages.map((p) => ({
-    pageId: p.pageId,
-  }))
-}
+// コンポーネント名の配列
+const COMPONENT_NAMES = [
+  'financial-strength-index',
+  'total-revenue-settlement',
+  'total-expenditures',
+  'future-burden-ratio',
+  'real-debt-service-ratio',
+  'current-account-ratio',
+  'current-amount-of-local-bonds',
+  'real-balance-ratio',
+  'standard-financial-income-amount',
+  'standard-financial-demand-amount',
+]
 
 // 型定義
+type ComponentName = (typeof COMPONENT_NAMES)[number]
+
 interface PageParams {
-  pageId: string
+  pageId: ComponentName
 }
 
 interface Props {
@@ -99,14 +43,37 @@ interface ComponentProps {
   routerProps: RouterProps
 }
 
-// 共通のprops生成関数
-const getProps = (pageId: string) =>
-  handleProps({
-    fieldId: FIELD_ID,
-    menuId: MENU_ID,
-    kindId: KIND_ID,
-    pageId,
-  })
+// ユーティリティ関数: パスカルケースに変換
+const toPascalCase = (str: string) =>
+  str
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join('')
+
+// 動的インポートを生成する関数
+const createDynamicImport = (
+  name: ComponentName
+): ComponentType<ComponentProps> =>
+  dynamic(
+    () =>
+      import(
+        `views/administrativefinancial/finances/prefecture-rank/${toPascalCase(name)}`
+      ),
+    { suspense: true }
+  ) as ComponentType<ComponentProps>
+
+// 動的インポートとコンポーネントマッピング
+const COMPONENTS: Record<
+  ComponentName,
+  ComponentType<ComponentProps>
+> = Object.fromEntries(
+  COMPONENT_NAMES.map((name) => [name, createDynamicImport(name)])
+) as Record<ComponentName, ComponentType<ComponentProps>>
+
+export async function generateStaticParams() {
+  const pages = handlePage().items(PROPS.menuId)
+  return pages.map((p) => ({ pageId: p.pageId as ComponentName }))
+}
 
 // メタデータ生成関数
 export async function generateMetadata({
@@ -114,24 +81,20 @@ export async function generateMetadata({
 }: {
   params: PageParams
 }): Promise<Metadata> {
-  const { metaProps } = getProps(params.pageId)
+  const { metaProps } = handleProps({ ...PROPS, pageId: params.pageId })
   return metaProps()
 }
 
 // メインページコンポーネント
 const Page: React.FC<Props> = ({ params }: Props) => {
-  const { routerProps } = getProps(params.pageId)
+  const { routerProps } = handleProps({ ...PROPS, pageId: params.pageId })
   const Component = COMPONENTS[params.pageId]
 
   if (!Component) {
     return <Error404 />
   }
 
-  return (
-    <Suspense fallback={<Loader />}>
-      <Component routerProps={routerProps} />
-    </Suspense>
-  )
+  return <Component routerProps={routerProps} />
 }
 
 export default Page
