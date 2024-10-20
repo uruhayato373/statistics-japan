@@ -21,7 +21,19 @@ async function processValues() {
   const { fetchValues } = handleEstatAPI()
   const values = await fetchValues(ESTAT_PARAMS)
 
-  return values
+  return formatValues(values)
+}
+
+// format values
+function formatValues(values: ValueType[]): ValueType[] {
+  return values.map((d) => {
+    return {
+      ...d,
+      // 単位を億円に変換
+      value: Math.round(Number(d.value) / 100),
+      unit: '億円',
+    }
+  })
 }
 
 // document

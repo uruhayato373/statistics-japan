@@ -2,7 +2,6 @@ import SectionsWrapper from 'components/sections/SectionsWrapper'
 
 import { ApexOptions } from 'apexcharts'
 
-import { actionSaveJson } from 'actions/saveJson'
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -38,8 +37,6 @@ async function processValues(prefCode: string) {
   const values = await fetchValues(ESTAT_PARAMS)
   const filteredValues = values.filter((d) => d.areaCode === prefCode)
 
-  await actionSaveJson(filteredValues, 'values.json')
-
   return formatValues(filteredValues)
 }
 
@@ -57,8 +54,6 @@ function formatValues(values: ValueType[]) {
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
   const { formatDocument } = handleDocument(values)
   const document = formatDocument()
-
-  await actionSaveJson(document, 'document.json')
 
   return document
 }

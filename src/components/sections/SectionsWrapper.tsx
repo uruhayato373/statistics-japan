@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { actionSaveJson } from 'actions/saveJson'
 import { SectionsWrapperPropsType } from 'types/sections'
 import { DocumentType } from 'utils/document'
 import { RouterProps } from 'utils/props'
@@ -68,8 +67,6 @@ async function SectionsWrapper({
 
   const filteredValues = filterValues(values, kindId, prefCode)
   const document = await processDocument(filteredValues)
-
-  await actionSaveJson(document, `${cardTitle}.json`)
 
   await serverAction(cardTitle, routerProps, document)
 
