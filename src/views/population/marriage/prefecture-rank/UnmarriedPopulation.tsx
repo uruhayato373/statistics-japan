@@ -9,13 +9,11 @@ import ViewsHeader from 'components/views/ViewsHeader'
 
 import RankingUnmarriedPopulationMan from 'sections/population/marriage/prefecture-rank/RankingUnmarriedPopulationMan'
 import RankingUnmarriedPopulationWoman from 'sections/population/marriage/prefecture-rank/RankingUnmarriedPopulationWoman'
-import { RouterProps } from 'utils/props'
+import { ViewsPropsType } from 'types/views'
 
-interface Props {
-  routerProps: RouterProps
-}
-
-export default async function PrefectureRankView({ routerProps }: Props) {
+export default async function PrefectureRankView({
+  routerProps,
+}: ViewsPropsType) {
   return (
     <Suspense fallback={<CircularProgressViews />}>
       <ViewsHeader routerProps={routerProps} />

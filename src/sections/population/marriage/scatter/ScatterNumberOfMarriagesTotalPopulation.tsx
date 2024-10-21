@@ -1,5 +1,7 @@
 import SectionsWrapper from 'components/sections/SectionsWrapper'
 
+import { Options } from 'highcharts'
+
 import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
@@ -38,10 +40,10 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
-export default async function ScatterProductShipmentAmountTotalPopulation({
+export default async function ScatterNumberOfMarriagesTotalPopulation({
   routerProps,
   children,
-}: SectionsPropsType) {
+}: SectionsPropsType<Options>) {
   return (
     <SectionsWrapper
       routerProps={{ ...routerProps, cardId: CARD_ID }}

@@ -7,19 +7,19 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造業従業者数と製造品出荷額等'
-const CARD_ID = 'scatter-product-shipment-amount-manufacturing-employees'
+const CARD_TITLE = '離婚件数と婚姻件数'
+const CARD_ID = 'scatter-number-of-marriage-number-of-divorces'
 
-// x軸 製造業従業者数
+// x軸 離婚件数
 const ESTAT_PARAMS_MOLECULE = {
-  statsDataId: '0000010103',
-  cdCat01: 'C3404',
+  statsDataId: '0000010101',
+  cdCat01: 'A9201',
 }
 
-// y軸 製造品出荷額
+// y軸 婚姻件数
 const ESTAT_PARAMS_DENOMINATOR = {
-  statsDataId: '0000010103',
-  cdCat01: 'C3401',
+  statsDataId: '0000010101',
+  cdCat01: 'A9101',
 }
 
 // values
@@ -29,21 +29,7 @@ async function processValues() {
     ESTAT_PARAMS_DENOMINATOR,
   ])
 
-  return formatValues(values)
-}
-
-// format values
-function formatValues(values: ValueType[]): ValueType[] {
-  return values.map((d) => {
-    return {
-      ...d,
-      value:
-        d.categoryCode === 'C3401'
-          ? Math.round(Number(d.value) / 100)
-          : d.value,
-      unit: d.categoryCode === 'C3401' ? '億円' : d.unit,
-    }
-  })
+  return values
 }
 
 // document
@@ -54,7 +40,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
-export default async function ScatterProductShipmentAmountManufacturingEmployees({
+export default async function ScatterNumberOfMarriagesNumberOfDivorces({
   routerProps,
   children,
 }: SectionsPropsType<Options>) {
