@@ -16,8 +16,8 @@ const PROPS = {
 
 // コンポーネント名の配列
 const COMPONENT_NAMES = [
-  'laborforce-population',
-  'non-laborforce-population',
+  'labor-force-population',
+  'non-labor-force-population',
 ] as const
 
 // 型定義

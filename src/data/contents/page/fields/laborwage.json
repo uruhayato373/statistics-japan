@@ -1,11 +1,11 @@
 [
   {
-    "pageId": "laborforce-population",
+    "pageId": "labor-force-population",
     "pageTitle": "労働力人口",
     "menuId": "laborforce"
   },
   {
-    "pageId": "non-laborforce-population",
+    "pageId": "non-labor-force-population",
     "pageTitle": "非労働力人口",
     "menuId": "laborforce"
   }
