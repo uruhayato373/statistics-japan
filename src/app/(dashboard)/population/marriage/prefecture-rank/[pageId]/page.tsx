@@ -15,7 +15,11 @@ const PROPS = {
 }
 
 // コンポーネント名の配列
-const COMPONENT_NAMES = ['number-of-marriages', 'number-of-divorces'] as const
+const COMPONENT_NAMES = [
+  'number-of-marriages',
+  'number-of-divorces',
+  'unmarried-population',
+] as const
 
 // 型定義
 type ComponentName = (typeof COMPONENT_NAMES)[number]

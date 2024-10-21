@@ -58,5 +58,10 @@
     "pageId": "number-of-divorces",
     "pageTitle": "離婚件数",
     "menuId": "marriage"
+  },
+  {
+    "pageId": "unmarried-population",
+    "pageTitle": "未婚人口",
+    "menuId": "marriage"
   }
 ]

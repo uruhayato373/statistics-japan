@@ -5,43 +5,40 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '未婚人口（15歳以上）'
-const CARD_ID = 'axis-unmarried-population'
+const CARD_TITLE = '総人口と婚姻件数'
+const CARD_ID = 'scatter-number-of-marriage-total-population'
 
-const ESTAT_PARAMS = {
+// x軸 総人口
+const ESTAT_PARAMS_MOLECULE = {
   statsDataId: '0000010101',
-  cdCat01: ['A1601001', 'A1601002'],
+  cdCat01: 'A1101',
+}
+
+// y軸 婚姻件数
+const ESTAT_PARAMS_DENOMINATOR = {
+  statsDataId: '0000010101',
+  cdCat01: 'A9101',
 }
 
 // values
 async function processValues() {
-  const { fetchValues } = handleEstatAPI()
-  const values = await fetchValues(ESTAT_PARAMS)
+  const values = await handleEstatAPI().fetchValues([
+    ESTAT_PARAMS_MOLECULE,
+    ESTAT_PARAMS_DENOMINATOR,
+  ])
 
-  return formatValues(values)
-}
-
-// format values
-function formatValues(values: ValueType[]) {
-  return values.map((d) => ({
-    ...d,
-    categoryName: d.categoryName.replace('（15歳以上）', ''),
-  }))
+  return values
 }
 
 // document
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
-  const { formatDocument } = handleDocument(values)
-  const document = formatDocument()
-
-  document.categories[0].type = 'column'
-  document.categories[1].type = 'column'
+  const { formatLatestDocument } = handleDocument(values, 'common')
+  const document = formatLatestDocument()
 
   return document
 }
 
-// コンポーネントの描画
-export default async function AxisUnmarriedPopulation({
+export default async function ScatterProductShipmentAmountTotalPopulation({
   routerProps,
   children,
 }: SectionsPropsType) {

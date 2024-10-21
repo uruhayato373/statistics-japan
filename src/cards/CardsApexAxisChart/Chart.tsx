@@ -17,20 +17,35 @@ interface CustomDataPoint {
   unit?: string
 }
 
+// ApexCharts の型定義を拡張
+interface ApexChartContext {
+  w: {
+    config: {
+      series: {
+        data: CustomDataPoint[]
+      }[]
+    }
+  }
+  seriesIndex: number
+  dataPointIndex: number
+}
+
 const applyFormatterToYAxis = (
   yaxis: ApexYAxis | ApexYAxis[] | undefined
-): ApexYAxis | ApexYAxis[] | undefined => {
-  if (!yaxis)
-    return {
-      opposite: false,
+): ApexYAxis | ApexYAxis[] => {
+  const defaultYAxis: ApexYAxis = {
+    opposite: false,
+    show: true,
+    labels: {
       show: true,
-      labels: {
-        show: true,
-      },
-      tooltip: {
-        enabled: false,
-      },
-    }
+      formatter: (value) => formatNumberJapanese(value),
+    },
+    tooltip: {
+      enabled: false,
+    },
+  }
+
+  if (!yaxis) return defaultYAxis
 
   const applyFormatter = (axis: ApexYAxis): ApexYAxis => ({
     ...axis,
@@ -53,26 +68,42 @@ const applyFormatterToYAxis = (
     },
   })
 
-  if (Array.isArray(yaxis)) {
-    return yaxis.map(applyFormatter)
-  } else {
-    return applyFormatter(yaxis)
+  return Array.isArray(yaxis)
+    ? yaxis.map(applyFormatter)
+    : applyFormatter(yaxis)
+}
+
+const createTooltipFormatter = () => {
+  return function (value: number, context: ApexChartContext) {
+    const { seriesIndex, dataPointIndex, w } = context
+    const data = w.config.series[seriesIndex].data[
+      dataPointIndex
+    ] as CustomDataPoint
+    const unit = data.unit || ''
+
+    if (value == null) {
+      return `N/A ${unit}`
+    }
+
+    try {
+      return `${formatNumberJapanese(value)} ${unit}`
+    } catch (error) {
+      console.error('Error formatting tooltip value:', error)
+      return `${value} ${unit}`
+    }
   }
 }
 
-export default function ApexAxisChart({ options }: Props) {
+const useChartHeight = () => {
   const chartRef = useRef<HTMLDivElement>(null)
   const [chartHeight, setChartHeight] = useState(290)
 
   useEffect(() => {
     const updateHeight = () => {
       if (chartRef.current) {
-        const newHeight = chartRef.current.clientHeight
-        setChartHeight(newHeight)
+        setChartHeight(chartRef.current.clientHeight)
       }
     }
-
-    updateHeight()
 
     const resizeObserver = new ResizeObserver(updateHeight)
     const currentRef = chartRef.current
@@ -89,31 +120,19 @@ export default function ApexAxisChart({ options }: Props) {
     }
   }, [])
 
-  const customOptions = useMemo<ApexOptions>(() => {
-    return {
+  return { chartRef, chartHeight }
+}
+
+export default function ApexAxisChart({ options }: Props) {
+  const { chartRef, chartHeight } = useChartHeight()
+
+  const customOptions = useMemo<ApexOptions>(
+    () => ({
       ...options,
       yaxis: applyFormatterToYAxis(options.yaxis),
       tooltip: {
         y: {
-          formatter: function (
-            value: number,
-            { seriesIndex, dataPointIndex, w }
-          ) {
-            const data = w.config.series[seriesIndex].data[
-              dataPointIndex
-            ] as CustomDataPoint
-            const unit = data.unit || ''
-            // 値が null または undefined の場合の処理を追加
-            if (value == null) {
-              return `N/A ${unit}`
-            }
-            try {
-              return `${value.toLocaleString()} ${unit}`
-            } catch (error) {
-              console.error('Error formatting tooltip value:', error)
-              return `${value} ${unit}` // フォーマットに失敗した場合は元の値を返す
-            }
-          },
+          formatter: createTooltipFormatter(),
         },
       },
       chart: {
@@ -138,8 +157,9 @@ export default function ApexAxisChart({ options }: Props) {
           show: false,
         },
       },
-    }
-  }, [options, chartHeight])
+    }),
+    [options, chartHeight]
+  )
 
   return (
     <div ref={chartRef} style={{ width: '100%', height: '100%' }}>

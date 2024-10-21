@@ -5,13 +5,15 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '未婚人口（15歳以上）'
-const CARD_ID = 'axis-unmarried-population'
+const CARD_TITLE = '未婚人口（男性）'
+const CARD_ID = 'ranking-unmarried-population-man'
 
 const ESTAT_PARAMS = {
   statsDataId: '0000010101',
-  cdCat01: ['A1601001', 'A1601002'],
+  cdCat01: ['A1601001'],
 }
+
+const PAGE_ID = 'unmarried-population-man'
 
 // values
 async function processValues() {
@@ -31,23 +33,20 @@ function formatValues(values: ValueType[]) {
 
 // document
 async function processDocument(values: ValueType[]): Promise<DocumentType> {
-  const { formatDocument } = handleDocument(values)
-  const document = formatDocument()
-
-  document.categories[0].type = 'column'
-  document.categories[1].type = 'column'
+  const { formatRankingDocument } = handleDocument(values)
+  const document = formatRankingDocument()
 
   return document
 }
 
 // コンポーネントの描画
-export default async function AxisUnmarriedPopulation({
+export default async function RankingNumberOfDivorces({
   routerProps,
   children,
 }: SectionsPropsType) {
   return (
     <SectionsWrapper
-      routerProps={{ ...routerProps, cardId: CARD_ID }}
+      routerProps={{ ...routerProps, pageId: PAGE_ID, cardId: CARD_ID }}
       cardTitle={CARD_TITLE}
       processValues={processValues}
       processDocument={processDocument}
