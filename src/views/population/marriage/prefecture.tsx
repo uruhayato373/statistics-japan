@@ -7,6 +7,8 @@ import CardsApexAxisChart from 'cards/CardsApexAxisChart'
 import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
+import AxisAverageAgeOfFirstMarriage from 'sections/population/marriage/chart/AxisAverageAgeOfFirstMarriage'
+import AxisMarriagesDivorces from 'sections/population/marriage/chart/AxisMarriagesDivorces'
 import AxisUnmarriedPopulation from 'sections/population/marriage/chart/AxisUnmarriedPopulation'
 import PyramidBereavementPopulation from 'sections/population/marriage/chart/PyramidBereavementPopulation'
 import PyramidMaritalPopulation from 'sections/population/marriage/chart/PyramidMaritalPopulation'
@@ -32,27 +34,37 @@ const chartItems = [
   {
     Section: AxisUnmarriedPopulation,
     Card: CardsApexAxisChart,
-    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
+  },
+  {
+    Section: AxisMarriagesDivorces,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
+  },
+  {
+    Section: AxisAverageAgeOfFirstMarriage,
+    Card: CardsApexAxisChart,
+    gridProps: { xs: 12, sm: 6, md: 6, lg: 4 },
   },
   {
     Section: PyramidBereavementPopulation,
     Card: CardsApexPyramidChart,
-    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+    gridProps: { xs: 12, sm: 3, md: 3, lg: 3 },
   },
   {
     Section: PyramidMaritalPopulation,
     Card: CardsApexPyramidChart,
-    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+    gridProps: { xs: 12, sm: 3, md: 3, lg: 3 },
   },
   {
     Section: PyramidSeparatedPopulation,
     Card: CardsApexPyramidChart,
-    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+    gridProps: { xs: 12, sm: 3, md: 3, lg: 3 },
   },
   {
     Section: PyramidUnmarriedPopulation,
     Card: CardsApexPyramidChart,
-    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+    gridProps: { xs: 12, sm: 3, md: 3, lg: 3 },
   },
 ]
 
