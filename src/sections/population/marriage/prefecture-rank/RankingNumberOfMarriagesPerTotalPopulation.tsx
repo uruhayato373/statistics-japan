@@ -5,21 +5,21 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '製造品出荷額（従業者数当たり）'
-const CARD_ID = 'ranking-product-shipment-amount-per-manufacturing-employees'
+const CARD_TITLE = '婚姻件数（総人口一万人当たり）'
+const CARD_ID = 'ranking-number-of-marriages-per-total-population'
 
-const PAGE_ID = 'product-shipment-amount-per-manufacturing-employees'
+const PAGE_ID = 'number-of-marriages-per-total-population'
 
-// 分子 製造品出荷額
+// 分子 婚姻件数
 const ESTAT_PARAMS_MOLECULE = {
-  statsDataId: '0000010103',
-  cdCat01: 'C3401',
+  statsDataId: '0000010101',
+  cdCat01: 'A9101',
 }
 
-// 分母 製造業従業者数
+// 分母 総人口
 const ESTAT_PARAMS_DENOMINATOR = {
-  statsDataId: '0000010103',
-  cdCat01: 'C3404',
+  statsDataId: '0000010101',
+  cdCat01: 'A1101',
 }
 
 // values
@@ -38,8 +38,9 @@ function formatValues(values: ValueType[]): ValueType[] {
   return values.map((d) => {
     return {
       ...d,
-      value: Math.round(d.value * 100),
-      unit: '万円/人',
+      value: Math.round(d.value * 100000) / 10,
+      categoryName: '婚姻件数',
+      unit: '組/万人',
     }
   })
 }
@@ -53,7 +54,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function RankingProductShipmentAmountPerManufacturingEmployees({
+export default async function RankingNumberOfMarriagesPerTotalPopulation({
   routerProps,
   children,
 }: SectionsPropsType) {
