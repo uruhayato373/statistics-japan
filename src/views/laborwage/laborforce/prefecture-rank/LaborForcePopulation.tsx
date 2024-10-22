@@ -4,7 +4,7 @@ import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 import RankingLaborForcePopulation from 'sections/laborwage/laborforce/prefecture-rank/RankingLaborForcePopulation'
 import { ViewsPropsType } from 'types/views'
 
-export default async function LaborforcePopulation({
+export default async function NonLaborForcePopulation({
   routerProps,
 }: ViewsPropsType) {
   return (
