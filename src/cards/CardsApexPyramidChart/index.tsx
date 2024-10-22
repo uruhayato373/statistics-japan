@@ -1,51 +1,53 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { Suspense } from 'react'
 
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
-import FormControl from '@mui/material/FormControl'
-import MenuItem from '@mui/material/MenuItem'
-import Select, { SelectChangeEvent } from '@mui/material/Select'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 
-import ApexPyramidChart from 'components/apexcharts/ApexPyramidChart'
+import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
+import SelectTime from 'components/SelectTime'
 
 import { ApexOptions } from 'apexcharts'
 
+import ApexPyramidChart from 'cards/CardsApexPyramidChart/ApexPyramidChart'
+
+import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
 import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
+
+import Control from './Control'
+
+const DEFAULT_HEIGHT = '250px'
+
+interface ContentProps {
+  options: ApexOptions
+  height: string
+}
+
+const Content = ({ options, height }: ContentProps) => (
+  <Box sx={{ p: 2, height, overflow: 'hidden' }}>
+    <ApexPyramidChart options={options} />
+  </Box>
+)
 
 export default function CardsApexPyramidChart({
   title,
   document,
   options,
-  height,
+  height = DEFAULT_HEIGHT,
 }: CardsPropsType<ApexOptions>) {
-  const [selectedTimeCode, setSelectedTimeCode] = useState<string>('')
-
   const { times } = document
-  const sortedTimes = times.sort(
-    (a, b) => parseInt(b.timeCode) - parseInt(a.timeCode)
-  )
+  const [selectedTimeCode, SelectTimeComponent] = SelectTime({ times })
 
-  useEffect(() => {
-    setSelectedTimeCode(sortedTimes[0].timeCode)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  const handleTimeChange = (event: SelectChangeEvent<string>) => {
-    const newTime = event.target.value
-    setSelectedTimeCode(newTime)
-  }
+  const filteredDocument = useTimeFilteredDocument(document, selectedTimeCode)
 
   const formatOptions =
-    formatApexcharts(document).PyramidChart(selectedTimeCode)
+    formatApexcharts(filteredDocument).PyramidChart(selectedTimeCode)
   const customOptions = { ...formatOptions, ...options }
-
-  const boxStyle = height ? { height } : {}
 
   return (
     <MainCard content={false}>
@@ -60,24 +62,10 @@ export default function CardsApexPyramidChart({
         </Typography>
       </Stack>
       <Divider sx={{ mt: 1.5, mb: 1.5 }} />
-      <Box sx={{ p: 2, ...boxStyle }}>
-        <FormControl sx={{ minWidth: 80 }} size="small">
-          <Select
-            labelId="select-time-label"
-            id="select-time"
-            value={selectedTimeCode}
-            displayEmpty
-            onChange={handleTimeChange}
-          >
-            {sortedTimes.map((d) => (
-              <MenuItem key={d.timeCode} value={d.timeCode}>
-                {d.timeName}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-        <ApexPyramidChart options={customOptions} />
-      </Box>
+      <Control SelectTimeComponent={SelectTimeComponent} />
+      <Suspense fallback={<CircularProgressCards />}>
+        <Content options={customOptions} height={height} />
+      </Suspense>
     </MainCard>
   )
 }

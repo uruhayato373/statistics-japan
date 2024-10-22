@@ -1,5 +1,4 @@
 'use client'
-
 import { useMemo } from 'react'
 
 import { ApexOptions } from 'apexcharts'
@@ -40,7 +39,13 @@ const defaultOptions: ApexOptions = {
     },
   },
   yaxis: {
+    labels: {
+      show: false,
+    },
     stepSize: 1,
+  },
+  legend: {
+    show: false, // 凡例を非表示に設定
   },
 }
 
@@ -68,6 +73,15 @@ export default function ApexPyramidChart({ options, height = 300 }: Props) {
         axisTicks: {
           show: false,
         },
+      },
+      yaxis: {
+        ...mergedOptions.yaxis,
+        labels: {
+          show: false,
+        },
+      },
+      legend: {
+        show: false, // マージ後のオプションでも確実に非表示に設定
       },
       tooltip: {
         ...mergedOptions.tooltip,
