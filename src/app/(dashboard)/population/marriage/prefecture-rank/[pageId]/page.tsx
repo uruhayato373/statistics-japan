@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 
 import handlePage from 'utils/page'
 import handleProps, { RouterProps } from 'utils/props'
+import { toPascalCase } from 'utils/toPascalCase'
 import Error404 from 'views/maintenance/404'
 
 // 定数
@@ -14,39 +15,22 @@ const PROPS = {
   kindId: 'prefecture-rank',
 }
 
-// コンポーネント名の配列
-const COMPONENT_NAMES = [
-  'number-of-marriages',
-  'number-of-divorces',
-  'unmarried-population',
-] as const
-
-// 型定義
-type ComponentName = (typeof COMPONENT_NAMES)[number]
-
-interface PageParams {
-  pageId: ComponentName
-}
+// ページ一覧の取得
+const { items } = handlePage()
+const PAGES = items(PROPS.menuId)
 
 interface Props {
-  params: PageParams
+  params: {
+    pageId: string
+  }
 }
 
 interface ComponentProps {
   routerProps: RouterProps
 }
 
-// ユーティリティ関数: ケバブケースをパスカルケースに変換
-const toPascalCase = (str: string) =>
-  str
-    .split('-')
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join('')
-
 // 動的インポートを生成する関数
-const createDynamicImport = (
-  name: ComponentName
-): ComponentType<ComponentProps> =>
+const createDynamicImport = (name: string): ComponentType<ComponentProps> =>
   dynamic(
     () =>
       import(
@@ -57,27 +41,22 @@ const createDynamicImport = (
 
 // 動的インポートとコンポーネントマッピング
 const COMPONENTS: Record<
-  ComponentName,
+  string,
   ComponentType<ComponentProps>
 > = Object.fromEntries(
-  COMPONENT_NAMES.map((name) => [name, createDynamicImport(name)])
-) as Record<ComponentName, ComponentType<ComponentProps>>
+  PAGES.map((p) => p.pageId).map((name) => [name, createDynamicImport(name)])
+) as Record<string, ComponentType<ComponentProps>>
 
 // 静的パラメータ生成
 export async function generateStaticParams() {
-  const pages = handlePage().items(PROPS.menuId)
-  return pages.map((p) => ({ pageId: p.pageId as ComponentName }))
+  return PAGES.map((p) => ({ pageId: p.pageId as string }))
 }
 
 // 共通のprops生成関数
 const getProps = (pageId: string) => handleProps({ ...PROPS, pageId })
 
 // メタデータ生成関数
-export async function generateMetadata({
-  params,
-}: {
-  params: PageParams
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { metaProps } = getProps(params.pageId)
   return metaProps()
 }

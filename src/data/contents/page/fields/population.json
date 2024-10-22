@@ -60,6 +60,11 @@
     "menuId": "marriage"
   },
   {
+    "pageId": "average-age-of-first-marriage",
+    "pageTitle": "平均初婚年齢",
+    "menuId": "marriage"
+  },
+  {
     "pageId": "unmarried-population",
     "pageTitle": "未婚人口",
     "menuId": "marriage"

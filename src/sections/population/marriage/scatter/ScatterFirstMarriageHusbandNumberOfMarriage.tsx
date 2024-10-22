@@ -7,19 +7,19 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '総人口と未婚人口（男性）'
-const CARD_ID = 'scatter-product-shipment-amount-total-population'
+const CARD_TITLE = '婚姻件数と平均初婚年齢（夫）'
+const CARD_ID = 'scatter-product-first-marriage-husband-number-of-marriage'
 
-// x軸 総人口
+// x軸 婚姻件数
 const ESTAT_PARAMS_MOLECULE = {
   statsDataId: '0000010101',
-  cdCat01: 'A1101',
+  cdCat01: 'A9101',
 }
 
-// y軸 製造品出荷額
+// y軸 平均初婚年齢（夫）
 const ESTAT_PARAMS_DENOMINATOR = {
-  statsDataId: '0000010103',
-  cdCat01: 'C3401',
+  statsDataId: '0000010101',
+  cdCat01: 'A9111',
 }
 
 // values
@@ -29,21 +29,7 @@ async function processValues() {
     ESTAT_PARAMS_DENOMINATOR,
   ])
 
-  return formatValues(values)
-}
-
-// format values
-function formatValues(values: ValueType[]): ValueType[] {
-  return values.map((d) => {
-    return {
-      ...d,
-      value:
-        d.categoryCode === 'C3401'
-          ? Math.round(Number(d.value) / 100)
-          : d.value,
-      unit: d.categoryCode === 'C3401' ? '億円' : d.unit,
-    }
-  })
+  return values
 }
 
 // document
@@ -54,7 +40,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
   return document
 }
 
-export default async function ScatterProductShipmentAmountTotalPopulation({
+export default async function ScatterFirstMarriageHusbandNumberOfMarriage({
   routerProps,
   children,
 }: SectionsPropsType<Options>) {
