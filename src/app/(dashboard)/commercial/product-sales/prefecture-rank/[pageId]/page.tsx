@@ -3,7 +3,7 @@ import { ComponentType } from 'react'
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
-import { handlePage } from 'utils/page'
+import handlePage from 'utils/page'
 import handleProps, { RouterProps } from 'utils/props'
 import Error404 from 'views/maintenance/404'
 

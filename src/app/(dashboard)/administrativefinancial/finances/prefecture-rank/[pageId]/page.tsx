@@ -3,8 +3,9 @@ import { ComponentType } from 'react'
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
-import { handlePage } from 'utils/page'
+import handlePage from 'utils/page'
 import handleProps, { RouterProps } from 'utils/props'
+import { toPascalCase } from 'utils/toPascalCase'
 import Error404 from 'views/maintenance/404'
 
 // 定数
@@ -14,73 +15,45 @@ const PROPS = {
   kindId: 'prefecture-rank',
 }
 
-// コンポーネント名の配列
-const COMPONENT_NAMES = [
-  'financial-strength-index',
-  'total-revenue-settlement',
-  'total-expenditures',
-  'future-burden-ratio',
-  'real-debt-service-ratio',
-  'current-account-ratio',
-  'current-amount-of-local-bonds',
-  'real-balance-ratio',
-  'standard-financial-income-amount',
-  'standard-financial-demand-amount',
-]
-
-// 型定義
-type ComponentName = (typeof COMPONENT_NAMES)[number]
-
-interface PageParams {
-  pageId: ComponentName
-}
+// ページ一覧の取得
+const { items } = handlePage()
+const PAGES = items(PROPS.menuId)
 
 interface Props {
-  params: PageParams
+  params: {
+    pageId: string
+  }
 }
 
 interface ComponentProps {
   routerProps: RouterProps
 }
 
-// ユーティリティ関数: パスカルケースに変換
-const toPascalCase = (str: string) =>
-  str
-    .split('-')
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join('')
-
 // 動的インポートを生成する関数
-const createDynamicImport = (
-  name: ComponentName
-): ComponentType<ComponentProps> =>
+const createDynamicImport = (name: string): ComponentType<ComponentProps> =>
   dynamic(
     () =>
       import(
-        `views/administrativefinancial/finances/prefecture-rank/${toPascalCase(name)}`
+        `views/${PROPS.fieldId}/finances/prefecture-rank/${toPascalCase(name)}`
       ),
     { suspense: true }
   ) as ComponentType<ComponentProps>
 
 // 動的インポートとコンポーネントマッピング
 const COMPONENTS: Record<
-  ComponentName,
+  string,
   ComponentType<ComponentProps>
 > = Object.fromEntries(
-  COMPONENT_NAMES.map((name) => [name, createDynamicImport(name)])
-) as Record<ComponentName, ComponentType<ComponentProps>>
+  PAGES.map((p) => p.pageId).map((name) => [name, createDynamicImport(name)])
+) as Record<string, ComponentType<ComponentProps>>
 
+// 静的パスを生成
 export async function generateStaticParams() {
-  const pages = handlePage().items(PROPS.menuId)
-  return pages.map((p) => ({ pageId: p.pageId as ComponentName }))
+  return PAGES.map((p) => ({ pageId: p.pageId as string }))
 }
 
-// メタデータ生成関数
-export async function generateMetadata({
-  params,
-}: {
-  params: PageParams
-}): Promise<Metadata> {
+// メタデータを生成
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { metaProps } = handleProps({ ...PROPS, pageId: params.pageId })
   return metaProps()
 }

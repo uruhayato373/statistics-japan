@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 
 import { kind, prefecture } from 'atoms'
 import { KindType } from 'utils/kind'
-import { handlePage } from 'utils/page'
+import handlePage from 'utils/page'
 import { PrefectureType } from 'utils/prefecture'
 import { RouterProps } from 'utils/props'
 

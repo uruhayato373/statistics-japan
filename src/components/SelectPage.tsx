@@ -10,7 +10,7 @@ import MenuItem, { MenuItemProps } from '@mui/material/MenuItem'
 import Select from '@mui/material/Select'
 
 import useURL from 'hooks/useURL'
-import { handlePage } from 'utils/page'
+import handlePage from 'utils/page'
 
 // カスタムLinkMenuItemコンポーネントを作成
 const LinkMenuItem = forwardRef<HTMLAnchorElement, MenuItemProps & LinkProps>(

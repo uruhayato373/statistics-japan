@@ -10,7 +10,7 @@ import Tabs from '@mui/material/Tabs'
 
 import LineChartOutlined from '@ant-design/icons/LineChartOutlined'
 
-import { handlePage } from 'utils/page'
+import handlePage from 'utils/page'
 
 function TabPage() {
   const pathname = usePathname()

@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 import Loader from 'components/Loader'
 
-import { handlePage } from 'utils/page'
+import handlePage from 'utils/page'
 import handleProps, { RouterProps } from 'utils/props'
 import Error404 from 'views/maintenance/404'
 
