@@ -26,7 +26,7 @@ function formatValues(values: ValueType[]) {
   return values.map((d) => ({
     ...d,
     categoryName: d.categoryName
-      .replace('平均初婚年齢（', '')
+      .replace('平均婚姻年齢（', '')
       .replace('）', ''),
   }))
 }
