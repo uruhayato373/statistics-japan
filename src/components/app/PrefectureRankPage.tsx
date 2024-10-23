@@ -2,7 +2,7 @@ import { ComponentType } from 'react'
 
 import { Metadata } from 'next'
 
-import { AppsProps } from 'types/apps'
+import { AppsPropsType } from 'types/apps'
 import { ViewsPropsType } from 'types/views'
 import { createDynamicImport } from 'utils/createDynamicImport'
 import handlePage from 'utils/page'
@@ -28,13 +28,17 @@ export const PrefectureRankPage = (props: RouterProps) => {
   }
 
   // メタデータを生成する関数
-  const generateMetadata = async ({ params }: AppsProps): Promise<Metadata> => {
+  const generateMetadata = async ({
+    params,
+  }: AppsPropsType): Promise<Metadata> => {
     const { metaProps } = handleProps({ ...props, pageId: params.pageId })
     return metaProps()
   }
 
   // ページコンポーネント
-  const PageComponent: React.FC<AppsProps> = ({ params }: AppsProps) => {
+  const PageComponent: React.FC<AppsPropsType> = ({
+    params,
+  }: AppsPropsType) => {
     const { routerProps } = handleProps({ ...props, pageId: params.pageId })
     const Component = COMPONENTS[params.pageId]
 

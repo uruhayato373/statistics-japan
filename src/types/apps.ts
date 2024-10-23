@@ -1,4 +1,4 @@
-export interface AppsProps {
+export interface AppsPropsType {
   params: {
     pageId: string
   }
