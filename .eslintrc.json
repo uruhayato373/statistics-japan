@@ -137,6 +137,11 @@
             "pattern": "{src/utils,src/utils/**}",
             "group": "internal",
             "position": "after"
+          },
+          {
+            "pattern": "{src/types,src/types/**}",
+            "group": "internal",
+            "position": "after"
           }
         ]
       }
