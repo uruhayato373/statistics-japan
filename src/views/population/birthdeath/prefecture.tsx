@@ -8,6 +8,7 @@ import CardsApexPieChart from 'cards/CardsApexPieChart'
 import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
+import AxisNumberOfBirthsDeaths from 'sections/population/birthdeath/chart/AxisNumberOfBirthsDeaths'
 import AxisNumberOfStillbirths from 'sections/population/birthdeath/chart/AxisNumberOfStillbirths'
 import PieNumberOfBirthsByMothersAge from 'sections/population/birthdeath/chart/PieNumberOfBirthsByMothersAge'
 import PyramidNumberOfDeaths from 'sections/population/birthdeath/chart/PyramidNumberOfDeaths'
@@ -30,18 +31,23 @@ const dashboardItems = [
 // chart items
 const chartItems = [
   {
-    Section: AxisNumberOfStillbirths,
+    Section: AxisNumberOfBirthsDeaths,
     Card: CardsApexAxisChart,
-    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+    gridProps: { xs: 12, sm: 5, md: 5, lg: 5 },
   },
   {
     Section: PieNumberOfBirthsByMothersAge,
     Card: CardsApexPieChart,
-    gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
+    gridProps: { xs: 12, sm: 3, md: 3, lg: 3 },
   },
   {
     Section: PyramidNumberOfDeaths,
     Card: CardsApexPyramidChart,
+    gridProps: { xs: 12, sm: 4, md: 4, lg: 4 },
+  },
+  {
+    Section: AxisNumberOfStillbirths,
+    Card: CardsApexAxisChart,
     gridProps: { xs: 12, sm: 6, md: 6, lg: 6 },
   },
 ]

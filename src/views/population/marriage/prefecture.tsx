@@ -73,7 +73,7 @@ const tableItems = [
   {
     Section: TableMarriage,
     Card: CardsReactTimeTable,
-    gridProps: { xs: 12, md: 6, lg: 6 },
+    gridProps: { xs: 12, md: 6, lg: 4 },
   },
 ]
 

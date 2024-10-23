@@ -14,3 +14,9 @@ export type CardsPropsType<
   options?: T
   linkButton?: ReactNode
 }
+
+export interface CardsHeaderPropsType {
+  title: string
+  csvButton: React.ReactNode
+  linkButton?: React.ReactNode
+}

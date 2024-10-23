@@ -1,12 +1,8 @@
 import { Stack, Typography } from '@mui/material'
 
-interface HeaderProps {
-  title: string
-  csvButton: React.ReactNode
-  linkButton?: React.ReactNode
-}
+import { CardsHeaderPropsType } from 'types/cards'
 
-const Header = ({ title, csvButton, linkButton }: HeaderProps) => (
+const Header = ({ title, csvButton, linkButton }: CardsHeaderPropsType) => (
   <Stack
     direction="row"
     alignItems="center"

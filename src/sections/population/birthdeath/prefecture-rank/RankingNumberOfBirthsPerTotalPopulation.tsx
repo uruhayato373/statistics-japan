@@ -5,15 +5,15 @@ import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
 
-const CARD_TITLE = '離婚件数（総人口一万人当たり）'
-const CARD_ID = 'ranking-number-of-divorces-per-total-population'
+const CARD_TITLE = '出生数（総人口一万人当たり）'
+const CARD_ID = 'ranking-number-of-births-per-total-population'
 
-const PAGE_ID = 'number-of-divorces-per-total-population'
+const PAGE_ID = 'number-of-births-per-total-population'
 
-// 分子 婚姻件数
+// 分子 出生数
 const ESTAT_PARAMS_MOLECULE = {
   statsDataId: '0000010101',
-  cdCat01: 'A9201',
+  cdCat01: 'A4101',
 }
 
 // 分母 総人口
@@ -39,8 +39,8 @@ function formatValues(values: ValueType[]): ValueType[] {
     return {
       ...d,
       value: Math.round(d.value * 100000) / 10,
-      categoryName: '婚姻件数',
-      unit: '組/万人',
+      categoryName: '出生数',
+      unit: '人/万人',
     }
   })
 }
@@ -54,7 +54,7 @@ async function processDocument(values: ValueType[]): Promise<DocumentType> {
 }
 
 // コンポーネントの描画
-export default async function RankingNumberOfDivorcesPerTotalPopulation({
+export default async function RankingNumberOfBirthsPerTotalPopulation({
   routerProps,
   children,
 }: SectionsPropsType) {

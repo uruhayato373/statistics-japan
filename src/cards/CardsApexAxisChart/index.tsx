@@ -41,12 +41,12 @@ export default async function CardsApexAxisChart({
   linkButton,
 }: CardsPropsType<ApexOptions>) {
   // 非同期処理を行う
-  const formatOptions = await formatApexcharts(document).AxisTimeChart()
+  const formatOptions = formatApexcharts(document).AxisTimeChart()
   const customOptions = options
     ? deepMerge(options, formatOptions)
     : formatOptions
 
-  const { headers, data } = await formatCSV(document).AxisChart()
+  const { headers, data } = formatCSV(document).AxisChart()
   const filename = `${title}.csv`
 
   const csvButton = (

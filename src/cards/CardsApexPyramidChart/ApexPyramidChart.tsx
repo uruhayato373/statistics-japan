@@ -1,25 +1,26 @@
 'use client'
-import { useMemo } from 'react'
+import { useMemo, useRef, useEffect, useState } from 'react'
 
 import { ApexOptions } from 'apexcharts'
 import ReactApexChart from 'react-apexcharts'
 
+import deepMerge from 'utils/deepMerge'
+
 interface Props {
   options: ApexOptions
-  height?: number
 }
 
 const defaultOptions: ApexOptions = {
   chart: {
     type: 'bar',
     stacked: true,
+    toolbar: {
+      show: false,
+    },
   },
   colors: ['#008FFB', '#FF4560'],
   plotOptions: {
     bar: {
-      borderRadius: 5,
-      borderRadiusApplication: 'end',
-      borderRadiusWhenStacked: 'all',
       horizontal: true,
       barHeight: '80%',
     },
@@ -45,7 +46,7 @@ const defaultOptions: ApexOptions = {
     stepSize: 1,
   },
   legend: {
-    show: false, // 凡例を非表示に設定
+    show: false,
   },
 }
 
@@ -53,35 +54,44 @@ const formatNumber = (value: number): string => {
   return Math.abs(value).toLocaleString()
 }
 
-export default function ApexPyramidChart({ options, height = 300 }: Props) {
+export default function ApexPyramidChart({ options }: Props) {
+  const chartRef = useRef<HTMLDivElement>(null)
+  const [chartHeight, setChartHeight] = useState(300)
+
+  useEffect(() => {
+    const updateHeight = () => {
+      if (chartRef.current) {
+        const parentHeight = chartRef.current.clientHeight
+        const newHeight = Math.max(parentHeight, 200)
+        setChartHeight(newHeight)
+      }
+    }
+
+    updateHeight()
+
+    const resizeObserver = new ResizeObserver(updateHeight)
+    const currentRef = chartRef.current
+
+    if (currentRef) {
+      resizeObserver.observe(currentRef)
+    }
+
+    return () => {
+      if (currentRef) {
+        resizeObserver.unobserve(currentRef)
+      }
+      resizeObserver.disconnect()
+    }
+  }, [])
+
   const customOptions = useMemo<ApexOptions>(() => {
-    const mergedOptions = { ...defaultOptions, ...options }
+    const mergedOptions = deepMerge(defaultOptions, options)
+
     return {
       ...mergedOptions,
       chart: {
         ...mergedOptions.chart,
-        height: height,
-      },
-      xaxis: {
-        ...mergedOptions.xaxis,
-        labels: {
-          show: false,
-        },
-        axisBorder: {
-          show: false,
-        },
-        axisTicks: {
-          show: false,
-        },
-      },
-      yaxis: {
-        ...mergedOptions.yaxis,
-        labels: {
-          show: false,
-        },
-      },
-      legend: {
-        show: false, // マージ後のオプションでも確実に非表示に設定
+        height: chartHeight,
       },
       tooltip: {
         ...mergedOptions.tooltip,
@@ -93,14 +103,16 @@ export default function ApexPyramidChart({ options, height = 300 }: Props) {
         },
       },
     }
-  }, [options, height])
+  }, [options, chartHeight])
 
   return (
-    <ReactApexChart
-      options={customOptions}
-      series={customOptions.series}
-      type="bar"
-      height={height}
-    />
+    <div ref={chartRef} style={{ width: '100%', height: '100%' }}>
+      <ReactApexChart
+        options={customOptions}
+        series={customOptions.series}
+        type="bar"
+        height={chartHeight}
+      />
+    </div>
   )
 }

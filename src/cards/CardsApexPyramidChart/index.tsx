@@ -4,12 +4,11 @@ import { Suspense } from 'react'
 
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
-import Stack from '@mui/material/Stack'
-import Typography from '@mui/material/Typography'
 
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 import SelectTime from 'components/SelectTime'
+import CSVExport from 'components/third-party/react-table/CSVExport'
 
 import { ApexOptions } from 'apexcharts'
 
@@ -18,8 +17,10 @@ import ApexPyramidChart from 'cards/CardsApexPyramidChart/ApexPyramidChart'
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
 import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
+import formatCSV from 'utils/csv'
 
 import Control from './Control'
+import Header from './Header'
 
 const DEFAULT_HEIGHT = '250px'
 
@@ -33,6 +34,11 @@ const Content = ({ options, height }: ContentProps) => (
     <ApexPyramidChart options={options} />
   </Box>
 )
+
+const useCSVData = (document: CardsPropsType<ApexOptions>['document']) => {
+  const { headers, data } = formatCSV(document).AxisChart()
+  return { headers, data }
+}
 
 export default function CardsApexPyramidChart({
   title,
@@ -49,18 +55,15 @@ export default function CardsApexPyramidChart({
     formatApexcharts(filteredDocument).PyramidChart(selectedTimeCode)
   const customOptions = { ...formatOptions, ...options }
 
+  const { headers, data } = useCSVData(document)
+  const filename = `${title}.csv`
+
+  const csvButton = (
+    <CSVExport data={data} headers={headers} filename={filename} />
+  )
   return (
     <MainCard content={false}>
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        sx={{ p: 2, pb: 0 }}
-      >
-        <Typography variant="h5" color="text.primary">
-          {title}
-        </Typography>
-      </Stack>
+      <Header title={title} csvButton={csvButton} />
       <Divider sx={{ mt: 1.5, mb: 1.5 }} />
       <Control SelectTimeComponent={SelectTimeComponent} />
       <Suspense fallback={<CircularProgressCards />}>

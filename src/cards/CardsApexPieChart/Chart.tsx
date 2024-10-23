@@ -15,11 +15,14 @@ const defaultOptions: ApexOptions = {
   chart: {
     type: 'donut',
     toolbar: {
-      show: false,
+      show: true,
     },
   },
   dataLabels: {
     enabled: true,
+  },
+  legend: {
+    show: false,
   },
 }
 

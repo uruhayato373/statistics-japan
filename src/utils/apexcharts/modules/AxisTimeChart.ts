@@ -10,24 +10,28 @@ const formatAxisTimeChart = (
     const { categories, times, values } = document
     return {
       xaxis: {
-        categories: times.map((time) => time.timeName),
+        categories: times
+          .sort((a, b) => parseInt(a.timeCode) - parseInt(b.timeCode))
+          .map((time) => time.timeName),
         type: 'category',
       },
       series: categories.map((c) => {
         return {
           name: c.categoryName,
-          data: times.map((time) => {
-            const value = values.find(
-              (v) =>
-                v.timeCode === time.timeCode &&
-                v.categoryCode === c.categoryCode
-            )
-            return {
-              x: time.timeName,
-              y: value ? value.value : null,
-              unit: value ? value.unit : null,
-            }
-          }),
+          data: times
+            .sort((a, b) => parseInt(a.timeCode) - parseInt(b.timeCode))
+            .map((time) => {
+              const value = values.find(
+                (v) =>
+                  v.timeCode === time.timeCode &&
+                  v.categoryCode === c.categoryCode
+              )
+              return {
+                x: time.timeName,
+                y: value ? value.value : null,
+                unit: value ? value.unit : null,
+              }
+            }),
           type: c.type ? c.type : 'line',
         }
       }),
