@@ -1,13 +1,23 @@
 import { ComponentType } from 'react'
 
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 
 import { AppsPropsType } from 'types/apps'
 import { ViewsPropsType } from 'types/views'
-import { createDynamicImport } from 'utils/createDynamicImport'
 import handlePage from 'utils/page'
 import handleProps, { RouterProps } from 'utils/props'
+import { toPascalCase } from 'utils/toPascalCase'
 import Error404 from 'views/maintenance/404'
+
+const createDynamicImport = (
+  { fieldId, menuId, kindId }: RouterProps,
+  name: string
+): ComponentType<ViewsPropsType> =>
+  dynamic(
+    () => import(`views/${fieldId}/${menuId}/${kindId}/${toPascalCase(name)}`),
+    { suspense: true }
+  ) as ComponentType<ViewsPropsType>
 
 export const PrefectureRankPage = (props: RouterProps) => {
   // ページ一覧の取得
