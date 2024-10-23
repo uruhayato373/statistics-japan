@@ -7,6 +7,7 @@ const PROPS = {
   kindId: 'japan',
 }
 
+// ページコンポーネント（共通）
 const { PageComponent, generateMetadata } = JapanPage(PROPS)
 
 export { generateMetadata }
