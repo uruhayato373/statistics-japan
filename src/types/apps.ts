@@ -1,5 +1,6 @@
 export interface AppsPropsType {
   params: {
-    pageId: string
+    pageId?: string
+    prefCode?: string
   }
 }
