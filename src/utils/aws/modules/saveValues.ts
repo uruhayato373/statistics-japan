@@ -1,7 +1,7 @@
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 
+import { RouterPropsType } from 'types/apps'
 import handlePrefecture from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 import generateFileName from './generateFileName'
@@ -42,7 +42,7 @@ async function uploadToS3(
 
 async function uploadJapanData(
   s3Client: S3Client,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   values: ValueType[]
 ): Promise<UploadResult> {
   const fileName = generateFileName(routerProps)
@@ -52,7 +52,7 @@ async function uploadJapanData(
 
 async function uploadPrefectureData(
   s3Client: S3Client,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   values: ValueType[]
 ): Promise<UploadResult> {
   const prefectures = handlePrefecture().fetchItems()
@@ -79,7 +79,7 @@ async function uploadPrefectureData(
 
 async function uploadPrefectureRankData(
   s3Client: S3Client,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   values: ValueType[]
 ): Promise<UploadResult> {
   const fileName = generateFileName(routerProps)
@@ -89,7 +89,7 @@ async function uploadPrefectureRankData(
 
 export default async function saveValues(
   s3Client: S3Client,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   values: ValueType[]
 ): Promise<UploadResult> {
   try {

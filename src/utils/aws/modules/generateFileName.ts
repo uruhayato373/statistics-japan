@@ -1,4 +1,4 @@
-import { RouterProps } from 'utils/props'
+import { RouterPropsType } from 'types/apps'
 
 const generateFileName = ({
   fieldId,
@@ -6,7 +6,7 @@ const generateFileName = ({
   kindId,
   cardId,
   prefCode,
-}: RouterProps): string => {
+}: RouterPropsType): string => {
   const fileName = prefCode ? `${cardId}/${prefCode}.json` : `${cardId}.json`
   return `${fieldId}/${menuId}/${kindId}/${fileName}`
 }

@@ -6,12 +6,12 @@ import dynamic from 'next/dynamic'
 import { AppsPropsType } from 'types/apps'
 import { ViewsPropsType } from 'types/views'
 import handlePage from 'utils/page'
-import handleProps, { RouterProps } from 'utils/props'
+import handleProps from 'utils/props'
 import { toPascalCase } from 'utils/toPascalCase'
 import Error404 from 'views/maintenance/404'
 
 const createDynamicImport = (
-  { fieldId, menuId, kindId }: RouterProps,
+  { fieldId, menuId, kindId }: RouterPropsType,
   name: string
 ): ComponentType<ViewsPropsType> =>
   dynamic(
@@ -19,7 +19,7 @@ const createDynamicImport = (
     { suspense: true }
   ) as ComponentType<ViewsPropsType>
 
-export const PrefectureRankPage = (props: RouterProps) => {
+export const PrefectureRankPage = (props: RouterPropsType) => {
   // ページ一覧の取得
   const { items } = handlePage()
   const PAGES = items(props.menuId)

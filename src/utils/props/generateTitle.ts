@@ -10,17 +10,6 @@ type Args = {
   prefecture?: PrefectureType
 }
 
-/**
- * ページタイトルを生成する関数
- *
- * @param {Args} params - タイトル生成に必要なパラメータ
- * @param {MenuType} params.menu - メニュー情報
- * @param {KindType} params.kind - 種別情報
- * @param {PageType} params.page - ページ情報
- * @param {PrefectureType} params.prefecture - 都道府県情報
- *
- * @returns {string} 生成されたページタイトル
- */
 const generatePageTitle = ({ menu, kind, page, prefecture }: Args): string => {
   switch (kind.kindId) {
     case 'japan':

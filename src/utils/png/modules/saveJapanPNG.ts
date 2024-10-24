@@ -1,5 +1,5 @@
+import { RouterPropsType } from 'types/apps'
 import { DocumentType } from 'utils/document'
-import { RouterProps } from 'utils/props'
 
 import generateFilePath from './generateFilePath'
 import { generateAxisChartX } from './japan/axisChartX'
@@ -7,7 +7,7 @@ import savePNG from './savePNG'
 
 const saveJapanPNG = async (
   title: string,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   document: DocumentType
 ) => {
   if (process.env.NODE_ENV !== 'development') {

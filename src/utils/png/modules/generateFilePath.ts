@@ -1,9 +1,9 @@
 import path from 'path'
 
-import { RouterProps } from 'utils/props'
+import { RouterPropsType } from 'types/apps'
 
 // 保存先のファイル名を生成
-const generateFilePath = (routerProps: RouterProps, fileName: string) => {
+const generateFilePath = (routerProps: RouterPropsType, fileName: string) => {
   const { fieldId, menuId, kindId, pageId, cardId } = routerProps
 
   // kindIdに応じてpageIdまたはcardIdを選択

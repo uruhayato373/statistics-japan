@@ -3,8 +3,8 @@ import path from 'path'
 
 import sharp from 'sharp'
 
+import { RouterPropsType } from 'types/apps'
 import handlePrefecture from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 import generateJapanSVG from './generateJapanSVG'
@@ -19,7 +19,7 @@ export interface D3MapChartSeries {
 }
 
 // 保存先のファイル名を生成
-const generateFileName = (routerProps: RouterProps) => {
+const generateFileName = (routerProps: RouterPropsType) => {
   const { fieldId, menuId, kindId, pageId, prefCode } = routerProps
   const filename = prefCode ? `${prefCode}.png` : `${pageId}.png`
   const filePath = path.join(
@@ -45,7 +45,7 @@ async function ensureDirectoryExists(filePath: string) {
 }
 
 // japan
-async function saveJapan(title: string, routerProps: RouterProps) {
+async function saveJapan(title: string, routerProps: RouterPropsType) {
   const svgString = generateJapanSVG(title)
   const pngFilePath = generateFileName({ ...routerProps, prefCode: '00000' })
   await ensureDirectoryExists(pngFilePath)
@@ -53,7 +53,7 @@ async function saveJapan(title: string, routerProps: RouterProps) {
 }
 
 // prefecture
-async function savePrefecture(title: string, routerProps: RouterProps) {
+async function savePrefecture(title: string, routerProps: RouterPropsType) {
   const prefectures = handlePrefecture().fetchItems()
 
   const savePrefecturePromises = prefectures.map(async (prefecture) => {
@@ -72,7 +72,7 @@ async function savePrefecture(title: string, routerProps: RouterProps) {
 // prefecture-rank
 async function savePrefectureRank(
   title: string,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   values: ValueType[]
 ) {
   const svgString = await generatePrefectureRankSVG(title, values)
@@ -83,7 +83,7 @@ async function savePrefectureRank(
 
 export default async function saveSupabase(
   title: string,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   values?: ValueType[]
 ) {
   const { kindId } = routerProps

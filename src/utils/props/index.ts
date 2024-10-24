@@ -1,14 +1,7 @@
+import { RouterPropsType } from 'types/apps'
+
 import generateBreadcrumbsProps from './breadcrumbsProps'
 import generateMetaProps from './metaProps'
-
-export interface RouterProps {
-  fieldId: string
-  menuId: string
-  kindId: string
-  pageId?: string
-  cardId?: string
-  prefCode?: string
-}
 
 function camelToKebabCase(str: string): string {
   return str
@@ -22,7 +15,7 @@ const handleProps = ({
   kindId,
   pageId,
   prefCode,
-}: RouterProps) => {
+}: RouterPropsType) => {
   const routerProps = {
     fieldId,
     menuId,

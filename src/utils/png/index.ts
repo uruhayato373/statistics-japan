@@ -1,5 +1,5 @@
+import { RouterPropsType } from 'types/apps'
 import { DocumentType } from 'utils/document'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 import calcRankingValues from 'utils/value/modules/calcRankingValues'
 
@@ -20,7 +20,7 @@ function formatRankingValues(document: DocumentType): ValueType[] {
 
 const handlePNG = (
   title: string,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   document: DocumentType
 ) => {
   // 遅延評価のために、値を計算する関数を定義

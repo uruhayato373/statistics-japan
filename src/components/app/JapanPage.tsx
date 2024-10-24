@@ -4,18 +4,18 @@ import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
 import { ViewsPropsType } from 'types/views'
-import handleProps, { RouterProps } from 'utils/props'
+import handleProps from 'utils/props'
 
 const createDynamicImport = ({
   fieldId,
   menuId,
   kindId,
-}: RouterProps): ComponentType<ViewsPropsType> =>
+}: RouterPropsType): ComponentType<ViewsPropsType> =>
   dynamic(() => import(`views/${fieldId}/${menuId}/${kindId}`), {
     suspense: true,
   }) as ComponentType<ViewsPropsType>
 
-export const JapanPage = (props: RouterProps) => {
+export const JapanPage = (props: RouterPropsType) => {
   // 動的インポート
   const DynamicComponent: ComponentType<ViewsPropsType> =
     createDynamicImport(props)

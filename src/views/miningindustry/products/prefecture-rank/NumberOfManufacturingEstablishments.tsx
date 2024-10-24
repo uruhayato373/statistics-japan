@@ -8,10 +8,10 @@ import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 import ViewsHeader from 'components/views/ViewsHeader'
 
 import RankingNumberOfManufacturingEstablishments from 'sections/miningindustry/products/prefecture-rank/RankingNumberOfManufacturingEstablishments'
-import { RouterProps } from 'utils/props'
+import { RouterPropsType } from 'types/apps'
 
 interface Props {
-  routerProps: RouterProps
+  routerProps: RouterPropsType
 }
 
 export default async function PrefectureRankView({ routerProps }: Props) {

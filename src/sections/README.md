@@ -16,9 +16,6 @@ fieldId > menuId のサブディレクトリを手動で作成
 
 pageIdごとに、{chart, table, selectPrefecture}を返却するコンポーネントを作成する。
 
-
-
-
 ## 責務
 
 ### e-Stat APIのパラメータ設定
@@ -28,7 +25,7 @@ e-Stat APIを利用する場合、paramsを設定する。
 paramsは、都道府県と市区町村で異なる可能性があるので、基本形は次の通りとする。
 
 ```ts
-const params = (routerProps: RouterProps) => {
+const params = (routerProps: RouterPropsType) => {
   switch (routerProps.kindId) {
     case 'japan':
       return {

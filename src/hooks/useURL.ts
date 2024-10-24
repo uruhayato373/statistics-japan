@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 import { kind, prefecture } from 'atoms'
+import { RouterPropsType } from 'types/apps'
 import { KindType } from 'utils/kind'
 import handlePage from 'utils/page'
 import { PrefectureType } from 'utils/prefecture'
-import { RouterProps } from 'utils/props'
 
 import { useAtom } from 'jotai'
 
@@ -19,13 +19,14 @@ export default function useURL() {
 
   const pathname = usePathname()
 
-  const [currentRouterProps, setCurrentRouterProps] = useState<RouterProps>({
-    fieldId: null,
-    menuId: null,
-    kindId: null,
-    pageId: null,
-    prefCode: null,
-  })
+  const [currentRouterPropsType, setCurrentRouterPropsType] =
+    useState<RouterPropsType>({
+      fieldId: null,
+      menuId: null,
+      kindId: null,
+      pageId: null,
+      prefCode: null,
+    })
 
   useEffect(() => {
     // pathnameからrouterPropsを取得する
@@ -38,7 +39,7 @@ export default function useURL() {
     } = {}
 
     // routerPropsをセット
-    setCurrentRouterProps({
+    setCurrentRouterPropsType({
       fieldId: fieldId,
       menuId: menuId,
       kindId: kindId,
@@ -69,8 +70,8 @@ export default function useURL() {
    * 統計種別を変更した場合のURLを生成
    */
   const changeKindURL = (newKindId: string): string => {
-    if (!currentRouterProps.fieldId) return ''
-    const { fieldId, menuId } = currentRouterProps
+    if (!currentRouterPropsType.fieldId) return ''
+    const { fieldId, menuId } = currentRouterPropsType
     const pageId = handlePage().items(menuId)[0].pageId
 
     switch (newKindId) {
@@ -89,7 +90,7 @@ export default function useURL() {
    * Menuを変更した場合のURLを生成
    */
   const changeMenuURL = (newId: string): string => {
-    const { fieldId, kindId } = currentRouterProps
+    const { fieldId, kindId } = currentRouterPropsType
     const pageId = handlePage().items(newId)[0].pageId
     switch (kindId) {
       case 'japan':
@@ -107,7 +108,7 @@ export default function useURL() {
    * 都道府県を変更した場合のURLを生成
    */
   const changePrefURL = (newCode: string): string => {
-    const { fieldId, menuId, kindId } = currentRouterProps
+    const { fieldId, menuId, kindId } = currentRouterPropsType
     switch (kindId) {
       case 'prefecture':
         return `/${fieldId}/${menuId}/${kindId}/${newCode}`
@@ -118,12 +119,12 @@ export default function useURL() {
    * 都道府県を変更した場合のURLを生成
    */
   const changePageURL = (newId: string): string => {
-    const { fieldId, menuId } = currentRouterProps
+    const { fieldId, menuId } = currentRouterPropsType
     return `/${fieldId}/${menuId}/prefecture-rank/${newId}`
   }
 
   return {
-    ...currentRouterProps,
+    ...currentRouterPropsType,
     changeKindURL,
     changePrefURL,
     changePageURL,

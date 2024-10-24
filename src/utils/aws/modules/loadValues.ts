@@ -4,7 +4,7 @@ import {
   ListObjectsV2Command,
 } from '@aws-sdk/client-s3'
 
-import { RouterProps } from 'utils/props'
+import { RouterPropsType } from 'types/apps'
 import { ValueType } from 'utils/value'
 
 import generateFileName from './generateFileName'
@@ -13,7 +13,7 @@ const BUCKET_NAME = 'stats47-values' // S3バケット名を指定
 
 export default async function loadValues(
   s3Client: S3Client,
-  routerProps: RouterProps
+  routerProps: RouterPropsType
 ): Promise<ValueType[] | null> {
   const fileName = generateFileName(routerProps)
 

@@ -7,19 +7,19 @@ import { AppsPropsType } from 'types/apps'
 import { ViewsPropsType } from 'types/views'
 import getEnvVariable from 'utils/getEnvVariable'
 import handlePrefecture from 'utils/prefecture'
-import handleProps, { RouterProps } from 'utils/props'
+import handleProps from 'utils/props'
 import Error404 from 'views/maintenance/404'
 
 const createDynamicImport = ({
   fieldId,
   menuId,
   kindId,
-}: RouterProps): ComponentType<ViewsPropsType> =>
+}: RouterPropsType): ComponentType<ViewsPropsType> =>
   dynamic(() => import(`views/${fieldId}/${menuId}/${kindId}`), {
     suspense: true,
   }) as ComponentType<ViewsPropsType>
 
-export const PrefecturePage = (props: RouterProps) => {
+export const PrefecturePage = (props: RouterPropsType) => {
   const USE_SSG = getEnvVariable('USE_SSG')
 
   // 条件付きSSG

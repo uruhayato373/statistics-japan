@@ -1,4 +1,4 @@
-import { RouterProps } from 'utils/props'
+import { RouterPropsType } from 'types/apps'
 import { ValueType } from 'utils/value'
 
 import generateFilePath from './generateFilePath'
@@ -12,7 +12,7 @@ import savePNG from './savePNG'
 
 const saveRankingPNG = async (
   title: string,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   values: ValueType[]
 ) => {
   if (process.env.NODE_ENV !== 'development') {

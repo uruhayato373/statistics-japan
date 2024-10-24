@@ -1,6 +1,6 @@
 import regionsData from 'data/prefecture/regions.json'
 import prefectures from 'data/prefecture/resasPrefList.json'
-import { RouterProps } from 'utils/props'
+import { RouterPropsType } from 'types/apps'
 
 export interface ResasPrefectureType {
   prefCode: number
@@ -21,7 +21,7 @@ const handlePrefecture = () => {
   return {
     fetchItems: () => fetchItems(),
     findItem: (prefCode: string) => findItem(prefCode),
-    getPrefecture: (routerProps: RouterProps) => getPrefecture(routerProps),
+    getPrefecture: (routerProps: RouterPropsType) => getPrefecture(routerProps),
     fetchRegions: () => fetchRegions(),
     getStaticParams: () => getStaticParams(),
   }
@@ -59,7 +59,7 @@ const findItem = (prefCode: string): PrefectureType | undefined => {
 }
 
 const getPrefecture = (
-  routerProps: RouterProps
+  routerProps: RouterPropsType
 ): PrefectureType | undefined => {
   const { kindId, prefCode } = routerProps
   if (kindId === 'prefecture') {

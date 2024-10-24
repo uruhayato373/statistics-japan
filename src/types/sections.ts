@@ -1,8 +1,8 @@
 import { ApexOptions } from 'apexcharts'
 import { Options } from 'highcharts'
 
+import { RouterPropsType } from 'types/apps'
 import { DocumentType } from 'utils/document'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 import { CardsPropsType } from './cards'
@@ -10,7 +10,7 @@ import { CardsPropsType } from './cards'
 export interface SectionsPropsType<
   T extends Options | ApexOptions = ApexOptions,
 > {
-  routerProps?: RouterProps
+  routerProps?: RouterPropsType
   children: (props: CardsPropsType<T>) => React.ReactNode
 }
 

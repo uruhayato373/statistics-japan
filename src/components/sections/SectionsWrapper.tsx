@@ -1,8 +1,8 @@
 import React from 'react'
 
+import { RouterPropsType } from 'types/apps'
 import { SectionsWrapperPropsType } from 'types/sections'
 import { DocumentType } from 'utils/document'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 
 const SAVE_OGP = process.env.SAVE_OGP === 'true'
@@ -11,7 +11,7 @@ const USE_ESTAT_API = process.env.USE_ESTAT_API === 'true'
 
 async function serverAction(
   title: string,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   document: DocumentType
 ) {
   if (SAVE_OGP && routerProps.kindId === 'prefecture-rank') {

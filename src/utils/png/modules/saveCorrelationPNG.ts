@@ -1,6 +1,6 @@
+import { RouterPropsType } from 'types/apps'
 import formatD3charts from 'utils/d3charts'
 import { DocumentType } from 'utils/document'
-import { RouterProps } from 'utils/props'
 
 import generateFilePath from './generateFilePath'
 import generateScatterPlot from './ranking/ScatterPlot'
@@ -8,7 +8,7 @@ import savePNG from './savePNG'
 
 const saveCorrelationPNG = async (
   title: string,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   document: DocumentType
 ) => {
   if (process.env.NODE_ENV !== 'development') {

@@ -5,12 +5,12 @@ import Grid from '@mui/material/Grid'
 
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import { RouterProps } from 'utils/props'
+import { RouterPropsType } from 'types/apps'
 
 import ViewsHeader from './ViewsHeader'
 
 interface Props {
-  routerProps: RouterProps
+  routerProps: RouterPropsType
   children: React.ReactNode
 }
 

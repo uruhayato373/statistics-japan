@@ -5,20 +5,20 @@ import { Options } from 'highcharts'
 import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
 import CardsReactPrefectureRankingTable from 'cards/CardsReactPrefectureRankingTable'
 
+import { RouterPropsType } from 'types/apps'
 import { CardsPropsType } from 'types/cards'
-import { RouterProps } from 'utils/props'
 
 import GridItem from './GridItem'
 
 interface Props {
   title?: string
   Section: React.ComponentType<{
-    routerProps: RouterProps
+    routerProps: RouterPropsType
     children: (
       props: CardsPropsType<Options> | CardsPropsType
     ) => React.ReactNode
   }>
-  routerProps: RouterProps
+  routerProps: RouterPropsType
 }
 
 const PrefectureRankingCards = ({ title, Section, routerProps }: Props) => (

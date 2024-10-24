@@ -1,13 +1,12 @@
 import { Metadata } from 'next'
 
+import { RouterPropsType } from 'types/apps'
 import { handleKind } from 'utils/kind'
 import { handleMenu } from 'utils/menu'
 import handlePage from 'utils/page'
 import handlePrefecture from 'utils/prefecture'
 
 import generatePageTitle from './generateTitle'
-
-import { RouterProps } from '.'
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 const S3_URL = 'https://stats47-ogp.s3.ap-northeast-1.amazonaws.com'
@@ -18,7 +17,7 @@ const generateMetaProps = async ({
   kindId,
   pageId,
   prefCode,
-}: RouterProps): Promise<Metadata> => {
+}: RouterPropsType): Promise<Metadata> => {
   const currentMenu = handleMenu().findItem(menuId)
   const currentKind = handleKind().findItem(kindId)
   const currentPage = handlePage().findItem(pageId)

@@ -5,16 +5,13 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import SelectPage from 'components/SelectPage'
 import SelectPrefecture from 'components/SelectPrefecture'
 
+import { ViewsPropsType } from 'types/views'
 import handleOGP from 'utils/ogp'
-import handleProps, { RouterProps } from 'utils/props'
-
-interface Props {
-  routerProps: RouterProps
-}
+import handleProps from 'utils/props'
 
 const SAVE_OGP = process.env.SAVE_OGP
 
-const ViewsHeader = async ({ routerProps }: Props) => {
+const ViewsHeader = async ({ routerProps }: ViewsPropsType) => {
   const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
 
   // OGP画像の保存

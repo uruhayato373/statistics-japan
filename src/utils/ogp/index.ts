@@ -1,5 +1,5 @@
+import { RouterPropsType } from 'types/apps'
 import { DocumentType } from 'utils/document'
-import { RouterProps } from 'utils/props'
 import { ValueType } from 'utils/value'
 import calcRankingValues from 'utils/value/modules/calcRankingValues'
 
@@ -19,7 +19,7 @@ function formatRankingValues(document: DocumentType): ValueType[] {
 
 const handleOGP = (
   title: string,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   document?: DocumentType
 ) => {
   const values = document ? formatRankingValues(document) : undefined

@@ -1,10 +1,10 @@
 import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3'
 
-import { RouterProps } from 'utils/props'
+import { RouterPropsType } from 'types/apps'
 
 const BUCKET_NAME = 'stats47-ogp'
 
-const generateFileName = (routerProps: RouterProps) => {
+const generateFileName = (routerProps: RouterPropsType) => {
   const { fieldId, menuId, kindId, pageId, prefCode } = routerProps
   const fileName = prefCode ? `${prefCode}.png` : `${pageId}.png`
   return `${fieldId}/${menuId}/${kindId}/${fileName}`
@@ -12,7 +12,7 @@ const generateFileName = (routerProps: RouterProps) => {
 
 export default async function saveOGP(
   s3Client: S3Client,
-  routerProps: RouterProps,
+  routerProps: RouterPropsType,
   pngBuffer: Buffer
 ) {
   const fileName = generateFileName(routerProps)

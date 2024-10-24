@@ -1,6 +1,6 @@
 import { S3Client } from '@aws-sdk/client-s3'
 
-import { RouterProps } from 'utils/props'
+import { RouterPropsType } from 'types/apps'
 import { ValueType } from 'utils/value'
 
 import loadValues from './modules/loadValues'
@@ -25,7 +25,7 @@ const s3Client = new S3Client({
   },
 })
 
-const handleAWS = (routerProps: RouterProps) => {
+const handleAWS = (routerProps: RouterPropsType) => {
   return {
     loadValues: async () => {
       return await loadValues(s3Client, routerProps)

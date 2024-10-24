@@ -1,43 +1,20 @@
-import { FieldType, handleField } from 'utils/field'
-import { KindType, handleKind } from 'utils/kind'
-import { MenuType, handleMenu } from 'utils/menu'
-import handlePage, { PageType } from 'utils/page'
+import { RouterPropsType } from 'types/apps'
+import { BreadcrumbsPropsType } from 'types/views'
+import { handleField } from 'utils/field'
+import { handleKind } from 'utils/kind'
+import { handleMenu } from 'utils/menu'
+import handlePage from 'utils/page'
 import handlePrefecture, { PrefectureType } from 'utils/prefecture'
 
 import generatePageTitle from './generateTitle'
 
-import { RouterProps } from '.'
-
-/**
- * breadcrumbsのプロパティの型定義
- */
-export type BreadcrumbsPropsType = {
-  fields: FieldType[]
-  currentField: FieldType
-  menus: MenuType[]
-  currentMenu: MenuType
-  kinds: KindType[]
-  currentKind: KindType
-  pages?: PageType[]
-  currentPage?: PageType
-  prefectures?: PrefectureType[]
-  currentPrefecture?: PrefectureType
-  pageTitle: string
-}
-
-/**
- * breadcrumbsのプロパティを生成する非同期関数
- * @param props - ルーターのプロパティ
- * @returns パンくずリストのプロパティ
- * @throws エラーが発生した場合
- */
 const generateBreadcrumbsProps = async ({
   fieldId,
   menuId,
   kindId,
   pageId,
   prefCode,
-}: RouterProps): Promise<BreadcrumbsPropsType> => {
+}: RouterPropsType): Promise<BreadcrumbsPropsType> => {
   try {
     // フィールドのデータ取得
     const fields = handleField().items
@@ -87,12 +64,6 @@ const generateBreadcrumbsProps = async ({
 
 export default generateBreadcrumbsProps
 
-/**
- * 都道府県と市区町村のデータを非同期に取得する
- * @param prefCode - 都道府県コード
- * @param cityCode - 市区町村コード
- * @returns 都道府県と市区町村のデータ
- */
 async function fetchLocationData(
   prefCode?: string
 ): Promise<[PrefectureType[] | undefined, PrefectureType | undefined]> {

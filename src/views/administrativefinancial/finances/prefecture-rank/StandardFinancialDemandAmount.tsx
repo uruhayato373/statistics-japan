@@ -2,10 +2,10 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingStandardFinancialDemandAmount from 'sections/administrativefinancial/finances/prefecture-rank/RankingStandardFinancialDemandAmount'
-import { RouterProps } from 'utils/props'
+import { RouterPropsType } from 'types/apps'
 
 interface Props {
-  routerProps: RouterProps
+  routerProps: RouterPropsType
 }
 
 export default async function PrefectureRankView({ routerProps }: Props) {

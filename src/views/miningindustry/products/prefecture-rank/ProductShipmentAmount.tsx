@@ -11,10 +11,10 @@ import RankingProductShipmentAmountPerManufacturingEmployees from 'sections/mini
 import ScatterProductShipmentAmountManufacturingEmployees from 'sections/miningindustry/products/scatter/ScatterProductShipmentAmountManufacturingEmployees'
 import ScatterProductShipmentAmountManufacturingEstablishments from 'sections/miningindustry/products/scatter/ScatterProductShipmentAmountManufacturingEstablishments'
 import ScatterProductShipmentAmountTotalPopulation from 'sections/miningindustry/products/scatter/ScatterProductShipmentAmountTotalPopulation'
-import { RouterProps } from 'utils/props'
+import { RouterPropsType } from 'types/apps'
 
 interface Props {
-  routerProps: RouterProps
+  routerProps: RouterPropsType
 }
 
 const ScatterCharts = [
