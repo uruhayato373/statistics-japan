@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingConsumerPriceRegionalDifferenceIndex from 'sections/economy/consumer-price-index/prefecture-rank/RankingConsumerPriceRegionalDifferenceIndex'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function ConsumerPriceRegionalDifferenceIndex({

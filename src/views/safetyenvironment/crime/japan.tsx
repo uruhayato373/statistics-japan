@@ -3,9 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisProstitutionOffender from 'sections/safetyenvironment/crime/chart/AxisProstitutionOffender'
 import AxisSpecialLawOffender from 'sections/safetyenvironment/crime/chart/AxisSpecialLawOffender'
 import AxisStimulantDrugCrackdown from 'sections/safetyenvironment/crime/chart/AxisStimulantDrugCrackdown'
@@ -17,6 +14,10 @@ import TableNumberOfPeopleArrestedForCriminalLawCrimes from 'sections/safetyenvi
 import TableNumberOfPeopleArrestedForJuvenileCriminalLawOffenses from 'sections/safetyenvironment/crime/table/TableNumberOfPeopleArrestedForJuvenileCriminalLawOffenses'
 import TableNumberOfRecognizedCriminalLawOffenses from 'sections/safetyenvironment/crime/table/TableNumberOfRecognizedCriminalLawOffenses'
 import TableRoadTrafficLawViolation from 'sections/safetyenvironment/crime/table/TableRoadTrafficLawViolation'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

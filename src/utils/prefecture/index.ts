@@ -1,5 +1,6 @@
 import regionsData from 'data/prefecture/regions.json'
 import prefectures from 'data/prefecture/resasPrefList.json'
+
 import { RouterPropsType } from 'types/apps'
 
 export interface ResasPrefectureType {

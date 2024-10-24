@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingNumberOfFishermenEmployed from 'sections/agriculture/fishing/prefecture-rank/RankingNumberOfFishermenEmployed'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function NumberOfFishermenEmployed({

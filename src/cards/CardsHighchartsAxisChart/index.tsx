@@ -10,12 +10,13 @@ import CSVExport from 'components/third-party/react-table/CSVExport'
 
 import { Options } from 'highcharts'
 
-import { CardsPropsType } from 'types/cards'
 import formatCSV from 'utils/csv'
 import deepMerge from 'utils/deepMerge'
 import formatHighcharts from 'utils/highcharts'
 
 import Header from './Header'
+
+import { CardsPropsType } from 'types/cards'
 
 // 動的インポートを使用してHighchartsAxisChartを遅延ロード
 const HighchartsAxisChart = dynamic(() => import('./Chart'), {

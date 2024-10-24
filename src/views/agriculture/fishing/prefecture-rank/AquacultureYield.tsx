@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingAquacultureYield from 'sections/agriculture/fishing/prefecture-rank/RankingAquacultureYield'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function AquacultureYield({

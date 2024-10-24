@@ -1,4 +1,3 @@
-import { RouterPropsType } from 'types/apps'
 import { DocumentType } from 'utils/document'
 import { ValueType } from 'utils/value'
 import calcRankingValues from 'utils/value/modules/calcRankingValues'
@@ -6,6 +5,8 @@ import calcRankingValues from 'utils/value/modules/calcRankingValues'
 import saveCorrelationPNG from './modules/saveCorrelationPNG'
 import saveJapanPNG from './modules/saveJapanPNG'
 import saveRankingPNG from './modules/saveRankingPNG'
+
+import { RouterPropsType } from 'types/apps'
 
 function formatRankingValues(document: DocumentType): ValueType[] {
   const { times, values } = document

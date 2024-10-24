@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingTotalRevenueSettlement from 'sections/administrativefinancial/finances/prefecture-rank/RankingTotalRevenueSettlement'
+
 import { RouterPropsType } from 'types/apps'
 
 interface Props {

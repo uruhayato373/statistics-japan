@@ -15,8 +15,9 @@ import MainCard from 'components/MainCard'
 
 import { ApexOptions } from 'apexcharts'
 
-import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
+
+import { CardsPropsType } from 'types/cards'
 
 export default function CardsApexBarChart({
   title,

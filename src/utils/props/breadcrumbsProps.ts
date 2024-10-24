@@ -1,5 +1,3 @@
-import { RouterPropsType } from 'types/apps'
-import { BreadcrumbsPropsType } from 'types/views'
 import { handleField } from 'utils/field'
 import { handleKind } from 'utils/kind'
 import { handleMenu } from 'utils/menu'
@@ -7,6 +5,9 @@ import handlePage from 'utils/page'
 import handlePrefecture, { PrefectureType } from 'utils/prefecture'
 
 import generatePageTitle from './generateTitle'
+
+import { RouterPropsType } from 'types/apps'
+import { BreadcrumbsPropsType } from 'types/views'
 
 const generateBreadcrumbsProps = async ({
   fieldId,

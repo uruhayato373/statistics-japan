@@ -1,16 +1,6 @@
 import items from 'data/contents/menu/menuList.json'
 
-/**
- * アプリケーション内で使用するメニュー情報の型定義
- * @property {string} menuId - メニューID
- * @property {string} menuTitle - メニュータイトル
- * @property {string} fieldId - 分野ID
- */
-export type MenuType = {
-  menuId: string
-  menuTitle: string
-  fieldId: string
-}
+import { MenuType } from 'types/contents'
 
 /**
  * メニュー情報を操作するためのユーティリティ関数

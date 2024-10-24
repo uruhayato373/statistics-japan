@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingRoadActualLength from 'sections/infrastructure/road/prefecture-rank/RankingRoadActualLength'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function RoadActualLength({

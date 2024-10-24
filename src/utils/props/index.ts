@@ -1,7 +1,7 @@
-import { RouterPropsType } from 'types/apps'
-
 import generateBreadcrumbsProps from './breadcrumbsProps'
 import generateMetaProps from './metaProps'
+
+import { RouterPropsType } from 'types/apps'
 
 function camelToKebabCase(str: string): string {
   return str

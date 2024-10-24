@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingDisasterDamageAmount from 'sections/safetyenvironment/disaster-pollution/prefecture-rank/RankingDisasterDamageAmount'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function DisasterDamageAmount({

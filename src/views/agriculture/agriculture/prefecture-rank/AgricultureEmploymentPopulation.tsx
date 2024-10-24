@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingAgricultureEmploymentPopulation from 'sections/agriculture/agriculture/prefecture-rank/RankingAgricultureEmploymentPopulation'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function AgricultureEmploymentPopulation({

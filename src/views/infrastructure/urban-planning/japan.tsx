@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import DashboardItems from 'components/views/DashboardItems'
 
 import DashboardUrbanPlanningArea from 'sections/infrastructure/urban-planning/dashboard/DashboardUrbanPlanningArea'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

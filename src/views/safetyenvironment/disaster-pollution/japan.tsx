@@ -2,8 +2,6 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import DashboardDisasterDamageAmount from 'sections/safetyenvironment/disaster-pollution/dashboard/DashboardDisasterDamageAmount'
 import DashboardNumberOfDisasterAffectedHousingUnits from 'sections/safetyenvironment/disaster-pollution/dashboard/DashboardNumberOfDisasterAffectedHousingUnits'
 import DashboardNumberOfPollutionComplaints from 'sections/safetyenvironment/disaster-pollution/dashboard/DashboardNumberOfPollutionComplaints'
@@ -13,6 +11,9 @@ import TableNumberOfFacilitiesGeneratingSootAndSmoke from 'sections/safetyenviro
 import TableNumberOfPollutionComplaints from 'sections/safetyenvironment/disaster-pollution/table/TableNumberOfPollutionComplaints'
 import TablePostalLifeInsurance from 'sections/safetyenvironment/disaster-pollution/table/TablePostalLifeInsurance'
 import TablePrivateLifeInsurance from 'sections/safetyenvironment/disaster-pollution/table/TablePrivateLifeInsurance'
+
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

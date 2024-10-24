@@ -3,10 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisThreeAge from 'sections/population/population/chart/AxisThreeAge'
 import AxisTotalPopulation from 'sections/population/population/chart/AxisTotalPopulation'
 import PyramidPopulation from 'sections/population/population/chart/PyramidPopulation'
@@ -15,6 +11,11 @@ import DashboardDayTimePopulationRatio from 'sections/population/population/dash
 import DashboardMedianAge from 'sections/population/population/dashboard/DashboardMedianAge'
 import DashboardTotalPopulation from 'sections/population/population/dashboard/DashboardTotalPopulation'
 import TablePopulation from 'sections/population/population/table/TablePopulation'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

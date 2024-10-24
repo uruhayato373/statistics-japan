@@ -3,10 +3,11 @@ import SectionsWrapper from 'components/sections/SectionsWrapper'
 
 import { ApexOptions } from 'apexcharts'
 
-import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
+
+import { SectionsPropsType } from 'types/sections'
 
 const CARD_TITLE = '製造品出荷額（産業中分類別）'
 const CARD_ID = 'pie-product-shipment-amount'

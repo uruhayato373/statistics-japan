@@ -2,8 +2,6 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import DashboardNumberOfFireStations from 'sections/safetyenvironment/fire/dashboard/DashboardNumberOfFireStations'
 import TableEmergencyDispatch from 'sections/safetyenvironment/fire/table/TableEmergencyDispatch'
 import TableFireDepartment from 'sections/safetyenvironment/fire/table/TableFireDepartment'
@@ -12,6 +10,9 @@ import TableFireInsurance from 'sections/safetyenvironment/fire/table/TableFireI
 import TableFireWaterSupply from 'sections/safetyenvironment/fire/table/TableFireWaterSupply'
 import TableNumberOfFireCasualties from 'sections/safetyenvironment/fire/table/TableNumberOfFireCasualties'
 import TableNumberOfFires from 'sections/safetyenvironment/fire/table/TableNumberOfFires'
+
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

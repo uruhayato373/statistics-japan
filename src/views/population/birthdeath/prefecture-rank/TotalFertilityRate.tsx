@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingTotalFertilityRate from 'sections/population/birthdeath/prefecture-rank/RankingTotalFertilityRate'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function TotalFertilityRate({

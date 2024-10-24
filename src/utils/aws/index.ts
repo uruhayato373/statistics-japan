@@ -1,11 +1,12 @@
 import { S3Client } from '@aws-sdk/client-s3'
 
-import { RouterPropsType } from 'types/apps'
 import { ValueType } from 'utils/value'
 
 import loadValues from './modules/loadValues'
 import saveOGP from './modules/saveOGP'
 import saveValues from './modules/saveValues'
+
+import { RouterPropsType } from 'types/apps'
 
 // 環境変数から認証情報を取得
 const S3_REGION = process.env.S3_REGION || 'ap-northeast-1'

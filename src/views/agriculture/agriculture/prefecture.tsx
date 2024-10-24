@@ -3,10 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsApexPieChart from 'cards/CardsApexPieChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisAgricultureEmploymentPopulation from 'sections/agriculture/agriculture/chart/AxisAgricultureEmploymentPopulation'
 import AxisNumberOfFarmers from 'sections/agriculture/agriculture/chart/AxisNumberOfFarmers'
 import PieNumberOfFarmers from 'sections/agriculture/agriculture/chart/PieNumberOfFarmers'
@@ -21,6 +17,11 @@ import TableAgricultureEmploymentPopulation from 'sections/agriculture/agricultu
 import TableCultivatedLandArea from 'sections/agriculture/agriculture/table/TableCultivatedLandArea'
 import TableFarmersIncome from 'sections/agriculture/agriculture/table/TableFarmersIncome'
 import TableNumberOfFarmers from 'sections/agriculture/agriculture/table/TableNumberOfFarmers'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

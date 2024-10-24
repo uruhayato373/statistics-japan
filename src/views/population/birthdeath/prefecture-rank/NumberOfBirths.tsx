@@ -5,6 +5,7 @@ import ScatterChartsSection from 'components/views/ScatterISection'
 import RankingNumberOfBirths from 'sections/population/birthdeath/prefecture-rank/RankingNumberOfBirths'
 import RankingNumberOfBirthsPerTotalPopulation from 'sections/population/birthdeath/prefecture-rank/RankingNumberOfBirthsPerTotalPopulation'
 import ScatterNumberOfBirthsTotalPopulation from 'sections/population/birthdeath/scatter/ScatterNumberOfBirthsTotalPopulation'
+
 import { ViewsPropsType } from 'types/views'
 
 const SCATTER_CHARTS = [ScatterNumberOfBirthsTotalPopulation]

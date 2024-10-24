@@ -3,9 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisPrecipitation from 'sections/landweather/weather/chart/AxisPrecipitation'
 import AxisTemplatures from 'sections/landweather/weather/chart/AxisTemplatures'
 import DashboardAverageTemperature from 'sections/landweather/weather/dashboard/DashboardAverageTemperature'
@@ -15,6 +12,10 @@ import DashboardPrecipitation from 'sections/landweather/weather/dashboard/Dashb
 import DashboardRainyDays from 'sections/landweather/weather/dashboard/DashboardRainyDays'
 import TableDays from 'sections/landweather/weather/table/TableDays'
 import TableTemplatures from 'sections/landweather/weather/table/TableTemplatures'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

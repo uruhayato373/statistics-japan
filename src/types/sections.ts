@@ -1,11 +1,12 @@
 import { ApexOptions } from 'apexcharts'
 import { Options } from 'highcharts'
 
-import { RouterPropsType } from 'types/apps'
 import { DocumentType } from 'utils/document'
 import { ValueType } from 'utils/value'
 
 import { CardsPropsType } from './cards'
+
+import { RouterPropsType } from 'types/apps'
 
 export interface SectionsPropsType<
   T extends Options | ApexOptions = ApexOptions,

@@ -7,11 +7,12 @@ import MainCard from 'components/MainCard'
 
 import { Options } from 'highcharts'
 
-import { CardsPropsType } from 'types/cards'
 import formatHighcharts from 'utils/highcharts'
 
 import HighchartsComparisonChart from './HighchartsComparisonChart'
 import SelectPrefCodes from './SelectPrefCodes'
+
+import { CardsPropsType } from 'types/cards'
 
 export default function CardsHighchartsComparisonChart({
   title,

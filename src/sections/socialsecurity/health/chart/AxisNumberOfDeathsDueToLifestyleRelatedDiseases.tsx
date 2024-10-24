@@ -1,9 +1,10 @@
 import SectionsWrapper from 'components/sections/SectionsWrapper'
 
-import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
+
+import { SectionsPropsType } from 'types/sections'
 
 const CARD_TITLE = '生活習慣病による死亡者数'
 const CARD_ID = 'axis-number-of-deaths-due-to-lifestyle-related-diseases'

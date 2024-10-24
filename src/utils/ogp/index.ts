@@ -1,10 +1,11 @@
-import { RouterPropsType } from 'types/apps'
 import { DocumentType } from 'utils/document'
 import { ValueType } from 'utils/value'
 import calcRankingValues from 'utils/value/modules/calcRankingValues'
 
 import saveAWS from './modules/saveAWS'
 import saveLocal from './modules/saveLocal'
+
+import { RouterPropsType } from 'types/apps'
 
 function formatRankingValues(document: DocumentType): ValueType[] {
   const { times, values } = document

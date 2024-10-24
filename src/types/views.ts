@@ -1,9 +1,9 @@
-import { RouterPropsType } from 'types/apps'
-import { FieldType } from 'utils/field'
 import { KindType } from 'utils/kind'
-import { MenuType } from 'utils/menu'
 import { PageType } from 'utils/page'
 import { PrefectureType } from 'utils/prefecture'
+
+import { RouterPropsType } from 'types/apps'
+import { MenuType, FieldType } from 'types/contents'
 
 export interface ViewsPropsType {
   routerProps: RouterPropsType

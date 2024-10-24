@@ -1,10 +1,11 @@
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 
-import { RouterPropsType } from 'types/apps'
 import handlePrefecture from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 import generateFileName from './generateFileName'
+
+import { RouterPropsType } from 'types/apps'
 
 const BUCKET_NAME = 'stats47-values'
 

@@ -10,17 +10,18 @@ import MainCard from 'components/MainCard'
 import SelectTime from 'components/SelectTime'
 import CSVExport from 'components/third-party/react-table/CSVExport'
 
-import { ApexOptions } from 'apexcharts'
-
 import ApexPyramidChart from 'cards/CardsApexPyramidChart/ApexPyramidChart'
 
+import { ApexOptions } from 'apexcharts'
+
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
-import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
 import formatCSV from 'utils/csv'
 
 import Control from './Control'
 import Header from './Header'
+
+import { CardsPropsType } from 'types/cards'
 
 const DEFAULT_HEIGHT = '250px'
 

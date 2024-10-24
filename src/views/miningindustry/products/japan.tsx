@@ -3,11 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsApexPieChart from 'cards/CardsApexPieChart'
-import CardsHighchartsAxisChart from 'cards/CardsHighchartsAxisChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisNumberOfManufacturing from 'sections/miningindustry/products/chart/AxisNumberOfManufacturing'
 import AxisProductShipmentAmount from 'sections/miningindustry/products/chart/AxisProductShipmentAmount'
 import PieProductShipmentAmountByIndustrialClassification from 'sections/miningindustry/products/chart/PieProductShipmentAmountByIndustrialClassification'
@@ -15,6 +10,12 @@ import DashboardNumberOfManufacturingEmployees from 'sections/miningindustry/pro
 import DashboardNumberOfManufacturingEstablishments from 'sections/miningindustry/products/dashboard/DashboardNumberOfManufacturingEstablishments'
 import DashboardProductShipmentAmount from 'sections/miningindustry/products/dashboard/DashboardProductShipmentAmount'
 import TableProductShipmentAmount from 'sections/miningindustry/products/table/TableProductShipmentAmount'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
+import CardsHighchartsAxisChart from 'cards/CardsHighchartsAxisChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

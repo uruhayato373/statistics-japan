@@ -5,35 +5,36 @@ import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import SelectPage from 'components/SelectPage'
 import SelectPrefecture from 'components/SelectPrefecture'
 
-import { ViewsPropsType } from 'types/views'
 import handleOGP from 'utils/ogp'
 import handleProps from 'utils/props'
+
+import { ViewsPropsType } from 'types/views'
 
 const SAVE_OGP = process.env.SAVE_OGP
 
 const ViewsHeader = async ({ routerProps }: ViewsPropsType) => {
   const breadcrumbsProps = await handleProps(routerProps).breadcrumbsProps()
-
-  // OGP画像の保存
-  if (SAVE_OGP === 'true') {
-    const menuTitle = breadcrumbsProps.currentMenu.menuTitle
-    if (routerProps.kindId !== 'prefecture-rank') {
-      await handleOGP(menuTitle, routerProps).saveAWS()
-    }
-  }
-
   const { kindId } = routerProps
 
-  const renderSelector = () => {
-    switch (kindId) {
-      case 'prefecture':
-        return <SelectPrefecture />
-      case 'prefecture-rank':
-        return <SelectPage />
-      default:
-        return null
+  // OGP画像の保存
+  const saveOGP = async () => {
+    if (SAVE_OGP === 'true') {
+      const menuTitle = breadcrumbsProps.currentMenu.menuTitle
+      if (kindId !== 'prefecture-rank') {
+        await handleOGP(menuTitle, routerProps).saveAWS()
+      }
     }
   }
+
+  const renderSelector = () => {
+    const selectorMap = {
+      prefecture: <SelectPrefecture />,
+      'prefecture-rank': <SelectPage />,
+    }
+    return selectorMap[kindId] || null
+  }
+
+  await saveOGP()
 
   return (
     <>

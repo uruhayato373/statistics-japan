@@ -1,14 +1,14 @@
 import Typography from '@mui/material/Typography'
 
-import { Options } from 'highcharts'
-
 import CardsHighchartsPrefectureRankingChart from 'cards/CardsHighchartsPrefectureRankingChart'
 import CardsReactPrefectureRankingTable from 'cards/CardsReactPrefectureRankingTable'
 
-import { RouterPropsType } from 'types/apps'
-import { CardsPropsType } from 'types/cards'
+import { Options } from 'highcharts'
 
 import GridItem from './GridItem'
+
+import { RouterPropsType } from 'types/apps'
+import { CardsPropsType } from 'types/cards'
 
 interface Props {
   title?: string

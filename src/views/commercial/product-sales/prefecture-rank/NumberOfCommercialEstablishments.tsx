@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingNumberOfCommercialEstablishments from 'sections/commercial/product-sales/prefecture-rank/RankingNumberOfCommercialEstablishments'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function NumberOfCommercialEstablishments({

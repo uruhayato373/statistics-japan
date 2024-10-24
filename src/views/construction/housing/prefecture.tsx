@@ -3,10 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsApexPieChart from 'cards/CardsApexPieChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import BarChartNumberOfHousesByStructure from 'sections/construction/housing/chart/AxisNumberOfHousesByStructure'
 import BarChartNumberOfHousesByYearOfConstruction from 'sections/construction/housing/chart/AxisNumberOfHousesByYearOfConstruction'
 import PieChartNumberOfHomesOwned from 'sections/construction/housing/chart/PieNumberOfHomesOwned'
@@ -17,6 +13,11 @@ import TableNumberOfSingleFamilyHomes from 'sections/construction/housing/table/
 import TableNumberOfTenementHouses from 'sections/construction/housing/table/TableNumberOfTenementHouses'
 import TablePerHouse from 'sections/construction/housing/table/TablePerHouse'
 import TableTotalNumberOfHouses from 'sections/construction/housing/table/TableTotalNumberOfHouses'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

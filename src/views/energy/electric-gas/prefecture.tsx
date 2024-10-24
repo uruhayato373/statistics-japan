@@ -2,14 +2,15 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import DashboardCityGasSalesVolume from 'sections/energy/electric-gas/dashboard/DashboardCityGasSalesVolume'
 import DashboardElectricityConsumptionForElectricLights from 'sections/energy/electric-gas/dashboard/DashboardElectricityConsumptionForElectricLights'
 import DashboardElectricityDemand from 'sections/energy/electric-gas/dashboard/DashboardElectricityDemand'
 import DashboardGasolineSalesVolume from 'sections/energy/electric-gas/dashboard/DashboardGasolineSalesVolume'
 import DashboardGeneratedPowerAmount from 'sections/energy/electric-gas/dashboard/DashboardGeneratedPowerAmount'
 import TableCityGas from 'sections/energy/electric-gas/table/TableCityGas'
+
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

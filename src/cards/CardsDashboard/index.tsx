@@ -7,11 +7,12 @@ import Typography from '@mui/material/Typography'
 import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 
-import { CardsPropsType } from 'types/cards'
 import formatDashboard from 'utils/dashboard'
 
 import DifferenceText from './DifferenceText'
 import ValueDisplay from './ValueDisplay'
+
+import { CardsPropsType } from 'types/cards'
 
 interface CardHeaderProps {
   title: string

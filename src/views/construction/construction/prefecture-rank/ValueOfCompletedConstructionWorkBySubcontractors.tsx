@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingValueOfCompletedConstructionWorkBySubcontractors from 'sections/construction/construction/prefecture-rank/RankingValueOfCompletedConstructionWorkBySubcontractors'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function ValueOfCompletedConstructionWorkBySubcontractors({

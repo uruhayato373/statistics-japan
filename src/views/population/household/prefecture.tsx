@@ -3,10 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsApexPieChart from 'cards/CardsApexPieChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisNumberOfStillbirths from 'sections/population/birthdeath/chart/AxisNumberOfStillbirths'
 import AxisHousehold from 'sections/population/household/chart/AxisHousehold'
 import PieNumberOfSingleFatherHouseholdsByFathersAge from 'sections/population/household/chart/PieNumberOfSingleFatherHouseholdsByFathersAge'
@@ -17,6 +13,11 @@ import DashboardNumberOfSingleFatherHouseholds from 'sections/population/househo
 import DashboardNumberOfSingleHouseholds from 'sections/population/household/dashboard/DashboardNumberOfSingleHouseholds'
 import DashboardNumberOfSingleMotherHouseholds from 'sections/population/household/dashboard/DashboardNumberOfSingleMotherHouseholds'
 import TableHousehold from 'sections/population/household/table/TableHousehold'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

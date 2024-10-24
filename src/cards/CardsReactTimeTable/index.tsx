@@ -10,10 +10,11 @@ import CircularProgressCards from 'components/CircularProgressCards'
 import MainCard from 'components/MainCard'
 import { CSVExport } from 'components/third-party/react-table'
 
-import { CardsPropsType } from 'types/cards'
 import formatTable from 'utils/table'
 
 import Header from './Header'
+
+import { CardsPropsType } from 'types/cards'
 
 // 動的インポートを使用してReactTimeTableを遅延ロード
 const ReactTimeTable = dynamic(() => import('./Table'), {

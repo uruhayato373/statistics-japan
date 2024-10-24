@@ -1,5 +1,6 @@
-import SimpleLayout from 'layout/SimpleLayout'
 import Landing from 'views/landing'
+
+import SimpleLayout from 'layout/SimpleLayout'
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 

@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingNumberOfHospitals from 'sections/socialsecurity/hospital/prefecture-rank/RankingNumberOfHospitals'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function NumberOfHospitals({

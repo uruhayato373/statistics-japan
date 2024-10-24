@@ -2,10 +2,11 @@ import SectionsWrapper from 'components/sections/SectionsWrapper'
 
 import { ApexOptions } from 'apexcharts'
 
-import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
+
+import { SectionsPropsType } from 'types/sections'
 
 const CARD_TITLE = '公共事業請負工事'
 const CARD_ID = 'axis-public-works-contract'

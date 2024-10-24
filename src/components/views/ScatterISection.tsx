@@ -2,9 +2,9 @@ import { Typography } from '@mui/material'
 
 import GridItem from 'components/views/GridItem'
 
-import { Options } from 'highcharts'
-
 import CardsHighchartsScatterChart from 'cards/CardsHighchartsScatterChart'
+
+import { Options } from 'highcharts'
 
 import { CardsPropsType } from 'types/cards'
 import { ViewsPropsType } from 'types/views'

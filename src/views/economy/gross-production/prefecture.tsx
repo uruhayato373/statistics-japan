@@ -3,15 +3,16 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisGrossPrefecturalProduct from 'sections/economy/gross-production/chart/AxisGrossPrefecturalProduct'
 import AxisPrefecturalIncome from 'sections/economy/gross-production/chart/AxisPrefecturalIncome'
 import DashboardGrossPrefecturalProduct from 'sections/economy/gross-production/dashboard/DashboardGrossPrefecturalProduct'
 import DashboardPrefecturalIncome from 'sections/economy/gross-production/dashboard/DashboardPrefecturalIncome'
 import TableGrossPrefecturalProduct from 'sections/economy/gross-production/table/TableGrossPrefecturalProduct'
 import TablePrefecturalIncome from 'sections/economy/gross-production/table/TablePrefecturalIncome'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

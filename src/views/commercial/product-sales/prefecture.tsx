@@ -2,8 +2,6 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import DashboardAmountOfProductOnHand from 'sections/commercial/product-sales/dashboard/DashboardAmountOfProductOnHand'
 import DashboardNumberOfCommercialEmployees from 'sections/commercial/product-sales/dashboard/DashboardNumberOfCommercialEmployees'
 import DashboardNumberOfCommercialEstablishments from 'sections/commercial/product-sales/dashboard/DashboardNumberOfCommercialEstablishments'
@@ -12,6 +10,9 @@ import TableAmountOfProductOnHand from 'sections/commercial/product-sales/table/
 import TableNumberOfCommercialEmployees from 'sections/commercial/product-sales/table/TableNumberOfCommercialEmployees'
 import TableNumberOfCommercialEstablishments from 'sections/commercial/product-sales/table/TableNumberOfCommercialEstablishments'
 import TableProductSalesAmount from 'sections/commercial/product-sales/table/TableProductSalesAmount'
+
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingNumberOfFireStations from 'sections/safetyenvironment/fire/prefecture-rank/RankingNumberOfFireStations'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function NumberOfFireStations({

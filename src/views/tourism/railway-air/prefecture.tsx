@@ -3,9 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisAirTransport from 'sections/tourism/railway-air/chart/AxisAirTransport'
 import AxisJapanRailwayTransport from 'sections/tourism/railway-air/chart/AxisJapanRailwayTransport'
 import AxisPassengerShipTransportation from 'sections/tourism/railway-air/chart/AxisPassengerShipTransportation'
@@ -16,6 +13,10 @@ import DashboardJRTransportationPersonnel from 'sections/tourism/railway-air/das
 import DashboardPassengerShipTransportPersonnel from 'sections/tourism/railway-air/dashboard/DashboardPassengerShipTransportPersonnel'
 import DashboardPrivateRailwayTransportationPersonnel from 'sections/tourism/railway-air/dashboard/DashboardPrivateRailwayTransportationPersonnel'
 import TableBusinessOperator from 'sections/tourism/railway-air/table/TableBusinessOperator'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

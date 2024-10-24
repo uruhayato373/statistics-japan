@@ -1,6 +1,5 @@
 import sharp from 'sharp'
 
-import { RouterPropsType } from 'types/apps'
 import handleAWS from 'utils/aws'
 import handlePrefecture from 'utils/prefecture'
 import { ValueType } from 'utils/value'
@@ -8,6 +7,8 @@ import { ValueType } from 'utils/value'
 import generateJapanSVG from './generateJapanSVG'
 import generatePrefectureRankSVG from './generatePrefectureRankSVG'
 import generatePrefectureSVG from './generatePrefectureSVG'
+
+import { RouterPropsType } from 'types/apps'
 
 // japan
 async function saveJapan(title: string, routerProps: RouterPropsType) {

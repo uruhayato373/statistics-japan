@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingPrimarySchoolStudents from 'sections/educationsports/primary-school/prefecture-rank/RankingPrimarySchoolStudents'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function PrimarySchoolStudents({

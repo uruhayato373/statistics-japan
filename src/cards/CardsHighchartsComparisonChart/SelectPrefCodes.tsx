@@ -10,11 +10,11 @@ import OutlinedInput from '@mui/material/OutlinedInput'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 import Typography from '@mui/material/Typography'
 
+import { useAtom } from 'jotai'
+
 import { prefecture } from 'atoms'
 import prefectures from 'data/prefecture/prefList.json'
 import { PrefectureType } from 'utils/prefecture'
-
-import { useAtom } from 'jotai'
 
 const ITEM_HEIGHT = 48
 const ITEM_PADDING_TOP = 8

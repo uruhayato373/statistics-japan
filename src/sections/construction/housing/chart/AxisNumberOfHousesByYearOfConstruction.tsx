@@ -1,9 +1,10 @@
 import SectionsWrapper from 'components/sections/SectionsWrapper'
 
-import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
+
+import { SectionsPropsType } from 'types/sections'
 
 const CARD_TITLE = '建築年次別住宅数'
 const CARD_ID = 'axis-number-of-houses-by-year-of-construction'

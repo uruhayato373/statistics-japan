@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography'
 
-import { FieldType } from 'utils/field'
+import { FieldType } from 'types/contents'
 
 type Props = {
   currentField: FieldType

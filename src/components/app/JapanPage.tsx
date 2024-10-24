@@ -3,8 +3,10 @@ import { ComponentType } from 'react'
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
-import { ViewsPropsType } from 'types/views'
 import handleProps from 'utils/props'
+
+import { RouterPropsType } from 'types/apps'
+import { ViewsPropsType } from 'types/views'
 
 const createDynamicImport = ({
   fieldId,

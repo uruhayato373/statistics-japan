@@ -3,12 +3,14 @@ import { ComponentType } from 'react'
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 
-import { AppsPropsType } from 'types/apps'
-import { ViewsPropsType } from 'types/views'
+import Error404 from 'views/maintenance/404'
+
 import getEnvVariable from 'utils/getEnvVariable'
 import handlePrefecture from 'utils/prefecture'
 import handleProps from 'utils/props'
-import Error404 from 'views/maintenance/404'
+
+import { AppsPropsType, RouterPropsType } from 'types/apps'
+import { ViewsPropsType } from 'types/views'
 
 const createDynamicImport = ({
   fieldId,

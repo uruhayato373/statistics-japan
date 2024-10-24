@@ -110,37 +110,37 @@
           },
           {
             "pattern": "{jotai,src/atoms,src/atoms/**}",
-            "group": "parent",
+            "group": "external",
             "position": "before"
           },
           {
             "pattern": "{src/hooks,src/hooks/**}",
-            "group": "parent",
+            "group": "external",
             "position": "before"
           },
           {
-            "pattern": "{src/views,src/views/**}",
-            "group": "sibling",
+            "pattern": "{views,views/**}",
+            "group": "external",
             "position": "before"
           },
           {
-            "pattern": "{src/sections,src/sections/**}",
-            "group": "sibling",
+            "pattern": "{sections,sections/**}",
+            "group": "external",
             "position": "before"
           },
           {
             "pattern": "{cards,cards/**}",
-            "group": "internal",
+            "group": "external",
             "position": "before"
           },
           {
             "pattern": "{src/utils,src/utils/**}",
-            "group": "internal",
-            "position": "after"
+            "group": "object",
+            "position": "before"
           },
           {
-            "pattern": "{src/types,src/types/**}",
-            "group": "internal",
+            "pattern": "{types,types/**}",
+            "group": "object",
             "position": "after"
           }
         ]

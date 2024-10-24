@@ -3,10 +3,11 @@ import SectionsWrapper from 'components/sections/SectionsWrapper'
 
 import { ApexOptions } from 'apexcharts'
 
-import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
+
+import { SectionsPropsType } from 'types/sections'
 
 const CARD_TITLE = '可住地面積の割合'
 const CARD_ID = 'pie-habitable-area'

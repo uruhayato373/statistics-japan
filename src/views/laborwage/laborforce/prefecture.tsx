@@ -2,12 +2,13 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import DashboardLaborForcePopulation from 'sections/laborwage/laborforce/dashboard/DashboardLaborForcePopulation'
 import DashboardNonLaborForcePopulation from 'sections/laborwage/laborforce/dashboard/DashboardNonLaborForcePopulation'
 import TableLaborForcePopulation from 'sections/laborwage/laborforce/table/TableLaborForcePopulation'
 import TableNonLaborForcePopulation from 'sections/laborwage/laborforce/table/TableNonLaborForcePopulation'
+
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

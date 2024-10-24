@@ -5,6 +5,7 @@ import ScatterChartsSection from 'components/views/ScatterISection'
 import RankingNumberOfDivorces from 'sections/population/marriage/prefecture-rank/RankingNumberOfDivorces'
 import RankingNumberOfDivorcesPerTotalPopulation from 'sections/population/marriage/prefecture-rank/RankingNumberOfDivorcesPerTotalPopulation'
 import ScatterNumberOfDivorcesTotalPopulation from 'sections/population/marriage/scatter/ScatterNumberOfDivorcesTotalPopulation'
+
 import { ViewsPropsType } from 'types/views'
 
 const SCATTER_CHARTS = [ScatterNumberOfDivorcesTotalPopulation]

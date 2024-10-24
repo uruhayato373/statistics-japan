@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingHealthyLifeExpectancyWoman from 'sections/socialsecurity/health/prefecture-rank/RankingHealthyLifeExpectancyWoman'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function HealthyLifeExpectancyWoman({

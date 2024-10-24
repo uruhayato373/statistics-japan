@@ -3,13 +3,14 @@ import path from 'path'
 
 import sharp from 'sharp'
 
-import { RouterPropsType } from 'types/apps'
 import handlePrefecture from 'utils/prefecture'
 import { ValueType } from 'utils/value'
 
 import generateJapanSVG from './generateJapanSVG'
 import generatePrefectureRankSVG from './generatePrefectureRankSVG'
 import generatePrefectureSVG from './generatePrefectureSVG'
+
+import { RouterPropsType } from 'types/apps'
 
 export interface D3MapChartSeries {
   areaCode: string

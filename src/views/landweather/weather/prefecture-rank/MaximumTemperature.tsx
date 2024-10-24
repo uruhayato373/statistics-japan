@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingMaximumTemperature from 'sections/landweather/weather/prefecture-rank/RankingMaximumTemperature'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function MaximumTemperature({

@@ -3,15 +3,16 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsApexPieChart from 'cards/CardsApexPieChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisImmigrationControlLaw from 'sections/international/foreigner/chart/AxisImmigrationControlLaw'
 import PieForeignPopulation from 'sections/international/foreigner/chart/PieForeignPopulation'
 import DashboardForeignPopulation from 'sections/international/foreigner/dashboard/DashboardForeignPopulation'
 import TableForeignerSuspectCase from 'sections/international/foreigner/table/TableForeignerSuspectCase'
 import TableForeignPopulation from 'sections/international/foreigner/table/TableForeignPopulation'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

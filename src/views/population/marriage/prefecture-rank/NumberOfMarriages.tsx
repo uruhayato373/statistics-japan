@@ -7,6 +7,7 @@ import RankingNumberOfMarriagesPerTotalPopulation from 'sections/population/marr
 import ScatterNumberOfMarriagesNumberOfBirth from 'sections/population/marriage/scatter/ScatterNumberOfMarriagesNumberOfBirth'
 import ScatterNumberOfMarriagesNumberOfDivorces from 'sections/population/marriage/scatter/ScatterNumberOfMarriagesNumberOfDivorces'
 import ScatterNumberOfMarriagesTotalPopulation from 'sections/population/marriage/scatter/ScatterNumberOfMarriagesTotalPopulation'
+
 import { ViewsPropsType } from 'types/views'
 
 const SCATTER_CHARTS = [

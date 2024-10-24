@@ -3,10 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisAverageAgeOfFirstMarriage from 'sections/population/marriage/chart/AxisAverageAgeOfFirstMarriage'
 import AxisMarriagesDivorces from 'sections/population/marriage/chart/AxisMarriagesDivorces'
 import AxisUnmarriedPopulation from 'sections/population/marriage/chart/AxisUnmarriedPopulation'
@@ -19,6 +15,11 @@ import DashboardAverageAgeOfFirstMarriageWife from 'sections/population/marriage
 import DashboardNumberOfDivorces from 'sections/population/marriage/dashboard/DashboardNumberOfDivorces'
 import DashboardNumberOfMarriages from 'sections/population/marriage/dashboard/DashboardNumberOfMarriages'
 import TableMarriage from 'sections/population/marriage/table/TableMarriage'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

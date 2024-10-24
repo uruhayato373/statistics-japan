@@ -3,11 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsApexPieChart from 'cards/CardsApexPieChart'
-import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisNumberOfStillbirths from 'sections/population/birthdeath/chart/AxisNumberOfStillbirths'
 import PieNumberOfBirthsByMothersAge from 'sections/population/birthdeath/chart/PieNumberOfBirthsByMothersAge'
 import PyramidNumberOfDeaths from 'sections/population/birthdeath/chart/PyramidNumberOfDeaths'
@@ -18,6 +13,12 @@ import TableBirth from 'sections/population/birthdeath/table/TableBirth'
 import TableDeath from 'sections/population/birthdeath/table/TableDeath'
 import TableMortalityRate from 'sections/population/birthdeath/table/TableMortalityRate'
 import TableNumberOfNeonatalDeaths from 'sections/population/birthdeath/table/TableNumberOfNeonatalDeaths'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
+import CardsApexPyramidChart from 'cards/CardsApexPyramidChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

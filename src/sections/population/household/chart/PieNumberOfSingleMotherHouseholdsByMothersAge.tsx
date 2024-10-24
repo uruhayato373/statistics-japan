@@ -2,10 +2,11 @@ import SectionsWrapper from 'components/sections/SectionsWrapper'
 
 import { ApexOptions } from 'apexcharts'
 
-import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
+
+import { SectionsPropsType } from 'types/sections'
 
 const CARD_TITLE = '母子世帯数（母親の年齢別）'
 const CARD_ID = 'pie-number-of-single-mother-households-by-mothers-age'

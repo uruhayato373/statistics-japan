@@ -3,9 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexBarChart from 'cards/CardsApexBarChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import BarNumberOfHospitalsByBedSize from 'sections/socialsecurity/hospital/chart/BarNumberOfHospitalsByBedSize'
 import DashboardNumberOfHospitalBeds from 'sections/socialsecurity/hospital/dashboard/DashboardNumberOfHospitalBeds'
 import DashboardNumberOfHospitals from 'sections/socialsecurity/hospital/dashboard/DashboardNumberOfHospitals'
@@ -20,6 +17,10 @@ import TableNumberOfPeopleSued from 'sections/socialsecurity/hospital/table/Tabl
 import TableNumberOfPharmacists from 'sections/socialsecurity/hospital/table/TableNumberOfPharmacists'
 import TableNursingCareHealthFacilityForTheElderly from 'sections/socialsecurity/hospital/table/TableNursingCareHealthFacilityForTheElderly'
 import TableNursingCareMedicalFacility from 'sections/socialsecurity/hospital/table/TableNursingCareMedicalFacility'
+
+import CardsApexBarChart from 'cards/CardsApexBarChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

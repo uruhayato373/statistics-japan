@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingCurrentAccountRatio from 'sections/administrativefinancial/finances/prefecture-rank/RankingCurrentAccountRatio'
+
 import { RouterPropsType } from 'types/apps'
 
 interface Props {

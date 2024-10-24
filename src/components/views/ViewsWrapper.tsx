@@ -5,9 +5,9 @@ import Grid from '@mui/material/Grid'
 
 import CircularProgressViews from 'components/progress/CircularProgressViews'
 
-import { RouterPropsType } from 'types/apps'
-
 import ViewsHeader from './ViewsHeader'
+
+import { RouterPropsType } from 'types/apps'
 
 interface Props {
   routerProps: RouterPropsType

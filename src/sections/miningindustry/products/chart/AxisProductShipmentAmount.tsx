@@ -3,10 +3,11 @@ import SectionsWrapper from 'components/sections/SectionsWrapper'
 
 import { Options } from 'highcharts'
 
-import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
+
+import { SectionsPropsType } from 'types/sections'
 
 const CARD_TITLE = '製造品出荷額等'
 const CARD_ID = 'axis-product-shipment-amount'

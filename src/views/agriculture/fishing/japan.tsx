@@ -2,8 +2,6 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import DashboardAquacultureYield from 'sections/agriculture/fishing/dashboard/DashboardAquacultureYield'
 import DashboardCatchAmount from 'sections/agriculture/fishing/dashboard/DashboardCatchAmount'
 import DashboardFisheryOutputValue from 'sections/agriculture/fishing/dashboard/DashboardFisheryOutputValue'
@@ -11,6 +9,9 @@ import DashboardNumberOfFishermenEmployed from 'sections/agriculture/fishing/das
 import TableAquacultureYield from 'sections/agriculture/fishing/table/TableAquacultureYield'
 import TableCatchAmount from 'sections/agriculture/fishing/table/TableCatchAmount'
 import TableFisheryOutputValue from 'sections/agriculture/fishing/table/TableFisheryOutputValue'
+
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

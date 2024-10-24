@@ -8,6 +8,7 @@ import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 import ViewsHeader from 'components/views/ViewsHeader'
 
 import RankingNumberOfManufacturingEmployees from 'sections/miningindustry/products/prefecture-rank/RankingNumberOfManufacturingEmployees'
+
 import { RouterPropsType } from 'types/apps'
 
 interface Props {

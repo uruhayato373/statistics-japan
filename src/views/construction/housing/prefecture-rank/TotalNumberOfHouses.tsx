@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingTotalNumberOfHouses from 'sections/construction/housing/prefecture-rank/RankingTotalNumberOfHouses'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function TotalNumberOfHouses({

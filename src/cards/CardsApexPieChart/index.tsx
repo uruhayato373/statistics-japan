@@ -13,13 +13,14 @@ import CSVExport from 'components/third-party/react-table/CSVExport'
 import { ApexOptions } from 'apexcharts'
 
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
-import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
 import formatCSV from 'utils/csv'
 import deepMerge from 'utils/deepMerge'
 
 import Control from './Control'
 import Header from './Header'
+
+import { CardsPropsType } from 'types/cards'
 
 // ApexPieChartをSSRを無効にして動的にインポート
 const ApexPieChart = dynamic(() => import('./Chart'), {

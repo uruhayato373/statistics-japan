@@ -1,4 +1,3 @@
-import { RouterPropsType } from 'types/apps'
 import { ValueType } from 'utils/value'
 
 import generateFilePath from './generateFilePath'
@@ -9,6 +8,8 @@ import generateTableInstagram from './ranking/tableInstagram'
 import generateTableTickTok from './ranking/tableTickTok'
 import generateTableX from './ranking/tableX'
 import savePNG from './savePNG'
+
+import { RouterPropsType } from 'types/apps'
 
 const saveRankingPNG = async (
   title: string,

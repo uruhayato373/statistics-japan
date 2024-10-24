@@ -3,9 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisAverageAnnualIncome from 'sections/economy/household-budget/chart/AxisAverageAnnualIncome'
 import AxisGiniCoefficientOfAnnualIncome from 'sections/economy/household-budget/chart/AxisGiniCoefficientOfAnnualIncome'
 import DashboardActualExpenditure from 'sections/economy/household-budget/dashboard/DashboardActualExpenditure'
@@ -14,6 +11,10 @@ import DashboardConsumptionExpenditure from 'sections/economy/household-budget/d
 import TableActualExpenditure from 'sections/economy/household-budget/table/TableActualExpenditure'
 import TableConsumptionExpenditure from 'sections/economy/household-budget/table/TableConsumptionExpenditure'
 import TableIncome from 'sections/economy/household-budget/table/TableIncome'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

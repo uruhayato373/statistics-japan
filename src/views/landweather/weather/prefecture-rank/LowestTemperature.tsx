@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingLowestTemperature from 'sections/landweather/weather/prefecture-rank/RankingLowestTemperature'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function LowestTemperature({

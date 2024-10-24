@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingNumberOfOperatingFacilities from 'sections/tourism/inns/prefecture-rank/RankingNumberOfOperatingFacilities'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function NumberOfOperatingFacilities({

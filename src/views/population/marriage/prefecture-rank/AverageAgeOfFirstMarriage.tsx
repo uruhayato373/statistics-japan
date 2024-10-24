@@ -6,6 +6,7 @@ import RankingAverageAgeOfFirstMarriageHusband from 'sections/population/marriag
 import RankingAverageAgeOfFirstMarriageWife from 'sections/population/marriage/prefecture-rank/RankingAverageAgeOfFirstMarriageWife'
 import ScatterFirstMarriageHusbandNumberOfMarriage from 'sections/population/marriage/scatter/ScatterFirstMarriageHusbandNumberOfMarriage'
 import ScatterFirstMarriageWifeNumberOfMarriage from 'sections/population/marriage/scatter/ScatterFirstMarriageWifeNumberOfMarriage'
+
 import { ViewsPropsType } from 'types/views'
 
 const SCATTER_CHARTS = [

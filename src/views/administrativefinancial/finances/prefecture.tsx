@@ -2,9 +2,6 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsApexPieChart from 'cards/CardsApexPieChart'
-
 import AxisFutureBurdenRatio from 'sections/administrativefinancial/finances/chart/AxisFutureBurdenRatio'
 import AxisRealDebtServiceRatio from 'sections/administrativefinancial/finances/chart/AxisRealDebtServiceRatio'
 import AxisTotalSettlementAmount from 'sections/administrativefinancial/finances/chart/AxisTotalSettlementAmount'
@@ -16,6 +13,10 @@ import DashboardRealBalanceRatio from 'sections/administrativefinancial/finances
 import DashboardRealDebtServiceRatio from 'sections/administrativefinancial/finances/dashboard/DashboardRealDebtServiceRatio'
 import DashboardStandardFinancialDemandAmount from 'sections/administrativefinancial/finances/dashboard/DashboardStandardFinancialDemandAmount'
 import DashboardStandardFinancialIncomeAmount from 'sections/administrativefinancial/finances/dashboard/DashboardStandardFinancialIncomeAmount'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsApexPieChart from 'cards/CardsApexPieChart'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

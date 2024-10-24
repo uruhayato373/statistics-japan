@@ -1,10 +1,11 @@
-import { RouterPropsType } from 'types/apps'
 import formatD3charts from 'utils/d3charts'
 import { DocumentType } from 'utils/document'
 
 import generateFilePath from './generateFilePath'
 import generateScatterPlot from './ranking/ScatterPlot'
 import savePNG from './savePNG'
+
+import { RouterPropsType } from 'types/apps'
 
 const saveCorrelationPNG = async (
   title: string,

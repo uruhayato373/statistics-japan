@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingNumberOfSingleFatherHouseholds from 'sections/population/household/prefecture-rank/RankingNumberOfSingleFatherHouseholds'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function NumberOfSingleFatherHouseholds({

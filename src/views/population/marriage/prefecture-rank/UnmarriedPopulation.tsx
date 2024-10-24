@@ -9,6 +9,7 @@ import ViewsHeader from 'components/views/ViewsHeader'
 
 import RankingUnmarriedPopulationMan from 'sections/population/marriage/prefecture-rank/RankingUnmarriedPopulationMan'
 import RankingUnmarriedPopulationWoman from 'sections/population/marriage/prefecture-rank/RankingUnmarriedPopulationWoman'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function PrefectureRankView({

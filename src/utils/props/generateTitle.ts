@@ -1,7 +1,8 @@
 import { KindType } from 'utils/kind'
-import { MenuType } from 'utils/menu'
 import { PageType } from 'utils/page'
 import { PrefectureType } from 'utils/prefecture'
+
+import { MenuType } from 'types/contents'
 
 type Args = {
   menu: MenuType

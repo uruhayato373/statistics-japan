@@ -2,10 +2,11 @@ import SectionsWrapper from 'components/sections/SectionsWrapper'
 
 import { ApexOptions } from 'apexcharts'
 
-import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
+
+import { SectionsPropsType } from 'types/sections'
 
 const CARD_TITLE = '出入国管理法・難民認定法送致件数・人員'
 const CARD_ID = 'axis-immigration-control-law'

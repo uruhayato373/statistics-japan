@@ -12,7 +12,6 @@ import { Options } from 'highcharts'
 
 import { useLoadingState } from 'hooks/useLoadingState'
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
-import { CardsPropsType } from 'types/cards'
 
 import SelectTime from '../../components/SelectTime'
 
@@ -20,6 +19,8 @@ import Chart from './Chart'
 import Control from './Control'
 import Header from './Header'
 import SelectChartType from './SelectChartType'
+
+import { CardsPropsType } from 'types/cards'
 
 export default function CardsHighchartsPrefectureRankingChart({
   title,

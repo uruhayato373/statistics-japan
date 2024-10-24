@@ -14,12 +14,13 @@ import { CSVExport } from 'components/third-party/react-table'
 
 import { useLoadingState } from 'hooks/useLoadingState'
 import { useTimeFilteredDocument } from 'hooks/useTimeFilteredDocument'
-import { CardsPropsType } from 'types/cards'
 import formatCSV from 'utils/csv'
 import { DocumentType } from 'utils/document'
 
 import Control from './Control'
 import Header from './Header'
+
+import { CardsPropsType } from 'types/cards'
 
 // 動的インポートを使用してTableを遅延ロード
 const Table = dynamic(() => import('./Table'), {

@@ -1,9 +1,10 @@
 import React from 'react'
 
-import { RouterPropsType } from 'types/apps'
-import { SectionsWrapperPropsType } from 'types/sections'
 import { DocumentType } from 'utils/document'
 import { ValueType } from 'utils/value'
+
+import { RouterPropsType } from 'types/apps'
+import { SectionsWrapperPropsType } from 'types/sections'
 
 const SAVE_OGP = process.env.SAVE_OGP === 'true'
 const SAVE_PNG = process.env.SAVE_PNG === 'true'

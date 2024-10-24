@@ -1,9 +1,10 @@
 import SectionsWrapper from 'components/sections/SectionsWrapper'
 
-import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
+
+import { SectionsPropsType } from 'types/sections'
 
 const CARD_TITLE = '自動車損害賠償責任保険'
 const CARD_ID = 'table-automobile-liability-insurance'

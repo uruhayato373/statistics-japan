@@ -3,9 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisNumberOfDeaths from 'sections/socialsecurity/health/chart/AxisNumberOfDeaths'
 import AxisNumberOfDeathsDueToLifestyleRelatedDiseases from 'sections/socialsecurity/health/chart/AxisNumberOfDeathsDueToLifestyleRelatedDiseases'
 import AxisNumberOfDeathsDueToMalignantTumors from 'sections/socialsecurity/health/chart/AxisNumberOfDeathsDueToMalignantTumors'
@@ -15,6 +12,10 @@ import TableNumberOfPeopleUndergoingCancerScreening from 'sections/socialsecurit
 import TableNumberOfPeopleUndergoingHealthCheckups from 'sections/socialsecurity/health/table/TableNumberOfPeopleUndergoingHealthCheckups'
 import TablePregnancy from 'sections/socialsecurity/health/table/TablePregnancy'
 import TableTestInspection from 'sections/socialsecurity/health/table/TableTestInspection'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

@@ -10,12 +10,13 @@ import CSVExport from 'components/third-party/react-table/CSVExport'
 
 import { ApexOptions } from 'apexcharts'
 
-import { CardsPropsType } from 'types/cards'
 import formatApexcharts from 'utils/apexcharts'
 import formatCSV from 'utils/csv'
 import deepMerge from 'utils/deepMerge'
 
 import Header from './Header'
+
+import { CardsPropsType } from 'types/cards'
 
 // ApexAxisChartをSSRを無効にして動的にインポート
 const ApexAxisChart = dynamic(() => import('./Chart'), { ssr: false })

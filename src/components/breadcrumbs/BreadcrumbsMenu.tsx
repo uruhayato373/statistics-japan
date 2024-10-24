@@ -8,7 +8,8 @@ import { useTheme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 
 import useURL from 'hooks/useURL'
-import { MenuType } from 'utils/menu'
+
+import { MenuType } from 'types/contents'
 
 type Props = {
   menus: MenuType[]

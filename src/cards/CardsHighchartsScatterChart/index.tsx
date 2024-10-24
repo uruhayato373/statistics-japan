@@ -9,7 +9,6 @@ import MainCard from 'components/MainCard'
 
 import { Options } from 'highcharts'
 
-import { CardsPropsType } from 'types/cards'
 import calcCorrelationCoefficient from 'utils/calcCorrelationCoefficient'
 import { DocumentType } from 'utils/document'
 import formatHighcharts from 'utils/highcharts'
@@ -17,6 +16,8 @@ import formatHighcharts from 'utils/highcharts'
 import Chart, { ScatterSeriesType } from './Chart'
 import CorrelationCoefficient from './CorrelationCoefficient'
 import Header from './Header'
+
+import { CardsPropsType } from 'types/cards'
 
 const useChartData = (document: DocumentType) => {
   return useMemo(() => {

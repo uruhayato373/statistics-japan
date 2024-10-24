@@ -3,6 +3,7 @@ import DashboardItems from 'components/views/DashboardItems'
 
 import DashboardEmissionsPerPersonPerDay from 'sections/energy/garbage/dashboard/DashboardEmissionsPerPersonPerDay'
 import DashboardTotalAmountOfGarbageDischarged from 'sections/energy/garbage/dashboard/DashboardTotalAmountOfGarbageDischarged'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

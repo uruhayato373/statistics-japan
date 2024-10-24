@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingDenselyPopulatedArea from 'sections/landweather/area/prefecture-rank/RankingDenselyPopulatedArea'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function DenselyPopulatedArea({

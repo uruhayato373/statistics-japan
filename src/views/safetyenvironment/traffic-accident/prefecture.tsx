@@ -3,9 +3,6 @@ import ChartItems from 'components/views/ChartItems'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsApexAxisChart from 'cards/CardsApexAxisChart'
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import AxisNumberOfTrafficAccidentCasualties from 'sections/safetyenvironment/traffic-accident/chart/AxisNumberOfTrafficAccidentCasualties'
 import DashboardNumberOfTrafficAccidentCasualties from 'sections/safetyenvironment/traffic-accident/dashboard/DashboardNumberOfTrafficAccidentCasualties'
 import DashboardNumberOfTrafficAccidents from 'sections/safetyenvironment/traffic-accident/dashboard/DashboardNumberOfTrafficAccidents'
@@ -15,6 +12,10 @@ import TableNumberOfDrivingLicenseHolders from 'sections/safetyenvironment/traff
 import TableNumberOfPeopleTakingCoursesForTheElderly from 'sections/safetyenvironment/traffic-accident/table/TableNumberOfPeopleTakingCoursesForTheElderly'
 import TableTrafficAccident from 'sections/safetyenvironment/traffic-accident/table/TableTrafficAccident'
 import TableVoluntaryCarInsurance from 'sections/safetyenvironment/traffic-accident/table/TableVoluntaryCarInsurance'
+
+import CardsApexAxisChart from 'cards/CardsApexAxisChart'
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

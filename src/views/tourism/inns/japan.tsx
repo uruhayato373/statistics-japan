@@ -2,10 +2,11 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import DashboardNumberOfOperatingFacilities from 'sections/tourism/inns/dashboard/DashboardNumberOfOperatingFacilities'
 import TableBusinessFacilities from 'sections/tourism/inns/table/TableInns'
+
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

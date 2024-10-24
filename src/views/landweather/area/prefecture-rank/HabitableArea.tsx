@@ -2,6 +2,7 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import PrefectureRankingCards from 'components/views/PrefectureRankingCards'
 
 import RankingHabitableArea from 'sections/landweather/area/prefecture-rank/RankingHabitableArea'
+
 import { ViewsPropsType } from 'types/views'
 
 export default async function HabitableArea({ routerProps }: ViewsPropsType) {

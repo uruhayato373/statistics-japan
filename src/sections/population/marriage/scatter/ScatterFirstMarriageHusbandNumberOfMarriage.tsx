@@ -2,10 +2,11 @@ import SectionsWrapper from 'components/sections/SectionsWrapper'
 
 import { Options } from 'highcharts'
 
-import { SectionsPropsType } from 'types/sections'
 import handleDocument, { DocumentType } from 'utils/document'
 import handleEstatAPI from 'utils/e-stat'
 import { ValueType } from 'utils/value'
+
+import { SectionsPropsType } from 'types/sections'
 
 const CARD_TITLE = '婚姻件数と平均初婚年齢（夫）'
 const CARD_ID = 'scatter-product-first-marriage-husband-number-of-marriage'

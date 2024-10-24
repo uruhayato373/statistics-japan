@@ -2,12 +2,13 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import DashboardJuniorHighSchools from 'sections/educationsports/junior-high-school/dashboard/DashboardJuniorHighSchools'
 import DashboardJuniorHighSchoolStudents from 'sections/educationsports/junior-high-school/dashboard/DashboardJuniorHighSchoolStudents'
 import DashboardJuniorHighSchoolTeachers from 'sections/educationsports/junior-high-school/dashboard/DashboardJuniorHighSchoolTeachers'
 import TableJuniorHighSchool from 'sections/educationsports/junior-high-school/table/TableJuniorHighSchool'
+
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items

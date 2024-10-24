@@ -4,11 +4,11 @@ import { usePathname } from 'next/navigation'
 
 import { useMediaQuery, Theme, Box } from '@mui/material'
 
+import { useAtom } from 'jotai'
+
 import { kind } from 'atoms'
 import useURL from 'hooks/useURL'
 import { handleKind, KindType } from 'utils/kind'
-
-import { useAtom } from 'jotai'
 
 import { DesktopMenu } from './DesktopMenu'
 import { MobileMenu } from './MobileMenu'

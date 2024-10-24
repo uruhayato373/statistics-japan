@@ -1,9 +1,10 @@
 import ViewsWrapper from 'components/views//ViewsWrapper'
 import TableItems from 'components/views/TableItems'
 
+import TableStandardPrice from 'sections/construction/standard-price/table/TableStandardPrice'
+
 import CardsReactTimeTable from 'cards/CardsReactTimeTable'
 
-import TableStandardPrice from 'sections/construction/standard-price/table/TableStandardPrice'
 import { ViewsPropsType } from 'types/views'
 
 // table items

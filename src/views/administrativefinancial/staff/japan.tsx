@@ -2,10 +2,11 @@ import ViewsWrapper from 'components/views//ViewsWrapper'
 import DashboardItems from 'components/views/DashboardItems'
 import TableItems from 'components/views/TableItems'
 
-import CardsReactTimeTable from 'cards/CardsReactTimeTable'
-
 import DashboardAdministrativeDepartmentEmployees from 'sections/administrativefinancial/staff/dashboard/DashboardAdministrativeDepartmentEmployees'
 import TableAdministrativeDepartmentEmployees from 'sections/administrativefinancial/staff/table/TableAdministrativeDepartmentEmployees'
+
+import CardsReactTimeTable from 'cards/CardsReactTimeTable'
+
 import { ViewsPropsType } from 'types/views'
 
 // dashboard items
