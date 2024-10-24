@@ -1,35 +1,14 @@
-import { Metadata } from 'next'
-import dynamic from 'next/dynamic'
-
-import handleProps from 'utils/props'
+import { JapanPage } from 'components/app/JapanPage'
 
 // 定数
-const FIELD_ID = 'socialsecurity'
-const MENU_ID = 'health'
-const KIND_ID = 'japan'
-
-// 動的インポート
-const Japan = dynamic(() => import('views/socialsecurity/health/japan'), {
-  suspense: true,
-})
-
-// 共通のhandleProps呼び出し
-const getProps = () =>
-  handleProps({
-    fieldId: FIELD_ID,
-    menuId: MENU_ID,
-    kindId: KIND_ID,
-  })
-
-export const generateMetadata = async (): Promise<Metadata> => {
-  const { metaProps } = getProps()
-  return metaProps()
+const PROPS = {
+  fieldId: 'socialsecurity',
+  menuId: 'health',
+  kindId: 'japan',
 }
 
-const Page = () => {
-  const { routerProps } = getProps()
+// ページコンポーネント（共通）
+const { PageComponent, generateMetadata } = JapanPage(PROPS)
 
-  return <Japan routerProps={routerProps} />
-}
-
-export default Page
+export { generateMetadata }
+export default PageComponent
