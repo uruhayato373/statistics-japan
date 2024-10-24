@@ -1,10 +1,6 @@
 import items from 'data/contents/page/index'
 
-export type PageType = {
-  pageId: string
-  pageTitle: string
-  menuId: string
-}
+import { PageType } from 'types/contents'
 
 const handlePage = () => {
   return {

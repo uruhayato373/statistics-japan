@@ -5,11 +5,11 @@ import { usePathname } from 'next/navigation'
 import { useAtom } from 'jotai'
 
 import { kind, prefecture } from 'atoms'
-import { KindType } from 'utils/kind'
 import handlePage from 'utils/page'
 import { PrefectureType } from 'utils/prefecture'
 
 import { RouterPropsType } from 'types/apps'
+import { KindType } from 'types/contents'
 
 /**
  * URLに関連する状態を管理し、URL操作機能を提供するカスタムフック

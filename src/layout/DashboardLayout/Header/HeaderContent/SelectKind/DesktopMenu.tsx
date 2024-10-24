@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Box, Button, Divider } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 
-import { KindType } from 'utils/kind'
+import { KindType } from 'types/contents'
 
 interface Props {
   items: KindType[]

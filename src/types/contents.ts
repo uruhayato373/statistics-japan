@@ -8,3 +8,14 @@ export type MenuType = {
   menuTitle: string
   fieldId: string
 }
+
+export type PageType = {
+  pageId: string
+  pageTitle: string
+  menuId: string
+}
+
+export type KindType = {
+  kindId: string
+  kindTitle: string
+}

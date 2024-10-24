@@ -1,8 +1,9 @@
 import { atom } from 'jotai'
 
 import { TimeType } from 'utils/document'
-import { KindType } from 'utils/kind'
 import { PrefectureType } from 'utils/prefecture'
+
+import { KindType } from 'types/contents'
 
 /**
  * 選択中の統計種類

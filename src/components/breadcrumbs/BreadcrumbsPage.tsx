@@ -8,7 +8,8 @@ import { useTheme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 
 import useURL from 'hooks/useURL'
-import { PageType } from 'utils/page'
+
+import { PageType } from 'types/contents'
 
 type Props = {
   pages: PageType[]

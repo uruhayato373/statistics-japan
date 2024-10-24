@@ -1,14 +1,6 @@
 import items from 'data/contents/kind/kindList.json'
 
-/**
- * アプリケーション内で使用する種類情報の型定義
- * @property {string} kindId - 種類ID
- * @property {string} kindTitle - 種類タイトル
- */
-export type KindType = {
-  kindId: string
-  kindTitle: string
-}
+import { KindType } from 'types/contents'
 
 /**
  * 種類情報を操作するためのユーティリティ関数
